@@ -3,28 +3,33 @@
 import { loadData } from "./data.js";
 import { t, getLang, otherLang, setLang } from "./i18n.js";
 import * as views from "./views.js";
+import { flashcards } from "./flashcards.js";
 
 // The address after "#" decides the page:
 //   #/                → home
 //   #/term/api        → term page
 //   #/category/web    → category page
-// To add a page later (e.g. flashcards): write a view in views.js and add one line here.
+//   #/flashcards      → flashcards
+// To add a page: write a function that returns { title, html, mount } and add one line here.
 const routes = {
   "": () => views.home(),
   term: (id) => views.term(id),
   category: (id) => views.category(id),
+  flashcards: () => flashcards(),
 };
 
 const main = document.getElementById("main");
 let currentHash = null;
+let cleanup = null; // a page's mount() can return a function to run when you leave it
 
 function render() {
   const [page = "", id] = location.hash.replace(/^#\/?/, "").split("/").map(decodeURIComponent);
   const view = (routes[page] ?? (() => views.notFound()))(id);
 
+  cleanup?.();
   main.innerHTML = view.html;
   document.title = view.title;
-  view.mount?.(main);
+  cleanup = view.mount?.(main);
   updateChrome();
 
   // Only jump to the top when the page actually changed (not on a language switch)

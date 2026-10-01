@@ -14,6 +14,7 @@ fjalori-i-programimit/
 ├── js/
 │   ├── main.js           ← starts the app and picks the page from the URL (#/term/api)
 │   ├── views.js          ← one function per page: home, term, category, not found
+│   ├── flashcards.js     ← the flashcards page (#/flashcards)
 │   ├── data.js           ← loads terms.json and offers helpers (getTerm, wordOfTheDay…)
 │   ├── search.js         ← the search (works with or without ë and ç)
 │   └── i18n.js           ← every interface text in Albanian and English
@@ -104,9 +105,10 @@ After either one, every `git push` updates the live site automatically.
 
 ## Extending later
 
-- **New page (e.g. flashcards):** write a `flashcards()` function in `js/views.js`
-  that returns `{ title, html, mount }`, then add one line to `routes` in `js/main.js`:
-  `flashcards: () => views.flashcards(),`. Link to it with `href="#/flashcards"`.
+- **New page:** write a function that returns `{ title, html, mount }` (see
+  `js/flashcards.js` for a full example), then add one line to `routes` in `js/main.js`.
+  If `mount` returns a function, it runs when the visitor leaves the page (useful for
+  removing keyboard listeners).
 - **"Suggest a term" form:** with no backend, use a free form service such as
   Formspree, or a Google Form, and add a page the same way.
 - **New interface text:** add the same key to both `sq` and `en` in `js/i18n.js`,

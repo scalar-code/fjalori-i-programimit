@@ -15,9 +15,9 @@ export function esc(value) {
   return String(value ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 }
 
-const termUrl = (id) => `#/term/${encodeURIComponent(id)}`;
+export const termUrl = (id) => `#/term/${encodeURIComponent(id)}`;
 const categoryUrl = (id) => `#/category/${encodeURIComponent(id)}`;
-const hueStyle = (category) => `style="--hue:${Number(category?.hue) || 220}"`;
+export const hueStyle = (category) => `style="--hue:${Number(category?.hue) || 220}"`;
 
 function categoryBadge(category) {
   if (!category) return "";
@@ -107,6 +107,17 @@ export function home() {
           <p class="text">${esc(word.explanation[lang])}</p>
           <a class="link-arrow" href="${termUrl(word.id)}">${esc(t("readMore"))}</a>
         </article>
+
+        <a class="cta" href="#/flashcards">
+          <span class="cta-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="6" width="14" height="15" rx="2.5"/><path d="M7 3h11.5A2.5 2.5 0 0 1 21 5.5V17"/></svg>
+          </span>
+          <span class="cta-text">
+            <strong>${esc(t("flashcardsCta"))}</strong>
+            <span>${esc(t("flashcardsCtaText", terms.length))}</span>
+          </span>
+          <span class="cta-arrow" aria-hidden="true">→</span>
+        </a>
       </section>
 
       <section class="section">
