@@ -628,8 +628,10 @@ kbd {
   flex-wrap: wrap;
   margin-bottom: 20px;
 }
-.fc-select { display: grid; gap: 4px; flex: 1 1 160px; max-width: 320px; font-size: 0.82rem; font-weight: 600; color: var(--muted); }
+.fc-select { display: grid; gap: 4px; flex: 1 1 160px; min-width: 0; max-width: 320px; font-size: 0.82rem; font-weight: 600; color: var(--muted); }
 .fc-select select {
+  width: 100%;
+  min-width: 0;
   min-height: 42px;
   padding: 0 12px;
   border: 1px solid var(--border);
