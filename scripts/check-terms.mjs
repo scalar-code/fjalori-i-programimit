@@ -21,6 +21,7 @@ for (const term of data.terms) {
 
   if (!term.id) problems.push(`${label}: missing "id"`);
   else if (!/^[a-z0-9-]+$/.test(term.id)) problems.push(`${label}: id should be lowercase letters, numbers and dashes only`);
+  else if (term.id === "index") problems.push(`${label}: "index" can't be used as an id (it clashes with index.html on the server)`);
   if (termIds.has(term.id)) problems.push(`${label}: id is used twice`);
   termIds.add(term.id);
 
