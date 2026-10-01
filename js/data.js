@@ -1,17 +1,21 @@
-// Loads data/terms.json once and gives the rest of the app easy ways to read it.
+// Holds the terms from data/terms.json and gives the rest of the app easy ways to read them.
+// In the browser, loadData() fetches the file; the build script calls setData() directly.
 
 let categoryList = [];
 let termList = [];      // sorted A–Z by English name
 const termsById = new Map();
 
-export async function loadData() {
-  const response = await fetch("data/terms.json");
-  if (!response.ok) throw new Error(`HTTP ${response.status}`);
-  const data = await response.json();
-
+export function setData(data) {
   categoryList = data.categories;
   termList = [...data.terms].sort((a, b) => a.en.localeCompare(b.en));
+  termsById.clear();
   termList.forEach((term) => termsById.set(term.id, term));
+}
+
+export async function loadData() {
+  const response = await fetch("/data/terms.json");
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  setData(await response.json());
 }
 
 export const allTerms = () => termList;

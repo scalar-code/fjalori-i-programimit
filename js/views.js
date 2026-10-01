@@ -1,6 +1,7 @@
 // Every page of the site is one function here.
-// Each returns { title, html, mount? }:
-//   title – text for the browser tab
+// Each returns { title, description, html, mount? }:
+//   title – text for the browser tab (and Google's result title)
+//   description – the short summary Google and WhatsApp show under the title
 //   html  – what goes inside <main>
 //   mount – optional; runs after the html is on the page (to wire up buttons etc.)
 
@@ -15,8 +16,15 @@ export function esc(value) {
   return String(value ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 }
 
-export const termUrl = (id) => `#/term/${encodeURIComponent(id)}`;
-const categoryUrl = (id) => `#/category/${encodeURIComponent(id)}`;
+export const termUrl = (id) => `/term/${encodeURIComponent(id)}`;
+export const categoryUrl = (id) => `/category/${encodeURIComponent(id)}`;
+
+// Shortens text for <meta name="description"> (Google shows about 155 characters)
+export function summarize(text, max = 155) {
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max - 1);
+  return cut.slice(0, cut.lastIndexOf(" ")).replace(/[,;:—–-]+$/, "") + "…";
+}
 export const hueStyle = (category) => `style="--hue:${Number(category?.hue) || 220}"`;
 
 function categoryBadge(category) {
@@ -77,7 +85,8 @@ export function home() {
     .join("");
 
   return {
-    title: `${t("siteName")} — ${t("tagline")}`,
+    title: t("homeTitle"),
+    description: t("homeDescription", terms.length),
     html: `
       <section class="hero">
         <h1>${t("heroTitle")}</h1>
@@ -108,7 +117,7 @@ export function home() {
           <a class="link-arrow" href="${termUrl(word.id)}">${esc(t("readMore"))}</a>
         </article>
 
-        <a class="cta" href="#/flashcards">
+        <a class="cta" href="/flashcards">
           <span class="cta-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><rect x="3" y="6" width="14" height="15" rx="2.5"/><path d="M7 3h11.5A2.5 2.5 0 0 1 21 5.5V17"/></svg>
           </span>
@@ -150,7 +159,7 @@ export function home() {
       input.addEventListener("keydown", (event) => {
         if (event.key === "Enter") {
           const first = results.querySelector("a.result");
-          if (first) location.hash = first.getAttribute("href");
+          first?.click(); // the router in main.js turns the click into a page change
         } else if (event.key === "Escape") {
           input.value = "";
           update();
@@ -198,10 +207,13 @@ export function term(id) {
     : "";
 
   return {
-    title: `${item.en}${item.sq ? ` (${item.sq})` : ""} — ${t("siteName")}`,
+    title: t("termTitle", item.en),
+    description: summarize(
+      lang === "sq" && item.sq ? `${item.sq} (${item.en}): ${item.explanation.sq}` : item.explanation[lang],
+    ),
     html: `
       <nav class="crumbs" aria-label="breadcrumb">
-        <a href="#/">${esc(t("home"))}</a><span aria-hidden="true">/</span>
+        <a href="/">${esc(t("home"))}</a><span aria-hidden="true">/</span>
         <a href="${categoryUrl(category?.id)}">${esc(category?.name[lang])}</a>
       </nav>
 
@@ -275,9 +287,10 @@ export function category(id) {
     .join("");
 
   return {
-    title: `${cat.name[lang]} — ${t("siteName")}`,
+    title: t("categoryTitle", cat.name[lang]),
+    description: summarize(t("categoryDescription", cat.description[lang], terms.length, terms.slice(0, 4).map((x) => x.en).join(", "))),
     html: `
-      <nav class="crumbs" aria-label="breadcrumb"><a href="#/">${esc(t("home"))}</a></nav>
+      <nav class="crumbs" aria-label="breadcrumb"><a href="/">${esc(t("home"))}</a></nav>
       <header class="page-head" ${hueStyle(cat)}>
         <span class="cat-icon" aria-hidden="true">${esc(cat.icon)}</span>
         <div>
@@ -294,11 +307,12 @@ export function category(id) {
 
 export function notFound(message = t("notFoundText")) {
   return {
-    title: `${t("notFoundTitle")} — ${t("siteName")}`,
+    title: `${t("notFoundTitle")} | ${t("siteName")}`,
+    description: message,
     html: `<div class="empty-state">
       <h1>${esc(t("notFoundTitle"))}</h1>
       <p>${esc(message)}</p>
-      <p><a class="link-arrow" href="#/">${esc(t("backHome"))}</a></p>
+      <p><a class="link-arrow" href="/">${esc(t("backHome"))}</a></p>
     </div>`,
   };
 }
@@ -306,6 +320,7 @@ export function notFound(message = t("notFoundText")) {
 export function loadError() {
   return {
     title: t("siteName"),
+    description: t("loadError"),
     html: `<div class="empty-state">
       <h1>${esc(t("loadError"))}</h1>
       <p>${esc(t("loadErrorHint"))}</p>

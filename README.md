@@ -1,45 +1,62 @@
 # Fjalori i Programimit
 
 A bilingual Albanian ↔ English glossary of programming terms for beginners.
-Plain HTML, CSS and JavaScript. No build step, no backend, no login.
+Plain HTML, CSS and JavaScript, plus one small build script (Node.js, no packages to install).
+No backend, no login.
+
+Live: https://fjalor-programimi.vercel.app
+
+## How it works
+
+`npm run build` reads `data/terms.json` and writes a finished website into `dist/`:
+a real HTML page for every term (`/term/api`), every category (`/category/web`),
+the home page and the flashcards, each with its own title, description and share tags.
+It also writes `sitemap.xml` and `robots.txt`.
+
+In the browser, `js/main.js` then takes over: clicks between pages are instant,
+and search, flashcards and the language/theme buttons work as before.
+Old links like `/#/term/api` are redirected to `/term/api`.
 
 ## File structure
 
 ```
 fjalori-i-programimit/
-├── index.html            ← the single page; header, footer and an empty <main>
+├── template.html         ← the page skeleton; the build fills in title, tags and content
 ├── favicon.svg           ← the little "ë" icon in the browser tab
+├── og-image.png          ← the picture shown when a link is shared (WhatsApp, Instagram…)
+├── vercel.json           ← tells Vercel how to build and serve the site
+├── package.json          ← the npm commands below
 ├── css/
 │   └── style.css         ← all styles; colours for light/dark are at the top
 ├── js/
-│   ├── main.js           ← starts the app and picks the page from the URL (#/term/api)
+│   ├── main.js           ← starts the app and picks the page from the URL (/term/api)
 │   ├── views.js          ← one function per page: home, term, category, not found
-│   ├── flashcards.js     ← the flashcards page (#/flashcards)
-│   ├── data.js           ← loads terms.json and offers helpers (getTerm, wordOfTheDay…)
+│   ├── flashcards.js     ← the flashcards page (/flashcards)
+│   ├── data.js           ← holds terms.json and offers helpers (getTerm, wordOfTheDay…)
 │   ├── search.js         ← the search (works with or without ë and ç)
-│   └── i18n.js           ← every interface text in Albanian and English
+│   └── i18n.js           ← every interface text (and page title) in Albanian and English
 ├── data/
 │   └── terms.json        ← ALL the content: categories + terms
-└── scripts/
-    └── check-terms.mjs   ← checks terms.json for mistakes
+├── scripts/
+│   ├── build.mjs         ← builds dist/ (pages, sitemap.xml, robots.txt)
+│   ├── serve.mjs         ← local preview server that behaves like Vercel
+│   ├── check-terms.mjs   ← checks terms.json for mistakes
+│   └── og-image.html     ← the design of og-image.png (see the comment inside to regenerate)
+└── dist/                 ← the built site (created by the build, not saved in git)
 ```
 
 ## Run it on your computer
 
-The site loads `terms.json` with `fetch`, and browsers block that when you just
-double-click `index.html`. So you need a tiny local server. Either works:
+You need Node.js (any recent version). Then, in the project folder:
 
 ```bash
-python3 -m http.server 8000
+npm start
 ```
 
-```bash
-npx serve .
-```
+This checks the terms, builds the site and opens a preview at http://localhost:8000.
+After changing anything, stop it with Ctrl+C and run `npm start` again.
 
-Then open http://localhost:8000.
-
-In VS Code you can also use the **Live Server** extension: right-click `index.html` → *Open with Live Server*.
+Other commands: `npm run check` (only check terms.json), `npm run build` (only build).
 
 ## Add a new term
 
@@ -60,7 +77,7 @@ In VS Code you can also use the **Live Server** extension: right-click `index.ht
 }
 ```
 
-- `id`: lowercase, no spaces; it becomes the address `#/term/compiler`
+- `id`: lowercase, no spaces; it becomes the address `/term/compiler`. Don't change an `id` once the site is live, or old links (and Google) will point to a missing page
 - `sq`: use `null` when Albanian uses the same word (like Git or HTML)
 - `aliases`: optional, extra words people might search for
 - `code`: use `null` when a code example doesn't make sense. Inside the snippet, write a new line as `\n` and a `"` as `\"`
@@ -69,7 +86,7 @@ In VS Code you can also use the **Live Server** extension: right-click `index.ht
 3. Check it:
 
 ```bash
-node scripts/check-terms.mjs
+npm run check
 ```
 
 It tells you about missing commas, a wrong category, or a related term that doesn't exist.
@@ -79,34 +96,29 @@ It tells you about missing commas, a wrong category, or a related term that does
 Add an entry to `"categories"` in the same file. `hue` is a colour from 0 to 360
 (0 is red, 120 green, 210 blue, 280 purple). The badges and cards get their colours from it automatically.
 
-## Deploy for free
+## Deploy
 
-### Option A: GitHub Pages
-1. Create a new repository on GitHub and push this folder to it:
+The site is on Vercel and connected to GitHub: every `git push` to `main` builds and
+publishes it automatically (Vercel runs `npm run build` and serves `dist/`, see `vercel.json`).
+
+Pushing any other branch gives you a private *preview* address to test first:
 
 ```bash
-git init
-git add .
-git commit -m "Version 1"
-git branch -M main
-git remote add origin https://github.com/YOUR-NAME/fjalori-i-programimit.git
-git push -u origin main
+git checkout -b my-change
+git push -u origin my-change
 ```
 
-2. On GitHub: **Settings → Pages → Source: Deploy from a branch → `main` / `(root)` → Save**.
-3. After a minute or so the site is live at `https://YOUR-NAME.github.io/fjalori-i-programimit/`.
+Vercel then shows the preview link on the GitHub branch/pull request and in your Vercel dashboard.
 
-### Option B: Vercel
-1. Push to GitHub (same as above).
-2. Go to vercel.com → **Add New → Project** → import the repository.
-3. Framework preset: **Other**. Leave build command and output directory empty → **Deploy**.
-
-After either one, every `git push` updates the live site automatically.
+### Tell Google about the site
+1. Go to https://search.google.com/search-console and add the site address.
+2. Under **Sitemaps**, submit `sitemap.xml`.
 
 ## Extending later
 
-- **New page:** write a function that returns `{ title, html, mount }` (see
-  `js/flashcards.js` for a full example), then add one line to `routes` in `js/main.js`.
+- **New page:** write a function that returns `{ title, description, html, mount }` (see
+  `js/flashcards.js` for a full example), add one line to `routes` in `js/main.js`,
+  and one `writePage(...)` line in `scripts/build.mjs` so it gets a real HTML file.
   If `mount` returns a function, it runs when the visitor leaves the page (useful for
   removing keyboard listeners).
 - **"Suggest a term" form:** with no backend, use a free form service such as

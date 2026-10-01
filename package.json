@@ -1,0 +1,11 @@
+{
+  "name": "fjalori-i-programimit",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/check-terms.mjs",
+    "build": "node scripts/check-terms.mjs && node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs",
+    "start": "npm run build && npm run preview"
+  }
+}

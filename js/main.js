@@ -1,16 +1,21 @@
 // Starts the app: loads the terms, decides which page to show, wires up the header buttons.
+//
+// Every page also exists as a real HTML file (made by scripts/build.mjs), so the content is
+// there before any JavaScript runs. This file then takes over: it makes clicks between pages
+// instant, and powers search, flashcards and the language/theme buttons.
 
 import { loadData } from "./data.js";
 import { t, getLang, otherLang, setLang } from "./i18n.js";
 import * as views from "./views.js";
 import { flashcards } from "./flashcards.js";
 
-// The address after "#" decides the page:
-//   #/                → home
-//   #/term/api        → term page
-//   #/category/web    → category page
-//   #/flashcards      → flashcards
-// To add a page: write a function that returns { title, html, mount } and add one line here.
+// The address decides the page:
+//   /                → home
+//   /term/api        → term page
+//   /category/web    → category page
+//   /flashcards      → flashcards
+// To add a page: write a function that returns { title, description, html, mount },
+// add one line here, and one writePage(...) line in scripts/build.mjs.
 const routes = {
   "": () => views.home(),
   term: (id) => views.term(id),
@@ -19,27 +24,57 @@ const routes = {
 };
 
 const main = document.getElementById("main");
-let currentHash = null;
+let currentPath = null;
 let cleanup = null; // a page's mount() can return a function to run when you leave it
 
 function render() {
-  const [page = "", id] = location.hash.replace(/^#\/?/, "").split("/").map(decodeURIComponent);
+  const [page = "", id] = location.pathname.replace(/^\/|\/$/g, "").split("/").map(decodeURIComponent);
   const view = (routes[page] ?? (() => views.notFound()))(id);
 
   cleanup?.();
   main.innerHTML = view.html;
   document.title = view.title;
+  document.querySelector('meta[name="description"]')?.setAttribute("content", view.description ?? "");
   cleanup = view.mount?.(main);
   updateChrome();
 
   // Only jump to the top when the page actually changed (not on a language switch)
-  if (location.hash !== currentHash) {
-    if (currentHash !== null) {
+  if (location.pathname !== currentPath) {
+    if (currentPath !== null) {
       window.scrollTo(0, 0);
       main.focus({ preventScroll: true });
     }
-    currentHash = location.hash;
+    currentPath = location.pathname;
   }
+}
+
+export function navigate(path) {
+  if (path !== location.pathname) history.pushState(null, "", path);
+  render();
+}
+
+// Clicking a link to another page of this site: change the page without reloading
+function interceptLinks() {
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest("a[href]");
+    if (
+      !link || event.defaultPrevented || event.button !== 0 ||
+      event.metaKey || event.ctrlKey || event.shiftKey || event.altKey ||  // "open in new tab" etc.
+      link.target || link.hasAttribute("download") ||
+      link.origin !== location.origin ||
+      link.getAttribute("href").startsWith("#")                          // e.g. the "skip to content" link
+    ) return;
+    event.preventDefault();
+    navigate(link.pathname);
+  });
+  window.addEventListener("popstate", render); // browser back/forward buttons
+
+  // An old /#/… link opened while already on the site (template.html handles fresh page loads)
+  window.addEventListener("hashchange", () => {
+    if (!location.hash.startsWith("#/")) return;
+    history.replaceState(null, "", location.hash.slice(1));
+    render();
+  });
 }
 
 // Header/footer text and button states that depend on language or theme
@@ -71,10 +106,10 @@ function setupButtons() {
 
   // Press "/" anywhere to jump to the search box
   document.addEventListener("keydown", (event) => {
-    if (event.key !== "/" || event.target.closest("input, textarea")) return;
+    if (event.key !== "/" || event.target.closest("input, textarea, select")) return;
     event.preventDefault();
-    if (!document.getElementById("search")) location.hash = "#/";
-    setTimeout(() => document.getElementById("search")?.focus()); // runs after the home page renders
+    if (!document.getElementById("search")) navigate("/");
+    document.getElementById("search")?.focus();
   });
 }
 
@@ -83,13 +118,12 @@ async function start() {
   try {
     await loadData();
   } catch (error) {
+    // The page's own HTML is still there and readable — just without search, flashcards etc.
     console.error(error);
-    const view = views.loadError();
-    main.innerHTML = view.html;
-    updateChrome();
+    if (!main.textContent.trim()) main.innerHTML = views.loadError().html;
     return;
   }
-  window.addEventListener("hashchange", render);
+  interceptLinks();
   render();
 }
 

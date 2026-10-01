@@ -1,4 +1,4 @@
-// Flashcards page (#/flashcards).
+// Flashcards page (/flashcards).
 // See the English term → think → flip → "I know it" or "Again".
 // Cards you don't know come back a few cards later, until the deck is empty.
 
@@ -110,9 +110,10 @@ export function flashcards() {
   ].join("");
 
   return {
-    title: `${t("flashcardsTitle")} — ${t("siteName")}`,
+    title: t("flashcardsPageTitle"),
+    description: t("flashcardsDescription", allTerms().length),
     html: `
-      <nav class="crumbs" aria-label="breadcrumb"><a href="#/">${esc(t("home"))}</a></nav>
+      <nav class="crumbs" aria-label="breadcrumb"><a href="/">${esc(t("home"))}</a></nav>
 
       <header class="fc-head">
         <h1>${esc(t("flashcardsTitle"))}</h1>

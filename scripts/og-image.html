@@ -1,0 +1,56 @@
+<!doctype html>
+<!--
+  Source for og-image.png (the picture shown when a link is shared on WhatsApp, Instagram…).
+  To regenerate it after editing, run from the project folder (macOS):
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --hide-scrollbars \
+      --window-size=1200,630 --screenshot=og-image.png scripts/og-image.html
+-->
+<html lang="sq">
+<head>
+<meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    position: relative;
+    padding: 72px 80px;
+    background: #faf9f6;
+    color: #1c1b1f;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  body::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 14px;
+    background: #c8323c;
+  }
+  .brand { display: flex; align-items: center; gap: 18px; font-size: 30px; font-weight: 600; color: #65616c; }
+  .mark {
+    display: grid; place-items: center;
+    width: 64px; height: 64px; border-radius: 16px;
+    background: #c8323c; color: #fff;
+    font: 600 24px Menlo, monospace;
+  }
+  h1 { margin-top: 56px; font-size: 92px; line-height: 1.02; letter-spacing: -3px; font-weight: 700; max-width: 900px; }
+  h1 em { font-style: normal; color: #c8323c; }
+  .chips { position: absolute; left: 80px; right: 80px; bottom: 72px; display: flex; flex-wrap: wrap; gap: 14px; }
+  .chip {
+    padding: 12px 24px; border-radius: 999px;
+    background: #fff; border: 2px solid #e7e3db;
+    font-size: 28px; font-weight: 500;
+  }
+  .chip small { color: #65616c; font-size: 24px; margin-left: 8px; }
+</style>
+</head>
+<body>
+  <div class="brand"><span class="mark">{ë}</span> Fjalori i Programimit</div>
+  <h1>Kupto kodin <em>në gjuhën tënde</em></h1>
+  <div class="chips">
+    <span class="chip">API <small>Ndërfaqe programimi</small></span>
+    <span class="chip">Loop <small>Cikël</small></span>
+    <span class="chip">Variable <small>Variabël</small></span>
+    <span class="chip">Git</span>
+  </div>
+</body>
+</html>
