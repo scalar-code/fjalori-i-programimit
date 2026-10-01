@@ -6,7 +6,7 @@
 // That way Google and WhatsApp see the full page without running any JavaScript.
 // It reuses the same page functions the browser uses (js/views.js), so both always match.
 
-import { readFileSync, writeFileSync, mkdirSync, rmSync, cpSync } from "node:fs";
+import { readFileSync, readdirSync, writeFileSync, mkdirSync, rmSync, cpSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -34,6 +34,8 @@ rmSync(OUT, { recursive: true, force: true });
 mkdirSync(OUT, { recursive: true });
 for (const folder of ["css", "js", "data"]) cpSync(join(ROOT, folder), join(OUT, folder), { recursive: true });
 for (const file of ["favicon.svg", "og-image.png"]) cpSync(join(ROOT, file), join(OUT, file));
+// Google Search Console verification file(s), e.g. googlecc116d85b47bda09.html — keep them forever
+for (const file of readdirSync(ROOT).filter((f) => /^google[0-9a-f]+\.html$/.test(f))) cpSync(join(ROOT, file), join(OUT, file));
 
 // ---------- pages ----------
 
@@ -71,7 +73,7 @@ function writePage(path, view, { type = "website", jsonLd = null, noindex = fals
     .replace("{{meta}}", () => meta)
     .replace("{{main}}", () => view.html);
 
-  // /term/api → dist/term/api.html  (Vercel serves it at /term/api thanks to "cleanUrls")
+  // /term/api → dist/term/api.html  (vercel.json "rewrites" serve it at /term/api)
   const file = join(OUT, path === "/" ? "index.html" : `${path.slice(1)}.html`);
   mkdirSync(dirname(file), { recursive: true });
   writeFileSync(file, html);

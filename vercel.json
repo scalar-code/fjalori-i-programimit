@@ -3,7 +3,6 @@
   "framework": null,
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
     {
@@ -15,6 +14,40 @@
       "source": "/category",
       "destination": "/",
       "permanent": false
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/flashcards.html",
+      "destination": "/flashcards",
+      "permanent": true
+    },
+    {
+      "source": "/term/:id.html",
+      "destination": "/term/:id",
+      "permanent": true
+    },
+    {
+      "source": "/category/:id.html",
+      "destination": "/category/:id",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/flashcards",
+      "destination": "/flashcards.html"
+    },
+    {
+      "source": "/term/:id",
+      "destination": "/term/:id.html"
+    },
+    {
+      "source": "/category/:id",
+      "destination": "/category/:id.html"
     }
   ]
 }
