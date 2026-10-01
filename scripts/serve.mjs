@@ -37,6 +37,14 @@ async function findFile(path) {
 
 createServer(async (request, response) => {
   const { pathname } = new URL(request.url, "http://localhost");
+
+  // Vercel Analytics only exists on Vercel; locally, answer with an empty script
+  if (pathname.startsWith("/_vercel/")) {
+    response.writeHead(200, { "Content-Type": TYPES[".js"] });
+    response.end("");
+    return;
+  }
+
   const file = await findFile(join(DIST, normalize(decodeURIComponent(pathname)).replace(/^[\\/]+/, "")));
 
   if (!file) {

@@ -110,6 +110,11 @@ git push -u origin my-change
 
 Vercel then shows the preview link on the GitHub branch/pull request and in your Vercel dashboard.
 
+### Visitor statistics
+Vercel Web Analytics is built into every page (see `template.html`). It counts page
+views without cookies or personal data. See the numbers in the Vercel dashboard →
+the project → **Analytics**.
+
 ### Tell Google about the site
 1. Go to https://search.google.com/search-console and add the site address.
 2. Under **Sitemaps**, submit `sitemap.xml`.
