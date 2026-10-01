@@ -77,6 +77,19 @@
         "sq": "Si mbrohen llogaritë dhe të dhënat, dhe ku jetojnë aplikacionet sot.",
         "en": "How accounts and data are protected, and where apps live today."
       }
+    },
+    {
+      "id": "computer",
+      "icon": "01",
+      "hue": 320,
+      "name": {
+        "sq": "Bazat e kompjuterit",
+        "en": "Computer basics"
+      },
+      "description": {
+        "sq": "Çfarë ndodh brenda kompjuterit dhe si lidhen pajisjet me njëra-tjetrën.",
+        "en": "What happens inside a computer and how devices talk to each other."
+      }
     }
   ],
   "terms": [
@@ -2470,6 +2483,1567 @@
         "algorithm",
         "python",
         "cloud"
+      ]
+    },
+    {
+      "id": "float",
+      "en": "Float",
+      "sq": "Numër dhjetor",
+      "aliases": [
+        "numër me presje",
+        "decimal",
+        "double"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Float-i është një numër me presje dhjetore, si 3.14 ose 19.99. Në kod presja dhjetore shkruhet me pikë, jo me presje — 2.5, jo 2,5.",
+        "en": "A float is a number with a decimal point, like 3.14 or 19.99. In code the decimal point is written with a dot, not a comma — 2.5, not 2,5."
+      },
+      "analogy": {
+        "sq": "Si çmimet në market: buka 0.50 €, qumështi 1.20 €. Rrallë janë numra të plotë — prandaj të duhen numrat dhjetorë.",
+        "en": "Like supermarket prices: bread €0.50, milk €1.20. They're rarely whole numbers — that's why you need decimals."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "cmimi = 1.20\nsasia = 3\nprint(cmimi * sasia)            # 3.5999999999999996 (!)\nprint(round(cmimi * sasia, 2))  # 3.6"
+      },
+      "related": [
+        "integer",
+        "data-type",
+        "operator"
+      ]
+    },
+    {
+      "id": "index",
+      "en": "Index",
+      "sq": "Indeks",
+      "aliases": [
+        "indeksi",
+        "pozicion"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Indeksi është numri i pozicionit të një elementi në një listë ose varg. Në shumicën e gjuhëve numërimi fillon nga 0, prandaj elementi i parë ka indeksin 0.",
+        "en": "An index is the position number of an item in a list or array. In most languages counting starts at 0, so the first item has index 0."
+      },
+      "analogy": {
+        "sq": "Si radha e penalltive: gjuajtësi i parë, i dyti, i treti… vetëm se në programim gjuajtësi i parë quhet „numri 0“.",
+        "en": "Like the order of penalty takers: first, second, third… except in programming the first taker is “number 0”."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "lojtaret = [\"Edon\", \"Vedat\", \"Milot\"]\nprint(lojtaret[0])   # Edon\nprint(lojtaret[-1])  # Milot (i fundit)"
+      },
+      "related": [
+        "array",
+        "list",
+        "loop"
+      ]
+    },
+    {
+      "id": "recursion",
+      "en": "Recursion",
+      "sq": "Rekursion",
+      "aliases": [
+        "rekursioni",
+        "rekursiv"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Rekursioni ndodh kur një funksion e thërret veten, çdo herë me një problem pak më të vogël, derisa arrin një rast aq të thjeshtë sa ta zgjidhë menjëherë. Pa këtë „rast bazë“, funksioni do të vazhdonte pafundësisht.",
+        "en": "Recursion is when a function calls itself, each time with a slightly smaller problem, until it reaches a case simple enough to solve right away. Without that “base case”, it would go on forever."
+      },
+      "analogy": {
+        "sq": "Si kukullat ruse: hap njërën dhe brenda ka një më të vogël, e brenda saj një edhe më të vogël — derisa arrin te më e vogla, që nuk hapet më.",
+        "en": "Like Russian nesting dolls: open one and there's a smaller one inside, and a smaller one inside that — until you reach the tiniest, which doesn't open."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def faktoriel(n):\n    if n == 1:\n        return 1                 # rasti bazë\n    return n * faktoriel(n - 1)\nprint(faktoriel(5))  # 120"
+      },
+      "related": [
+        "function",
+        "loop",
+        "algorithm"
+      ]
+    },
+    {
+      "id": "scope",
+      "en": "Scope",
+      "sq": "Fushëveprim",
+      "aliases": [
+        "fusha e veprimit",
+        "global",
+        "local",
+        "lokal"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Scope-i tregon nga cila pjesë e kodit mund ta „shohësh“ një variabël. Një variabël e krijuar brenda një funksioni ekziston vetëm aty; jashtë tij nuk njihet.",
+        "en": "Scope decides which parts of your code can “see” a variable. A variable created inside a function exists only there; outside it, it's unknown."
+      },
+      "analogy": {
+        "sq": "Si rregullat e shtëpisë: „darka në orën 7“ vlen vetëm në shtëpinë tënde. Në shtëpinë e shokut, ai rregull nuk ekziston.",
+        "en": "Like house rules: “dinner at 7” only applies in your home. At a friend's house, that rule doesn't exist."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def shtepia():\n    darka = \"ora 7\"\n    print(darka)   # funksionon\nshtepia()\nprint(darka)       # Gabim! „darka“ nuk njihet këtu"
+      },
+      "related": [
+        "variable",
+        "function",
+        "constant"
+      ]
+    },
+    {
+      "id": "keyword",
+      "en": "Keyword",
+      "sq": "Fjalë kyçe",
+      "aliases": [
+        "fjalë e rezervuar",
+        "reserved word"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Fjalët kyçe janë fjalë që gjuha i ka rezervuar për vete, si if, for, def, return ose class. Nuk mund t'i përdorësh si emra variablash, sepse kanë kuptim të veçantë.",
+        "en": "Keywords are words a language reserves for itself, like if, for, def, return or class. You can't use them as variable names, because they already have a special meaning."
+      },
+      "analogy": {
+        "sq": "Si fanella me numrin 1 që i rezervohet portierit: asnjë lojtar tjetër nuk mund ta marrë.",
+        "en": "Like the number 1 shirt reserved for the goalkeeper: no other player can take it."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import keyword\nprint(keyword.kwlist)  # ['False', 'None', 'True', 'and', ...]\nclass = \"10B\"          # Gabim! „class“ është fjalë kyçe"
+      },
+      "related": [
+        "syntax",
+        "variable",
+        "python"
+      ]
+    },
+    {
+      "id": "pseudocode",
+      "en": "Pseudocode",
+      "sq": "Pseudokod",
+      "aliases": [
+        "pseudokodi"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Pseudokodi e përshkruan algoritmin me fjalë të thjeshta, gjysmë si kod e gjysmë si gjuhë e zakonshme. E shkruan para kodit të vërtetë, për ta menduar logjikën pa u merakosur për sintaksën.",
+        "en": "Pseudocode describes an algorithm in plain words, half like code and half like normal language. You write it before the real code, to think through the logic without worrying about syntax."
+      },
+      "analogy": {
+        "sq": "Si shënimet para se të gatuash: „ziej ujin → hidh makaronat → prit 10 minuta → kulloji“. Ende s'ke gatuar, por e di saktë çfarë do të bësh.",
+        "en": "Like the notes you jot down before cooking: “boil water → add pasta → wait 10 minutes → drain”. You haven't cooked yet, but you know exactly what to do."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "# Pseudokod:\n#   NËSE piket >= 50 ATËHERË shkruaj \"Kalove\"\n#   PËRNDRYSHE shkruaj \"Provo sërish\"\npiket = 62\nprint(\"Kalove\" if piket >= 50 else \"Provo sërish\")"
+      },
+      "related": [
+        "algorithm",
+        "syntax",
+        "condition"
+      ]
+    },
+    {
+      "id": "refactoring",
+      "en": "Refactoring",
+      "sq": "Rifaktorim",
+      "aliases": [
+        "refactor",
+        "rifaktorizim",
+        "pastrim kodi"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Rifaktorimi do të thotë ta rishkruash kodin që të jetë më i qartë e më i rregullt, pa e ndryshuar atë që bën. Programi punon njësoj, por kodi lexohet dhe ndryshohet më lehtë.",
+        "en": "Refactoring means rewriting code to make it clearer and tidier without changing what it does. The program works the same, but the code is easier to read and change."
+      },
+      "analogy": {
+        "sq": "Si ta rregullosh dollapin e rrobave: rrobat janë po ato, por tani gjen menjëherë atë që kërkon.",
+        "en": "Like tidying your wardrobe: the clothes are the same, but now you find what you're looking for straight away."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "# Para:\nif mosha >= 18: i_rritur = True\nelse: i_rritur = False\n# Pas rifaktorimit:\ni_rritur = mosha >= 18"
+      },
+      "related": [
+        "source-code",
+        "testing",
+        "function"
+      ]
+    },
+    {
+      "id": "testing",
+      "en": "Testing",
+      "sq": "Testim",
+      "aliases": [
+        "test",
+        "unit test",
+        "testim njësie",
+        "pytest"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Testimi do të thotë të shkruash kod që kontrollon automatikisht nëse kodi yt jep rezultatet e duhura. Kur ndryshon diçka, testet të tregojnë menjëherë nëse ke prishur diçka tjetër.",
+        "en": "Testing means writing code that automatically checks whether your code gives the right results. When you change something, the tests immediately tell you if you broke something else."
+      },
+      "analogy": {
+        "sq": "Si kuzhinieri që e shijon gjellën para se ta nxjerrë në tavolinë: më mirë ta kuptojë ai që i mungon kripa, se sa klienti.",
+        "en": "Like a chef tasting the dish before it goes out: better they notice it needs salt than the customer does."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def mblidh(a, b):\n    return a + b\n\nassert mblidh(2, 3) == 5  # po s'qe 5, testi dështon"
+      },
+      "related": [
+        "bug",
+        "debug",
+        "refactoring"
+      ]
+    },
+    {
+      "id": "source-code",
+      "en": "Source code",
+      "sq": "Kodi burimor",
+      "aliases": [
+        "kod burim",
+        "kodi",
+        "source"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Kodi burimor është teksti që shkruan programuesi — udhëzimet e programit në një gjuhë si Python ose JavaScript. Nga ky tekst, kompjuteri e krijon programin që punon.",
+        "en": "Source code is the text a programmer writes — the program's instructions in a language like Python or JavaScript. From this text, the computer produces the program that runs."
+      },
+      "analogy": {
+        "sq": "Si receta e shkruar e një ëmbëlsire: ëmbëlsira është programi që e shijon, receta është kodi burimor. Kush e ka recetën, mund ta bëjë dhe ta ndryshojë ëmbëlsirën.",
+        "en": "Like the written recipe for a cake: the cake is the program you enjoy, the recipe is the source code. Whoever has the recipe can make the cake — and change it."
+      },
+      "code": null,
+      "related": [
+        "open-source",
+        "compiler",
+        "programming-language"
+      ]
+    },
+    {
+      "id": "programming-language",
+      "en": "Programming language",
+      "sq": "Gjuhë programimi",
+      "aliases": [
+        "gjuha e programimit",
+        "language"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Gjuha e programimit është një mënyrë e saktë për t'i dhënë udhëzime kompjuterit, me fjalët dhe rregullat e veta. Python, JavaScript, Java dhe C++ janë ndër më të njohurat — secila e mirë për punë të ndryshme.",
+        "en": "A programming language is a precise way to give instructions to a computer, with its own words and rules. Python, JavaScript, Java and C++ are among the best known — each good at different jobs."
+      },
+      "analogy": {
+        "sq": "Si gjuhët që flasim: shqip, anglisht, gjermanisht. Ideja „përshëndetje“ është e njëjtë, por secila gjuhë e shkruan ndryshe.",
+        "en": "Like the languages people speak: Albanian, English, German. The idea “hello” is the same, but each language writes it differently."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "# Python:\nprint(\"Përshëndetje!\")\n# JavaScript:  console.log(\"Përshëndetje!\");"
+      },
+      "related": [
+        "python",
+        "javascript",
+        "syntax"
+      ]
+    },
+    {
+      "id": "event",
+      "en": "Event",
+      "sq": "Ngjarje",
+      "aliases": [
+        "ngjarja",
+        "click",
+        "event listener",
+        "addeventlistener"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Ngjarja është diçka që ndodh në faqe ose në program — një klikim, shtypja e një tasti, mbarimi i ngarkimit. Kodi mund të „dëgjojë“ për ngjarje dhe të reagojë kur ndodhin.",
+        "en": "An event is something that happens on a page or in a program — a click, a key press, a page finishing loading. Your code can “listen” for events and react when they happen."
+      },
+      "analogy": {
+        "sq": "Si fishkëllima e gjyqtarit: lojtarët e dëgjojnë dhe reagojnë menjëherë — ndalen, gjuajnë penalltinë ose festojnë golin.",
+        "en": "Like the referee's whistle: the players hear it and react right away — they stop, take the penalty or celebrate the goal."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const butoni = document.querySelector(\"button\");\nbutoni.addEventListener(\"click\", () => {\n  console.log(\"U klikua butoni!\");\n});"
+      },
+      "related": [
+        "javascript",
+        "dom",
+        "callback"
+      ]
+    },
+    {
+      "id": "callback",
+      "en": "Callback",
+      "sq": null,
+      "aliases": [
+        "callback function",
+        "funksion kthimi"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Callback-u është një funksion që ia jep një funksioni tjetër, që ta thërrasë më vonë — p.sh. kur mbaron një punë ose kur ndodh një klikim. Është mënyra si i thua kodit: „kur të mbarosh, bëj këtë“.",
+        "en": "A callback is a function you hand to another function so it can call it later — for example when a task finishes or a click happens. It's how you tell code: “when you're done, do this”."
+      },
+      "analogy": {
+        "sq": "Si kur lë numrin e telefonit në piceri: „Më merrni kur të jetë gati pica.“ Nuk pret te banaku — të marrin ata.",
+        "en": "Like leaving your number at the pizza place: “Call me when the pizza's ready.” You don't wait at the counter — they call you."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "function pergatitPicen(kurTeJeteGati) {\n  setTimeout(() => kurTeJeteGati(\"Pica u bë!\"), 2000);\n}\npergatitPicen((mesazhi) => console.log(mesazhi));"
+      },
+      "related": [
+        "function",
+        "event",
+        "asynchronous"
+      ]
+    },
+    {
+      "id": "asynchronous",
+      "en": "Asynchronous (async)",
+      "sq": "Asinkron",
+      "aliases": [
+        "async",
+        "await",
+        "asinkrone"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Kodi asinkron nis një punë që zgjat (p.sh. marrjen e të dhënave nga interneti) dhe vazhdon me gjëra të tjera pa pritur. Me async/await e shkruan sikur të priste, por programi nuk ngrin.",
+        "en": "Asynchronous code starts a task that takes time (like fetching data from the internet) and carries on with other things without waiting. With async/await you write it as if it waits, but the program doesn't freeze."
+      },
+      "analogy": {
+        "sq": "Si kur e vë kafen në xhezve dhe ndërkohë shtron tryezën: nuk rri duke e parë xhezven — kthehesh kur kafja është gati.",
+        "en": "Like putting the coffee on the stove and setting the table meanwhile: you don't stand staring at the pot — you come back when the coffee's ready."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "async function merrMotin() {\n  const pergjigja = await fetch(\"https://api.example.com/moti\");\n  return pergjigja.json();\n}\nmerrMotin().then((moti) => console.log(moti));"
+      },
+      "related": [
+        "promise",
+        "callback",
+        "api"
+      ]
+    },
+    {
+      "id": "environment-variable",
+      "en": "Environment variable",
+      "sq": "Variabël mjedisi",
+      "aliases": [
+        ".env",
+        "env",
+        "dotenv",
+        "variabla mjedisi"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Variablat e mjedisit janë vlera që i mban jashtë kodit — si fjalëkalimet e databazës ose çelësat e API-ve. Kështu sekretet nuk përfundojnë në GitHub, dhe i ndryshon pa e prekur kodin.",
+        "en": "Environment variables are values you keep outside your code — like database passwords or API keys. That way secrets don't end up on GitHub, and you can change them without touching the code."
+      },
+      "analogy": {
+        "sq": "Si kodi i portës së pallatit: nuk e shkruan në murin e shkallëve, por ua thua vetëm atyre që jetojnë aty.",
+        "en": "Like the code for your building's front door: you don't write it on the stairwell wall — you only tell the people who live there."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import os\ncelesi = os.environ.get(\"API_KEY\")  # lexohet nga mjedisi, jo nga kodi"
+      },
+      "related": [
+        "api-key",
+        "variable",
+        "deploy"
+      ]
+    },
+    {
+      "id": "dependency",
+      "en": "Dependency",
+      "sq": "Varësi",
+      "aliases": [
+        "varësitë",
+        "dependencies",
+        "requirements.txt",
+        "package.json"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Varësia është një librari ose paketë që projekti yt e ka të nevojshme për të punuar. Lista e varësive ruhet në një skedar (p.sh. requirements.txt ose package.json), që kushdo t'i instalojë njësoj.",
+        "en": "A dependency is a library or package your project needs in order to work. The list of dependencies is kept in a file (e.g. requirements.txt or package.json) so anyone can install the same ones."
+      },
+      "analogy": {
+        "sq": "Si përbërësit e një recete: pa miell dhe vezë nuk bëhet tortë. Lista e përbërësve në krye të recetës është si requirements.txt.",
+        "en": "Like the ingredients of a recipe: no flour and eggs, no cake. The ingredient list at the top of the recipe is like requirements.txt."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "# requirements.txt\n#   requests==2.32.3\n#   flask==3.0.3\n# Instaloji të gjitha me:  pip install -r requirements.txt"
+      },
+      "related": [
+        "package",
+        "library",
+        "npm"
+      ]
+    },
+    {
+      "id": "node-js",
+      "en": "Node.js",
+      "sq": null,
+      "aliases": [
+        "node",
+        "nodejs"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Node.js e lejon JavaScript-in të punojë jashtë shfletuesit — në kompjuterin tënd ose në server. Me të ndërtohen backend-e, mjete për terminal dhe shumë më tepër.",
+        "en": "Node.js lets JavaScript run outside the browser — on your computer or on a server. People use it to build backends, terminal tools and much more."
+      },
+      "analogy": {
+        "sq": "Si kuzhinieri i restorantit që fillon të gatuajë edhe për dasma: e njëjta mjeshtëri (JavaScript), por tani jashtë kuzhinës së zakonshme (shfletuesit).",
+        "en": "Like a restaurant chef who starts cooking for weddings too: the same skill (JavaScript), but now outside the usual kitchen (the browser)."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "// ruaje si pershendetje.js dhe ekzekuto:  node pershendetje.js\nconsole.log(\"Përshëndetje nga Node.js!\");"
+      },
+      "related": [
+        "javascript",
+        "npm",
+        "server"
+      ]
+    },
+    {
+      "id": "npm",
+      "en": "npm",
+      "sq": null,
+      "aliases": [
+        "npm install",
+        "node package manager"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Npm-i është mjeti që instalon paketa JavaScript, njësoj si pip-i për Python. Me „npm install“ shkarkon librari nga një dyqan i madh online me miliona paketa falas.",
+        "en": "npm is the tool that installs JavaScript packages, just like pip does for Python. With “npm install” you download libraries from a huge online store of millions of free packages."
+      },
+      "analogy": {
+        "sq": "Si një pazar i madh ku çdo tezgë ka një vegël të gatshme — merr atë që të duhet, në vend që ta ndërtosh vetë.",
+        "en": "Like a huge market where every stall has a ready-made tool — take what you need instead of building it yourself."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "// instaloje më parë me:  npm install dayjs\nimport dayjs from \"dayjs\";\nconsole.log(dayjs().format(\"DD.MM.YYYY\"));  // data e sotme"
+      },
+      "related": [
+        "node-js",
+        "package",
+        "dependency"
+      ]
+    },
+    {
+      "id": "react",
+      "en": "React",
+      "sq": null,
+      "aliases": [
+        "react.js",
+        "reactjs",
+        "jsx"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "React-i është një librari JavaScript për ndërtimin e ndërfaqeve nga komponentë. Kur ndryshojnë të dhënat, React-i e përditëson vetë vetëm pjesën e faqes që duhet.",
+        "en": "React is a JavaScript library for building user interfaces out of components. When the data changes, React updates only the part of the page that needs it."
+      },
+      "analogy": {
+        "sq": "Si tabela elektronike e stadiumit: kur shënohet gol, ndryshon vetëm rezultati — jo gjithë tabela me emrat e ekipeve dhe orën.",
+        "en": "Like the stadium scoreboard: when a goal is scored, only the score changes — not the whole board with the team names and the clock."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "function Pershendetje({ emri }) {\n  return <h1>Përshëndetje, {emri}!</h1>;\n}\n// Përdorimi: <Pershendetje emri=\"Arta\" />"
+      },
+      "related": [
+        "component",
+        "framework",
+        "javascript"
+      ]
+    },
+    {
+      "id": "typescript",
+      "en": "TypeScript",
+      "sq": null,
+      "aliases": [
+        "ts"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "TypeScript-i është JavaScript me tipe: i thua paraprakisht nëse një variabël është numër, tekst etj. Kështu shumë gabime kapen që kur e shkruan kodin, para se ta ekzekutosh.",
+        "en": "TypeScript is JavaScript with types: you say in advance whether a variable is a number, text and so on. That way many mistakes are caught while you type, before you even run the code."
+      },
+      "analogy": {
+        "sq": "Si etiketat në kavanozët e kuzhinës: „sheqer“, „kripë“. Me etiketa nuk e hedh gabimisht kripën në kafe.",
+        "en": "Like labels on kitchen jars: “sugar”, “salt”. With labels, you don't accidentally put salt in your coffee."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "function mblidh(a: number, b: number): number {\n  return a + b;\n}\nmblidh(2, \"3\");  // Gabim! \"3\" është tekst, jo numër"
+      },
+      "related": [
+        "javascript",
+        "data-type",
+        "bug"
+      ]
+    },
+    {
+      "id": "ui",
+      "en": "UI (User Interface)",
+      "sq": "Ndërfaqja e përdoruesit",
+      "aliases": [
+        "user interface",
+        "ndërfaqe"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "UI-ja është gjithçka me të cilën përdoruesi ndërvepron në ekran: butonat, menytë, ngjyrat, shkronjat. Një UI e mirë është e qartë dhe e këndshme për syrin.",
+        "en": "The UI is everything the user interacts with on screen: buttons, menus, colours, fonts. A good UI is clear and pleasant to look at."
+      },
+      "analogy": {
+        "sq": "Si vitrina dhe raftet e një dyqani: si janë rregulluar, çfarë ngjyrash kanë, ku janë vendosur etiketat e çmimeve.",
+        "en": "Like a shop's window and shelves: how they're arranged, what colours they are, where the price tags go."
+      },
+      "code": null,
+      "related": [
+        "ux",
+        "frontend",
+        "css"
+      ]
+    },
+    {
+      "id": "ux",
+      "en": "UX (User Experience)",
+      "sq": "Përvoja e përdoruesit",
+      "aliases": [
+        "user experience"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "UX-i është ndjesia që ka përdoruesi kur përdor një aplikacion: a e gjen lehtë atë që kërkon, a është i shpejtë, a e ngatërron. UI-ja është si duket, UX-i është si ndihet.",
+        "en": "UX is how it feels to use an app: can people easily find what they want, is it fast, is it confusing? UI is how it looks; UX is how it feels."
+      },
+      "analogy": {
+        "sq": "Si gjithë përvoja në një dyqan: a e gjete lehtë qumështin, a ishte e gjatë radha te arka, a ishin të sjellshëm shitësit.",
+        "en": "Like the whole experience in a shop: did you find the milk easily, was the queue at the till long, were the staff friendly?"
+      },
+      "code": null,
+      "related": [
+        "ui",
+        "accessibility",
+        "responsive-design"
+      ]
+    },
+    {
+      "id": "seo",
+      "en": "SEO",
+      "sq": "Optimizim për motorët e kërkimit",
+      "aliases": [
+        "search engine optimization",
+        "google",
+        "renditje në google"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "SEO janë hapat që e ndihmojnë faqen tënde të dalë më lart në Google. Tituj të qartë, përshkrime të mira dhe faqe të shpejta i ndihmojnë njerëzit të të gjejnë.",
+        "en": "SEO is the set of steps that help your site show up higher in Google. Clear titles, good descriptions and fast pages make it easier for people to find you."
+      },
+      "analogy": {
+        "sq": "Si ta kesh dyqanin në rrugën kryesore me një tabelë të madhe e të qartë, në vend të një rrugice pa emër.",
+        "en": "Like having your shop on the main street with a big, clear sign, instead of down a nameless back alley."
+      },
+      "code": null,
+      "related": [
+        "html",
+        "domain",
+        "browser"
+      ]
+    },
+    {
+      "id": "accessibility",
+      "en": "Accessibility",
+      "sq": "Aksesueshmëri",
+      "aliases": [
+        "a11y",
+        "qasshmëri",
+        "accessible"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Aksesueshmëria do të thotë që faqen ta përdorë kushdo — edhe njerëzit që nuk shohin mirë, që përdorin vetëm tastierën ose një lexues ekrani. Kontrasti i mirë, teksti alternativ për fotot dhe butonat e qartë janë hapat e parë.",
+        "en": "Accessibility means everyone can use your site — including people who can't see well, who use only a keyboard or a screen reader. Good contrast, alt text for images and clear buttons are the first steps."
+      },
+      "analogy": {
+        "sq": "Si rampa për karrocat në hyrje të shkollës: shkallët u shërbejnë shumicës, rampa siguron që të hyjë çdokush.",
+        "en": "Like the wheelchair ramp at the school entrance: the stairs work for most people, the ramp makes sure everyone can get in."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const foto = document.querySelector(\"img\");\nfoto.alt = \"Fëmijë që luajnë futboll në oborrin e shkollës\";"
+      },
+      "related": [
+        "html",
+        "ux",
+        "ui"
+      ]
+    },
+    {
+      "id": "form",
+      "en": "Form",
+      "sq": "Formular",
+      "aliases": [
+        "formulari",
+        "submit"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Formulari është pjesa e faqes ku përdoruesi shkruan ose zgjedh të dhëna dhe i dërgon — p.sh. kyçja, regjistrimi ose kërkimi. Të dhënat zakonisht i dërgohen serverit përmes një kërkese.",
+        "en": "A form is the part of a page where users type or pick information and submit it — like logging in, signing up or searching. The data is usually sent to a server in a request."
+      },
+      "analogy": {
+        "sq": "Si formulari i regjistrimit në shkollë: plotëson emrin, datëlindjen dhe klasën, pastaj e dorëzon në sekretari.",
+        "en": "Like the school enrolment form: you fill in your name, date of birth and class, then hand it in at the office."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "document.querySelector(\"form\").addEventListener(\"submit\", (e) => {\n  e.preventDefault();\n  console.log(\"Emri:\", e.target.emri.value);\n});"
+      },
+      "related": [
+        "html",
+        "request",
+        "event"
+      ]
+    },
+    {
+      "id": "promise",
+      "en": "Promise",
+      "sq": "Premtim",
+      "aliases": [
+        "promises",
+        ".then",
+        "premtimi"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Promise-i në JavaScript është një objekt që përfaqëson një rezultat që do të vijë më vonë — ose me sukses, ose me gabim. Me .then() thua çfarë të bëhet kur të vijë rezultati.",
+        "en": "A Promise in JavaScript is an object representing a result that will arrive later — either successfully or with an error. With .then() you say what to do when the result arrives."
+      },
+      "analogy": {
+        "sq": "Si kuponi me numër në një fast food: ende s'e ke burgerin, por kuponi „premton“ që do ta marrësh — ose do të të thonë që ka mbaruar.",
+        "en": "Like the numbered receipt at a fast-food place: you don't have your burger yet, but the receipt “promises” you'll get it — or they'll tell you it's sold out."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "fetch(\"https://api.example.com/moti\")  // kthen një Promise\n  .then((pergjigja) => pergjigja.json())\n  .then((moti) => console.log(moti))\n  .catch(() => console.log(\"Diçka shkoi keq\"));"
+      },
+      "related": [
+        "asynchronous",
+        "callback",
+        "api"
+      ]
+    },
+    {
+      "id": "f-string",
+      "en": "f-string",
+      "sq": null,
+      "aliases": [
+        "fstring",
+        "f string",
+        "formatted string"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "F-string-u është mënyra më e lehtë në Python për të futur vlera brenda një teksti. Shkruan f para thonjëzave dhe i vendos variablat brenda kllapave { }.",
+        "en": "An f-string is the easiest way in Python to put values inside text. You write f before the quotes and put variables inside curly braces { }."
+      },
+      "analogy": {
+        "sq": "Si dëftesa e shtypur me vend bosh për emrin: teksti është i njëjtë për të gjithë, ndryshojnë vetëm emri dhe nota.",
+        "en": "Like a printed certificate with blanks for the name: the text is the same for everyone, only the name and grade change."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "emri = \"Lirie\"\nnota = 10\nprint(f\"{emri} mori notën {nota}!\")  # Lirie mori notën 10!"
+      },
+      "related": [
+        "string",
+        "variable",
+        "python"
+      ]
+    },
+    {
+      "id": "range",
+      "en": "range()",
+      "sq": null,
+      "aliases": [
+        "range"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "range() krijon një varg numrash njëri pas tjetrit, zakonisht për ta përdorur në një cikël for. range(5) jep 0, 1, 2, 3, 4 — fillon nga 0 dhe ndalet para 5-shit.",
+        "en": "range() creates a sequence of numbers one after another, usually for a for loop. range(5) gives 0, 1, 2, 3, 4 — it starts at 0 and stops before 5."
+      },
+      "analogy": {
+        "sq": "Si trajneri që thotë „bëni 5 xhiro rreth fushës“: numëron xhiro pas xhiroje derisa të mbarojnë.",
+        "en": "Like a coach saying “run 5 laps of the pitch”: you count lap by lap until they're done."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "for xhiro in range(1, 6):\n    print(\"Xhiroja\", xhiro)  # nga 1 deri në 5"
+      },
+      "related": [
+        "loop",
+        "list",
+        "integer"
+      ]
+    },
+    {
+      "id": "while-loop",
+      "en": "While loop",
+      "sq": "Cikli while",
+      "aliases": [
+        "while",
+        "cikël while"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "Cikli while e përsërit kodin për sa kohë një kusht është i vërtetë. Përdoret kur nuk e di paraprakisht sa herë do të përsëritet — por kujdes: nëse kushti nuk bëhet kurrë false, cikli nuk mbaron kurrë.",
+        "en": "A while loop repeats code for as long as a condition is true. It's used when you don't know in advance how many times it'll repeat — but careful: if the condition never becomes false, it never ends."
+      },
+      "analogy": {
+        "sq": "Si kur e trazon salcën „derisa të trashet“: nuk e di sa herë do ta trazosh — vazhdon sa kohë s'është gati.",
+        "en": "Like stirring a sauce “until it thickens”: you don't know how many stirs it'll take — you keep going while it isn't ready."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "fjalekalimi = \"\"\nwhile fjalekalimi != \"sekret\":\n    fjalekalimi = input(\"Shkruaj fjalëkalimin: \")\nprint(\"Mirë se erdhe!\")"
+      },
+      "related": [
+        "loop",
+        "condition",
+        "boolean"
+      ]
+    },
+    {
+      "id": "input",
+      "en": "input()",
+      "sq": null,
+      "aliases": [
+        "input",
+        "lexo nga tastiera"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "input() e ndal programin dhe pret që përdoruesi të shkruajë diçka me tastierë. Ajo që shkruan kthehet gjithmonë si tekst (string), edhe nëse është numër.",
+        "en": "input() pauses the program and waits for the user to type something. Whatever they type always comes back as text (a string), even if it's a number."
+      },
+      "analogy": {
+        "sq": "Si mësuesi që bën një pyetje dhe pret përgjigjen tënde para se të vazhdojë mësimin.",
+        "en": "Like a teacher who asks a question and waits for your answer before carrying on with the lesson."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "mosha = input(\"Sa vjeç je? \")\nmosha = int(mosha)  # nga tekst në numër\nprint(\"Vitin tjetër do të jesh\", mosha + 1)"
+      },
+      "related": [
+        "string",
+        "integer",
+        "python"
+      ]
+    },
+    {
+      "id": "django",
+      "en": "Django",
+      "sq": null,
+      "aliases": [
+        "django framework"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "Django-ja është një framework i madh Python për ndërtimin e faqeve dhe aplikacioneve ueb. Vjen me shumë pjesë të gatshme — kyçje, panel administrimi, lidhje me databazën — që të mos i ndërtosh vetë.",
+        "en": "Django is a big Python framework for building websites and web apps. It comes with lots of ready-made parts — login, an admin panel, database access — so you don't build them yourself."
+      },
+      "analogy": {
+        "sq": "Si një shtëpi plotësisht e mobiluar që e merr me qira: kuzhina, shtretërit, lavatriçja janë gati — vetëm hyn dhe fillon të jetosh.",
+        "en": "Like renting a fully furnished house: the kitchen, beds and washing machine are ready — you just move in and start living."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "# views.py\nfrom django.http import HttpResponse\n\ndef kreu(request):\n    return HttpResponse(\"Mirë se vini në faqen time!\")"
+      },
+      "related": [
+        "framework",
+        "flask",
+        "backend"
+      ]
+    },
+    {
+      "id": "flask",
+      "en": "Flask",
+      "sq": null,
+      "aliases": [
+        "flask framework"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "Flask-u është një framework i vogël dhe i thjeshtë Python për aplikacione ueb. Fillon me shumë pak dhe i shton vetë vetëm ato që të duhen — ideal për projekte të vogla dhe për të mësuar.",
+        "en": "Flask is a small, simple Python framework for web apps. It starts with very little and you add only what you need — ideal for small projects and for learning."
+      },
+      "analogy": {
+        "sq": "Nëse Django-ja është shtëpi e mobiluar, Flask-u është një dhomë bosh: e mobilon vetë, pjesë pas pjese, ashtu siç do ti.",
+        "en": "If Django is a furnished house, Flask is an empty room: you furnish it yourself, piece by piece, exactly how you like."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "from flask import Flask\napp = Flask(__name__)\n\n@app.route(\"/\")\ndef kreu(): return \"Përshëndetje nga Flask!\""
+      },
+      "related": [
+        "framework",
+        "django",
+        "server"
+      ]
+    },
+    {
+      "id": "lambda",
+      "en": "Lambda",
+      "sq": "Funksion anonim",
+      "aliases": [
+        "lambda function",
+        "funksion pa emër",
+        "arrow function"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "Lambda është një funksion i vogël pa emër, i shkruar në një rresht të vetëm. Përdoret kur të duhet një funksion i shkurtër vetëm për një moment, p.sh. për renditje.",
+        "en": "A lambda is a small, nameless function written on a single line. It's used when you need a short function just for a moment, for example when sorting."
+      },
+      "analogy": {
+        "sq": "Si një shënim i shpejtë në një copë letër — „merr bukë“ — në vend që ta shkruash në fletoren e madhe të listave.",
+        "en": "Like a quick note on a scrap of paper — “get bread” — instead of writing it in your big list notebook."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "lojtaret = [(\"Arbër\", 12), (\"Dren\", 7), (\"Ilir\", 9)]\nlojtaret.sort(key=lambda lojtari: lojtari[1])  # rendit sipas golave\nprint(lojtaret)"
+      },
+      "related": [
+        "function",
+        "list",
+        "callback"
+      ]
+    },
+    {
+      "id": "nosql",
+      "en": "NoSQL",
+      "sq": null,
+      "aliases": [
+        "mongodb",
+        "firebase",
+        "document database",
+        "jo-relacionale"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "NoSQL janë baza të dhënash që nuk i ruajnë të dhënat në tabela me rreshta e kolona, por p.sh. si dokumente të ngjashme me JSON. Janë fleksibile kur të dhënat nuk kanë gjithmonë të njëjtën formë. Shembuj: MongoDB, Firebase.",
+        "en": "NoSQL databases don't store data in tables of rows and columns, but, for example, as JSON-like documents. They're flexible when your data doesn't always have the same shape. Examples: MongoDB, Firebase."
+      },
+      "analogy": {
+        "sq": "Nëse SQL-ja është ditari me kolona fikse, NoSQL-ja është dosja e secilit nxënës: njëri ka diploma, tjetri vërtetime mjekësore — çdo dosje ka përmbajtjen e vet.",
+        "en": "If SQL is a register with fixed columns, NoSQL is a folder per student: one has certificates, another medical notes — every folder has its own contents."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "nxenesi = {\n    \"emri\": \"Arta\",\n    \"notat\": [9, 10, 8],\n    \"hobi\": [\"futboll\", \"lexim\"],\n}  # ruhet si një dokument i vetëm"
+      },
+      "related": [
+        "database",
+        "json",
+        "sql"
+      ]
+    },
+    {
+      "id": "join",
+      "en": "JOIN",
+      "sq": "Bashkim tabelash",
+      "aliases": [
+        "inner join",
+        "left join"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "JOIN-i në SQL i bashkon rreshtat nga dy ose më shumë tabela sipas një kolone të përbashkët. Kështu, p.sh., merr në një listë emrin e nxënësit bashkë me notat e tij.",
+        "en": "A JOIN in SQL combines rows from two or more tables using a shared column. That way you can, for example, get each student's name together with their grades in one list."
+      },
+      "analogy": {
+        "sq": "Si kur e vë listën e emrave të klasës pranë fletës së notave dhe i përputh sipas numrit të nxënësit.",
+        "en": "Like putting the class name list next to the grade sheet and matching them up by student number."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "db.execute(\"\"\"\n  SELECT nxenesit.emri, notat.nota\n  FROM nxenesit\n  JOIN notat ON notat.nxenesi_id = nxenesit.id\"\"\")"
+      },
+      "related": [
+        "sql",
+        "foreign-key",
+        "table"
+      ]
+    },
+    {
+      "id": "orm",
+      "en": "ORM",
+      "sq": null,
+      "aliases": [
+        "object relational mapping",
+        "sqlalchemy",
+        "prisma"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "ORM-ja të lejon të punosh me databazën duke përdorur klasat dhe objektet e gjuhës tënde, në vend që ta shkruash SQL-në me dorë. ORM-ja e përkthen vetë kodin tënd në SQL.",
+        "en": "An ORM lets you work with a database using your language's classes and objects instead of writing SQL by hand. The ORM translates your code into SQL for you."
+      },
+      "analogy": {
+        "sq": "Si të porositësh në një restorant të huaj përmes një kamarieri që flet shqip: ti flet gjuhën tënde, ai ia përkthen kuzhinës.",
+        "en": "Like ordering at a foreign restaurant through a waiter who speaks your language: you speak your language, they translate for the kitchen."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "# Me ORM (p.sh. Django), në vend të SQL-së:\nstudentet = Student.objects.filter(klasa=\"10B\")\n# ORM-ja e kthen në: SELECT * FROM student WHERE klasa = '10B'"
+      },
+      "related": [
+        "sql",
+        "class",
+        "database"
+      ]
+    },
+    {
+      "id": "migration",
+      "en": "Migration",
+      "sq": "Migrim",
+      "aliases": [
+        "migrime",
+        "migrate",
+        "database migration"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Migrimi është një skedar që përshkruan një ndryshim në strukturën e databazës — p.sh. shtimin e një kolone të re. Migrimet ruhen me radhë, që i gjithë ekipi ta ndryshojë databazën njësoj.",
+        "en": "A migration is a file that describes a change to the database's structure — like adding a new column. Migrations are kept in order so the whole team changes the database the same way."
+      },
+      "analogy": {
+        "sq": "Si fletorja e meremetimeve të shtëpisë: „2024 – u shtua një dhomë“, „2025 – u ndërrua kuzhina“. Kushdo që e lexon e di si u bë shtëpia kështu siç është sot.",
+        "en": "Like a house's renovation log: “2024 – added a room”, “2025 – new kitchen”. Anyone who reads it knows how the house came to be what it is today."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "# migrimi 0002: shto kolonën „email“\ndb.execute(\"ALTER TABLE nxenesit ADD COLUMN email TEXT\")"
+      },
+      "related": [
+        "schema",
+        "database",
+        "orm"
+      ]
+    },
+    {
+      "id": "backup",
+      "en": "Backup",
+      "sq": "Kopje rezervë",
+      "aliases": [
+        "rezervë",
+        "kopje sigurie",
+        "back up"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Backup-i është një kopje e të dhënave që e ruan në një vend tjetër, për t'i rikthyer nëse diçka shkon keq — prishet disku, fshihet diçka gabimisht ose sulmohet serveri.",
+        "en": "A backup is a copy of your data stored somewhere else, so you can restore it if something goes wrong — a disk fails, something gets deleted by mistake or the server is attacked."
+      },
+      "analogy": {
+        "sq": "Si çelësi rezervë i shtëpisë që e lë te gjyshja: shpreson të mos të duhet kurrë, por kur e humb çelësin, të shpëton.",
+        "en": "Like the spare house key you leave with grandma: you hope you'll never need it, but when you lose yours, it saves the day."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import shutil\nshutil.copy(\"shkolla.db\", \"rezerve/shkolla-2026-10-01.db\")"
+      },
+      "related": [
+        "database",
+        "cloud",
+        "git"
+      ]
+    },
+    {
+      "id": "gitignore",
+      "en": ".gitignore",
+      "sq": null,
+      "aliases": [
+        "gitignore",
+        "ignore"
+      ],
+      "category": "git",
+      "explanation": {
+        "sq": ".gitignore është një skedar ku shkruan cilat skedarë ose dosje duhet t'i injorojë Git-i — p.sh. fjalëkalimet, dosjet e mëdha të paketave ose skedarët e përkohshëm. Ato nuk ngarkohen kurrë në GitHub.",
+        "en": ".gitignore is a file where you list which files or folders Git should ignore — like passwords, big package folders or temporary files. They never get uploaded to GitHub."
+      },
+      "analogy": {
+        "sq": "Si lista „mos i merr“ kur bën valixhen për pushime: ditari personal dhe gjërat e prishura mbeten në shtëpi.",
+        "en": "Like a “don't pack” list when you're packing for a holiday: your private diary and broken stuff stay at home."
+      },
+      "code": null,
+      "related": [
+        "git",
+        "environment-variable",
+        "repository"
+      ]
+    },
+    {
+      "id": "staging-area",
+      "en": "Staging area",
+      "sq": "Zona e përgatitjes",
+      "aliases": [
+        "git add",
+        "staging",
+        "stage"
+      ],
+      "category": "git",
+      "explanation": {
+        "sq": "Staging area është „dhoma e pritjes“ ku i vendos ndryshimet që do të hyjnë në commit-in e radhës, me komandën git add. Kështu zgjedh saktësisht çfarë ruan, edhe nëse ke ndryshuar shumë skedarë.",
+        "en": "The staging area is the “waiting room” where you put the changes that will go into your next commit, using git add. That way you choose exactly what to save, even if you changed many files."
+      },
+      "analogy": {
+        "sq": "Si kur i rreshton pjatat në banak para se t'i çosh në tryezë: zgjedh cilat janë gati, dhe vetëm ato i çon me një të vajtur.",
+        "en": "Like lining up plates on the counter before taking them to the table: you choose which ones are ready, and carry only those in one trip."
+      },
+      "code": null,
+      "related": [
+        "commit",
+        "git",
+        "push"
+      ]
+    },
+    {
+      "id": "fork",
+      "en": "Fork",
+      "sq": null,
+      "aliases": [
+        "forko",
+        "forkim"
+      ],
+      "category": "git",
+      "explanation": {
+        "sq": "Fork-u është një kopje e repository-së së dikujt tjetër në llogarinë tënde në GitHub. Mund ta ndryshosh lirisht dhe, nëse do, t'ia propozosh ndryshimet projektit origjinal me një pull request.",
+        "en": "A fork is a copy of someone else's repository in your own GitHub account. You can change it freely and, if you like, propose your changes to the original project with a pull request."
+      },
+      "analogy": {
+        "sq": "Si kur merr recetën e fqinjës për pite dhe e bën në mënyrën tënde. Nëse versioni yt del më i mirë, ia tregon edhe asaj.",
+        "en": "Like taking your neighbour's pie recipe and making it your own way. If your version turns out better, you show it to her too."
+      },
+      "code": null,
+      "related": [
+        "github",
+        "pull-request",
+        "clone"
+      ]
+    },
+    {
+      "id": "readme",
+      "en": "README",
+      "sq": null,
+      "aliases": [
+        "readme.md",
+        "readme file"
+      ],
+      "category": "git",
+      "explanation": {
+        "sq": "README-ja është skedari i parë që sheh dikush kur hap një projekt në GitHub. Shpjegon çfarë bën projekti, si instalohet dhe si përdoret — si një kartëvizitë e projektit.",
+        "en": "The README is the first file people see when they open a project on GitHub. It explains what the project does, how to install it and how to use it — like the project's business card."
+      },
+      "analogy": {
+        "sq": "Si etiketa në anën e pasme të një produkti në market: çfarë është, si përdoret dhe çfarë përmban.",
+        "en": "Like the label on the back of a product in the shop: what it is, how to use it and what's inside."
+      },
+      "code": null,
+      "related": [
+        "documentation",
+        "github",
+        "repository"
+      ]
+    },
+    {
+      "id": "issue",
+      "en": "Issue",
+      "sq": null,
+      "aliases": [
+        "issues",
+        "çështje",
+        "ticket"
+      ],
+      "category": "git",
+      "explanation": {
+        "sq": "Issue-ja është një shënim në GitHub ku dikush raporton një bug, kërkon një veçori të re ose bën një pyetje për projektin. Ekipi i diskuton dhe i mbyll kur zgjidhen.",
+        "en": "An issue is a note on GitHub where someone reports a bug, asks for a new feature or asks a question about the project. The team discusses them and closes them once they're solved."
+      },
+      "analogy": {
+        "sq": "Si fletorja e kujdestarit të klasës: „dritarja e thyer“, „mungon shkumësi“. Çdo problem shënohet, dikush merret me të, dhe kur rregullohet, i hiqet vizë.",
+        "en": "Like the class monitor's notebook: “broken window”, “out of chalk”. Each problem is written down, someone takes care of it, and once it's fixed it gets crossed off."
+      },
+      "code": null,
+      "related": [
+        "github",
+        "bug",
+        "pull-request"
+      ]
+    },
+    {
+      "id": "api-key",
+      "en": "API key",
+      "sq": "Çelës API",
+      "aliases": [
+        "çelësi api",
+        "apikey"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Çelësi API është një kod sekret që i jep aplikacionit tënd leje ta përdorë një API. Ruaje si fjalëkalim: kurrë mos e vendos direkt në kod që ngarkohet në GitHub.",
+        "en": "An API key is a secret code that gives your app permission to use an API. Treat it like a password: never put it straight into code you upload to GitHub."
+      },
+      "analogy": {
+        "sq": "Si karta e anëtarësisë në palestër: pa të nuk hyn, dhe nëse e humb, dikush tjetër mund ta përdorë në emrin tënd.",
+        "en": "Like a gym membership card: without it you can't get in, and if you lose it, someone else could use it in your name."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import os, requests\ncelesi = os.environ[\"API_KEY\"]  # jo direkt në kod!\nrequests.get(\"https://api.example.com/moti\", headers={\"Authorization\": celesi})"
+      },
+      "related": [
+        "api",
+        "environment-variable",
+        "authentication"
+      ]
+    },
+    {
+      "id": "two-factor",
+      "en": "Two-factor authentication (2FA)",
+      "sq": "Vërtetim me dy hapa",
+      "aliases": [
+        "2fa",
+        "mfa",
+        "two factor",
+        "kod sms",
+        "authenticator"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Vërtetimi me dy hapa kërkon dy prova që je ti: diçka që di (fjalëkalimin) dhe diçka që ke (një kod në telefon). Edhe nëse dikush ta vjedh fjalëkalimin, pa telefonin tënd nuk hyn dot.",
+        "en": "Two-factor authentication asks for two proofs that it's you: something you know (your password) and something you have (a code on your phone). Even if someone steals your password, they can't get in without your phone."
+      },
+      "analogy": {
+        "sq": "Si te bankomati: të duhen edhe karta, edhe PIN-i. Njëra pa tjetrën nuk mjafton.",
+        "en": "Like at a cash machine: you need both the card and the PIN. One without the other isn't enough."
+      },
+      "code": null,
+      "related": [
+        "authentication",
+        "password-hashing",
+        "phishing"
+      ]
+    },
+    {
+      "id": "phishing",
+      "en": "Phishing",
+      "sq": null,
+      "aliases": [
+        "fishing",
+        "mashtrim",
+        "email mashtrues"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Phishing-u është një mashtrim ku dikush të dërgon email, mesazh ose faqe false që duken si të vërteta — p.sh. nga banka — për të të vjedhur fjalëkalimin ose të dhënat. Kontrollo gjithmonë adresën para se të shkruash diçka.",
+        "en": "Phishing is a scam where someone sends you a fake email, message or website that looks real — say, from your bank — to steal your password or details. Always check the address before you type anything."
+      },
+      "analogy": {
+        "sq": "Si dikush që shet bileta false para stadiumit: duken njësoj si të vërtetat, por te hyrja zbulohet mashtrimi — dhe paratë i ke humbur.",
+        "en": "Like someone selling fake tickets outside the stadium: they look just like the real ones, but at the gate the scam is exposed — and your money's gone."
+      },
+      "code": null,
+      "related": [
+        "authentication",
+        "two-factor",
+        "url"
+      ]
+    },
+    {
+      "id": "token",
+      "en": "Token",
+      "sq": null,
+      "aliases": [
+        "tokeni",
+        "jwt",
+        "access token",
+        "bearer token"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Token-i është një „biletë“ dixhitale që serveri ta jep pasi kyçesh. Me të vërteton në çdo kërkesë që je i kyçur, pa e dërguar fjalëkalimin çdo herë.",
+        "en": "A token is a digital “ticket” the server gives you after you log in. You use it in each request to prove you're logged in, without sending your password every time."
+      },
+      "analogy": {
+        "sq": "Si byzylyku që të vendosin në dorë në hyrje të një festivali: pasi ta kontrollojnë biletën një herë, me byzylyk hyn e del pa u kontrolluar sërish.",
+        "en": "Like the wristband you get at a festival entrance: once your ticket's been checked, you come and go with the wristband without being checked again."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "fetch(\"https://api.example.com/profili\", {\n  headers: { Authorization: \"Bearer \" + tokeni },\n});"
+      },
+      "related": [
+        "authentication",
+        "cookie",
+        "api-key"
+      ]
+    },
+    {
+      "id": "firewall",
+      "en": "Firewall",
+      "sq": "Mur mbrojtës",
+      "aliases": [
+        "muri i zjarrit"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Firewall-i është një mbrojtje që kontrollon çfarë trafiku hyn dhe del nga një kompjuter ose rrjet, dhe bllokon atë që duket i rrezikshëm ose i palejuar.",
+        "en": "A firewall is a protection that checks what traffic goes in and out of a computer or network, and blocks anything that looks dangerous or isn't allowed."
+      },
+      "analogy": {
+        "sq": "Si rojtari te porta e shkollës: i lë të hyjnë nxënësit dhe mësuesit, por e ndal dikë që s'ka punë aty.",
+        "en": "Like the guard at the school gate: lets students and teachers in, but stops anyone who has no business being there."
+      },
+      "code": null,
+      "related": [
+        "server",
+        "port",
+        "encryption"
+      ]
+    },
+    {
+      "id": "prompt",
+      "en": "Prompt",
+      "sq": null,
+      "aliases": [
+        "prompti",
+        "prompt engineering"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Prompt-i është teksti ose pyetja që i shkruan një modeli të inteligjencës artificiale. Sa më i qartë dhe më i detajuar të jetë prompt-i, aq më e mirë del përgjigjja.",
+        "en": "A prompt is the text or question you write to an artificial intelligence model. The clearer and more detailed your prompt, the better the answer."
+      },
+      "analogy": {
+        "sq": "Si porosia në furrë: „një byrek“ të sjell çfarëdo; „një byrek me spinaq, të ngrohtë, të prerë në katër“ të sjell saktë atë që do.",
+        "en": "Like ordering at a bakery: “a byrek” gets you anything; “a spinach byrek, warm, cut into four” gets you exactly what you want."
+      },
+      "code": null,
+      "related": [
+        "ai",
+        "api",
+        "documentation"
+      ]
+    },
+    {
+      "id": "binary",
+      "en": "Binary",
+      "sq": "Sistemi binar",
+      "aliases": [
+        "binar",
+        "0 dhe 1",
+        "zero dhe një"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "Sistemi binar përdor vetëm dy shifra: 0 dhe 1. Kompjuteri i ruan të gjitha — tekstet, fotot, muzikën — si vargje të gjata zerosh e njëshash, sepse brenda tij gjithçka është „ka rrymë“ ose „s'ka rrymë“.",
+        "en": "Binary uses only two digits: 0 and 1. A computer stores everything — text, photos, music — as long strings of zeros and ones, because inside it everything is either “power on” or “power off”."
+      },
+      "analogy": {
+        "sq": "Si çelësi i dritës në dhomë: ose ndezur (1), ose fikur (0). Me mjaft çelësa bashkë mund të shkruash çdo numër.",
+        "en": "Like a light switch: either on (1) or off (0). With enough switches together, you can write any number."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "print(bin(5))         # 0b101\nprint(int(\"101\", 2))  # 5"
+      },
+      "related": [
+        "bit-byte",
+        "boolean",
+        "cpu"
+      ]
+    },
+    {
+      "id": "bit-byte",
+      "en": "Bit & byte",
+      "sq": "Bit dhe bajt",
+      "aliases": [
+        "bit",
+        "byte",
+        "bajt",
+        "kb",
+        "mb",
+        "gb",
+        "kilobajt",
+        "megabajt",
+        "gigabajt"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "Bit-i është njësia më e vogël e informacionit: një 0 ose një 1. Tetë bite bëjnë një bajt, që mjafton për një shkronjë. Pastaj vijnë KB, MB, GB — secila rreth 1000 herë më e madhe se e mëparshmja.",
+        "en": "A bit is the smallest unit of information: a single 0 or 1. Eight bits make a byte, which is enough for one letter. Then come KB, MB, GB — each about 1,000 times bigger than the last."
+      },
+      "analogy": {
+        "sq": "Si orizi: një kokërr është bit-i, një lugë është bajt-i, një thes i tërë është gigabajt-i.",
+        "en": "Like rice: one grain is a bit, a spoonful is a byte, a whole sack is a gigabyte."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "print(len(\"e\".encode(\"utf-8\")))  # 1 bajt\nprint(len(\"ë\".encode(\"utf-8\")))  # 2 bajtë — „ë“ zë më shumë vend"
+      },
+      "related": [
+        "binary",
+        "ram",
+        "data-type"
+      ]
+    },
+    {
+      "id": "cpu",
+      "en": "CPU",
+      "sq": "Procesori",
+      "aliases": [
+        "procesor",
+        "processor",
+        "central processing unit",
+        "çip"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "CPU-ja (procesori) është „truri“ i kompjuterit: i ekzekuton udhëzimet e programeve një nga një, me miliarda në sekondë. Sa më i shpejtë procesori, aq më shpejt punojnë programet.",
+        "en": "The CPU (processor) is the computer's “brain”: it carries out programs' instructions one by one, billions per second. The faster the processor, the faster programs run."
+      },
+      "analogy": {
+        "sq": "Si kuzhinieri kryesor i restorantit: merr porositë një nga një dhe i gatuan me shpejtësi të madhe. Kuzhinier më i shpejtë do të thotë më pak klientë në pritje.",
+        "en": "Like the head chef in a restaurant: takes orders one at a time and cooks them at top speed. A faster chef means fewer customers waiting."
+      },
+      "code": null,
+      "related": [
+        "ram",
+        "operating-system",
+        "binary"
+      ]
+    },
+    {
+      "id": "ram",
+      "en": "RAM (memory)",
+      "sq": "Kujtesa RAM",
+      "aliases": [
+        "ram",
+        "memorie",
+        "memory",
+        "kujtesë"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "RAM-i është kujtesa e shpejtë dhe e përkohshme ku kompjuteri mban programet që janë hapur tani. Kur e fik kompjuterin, RAM-i zbrazet — prandaj gjërat e rëndësishme ruhen në disk.",
+        "en": "RAM is the fast, temporary memory where the computer keeps the programs that are open right now. When you switch the computer off, RAM is wiped — that's why important things are saved to the disk."
+      },
+      "analogy": {
+        "sq": "Si tavolina e punës: aty mban librat që po i përdor tani, ndërsa dollapi (disku) mban gjithçka tjetër. Tavolinë më e madhe = më shumë gjëra të hapura njëherësh.",
+        "en": "Like your desk: it holds the books you're using right now, while the cupboard (the disk) holds everything else. A bigger desk = more things open at once."
+      },
+      "code": null,
+      "related": [
+        "cpu",
+        "variable",
+        "cache"
+      ]
+    },
+    {
+      "id": "operating-system",
+      "en": "Operating system",
+      "sq": "Sistem operativ",
+      "aliases": [
+        "os",
+        "windows",
+        "macos",
+        "android",
+        "ios"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "Sistemi operativ është programi kryesor që e drejton kompjuterin ose telefonin: Windows, macOS, Linux, Android, iOS. Ai menaxhon skedarët, memorien dhe pajisjet, dhe u jep programeve të tjera një vend ku të punojnë.",
+        "en": "The operating system is the main program that runs a computer or phone: Windows, macOS, Linux, Android, iOS. It manages files, memory and devices, and gives other programs a place to run."
+      },
+      "analogy": {
+        "sq": "Si drejtori i shkollës: nuk jep mësim vetë, por cakton klasat, orarin dhe mësuesit, që gjithçka të funksionojë.",
+        "en": "Like the head teacher: they don't teach the lessons, but they assign rooms, timetables and teachers so everything runs smoothly."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import platform\nprint(platform.system())  # p.sh. Windows, Darwin (macOS) ose Linux"
+      },
+      "related": [
+        "linux",
+        "cpu",
+        "terminal"
+      ]
+    },
+    {
+      "id": "linux",
+      "en": "Linux",
+      "sq": null,
+      "aliases": [
+        "ubuntu",
+        "debian"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "Linux-i është një sistem operativ falas dhe open source. Pjesa më e madhe e serverëve në botë punojnë me Linux, prandaj programuesit herët a vonë e takojnë — shpesh përmes terminalit.",
+        "en": "Linux is a free, open source operating system. Most of the world's servers run on Linux, so programmers meet it sooner or later — often through the terminal."
+      },
+      "analogy": {
+        "sq": "Si një shtëpi që e ka ndërtuar gjithë fshati bashkë: kushdo mund ta rregullojë, ta zgjerojë dhe ta përdorë falas.",
+        "en": "Like a house the whole village built together: anyone can fix it, extend it and use it for free."
+      },
+      "code": null,
+      "related": [
+        "operating-system",
+        "open-source",
+        "server"
+      ]
+    },
+    {
+      "id": "ip-address",
+      "en": "IP address",
+      "sq": "Adresë IP",
+      "aliases": [
+        "ip",
+        "ipv4",
+        "ipv6"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "Adresa IP është numri unik që identifikon një pajisje në internet ose në një rrjet, p.sh. 192.168.1.10. Domenet ekzistojnë që të mos na duhet t'i mbajmë mend këta numra.",
+        "en": "An IP address is the unique number that identifies a device on the internet or a network, e.g. 192.168.1.10. Domains exist so we don't have to remember these numbers."
+      },
+      "analogy": {
+        "sq": "Si numri i telefonit të shtëpisë: çdo shtëpi ka të vetin, dhe pa të askush nuk të gjen dot.",
+        "en": "Like your home phone number: every home has its own, and without it nobody can reach you."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import socket\nprint(socket.gethostbyname(\"example.com\"))  # adresa IP e domenit"
+      },
+      "related": [
+        "domain",
+        "server",
+        "localhost"
+      ]
+    },
+    {
+      "id": "localhost",
+      "en": "localhost",
+      "sq": null,
+      "aliases": [
+        "127.0.0.1",
+        "server lokal"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "Localhost do të thotë „ky kompjuter vetë“. Kur hap http://localhost:8000, shfletuesi lidhet me një server që punon në kompjuterin tënd — ideale për ta provuar faqen para se ta publikosh.",
+        "en": "localhost means “this computer itself”. When you open http://localhost:8000, the browser connects to a server running on your own machine — perfect for testing your site before publishing it."
+      },
+      "analogy": {
+        "sq": "Si ta gatuash gjellën në shtëpi për provë para se ta shërbesh në restorant: e shijon vetëm ti, pa e parë njeri tjetër.",
+        "en": "Like cooking a dish at home as a test before serving it in your restaurant: only you taste it, nobody else sees it."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "# Nis një server lokal në terminal:\n#   python3 -m http.server 8000\n# Pastaj hape në shfletues: http://localhost:8000"
+      },
+      "related": [
+        "server",
+        "port",
+        "deploy"
+      ]
+    },
+    {
+      "id": "port",
+      "en": "Port",
+      "sq": "Portë",
+      "aliases": [
+        "porta",
+        "8000",
+        "3000",
+        "443"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "Porta është një numër që tregon me cilin program në një kompjuter duhet të lidhesh, sepse një kompjuter mund të ketë shumë shërbime njëherësh. Faqet ueb zakonisht përdorin portën 443, ndërsa serveri yt lokal mund të jetë në 8000.",
+        "en": "A port is a number that says which program on a computer you want to connect to, since one computer can run many services at once. Websites usually use port 443, while your local server might be on 8000."
+      },
+      "analogy": {
+        "sq": "Si numri i banesës në një pallat: adresa IP të çon te pallati, porta te dera e saktë.",
+        "en": "Like the flat number in an apartment block: the IP address gets you to the building, the port to the right door."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "from http.server import HTTPServer, SimpleHTTPRequestHandler\nHTTPServer((\"localhost\", 8000), SimpleHTTPRequestHandler).serve_forever()"
+      },
+      "related": [
+        "localhost",
+        "ip-address",
+        "server"
+      ]
+    },
+    {
+      "id": "cli-gui",
+      "en": "CLI / GUI",
+      "sq": "Ndërfaqe me komanda / grafike",
+      "aliases": [
+        "cli",
+        "gui",
+        "command line interface",
+        "graphical user interface"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "CLI do të thotë që programin e përdor duke shkruar komanda në terminal; GUI do të thotë që e përdor me dritare, butona dhe maus. Shumë mjete programimi i kanë të dyja.",
+        "en": "CLI means you use a program by typing commands in a terminal; GUI means you use it with windows, buttons and a mouse. Many programming tools offer both."
+      },
+      "analogy": {
+        "sq": "CLI është si t'i thuash shitësit saktë „dy bukë dhe një qumësht“; GUI është si arka vetë-shërbyese ku i zgjedh produktet duke prekur ekranin.",
+        "en": "CLI is like telling the shopkeeper exactly “two loaves and a milk”; GUI is like the self-checkout where you tap the products on a screen."
+      },
+      "code": null,
+      "related": [
+        "terminal",
+        "ui",
+        "ide"
       ]
     }
   ]
