@@ -7,9 +7,14 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "/term/index",
-      "destination": "/term/array-index",
-      "permanent": true
+      "source": "/term",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/category",
+      "destination": "/",
+      "permanent": false
     }
   ]
 }
