@@ -90,6 +90,19 @@
         "sq": "Çfarë ndodh brenda kompjuterit dhe si lidhen pajisjet me njëra-tjetrën.",
         "en": "What happens inside a computer and how devices talk to each other."
       }
+    },
+    {
+      "id": "languages",
+      "icon": "λ",
+      "hue": 55,
+      "name": {
+        "sq": "Gjuhë programimi",
+        "en": "Programming languages"
+      },
+      "description": {
+        "sq": "Gjuhët e tjera që do t'i takosh në shkollë dhe në punë.",
+        "en": "Other languages you'll meet at school and at work."
+      }
     }
   ],
   "terms": [
@@ -4044,6 +4057,859 @@
         "terminal",
         "ui",
         "ide"
+      ]
+    },
+    {
+      "id": "break-continue",
+      "en": "Break / continue",
+      "sq": null,
+      "aliases": [
+        "break",
+        "continue",
+        "ndalo ciklin"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Brenda një cikli, break e ndal ciklin menjëherë, ndërsa continue e kapërcen vetëm hapin aktual dhe kalon te tjetri. I përdor kur s'ke nevojë të vazhdosh deri në fund.",
+        "en": "Inside a loop, break stops the loop immediately, while continue skips just the current step and moves on to the next. You use them when you don't need to go all the way to the end."
+      },
+      "analogy": {
+        "sq": "Si kur kërkon fanellën tënde në raft: sapo e gjen, ndalon (break). Nëse një fanellë s'është numri yt, e kapërcen dhe shikon tjetrën (continue).",
+        "en": "Like looking for your shirt on a rack: as soon as you find it, you stop (break). If a shirt isn't your size, you skip it and check the next one (continue)."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "for numri in [3, 8, -1, 5, 0, 9]:\n    if numri < 0: continue  # kapërce negativët\n    if numri == 0: break    # ndalo te zeroja\n    print(numri)            # 3, 8, 5"
+      },
+      "related": [
+        "loop",
+        "while-loop",
+        "condition"
+      ]
+    },
+    {
+      "id": "nested-loop",
+      "en": "Nested loop",
+      "sq": "Cikël brenda ciklit",
+      "aliases": [
+        "cikël i mbivendosur",
+        "nested",
+        "cikle të mbivendosura"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Cikli i mbivendosur është një cikël brenda një cikli tjetër. Për çdo hap të ciklit të jashtëm, cikli i brendshëm kryhet i tëri — p.sh. për rreshtat dhe kolonat e një tabele.",
+        "en": "A nested loop is a loop inside another loop. For every step of the outer loop, the inner loop runs all the way through — for example, for the rows and columns of a table."
+      },
+      "analogy": {
+        "sq": "Si tabela e shumëzimit që mësove në shkollë: çdo numër nga 1 te 10 (cikli i jashtëm) e shumëzon me secilin nga 1 te 10 (cikli i brendshëm).",
+        "en": "Like the times tables you learned at school: every number from 1 to 10 (outer loop) gets multiplied by each number from 1 to 10 (inner loop)."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "for a in range(1, 4):\n    for b in range(1, 4):\n        print(a, \"x\", b, \"=\", a * b)"
+      },
+      "related": [
+        "loop",
+        "array",
+        "algorithm"
+      ]
+    },
+    {
+      "id": "logical-operators",
+      "en": "Logical operators (and / or / not)",
+      "sq": "Operatorët logjikë",
+      "aliases": [
+        "and",
+        "or",
+        "not",
+        "&&",
+        "||",
+        "dhe",
+        "ose"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Operatorët logjikë i bashkojnë kushtet: and (dhe) kërkon që të dyja të jenë të vërteta, or (ose) mjafton njëra, not (jo) e kthen të vërtetën në të rreme. Në JavaScript shkruhen &&, || dhe !.",
+        "en": "Logical operators combine conditions: and needs both to be true, or needs just one, not flips true into false. In JavaScript they're written &&, || and !."
+      },
+      "analogy": {
+        "sq": "Si rregulli i mamasë: „Del në futboll NËSE e ke bërë detyrën DHE nuk bie shi.“ Mjafton që njëra të mos plotësohet, dhe mbetesh në shtëpi.",
+        "en": "Like Mum's rule: “You can go to football IF you've done your homework AND it isn't raining.” If either one fails, you stay home."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "detyra_gati = True\nbie_shi = False\nif detyra_gati and not bie_shi:\n    print(\"Mund të dalësh në futboll!\")"
+      },
+      "related": [
+        "boolean",
+        "condition",
+        "operator"
+      ]
+    },
+    {
+      "id": "increment",
+      "en": "Increment (++ / +=)",
+      "sq": "Rritje me një",
+      "aliases": [
+        "++",
+        "+=",
+        "decrement",
+        "--",
+        "zvogëlim"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Increment do të thotë ta rritësh vlerën e një variable, zakonisht me 1. Në Python shkruhet x += 1, në JavaScript edhe x++. E kundërta, zbritja me 1, quhet decrement.",
+        "en": "To increment means to increase a variable's value, usually by 1. In Python you write x += 1; in JavaScript also x++. The opposite, subtracting 1, is called decrement."
+      },
+      "analogy": {
+        "sq": "Si tabela e rezultatit në stadium: sa herë që shënohet gol, numri rritet me një.",
+        "en": "Like the stadium scoreboard: every time a goal is scored, the number goes up by one."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "let golat = 0;\ngolat++;     // 1\ngolat += 2;  // 3\nconsole.log(golat);"
+      },
+      "related": [
+        "operator",
+        "variable",
+        "loop"
+      ]
+    },
+    {
+      "id": "type-conversion",
+      "en": "Type conversion",
+      "sq": "Konvertim tipi",
+      "aliases": [
+        "casting",
+        "konvertim",
+        "int()",
+        "str()",
+        "parseint",
+        "number()"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Konvertimi i tipit e kthen një vlerë nga një tip në tjetrin — p.sh. tekstin „25“ në numrin 25. Të duhet shpesh, sepse input() dhe formularët japin gjithmonë tekst.",
+        "en": "Type conversion turns a value from one type into another — for example, the text “25” into the number 25. You need it often, because input() and forms always give you text."
+      },
+      "analogy": {
+        "sq": "Si te zyra e këmbimit: 100 franga zvicerane bëhen euro — vlera mbetet, por merr formën që të duhet.",
+        "en": "Like at a currency exchange: 100 Swiss francs become euros — the value stays, but it takes the form you need."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "mosha = \"25\"           # tekst\nprint(int(mosha) + 1)  # 26\nprint(str(10) + \"€\")   # 10€"
+      },
+      "related": [
+        "data-type",
+        "string",
+        "integer"
+      ]
+    },
+    {
+      "id": "infinite-loop",
+      "en": "Infinite loop",
+      "sq": "Cikël i pafund",
+      "aliases": [
+        "pafund",
+        "cikël pa fund",
+        "loop infinit"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Cikli i pafund është një cikël që nuk mbaron kurrë, sepse kushti i tij nuk bëhet kurrë false. Programi ngec dhe duhet ta ndalosh vetë (në terminal me Ctrl+C).",
+        "en": "An infinite loop is a loop that never ends, because its condition never becomes false. The program gets stuck and you have to stop it yourself (in the terminal, with Ctrl+C)."
+      },
+      "analogy": {
+        "sq": "Si receta që thotë „trazoje derisa të bëhet blu“ për një supë që s'bëhet kurrë blu: do të trazoje përgjithmonë.",
+        "en": "Like a recipe saying “stir until it turns blue” for a soup that never turns blue: you'd be stirring forever."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "numri = 1\nwhile numri > 0:       # kushti s'bëhet kurrë false…\n    numri = numri + 1  # …sepse numri vetëm rritet"
+      },
+      "related": [
+        "while-loop",
+        "loop",
+        "bug"
+      ]
+    },
+    {
+      "id": "edge-case",
+      "en": "Edge case",
+      "sq": "Rast kufitar",
+      "aliases": [
+        "rast skajor",
+        "edge cases",
+        "rast i veçantë"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Rasti kufitar është një situatë e rrallë ose ekstreme që kodi duhet ta trajtojë gjithsesi — një listë bosh, numri 0, një emër shumë i gjatë. Shumë bug-e fshihen pikërisht aty.",
+        "en": "An edge case is a rare or extreme situation your code still has to handle — an empty list, the number 0, a very long name. Lots of bugs hide right there."
+      },
+      "analogy": {
+        "sq": "Si kur topi ndalet mu mbi vijën e portës: ndodh rrallë, por gjyqtari duhet ta dijë saktë çfarë të vendosë.",
+        "en": "Like a ball stopping right on the goal line: it rarely happens, but the referee still has to know exactly what to decide."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def mesatarja(notat):\n    if len(notat) == 0:  # rasti kufitar: lista bosh\n        return 0\n    return sum(notat) / len(notat)"
+      },
+      "related": [
+        "testing",
+        "bug",
+        "condition"
+      ]
+    },
+    {
+      "id": "naming-convention",
+      "en": "Naming convention (camelCase / snake_case)",
+      "sq": "Rregullat e emërtimit",
+      "aliases": [
+        "camelcase",
+        "camel case",
+        "snake_case",
+        "snake case",
+        "pascalcase",
+        "emërtim"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Rregullat e emërtimit tregojnë si shkruhen emrat me disa fjalë në kod. Python-i përdor snake_case (emri_im), JavaScript-i camelCase (emriIm). Emrat e qartë e bëjnë kodin të lexueshëm.",
+        "en": "Naming conventions say how to write multi-word names in code. Python uses snake_case (my_name), JavaScript uses camelCase (myName). Clear names make code easy to read."
+      },
+      "analogy": {
+        "sq": "Si rregulli i shkollës për etiketën e fletores: „Mbiemri, Emri, Klasa“. Kur të gjithë ndjekin të njëjtin rregull, gjithçka gjendet më lehtë.",
+        "en": "Like the school rule for labelling your notebook: “Surname, First name, Class”. When everyone follows the same rule, everything is easier to find."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "emri_i_plote = \"Arta Hoxha\"  # Python: snake_case\n# JavaScript: let emriIPlote = \"Arta Hoxha\";  (camelCase)"
+      },
+      "related": [
+        "variable",
+        "syntax",
+        "refactoring"
+      ]
+    },
+    {
+      "id": "modulo",
+      "en": "Modulo (%)",
+      "sq": "Mbetja e pjesëtimit",
+      "aliases": [
+        "%",
+        "mod",
+        "mbetje",
+        "remainder"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Operatori % (modulo) jep mbetjen e një pjesëtimi: 10 % 3 jep 1. Përdoret shpesh për të kontrolluar nëse një numër është çift (n % 2 == 0) ose për gjëra që përsëriten në rreth.",
+        "en": "The % operator (modulo) gives the remainder of a division: 10 % 3 gives 1. It's often used to check whether a number is even (n % 2 == 0) or for things that repeat in a cycle."
+      },
+      "analogy": {
+        "sq": "Si kur ndan 10 copa byrek mes 3 shokëve: secili merr 3, dhe mbetet 1 copë. Ajo copa që mbetet është modulo.",
+        "en": "Like sharing 10 slices of byrek between 3 friends: each gets 3, and 1 slice is left over. That leftover slice is the modulo."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "print(10 % 3)  # 1\nnumri = 7\nprint(\"çift\" if numri % 2 == 0 else \"tek\")  # tek"
+      },
+      "related": [
+        "operator",
+        "integer",
+        "condition"
+      ]
+    },
+    {
+      "id": "log",
+      "en": "Log",
+      "sq": "Regjistër ngjarjesh",
+      "aliases": [
+        "logs",
+        "logging",
+        "logim"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Log-et janë mesazhe që programi i shkruan ndërsa punon — çfarë bëri, kur dhe çfarë shkoi keq. Kur diçka prishet në server, log-et janë vendi i parë ku shikon.",
+        "en": "Logs are messages a program writes while it runs — what it did, when, and what went wrong. When something breaks on a server, the logs are the first place you look."
+      },
+      "analogy": {
+        "sq": "Si ditari i klasës ku shënohet çdo ditë kush mungoi dhe çfarë ndodhi: kur dikush pyet më vonë, gjithçka është e shkruar.",
+        "en": "Like the class register where every day is recorded — who was absent and what happened: when someone asks later, it's all written down."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import logging\nlogging.basicConfig(level=logging.INFO)\nlogging.info(\"Përdoruesi u kyç\")\nlogging.error(\"Databaza nuk përgjigjet!\")"
+      },
+      "related": [
+        "debug",
+        "error",
+        "server"
+      ]
+    },
+    {
+      "id": "production",
+      "en": "Production (dev vs prod)",
+      "sq": "Mjedisi i prodhimit",
+      "aliases": [
+        "prod",
+        "dev",
+        "development",
+        "staging",
+        "live",
+        "mjedis zhvillimi"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Production është versioni „i vërtetë“ i aplikacionit që e përdorin njerëzit. Development (dev) është kopja jote për të provuar gjëra. Rregulli i artë: provo në dev, pastaj publiko në production.",
+        "en": "Production is the “real” version of an app that people use. Development (dev) is your own copy for trying things out. The golden rule: try it in dev, then publish to production."
+      },
+      "analogy": {
+        "sq": "Si kuzhina e provave dhe salla e restorantit: recetën e re e provon së pari në kuzhinë (dev), dhe vetëm kur del e mirë ua shërben klientëve (production).",
+        "en": "Like a test kitchen and the restaurant floor: you try the new recipe in the kitchen first (dev), and only serve it to customers once it's good (production)."
+      },
+      "code": null,
+      "related": [
+        "deploy",
+        "localhost",
+        "environment-variable"
+      ]
+    },
+    {
+      "id": "local-storage",
+      "en": "localStorage",
+      "sq": null,
+      "aliases": [
+        "local storage",
+        "sessionstorage",
+        "ruajtje lokale"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "localStorage i lejon një faqeje të ruajë të dhëna të vogla në shfletuesin tënd, që mbeten edhe pasi e mbyll dhe e hap sërish. P.sh. ky fjalor mban mend nëse e zgjodhe pamjen e errët.",
+        "en": "localStorage lets a website save small bits of data in your browser that stay there even after you close and reopen it. For example, this glossary remembers whether you picked dark mode."
+      },
+      "analogy": {
+        "sq": "Si dollapi yt personal në shkollë: lë gjëra aty sot dhe i gjen nesër — por vetëm në atë shkollë, jo në një tjetër.",
+        "en": "Like your personal locker at school: leave things there today and find them tomorrow — but only at that school, not another one."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "localStorage.setItem(\"pamja\", \"e errët\");\nconsole.log(localStorage.getItem(\"pamja\"));  // \"e errët\""
+      },
+      "related": [
+        "cookie",
+        "browser",
+        "cache"
+      ]
+    },
+    {
+      "id": "fetch",
+      "en": "fetch()",
+      "sq": null,
+      "aliases": [
+        "fetch",
+        "fetch api",
+        "ajax"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "fetch() është funksioni i JavaScript-it për të marrë ose dërguar të dhëna në internet pa e rifreskuar faqen — p.sh. nga një API. Kthen një Promise, sepse përgjigjja vjen pas pak.",
+        "en": "fetch() is JavaScript's function for getting or sending data over the internet without reloading the page — from an API, for example. It returns a Promise, because the answer arrives a moment later."
+      },
+      "analogy": {
+        "sq": "Si kur e çon vëllain e vogël në dyqan për bukë: ti vazhdon punën, ai kthehet pas pak me bukën — ose me lajmin që s'kishte.",
+        "en": "Like sending your little brother to the shop for bread: you carry on with what you're doing, and he's back a bit later with the bread — or the news that they'd run out."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const pergjigja = await fetch(\"https://api.example.com/lajmet\");\nconst lajmet = await pergjigja.json();\nconsole.log(lajmet.length, \"lajme\");"
+      },
+      "related": [
+        "api",
+        "promise",
+        "request"
+      ]
+    },
+    {
+      "id": "arrow-function",
+      "en": "Arrow function (=>)",
+      "sq": "Funksion shigjetë",
+      "aliases": [
+        "=>",
+        "arrow",
+        "funksion me shigjetë"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Funksioni shigjetë është një mënyrë më e shkurtër për të shkruar funksione në JavaScript, me simbolin =>. Përdoret shumë për funksione të vogla që i jep si argument, p.sh. te addEventListener.",
+        "en": "An arrow function is a shorter way to write functions in JavaScript, using the => symbol. It's used a lot for small functions you pass as an argument, e.g. to addEventListener."
+      },
+      "analogy": {
+        "sq": "Si butoni i thirrjes së shpejtë në telefon: në vend që ta shkruash gjithë numrin e mamasë, shtyp një buton. E njëjta punë, vetëm më shpejt.",
+        "en": "Like the speed-dial button on a phone: instead of typing Mum's whole number, you press one button. Same job, just quicker."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "// Mënyra e gjatë:\nfunction dyfisho(n) { return n * 2; }\n// Me shigjetë:\nconst dyfishoShkurt = (n) => n * 2;\nconsole.log(dyfishoShkurt(4));  // 8"
+      },
+      "related": [
+        "function",
+        "callback",
+        "lambda"
+      ]
+    },
+    {
+      "id": "template-literal",
+      "en": "Template literal",
+      "sq": "Tekst me shabllon",
+      "aliases": [
+        "template string",
+        "backticks",
+        "${}"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Template literal është një tekst në JavaScript i shkruar me shenjat ` (backticks), ku vlerat i fut direkt me ${ }. Është njësoj si f-string-u i Python-it.",
+        "en": "A template literal is a JavaScript string written with ` (backticks), where you put values right inside with ${ }. It's just like Python's f-string."
+      },
+      "analogy": {
+        "sq": "Si ftesa e dasmës e shtypur me vend bosh: „I nderuar ___, ju ftojmë…“ — e njëjta ftesë për të gjithë, ndryshon vetëm emri.",
+        "en": "Like a printed wedding invitation with a blank: “Dear ___, you are invited…” — the same invitation for everyone, only the name changes."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const emri = \"Besa\";\nconst mosha = 16;\nconsole.log(`${emri} është ${mosha} vjeç.`);  // Besa është 16 vjeç."
+      },
+      "related": [
+        "string",
+        "f-string",
+        "javascript"
+      ]
+    },
+    {
+      "id": "flexbox",
+      "en": "Flexbox",
+      "sq": null,
+      "aliases": [
+        "flex",
+        "display: flex",
+        "css flexbox"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Flexbox është një mënyrë në CSS për t'i rreshtuar elementet në një rresht ose kolonë dhe për ta ndarë hapësirën mes tyre. Me pak rreshta CSS i qendërzon gjërat ose i vendos njëra pranë tjetrës.",
+        "en": "Flexbox is a CSS way of lining up elements in a row or column and sharing out the space between them. With a few lines of CSS you can centre things or put them side by side."
+      },
+      "analogy": {
+        "sq": "Si kur i rregullon gotat në raft: në një rresht, me hapësira të barabarta — dhe kur shton një gotë, të tjerat zhvendosen vetë.",
+        "en": "Like arranging glasses on a shelf: in a row, evenly spaced — and when you add another glass, the others shift over by themselves."
+      },
+      "code": {
+        "language": "css",
+        "snippet": ".menyja {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}"
+      },
+      "related": [
+        "css",
+        "responsive-design",
+        "html"
+      ]
+    },
+    {
+      "id": "css-selector",
+      "en": "CSS selector",
+      "sq": "Përzgjedhës CSS",
+      "aliases": [
+        "selector",
+        "selektor",
+        "css class",
+        "#id"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Përzgjedhësi CSS tregon cilave elemente u vlen një stil: h1 për të gjithë titujt, .karta për elementet me klasën „karta“, #kreu për elementin me id „kreu“.",
+        "en": "A CSS selector says which elements a style applies to: h1 for every heading, .card for elements with the class “card”, #home for the element with the id “home”."
+      },
+      "analogy": {
+        "sq": "Si kur mësuesja thotë: „Të gjithë djemtë“ (h1), „Kush është në kor“ (.kori) ose „Ti, Ardit“ (#ardit) — çdo herë u flet një grupi tjetër.",
+        "en": "Like the teacher saying: “All the boys” (h1), “Everyone in the choir” (.choir) or “You, Ardit” (#ardit) — each time she's talking to a different group."
+      },
+      "code": {
+        "language": "css",
+        "snippet": "h1 { color: navy; }           /* të gjithë titujt h1 */\n.karta { padding: 16px; }     /* çdo element me class=\"karta\" */\n#kreu { font-weight: bold; }  /* elementi me id=\"kreu\" */"
+      },
+      "related": [
+        "css",
+        "html",
+        "dom"
+      ]
+    },
+    {
+      "id": "tailwind-css",
+      "en": "Tailwind CSS",
+      "sq": null,
+      "aliases": [
+        "tailwind",
+        "bootstrap",
+        "css framework",
+        "utility classes"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Tailwind CSS është një framework me qindra klasa të vogla të gatshme — si p-4 (hapësirë) ose text-red-600 (ngjyrë) — që i shton direkt në HTML, në vend që të shkruash CSS vetë. Bootstrap është një tjetër i njohur.",
+        "en": "Tailwind CSS is a framework with hundreds of small ready-made classes — like p-4 (padding) or text-red-600 (colour) — that you add straight into your HTML instead of writing CSS yourself. Bootstrap is another well-known one."
+      },
+      "analogy": {
+        "sq": "Si erëzat e bluara gati në kuzhinë: në vend që ta bluash vetë piperin, merr kavanozin dhe hedh sa të duhet.",
+        "en": "Like ready-ground spices in the kitchen: instead of grinding the pepper yourself, you grab the jar and add as much as you need."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<button class=\"bg-red-600 text-white px-4 py-2 rounded-lg\">\n  Regjistrohu\n</button>"
+      },
+      "related": [
+        "css",
+        "framework",
+        "ui"
+      ]
+    },
+    {
+      "id": "console",
+      "en": "Console",
+      "sq": "Konsola",
+      "aliases": [
+        "console.log",
+        "devtools",
+        "f12",
+        "konsola e shfletuesit"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Konsola është vendi ku programi shkruan mesazhe për programuesin. Në shfletues e hap me F12; me console.log() (JS) ose print() (Python) sheh çfarë vlere ka diçka — mjeti numër një për debug.",
+        "en": "The console is where a program writes messages for the programmer. In the browser you open it with F12; with console.log() (JS) or print() (Python) you see what value something has — debugging tool number one."
+      },
+      "analogy": {
+        "sq": "Si trajneri që u flet lojtarëve nga anësorja: tifozët s'e dëgjojnë, por lojtarët e dinë saktë çfarë po ndodh.",
+        "en": "Like a coach talking to the players from the sideline: the fans can't hear it, but the players know exactly what's going on."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const cmimi = 25;\nconsole.log(\"Çmimi është:\", cmimi);\nconsole.error(\"Diçka shkoi keq!\");"
+      },
+      "related": [
+        "debug",
+        "browser",
+        "log"
+      ]
+    },
+    {
+      "id": "python-set",
+      "en": "Set",
+      "sq": "Bashkësi",
+      "aliases": [
+        "set",
+        "bashkësia",
+        "set python"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "Set-i në Python është një koleksion pa renditje ku çdo vlerë shfaqet vetëm një herë. Përdoret për të hequr dublikatat ose për të kontrolluar shpejt nëse diçka ekziston.",
+        "en": "A set in Python is an unordered collection where each value appears only once. It's used to remove duplicates or to check quickly whether something exists."
+      },
+      "analogy": {
+        "sq": "Si lista e prezencës: edhe nëse Arta hyn dy herë në klasë, shënohet vetëm një herë si e pranishme.",
+        "en": "Like the attendance list: even if Arta walks into class twice, she's marked present only once."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "qytetet = [\"Prishtinë\", \"Tiranë\", \"Prishtinë\", \"Pejë\"]\nunike = set(qytetet)\nprint(unike)            # {'Prishtinë', 'Tiranë', 'Pejë'}\nprint(\"Pejë\" in unike)  # True"
+      },
+      "related": [
+        "list",
+        "dictionary",
+        "tuple"
+      ]
+    },
+    {
+      "id": "list-comprehension",
+      "en": "List comprehension",
+      "sq": "Listë në një rresht",
+      "aliases": [
+        "comprehension",
+        "list comp"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "List comprehension është mënyra e shkurtër e Python-it për të krijuar një listë të re nga një tjetër, në një rresht të vetëm — p.sh. për ta dyfishuar çdo numër ose për të mbajtur vetëm disa elemente.",
+        "en": "A list comprehension is Python's short way of building a new list from another one in a single line — for example, doubling every number or keeping only some items."
+      },
+      "analogy": {
+        "sq": "Si kur i thua shitësit: „Nga këto mollë, më jep vetëm të kuqet.“ Një fjali, dhe lista e re është gati.",
+        "en": "Like telling the greengrocer: “From these apples, give me only the red ones.” One sentence, and your new list is ready."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "notat = [4, 9, 7, 10, 5]\nkaluese = [n for n in notat if n >= 5]\ndyfish = [n * 2 for n in notat]\nprint(kaluese)  # [9, 7, 10, 5]"
+      },
+      "related": [
+        "list",
+        "loop",
+        "lambda"
+      ]
+    },
+    {
+      "id": "slicing",
+      "en": "Slicing",
+      "sq": "Prerje",
+      "aliases": [
+        "slice",
+        "nënvarg",
+        "[1:3]"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "Slicing do të thotë të marrësh vetëm një pjesë të një liste ose teksti, me [fillimi:fundi]. Fundi nuk përfshihet: lista[1:3] jep elementet 1 dhe 2.",
+        "en": "Slicing means taking just part of a list or string, using [start:end]. The end isn't included: my_list[1:3] gives items 1 and 2."
+      },
+      "analogy": {
+        "sq": "Si kur pret disa feta nga mesi i bukës: zgjedh ku fillon dhe ku ndalon thika.",
+        "en": "Like cutting a few slices from the middle of a loaf: you choose where the knife starts and where it stops."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "fjala = \"Programim\"\nprint(fjala[0:3])     # Pro\nlojtaret = [\"Edon\", \"Vedat\", \"Milot\", \"Amir\"]\nprint(lojtaret[1:3])  # ['Vedat', 'Milot']"
+      },
+      "related": [
+        "list",
+        "string",
+        "array-index"
+      ]
+    },
+    {
+      "id": "pandas",
+      "en": "pandas",
+      "sq": null,
+      "aliases": [
+        "dataframe",
+        "pd",
+        "pandas python"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "Pandas-i është një librari Python për të punuar me tabela të dhënash — si Excel, por me kod. Me të lexon skedarë CSV, filtron rreshta, llogarit mesatare dhe bën analiza në pak rreshta.",
+        "en": "pandas is a Python library for working with tables of data — like Excel, but with code. With it you read CSV files, filter rows, calculate averages and analyse data in a few lines."
+      },
+      "analogy": {
+        "sq": "Si ditari elektronik i klasës që e llogarit vetë mesataren e çdo nxënësi dhe të tregon kush ka mbi 9 — me një klikim.",
+        "en": "Like an electronic class register that works out every student's average by itself and shows you who's above 9 — in one click."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import pandas as pd\nnotat = pd.read_csv(\"notat.csv\")\nprint(notat[\"nota\"].mean())       # mesatarja\nprint(notat[notat[\"nota\"] >= 9])  # vetëm notat e larta"
+      },
+      "related": [
+        "python",
+        "table",
+        "library"
+      ]
+    },
+    {
+      "id": "jupyter-notebook",
+      "en": "Jupyter Notebook",
+      "sq": null,
+      "aliases": [
+        "jupyter",
+        "notebook",
+        "ipynb",
+        "google colab",
+        "colab"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "Jupyter Notebook është një dokument ku kodi Python, rezultatet dhe shënimet qëndrojnë bashkë, në qeliza. E ekzekuton kodin pjesë-pjesë dhe e sheh rezultatin menjëherë poshtë — shumë i përdorur në mësim dhe në analizë të dhënash.",
+        "en": "A Jupyter Notebook is a document where Python code, results and notes sit together in cells. You run the code piece by piece and see the result right underneath — popular for learning and data analysis."
+      },
+      "analogy": {
+        "sq": "Si fletorja e matematikës ku e shkruan ushtrimin dhe zgjidhjen menjëherë poshtë tij, hap pas hapi.",
+        "en": "Like your maths notebook, where you write each exercise and its solution right underneath, step by step."
+      },
+      "code": null,
+      "related": [
+        "python",
+        "pandas",
+        "ide"
+      ]
+    },
+    {
+      "id": "java",
+      "en": "Java",
+      "sq": null,
+      "aliases": [
+        "jvm",
+        "java language"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Java-ja është një gjuhë programimi e njohur dhe e rreptë, që përdoret shumë në shkolla e fakultete, në aplikacione Android dhe në sisteme të mëdha të bankave e kompanive. Pavarësisht emrit, s'ka lidhje me JavaScript-in.",
+        "en": "Java is a popular, strict programming language used a lot in schools and universities, in Android apps and in large systems at banks and companies. Despite the name, it has nothing to do with JavaScript."
+      },
+      "analogy": {
+        "sq": "Si një trajner i rreptë: kërkon që gjithçka të deklarohet qartë e sipas rregullave — më shumë punë në stërvitje, por më pak surpriza në ndeshje.",
+        "en": "Like a strict coach: everything has to be declared clearly and by the rules — more work in training, but fewer surprises on match day."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "public class Pershendetje {\n    public static void main(String[] args) {\n        System.out.println(\"Përshëndetje!\");\n    }\n}"
+      },
+      "related": [
+        "programming-language",
+        "class",
+        "compiler"
+      ]
+    },
+    {
+      "id": "c-plus-plus",
+      "en": "C++",
+      "sq": null,
+      "aliases": [
+        "cpp",
+        "c plus plus"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "C++ është një gjuhë programimi shumë e shpejtë, që të jep kontroll të madh mbi kompjuterin dhe memorien. Përdoret për lojëra video dhe programe që duhet të jenë shumë të shpejta, dhe shpesh mësohet në gjimnaz e fakultet.",
+        "en": "C++ is a very fast programming language that gives you a lot of control over the computer and its memory. It's used for video games and programs that must be very fast, and it's often taught in high school and university."
+      },
+      "analogy": {
+        "sq": "Si të ngasësh veturë me marshe manuale: më shumë punë dhe më lehtë të gabosh, por ke kontroll të plotë dhe mund të shkosh shumë shpejt.",
+        "en": "Like driving a car with a manual gearbox: more work and easier to make mistakes, but you're in full control and can go very fast."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "#include <iostream>\nint main() {\n    std::cout << \"Përshëndetje!\" << std::endl;\n    return 0;\n}"
+      },
+      "related": [
+        "programming-language",
+        "compiler",
+        "ram"
+      ]
+    },
+    {
+      "id": "php",
+      "en": "PHP",
+      "sq": null,
+      "aliases": [
+        "laravel",
+        "wordpress"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "PHP-ja është një gjuhë programimi për backend-in e faqeve të internetit. Shumë faqe punojnë me PHP, përfshirë WordPress-in, dhe Laravel-i është framework-u më i njohur për të.",
+        "en": "PHP is a programming language for the backend of websites. Lots of sites run on PHP, including WordPress, and Laravel is its best-known framework."
+      },
+      "analogy": {
+        "sq": "Si kuzhina e një piceri të vjetër e të njohur në lagje: s'është më e reja, por ushqen një pjesë të madhe të qytetit çdo ditë.",
+        "en": "Like the kitchen of an old, well-known pizzeria in the neighbourhood: it's not the newest, but it feeds a big part of town every day."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\n$emri = \"Driton\";\necho \"Përshëndetje, $emri!\";"
+      },
+      "related": [
+        "backend",
+        "server",
+        "framework"
+      ]
+    },
+    {
+      "id": "c-sharp",
+      "en": "C#",
+      "sq": null,
+      "aliases": [
+        "c sharp",
+        "csharp",
+        ".net",
+        "dotnet",
+        "unity"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "C# (lexohet „si sharp“) është një gjuhë programimi e Microsoft-it. Përdoret për aplikacione Windows, për backend me .NET dhe për lojëra me Unity.",
+        "en": "C# (pronounced “C sharp”) is a programming language from Microsoft. It's used for Windows apps, for backends with .NET and for games made with Unity."
+      },
+      "analogy": {
+        "sq": "Si një lojtar i gjithanshëm që luan në disa pozicione: aplikacione, ueb, lojëra — të gjitha me të njëjtën gjuhë.",
+        "en": "Like an all-round footballer who plays several positions: apps, web, games — all with the same language."
+      },
+      "code": {
+        "language": "csharp",
+        "snippet": "using System;\nclass Program {\n    static void Main() => Console.WriteLine(\"Përshëndetje!\");\n}"
+      },
+      "related": [
+        "programming-language",
+        "class",
+        "framework"
+      ]
+    },
+    {
+      "id": "docker",
+      "en": "Docker",
+      "sq": null,
+      "aliases": [
+        "container",
+        "kontejner",
+        "docker container",
+        "dockerfile"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Docker-i e paketon një aplikacion bashkë me gjithçka që i duhet — versionin e Python-it, libraritë, rregullimet — në një „kontejner“. Kështu punon njësoj në kompjuterin tënd, në të shokut dhe në server.",
+        "en": "Docker packages an app together with everything it needs — the Python version, libraries, settings — into a “container”. That way it runs the same on your computer, your friend's and the server."
+      },
+      "analogy": {
+        "sq": "Si tava e byrekut e mbuluar mirë që e çon nga shtëpia në një darkë: shkon e plotë, me gjithçka brenda, dhe ka të njëjtën shije kudo që ta hapësh.",
+        "en": "Like a well-covered tray of byrek you take from home to a dinner: it arrives complete, with everything inside, and tastes the same wherever you open it."
+      },
+      "code": {
+        "language": "dockerfile",
+        "snippet": "FROM python:3.12\nCOPY . /app\nRUN pip install -r /app/requirements.txt\nCMD [\"python\", \"/app/main.py\"]"
+      },
+      "related": [
+        "deploy",
+        "server",
+        "cloud"
+      ]
+    },
+    {
+      "id": "ci-cd",
+      "en": "CI/CD",
+      "sq": null,
+      "aliases": [
+        "ci",
+        "cd",
+        "continuous integration",
+        "github actions",
+        "pipeline"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "CI/CD është automatizimi që, sa herë bën push, i ekzekuton vetë testet (CI) dhe, nëse kalojnë, e publikon aplikacionin (CD). Ky fjalor e përdor: çdo push në GitHub del live në Vercel vetvetiu.",
+        "en": "CI/CD is automation that, every time you push, runs your tests by itself (CI) and, if they pass, publishes the app (CD). This glossary uses it: every push to GitHub goes live on Vercel automatically."
+      },
+      "analogy": {
+        "sq": "Si një furrë buke ku çdo tavë kontrollohet automatikisht — a është pjekur, a ka peshën e duhur — dhe vetëm atëherë del në vitrinë.",
+        "en": "Like a bakery where every tray is checked automatically — is it baked, is the weight right — and only then goes into the shop window."
+      },
+      "code": null,
+      "related": [
+        "deploy",
+        "testing",
+        "github"
       ]
     }
   ]
