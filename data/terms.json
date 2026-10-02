@@ -116,6 +116,19 @@
         "sq": "Si mësojnë kompjuterët nga të dhënat, dhe çfarë janë vërtet mjetet IA që përdor çdo ditë.",
         "en": "How computers learn from data, and what the AI tools you use every day really are."
       }
+    },
+    {
+      "id": "career",
+      "icon": "cv",
+      "hue": 185,
+      "name": {
+        "sq": "Puna & karriera",
+        "en": "Work & career"
+      },
+      "description": {
+        "sq": "Fjalët që do t'i dëgjosh kur kërkon punë ose punon në një ekip programuesish.",
+        "en": "Words you'll hear when looking for a job or working in a team of developers."
+      }
     }
   ],
   "terms": [
@@ -5165,6 +5178,290 @@
         "llm",
         "ai",
         "prompt"
+      ]
+    },
+    {
+      "id": "semantic-html",
+      "en": "Semantic HTML",
+      "sq": "HTML semantik",
+      "aliases": [
+        "semantic",
+        "semantike",
+        "header",
+        "nav",
+        "main",
+        "footer",
+        "article",
+        "section"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "HTML-ja semantike do të thotë të përdorësh etiketat që tregojnë kuptimin e përmbajtjes — <header>, <nav>, <main>, <article>, <footer> — në vend që të përdorësh <div> kudo. Kjo e ndihmon Google-in, lexuesit e ekranit dhe programuesit e tjerë ta kuptojnë faqen.",
+        "en": "Semantic HTML means using tags that say what the content is — <header>, <nav>, <main>, <article>, <footer> — instead of using <div> everywhere. It helps Google, screen readers and other developers understand the page."
+      },
+      "analogy": {
+        "sq": "Si etiketat në kutitë kur ndërron shtëpi: „Kuzhina“, „Dhoma e fëmijëve“, „Banjo“. Kutitë duken njësoj, por etiketa të tregon menjëherë çfarë ka brenda.",
+        "en": "Like labels on boxes when you move house: “Kitchen”, “Kids' room”, “Bathroom”. The boxes look the same, but the label tells you straight away what's inside."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<header>Fjalori i Programimit</header>\n<nav><a href=\"/\">Kreu</a></nav>\n<main><article>…</article></main>\n<footer>© 2026</footer>"
+      },
+      "related": [
+        "html",
+        "div",
+        "accessibility"
+      ]
+    },
+    {
+      "id": "div",
+      "en": "<div>",
+      "sq": null,
+      "aliases": [
+        "div",
+        "div tag",
+        "span",
+        "kontejner html"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "<div> është një „kuti“ e zakonshme në HTML që përdoret për t'i grupuar elementet dhe për t'i stiluar me CSS. Vetë nuk ka ndonjë kuptim të veçantë — prandaj, kur ekziston një etiketë semantike (si <nav> ose <footer>), përdor atë.",
+        "en": "<div> is a plain “box” in HTML used to group elements together and style them with CSS. It has no special meaning on its own — so when a semantic tag exists (like <nav> or <footer>), use that instead."
+      },
+      "analogy": {
+        "sq": "Si një enë plastike pa etiketë në frigorifer: shumë e dobishme për t'i mbajtur gjërat bashkë, por nga jashtë s'e di çfarë ka brenda.",
+        "en": "Like an unlabelled plastic container in the fridge: really handy for keeping things together, but from the outside you can't tell what's in it."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<div class=\"karta\">\n  <h2>API</h2>\n  <p>Ndërfaqe programimi</p>\n</div>"
+      },
+      "related": [
+        "semantic-html",
+        "html",
+        "css"
+      ]
+    },
+    {
+      "id": "css-box-model",
+      "en": "CSS box model",
+      "sq": "Modeli i kutisë në CSS",
+      "aliases": [
+        "box model",
+        "margin",
+        "padding",
+        "border",
+        "box-sizing"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Në CSS çdo element është një kuti me katër shtresa: përmbajtja, padding (hapësira brenda), border (korniza) dhe margin (hapësira jashtë, deri te elementet e tjera). Kur diçka del më e madhe se ç'prisje, zakonisht faji është te këto.",
+        "en": "In CSS every element is a box with four layers: the content, padding (space inside), border (the frame) and margin (space outside, up to other elements). When something comes out bigger than you expected, these are usually why."
+      },
+      "analogy": {
+        "sq": "Si një foto me kornizë në mur: fotoja është përmbajtja, kartoni i bardhë rreth saj është padding, korniza është border, dhe hapësira deri te fotoja tjetër është margin.",
+        "en": "Like a framed photo on the wall: the photo is the content, the white card around it is the padding, the frame is the border, and the gap to the next photo is the margin."
+      },
+      "code": {
+        "language": "css",
+        "snippet": ".karta {\n  padding: 16px;           /* hapësira brenda */\n  border: 2px solid gray;  /* korniza */\n  margin: 24px;            /* hapësira jashtë */\n}"
+      },
+      "related": [
+        "css",
+        "flexbox",
+        "div"
+      ]
+    },
+    {
+      "id": "css-variables",
+      "en": "CSS variables",
+      "sq": "Variablat në CSS",
+      "aliases": [
+        "custom properties",
+        "var()",
+        "variabla css",
+        "--"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Variablat në CSS të lejojnë ta ruash një vlerë — p.sh. ngjyrën kryesore — në një vend të vetëm dhe ta përdorësh kudo me var(). Kur do ta ndryshosh, e ndryshon vetëm një herë. Kështu punon edhe pamja e errët e këtij fjalori.",
+        "en": "CSS variables let you store a value — like your main colour — in one place and use it everywhere with var(). When you want to change it, you change it once. That's also how this glossary's dark mode works."
+      },
+      "analogy": {
+        "sq": "Si ngjyrat e klubit: i cakton një herë (kuq e zi), dhe çdo fanellë, flamur e shall i ndjek. Po i ndërroi klubi ngjyrat, ndryshon vetëm rregulli, jo çdo fanellë një nga një.",
+        "en": "Like a club's colours: you set them once (red and black), and every shirt, flag and scarf follows. If the club changes colours, only the rule changes, not every shirt one by one."
+      },
+      "code": {
+        "language": "css",
+        "snippet": ":root { --ngjyra-kryesore: #c8323c; }\n.butoni { background: var(--ngjyra-kryesore); }\n.titulli { color: var(--ngjyra-kryesore); }"
+      },
+      "related": [
+        "css",
+        "variable",
+        "css-selector"
+      ]
+    },
+    {
+      "id": "svg",
+      "en": "SVG",
+      "sq": null,
+      "aliases": [
+        "scalable vector graphics",
+        "ikonë",
+        "icon",
+        "vektor",
+        "vector"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "SVG-ja është një format fotosh i shkruar me kod, me forma dhe vija në vend të pikselëve. Prandaj mbetet i mprehtë në çdo madhësi — ideal për logo dhe ikona. Logoja „{ë}“ e këtij fjalori është SVG.",
+        "en": "SVG is an image format written in code, using shapes and lines instead of pixels. That's why it stays sharp at any size — perfect for logos and icons. This glossary's “{ë}” logo is an SVG."
+      },
+      "analogy": {
+        "sq": "Si receta krahasuar me foton e tortës: fotoja (PNG) turbullohet kur e zmadhon, ndërsa me recetën (SVG) e bën tortën sa të duash, gjithmonë të përsosur.",
+        "en": "Like a recipe compared with a photo of a cake: the photo (PNG) goes blurry when you enlarge it, but with the recipe (SVG) you can make the cake any size, always perfect."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<svg width=\"100\" height=\"100\">\n  <circle cx=\"50\" cy=\"50\" r=\"40\" fill=\"crimson\" />\n</svg>"
+      },
+      "related": [
+        "html",
+        "css",
+        "responsive-design"
+      ]
+    },
+    {
+      "id": "junior-senior",
+      "en": "Junior / senior",
+      "sq": "Fillestar / me përvojë",
+      "aliases": [
+        "junior",
+        "senior",
+        "mid",
+        "mid-level",
+        "intern",
+        "internship",
+        "praktikant",
+        "praktikë"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Junior, mid dhe senior janë nivelet e përvojës së një programuesi. Junior-i është në vitet e para dhe mëson duke punuar; senior-i ka shumë vite përvojë, merr vendime të mëdha dhe i ndihmon të tjerët. Para junior-it shpesh vjen praktika (internship).",
+        "en": "Junior, mid and senior are a programmer's experience levels. A junior is in their first years and learns on the job; a senior has many years of experience, makes big decisions and helps the others. Before junior there's often an internship."
+      },
+      "analogy": {
+        "sq": "Si në një klub futbolli: djemtë e akademisë (praktikantët), të rinjtë që sapo hynë në ekipin e parë (junior) dhe kapiteni me përvojë që i udhëheq (senior).",
+        "en": "Like a football club: the academy kids (interns), the youngsters just breaking into the first team (juniors) and the experienced captain who leads them (senior)."
+      },
+      "code": null,
+      "related": [
+        "portfolio",
+        "code-review",
+        "freelancer"
+      ]
+    },
+    {
+      "id": "freelancer",
+      "en": "Freelancer",
+      "sq": "I vetëpunësuar",
+      "aliases": [
+        "freelance",
+        "frilanser",
+        "upwork",
+        "fiverr",
+        "remote",
+        "punë nga shtëpia"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Freelancer-i është programues që nuk është i punësuar në një kompani, por merr projekte nga klientë të ndryshëm, shpesh online dhe nga jashtë vendit. Ka liri, por klientët i gjen vetë dhe afatet i menaxhon vetë.",
+        "en": "A freelancer is a programmer who isn't employed by one company but takes projects from different clients, often online and from abroad. There's freedom, but they find their own clients and manage their own deadlines."
+      },
+      "analogy": {
+        "sq": "Si një mjeshtër që punon për veten: sot ia rregullon kuzhinën një familjeje, nesër banjën një tjetre — çmimin dhe orarin i cakton vetë.",
+        "en": "Like a tradesperson who works for themselves: today they fit one family's kitchen, tomorrow another's bathroom — they set their own prices and hours."
+      },
+      "code": null,
+      "related": [
+        "portfolio",
+        "deadline",
+        "junior-senior"
+      ]
+    },
+    {
+      "id": "portfolio",
+      "en": "Portfolio",
+      "sq": "Portofol",
+      "aliases": [
+        "portofoli",
+        "projekte personale",
+        "cv"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Portofoli është koleksioni i projekteve të tua që ua tregon punëdhënësve ose klientëve — p.sh. në GitHub ose në një faqe personale. Për një fillestar pa përvojë pune, shpesh vlen më shumë se diploma.",
+        "en": "A portfolio is the collection of your projects that you show employers or clients — on GitHub or a personal website, for example. For a beginner with no work experience, it often counts for more than a diploma."
+      },
+      "analogy": {
+        "sq": "Si videoja me golat më të mirë që një lojtar i ri ua dërgon klubeve: në vend që të thotë „jam i mirë“, ua tregon.",
+        "en": "Like the highlight reel a young footballer sends to clubs: instead of saying “I'm good”, they show it."
+      },
+      "code": null,
+      "related": [
+        "github",
+        "junior-senior",
+        "open-source"
+      ]
+    },
+    {
+      "id": "code-review",
+      "en": "Code review",
+      "sq": "Rishikim kodi",
+      "aliases": [
+        "review",
+        "rishikim",
+        "pr review"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Code review është kur një programues tjetër e lexon kodin tënd para se të bashkohet, kërkon gabime dhe jep sugjerime. Nuk është kritikë personale — është mënyra si ekipet mësojnë nga njëri-tjetri dhe i kapin bug-et herët.",
+        "en": "A code review is when another programmer reads your code before it's merged, looking for mistakes and making suggestions. It isn't personal criticism — it's how teams learn from each other and catch bugs early."
+      },
+      "analogy": {
+        "sq": "Si kur shoku i bankës ta lexon hartimin para se ta dorëzosh: i gjen gabimet që ti s'i pe, dhe ndonjëherë të jep një ide më të mirë.",
+        "en": "Like your deskmate reading your essay before you hand it in: they spot the mistakes you missed, and sometimes give you a better idea."
+      },
+      "code": null,
+      "related": [
+        "pull-request",
+        "bug",
+        "refactoring"
+      ]
+    },
+    {
+      "id": "deadline",
+      "en": "Deadline",
+      "sq": "Afat",
+      "aliases": [
+        "afati",
+        "afati i fundit",
+        "due date"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Deadline-i është data ose ora deri kur duhet të mbarohet një punë. Në programim, të vlerësosh saktë sa zgjat një punë është aftësi e vështirë — zakonisht zgjat më shumë se ç'mendon, ndaj lër kohë rezervë.",
+        "en": "A deadline is the date or time by which a piece of work has to be finished. In programming, estimating how long something takes is a hard skill — it usually takes longer than you think, so leave some spare time."
+      },
+      "analogy": {
+        "sq": "Si afati për dorëzimin e projektit në shkollë: po e le për natën e fundit, gjithmonë del diçka e papritur.",
+        "en": "Like the due date for a school project: leave it for the last night, and something unexpected always comes up."
+      },
+      "code": null,
+      "related": [
+        "freelancer",
+        "code-review",
+        "junior-senior"
       ]
     }
   ]
