@@ -103,6 +103,19 @@
         "sq": "Gjuhët e tjera që do t'i takosh në shkollë dhe në punë.",
         "en": "Other languages you'll meet at school and at work."
       }
+    },
+    {
+      "id": "data-ai",
+      "icon": "ai",
+      "hue": 235,
+      "name": {
+        "sq": "Të dhëna & IA",
+        "en": "Data & AI"
+      },
+      "description": {
+        "sq": "Si mësojnë kompjuterët nga të dhënat, dhe çfarë janë vërtet mjetet IA që përdor çdo ditë.",
+        "en": "How computers learn from data, and what the AI tools you use every day really are."
+      }
     }
   ],
   "terms": [
@@ -2475,11 +2488,9 @@
       "aliases": [
         "ai",
         "ia",
-        "machine learning",
-        "llm",
         "inteligjenca artificiale"
       ],
-      "category": "security",
+      "category": "data-ai",
       "explanation": {
         "sq": "Inteligjenca artificiale janë programe që mësojnë nga shumë shembuj, në vend që t'u shkruhet çdo rregull një nga një. Kështu njohin foto, përkthejnë tekste ose u përgjigjen pyetjeve — por mund të gabojnë, ndaj kontrolloji gjithmonë.",
         "en": "Artificial intelligence means programs that learn from lots of examples instead of having every rule written for them. That's how they recognise photos, translate text or answer questions — but they can make mistakes, so always double-check."
@@ -3765,7 +3776,7 @@
         "prompti",
         "prompt engineering"
       ],
-      "category": "security",
+      "category": "data-ai",
       "explanation": {
         "sq": "Prompt-i është teksti ose pyetja që i shkruan një modeli të inteligjencës artificiale. Sa më i qartë dhe më i detajuar të jetë prompt-i, aq më e mirë del përgjigjja.",
         "en": "A prompt is the text or question you write to an artificial intelligence model. The clearer and more detailed your prompt, the better the answer."
@@ -4910,6 +4921,250 @@
         "deploy",
         "testing",
         "github"
+      ]
+    },
+    {
+      "id": "kotlin",
+      "en": "Kotlin",
+      "sq": null,
+      "aliases": [
+        "kt",
+        "android kotlin"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Kotlin-i është gjuha që Google rekomandon për aplikacione Android. Është më e shkurtër dhe më e sigurt se Java, por punon bashkë me të, ndaj mund ta përdorë gjithë kodin ekzistues të Java-s.",
+        "en": "Kotlin is the language Google recommends for Android apps. It's shorter and safer than Java, but works alongside it, so it can use all existing Java code."
+      },
+      "analogy": {
+        "sq": "Si një lojtar i ri i akademisë që luan në të njëjtën skuadër me veteranët (Java-n): flet të njëjtën gjuhë taktike, por vrapon më shpejt dhe gabon më rrallë.",
+        "en": "Like a young academy player in the same team as the veterans (Java): speaks the same tactical language, but runs faster and makes fewer mistakes."
+      },
+      "code": {
+        "language": "kotlin",
+        "snippet": "fun main() {\n    val emri = \"Arta\"\n    println(\"Përshëndetje, $emri!\")\n}"
+      },
+      "related": [
+        "java",
+        "programming-language",
+        "class"
+      ]
+    },
+    {
+      "id": "swift",
+      "en": "Swift",
+      "sq": null,
+      "aliases": [
+        "swiftui",
+        "xcode",
+        "iphone app"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Swift-i është gjuha e Apple-it për aplikacione në iPhone, iPad dhe Mac. Është moderne dhe e lexueshme, dhe me Xcode e sheh aplikacionin tënd duke punuar në një iPhone virtual.",
+        "en": "Swift is Apple's language for apps on iPhone, iPad and Mac. It's modern and readable, and with Xcode you can watch your app running on a virtual iPhone."
+      },
+      "analogy": {
+        "sq": "Si dyqani zyrtar i një marke: gjithçka është e përshtatur saktë për produktet e saj — por vlen kryesisht vetëm për to.",
+        "en": "Like a brand's official shop: everything fits that brand's products perfectly — but it's mainly for those products."
+      },
+      "code": {
+        "language": "swift",
+        "snippet": "let emri = \"Arta\"\nprint(\"Përshëndetje, \\(emri)!\")"
+      },
+      "related": [
+        "programming-language",
+        "operating-system",
+        "ui"
+      ]
+    },
+    {
+      "id": "go",
+      "en": "Go",
+      "sq": null,
+      "aliases": [
+        "golang"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Go (ose Golang) është një gjuhë e thjeshtë dhe e shpejtë e krijuar në Google. Përdoret shumë për serverë dhe mjete cloud — vetë Docker-i është shkruar në Go.",
+        "en": "Go (or Golang) is a simple, fast language created at Google. It's widely used for servers and cloud tools — Docker itself is written in Go."
+      },
+      "analogy": {
+        "sq": "Si menyja e shkurtër e një qebaptoreje të mirë: pak gjëra, por të bëra shpejt dhe gjithmonë mirë.",
+        "en": "Like the short menu at a good kebab shop: only a few things, but made fast and always done well."
+      },
+      "code": {
+        "language": "go",
+        "snippet": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"Përshëndetje!\")\n}"
+      },
+      "related": [
+        "server",
+        "docker",
+        "programming-language"
+      ]
+    },
+    {
+      "id": "rust",
+      "en": "Rust",
+      "sq": null,
+      "aliases": [
+        "rustlang",
+        "cargo"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Rust-i është një gjuhë po aq e shpejtë sa C++, por që të mbron nga shumë gabime të rrezikshme me memorien që në momentin e kompajlimit. Është më e vështirë për fillestarët, por shumë e dashur nga programuesit.",
+        "en": "Rust is a language as fast as C++, but it protects you from many dangerous memory mistakes right when you compile. It's harder for beginners, but much loved by programmers."
+      },
+      "analogy": {
+        "sq": "Si një prind shumë i kujdesshëm që s'të lë të dalësh pa e kontrolluar çdo gjë: të mërzit pak, por rrallë ndodh ndonjë fatkeqësi.",
+        "en": "Like a very careful parent who won't let you leave until everything's been checked: a bit annoying, but accidents rarely happen."
+      },
+      "code": {
+        "language": "rust",
+        "snippet": "fn main() {\n    let emri = \"Arta\";\n    println!(\"Përshëndetje, {}!\", emri);\n}"
+      },
+      "related": [
+        "c-plus-plus",
+        "compiler",
+        "ram"
+      ]
+    },
+    {
+      "id": "dataset",
+      "en": "Dataset",
+      "sq": "Grup të dhënash",
+      "aliases": [
+        "data set",
+        "të dhëna",
+        "csv"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Dataset-i është një koleksion i organizuar të dhënash për një temë — p.sh. një tabelë me notat e mijëra nxënësve ose me çmimet e banesave. Përdoret për analiza dhe për të trajnuar modele të inteligjencës artificiale.",
+        "en": "A dataset is an organised collection of data on one topic — like a table of grades for thousands of students, or of apartment prices. It's used for analysis and for training artificial intelligence models."
+      },
+      "analogy": {
+        "sq": "Si statistikat e gjithë sezonit të një lige: çdo ndeshje, çdo gol, çdo kartë — të mbledhura në një vend, gati për t'u analizuar.",
+        "en": "Like a league's statistics for a whole season: every match, every goal, every card — gathered in one place, ready to analyse."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import pandas as pd\nbanesat = pd.read_csv(\"banesat_prishtine.csv\")\nprint(len(banesat), \"rreshta\")\nprint(banesat.head())  # 5 rreshtat e parë"
+      },
+      "related": [
+        "pandas",
+        "table",
+        "machine-learning"
+      ]
+    },
+    {
+      "id": "machine-learning",
+      "en": "Machine learning",
+      "sq": "Mësim automatik",
+      "aliases": [
+        "ml",
+        "mësim makinerik",
+        "mësimi i makinës"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Machine learning është mënyra si kompjuteri mëson nga shembujt: në vend që t'i shkruash rregullat, i jep shumë të dhëna me përgjigjet e sakta, dhe ai e gjen vetë modelin. Është pjesa kryesore e inteligjencës artificiale sot.",
+        "en": "Machine learning is how a computer learns from examples: instead of writing the rules, you give it lots of data with the right answers, and it finds the pattern itself. It's the main part of artificial intelligence today."
+      },
+      "analogy": {
+        "sq": "Si kur mëson ta njohësh shkrimin e mësueses: askush s'ta shpjegoi, por pasi pe shumë fletë të saj, e njeh menjëherë.",
+        "en": "Like learning to recognise your teacher's handwriting: nobody explained it, but after seeing lots of her sheets, you spot it instantly."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "from sklearn.linear_model import LinearRegression\nsiperfaqja = [[50], [70], [90]]  # m²\ncmimi = [60000, 84000, 108000]   # €\nmodeli = LinearRegression().fit(siperfaqja, cmimi)\nprint(modeli.predict([[80]]))    # rreth 96000"
+      },
+      "related": [
+        "ai",
+        "dataset",
+        "model"
+      ]
+    },
+    {
+      "id": "model",
+      "en": "Model (AI)",
+      "sq": "Model",
+      "aliases": [
+        "modeli",
+        "ai model",
+        "trajnim",
+        "training"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Modeli është ajo që del pasi një program machine learning „mëson“ nga të dhënat — një lloj formule e madhe që, kur i jep diçka të re, parashikon përgjigjen. Asistentët si ChatGPT ose Claude punojnë me modele shumë të mëdha.",
+        "en": "A model is what you get after a machine learning program “learns” from data — a kind of giant formula that, given something new, predicts the answer. Assistants like ChatGPT or Claude run on very large models."
+      },
+      "analogy": {
+        "sq": "Si shija e një kuzhinieri me përvojë: pas mijëra gjellësh, e di vetë sa kripë i duhet një gjelle të re — pa e matur.",
+        "en": "Like an experienced cook's sense of taste: after thousands of dishes, they just know how much salt a new dish needs — without measuring."
+      },
+      "code": null,
+      "related": [
+        "machine-learning",
+        "dataset",
+        "llm"
+      ]
+    },
+    {
+      "id": "llm",
+      "en": "LLM (Large Language Model)",
+      "sq": "Model i madh gjuhësor",
+      "aliases": [
+        "large language model",
+        "gpt",
+        "modele gjuhësore"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "LLM-ja është një model IA i trajnuar me sasi të mëdha teksti, që mëson të parashikojë fjalën e radhës. Kështu mund të shkruajë, të përkthejë, të shpjegojë kod dhe t'u përgjigjet pyetjeve — por mund edhe të shpikë gjëra që s'janë të vërteta.",
+        "en": "An LLM is an AI model trained on huge amounts of text that learns to predict the next word. That's how it can write, translate, explain code and answer questions — but it can also make up things that aren't true."
+      },
+      "analogy": {
+        "sq": "Si një shok që e ka lexuar gjithë bibliotekën e shkollës: di të flasë për çdo temë, por ndonjëherë flet me shumë siguri edhe kur gabon.",
+        "en": "Like a friend who's read the entire school library: they can talk about anything, but sometimes sound very sure even when they're wrong."
+      },
+      "code": null,
+      "related": [
+        "model",
+        "ai",
+        "prompt"
+      ]
+    },
+    {
+      "id": "chatbot",
+      "en": "Chatbot",
+      "sq": null,
+      "aliases": [
+        "chat bot",
+        "bot",
+        "asistent virtual",
+        "chatgpt"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Chatbot-i është një program me të cilin bisedon me shkrim (ose me zë), si me një person. Chatbot-et e sotme si ChatGPT ose Claude përdorin LLM, ndërsa ato më të thjeshtat në faqet e dyqaneve ndjekin vetëm disa rregulla të gatshme.",
+        "en": "A chatbot is a program you have a conversation with in writing (or by voice), like with a person. Today's chatbots like ChatGPT or Claude use LLMs, while simpler ones on shop websites just follow a few ready-made rules."
+      },
+      "analogy": {
+        "sq": "Si sporteli i informacionit në një qendër tregtare: bën pyetjen, merr përgjigjen — vetëm se këtu sporteli është program dhe punon 24 orë.",
+        "en": "Like the information desk at a shopping centre: you ask, you get an answer — except here the desk is a program and it's open 24 hours."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "pergjigjet = {\"orari\": \"Jemi hapur 8–20.\", \"adresa\": \"Rr. Nënë Tereza 1\"}\npyetja = input(\"Si mund t'ju ndihmoj? \").lower()\nprint(pergjigjet.get(pyetja, \"Më fal, nuk e kuptova.\"))"
+      },
+      "related": [
+        "llm",
+        "ai",
+        "prompt"
       ]
     }
   ]
