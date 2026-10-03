@@ -2187,8 +2187,7 @@
       "sq": "Degë",
       "aliases": [
         "dega",
-        "git branch",
-        "main"
+        "git branch"
       ],
       "category": "git",
       "explanation": {
@@ -4917,7 +4916,6 @@
         "ci",
         "cd",
         "continuous integration",
-        "github actions",
         "pipeline"
       ],
       "category": "security",
@@ -5106,9 +5104,7 @@
       "sq": "Model",
       "aliases": [
         "modeli",
-        "ai model",
-        "trajnim",
-        "training"
+        "ai model"
       ],
       "category": "data-ai",
       "explanation": {
@@ -5462,6 +5458,1187 @@
         "freelancer",
         "code-review",
         "junior-senior"
+      ]
+    },
+    {
+      "id": "neural-network",
+      "en": "Neural network",
+      "sq": "Rrjet nervor",
+      "aliases": [
+        "rrjet neural",
+        "neural net",
+        "neurone"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Rrjeti nervor është një model i frymëzuar nga truri: shumë „neurone“ të vogla, të lidhura në shtresa, që i kalojnë numra njëri-tjetrit. Gjatë trajnimit, lidhjet forcohen ose dobësohen derisa rrjeti të japë përgjigje të sakta.",
+        "en": "A neural network is a model inspired by the brain: lots of tiny “neurons”, connected in layers, passing numbers to each other. During training, the connections get stronger or weaker until the network gives correct answers."
+      },
+      "analogy": {
+        "sq": "Si një skuadër ku topi kalon nga mbrojtja te mesfusha e pastaj te sulmi: çdo lojtar vendos pak, dhe me stërvitje pasimet bëhen gjithnjë e më të sakta.",
+        "en": "Like a team where the ball moves from defence to midfield to attack: each player makes a small decision, and with training the passes get more and more accurate."
+      },
+      "code": null,
+      "related": [
+        "deep-learning",
+        "machine-learning",
+        "model"
+      ]
+    },
+    {
+      "id": "deep-learning",
+      "en": "Deep learning",
+      "sq": "Mësim i thellë",
+      "aliases": [
+        "mësimi i thellë",
+        "deep"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Deep learning është machine learning me rrjete nervore me shumë shtresa („të thella“). Kjo i lejon të mësojnë gjëra shumë të ndërlikuara — të njohin fytyra, të kuptojnë zërin ose të shkruajnë tekst.",
+        "en": "Deep learning is machine learning with neural networks that have many layers (“deep” ones). This lets them learn very complex things — recognising faces, understanding speech or writing text."
+      },
+      "analogy": {
+        "sq": "Si shkolla: në klasën e parë mëson shkronjat, pastaj fjalët, pastaj fjalitë, pastaj hartimet. Çdo shtresë ndërtohet mbi atë që mësove më parë.",
+        "en": "Like school: in first grade you learn letters, then words, then sentences, then essays. Each layer builds on what you learned before."
+      },
+      "code": null,
+      "related": [
+        "neural-network",
+        "machine-learning",
+        "llm"
+      ]
+    },
+    {
+      "id": "training",
+      "en": "Training (AI)",
+      "sq": "Trajnim",
+      "aliases": [
+        "trajnimi",
+        "training",
+        "trajnoj"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Trajnimi është procesi kur një model IA shikon shumë shembuj dhe i rregullon vetë numrat e tij të brendshëm, derisa të gabojë sa më pak. Për modelet e mëdha, trajnimi zgjat javë dhe kërkon mijëra GPU.",
+        "en": "Training is the process where an AI model looks at lots of examples and adjusts its own internal numbers until it makes as few mistakes as possible. For big models, training takes weeks and needs thousands of GPUs."
+      },
+      "analogy": {
+        "sq": "Si stërvitja para sezonit: lojtari gjuan qindra herë në portë dhe çdo herë e korrigjon pak këndin, derisa topi të hyjë vazhdimisht.",
+        "en": "Like pre-season training: a player shoots at goal hundreds of times, adjusting the angle a little each time, until the ball goes in consistently."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "from sklearn.tree import DecisionTreeClassifier\nX = [[1], [2], [8], [9]]              # shembujt\ny = [\"pak\", \"pak\", \"shumë\", \"shumë\"]  # përgjigjet e sakta\nmodeli = DecisionTreeClassifier().fit(X, y)  # trajnimi"
+      },
+      "related": [
+        "model",
+        "dataset",
+        "inference"
+      ]
+    },
+    {
+      "id": "inference",
+      "en": "Inference",
+      "sq": "Inferencë",
+      "aliases": [
+        "inferenca",
+        "parashikim",
+        "prediction",
+        "predict"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Inferenca është momenti kur një model i trajnuar vihet në punë: i jep diçka të re dhe ai jep përgjigjen. Sa herë që i shkruan një chatbot-i, po bëhet inferencë.",
+        "en": "Inference is when a trained model is put to work: you give it something new and it gives an answer. Every time you message a chatbot, that's inference."
+      },
+      "analogy": {
+        "sq": "Nëse trajnimi është mësimi gjatë vitit, inferenca është provimi: tani e përdor atë që mësove për pyetje që s'i ke parë kurrë.",
+        "en": "If training is studying all year, inference is the exam: now you use what you learned on questions you've never seen."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "print(modeli.predict([[7]]))  # inferenca → ['shumë']"
+      },
+      "related": [
+        "training",
+        "model",
+        "llm"
+      ]
+    },
+    {
+      "id": "ai-token",
+      "en": "Token (AI)",
+      "sq": "Token (IA)",
+      "aliases": [
+        "tokens",
+        "tokenizim",
+        "tokenizer"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Për një LLM, teksti ndahet në copa të vogla që quhen token-a — zakonisht një fjalë ose pjesë fjale. Modeli lexon dhe shkruan token pas token-i, dhe shërbimet IA shpesh e matin përdorimin dhe çmimin me token-a.",
+        "en": "For an LLM, text is split into small pieces called tokens — usually a word or part of a word. The model reads and writes token by token, and AI services often measure usage and price in tokens."
+      },
+      "analogy": {
+        "sq": "Si kur e pret bukën në feta para se ta hash: modeli s'e „ha“ tekstin të tërë njëherësh, por copë pas cope.",
+        "en": "Like slicing bread before eating it: the model doesn't “eat” the text all at once, but piece by piece."
+      },
+      "code": null,
+      "related": [
+        "llm",
+        "context-window",
+        "prompt"
+      ]
+    },
+    {
+      "id": "context-window",
+      "en": "Context window",
+      "sq": "Dritarja e kontekstit",
+      "aliases": [
+        "konteksti",
+        "context",
+        "context length"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Dritarja e kontekstit është sa tekst mund të „mbajë mend“ një LLM njëherësh — bisedën, dokumentet dhe përgjigjen e vet, të matura në token-a. Kur biseda bëhet shumë e gjatë, pjesët e vjetra mund të harrohen.",
+        "en": "The context window is how much text an LLM can “keep in mind” at once — the conversation, documents and its own reply, measured in tokens. When a chat gets very long, older parts can be forgotten."
+      },
+      "analogy": {
+        "sq": "Si dërrasa e zezë në klasë: ka vend vetëm për aq shkrim; kur mbushet, mësuesja duhet të fshijë diçka të vjetër për të shkruar të renë.",
+        "en": "Like the classroom blackboard: there's only room for so much writing; when it's full, the teacher has to wipe something old to write something new."
+      },
+      "code": null,
+      "related": [
+        "ai-token",
+        "llm",
+        "prompt"
+      ]
+    },
+    {
+      "id": "hallucination",
+      "en": "Hallucination (AI)",
+      "sq": "Halucinacion",
+      "aliases": [
+        "halucinacioni",
+        "hallucinate",
+        "shpikje"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Halucinacioni ndodh kur një model IA jep një përgjigje që tingëllon e sigurt dhe e saktë, por është e shpikur — një fakt i rremë, një burim që s'ekziston ose kod që s'punon. Prandaj përgjigjet e IA-së duhen kontrolluar.",
+        "en": "A hallucination is when an AI model gives an answer that sounds confident and correct but is made up — a false fact, a source that doesn't exist, or code that doesn't work. That's why AI answers need checking."
+      },
+      "analogy": {
+        "sq": "Si nxënësi që s'e ka mësuar mësimin, por në vend që të thotë „s'e di“, flet me shumë siguri dhe shpik një përgjigje që tingëllon bindëse.",
+        "en": "Like a student who didn't study, but instead of saying “I don't know”, speaks very confidently and makes up an answer that sounds convincing."
+      },
+      "code": null,
+      "related": [
+        "llm",
+        "chatbot",
+        "bias"
+      ]
+    },
+    {
+      "id": "fine-tuning",
+      "en": "Fine-tuning",
+      "sq": "Përshtatje e imët",
+      "aliases": [
+        "fine tuning",
+        "finetune",
+        "rafinim"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Fine-tuning do të thotë ta marrësh një model të trajnuar tashmë dhe ta trajnosh edhe pak me të dhënat e tua, që të bëhet i mirë në një punë të caktuar — p.sh. t'u përgjigjet pyetjeve për produktet e një kompanie.",
+        "en": "Fine-tuning means taking an already-trained model and training it a bit more on your own data, so it gets good at one particular job — like answering questions about a company's products."
+      },
+      "analogy": {
+        "sq": "Si një lojtar i mirë që kalon në një klub të ri: futbollin e di, por stërvitet disa javë për ta mësuar stilin e lojës së ekipit të ri.",
+        "en": "Like a good player joining a new club: they already know football, but train for a few weeks to learn the new team's style of play."
+      },
+      "code": null,
+      "related": [
+        "training",
+        "model",
+        "dataset"
+      ]
+    },
+    {
+      "id": "embedding",
+      "en": "Embedding",
+      "sq": null,
+      "aliases": [
+        "embeddings",
+        "vektor",
+        "vector",
+        "ngulitje"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Embedding-u e kthen një tekst (ose foto) në një listë numrash, ku kuptimet e ngjashme marrin numra të afërt. Kështu kompjuteri e kupton që „makinë“ dhe „veturë“ janë pothuajse e njëjta gjë.",
+        "en": "An embedding turns a piece of text (or an image) into a list of numbers, where similar meanings get similar numbers. That's how a computer can tell that “car” and “automobile” mean almost the same thing."
+      },
+      "analogy": {
+        "sq": "Si raftet në supermarket: produktet e ngjashme vendosen pranë njëri-tjetrit — qumështi pranë kosit, jo pranë detergjentit. Embedding-u i jep çdo fjale „vendin“ e saj në raft.",
+        "en": "Like supermarket shelves: similar products sit next to each other — milk next to yoghurt, not next to the detergent. An embedding gives every word its own “spot” on the shelf."
+      },
+      "code": null,
+      "related": [
+        "rag",
+        "llm",
+        "machine-learning"
+      ]
+    },
+    {
+      "id": "rag",
+      "en": "RAG (Retrieval-Augmented Generation)",
+      "sq": null,
+      "aliases": [
+        "retrieval augmented generation",
+        "retrieval"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "RAG është një teknikë ku, para se LLM-ja të përgjigjet, programi gjen dokumentet më të përshtatshme (p.sh. me embedding-e) dhe ia jep modelit bashkë me pyetjen. Kështu përgjigjja bazohet në informacion të vërtetë dhe të freskët, jo vetëm në kujtesën e modelit.",
+        "en": "RAG is a technique where, before the LLM answers, the program finds the most relevant documents (e.g. using embeddings) and gives them to the model along with the question. That way the answer is based on real, up-to-date information, not just the model's memory."
+      },
+      "analogy": {
+        "sq": "Si provimi me libër të hapur: në vend që të mbështetesh vetëm te kujtesa, e gjen faqen e duhur në libër dhe përgjigjesh duke u bazuar aty.",
+        "en": "Like an open-book exam: instead of relying only on memory, you find the right page in the book and base your answer on it."
+      },
+      "code": null,
+      "related": [
+        "embedding",
+        "llm",
+        "hallucination"
+      ]
+    },
+    {
+      "id": "generative-ai",
+      "en": "Generative AI",
+      "sq": "IA gjeneruese",
+      "aliases": [
+        "genai",
+        "gen ai"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "IA gjeneruese është inteligjenca artificiale që krijon diçka të re — tekst, foto, muzikë, video ose kod — në vend që vetëm të klasifikojë ose të parashikojë. ChatGPT-ja, Claude-i dhe gjeneratorët e fotove janë shembuj.",
+        "en": "Generative AI is artificial intelligence that creates something new — text, images, music, video or code — instead of just sorting or predicting. ChatGPT, Claude and image generators are examples."
+      },
+      "analogy": {
+        "sq": "Si një kuzhinier që, pasi ka provuar mijëra gjella, të gatuan një recetë të re që s'ka ekzistuar kurrë më parë.",
+        "en": "Like a chef who, after tasting thousands of dishes, cooks you a new recipe that never existed before."
+      },
+      "code": null,
+      "related": [
+        "llm",
+        "ai",
+        "multimodal"
+      ]
+    },
+    {
+      "id": "computer-vision",
+      "en": "Computer vision",
+      "sq": "Shikim kompjuterik",
+      "aliases": [
+        "vision",
+        "njohje fytyre",
+        "image recognition"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Shikimi kompjuterik është fusha e IA-së që i mëson kompjuterët të „shohin“: të njohin objekte, fytyra, tekst ose targa makinash në foto dhe video.",
+        "en": "Computer vision is the field of AI that teaches computers to “see”: to recognise objects, faces, text or number plates in photos and video."
+      },
+      "analogy": {
+        "sq": "Si teknologjia e vijës së golit: kamerat e ndjekin topin dhe kompjuteri vendos brenda një sekonde nëse e ka kaluar vijën.",
+        "en": "Like goal-line technology: the cameras track the ball and the computer decides within a second whether it crossed the line."
+      },
+      "code": null,
+      "related": [
+        "neural-network",
+        "deep-learning",
+        "multimodal"
+      ]
+    },
+    {
+      "id": "nlp",
+      "en": "NLP (Natural Language Processing)",
+      "sq": "Përpunim i gjuhës natyrore",
+      "aliases": [
+        "natural language processing",
+        "gjuhë natyrore"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "NLP-ja është fusha e IA-së që merret me gjuhën e njerëzve: përkthim, kuptim i tekstit, përmbledhje, njohje e zërit. LLM-të janë hapi më i madh i NLP-së deri tani.",
+        "en": "NLP is the field of AI that deals with human language: translation, understanding text, summarising, speech recognition. LLMs are NLP's biggest leap so far."
+      },
+      "analogy": {
+        "sq": "Si gjyshja që kupton çdo dialekt — gegërisht, toskërisht, me fjalë turke apo italiane — dhe e di çfarë do të thuash edhe kur flet shpejt.",
+        "en": "Like a grandmother who understands every dialect — Gheg, Tosk, with Turkish or Italian words thrown in — and knows what you mean even when you talk fast."
+      },
+      "code": null,
+      "related": [
+        "llm",
+        "ai",
+        "chatbot"
+      ]
+    },
+    {
+      "id": "ai-agent",
+      "en": "AI agent",
+      "sq": "Agjent IA",
+      "aliases": [
+        "agent",
+        "agjent",
+        "agentic"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Agjenti IA është një program me LLM që jo vetëm përgjigjet, por edhe vepron vetë, hap pas hapi, për të kryer një detyrë — kërkon në internet, shkruan dhe ekzekuton kod, përdor mjete — dhe e kontrollon rezultatin.",
+        "en": "An AI agent is an LLM-powered program that doesn't just answer, but takes actions step by step to complete a task — searching the web, writing and running code, using tools — and checks the result."
+      },
+      "analogy": {
+        "sq": "Nëse chatbot-i është si një shok që të jep këshilla për blerjet, agjenti është si një shok që e merr listën, shkon vetë në dyqan, krahason çmimet dhe t'i sjell gjërat.",
+        "en": "If a chatbot is a friend who gives you shopping advice, an agent is a friend who takes the list, goes to the shop, compares prices and brings the things back."
+      },
+      "code": null,
+      "related": [
+        "llm",
+        "chatbot",
+        "ai-coding-assistant"
+      ]
+    },
+    {
+      "id": "bias",
+      "en": "Bias (AI)",
+      "sq": "Paragjykim (IA)",
+      "aliases": [
+        "bias",
+        "paragjykim",
+        "anshmëri"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Bias-i ndodh kur një model IA jep rezultate të padrejta ose të njëanshme, sepse të dhënat me të cilat u trajnua nuk ishin të balancuara. P.sh. një model i trajnuar kryesisht me tekste në anglisht mund ta kuptojë më keq shqipen.",
+        "en": "Bias happens when an AI model gives unfair or one-sided results because the data it was trained on wasn't balanced. For example, a model trained mostly on English text may understand Albanian worse."
+      },
+      "analogy": {
+        "sq": "Si një gjyqtar që ka parë vetëm ndeshjet e një ekipi: pa dashur, i sheh të gjitha nga ajo anë.",
+        "en": "Like a referee who has only ever watched one team's matches: without meaning to, they see everything from that side."
+      },
+      "code": null,
+      "related": [
+        "dataset",
+        "training",
+        "hallucination"
+      ]
+    },
+    {
+      "id": "overfitting",
+      "en": "Overfitting",
+      "sq": "Mbipërshtatje",
+      "aliases": [
+        "overfit",
+        "mbipërshtatja"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Overfitting ndodh kur një model i mëson përmendësh shembujt e trajnimit, në vend që ta kuptojë rregullin. Te të dhënat që i ka parë del i përsosur, por me të dhëna të reja gabon shumë.",
+        "en": "Overfitting happens when a model memorises the training examples instead of understanding the pattern. It looks perfect on the data it has seen, but makes lots of mistakes on new data."
+      },
+      "analogy": {
+        "sq": "Si nxënësi që i mëson përmendësh përgjigjet e testit të vitit të kaluar: po ndryshuan pak pyetjet, s'di nga t'ia mbajë.",
+        "en": "Like a student who memorises last year's test answers: if the questions change even slightly, they're lost."
+      },
+      "code": null,
+      "related": [
+        "training",
+        "machine-learning",
+        "dataset"
+      ]
+    },
+    {
+      "id": "supervised-learning",
+      "en": "Supervised learning",
+      "sq": "Mësim i mbikëqyrur",
+      "aliases": [
+        "supervised",
+        "labeled data",
+        "të dhëna të etiketuara"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Në mësimin e mbikëqyrur, modeli trajnohet me shembuj që e kanë përgjigjen e saktë të shënuar — p.sh. mijëra email-e të etiketuar „spam“ ose „jo spam“. Pastaj mëson t'i etiketojë vetë email-et e rinj.",
+        "en": "In supervised learning, the model is trained on examples that already have the correct answer labelled — like thousands of emails marked “spam” or “not spam”. It then learns to label new emails itself."
+      },
+      "analogy": {
+        "sq": "Si ushtrimet në libër me zgjidhjet në fund: zgjidh, kontrollon përgjigjen, korrigjohesh — derisa i zgjidh saktë edhe pa shikuar.",
+        "en": "Like textbook exercises with the answers at the back: you solve, check the answer, correct yourself — until you get them right without looking."
+      },
+      "code": null,
+      "related": [
+        "machine-learning",
+        "classification",
+        "unsupervised-learning"
+      ]
+    },
+    {
+      "id": "unsupervised-learning",
+      "en": "Unsupervised learning",
+      "sq": "Mësim i pambikëqyrur",
+      "aliases": [
+        "unsupervised",
+        "clustering",
+        "grupim"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Në mësimin e pambikëqyrur, modeli merr të dhëna pa përgjigje dhe gjen vetë grupe ose modele të fshehura — p.sh. i ndan klientët e një dyqani në grupe sipas asaj që blejnë.",
+        "en": "In unsupervised learning, the model gets data with no answers and finds groups or hidden patterns on its own — for example, splitting a shop's customers into groups by what they buy."
+      },
+      "analogy": {
+        "sq": "Si kur i derdh në krevat të gjitha rrobat e larjes dhe, pa të thënë njeri, i ndan vetë: çorapet këtu, bluzat atje, peshqirët në një grumbull tjetër.",
+        "en": "Like tipping all the clean laundry onto the bed and, without anyone telling you, sorting it yourself: socks here, shirts there, towels in another pile."
+      },
+      "code": null,
+      "related": [
+        "supervised-learning",
+        "machine-learning",
+        "dataset"
+      ]
+    },
+    {
+      "id": "classification",
+      "en": "Classification",
+      "sq": "Klasifikim",
+      "aliases": [
+        "klasifikimi",
+        "classifier",
+        "kategorizim"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Klasifikimi është një detyrë e IA-së ku modeli vendos në cilën kategori bën pjesë diçka — p.sh. nëse një email është spam, nëse në foto ka mace apo qen, ose nëse një koment është pozitiv apo negativ.",
+        "en": "Classification is an AI task where the model decides which category something belongs to — whether an email is spam, whether a photo shows a cat or a dog, or whether a comment is positive or negative."
+      },
+      "analogy": {
+        "sq": "Si punonjësi i postës që i ndan letrat sipas qytetit: Prishtinë, Tiranë, Shkup — çdo letër në thesin e duhur.",
+        "en": "Like a postal worker sorting letters by city: Prishtina, Tirana, Skopje — every letter into the right bag."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "from sklearn.tree import DecisionTreeClassifier\nX = [[3, 1], [0, 0], [5, 1], [0, 1]]  # [sa herë „FALAS“, ka lidhje]\ny = [\"spam\", \"jo\", \"spam\", \"jo\"]\nmodeli = DecisionTreeClassifier().fit(X, y)\nprint(modeli.predict([[4, 1]]))      # ['spam']"
+      },
+      "related": [
+        "supervised-learning",
+        "machine-learning",
+        "model"
+      ]
+    },
+    {
+      "id": "temperature",
+      "en": "Temperature (AI)",
+      "sq": "Temperatura (IA)",
+      "aliases": [
+        "temperature",
+        "temperatura",
+        "kreativitet"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Temperatura është një rregullim i LLM-së që vendos sa „i guximshëm“ është modeli kur zgjedh fjalët. Me temperaturë të ulët përgjigjet janë më të sigurta dhe të përsëritshme; me të lartë, më kreative por edhe më të paparashikueshme.",
+        "en": "Temperature is an LLM setting that controls how “adventurous” the model is when picking words. Low temperature gives safer, more repeatable answers; high temperature gives more creative but less predictable ones."
+      },
+      "analogy": {
+        "sq": "Si erëzat në gatim: me pak erëza gjella del gjithmonë njësoj; me shumë erëza del çdo herë ndryshe — ndonjëherë shumë mirë, ndonjëherë jo.",
+        "en": "Like spice in cooking: with a little, the dish always comes out the same; with a lot, it's different every time — sometimes great, sometimes not."
+      },
+      "code": null,
+      "related": [
+        "llm",
+        "generative-ai",
+        "prompt"
+      ]
+    },
+    {
+      "id": "multimodal",
+      "en": "Multimodal AI",
+      "sq": "IA multimodale",
+      "aliases": [
+        "multimodal",
+        "multimodale"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "IA multimodale është një model që punon me disa lloje të dhënash njëherësh — tekst, foto, zë, video. P.sh. mund t'i dërgosh foton e një detyre matematike dhe ta pyesësh me zë si zgjidhet.",
+        "en": "Multimodal AI is a model that works with several kinds of data at once — text, images, sound, video. For example, you can send it a photo of a maths problem and ask out loud how to solve it."
+      },
+      "analogy": {
+        "sq": "Si një mësues privat që ta lexon fletoren, ta dëgjon pyetjen dhe ta vizaton zgjidhjen në tabelë — jo vetëm me fjalë.",
+        "en": "Like a private tutor who reads your notebook, listens to your question and draws the solution on the board — not just with words."
+      },
+      "code": null,
+      "related": [
+        "generative-ai",
+        "computer-vision",
+        "llm"
+      ]
+    },
+    {
+      "id": "ai-coding-assistant",
+      "en": "AI coding assistant",
+      "sq": "Asistent IA për kod",
+      "aliases": [
+        "copilot",
+        "github copilot",
+        "cursor",
+        "claude code",
+        "asistent kodi"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Asistenti IA për kod është një mjet në IDE ose në terminal që të ndihmon të shkruash kod: sugjeron rreshtat e radhës, shpjegon gabimet dhe mund të bëjë ndryshime vetë. Është ndihmë e madhe, por kodin duhet ta kuptosh dhe ta kontrollosh vetë.",
+        "en": "An AI coding assistant is a tool in your IDE or terminal that helps you write code: it suggests the next lines, explains errors and can make changes itself. It's a big help, but you still need to understand and check the code yourself."
+      },
+      "analogy": {
+        "sq": "Si një shok i zgjuar që ulet pranë teje kur bën detyrat: të jep ide dhe t'i tregon gabimet — por provimin e jep ti, ndaj duhet ta kuptosh vetë.",
+        "en": "Like a clever friend sitting next to you while you do homework: gives you ideas and points out mistakes — but you're the one taking the exam, so you have to understand it yourself."
+      },
+      "code": null,
+      "related": [
+        "ai-agent",
+        "llm",
+        "ide"
+      ]
+    },
+    {
+      "id": "gpu",
+      "en": "GPU",
+      "sq": "Kartela grafike",
+      "aliases": [
+        "kartelë grafike",
+        "graphics card",
+        "nvidia"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "GPU-ja (kartela grafike) është një procesor i specializuar që bën mijëra llogaritje të vogla njëkohësisht. U krijua për lojërat video, por sot është zemra e trajnimit të IA-së.",
+        "en": "A GPU (graphics card) is a specialised processor that does thousands of small calculations at the same time. It was made for video games, but today it's the heart of AI training."
+      },
+      "analogy": {
+        "sq": "Nëse CPU-ja është një kuzhinier i shkëlqyer që gatuan shpejt një gjellë pas tjetrës, GPU-ja është një kuzhinë me njëqind ndihmës që qërojnë njëqind patate njëherësh.",
+        "en": "If the CPU is a brilliant chef cooking one dish after another, the GPU is a kitchen with a hundred helpers peeling a hundred potatoes at once."
+      },
+      "code": null,
+      "related": [
+        "cpu",
+        "training",
+        "deep-learning"
+      ]
+    },
+    {
+      "id": "git-status",
+      "en": "git status",
+      "sq": null,
+      "aliases": [
+        "status"
+      ],
+      "category": "git",
+      "explanation": {
+        "sq": "git status të tregon gjendjen e projektit: cilët skedarë ke ndryshuar, cilët janë gati për commit dhe në cilën degë je. Është komanda më e përdorur — kur s'je i sigurt, shkruaj git status.",
+        "en": "git status shows the state of your project: which files you've changed, which are ready to commit and which branch you're on. It's the most-used command — when in doubt, type git status."
+      },
+      "analogy": {
+        "sq": "Si ta kontrollosh çantën para se të nisesh për në shkollë: çfarë ke futur, çfarë mungon, çfarë duhet ende ta marrësh.",
+        "en": "Like checking your school bag before you leave: what's in, what's missing, what you still need to grab."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "git status\n# On branch main\n# Changes not staged for commit:\n#   modified:   index.html"
+      },
+      "related": [
+        "git",
+        "staging-area",
+        "commit"
+      ]
+    },
+    {
+      "id": "git-log",
+      "en": "git log",
+      "sq": "Historiku i commit-eve",
+      "aliases": [
+        "historiku",
+        "history",
+        "git history"
+      ],
+      "category": "git",
+      "explanation": {
+        "sq": "git log të tregon historikun e projektit: çdo commit, kush e bëri, kur dhe me çfarë mesazhi. Me të e kupton kur dhe pse ndryshoi diçka.",
+        "en": "git log shows your project's history: every commit, who made it, when and with what message. It helps you understand when and why something changed."
+      },
+      "analogy": {
+        "sq": "Si albumi i familjes me datë dhe shënim në çdo foto: „Ditëlindja e Artës, 2024“.",
+        "en": "Like a family photo album with a date and caption on every photo: “Arta's birthday, 2024”."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "git log --oneline\n# a45c4d5 Përdor ikonat Font Awesome\n# b0c7359 Shto butonin Dëgjo"
+      },
+      "related": [
+        "commit",
+        "git",
+        "commit-message"
+      ]
+    },
+    {
+      "id": "checkout-switch",
+      "en": "git switch / checkout",
+      "sq": "Ndërrim dege",
+      "aliases": [
+        "checkout",
+        "switch",
+        "git checkout",
+        "git switch"
+      ],
+      "category": "git",
+      "explanation": {
+        "sq": "git switch (ose komanda më e vjetër git checkout) të kalon nga një degë në tjetrën. Skedarët në kompjuter ndryshojnë menjëherë, që të përputhen me atë degë.",
+        "en": "git switch (or the older git checkout) moves you from one branch to another. The files on your computer change instantly to match that branch."
+      },
+      "analogy": {
+        "sq": "Si trajneri që e ndërron formacionin gjatë ndeshjes: e njëjta skuadër, por me një plan tjetër në fushë.",
+        "en": "Like a coach switching formation mid-match: same squad, a different plan on the pitch."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "git switch -c faqja-kontaktit  # krijo një degë të re dhe kalo aty\ngit switch main                # kthehu te main"
+      },
+      "related": [
+        "branch",
+        "main-branch",
+        "merge"
+      ]
+    },
+    {
+      "id": "rebase",
+      "en": "Rebase",
+      "sq": null,
+      "aliases": [
+        "git rebase",
+        "ribazim"
+      ],
+      "category": "git",
+      "explanation": {
+        "sq": "Rebase-i i merr commit-et e degës tënde dhe i „ri-vendos“ mbi versionin më të ri të një dege tjetër, sikur ta kishe nisur punën që nga ai moment. Historiku del më i pastër se me merge, por duhet kujdes kur dega është e ndarë me të tjerë.",
+        "en": "Rebase takes the commits on your branch and “replays” them on top of the latest version of another branch, as if you'd started your work from there. The history comes out cleaner than with merge, but be careful when the branch is shared with others."
+      },
+      "analogy": {
+        "sq": "Si kur i rishkruan shënimet e tua në fletoren e shokut që i ka tashmë shënimet më të fundit të mësueses: të tuat shtohen në fund, në rregull.",
+        "en": "Like copying your notes into a classmate's notebook that already has the teacher's latest notes: yours get added at the end, neatly."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "git switch dega-ime\ngit rebase main  # vendos commit-et e tua mbi main-in më të ri"
+      },
+      "related": [
+        "merge",
+        "branch",
+        "commit"
+      ]
+    },
+    {
+      "id": "stash",
+      "en": "git stash",
+      "sq": null,
+      "aliases": [
+        "stash",
+        "ruaj përkohësisht"
+      ],
+      "category": "git",
+      "explanation": {
+        "sq": "git stash i fsheh përkohësisht ndryshimet që s'i ke bërë ende commit, që projekti të jetë i pastër — p.sh. për të ndërruar degë shpejt. Më vonë i kthen me git stash pop.",
+        "en": "git stash temporarily tucks away changes you haven't committed yet, so your project is clean — for example to switch branches quickly. Later you bring them back with git stash pop."
+      },
+      "analogy": {
+        "sq": "Si kur vjen papritur një mysafir dhe i fut lodrat shpejt në dollap: dhoma duket e rregullt, dhe kur ikin, i nxjerr sërish.",
+        "en": "Like a surprise visitor arriving and you quickly shove the toys into the cupboard: the room looks tidy, and when they leave, you take them back out."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "git stash      # fshih ndryshimet\ngit switch main\ngit stash pop  # ktheji ndryshimet"
+      },
+      "related": [
+        "branch",
+        "commit",
+        "git-status"
+      ]
+    },
+    {
+      "id": "revert",
+      "en": "git revert",
+      "sq": "Zhbërje e commit-it",
+      "aliases": [
+        "revert",
+        "undo commit"
+      ],
+      "category": "git",
+      "explanation": {
+        "sq": "git revert e zhbën një commit duke krijuar një commit të ri që bën të kundërtën e tij. Historiku mbetet i plotë, ndaj është mënyra e sigurt për të zhbërë diçka që e ke ndarë tashmë me të tjerët.",
+        "en": "git revert undoes a commit by creating a new commit that does the opposite. The history stays complete, so it's the safe way to undo something you've already shared."
+      },
+      "analogy": {
+        "sq": "Si kur kthen një produkt në dyqan: blerja s'fshihet nga fatura, por shtohet një kthim që e anulon.",
+        "en": "Like returning a product to a shop: the purchase isn't erased from the receipt; a refund is added that cancels it out."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "git revert a45c4d5  # krijon një commit të ri që e zhbën a45c4d5"
+      },
+      "related": [
+        "reset",
+        "commit",
+        "git-log"
+      ]
+    },
+    {
+      "id": "reset",
+      "en": "git reset",
+      "sq": null,
+      "aliases": [
+        "reset",
+        "git reset --hard"
+      ],
+      "category": "git",
+      "explanation": {
+        "sq": "git reset e kthen degën tënde te një commit më i hershëm, sikur commit-et e mëvonshme të mos kishin ndodhur. Është e fuqishme por e rrezikshme — me --hard ndryshimet humbin përgjithmonë, ndaj përdore vetëm për punë që s'e ke ndarë ende.",
+        "en": "git reset moves your branch back to an earlier commit, as if the later commits never happened. It's powerful but risky — with --hard you lose changes for good, so only use it on work you haven't shared yet."
+      },
+      "analogy": {
+        "sq": "Si ta grisësh faqen e fundit të fletores dhe të fillosh nga faqja e mëparshme: e pastër, por çfarë ishte në atë faqe s'kthehet më.",
+        "en": "Like tearing the last page out of your notebook and starting again from the one before: clean, but whatever was on that page is gone."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "git reset --soft HEAD~1  # zhbëj commit-in e fundit, mbaji ndryshimet\ngit reset --hard HEAD~1  # kujdes: fshin edhe ndryshimet!"
+      },
+      "related": [
+        "revert",
+        "head",
+        "commit"
+      ]
+    },
+    {
+      "id": "remote",
+      "en": "Remote (origin)",
+      "sq": "Depo në distancë",
+      "aliases": [
+        "origin",
+        "git remote",
+        "remote repository"
+      ],
+      "category": "git",
+      "explanation": {
+        "sq": "Remote-i është kopja e repository-së që ndodhet diku tjetër, zakonisht në GitHub. Emri i zakonshëm i saj është origin. Me push i dërgon ndryshimet atje, me pull i merr prej andej.",
+        "en": "A remote is a copy of your repository that lives somewhere else, usually on GitHub. Its usual name is origin. You push changes to it and pull changes from it."
+      },
+      "analogy": {
+        "sq": "Si shtëpia e gjyshërve ku ruhet albumi kryesor i familjes: secili ka kopjen e vet në shtëpi, por fotot e reja i çon atje, që t'i shohin të gjithë.",
+        "en": "Like the grandparents' house where the main family album is kept: everyone has their own copy at home, but new photos get taken there for everyone to see."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "git remote -v\n# origin  https://github.com/scalar-code/fjalori-i-programimit.git"
+      },
+      "related": [
+        "push",
+        "pull",
+        "github"
+      ]
+    },
+    {
+      "id": "main-branch",
+      "en": "main / master",
+      "sq": "Dega kryesore",
+      "aliases": [
+        "main",
+        "master",
+        "main branch",
+        "default branch"
+      ],
+      "category": "git",
+      "explanation": {
+        "sq": "main (më herët quhej master) është dega kryesore e një repository-je — versioni zyrtar i projektit. Punën e re e bën në degë të tjera dhe e bashkon në main kur është gati. Te ky fjalor, çdo push në main del live.",
+        "en": "main (formerly called master) is a repository's primary branch — the official version of the project. New work happens on other branches and gets merged into main when it's ready. For this glossary, every push to main goes live."
+      },
+      "analogy": {
+        "sq": "Si receta zyrtare e restorantit që del në meny: provat bëhen anash, dhe vetëm kur një provë del e mirë, futet në recetën kryesore.",
+        "en": "Like the restaurant's official recipe on the menu: experiments happen on the side, and only a successful one makes it into the main recipe."
+      },
+      "code": null,
+      "related": [
+        "branch",
+        "merge",
+        "deploy"
+      ]
+    },
+    {
+      "id": "head",
+      "en": "HEAD",
+      "sq": null,
+      "aliases": [
+        "head~1"
+      ],
+      "category": "git",
+      "explanation": {
+        "sq": "HEAD është një tregues që shënon ku je tani në historikun e Git-it — zakonisht commit-in e fundit të degës ku ndodhesh. HEAD~1 do të thotë „një commit më parë“.",
+        "en": "HEAD is a pointer that marks where you are right now in Git's history — usually the latest commit on your current branch. HEAD~1 means “one commit before that”."
+      },
+      "analogy": {
+        "sq": "Si faqerojtësi në libër: tregon faqen ku po lexon tani.",
+        "en": "Like a bookmark in a book: it shows the page you're reading right now."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "git show HEAD    # commit-i ku je tani\ngit diff HEAD~1  # çfarë ndryshoi që nga commit-i i mëparshëm"
+      },
+      "related": [
+        "commit",
+        "branch",
+        "reset"
+      ]
+    },
+    {
+      "id": "diff",
+      "en": "Diff",
+      "sq": "Dallimet",
+      "aliases": [
+        "git diff",
+        "dallim",
+        "ndryshimet"
+      ],
+      "category": "git",
+      "explanation": {
+        "sq": "Diff-i tregon saktë çfarë ndryshoi mes dy versioneve: rreshtat e shtuar zakonisht me të gjelbër (+) dhe të hequrit me të kuq (−). E sheh me git diff dhe te çdo pull request në GitHub.",
+        "en": "A diff shows exactly what changed between two versions: added lines usually in green (+) and removed ones in red (−). You see it with git diff and in every pull request on GitHub."
+      },
+      "analogy": {
+        "sq": "Si kur mësuesja ta kthen hartimin me korrigjime me laps të kuq: sheh menjëherë çfarë u hoq dhe çfarë u shtua.",
+        "en": "Like your teacher handing back your essay with red-pen corrections: you immediately see what was removed and what was added."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "git diff\n# - <h1>Mirë se erdhe</h1>\n# + <h1>Mirë se vini!</h1>"
+      },
+      "related": [
+        "commit",
+        "pull-request",
+        "code-review"
+      ]
+    },
+    {
+      "id": "tag-release",
+      "en": "Tag / release",
+      "sq": "Etiketë / version",
+      "aliases": [
+        "tag",
+        "release",
+        "git tag",
+        "version",
+        "v1.0"
+      ],
+      "category": "git",
+      "explanation": {
+        "sq": "Tag-u është një emër i përhershëm që ia vendos një commit-i të rëndësishëm, si v1.0. Në GitHub, nga një tag krijon një release — një version zyrtar me shënime se çfarë ka të re.",
+        "en": "A tag is a permanent name you put on an important commit, like v1.0. On GitHub, you can turn a tag into a release — an official version with notes on what's new."
+      },
+      "analogy": {
+        "sq": "Si fanella e finales që klubi e var në muze: nga mijëra ndeshje, ajo ditë shënohet përgjithmonë.",
+        "en": "Like the shirt from the final that the club hangs in its museum: out of thousands of matches, that day is marked forever."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "git tag v1.0\ngit push origin v1.0"
+      },
+      "related": [
+        "commit",
+        "github",
+        "deploy"
+      ]
+    },
+    {
+      "id": "git-fetch",
+      "en": "git fetch",
+      "sq": null,
+      "aliases": [
+        "fetch git"
+      ],
+      "category": "git",
+      "explanation": {
+        "sq": "git fetch i shkarkon ndryshimet e reja nga remote-i (p.sh. GitHub), por pa i përzier me punën tënde. Kështu sheh çfarë ka të re para se të vendosësh ta bashkosh — git pull bën fetch + merge njëherësh.",
+        "en": "git fetch downloads new changes from the remote (e.g. GitHub) without mixing them into your work. That way you can see what's new before deciding to merge — git pull does fetch + merge in one go."
+      },
+      "analogy": {
+        "sq": "Si ta marrësh postën nga kutia dhe ta lësh në tavolinë pa e hapur: e di që ka ardhur, por vendos vetë kur ta lexosh.",
+        "en": "Like collecting the post from the mailbox and leaving it on the table unopened: you know it's arrived, but you decide when to read it."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "git fetch origin\ngit log main..origin/main --oneline  # çfarë ka të re?"
+      },
+      "related": [
+        "pull",
+        "remote",
+        "merge"
+      ]
+    },
+    {
+      "id": "github-actions",
+      "en": "GitHub Actions",
+      "sq": null,
+      "aliases": [
+        "actions",
+        "github workflow",
+        ".github/workflows"
+      ],
+      "category": "git",
+      "explanation": {
+        "sq": "GitHub Actions është shërbimi i GitHub-it për automatizim: skedarë të vegjël rregullash që ekzekutohen vetë kur bën push ose hap një pull request — p.sh. për të nisur testet ose për të publikuar faqen.",
+        "en": "GitHub Actions is GitHub's automation service: small rule files that run by themselves when you push or open a pull request — to run tests or publish a site, for example."
+      },
+      "analogy": {
+        "sq": "Si zilja automatike e shkollës: askush s'e shtyp me dorë, bie vetë sa herë mbaron ora.",
+        "en": "Like the automatic school bell: nobody presses it by hand, it rings by itself whenever a lesson ends."
+      },
+      "code": {
+        "language": "yaml",
+        "snippet": "on: push\njobs:\n  test:\n    runs-on: ubuntu-latest\n    steps: [{ uses: actions/checkout@v4 }, { run: npm test }]"
+      },
+      "related": [
+        "ci-cd",
+        "github",
+        "testing"
+      ]
+    },
+    {
+      "id": "github-pages",
+      "en": "GitHub Pages",
+      "sq": null,
+      "aliases": [
+        "gh-pages",
+        "github.io"
+      ],
+      "category": "git",
+      "explanation": {
+        "sq": "GitHub Pages është hostimi falas i GitHub-it për faqe statike (HTML, CSS, JavaScript). E vendos faqen në një repository dhe ajo del live në një adresë si emri.github.io — ideale për portofolin e parë.",
+        "en": "GitHub Pages is GitHub's free hosting for static websites (HTML, CSS, JavaScript). Put your site in a repository and it goes live at an address like yourname.github.io — perfect for a first portfolio."
+      },
+      "analogy": {
+        "sq": "Si një tezgë falas në pazarin e qytetit për nxënësit: e shtron punën tënde dhe kushdo që kalon mund ta shohë.",
+        "en": "Like a free stall at the town market for students: set out your work and anyone walking by can see it."
+      },
+      "code": null,
+      "related": [
+        "hosting",
+        "github",
+        "portfolio"
+      ]
+    },
+    {
+      "id": "ssh-key",
+      "en": "SSH key",
+      "sq": "Çelës SSH",
+      "aliases": [
+        "ssh",
+        "çelësi ssh",
+        "id_ed25519",
+        "public key"
+      ],
+      "category": "git",
+      "explanation": {
+        "sq": "Çelësi SSH është një çift çelësash — një publik dhe një privat — që i lejon kompjuterit tënd të lidhet me GitHub-in ose me një server në mënyrë të sigurt, pa shkruar fjalëkalimin çdo herë. Çelësin privat mos ia jep kurrë askujt.",
+        "en": "An SSH key is a pair of keys — one public, one private — that lets your computer connect to GitHub or a server securely, without typing a password every time. Never give your private key to anyone."
+      },
+      "analogy": {
+        "sq": "Si një bravë dhe çelësi i saj: bravën (çelësin publik) e vendos te dera e GitHub-it, kurse çelësin (privatin) e mban vetëm ti në xhep.",
+        "en": "Like a lock and its key: you fit the lock (the public key) on GitHub's door, and only you keep the key (the private key) in your pocket."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "ssh-keygen -t ed25519 -C \"emri@email.com\"\ncat ~/.ssh/id_ed25519.pub  # këtë (publikun) e vendos në GitHub"
+      },
+      "related": [
+        "authentication",
+        "github",
+        "encryption"
+      ]
+    },
+    {
+      "id": "cherry-pick",
+      "en": "Cherry-pick",
+      "sq": null,
+      "aliases": [
+        "git cherry-pick",
+        "cherry pick"
+      ],
+      "category": "git",
+      "explanation": {
+        "sq": "Cherry-pick do të thotë ta marrësh vetëm një commit të caktuar nga një degë tjetër dhe ta shtosh në degën tënde, pa i marrë të gjitha të tjerat.",
+        "en": "To cherry-pick means taking just one specific commit from another branch and adding it to yours, without taking all the others."
+      },
+      "analogy": {
+        "sq": "Si kur nga një pjatë me fruta zgjedh vetëm qershitë që të pëlqejnë, dhe pjesën tjetër e lë.",
+        "en": "Like picking just the cherries you want from a fruit bowl and leaving the rest."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "git switch main\ngit cherry-pick b0c7359  # merr vetëm këtë commit"
+      },
+      "related": [
+        "commit",
+        "branch",
+        "merge"
+      ]
+    },
+    {
+      "id": "commit-message",
+      "en": "Commit message",
+      "sq": "Mesazhi i commit-it",
+      "aliases": [
+        "mesazh commit",
+        "commit msg",
+        "git commit -m"
+      ],
+      "category": "git",
+      "explanation": {
+        "sq": "Mesazhi i commit-it është përshkrimi i shkurtër i asaj që ndryshove dhe pse. Një mesazh i mirë („Shto formularin e kontaktit“) i ndihmon të tjerët — dhe ty pas gjashtë muajsh — ta kuptojnë historikun; „ndryshime“ ose „asdf“ s'ndihmojnë askënd.",
+        "en": "A commit message is the short description of what you changed and why. A good message (“Add contact form”) helps others — and you in six months — understand the history; “changes” or “asdf” helps nobody."
+      },
+      "analogy": {
+        "sq": "Si shënimi në frigorifer: „Mora qumësht, ka edhe bukë të freskët“ është i dobishëm; „bëra diçka“ s'i thotë askujt asgjë.",
+        "en": "Like a note on the fridge: “Bought milk, there's fresh bread too” is useful; “did stuff” tells nobody anything."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "git commit -m \"Shto butonin Dëgjo në faqet e termave\"  # e mirë\ngit commit -m \"ndryshime\"                             # e paqartë"
+      },
+      "related": [
+        "commit",
+        "git-log",
+        "code-review"
+      ]
+    },
+    {
+      "id": "collaborator",
+      "en": "Collaborator",
+      "sq": "Bashkëpunëtor",
+      "aliases": [
+        "contributor",
+        "kontribues",
+        "bashkëpunëtorë",
+        "maintainer"
+      ],
+      "category": "git",
+      "explanation": {
+        "sq": "Bashkëpunëtori është dikush që ka leje të punojë direkt në repository-n tënd në GitHub. Kontribuesi (contributor) është kushdo që ka shtuar diçka në projekt — shpesh përmes një fork-u dhe një pull request-i.",
+        "en": "A collaborator is someone with permission to work directly in your GitHub repository. A contributor is anyone who has added something to a project — often through a fork and a pull request."
+      },
+      "analogy": {
+        "sq": "Si familja që e ka çelësin e shtëpisë (bashkëpunëtorët) dhe miqtë që vijnë me një ëmbëlsirë kur i fton (kontribuesit).",
+        "en": "Like family who have a key to the house (collaborators) and friends who bring a cake when invited (contributors)."
+      },
+      "code": null,
+      "related": [
+        "github",
+        "fork",
+        "pull-request"
+      ]
+    },
+    {
+      "id": "github-star",
+      "en": "Star (GitHub)",
+      "sq": "Yll (GitHub)",
+      "aliases": [
+        "star",
+        "stars",
+        "yll",
+        "github stars"
+      ],
+      "category": "git",
+      "explanation": {
+        "sq": "Ylli në GitHub është si një „like“ për një repository: e shton për ta ruajtur dhe për t'i treguar autorit që të pëlqen. Projektet me shumë yje zakonisht janë të njohura dhe të besueshme.",
+        "en": "A star on GitHub is like a “like” for a repository: you add one to bookmark it and show the author you appreciate it. Projects with lots of stars are usually popular and trusted."
+      },
+      "analogy": {
+        "sq": "Si yjet që u jep restoranteve në një aplikacion: i ndihmon të tjerët ta gjejnë vendin e mirë — dhe e gëzon pronarin.",
+        "en": "Like giving a restaurant stars in an app: it helps others find a good place — and makes the owner happy."
+      },
+      "code": null,
+      "related": [
+        "github",
+        "open-source",
+        "repository"
+      ]
+    },
+    {
+      "id": "license",
+      "en": "License (open source)",
+      "sq": "Licencë",
+      "aliases": [
+        "licenca",
+        "license",
+        "licence",
+        "mit",
+        "gpl",
+        "cc0"
+      ],
+      "category": "git",
+      "explanation": {
+        "sq": "Licenca është teksti që thotë çfarë lejohen të bëjnë të tjerët me kodin tënd — ta përdorin, ta ndryshojnë, ta shesin. Pa licencë, kodi në GitHub s'mund të ripërdoret ligjërisht nga të tjerët. Licencat e njohura: MIT, GPL, CC0.",
+        "en": "A license is the text that says what others may do with your code — use it, change it, sell it. Without a license, code on GitHub can't legally be reused by others. Well-known licenses: MIT, GPL, CC0."
+      },
+      "analogy": {
+        "sq": "Si kur ia jep fqinjit recetën e gjyshes me një shënim: „Gatuaje sa të duash, vetëm thuaj që është e gjyshes.“ Shënimi është licenca.",
+        "en": "Like giving your neighbour grandma's recipe with a note: “Cook it as often as you like, just say it's grandma's.” The note is the licence."
+      },
+      "code": null,
+      "related": [
+        "open-source",
+        "github",
+        "repository"
+      ]
+    },
+    {
+      "id": "markdown",
+      "en": "Markdown",
+      "sq": null,
+      "aliases": [
+        "md",
+        ".md",
+        "markdown syntax"
+      ],
+      "category": "git",
+      "explanation": {
+        "sq": "Markdown-i është një mënyrë e thjeshtë për të formatuar tekst me shenja të zakonshme: # për tituj, **…** për tekst të trashë, - për lista. README-të, issue-t dhe komentet në GitHub shkruhen me Markdown.",
+        "en": "Markdown is a simple way to format text using ordinary symbols: # for headings, **…** for bold, - for lists. READMEs, issues and comments on GitHub are written in Markdown."
+      },
+      "analogy": {
+        "sq": "Si shenjat që vë në fletore: e nënvizon titullin, vë pikë para çdo elementi të listës — vetëm se kompjuteri i kthen në formatim të bukur.",
+        "en": "Like the marks you make in your notebook: underline the title, a dot before each list item — except the computer turns them into neat formatting."
+      },
+      "code": {
+        "language": "markdown",
+        "snippet": "# Fjalori i Programimit\nNjë fjalor **falas** për fillestarët.\n- Shqip dhe anglisht\n- Me shembuj kodi"
+      },
+      "related": [
+        "readme",
+        "github",
+        "documentation"
       ]
     }
   ]
