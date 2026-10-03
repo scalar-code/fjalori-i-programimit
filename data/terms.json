@@ -1434,7 +1434,6 @@
       "aliases": [
         "https",
         "protokoll",
-        "ssl",
         "dryni"
       ],
       "category": "web",
@@ -1862,8 +1861,7 @@
       "en": "Class",
       "sq": "Klasë",
       "aliases": [
-        "klasa",
-        "oop"
+        "klasa"
       ],
       "category": "python",
       "explanation": {
@@ -6639,6 +6637,1283 @@
         "readme",
         "github",
         "documentation"
+      ]
+    },
+    {
+      "id": "xss",
+      "en": "XSS (Cross-Site Scripting)",
+      "sq": null,
+      "aliases": [
+        "cross-site scripting",
+        "cross site scripting",
+        "injektim skripti"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "XSS-ja është një sulm ku dikush fut kod JavaScript të dëmshëm në një faqe — p.sh. në një koment — dhe ai ekzekutohet te shfletuesit e vizitorëve të tjerë. Mbrojtja kryesore: mos e fut kurrë tekstin e përdoruesve direkt si HTML.",
+        "en": "XSS is an attack where someone sneaks harmful JavaScript into a page — in a comment, for example — and it runs in other visitors' browsers. The main defence: never insert user text directly as HTML."
+      },
+      "analogy": {
+        "sq": "Si kur dikush shkruan në tabelën e njoftimeve të shkollës një shënim që duket i zakonshëm, por në fakt është urdhër: „Kush e lexon këtë, t'ia japë çelësin e dollapit filanit.“",
+        "en": "Like someone writing a note on the school noticeboard that looks normal but is actually an order: “Whoever reads this, give your locker key to so-and-so.”"
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const komenti = \"<img src=x onerror=alert('hack')>\";\nel.innerHTML = komenti;    // RREZIK: ekzekutohet si HTML\nel.textContent = komenti;  // SIGURT: shfaqet si tekst i thjeshtë"
+      },
+      "related": [
+        "javascript",
+        "input-validation",
+        "dom"
+      ]
+    },
+    {
+      "id": "sql-injection",
+      "en": "SQL injection",
+      "sq": "Injektim SQL",
+      "aliases": [
+        "sqli",
+        "sql injektim"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "SQL injection ndodh kur një sulmues shkruan kod SQL në një formular (p.sh. te emri i përdoruesit) dhe aplikacioni e ngjit direkt në query. Kështu mund ta lexojë ose ta fshijë gjithë databazën. Mbrojtja: përdor gjithmonë query me parametra.",
+        "en": "SQL injection happens when an attacker types SQL code into a form (e.g. the username field) and the app pastes it straight into a query. That way they can read or delete the whole database. The defence: always use parameterised queries."
+      },
+      "analogy": {
+        "sq": "Si kur i jep shitësit një listë blerjesh ku dikush ka shtuar fshehurazi në fund: „…dhe hapja arkën.“ Shitësi i kujdesshëm e lexon vetëm si listë, kurrë si urdhër.",
+        "en": "Like handing a shopkeeper a shopping list where someone has secretly added at the bottom: “…and open the till for him.” A careful shopkeeper reads it only as a list, never as orders."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "emri = input(\"Emri: \")\ndb.execute(f\"SELECT * FROM perdoruesit WHERE emri = '{emri}'\")   # RREZIK\ndb.execute(\"SELECT * FROM perdoruesit WHERE emri = ?\", (emri,))  # SIGURT"
+      },
+      "related": [
+        "sql",
+        "input-validation",
+        "database"
+      ]
+    },
+    {
+      "id": "ssl-certificate",
+      "en": "SSL/TLS certificate",
+      "sq": "Certifikatë SSL",
+      "aliases": [
+        "ssl",
+        "tls",
+        "certifikatë",
+        "let's encrypt",
+        "https certificate"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Certifikata SSL/TLS është „letërnjoftimi“ dixhital i një faqeje: vërteton se ajo është vërtet ajo që thotë dhe e bën të mundur HTTPS-në. Pa të, shfletuesi shfaq paralajmërimin „Not secure“. Vercel-i dhe Let's Encrypt i japin falas.",
+        "en": "An SSL/TLS certificate is a website's digital “ID card”: it proves the site really is who it claims to be and makes HTTPS possible. Without one, the browser shows a “Not secure” warning. Vercel and Let's Encrypt provide them for free."
+      },
+      "analogy": {
+        "sq": "Si letërnjoftimi që e tregon në bankë: punonjësi s'të njeh personalisht, por i beson dokumentit, sepse e ka lëshuar shteti.",
+        "en": "Like showing your ID at the bank: the clerk doesn't know you personally, but trusts the document because the state issued it."
+      },
+      "code": null,
+      "related": [
+        "http",
+        "encryption",
+        "domain"
+      ]
+    },
+    {
+      "id": "vpn",
+      "en": "VPN",
+      "sq": "Rrjet privat virtual",
+      "aliases": [
+        "virtual private network"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "VPN-ja krijon një „tunel“ të enkriptuar mes pajisjes tënde dhe një serveri tjetër, që askush në rrjetin ku je (p.sh. Wi-Fi publik) të mos e shohë çfarë bën. Kompanitë e përdorin edhe që punonjësit të hyjnë në rrjetin e brendshëm nga shtëpia.",
+        "en": "A VPN creates an encrypted “tunnel” between your device and another server, so nobody on the network you're on (like public Wi-Fi) can see what you're doing. Companies also use it so employees can reach the internal network from home."
+      },
+      "analogy": {
+        "sq": "Si t'i dërgosh letrat në zarf të mbyllur me një korrier të besuar, në vend që t'ia japësh një kartolinë kujtdo në kafene ta çojë.",
+        "en": "Like sending your letters in a sealed envelope with a trusted courier, instead of handing a postcard to anyone in the café to deliver."
+      },
+      "code": null,
+      "related": [
+        "encryption",
+        "ip-address",
+        "http"
+      ]
+    },
+    {
+      "id": "malware",
+      "en": "Malware",
+      "sq": "Program keqdashës",
+      "aliases": [
+        "virus",
+        "virusi",
+        "trojan",
+        "ransomware",
+        "spyware"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Malware-i është çdo program i krijuar për të bërë dëm: viruset, trojanët që fshihen në programe „falas“, spyware-i që të spiunon, ransomware-i që t'i bllokon skedarët dhe kërkon para. Mbrojtja: instalo vetëm nga burime të besueshme dhe mbaji programet të përditësuara.",
+        "en": "Malware is any program made to do harm: viruses, trojans hidden in “free” software, spyware that watches you, ransomware that locks your files and demands money. Defence: install only from trusted sources and keep your software up to date."
+      },
+      "analogy": {
+        "sq": "Si një ëmbëlsirë që duket e shijshme, por dikush ka futur diçka të keqe brenda: nga jashtë s'e kupton, derisa të jetë vonë.",
+        "en": "Like a cake that looks delicious but someone has put something bad inside: you can't tell from the outside until it's too late."
+      },
+      "code": null,
+      "related": [
+        "phishing",
+        "firewall",
+        "backup"
+      ]
+    },
+    {
+      "id": "brute-force",
+      "en": "Brute-force attack",
+      "sq": "Sulm me forcë brutale",
+      "aliases": [
+        "brute force",
+        "bruteforce",
+        "forcë brutale"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Sulmi brute-force është kur një program provon me radhë mijëra ose miliona fjalëkalime, derisa ta gjejë të saktin. Mbrojtja: fjalëkalime të gjata, vërtetim me dy hapa dhe kufizim i numrit të provave.",
+        "en": "A brute-force attack is when a program tries thousands or millions of passwords one after another until it finds the right one. Defence: long passwords, two-factor authentication and limiting the number of attempts."
+      },
+      "analogy": {
+        "sq": "Si dikush që provon çdo kombinim te dryni i biçikletës: 000, 001, 002… Me tri shifra e gjen shpejt; me dhjetë shifra do t'i duheshin vite.",
+        "en": "Like someone trying every combination on a bike lock: 000, 001, 002… With three digits they'll find it fast; with ten digits it would take years."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import itertools\nfor prova in itertools.product(\"0123456789\", repeat=3):  # 1000 prova\n    if \"\".join(prova) == \"427\":\n        print(\"U gjet:\", \"\".join(prova)); break"
+      },
+      "related": [
+        "password-hashing",
+        "two-factor",
+        "rate-limiting"
+      ]
+    },
+    {
+      "id": "ddos",
+      "en": "DDoS attack",
+      "sq": "Sulm DDoS",
+      "aliases": [
+        "ddos",
+        "dos",
+        "denial of service"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Sulmi DDoS është kur mijëra kompjuterë (shpesh të infektuar) i dërgojnë njëherësh kërkesa një serveri, derisa ai të mbingarkohet dhe faqja të mos hapet më për përdoruesit e vërtetë.",
+        "en": "A DDoS attack is when thousands of computers (often infected ones) flood a server with requests at the same time until it's overloaded and the site stops working for real users."
+      },
+      "analogy": {
+        "sq": "Si kur një turmë e madhe futet njëherësh në një qebaptore të vogël pa porositur asgjë: klientët e vërtetë s'gjejnë dot vend.",
+        "en": "Like a huge crowd squeezing into a small kebab shop at once without ordering anything: real customers can't get in."
+      },
+      "code": null,
+      "related": [
+        "server",
+        "firewall",
+        "rate-limiting"
+      ]
+    },
+    {
+      "id": "cors",
+      "en": "CORS",
+      "sq": null,
+      "aliases": [
+        "cross-origin resource sharing",
+        "cors error"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "CORS-i janë rregullat që vendosin nëse një faqe në një domen mund të marrë të dhëna nga një domen tjetër. Nëse serveri s'e lejon, shfletuesi e bllokon kërkesën dhe sheh gabimin e famshëm „CORS error“ në konsolë.",
+        "en": "CORS is the set of rules that decides whether a page on one domain may fetch data from another domain. If the server doesn't allow it, the browser blocks the request and you see the famous “CORS error” in the console."
+      },
+      "analogy": {
+        "sq": "Si roja i shkollës që i lë vetëm prindërit e listës t'i marrin fëmijët: nëse emri yt s'është në listë, s'merr dot askënd, edhe me qëllim të mirë.",
+        "en": "Like the school guard who lets only listed parents pick up children: if your name isn't on the list, you can't take anyone, even with good intentions."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "// Serveri (Node.js) lejon vetëm faqen tonë:\nres.setHeader(\"Access-Control-Allow-Origin\", \"https://fjalor-programimi.vercel.app\");"
+      },
+      "related": [
+        "fetch",
+        "api",
+        "browser"
+      ]
+    },
+    {
+      "id": "csrf",
+      "en": "CSRF",
+      "sq": null,
+      "aliases": [
+        "cross-site request forgery",
+        "xsrf",
+        "csrf token"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "CSRF-ja është një sulm ku një faqe e keqe e bën shfletuesin tënd të dërgojë një kërkesë te një faqe ku je i kyçur — p.sh. për ta ndryshuar email-in — pa e kuptuar ti. Mbrojtja: token-a CSRF dhe cookie me SameSite.",
+        "en": "CSRF is an attack where a malicious site makes your browser send a request to a site you're logged into — to change your email, for example — without you noticing. Defence: CSRF tokens and SameSite cookies."
+      },
+      "analogy": {
+        "sq": "Si dikush që ta fut në çantë një letër të nënshkruar me emrin tënd, dhe ti, pa e ditur, ia dorëzon bankës.",
+        "en": "Like someone slipping a letter signed with your name into your bag, and you hand it to the bank without knowing."
+      },
+      "code": null,
+      "related": [
+        "cookie",
+        "authentication",
+        "session"
+      ]
+    },
+    {
+      "id": "vulnerability",
+      "en": "Vulnerability",
+      "sq": "Dobësi sigurie",
+      "aliases": [
+        "cenueshmëri",
+        "security bug",
+        "cve",
+        "exploit",
+        "dobësi",
+        "patch"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Dobësia e sigurisë është një gabim në kod ose në konfigurim që një sulmues mund ta shfrytëzojë. Kur zbulohet, programuesit e rregullojnë me një përditësim (patch) — prandaj përditësimet janë të rëndësishme.",
+        "en": "A security vulnerability is a flaw in code or configuration that an attacker can exploit. When one is found, developers fix it with an update (a patch) — that's why updates matter."
+      },
+      "analogy": {
+        "sq": "Si një dritare që s'mbyllet mirë në shtëpi: shtëpia duket e sigurt, por kush e di për atë dritare mund të hyjë.",
+        "en": "Like a window in the house that doesn't close properly: the house looks secure, but anyone who knows about that window can get in."
+      },
+      "code": null,
+      "related": [
+        "bug",
+        "malware",
+        "penetration-testing"
+      ]
+    },
+    {
+      "id": "social-engineering",
+      "en": "Social engineering",
+      "sq": "Inxhinieri sociale",
+      "aliases": [
+        "manipulim",
+        "mashtrim në telefon"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Inxhinieria sociale është mashtrimi i njerëzve, jo i kompjuterëve: sulmuesi pretendon se është nga banka, nga IT-ja ose një shok, që dikush t'i japë fjalëkalimin ose kodin. Asnjë kompani serioze s'ta kërkon fjalëkalimin në telefon.",
+        "en": "Social engineering is tricking people, not computers: the attacker pretends to be from the bank, the IT team or a friend, to get someone to hand over a password or code. No serious company asks for your password over the phone."
+      },
+      "analogy": {
+        "sq": "Si dikush që i bie ziles së gjyshes dhe thotë „më dërgoi nipi yt t'i marr paratë“ — dera s'u thye, gjyshja u mashtrua.",
+        "en": "Like someone ringing grandma's doorbell and saying “your grandson sent me to collect the money” — the door wasn't broken, grandma was tricked."
+      },
+      "code": null,
+      "related": [
+        "phishing",
+        "two-factor",
+        "password-manager"
+      ]
+    },
+    {
+      "id": "password-manager",
+      "en": "Password manager",
+      "sq": "Menaxher fjalëkalimesh",
+      "aliases": [
+        "bitwarden",
+        "1password",
+        "keychain",
+        "menaxher i fjalëkalimeve"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Menaxheri i fjalëkalimeve është një aplikacion që krijon dhe ruan fjalëkalime të gjata dhe të ndryshme për çdo faqe, të mbrojtura me një fjalëkalim kryesor. Kështu s'të duhet t'i mbash mend, dhe s'e përdor të njëjtin kudo.",
+        "en": "A password manager is an app that creates and stores long, different passwords for every site, protected by one master password. That way you don't have to remember them, and you never reuse the same one everywhere."
+      },
+      "analogy": {
+        "sq": "Si një kasafortë në shtëpi ku i mban të gjithë çelësat: duhet ta mbash mend vetëm kodin e kasafortës.",
+        "en": "Like a safe at home where you keep all your keys: you only need to remember the safe's code."
+      },
+      "code": null,
+      "related": [
+        "password-hashing",
+        "two-factor",
+        "authentication"
+      ]
+    },
+    {
+      "id": "oauth",
+      "en": "OAuth (Sign in with Google)",
+      "sq": null,
+      "aliases": [
+        "oauth2",
+        "sign in with google",
+        "hyr me google",
+        "sso",
+        "single sign-on"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "OAuth-i është mënyra si hyn në një faqe me llogarinë e Google-it, GitHub-it ose Apple-it, pa ia dhënë asaj faqeje fjalëkalimin tënd. Faqja merr vetëm leje të kufizuara që i miraton ti.",
+        "en": "OAuth is how you log in to a site with your Google, GitHub or Apple account without giving that site your password. The site only gets limited permissions that you approve."
+      },
+      "analogy": {
+        "sq": "Si karta e hyrjes që ta jep recepsioni i hotelit: hap vetëm dhomën tënde dhe vetëm për disa ditë — jo çelësi i gjithë hotelit.",
+        "en": "Like the key card the hotel reception gives you: it opens only your room and only for a few days — not a master key to the whole hotel."
+      },
+      "code": null,
+      "related": [
+        "authentication",
+        "authorization",
+        "token"
+      ]
+    },
+    {
+      "id": "input-validation",
+      "en": "Input validation",
+      "sq": "Validim i të dhënave",
+      "aliases": [
+        "validim",
+        "validation",
+        "sanitization",
+        "pastrim i inputit"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Validimi i të dhënave do të thotë ta kontrollosh çdo gjë që vjen nga përdoruesi — a është email i vërtetë, a është mosha numër, a ka karaktere të rrezikshme — para se ta përdorësh. Rregulli i artë: mos i beso kurrë inputit të përdoruesit.",
+        "en": "Input validation means checking everything that comes from the user — is it a real email, is the age a number, does it contain dangerous characters — before using it. The golden rule: never trust user input."
+      },
+      "analogy": {
+        "sq": "Si te arka kur shitësi e kthen kartëmonedhën nga drita para se ta pranojë.",
+        "en": "Like at the till, when the cashier holds a banknote up to the light before accepting it."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "mosha = input(\"Mosha: \")\nif not mosha.isdigit() or not (5 <= int(mosha) <= 120):\n    print(\"Mosha nuk është e vlefshme\")"
+      },
+      "related": [
+        "sql-injection",
+        "xss",
+        "form"
+      ]
+    },
+    {
+      "id": "least-privilege",
+      "en": "Principle of least privilege",
+      "sq": "Parimi i privilegjit minimal",
+      "aliases": [
+        "least privilege",
+        "privilegj minimal",
+        "leje minimale"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Parimi i privilegjit minimal do të thotë që çdo person ose program duhet të ketë vetëm lejet që i duhen për punën e vet — asgjë më shumë. Nëse diçka komprometohet, dëmi mbetet i vogël.",
+        "en": "The principle of least privilege means every person or program should have only the permissions it needs for its job — nothing more. If something gets compromised, the damage stays small."
+      },
+      "analogy": {
+        "sq": "Si në shkollë: pastruesi ka çelësat e klasave, mësuesi ditarin, drejtori arkivin — askush s'e ka çelësin e gjithçkaje.",
+        "en": "Like at school: the caretaker has the classroom keys, the teacher has the register, the head has the archive — nobody holds the key to everything."
+      },
+      "code": null,
+      "related": [
+        "authorization",
+        "api-key",
+        "cloud"
+      ]
+    },
+    {
+      "id": "rate-limiting",
+      "en": "Rate limiting",
+      "sq": "Kufizim i kërkesave",
+      "aliases": [
+        "rate limit",
+        "throttling",
+        "429"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Rate limiting do të thotë ta kufizosh sa kërkesa mund të bëjë dikush brenda një kohe — p.sh. 5 prova kyçjeje në minutë. Kështu mbrohesh nga sulmet brute-force dhe nga mbingarkesa; kur tejkalohet, zakonisht kthehet gabimi 429.",
+        "en": "Rate limiting means capping how many requests someone can make in a given time — like 5 login attempts per minute. It protects against brute-force attacks and overload; going over usually returns error 429."
+      },
+      "analogy": {
+        "sq": "Si rregulli në mensë: „një porcion për person“ — që të mjaftojë për të gjithë dhe askush të mos i marrë të gjitha.",
+        "en": "Like the canteen rule: “one portion per person” — so there's enough for everyone and nobody takes it all."
+      },
+      "code": null,
+      "related": [
+        "brute-force",
+        "ddos",
+        "api"
+      ]
+    },
+    {
+      "id": "session",
+      "en": "Session",
+      "sq": "Seancë",
+      "aliases": [
+        "sesion",
+        "session id",
+        "seanca"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Seanca është mënyra si serveri të mban mend pasi je kyçur: të jep një ID të fshehtë (zakonisht në një cookie) dhe e njeh çdo kërkesë tënde, derisa të dalësh ose seanca të skadojë.",
+        "en": "A session is how a server remembers you after you log in: it gives you a secret ID (usually in a cookie) and recognises every request from you until you log out or the session expires."
+      },
+      "analogy": {
+        "sq": "Si numri i garderobës në teatër: e lë pallton një herë, dhe numri vërteton që është e jotja derisa të largohesh.",
+        "en": "Like the cloakroom ticket at a theatre: you hand over your coat once, and the number proves it's yours until you leave."
+      },
+      "code": null,
+      "related": [
+        "cookie",
+        "authentication",
+        "token"
+      ]
+    },
+    {
+      "id": "penetration-testing",
+      "en": "Penetration testing",
+      "sq": "Testim penetrimi",
+      "aliases": [
+        "pentest",
+        "pen test",
+        "ethical hacking",
+        "haker etik"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Testimi i penetrimit është kur specialistë sigurie, me leje, e sulmojnë një sistem siç do ta bënin hakerët e vërtetë, për t'i gjetur dobësitë para tyre. Ky profesion quhet edhe „haker etik“.",
+        "en": "Penetration testing is when security specialists, with permission, attack a system the way real hackers would, to find the weaknesses before they do. The job is also called “ethical hacker”."
+      },
+      "analogy": {
+        "sq": "Si kur trajneri e vë sulmin e vet të luajë kundër mbrojtjes në stërvitje: më mirë t'i gjesh vrimat sot, se sa në ndeshje.",
+        "en": "Like a coach setting their own attackers against the defence in training: better to find the gaps today than on match day."
+      },
+      "code": null,
+      "related": [
+        "vulnerability",
+        "testing",
+        "firewall"
+      ]
+    },
+    {
+      "id": "serverless",
+      "en": "Serverless",
+      "sq": null,
+      "aliases": [
+        "pa server",
+        "serverless functions",
+        "lambda functions",
+        "edge functions"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Serverless do të thotë që kodin e backend-it e shkruan si funksione të vogla, dhe shërbimi cloud (p.sh. Vercel ose AWS Lambda) i nis vetëm kur vjen një kërkesë. S'ke server për të mirëmbajtur dhe paguan vetëm për kohën që punon kodi. Serverët ekzistojnë — thjesht s'merresh ti me ta.",
+        "en": "Serverless means you write backend code as small functions, and the cloud service (e.g. Vercel or AWS Lambda) only starts them when a request comes in. There's no server to maintain and you only pay while the code runs. The servers still exist — you just don't deal with them."
+      },
+      "analogy": {
+        "sq": "Si të marrësh taksi në vend që të kesh veturë: s'merresh me servisin dhe parkingun, paguan vetëm për rrugët që bën.",
+        "en": "Like taking a taxi instead of owning a car: no servicing or parking to worry about, you only pay for the trips you make."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "// api/pershendetje.js në Vercel\nexport default function handler(req, res) {\n  res.json({ mesazhi: \"Përshëndetje nga serverless!\" });\n}"
+      },
+      "related": [
+        "cloud",
+        "backend",
+        "deploy"
+      ]
+    },
+    {
+      "id": "kubernetes",
+      "en": "Kubernetes",
+      "sq": null,
+      "aliases": [
+        "k8s",
+        "kube",
+        "orkestrim kontejnerësh"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Kubernetes-i është një sistem që menaxhon automatikisht shumë kontejnerë Docker në shumë serverë: i nis, i rinis kur rrëzohen dhe shton të tjerë kur rritet trafiku. E përdorin kompanitë e mëdha; për projekte të vogla zakonisht s'të duhet.",
+        "en": "Kubernetes is a system that automatically manages lots of Docker containers across many servers: starting them, restarting them when they crash and adding more when traffic grows. Big companies use it; small projects usually don't need it."
+      },
+      "analogy": {
+        "sq": "Si menaxheri i një kuzhine të madhe: vendos sa kuzhinierë punojnë në çdo stacion, zëvendëson menjëherë kë largohet dhe shton të tjerë kur mbushet restoranti.",
+        "en": "Like the manager of a big kitchen: decides how many cooks work each station, replaces anyone who leaves straight away and adds more when the restaurant fills up."
+      },
+      "code": null,
+      "related": [
+        "docker",
+        "scalability",
+        "cloud"
+      ]
+    },
+    {
+      "id": "cdn",
+      "en": "CDN",
+      "sq": "Rrjet shpërndarjeje përmbajtjeje",
+      "aliases": [
+        "content delivery network",
+        "cloudflare",
+        "edge network"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "CDN-ja është një rrjet serverësh nëpër botë që mbajnë kopje të faqes tënde (foto, CSS, JavaScript) afër vizitorëve. Kështu një vizitor nga Prishtina e merr faqen nga një server afër, jo nga Amerika — dhe hapet shumë më shpejt.",
+        "en": "A CDN is a network of servers around the world that keep copies of your site (images, CSS, JavaScript) close to visitors. That way a visitor in Prishtina gets the site from a nearby server, not from America — and it loads much faster."
+      },
+      "analogy": {
+        "sq": "Si një zinxhir furrash me dyqan në çdo lagje: s'ke pse shkon deri te furra kryesore — buka është afër shtëpisë.",
+        "en": "Like a bakery chain with a shop in every neighbourhood: you don't have to go to the main bakery — the bread is near home."
+      },
+      "code": null,
+      "related": [
+        "cache",
+        "hosting",
+        "server"
+      ]
+    },
+    {
+      "id": "load-balancer",
+      "en": "Load balancer",
+      "sq": "Shpërndarës ngarkese",
+      "aliases": [
+        "load balancing",
+        "balancim ngarkese"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Load balancer-i i ndan kërkesat që vijnë mes disa serverëve, që asnjëri të mos mbingarkohet. Nëse një server bie, i dërgon kërkesat te të tjerët, dhe faqja vazhdon të punojë.",
+        "en": "A load balancer splits incoming requests across several servers so none of them gets overloaded. If one server goes down, it sends requests to the others, and the site keeps working."
+      },
+      "analogy": {
+        "sq": "Si punonjësi i supermarketit që i drejton klientët te arka me radhën më të shkurtër: „Ju te arka 3, ju te arka 5.“",
+        "en": "Like the supermarket worker who sends customers to the shortest queue: “You to till 3, you to till 5.”"
+      },
+      "code": null,
+      "related": [
+        "server",
+        "scalability",
+        "ddos"
+      ]
+    },
+    {
+      "id": "saas-paas-iaas",
+      "en": "SaaS / PaaS / IaaS",
+      "sq": null,
+      "aliases": [
+        "saas",
+        "paas",
+        "iaas",
+        "software as a service",
+        "platform as a service",
+        "infrastructure as a service"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Këto janë tri nivele shërbimesh cloud. IaaS të jep serverë bosh (si AWS EC2); PaaS të jep një platformë ku vetëm e vendos kodin (si Vercel-i); SaaS të jep një aplikacion të gatshëm për ta përdorur (si Gmail-i ose Google Docs).",
+        "en": "These are three levels of cloud service. IaaS gives you bare servers (like AWS EC2); PaaS gives you a platform where you just drop in your code (like Vercel); SaaS gives you a ready-made app to use (like Gmail or Google Docs)."
+      },
+      "analogy": {
+        "sq": "Si pica: IaaS është kur merr me qira kuzhinën dhe e bën vetë; PaaS kur sjell vetëm përbërësit dhe piceria ta pjek; SaaS kur e porosit të gatshme te dera.",
+        "en": "Like pizza: IaaS is renting a kitchen and making it yourself; PaaS is bringing just the toppings and the pizzeria bakes it; SaaS is ordering it ready to your door."
+      },
+      "code": null,
+      "related": [
+        "cloud",
+        "hosting",
+        "serverless"
+      ]
+    },
+    {
+      "id": "virtual-machine",
+      "en": "Virtual machine (VM)",
+      "sq": "Makinë virtuale",
+      "aliases": [
+        "vm",
+        "virtualbox",
+        "ec2"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Makina virtuale është një „kompjuter brenda kompjuterit“: një sistem operativ i plotë që punon si program mbi një kompjuter tjetër. Në cloud, kur merr me qira një server, zakonisht merr një VM.",
+        "en": "A virtual machine is a “computer inside a computer”: a full operating system running as a program on another machine. In the cloud, when you rent a server, you usually get a VM."
+      },
+      "analogy": {
+        "sq": "Si një shtëpi e madhe e ndarë në apartamente: çdo familje ka derën, kuzhinën dhe çelësat e vet, edhe pse e gjithë ndërtesa është një.",
+        "en": "Like a big house split into flats: each family has its own door, kitchen and keys, even though it's all one building."
+      },
+      "code": null,
+      "related": [
+        "operating-system",
+        "docker",
+        "cloud"
+      ]
+    },
+    {
+      "id": "scalability",
+      "en": "Scalability",
+      "sq": "Shkallëzueshmëri",
+      "aliases": [
+        "scale",
+        "scaling",
+        "shkallëzim",
+        "autoscaling"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Shkallëzueshmëria është aftësia e një aplikacioni të përballojë më shumë përdorues pa u ngadalësuar — duke shtuar serverë ose fuqi kur rritet trafiku dhe duke i hequr kur bie.",
+        "en": "Scalability is an app's ability to handle more users without slowing down — adding servers or power when traffic grows and removing them when it drops."
+      },
+      "analogy": {
+        "sq": "Si një restorant që për dasma shton tavolina dhe kamerierë, dhe të hënën kthehet në madhësinë e zakonshme.",
+        "en": "Like a restaurant that adds tables and waiters for a wedding, then goes back to its normal size on Monday."
+      },
+      "code": null,
+      "related": [
+        "load-balancer",
+        "cloud",
+        "kubernetes"
+      ]
+    },
+    {
+      "id": "uptime",
+      "en": "Uptime / downtime",
+      "sq": "Koha në punë / jashtë pune",
+      "aliases": [
+        "uptime",
+        "downtime",
+        "99.9%",
+        "sla"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Uptime-i është sa kohë një faqe ose shërbim është në punë dhe i arritshëm, zakonisht në përqindje — p.sh. 99.9% do të thotë rreth 9 orë jashtë pune në vit. Downtime-i është koha kur nuk punon.",
+        "en": "Uptime is how much of the time a site or service is up and reachable, usually as a percentage — 99.9% means roughly 9 hours of downtime a year. Downtime is the time it's not working."
+      },
+      "analogy": {
+        "sq": "Si një dyqan 24 orësh: nëse mbyllet vetëm një orë në muaj për pastrim, klientët pothuajse s'e vënë re.",
+        "en": "Like a 24-hour shop: if it closes for just one hour a month for cleaning, customers barely notice."
+      },
+      "code": null,
+      "related": [
+        "monitoring",
+        "server",
+        "hosting"
+      ]
+    },
+    {
+      "id": "dns",
+      "en": "DNS",
+      "sq": null,
+      "aliases": [
+        "domain name system",
+        "nameserver",
+        "dns record"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "DNS-ja është „numratori i telefonave“ i internetit: kur shkruan një domen si google.com, DNS-ja e kthen në adresën IP të serverit të duhur. Kur lidh një domen me Vercel-in, ndryshon pikërisht rregullat e DNS-së.",
+        "en": "DNS is the internet's phone book: when you type a domain like google.com, DNS turns it into the IP address of the right server. When you connect a domain to Vercel, it's the DNS records you change."
+      },
+      "analogy": {
+        "sq": "Si numratori i vjetër i telefonave: kërkon emrin „Krasniqi, Arben“ dhe gjen numrin. DNS-ja bën të njëjtën gjë për faqet.",
+        "en": "Like the old phone directory: you look up “Krasniqi, Arben” and find the number. DNS does the same for websites."
+      },
+      "code": null,
+      "related": [
+        "domain",
+        "ip-address",
+        "url"
+      ]
+    },
+    {
+      "id": "object-storage",
+      "en": "Object storage (S3)",
+      "sq": "Ruajtje objektesh",
+      "aliases": [
+        "s3",
+        "bucket",
+        "blob storage",
+        "cloud storage"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Object storage është ruajtje në cloud për skedarë të çdo lloji — foto, video, backup-e — të vendosur në „kova“ (buckets) dhe të arritshëm me URL. Shembulli më i njohur është Amazon S3; është i lirë dhe zgjerohet pa kufi.",
+        "en": "Object storage is cloud storage for files of any kind — photos, videos, backups — kept in “buckets” and reachable by URL. The best-known example is Amazon S3; it's cheap and grows without limits."
+      },
+      "analogy": {
+        "sq": "Si një depo e madhe me rafte pa fund: çdo kuti ka etiketën e vet dhe e gjen menjëherë, pavarësisht sa kuti ka.",
+        "en": "Like a huge warehouse with endless shelves: every box has its own label and you find it instantly, no matter how many boxes there are."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import boto3\ns3 = boto3.client(\"s3\")\ns3.upload_file(\"foto.jpg\", \"kova-ime\", \"fotot/foto.jpg\")"
+      },
+      "related": [
+        "cloud",
+        "backup",
+        "cdn"
+      ]
+    },
+    {
+      "id": "monitoring",
+      "en": "Monitoring",
+      "sq": "Monitorim",
+      "aliases": [
+        "monitorim",
+        "alerting",
+        "sentry",
+        "observability"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Monitorimi do të thotë ta mbikëqyrësh aplikacionin vazhdimisht — shpejtësinë, gabimet, përdorimin e serverit — dhe të marrësh njoftim kur diçka shkon keq, shpesh para se ta vërejnë përdoruesit.",
+        "en": "Monitoring means watching your app all the time — speed, errors, server usage — and getting alerted when something goes wrong, often before users notice."
+      },
+      "analogy": {
+        "sq": "Si sensori i tymit në kuzhinë: s'bën zë shumicën e kohës, por sapo diçka fillon të digjet, të njofton menjëherë.",
+        "en": "Like the smoke alarm in the kitchen: silent most of the time, but the moment something starts burning, it tells you straight away."
+      },
+      "code": null,
+      "related": [
+        "log",
+        "uptime",
+        "server"
+      ]
+    },
+    {
+      "id": "data-center",
+      "en": "Data center / region",
+      "sq": "Qendër të dhënash",
+      "aliases": [
+        "data center",
+        "datacenter",
+        "region",
+        "rajon"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Qendra e të dhënave është një ndërtesë e madhe plot serverë, me ftohje dhe energji rezervë. Kompanitë cloud i kanë nëpër botë dhe i quajnë „regions“ (rajone); zgjedh rajonin më afër përdoruesve të tu, p.sh. Frankfurtin për Ballkanin.",
+        "en": "A data center is a big building full of servers, with cooling and backup power. Cloud companies have them around the world and call them “regions”; you pick the region closest to your users, e.g. Frankfurt for the Balkans."
+      },
+      "analogy": {
+        "sq": "Si magazinat e mëdha të një zinxhiri supermarketesh: malli ruhet aty, dhe sa më afër qytetit të jetë magazina, aq më shpejt arrin në dyqan.",
+        "en": "Like a supermarket chain's big warehouses: goods are stored there, and the closer the warehouse is to town, the faster they reach the shop."
+      },
+      "code": null,
+      "related": [
+        "cloud",
+        "server",
+        "cdn"
+      ]
+    },
+    {
+      "id": "c-language",
+      "en": "C",
+      "sq": null,
+      "aliases": [
+        "c language",
+        "gjuha c",
+        "c programming"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "C-ja është një nga gjuhët më të vjetra dhe më të rëndësishme, nga viti 1972. Është shumë e shpejtë dhe afër hardware-it; me të janë shkruar sisteme operative si Linux-i, dhe ka ndikuar gjuhë si C++, Java dhe JavaScript.",
+        "en": "C is one of the oldest and most important languages, from 1972. It's very fast and close to the hardware; operating systems like Linux are written in it, and it influenced languages like C++, Java and JavaScript."
+      },
+      "analogy": {
+        "sq": "Si gjyshi i familjes së gjuhëve: shumë gjuhë të sotme i kanë „tiparet“ e tij — kllapat { } dhe pikëpresjet ;.",
+        "en": "Like the grandfather of the language family: many of today's languages have his “features” — the { } braces and ; semicolons."
+      },
+      "code": {
+        "language": "c",
+        "snippet": "#include <stdio.h>\nint main() {\n    printf(\"Përshëndetje!\\n\");\n    return 0;\n}"
+      },
+      "related": [
+        "c-plus-plus",
+        "compiler",
+        "pointer"
+      ]
+    },
+    {
+      "id": "ruby",
+      "en": "Ruby",
+      "sq": null,
+      "aliases": [
+        "ruby on rails",
+        "rails",
+        "rb"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Ruby-ja është një gjuhë e krijuar në Japoni, e njohur për kodin shumë të lexueshëm dhe „të këndshëm për programuesin“. U bë e famshme me framework-un Ruby on Rails, me të cilin u ndërtuan faqe si GitHub-i dhe Shopify-i.",
+        "en": "Ruby is a language created in Japan, known for very readable, “programmer-friendly” code. It became famous through the Ruby on Rails framework, used to build sites like GitHub and Shopify."
+      },
+      "analogy": {
+        "sq": "Si një gjuhë që lexohet pothuajse si fjali: shkruan 3.times dhe ajo e bën tri herë — si t'i flasësh një shoku.",
+        "en": "Like a language that reads almost like sentences: write 3.times and it does it three times — like talking to a friend."
+      },
+      "code": {
+        "language": "ruby",
+        "snippet": "3.times { puts \"Përshëndetje!\" }\nemri = \"Arta\"\nputs \"Mirë se erdhe, #{emri}\""
+      },
+      "related": [
+        "framework",
+        "backend",
+        "programming-language"
+      ]
+    },
+    {
+      "id": "dart",
+      "en": "Dart (Flutter)",
+      "sq": null,
+      "aliases": [
+        "dart",
+        "flutter"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Dart-i është gjuha e Google-it që përdoret me Flutter-in, për të ndërtuar me të njëjtin kod aplikacione për Android, iPhone, ueb dhe kompjuter. Shumë ekipe e zgjedhin që të mos shkruajnë dy aplikacione të ndara.",
+        "en": "Dart is Google's language used with Flutter to build apps for Android, iPhone, the web and desktop from the same code. Many teams choose it so they don't have to write two separate apps."
+      },
+      "analogy": {
+        "sq": "Si një brumë që e përdor si për byrek, si për pite, si për lakror: një brumë, shumë gjella.",
+        "en": "Like one dough you use for byrek, pie and lakror alike: one dough, many dishes."
+      },
+      "code": {
+        "language": "dart",
+        "snippet": "void main() {\n  var emri = 'Arta';\n  print('Përshëndetje, $emri!');\n}"
+      },
+      "related": [
+        "kotlin",
+        "swift",
+        "ui"
+      ]
+    },
+    {
+      "id": "r-language",
+      "en": "R",
+      "sq": null,
+      "aliases": [
+        "r language",
+        "gjuha r",
+        "rstudio"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "R-ja është një gjuhë e krijuar posaçërisht për statistikë dhe analizë të dhënash. E përdorin shumë shkencëtarët, ekonomistët dhe studiuesit për grafikë dhe llogaritje statistikore.",
+        "en": "R is a language made specifically for statistics and data analysis. It's widely used by scientists, economists and researchers for charts and statistical calculations."
+      },
+      "analogy": {
+        "sq": "Si kalkulatori shkencor i profesorit të statistikës: s'e përdor për çdo gjë, por për numra dhe grafikë është i pakrahasueshëm.",
+        "en": "Like the statistics professor's scientific calculator: you wouldn't use it for everything, but for numbers and charts it's unbeatable."
+      },
+      "code": {
+        "language": "r",
+        "snippet": "notat <- c(8, 9, 10, 7, 9)\nmean(notat)  # 8.6\nhist(notat)  # vizaton një grafik"
+      },
+      "related": [
+        "dataset",
+        "pandas",
+        "python"
+      ]
+    },
+    {
+      "id": "bash",
+      "en": "Bash (shell scripting)",
+      "sq": null,
+      "aliases": [
+        "bash",
+        "shell script",
+        "sh",
+        "zsh",
+        ".sh"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Bash-i është gjuha e terminalit në Linux dhe macOS. Me të shkruan skripte të vogla që automatizojnë punët e përsëritura — p.sh. riemërtimin e 100 skedarëve ose publikimin e një aplikacioni.",
+        "en": "Bash is the language of the terminal on Linux and macOS. You use it to write small scripts that automate repetitive jobs — like renaming 100 files or deploying an app."
+      },
+      "analogy": {
+        "sq": "Si lista e punëve që ia lë vëllait të vogël: „ndize dritën, mbylle dritaren, ushqeje macen“ — ai i bën me radhë pa pyetur.",
+        "en": "Like the chore list you leave for your little brother: “turn on the light, close the window, feed the cat” — he does them in order without asking."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "for skedari in *.jpg; do\n  mv \"$skedari\" \"foto-$skedari\"\ndone\necho \"U riemërtuan të gjitha!\""
+      },
+      "related": [
+        "terminal",
+        "linux",
+        "cli-gui"
+      ]
+    },
+    {
+      "id": "assembly",
+      "en": "Assembly",
+      "sq": "Gjuhë asembler",
+      "aliases": [
+        "asm",
+        "asembler",
+        "assembler"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Assembly-ja është gjuha më afër udhëzimeve që i kupton vetë procesori: çdo rresht është një veprim i vogël, si „vendos këtë numër në regjistër“. Rrallë shkruhet me dorë sot, por është bazë për të kuptuar si punon kompjuteri nga brenda.",
+        "en": "Assembly is the language closest to the instructions the processor itself understands: each line is a tiny action, like “put this number in a register”. It's rarely written by hand today, but it's the foundation for understanding how a computer works inside."
+      },
+      "analogy": {
+        "sq": "Nëse Python-i është t'i thuash kuzhinierit „bëj një pite“, Assembly-ja është t'i thuash „merr miellin, hidh 200 gram, shto ujë, përziej 30 herë…“",
+        "en": "If Python is telling the chef “make a pie”, Assembly is telling them “take the flour, pour 200 grams, add water, stir 30 times…”"
+      },
+      "code": {
+        "language": "assembly",
+        "snippet": "mov eax, 5   ; vendos 5 në regjistrin eax\nadd eax, 3   ; shto 3 → eax = 8"
+      },
+      "related": [
+        "cpu",
+        "compiler",
+        "binary"
+      ]
+    },
+    {
+      "id": "lua",
+      "en": "Lua",
+      "sq": null,
+      "aliases": [
+        "roblox",
+        "luau"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Lua-ja është një gjuhë e vogël, e lehtë dhe e shpejtë, e menduar për t'u futur brenda programeve të tjera. Përdoret shumë në lojëra video — lojërat në Roblox krijohen me të (në versionin Luau).",
+        "en": "Lua is a small, light and fast language designed to be embedded inside other programs. It's widely used in video games — Roblox games are made with it (in its Luau version)."
+      },
+      "analogy": {
+        "sq": "Si një lojtar i vogël por i shpejtë që hyn nga stoli dhe i përshtatet çdo ekipi.",
+        "en": "Like a small but quick substitute who comes off the bench and fits into any team."
+      },
+      "code": {
+        "language": "lua",
+        "snippet": "local emri = \"Arta\"\nfor i = 1, 3 do\n  print(\"Përshëndetje, \" .. emri)\nend"
+      },
+      "related": [
+        "programming-language",
+        "interpreter",
+        "python"
+      ]
+    },
+    {
+      "id": "haskell",
+      "en": "Haskell",
+      "sq": null,
+      "aliases": [
+        "gjuhë funksionale"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Haskell-i është një gjuhë thjesht funksionale: programet ndërtohen nga funksione që s'ndryshojnë asgjë jashtë vetes. Përdoret më shumë në universitete dhe kërkime, por idetë e saj kanë ndikuar shumë gjuhë moderne.",
+        "en": "Haskell is a purely functional language: programs are built from functions that don't change anything outside themselves. It's used mostly in universities and research, but its ideas have influenced many modern languages."
+      },
+      "analogy": {
+        "sq": "Si matematika në shkollë: f(x) = x² jep gjithmonë të njëjtin rezultat për të njëjtin x, pa ndryshuar asgjë tjetër në tabelë.",
+        "en": "Like maths at school: f(x) = x² always gives the same result for the same x, without changing anything else on the board."
+      },
+      "code": {
+        "language": "haskell",
+        "snippet": "katror :: Int -> Int\nkatror x = x * x\nmain = print (map katror [1, 2, 3])  -- [1,4,9]"
+      },
+      "related": [
+        "functional-programming",
+        "programming-language",
+        "function"
+      ]
+    },
+    {
+      "id": "matlab",
+      "en": "MATLAB",
+      "sq": null,
+      "aliases": [
+        "octave"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "MATLAB-i është një gjuhë dhe program për llogaritje matematikore, i përdorur shumë nga inxhinierët dhe studentët e fakulteteve teknike për matrica, simulime dhe grafikë. Një alternativë falas e ngjashme quhet GNU Octave.",
+        "en": "MATLAB is a language and program for mathematical computing, widely used by engineers and technical-university students for matrices, simulations and charts. A free look-alike is GNU Octave."
+      },
+      "analogy": {
+        "sq": "Si fletorja e matematikës që di t'i zgjidhë vetë ekuacionet dhe t'i vizatojë grafikët.",
+        "en": "Like a maths notebook that can solve the equations and draw the graphs by itself."
+      },
+      "code": {
+        "language": "matlab",
+        "snippet": "x = 0:0.1:2*pi;\ny = sin(x);\nplot(x, y)  % vizaton valën e sinusit"
+      },
+      "related": [
+        "r-language",
+        "python",
+        "programming-language"
+      ]
+    },
+    {
+      "id": "cobol",
+      "en": "COBOL",
+      "sq": null,
+      "aliases": [
+        "cobol language"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "COBOL-i është një gjuhë nga viti 1959, e krijuar për biznese. Edhe sot, shumë banka dhe institucione shtetërore në botë kanë sisteme të vjetra në COBOL — dhe programuesit që e njohin janë të rrallë dhe të kërkuar.",
+        "en": "COBOL is a language from 1959, designed for business. Even today, many banks and government institutions around the world run old systems in COBOL — and programmers who know it are rare and in demand."
+      },
+      "analogy": {
+        "sq": "Si ura e vjetër e gurit në qytet: e ndërtuar para shumë dekadash, ende përdoret çdo ditë, dhe pak mjeshtër dinë ta riparojnë.",
+        "en": "Like the old stone bridge in town: built many decades ago, still used every day, and few craftsmen know how to repair it."
+      },
+      "code": {
+        "language": "cobol",
+        "snippet": "IDENTIFICATION DIVISION.\nPROGRAM-ID. PERSHENDETJE.\nPROCEDURE DIVISION.\n    DISPLAY \"Pershendetje!\".\n    STOP RUN."
+      },
+      "related": [
+        "programming-language",
+        "database",
+        "compiler"
+      ]
+    },
+    {
+      "id": "scratch",
+      "en": "Scratch",
+      "sq": null,
+      "aliases": [
+        "blloqe",
+        "block programming",
+        "programim me blloqe"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Scratch-i është një gjuhë vizuale ku programon duke bashkuar me maus blloqe me ngjyra, në vend që të shkruash kod. Është krijuar për fëmijë dhe fillestarë dhe i mëson idetë bazë — ciklet, kushtet, variablat — në mënyrë lozonjare.",
+        "en": "Scratch is a visual language where you program by snapping coloured blocks together with the mouse instead of typing code. It's made for kids and beginners and teaches the core ideas — loops, conditions, variables — in a playful way."
+      },
+      "analogy": {
+        "sq": "Si LEGO-t e programimit: blloqet puthiten vetëm në mënyrën e duhur, ndaj s'mund të bësh gabime sintakse.",
+        "en": "Like the LEGO of programming: blocks only snap together the right way, so you can't make syntax errors."
+      },
+      "code": null,
+      "related": [
+        "loop",
+        "condition",
+        "programming-language"
+      ]
+    },
+    {
+      "id": "oop",
+      "en": "OOP (Object-oriented programming)",
+      "sq": "Programim i orientuar nga objektet",
+      "aliases": [
+        "oop",
+        "object oriented",
+        "programim me objekte"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "OOP-ja është një mënyrë programimi ku kodin e organizon rreth objekteve — gjëra që kanë të dhënat dhe veprimet e veta, të krijuara nga klasat. Java, C#, Python dhe shumë të tjera e përdorin.",
+        "en": "OOP is a style of programming where you organise code around objects — things that have their own data and actions, created from classes. Java, C#, Python and many others use it."
+      },
+      "analogy": {
+        "sq": "Si shkolla: ka „klasën“ Nxënës (me emër, nota, lëndë), dhe çdo nxënës i vërtetë është një objekt i asaj klase me të dhënat e veta.",
+        "en": "Like a school: there's a Student “class” (with name, grades, subjects), and every real student is an object of that class with their own details."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "class Nxenes:\n    def __init__(self, emri): self.emri = emri\n    def pershendet(self): print(\"Unë jam\", self.emri)\n\nNxenes(\"Arta\").pershendet()"
+      },
+      "related": [
+        "class",
+        "object",
+        "method"
+      ]
+    },
+    {
+      "id": "functional-programming",
+      "en": "Functional programming",
+      "sq": "Programim funksional",
+      "aliases": [
+        "fp",
+        "funksional",
+        "map filter reduce"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Programimi funksional është një stil ku programin e ndërton nga funksione që marrin të dhëna dhe kthejnë rezultat, pa ndryshuar asgjë tjetër. Përdor shumë map, filter dhe reduce në vend të cikleve.",
+        "en": "Functional programming is a style where you build programs from functions that take data and return a result without changing anything else. It uses map, filter and reduce a lot instead of loops."
+      },
+      "analogy": {
+        "sq": "Si një linjë prodhimi lëngjesh: frutat hyjnë, një makinë i qëron, tjetra i shtrydh, tjetra i mbush — çdo hap merr diçka dhe jep diçka, pa prekur të tjerat.",
+        "en": "Like a juice production line: fruit goes in, one machine peels, the next squeezes, the next bottles — each step takes something and hands something on, without touching the others."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const notat = [6, 9, 4, 10];\nconst kaluese = notat.filter((n) => n >= 5).map((n) => n * 10);\nconsole.log(kaluese);  // [60, 90, 100]"
+      },
+      "related": [
+        "function",
+        "lambda",
+        "haskell"
+      ]
+    },
+    {
+      "id": "static-dynamic-typing",
+      "en": "Static vs dynamic typing",
+      "sq": "Tipizim statik dhe dinamik",
+      "aliases": [
+        "static typing",
+        "dynamic typing",
+        "tipizim",
+        "typed"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Në gjuhët me tipizim statik (Java, C#, TypeScript) e deklaron tipin e çdo variable dhe gabimet kapen para se ta ekzekutosh programin. Në ato me tipizim dinamik (Python, JavaScript) tipi vendoset gjatë ekzekutimit — më shpejt për t'u shkruar, por disa gabime dalin më vonë.",
+        "en": "In statically typed languages (Java, C#, TypeScript) you declare every variable's type and mistakes are caught before the program runs. In dynamically typed ones (Python, JavaScript) the type is decided while running — quicker to write, but some mistakes show up later."
+      },
+      "analogy": {
+        "sq": "Tipizimi statik është si t'i etiketosh kutitë para se të ndërrosh shtëpi; dinamiku si t'i futësh gjërat ku të bjerë dhe t'i rregullosh kur i hap.",
+        "en": "Static typing is like labelling the boxes before moving house; dynamic typing is throwing things in wherever and sorting them out when you unpack."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "mosha = 16\nmosha = \"gjashtëmbëdhjetë\"  # Python (dinamik): lejohet\n# TypeScript (statik): let mosha: number = \"16\";  → gabim para ekzekutimit"
+      },
+      "related": [
+        "data-type",
+        "typescript",
+        "compiler"
+      ]
+    },
+    {
+      "id": "high-low-level",
+      "en": "High-level vs low-level language",
+      "sq": "Gjuhë e nivelit të lartë dhe të ulët",
+      "aliases": [
+        "high level",
+        "low level",
+        "nivel i lartë",
+        "nivel i ulët"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Gjuhët e nivelit të lartë (Python, JavaScript) janë afër gjuhës së njeriut dhe i fshehin detajet e kompjuterit. Ato të nivelit të ulët (C, Assembly) janë afër procesorit: më të vështira, por të japin më shumë kontroll dhe shpejtësi.",
+        "en": "High-level languages (Python, JavaScript) are close to human language and hide the computer's details. Low-level ones (C, Assembly) are close to the processor: harder, but they give you more control and speed."
+      },
+      "analogy": {
+        "sq": "Si të ngasësh veturë automatike apo ta ndërtosh motorin vetë: e para të çon lehtë ku do; e dyta të jep kontroll të plotë, por duhet ta njohësh çdo vidë.",
+        "en": "Like driving an automatic car versus building the engine yourself: the first gets you where you're going easily; the second gives full control, but you need to know every bolt."
+      },
+      "code": null,
+      "related": [
+        "programming-language",
+        "assembly",
+        "python"
+      ]
+    },
+    {
+      "id": "garbage-collection",
+      "en": "Garbage collection",
+      "sq": "Mbledhja e mbeturinave",
+      "aliases": [
+        "garbage collector",
+        "gc",
+        "menaxhim memorieje"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Garbage collection është kur gjuha e liron vetë memorien e të dhënave që s'përdoren më. Python-i, Java dhe JavaScript-i e bëjnë automatikisht; në C dhe C++ programuesi duhet ta lirojë vetë memorien.",
+        "en": "Garbage collection is when the language frees the memory of data that's no longer used, by itself. Python, Java and JavaScript do it automatically; in C and C++ the programmer has to free memory themselves."
+      },
+      "analogy": {
+        "sq": "Si shërbimi i pastrimit në hotel: ti thjesht largohesh nga dhoma, dhe dikush tjetër e pastron dhe e përgatit për mysafirin e radhës.",
+        "en": "Like hotel housekeeping: you just leave the room, and someone else cleans it and gets it ready for the next guest."
+      },
+      "code": null,
+      "related": [
+        "ram",
+        "pointer",
+        "java"
+      ]
+    },
+    {
+      "id": "pointer",
+      "en": "Pointer",
+      "sq": "Tregues",
+      "aliases": [
+        "pointers",
+        "treguesi",
+        "adresë memorieje"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Pointer-i është një variabël që nuk e mban vetë vlerën, por adresën e vendit në memorie ku ndodhet ajo vlerë. Përdoret shumë në C dhe C++; është i fuqishëm, por gabimet me të shkaktojnë rrëzime që gjenden me vështirësi.",
+        "en": "A pointer is a variable that doesn't hold a value itself, but the memory address where that value lives. It's used a lot in C and C++; powerful, but mistakes with it cause crashes that are hard to track down."
+      },
+      "analogy": {
+        "sq": "Si adresa e shtëpisë së gjyshes e shkruar në një copë letër: letra s'është shtëpia, por të tregon saktë ku ta gjesh.",
+        "en": "Like grandma's address written on a slip of paper: the paper isn't the house, but it tells you exactly where to find it."
+      },
+      "code": {
+        "language": "c",
+        "snippet": "int mosha = 16;\nint *p = &mosha;     // p mban adresën e moshës\nprintf(\"%d\\n\", *p);  // 16 — vlera në atë adresë"
+      },
+      "related": [
+        "c-language",
+        "c-plus-plus",
+        "ram"
+      ]
+    },
+    {
+      "id": "standard-library",
+      "en": "Standard library",
+      "sq": "Biblioteka standarde",
+      "aliases": [
+        "stdlib",
+        "built-in",
+        "librari standarde"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Biblioteka standarde është koleksioni i moduleve që vijnë bashkë me gjuhën, pa pasur nevojë të instalosh asgjë — p.sh. math, random dhe datetime në Python. Para se të instalosh një paketë, shiko nëse e ka tashmë biblioteka standarde.",
+        "en": "The standard library is the collection of modules that come with the language, with nothing extra to install — like math, random and datetime in Python. Before installing a package, check whether the standard library already has it."
+      },
+      "analogy": {
+        "sq": "Si veglat bazë që vijnë me një shtëpi të re: çekiç, kaçavidë, metër — s'i blen veçmas.",
+        "en": "Like the basic tools that come with a new home: hammer, screwdriver, tape measure — no need to buy them separately."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import math, random, datetime\nprint(math.sqrt(16))                # 4.0\nprint(random.choice([\"po\", \"jo\"]))\nprint(datetime.date.today())"
+      },
+      "related": [
+        "library",
+        "module",
+        "package"
       ]
     }
   ]
