@@ -19,7 +19,7 @@ const OUT = join(ROOT, "dist");
 
 // The public address of the site, used in the sitemap, canonical links and share tags.
 // If you buy your own domain later, change it here.
-const SITE_URL = (process.env.SITE_URL || "https://fjalor-programimi.vercel.app").replace(/\/$/, "");
+const SITE_URL = (process.env.SITE_URL || "https://fjalori.dev").replace(/\/$/, "");
 
 const SITE_NAME = "Fjalori i Programimit";
 const OG_IMAGE = { path: "/og-image.png", width: 1200, height: 630, alt: "Fjalori i Programimit – termat e programimit të shpjeguar thjesht në shqip" };

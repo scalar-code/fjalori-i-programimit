@@ -6843,7 +6843,7 @@
       },
       "code": {
         "language": "javascript",
-        "snippet": "// Serveri (Node.js) lejon vetëm faqen tonë:\nres.setHeader(\"Access-Control-Allow-Origin\", \"https://fjalor-programimi.vercel.app\");"
+        "snippet": "// Serveri (Node.js) lejon vetëm faqen tonë:\nres.setHeader(\"Access-Control-Allow-Origin\", \"https://fjalori.dev\");"
       },
       "related": [
         "fetch",

@@ -4,7 +4,7 @@ A bilingual Albanian ↔ English glossary of programming terms for beginners.
 Plain HTML, CSS and JavaScript, plus one small build script (Node.js, no packages to install).
 No backend, no login.
 
-Live: https://fjalor-programimi.vercel.app
+Live: https://fjalori.dev
 
 ## How it works
 
