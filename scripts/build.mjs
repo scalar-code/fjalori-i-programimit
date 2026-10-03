@@ -6,7 +6,7 @@
 // That way Google and WhatsApp see the full page without running any JavaScript.
 // It reuses the same page functions the browser uses (js/views.js), so both always match.
 
-import { readFileSync, readdirSync, writeFileSync, mkdirSync, rmSync, cpSync } from "node:fs";
+import { readFileSync, readdirSync, writeFileSync, mkdirSync, rmSync, cpSync, existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -26,13 +26,18 @@ const OG_IMAGE = { path: "/og-image.png", width: 1200, height: 630, alt: "Fjalor
 
 const esc = views.esc;
 const template = readFileSync(join(ROOT, "template.html"), "utf8");
-setData(JSON.parse(readFileSync(join(ROOT, "data/terms.json"), "utf8")));
+// audio/manifest.json lists the terms that have a "Dëgjo" recording (made by scripts/generate-audio.py)
+const audioManifestFile = join(ROOT, "audio/manifest.json");
+const audioManifest = existsSync(audioManifestFile) ? JSON.parse(readFileSync(audioManifestFile, "utf8")) : {};
+setData(JSON.parse(readFileSync(join(ROOT, "data/terms.json"), "utf8")), audioManifest);
 
 // ---------- start from an empty dist/ and copy the static files ----------
 
 rmSync(OUT, { recursive: true, force: true });
 mkdirSync(OUT, { recursive: true });
-for (const folder of ["css", "js", "data"]) cpSync(join(ROOT, folder), join(OUT, folder), { recursive: true });
+for (const folder of ["css", "js", "data", "audio"]) {
+  if (existsSync(join(ROOT, folder))) cpSync(join(ROOT, folder), join(OUT, folder), { recursive: true });
+}
 for (const file of ["favicon.svg", "og-image.png"]) cpSync(join(ROOT, file), join(OUT, file));
 // Google Search Console verification file(s), e.g. googlecc116d85b47bda09.html — keep them forever
 for (const file of readdirSync(ROOT).filter((f) => /^google[0-9a-f]+\.html$/.test(f))) cpSync(join(ROOT, file), join(OUT, file));
@@ -121,4 +126,9 @@ Allow: /
 Sitemap: ${SITE_URL}/sitemap.xml
 `);
 
-console.log(`✓ Built ${sitemap.length} pages + 404 into dist/ for ${SITE_URL}`);
+console.log(`✓ Built ${sitemap.length} pages + 404 into dist/ for ${SITE_URL} (${Object.keys(audioManifest).length} with audio)`);
+const withoutAudio = allTerms().filter((term) => !audioManifest[term.id]).map((term) => term.id);
+if (withoutAudio.length) {
+  console.log(`  ⚠ ${withoutAudio.length} term(s) have no "Dëgjo" audio yet: ${withoutAudio.join(", ")}`);
+  console.log("    Run scripts/generate-audio.py (see README → Audio) and commit the audio/ folder.");
+}

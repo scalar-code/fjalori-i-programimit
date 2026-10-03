@@ -37,10 +37,12 @@ fjalori-i-programimit/
 │   └── i18n.js           ← every interface text (and page title) in Albanian and English
 ├── data/
 │   └── terms.json        ← ALL the content: categories + terms
+├── audio/                ← one recording per term + manifest.json
 ├── scripts/
 │   ├── build.mjs         ← builds dist/ (pages, sitemap.xml, robots.txt)
 │   ├── serve.mjs         ← local preview server that behaves like Vercel
 │   ├── check-terms.mjs   ← checks terms.json for mistakes
+│   ├── generate-audio.py ← makes the "Dëgjo" recordings (see Audio below)
 │   └── og-image.html     ← the design of og-image.png (see the comment inside to regenerate)
 └── dist/                 ← the built site (created by the build, not saved in git)
 ```
@@ -95,6 +97,28 @@ It tells you about missing commas, a wrong category, or a related term that does
 
 Add an entry to `"categories"` in the same file. `hue` is a colour from 0 to 360
 (0 is red, 120 green, 210 blue, 280 purple). The badges and cards get their colours from it automatically.
+
+## Audio ("Dëgjo" button)
+
+Every term page has a 🔊 **Dëgjo** button that plays the Albanian explanation, read by the
+free **Edon** voice from [folsh.ai](https://folsh.ai) by Edon Sekiraqa (CC0, public domain).
+The recordings are ready-made files in `audio/` (one `.m4a` per term, ~57 KB each), so they
+play instantly. `npm run build` warns if a term has no recording yet.
+
+**After adding or editing terms**, make their audio (only new/changed ones are generated):
+
+1. One-time setup (the voice is ~64 MB, so it lives outside the project):
+   ```bash
+   python3 -m venv ~/.fjalori-tts
+   ~/.fjalori-tts/bin/pip install piper-tts
+   ```
+   Then download `sq_AL-edon-medium.onnx` and `sq_AL-edon-medium.onnx.json` from
+   https://huggingface.co/edonseki/folsh.ai/tree/main/edon into `~/.fjalori-tts/`.
+2. Generate:
+   ```bash
+   ~/.fjalori-tts/bin/python scripts/generate-audio.py --model ~/.fjalori-tts/sq_AL-edon-medium.onnx
+   ```
+3. Commit the `audio/` folder together with `data/terms.json`.
 
 ## Deploy
 

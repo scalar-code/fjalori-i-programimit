@@ -4,8 +4,10 @@
 let categoryList = [];
 let termList = [];      // sorted A–Z by English name
 const termsById = new Map();
+let audioIds = new Set(); // terms that have a "Dëgjo" recording (audio/manifest.json)
 
-export function setData(data) {
+export function setData(data, audioManifest = {}) {
+  audioIds = new Set(Object.keys(audioManifest));
   categoryList = data.categories;
   termList = [...data.terms].sort((a, b) => a.en.localeCompare(b.en));
   termsById.clear();
@@ -13,10 +15,16 @@ export function setData(data) {
 }
 
 export async function loadData() {
-  const response = await fetch("/data/terms.json");
+  const [response, audio] = await Promise.all([
+    fetch("/data/terms.json"),
+    fetch("/audio/manifest.json").then((r) => (r.ok ? r.json() : {})).catch(() => ({})),
+  ]);
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
-  setData(await response.json());
+  setData(await response.json(), audio);
 }
+
+export const hasAudio = (id) => audioIds.has(id);
+export const audioUrl = (id) => `/audio/${encodeURIComponent(id)}.m4a`;
 
 export const allTerms = () => termList;
 export const allCategories = () => categoryList;

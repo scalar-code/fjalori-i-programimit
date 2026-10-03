@@ -6,7 +6,7 @@
 //   mount – optional; runs after the html is on the page (to wire up buttons etc.)
 
 import { t, getLang, otherLang, languageNames } from "./i18n.js";
-import { allTerms, allCategories, getTerm, getCategory, termsInCategory, wordOfTheDay } from "./data.js";
+import { allTerms, allCategories, getTerm, getCategory, termsInCategory, wordOfTheDay, hasAudio, audioUrl } from "./data.js";
 import { searchTerms } from "./search.js";
 
 // ---------- small helpers ----------
@@ -199,6 +199,13 @@ export function term(id) {
       </section>`
     : "";
 
+  // "Dëgjo": the Albanian explanation read aloud (voice: folsh.ai, see scripts/generate-audio.py)
+  const listenButton = hasAudio(item.id)
+    ? `<button class="listen-btn" type="button" aria-pressed="false" lang="${lang}">
+        <span class="listen-icon" aria-hidden="true">🔊</span><span class="listen-label">${esc(t("listen"))}</span>
+      </button>`
+    : "";
+
   const relatedHtml = related.length
     ? `<section class="section">
         <div class="section-head"><h2>${esc(t("related"))}</h2></div>
@@ -226,11 +233,17 @@ export function term(id) {
 
         <section class="block">
           <div class="explain-primary" lang="${lang}">
-            <h2>${esc(t("explanation"))}<span class="lang-tag">${lang.toUpperCase()}</span></h2>
+            <div class="explain-head">
+              <h2>${esc(t("explanation"))}<span class="lang-tag">${lang.toUpperCase()}</span></h2>
+              ${lang === "sq" ? listenButton : ""}
+            </div>
             <p>${esc(item.explanation[lang])}</p>
           </div>
           <div class="explain-secondary" lang="${other}">
-            <h2>${esc(languageNames[other])}<span class="lang-tag">${other.toUpperCase()}</span></h2>
+            <div class="explain-head">
+              <h2>${esc(languageNames[other])}<span class="lang-tag">${other.toUpperCase()}</span></h2>
+              ${other === "sq" ? listenButton : ""}
+            </div>
             <p>${esc(item.explanation[other])}</p>
           </div>
         </section>
@@ -255,8 +268,9 @@ export function term(id) {
       </nav>
     `,
     mount(root) {
+      const stopAudio = setupListenButton(root, item.id);
       const button = root.querySelector(".copy-btn");
-      if (!button) return;
+      if (!button) return stopAudio;
       button.addEventListener("click", async () => {
         try {
           await navigator.clipboard.writeText(item.code.snippet);
@@ -267,8 +281,39 @@ export function term(id) {
           getSelection().selectAllChildren(root.querySelector(".code pre"));
         }
       });
+      return stopAudio;
     },
   };
+}
+
+// Plays/pauses the term's recording; returns a function that stops it (used when leaving the page)
+function setupListenButton(root, id) {
+  const button = root.querySelector(".listen-btn");
+  if (!button) return undefined;
+  const label = button.querySelector(".listen-label");
+  const icon = button.querySelector(".listen-icon");
+  let audio = null;
+
+  const show = (playing) => {
+    button.setAttribute("aria-pressed", String(playing));
+    button.classList.toggle("is-playing", playing);
+    icon.textContent = playing ? "⏸" : "🔊";
+    label.textContent = t(playing ? "pause" : "listen");
+  };
+
+  button.addEventListener("click", () => {
+    if (!audio) {
+      audio = new Audio(audioUrl(id)); // downloaded only when someone clicks
+      audio.addEventListener("ended", () => show(false));
+      audio.addEventListener("pause", () => show(false));
+      audio.addEventListener("play", () => show(true));
+      audio.addEventListener("error", () => { label.textContent = t("audioError"); });
+    }
+    if (audio.paused) audio.play().catch(() => (label.textContent = t("audioError")));
+    else audio.pause();
+  });
+
+  return () => audio?.pause();
 }
 
 // ---------- Category page ----------
