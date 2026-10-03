@@ -38,7 +38,10 @@ function chip(term) {
   return `<a class="chip" href="${termUrl(term.id)}" ${hueStyle(category)}>${esc(term.en)}${alt}</a>`;
 }
 
-const searchIcon = `<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>`;
+// Font Awesome icon, e.g. icon("lightbulb") → <i class="fa-solid fa-lightbulb">  (see fontawesome.com/icons)
+export const icon = (name, style = "solid") => `<i class="fa-${style} fa-${name}" aria-hidden="true"></i>`;
+
+const searchIcon = icon("magnifying-glass");
 
 // ---------- Home ----------
 
@@ -114,18 +117,16 @@ export function home() {
           <h2>${esc(word.en)}</h2>
           <p class="alt">${word.sq ? esc(word.sq) : esc(t("sameInAlbanian"))}</p>
           <p class="text">${esc(word.explanation[lang])}</p>
-          <a class="link-arrow" href="${termUrl(word.id)}">${esc(t("readMore"))}</a>
+          <a class="link-arrow" href="${termUrl(word.id)}">${esc(t("readMore"))} ${icon("arrow-right")}</a>
         </article>
 
         <a class="cta" href="/flashcards">
-          <span class="cta-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><rect x="3" y="6" width="14" height="15" rx="2.5"/><path d="M7 3h11.5A2.5 2.5 0 0 1 21 5.5V17"/></svg>
-          </span>
+          <span class="cta-icon">${icon("layer-group")}</span>
           <span class="cta-text">
             <strong>${esc(t("flashcardsCta"))}</strong>
             <span>${esc(t("flashcardsCtaText", terms.length))}</span>
           </span>
-          <span class="cta-arrow" aria-hidden="true">→</span>
+          <span class="cta-arrow">${icon("arrow-right")}</span>
         </a>
       </section>
 
@@ -193,7 +194,7 @@ export function term(id) {
     ? `<section class="block code">
         <div class="code-head">
           <h2>${esc(t("codeExample"))}<span class="code-lang">${esc(item.code.language)}</span></h2>
-          <button class="copy-btn" type="button">${esc(t("copy"))}</button>
+          <button class="copy-btn" type="button">${icon("copy", "regular")} <span>${esc(t("copy"))}</span></button>
         </div>
         <pre><code>${esc(item.code.snippet)}</code></pre>
       </section>`
@@ -202,7 +203,7 @@ export function term(id) {
   // "Dëgjo": the Albanian explanation read aloud (voice: folsh.ai, see scripts/generate-audio.py)
   const listenButton = hasAudio(item.id)
     ? `<button class="listen-btn" type="button" aria-pressed="false" lang="${lang}">
-        <span class="listen-icon" aria-hidden="true">🔊</span><span class="listen-label">${esc(t("listen"))}</span>
+        <span class="listen-icon">${icon("volume-high")}</span><span class="listen-label">${esc(t("listen"))}</span>
       </button>`
     : "";
 
@@ -249,7 +250,7 @@ export function term(id) {
         </section>
 
         <section class="block analogy">
-          <h2>💡 ${esc(t("analogy"))}</h2>
+          <h2>${icon("lightbulb", "regular")} ${esc(t("analogy"))}</h2>
           <p lang="${lang}">${esc(item.analogy[lang])}</p>
           <details>
             <summary>${esc(t("analogyOther"))}</summary>
@@ -263,8 +264,8 @@ export function term(id) {
       ${relatedHtml}
 
       <nav class="term-nav">
-        <a href="${termUrl(previous.id)}"><small>${esc(t("previous"))}</small><strong>${esc(previous.en)}</strong></a>
-        <a class="next" href="${termUrl(next.id)}"><small>${esc(t("next"))}</small><strong>${esc(next.en)}</strong></a>
+        <a href="${termUrl(previous.id)}"><small>${icon("arrow-left")} ${esc(t("previous"))}</small><strong>${esc(previous.en)}</strong></a>
+        <a class="next" href="${termUrl(next.id)}"><small>${esc(t("next"))} ${icon("arrow-right")}</small><strong>${esc(next.en)}</strong></a>
       </nav>
     `,
     mount(root) {
@@ -274,8 +275,8 @@ export function term(id) {
       button.addEventListener("click", async () => {
         try {
           await navigator.clipboard.writeText(item.code.snippet);
-          button.textContent = t("copied");
-          setTimeout(() => (button.textContent = t("copy")), 1500);
+          button.innerHTML = `${icon("check")} <span>${esc(t("copied"))}</span>`;
+          setTimeout(() => (button.innerHTML = `${icon("copy", "regular")} <span>${esc(t("copy"))}</span>`), 1500);
         } catch {
           // Clipboard can be blocked (e.g. non-https); selecting the code is a good fallback
           getSelection().selectAllChildren(root.querySelector(".code pre"));
@@ -291,13 +292,13 @@ function setupListenButton(root, id) {
   const button = root.querySelector(".listen-btn");
   if (!button) return undefined;
   const label = button.querySelector(".listen-label");
-  const icon = button.querySelector(".listen-icon");
+  const iconBox = button.querySelector(".listen-icon");
   let audio = null;
 
   const show = (playing) => {
     button.setAttribute("aria-pressed", String(playing));
     button.classList.toggle("is-playing", playing);
-    icon.textContent = playing ? "⏸" : "🔊";
+    iconBox.innerHTML = icon(playing ? "pause" : "volume-high");
     label.textContent = t(playing ? "pause" : "listen");
   };
 
@@ -357,7 +358,7 @@ export function notFound(message = t("notFoundText")) {
     html: `<div class="empty-state">
       <h1>${esc(t("notFoundTitle"))}</h1>
       <p>${esc(message)}</p>
-      <p><a class="link-arrow" href="/">${esc(t("backHome"))}</a></p>
+      <p><a class="link-arrow" href="/">${icon("arrow-left")} ${esc(t("backHome"))}</a></p>
     </div>`,
   };
 }

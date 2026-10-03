@@ -4,7 +4,7 @@
 
 import { t, getLang } from "./i18n.js";
 import { allTerms, allCategories, getCategory, getTerm, termsInCategory } from "./data.js";
-import { esc, termUrl, hueStyle } from "./views.js";
+import { esc, termUrl, hueStyle, icon } from "./views.js";
 
 // Kept outside the page so switching language (which re-draws the page) doesn't lose your place
 const state = {
@@ -64,14 +64,14 @@ function cardHtml() {
           <span class="fc-back-term">${esc(term.en)}</span>
           <span class="fc-alt" lang="sq">${esc(term.sq ?? t("sameInAlbanian"))}</span>
           <span class="fc-text" lang="${lang}">${esc(term.explanation[lang])}</span>
-          <span class="fc-analogy" lang="${lang}">💡 ${esc(term.analogy[lang])}</span>
+          <span class="fc-analogy" lang="${lang}">${icon("lightbulb", "regular")} ${esc(term.analogy[lang])}</span>
         </span>
       </span>
     </button>
 
     <div class="fc-actions">
-      <button class="btn btn-again" type="button" data-action="again">↺ ${esc(t("again"))}</button>
-      <button class="btn btn-know" type="button" data-action="know">✓ ${esc(t("knowIt"))}</button>
+      <button class="btn btn-again" type="button" data-action="again">${icon("rotate-left")} ${esc(t("again"))}</button>
+      <button class="btn btn-know" type="button" data-action="know">${icon("check")} ${esc(t("knowIt"))}</button>
     </div>
 
     <p class="fc-hint">
@@ -83,11 +83,11 @@ function cardHtml() {
 function doneHtml() {
   const firstTry = state.total - state.missed.size;
   const review = state.missed.size
-    ? `<button class="btn btn-know" type="button" data-action="review">↺ ${esc(t("reviewMissed", state.missed.size))}</button>`
+    ? `<button class="btn btn-know" type="button" data-action="review">${icon("rotate-left")} ${esc(t("reviewMissed", state.missed.size))}</button>`
     : "";
   return `
     <div class="fc-done">
-      <div class="fc-done-emoji" aria-hidden="true">${state.missed.size ? "💪" : "🏆"}</div>
+      <div class="fc-done-icon">${icon(state.missed.size ? "dumbbell" : "trophy")}</div>
       <h2>${esc(t("doneTitle"))}</h2>
       <p>${esc(t("doneText", firstTry, state.total))}</p>
       <div class="fc-actions">
@@ -125,7 +125,7 @@ export function flashcards() {
           <span>${esc(t("category"))}</span>
           <select id="fc-category">${options}</select>
         </label>
-        <button class="btn btn-ghost" type="button" data-action="restart">↻ ${esc(t("shuffle"))}</button>
+        <button class="btn btn-ghost" type="button" data-action="restart">${icon("shuffle")} ${esc(t("shuffle"))}</button>
       </div>
 
       <div class="fc-stage" aria-live="polite"></div>
