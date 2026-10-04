@@ -5333,11 +5333,7 @@
         "junior",
         "senior",
         "mid",
-        "mid-level",
-        "intern",
-        "internship",
-        "praktikant",
-        "praktikë"
+        "mid-level"
       ],
       "category": "career",
       "explanation": {
@@ -5363,9 +5359,7 @@
         "freelance",
         "frilanser",
         "upwork",
-        "fiverr",
-        "remote",
-        "punë nga shtëpia"
+        "fiverr"
       ],
       "category": "career",
       "explanation": {
@@ -5389,8 +5383,7 @@
       "sq": "Portofol",
       "aliases": [
         "portofoli",
-        "projekte personale",
-        "cv"
+        "projekte personale"
       ],
       "category": "career",
       "explanation": {
@@ -7914,6 +7907,1196 @@
         "library",
         "module",
         "package"
+      ]
+    },
+    {
+      "id": "cv-resume",
+      "en": "CV / Resume",
+      "sq": "CV (jetëshkrim)",
+      "aliases": [
+        "resume",
+        "rezyme",
+        "jetëshkrim",
+        "cv"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "CV-ja është dokumenti i shkurtër që tregon kush je, çfarë di të bësh, çfarë ke studiuar dhe ku ke punuar. Për programuesit, më e rëndësishme se faqet e shumta është një faqe e qartë me aftësitë, projektet dhe lidhjen te GitHub-i.",
+        "en": "A CV (or resume) is the short document showing who you are, what you can do, what you studied and where you've worked. For programmers, one clear page with your skills, projects and a GitHub link matters more than many pages."
+      },
+      "analogy": {
+        "sq": "Si karta e lojtarit që i dërgohet një klubi: pozicioni, golat, ekipet ku ka luajtur — shkurt e qartë, që trajneri ta lexojë brenda një minute.",
+        "en": "Like a player's profile sent to a club: position, goals, teams played for — short and clear, so the coach can read it in a minute."
+      },
+      "code": null,
+      "related": [
+        "portfolio",
+        "job-interview",
+        "linkedin"
+      ]
+    },
+    {
+      "id": "job-interview",
+      "en": "Job interview",
+      "sq": "Intervistë pune",
+      "aliases": [
+        "intervista",
+        "interview",
+        "intervistë"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Intervista e punës është biseda ku kompania të njeh ty dhe ti e njeh kompaninë. Për programuesit zakonisht ka disa faza: një bisedë njohjeje, një intervistë teknike dhe ndonjëherë një detyrë për ta bërë në shtëpi.",
+        "en": "A job interview is the conversation where the company gets to know you and you get to know the company. For programmers there are usually several stages: an intro chat, a technical interview and sometimes a take-home task."
+      },
+      "analogy": {
+        "sq": "Si prova te një klub i ri: një bisedë me trajnerin, pastaj disa stërvitje me ekipin, që të shohin si luan dhe si përshtatesh.",
+        "en": "Like a trial at a new club: a chat with the coach, then a few training sessions with the team, so they can see how you play and how you fit in."
+      },
+      "code": null,
+      "related": [
+        "technical-interview",
+        "cv-resume",
+        "soft-skills"
+      ]
+    },
+    {
+      "id": "technical-interview",
+      "en": "Technical interview",
+      "sq": "Intervistë teknike",
+      "aliases": [
+        "coding interview",
+        "live coding",
+        "leetcode",
+        "detyrë teknike",
+        "take-home"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Intervista teknike është pjesa ku të kërkojnë të zgjidhësh një problem programimi — në tabelë, në kompjuter ose si detyrë shtëpie. Shikojnë jo vetëm nëse e zgjidh, por edhe si mendon dhe si e shpjegon zgjidhjen.",
+        "en": "A technical interview is the part where you're asked to solve a programming problem — on a whiteboard, on a computer or as a take-home task. They look not just at whether you solve it, but at how you think and explain your solution."
+      },
+      "analogy": {
+        "sq": "Si provimi me gojë te tabela: mësuesi s'shikon vetëm përgjigjen përfundimtare, por si arrite deri aty, hap pas hapi.",
+        "en": "Like an oral exam at the blackboard: the teacher doesn't just look at the final answer, but at how you got there, step by step."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "# Detyrë e zakonshme: a është fjala palindromë?\ndef palindrom(fjala):\n    return fjala == fjala[::-1]\n\nprint(palindrom(\"radar\"))  # True"
+      },
+      "related": [
+        "job-interview",
+        "algorithm",
+        "junior-senior"
+      ]
+    },
+    {
+      "id": "internship",
+      "en": "Internship",
+      "sq": "Praktikë pune",
+      "aliases": [
+        "intern",
+        "praktikant",
+        "praktikë",
+        "praktika"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Praktika është një periudhë e shkurtër pune — zakonisht disa muaj — ku mëson duke punuar në një kompani të vërtetë, shpesh ndërsa je ende student. Shumë programues e gjejnë punën e parë pikërisht përmes praktikës.",
+        "en": "An internship is a short period of work — usually a few months — where you learn by working at a real company, often while you're still a student. Many programmers land their first job through an internship."
+      },
+      "analogy": {
+        "sq": "Si të punosh disa muaj si ndihmës në kuzhinën e një restoranti të mirë: s'i gatuan vetë gjellët kryesore, por mëson nga afër si bëhen.",
+        "en": "Like spending a few months as a helper in a good restaurant's kitchen: you don't cook the main dishes yourself, but you learn up close how they're made."
+      },
+      "code": null,
+      "related": [
+        "junior-senior",
+        "mentor",
+        "cv-resume"
+      ]
+    },
+    {
+      "id": "remote-work",
+      "en": "Remote work",
+      "sq": "Punë nga distanca",
+      "aliases": [
+        "remote",
+        "punë nga shtëpia",
+        "work from home",
+        "wfh",
+        "hybrid"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Puna nga distanca do të thotë të punosh nga shtëpia ose nga kudo, në vend të zyrës, duke komunikuar me ekipin online. Për programuesit nga Kosova dhe Shqipëria, kjo hap mundësinë të punojnë për kompani në gjithë botën.",
+        "en": "Remote work means working from home or anywhere instead of an office, communicating with your team online. For programmers in Kosovo and Albania, it opens the door to working for companies all over the world."
+      },
+      "analogy": {
+        "sq": "Si mësimi online gjatë pandemisë: e njëjta klasë, e njëjta mësuese, por secili ulet në shtëpinë e vet.",
+        "en": "Like online classes during the pandemic: same class, same teacher, but everyone sits in their own home."
+      },
+      "code": null,
+      "related": [
+        "freelancer",
+        "outsourcing",
+        "soft-skills"
+      ]
+    },
+    {
+      "id": "agile",
+      "en": "Agile",
+      "sq": null,
+      "aliases": [
+        "agjil",
+        "agile method",
+        "metodologji agile"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Agile-i është një mënyrë pune ku ekipi e ndërton produktin me hapa të vegjël, ia tregon shpesh klientit dhe e përmirëson sipas reagimeve, në vend që ta planifikojë gjithçka që në fillim për muaj të tërë.",
+        "en": "Agile is a way of working where the team builds the product in small steps, shows it to the client often and improves it based on feedback, instead of planning everything up front for months."
+      },
+      "analogy": {
+        "sq": "Si kur gatuan për mysafirë dhe e shijon gjellën shpesh gjatë gatimit, duke shtuar kripë a erëza pak nga pak, në vend që ta shijosh vetëm në fund.",
+        "en": "Like cooking for guests and tasting the dish often as you go, adding salt or spices bit by bit, instead of tasting only at the very end."
+      },
+      "code": null,
+      "related": [
+        "scrum",
+        "kanban",
+        "mvp"
+      ]
+    },
+    {
+      "id": "scrum",
+      "en": "Scrum / sprint",
+      "sq": null,
+      "aliases": [
+        "sprint",
+        "standup",
+        "daily standup",
+        "scrum master",
+        "retro"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Scrum-i është mënyra më e njohur për të punuar agile: puna ndahet në „sprinte“ prej 1–2 javësh, çdo mëngjes ka një takim të shkurtër (stand-up) ku secili thotë çfarë bëri dhe çfarë do të bëjë, dhe në fund të sprintit ekipi tregon çfarë përfundoi.",
+        "en": "Scrum is the most popular way of working agile: work is split into 1–2 week “sprints”, every morning there's a short meeting (stand-up) where everyone says what they did and what they'll do, and at the end of the sprint the team shows what it finished."
+      },
+      "analogy": {
+        "sq": "Si një sezon i ndarë në ndeshje javore: çdo javë ka planin e vet, një takim të shkurtër para stërvitjes, dhe pas ndeshjes analizë se çfarë shkoi mirë e çfarë jo.",
+        "en": "Like a season split into weekly matches: each week has its own plan, a short huddle before training, and after the match a review of what went well and what didn't."
+      },
+      "code": null,
+      "related": [
+        "agile",
+        "kanban",
+        "deadline"
+      ]
+    },
+    {
+      "id": "kanban",
+      "en": "Kanban board",
+      "sq": "Tabela Kanban",
+      "aliases": [
+        "kanban",
+        "trello",
+        "jira",
+        "to do doing done"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Tabela Kanban i tregon punët e ekipit në kolona — p.sh. „Për t'u bërë“, „Në punë“ dhe „Përfunduar“. Çdo detyrë është një kartë që lëviz nga e majta në të djathtë. Mjete si Trello ose GitHub Projects e bëjnë këtë online.",
+        "en": "A Kanban board shows a team's work in columns — like “To do”, “Doing” and “Done”. Each task is a card that moves from left to right. Tools like Trello or GitHub Projects do this online."
+      },
+      "analogy": {
+        "sq": "Si letrat ngjitëse në frigorifer për punët e shtëpisë: „Për t'u bërë: laj enët“, pastaj e lëviz te „Bërë“ — të gjithë e shohin kush çfarë po bën.",
+        "en": "Like sticky notes on the fridge for chores: “To do: wash the dishes”, then you move it to “Done” — everyone can see who's doing what."
+      },
+      "code": null,
+      "related": [
+        "agile",
+        "scrum",
+        "issue"
+      ]
+    },
+    {
+      "id": "linkedin",
+      "en": "LinkedIn",
+      "sq": null,
+      "aliases": [
+        "linked in",
+        "profil profesional"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "LinkedIn-i është rrjeti social për punë: profili yt profesional me përvojën, aftësitë dhe projektet, ku kompanitë kërkojnë punonjës dhe ku ti gjen oferta pune. Një profil i rregullt me lidhje te GitHub-i dhe te portofoli ndihmon shumë.",
+        "en": "LinkedIn is the social network for work: your professional profile with your experience, skills and projects, where companies look for employees and you find job offers. A tidy profile linking to your GitHub and portfolio helps a lot."
+      },
+      "analogy": {
+        "sq": "Si vitrina e një dyqani në rrugën kryesore: kalimtarët (rekrutuesit) e shohin çfarë ke, dhe nëse u pëlqen, hyjnë brenda.",
+        "en": "Like a shop window on the main street: passers-by (recruiters) see what you've got, and if they like it, they come in."
+      },
+      "code": null,
+      "related": [
+        "cv-resume",
+        "portfolio",
+        "github"
+      ]
+    },
+    {
+      "id": "soft-skills",
+      "en": "Soft skills",
+      "sq": "Aftësi të buta",
+      "aliases": [
+        "aftësi komunikimi",
+        "komunikim",
+        "teamwork",
+        "punë në ekip"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Aftësitë e buta janë ato që s'kanë lidhje me kodin: komunikimi, puna në ekip, të pyeturit kur s'di diçka, menaxhimi i kohës, pranimi i kritikës. Shpesh vendosin po aq sa aftësitë teknike nëse e merr një punë.",
+        "en": "Soft skills are the ones that have nothing to do with code: communication, teamwork, asking when you don't know something, managing your time, taking feedback. They often matter as much as technical skills when it comes to getting a job."
+      },
+      "analogy": {
+        "sq": "Si lojtari që s'është më i shpejti, por flet me shokët në fushë, ndihmon në mbrojtje dhe s'grindet me gjyqtarin — trajneri e do në çdo ndeshje.",
+        "en": "Like the player who isn't the fastest, but talks to teammates on the pitch, helps in defence and never argues with the referee — the coach wants them in every match."
+      },
+      "code": null,
+      "related": [
+        "job-interview",
+        "code-review",
+        "remote-work"
+      ]
+    },
+    {
+      "id": "tech-stack",
+      "en": "Tech stack",
+      "sq": "Grupi i teknologjive",
+      "aliases": [
+        "stack",
+        "teknologjitë",
+        "stack teknologjik"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Tech stack-u është lista e teknologjive që përdor një projekt ose kompani — p.sh. React për frontend, Node.js për backend dhe PostgreSQL për databazë. Në shpalljet e punës, stack-u të tregon çfarë duhet të dish.",
+        "en": "A tech stack is the list of technologies a project or company uses — like React for the frontend, Node.js for the backend and PostgreSQL for the database. In job ads, the stack tells you what you need to know."
+      },
+      "analogy": {
+        "sq": "Si lista e përbërësve dhe e veglave të një recete: miell, vezë, furrë, mikser — kur e lexon, e di menjëherë çfarë të duhet.",
+        "en": "Like a recipe's list of ingredients and tools: flour, eggs, oven, mixer — read it and you know right away what you'll need."
+      },
+      "code": null,
+      "related": [
+        "framework",
+        "full-stack",
+        "programming-language"
+      ]
+    },
+    {
+      "id": "mvp",
+      "en": "MVP (Minimum Viable Product)",
+      "sq": "Produkti minimal i përdorshëm",
+      "aliases": [
+        "minimum viable product",
+        "prototip",
+        "prototype"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "MVP-ja është versioni më i thjeshtë i një produkti që e zgjidh problemin kryesor dhe mund t'u jepet përdoruesve të vërtetë. Qëllimi është të mësosh shpejt nëse ideja punon, para se të harxhosh muaj për veçori shtesë. Versioni i parë i këtij fjalori ishte një MVP me 20 terma.",
+        "en": "An MVP is the simplest version of a product that solves the main problem and can be given to real users. The goal is to learn quickly whether the idea works before spending months on extra features. This glossary's first version was an MVP with 20 terms."
+      },
+      "analogy": {
+        "sq": "Si të hapësh fillimisht një tezgë të vogël me qebapë para se të hapësh restorant: nëse vijnë njerëzit, zgjerohesh.",
+        "en": "Like opening a small kebab stall before opening a restaurant: if people come, you expand."
+      },
+      "code": null,
+      "related": [
+        "agile",
+        "deploy",
+        "side-project"
+      ]
+    },
+    {
+      "id": "bootcamp",
+      "en": "Bootcamp",
+      "sq": "Kurs intensiv programimi",
+      "aliases": [
+        "kurs programimi",
+        "coding bootcamp",
+        "akademi"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Bootcamp-i është një kurs intensiv programimi, zakonisht 3–6 muaj, që synon të të përgatisë për punën e parë më shpejt se një fakultet. Në Kosovë dhe Shqipëri ka shumë akademi të tilla; para se të paguash, shiko projektet e studentëve të mëparshëm.",
+        "en": "A bootcamp is an intensive programming course, usually 3–6 months, that aims to get you job-ready faster than a university degree. There are many such academies in Kosovo and Albania; before paying, look at previous students' projects."
+      },
+      "analogy": {
+        "sq": "Si një kamp stërvitor veror: javë të ngjeshura me stërvitje çdo ditë, në vend të një sezoni të tërë me ritëm normal.",
+        "en": "Like a summer training camp: packed weeks of training every day, instead of a whole season at a normal pace."
+      },
+      "code": null,
+      "related": [
+        "internship",
+        "portfolio",
+        "junior-senior"
+      ]
+    },
+    {
+      "id": "onboarding",
+      "en": "Onboarding",
+      "sq": "Përshtatja në punë",
+      "aliases": [
+        "dita e parë",
+        "first day"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Onboarding-u janë ditët ose javët e para në një punë të re, kur të japin llogaritë, ta shpjegojnë projektin, të njohin me ekipin dhe të japin detyra të vogla për të filluar. Është normale të ndihesh i humbur — pyet sa më shumë.",
+        "en": "Onboarding is the first days or weeks at a new job, when you get your accounts, the project is explained, you meet the team and get small tasks to start with. It's normal to feel lost — ask as many questions as you can."
+      },
+      "analogy": {
+        "sq": "Si javët e para në një shkollë të re: dikush të tregon ku janë klasat, kush janë mësuesit dhe si funksionon orari.",
+        "en": "Like the first weeks at a new school: someone shows you where the classrooms are, who the teachers are and how the timetable works."
+      },
+      "code": null,
+      "related": [
+        "mentor",
+        "junior-senior",
+        "documentation"
+      ]
+    },
+    {
+      "id": "mentor",
+      "en": "Mentor",
+      "sq": "Mentor",
+      "aliases": [
+        "mentori",
+        "mentorship",
+        "udhëheqës"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Mentori është një person me më shumë përvojë që të udhëzon: të jep këshilla, ta rishikon kodin dhe të ndihmon kur ngec. Një mentor i mirë mund ta shkurtojë rrugën tënde me muaj apo vite.",
+        "en": "A mentor is a more experienced person who guides you: gives advice, reviews your code and helps when you're stuck. A good mentor can shorten your path by months or years."
+      },
+      "analogy": {
+        "sq": "Si xhaxhai mjeshtër që ta mëson zanatin: s'ta bën punën ty, por t'i tregon truket që i mësoi ndër vite.",
+        "en": "Like an uncle who's a master craftsman teaching you the trade: he doesn't do the work for you, but shows you the tricks he learned over the years."
+      },
+      "code": null,
+      "related": [
+        "junior-senior",
+        "code-review",
+        "internship"
+      ]
+    },
+    {
+      "id": "product-manager",
+      "en": "Product manager (PM)",
+      "sq": "Menaxher produkti",
+      "aliases": [
+        "pm",
+        "product owner",
+        "menaxher projekti"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Menaxheri i produktit vendos çfarë duhet ndërtuar dhe pse: flet me klientët, cakton prioritetet dhe u shpjegon programuesve çfarë duhet bërë. Programuesit vendosin si ndërtohet.",
+        "en": "A product manager decides what should be built and why: talks to customers, sets priorities and explains to developers what needs doing. The developers decide how to build it."
+      },
+      "analogy": {
+        "sq": "Si pronari i restorantit që vendos çfarë del në meny sipas dëshirave të klientëve — kuzhinierët vendosin si ta gatuajnë.",
+        "en": "Like the restaurant owner who decides what goes on the menu based on what customers want — the chefs decide how to cook it."
+      },
+      "code": null,
+      "related": [
+        "agile",
+        "mvp",
+        "scrum"
+      ]
+    },
+    {
+      "id": "qa-tester",
+      "en": "QA / Tester",
+      "sq": "Testues (QA)",
+      "aliases": [
+        "qa",
+        "quality assurance",
+        "tester",
+        "testues",
+        "kontroll cilësie"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "QA-ja (sigurimi i cilësisë) janë njerëzit që e testojnë aplikacionin para se të dalë: provojnë çdo buton, kërkojnë bug-e dhe sigurohen që gjithçka punon si duhet. Shpesh është edhe një rrugë e mirë për të hyrë në IT.",
+        "en": "QA (quality assurance) are the people who test the app before it's released: they try every button, hunt for bugs and make sure everything works as it should. It's often a good way to get into IT, too."
+      },
+      "analogy": {
+        "sq": "Si kontrolli i cilësisë në fabrikën e ëmbëlsirave: dikush i provon disa nga çdo tufë para se të dalin në dyqane.",
+        "en": "Like quality control in a sweets factory: someone tastes a few from every batch before they go to the shops."
+      },
+      "code": null,
+      "related": [
+        "testing",
+        "bug",
+        "junior-senior"
+      ]
+    },
+    {
+      "id": "devops",
+      "en": "DevOps",
+      "sq": null,
+      "aliases": [
+        "dev ops",
+        "sre",
+        "infrastrukturë"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "DevOps-i është mënyra e punës — dhe profesioni — që e bashkon zhvillimin (dev) me menaxhimin e serverëve (ops): automatizon publikimin, i monitoron aplikacionet dhe kujdeset që gjithçka të punojë pa ndërprerje. Përdor mjete si Docker, CI/CD dhe cloud.",
+        "en": "DevOps is a way of working — and a job — that brings development (dev) and server operations (ops) together: it automates deployment, monitors apps and keeps everything running smoothly. It uses tools like Docker, CI/CD and the cloud."
+      },
+      "analogy": {
+        "sq": "Si personi që kujdeset që kuzhina e restorantit të ketë gjithmonë gaz, frigoriferë që punojnë dhe porosi që dalin shpejt — që kuzhinierët të gatuajnë pa u shqetësuar.",
+        "en": "Like the person who makes sure the restaurant kitchen always has gas, working fridges and orders going out fast — so the chefs can cook without worrying."
+      },
+      "code": null,
+      "related": [
+        "ci-cd",
+        "docker",
+        "cloud"
+      ]
+    },
+    {
+      "id": "hackathon",
+      "en": "Hackathon",
+      "sq": null,
+      "aliases": [
+        "hakathon",
+        "game jam"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Hackathon-i është një garë ku ekipe programuesish ndërtojnë një projekt nga zero brenda 24–48 orëve. Është mënyrë e shkëlqyer për të mësuar shpejt, për të njohur njerëz dhe për të shtuar një projekt në portofol.",
+        "en": "A hackathon is a competition where teams of programmers build a project from scratch in 24–48 hours. It's a great way to learn fast, meet people and add a project to your portfolio."
+      },
+      "analogy": {
+        "sq": "Si një turne futbolli brenda një fundjave: ndeshje intensive njëra pas tjetrës, me shokë të rinj — edhe pa fituar, kthehesh më i mirë.",
+        "en": "Like a weekend football tournament: intense matches one after another, with new teammates — even without winning, you come back better."
+      },
+      "code": null,
+      "related": [
+        "portfolio",
+        "side-project",
+        "mvp"
+      ]
+    },
+    {
+      "id": "outsourcing",
+      "en": "Outsourcing",
+      "sq": null,
+      "aliases": [
+        "autsorsim",
+        "outsource",
+        "nearshoring"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Outsourcing-u është kur një kompani ia jep punën e programimit një kompanie tjetër, shpesh në një vend tjetër. Shumë kompani IT në Kosovë dhe Shqipëri punojnë kështu për klientë nga Evropa dhe Amerika.",
+        "en": "Outsourcing is when a company hands its programming work to another company, often in another country. Many IT companies in Kosovo and Albania work this way for clients from Europe and America."
+      },
+      "analogy": {
+        "sq": "Si rrobaqepësja e lagjes që qep fustane për një dyqan të madh jashtë shtetit: dyqani i shet me emrin e vet, por puna bëhet këtu.",
+        "en": "Like the neighbourhood seamstress who sews dresses for a big shop abroad: the shop sells them under its own name, but the work is done here."
+      },
+      "code": null,
+      "related": [
+        "remote-work",
+        "freelancer",
+        "junior-senior"
+      ]
+    },
+    {
+      "id": "side-project",
+      "en": "Side project",
+      "sq": "Projekt personal",
+      "aliases": [
+        "projekt anësor",
+        "personal project",
+        "hobby project"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Projekti personal është diçka që e ndërton në kohën e lirë sepse të intereson — një lojë, një faqe, një mjet i vogël. Është mënyra më e mirë për të mësuar dhe për të treguar në portofol se di të ndërtosh diçka të vërtetë. Ky fjalor vetë është një projekt i tillë.",
+        "en": "A side project is something you build in your free time because it interests you — a game, a website, a small tool. It's the best way to learn and to show in your portfolio that you can build something real. This glossary is itself one."
+      },
+      "analogy": {
+        "sq": "Si lojtari që stërvitet vetë në oborr pas shkollës: askush s'ia kërkon, por pikërisht aty bëhet më i mirë.",
+        "en": "Like the player who practises alone in the yard after school: nobody asks them to, but that's exactly where they get better."
+      },
+      "code": null,
+      "related": [
+        "portfolio",
+        "github",
+        "mvp"
+      ]
+    },
+    {
+      "id": "technical-debt",
+      "en": "Technical debt",
+      "sq": "Borxh teknik",
+      "aliases": [
+        "tech debt",
+        "kod i shpejtë"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Borxhi teknik krijohet kur zgjedh një zgjidhje të shpejtë dhe jo të mirë, për të kursyer kohë sot. Si çdo borxh, më vonë duhet „paguar“ — me kohë shtesë për ta rregulluar — dhe sa më shumë pret, aq më shumë rritet.",
+        "en": "Technical debt builds up when you pick a quick-and-dirty solution to save time today. Like any debt, it has to be “paid back” later — with extra time to fix it — and the longer you wait, the bigger it gets."
+      },
+      "analogy": {
+        "sq": "Si kur i fut rrobat në dollap pa i palosur për të fituar kohë: sot kursen pesë minuta, por pas një muaji s'gjen asgjë dhe të duhet një orë për t'i rregulluar.",
+        "en": "Like stuffing clothes into the wardrobe without folding them to save time: you save five minutes today, but a month later you can't find anything and it takes an hour to sort out."
+      },
+      "code": null,
+      "related": [
+        "refactoring",
+        "deadline",
+        "code-review"
+      ]
+    },
+    {
+      "id": "imposter-syndrome",
+      "en": "Imposter syndrome",
+      "sq": "Sindroma e mashtruesit",
+      "aliases": [
+        "impostor syndrome",
+        "sindroma e impostorit",
+        "s'jam mjaft i mirë"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Sindroma e mashtruesit është ndjesia se s'je mjaft i mirë dhe se të tjerët së shpejti do ta zbulojnë — edhe kur po ecën mirë. Shumë programues, edhe me përvojë, e ndiejnë. Kujto: të gjithë kërkojnë në Google, dhe të gjithë e kanë nisur si fillestarë.",
+        "en": "Imposter syndrome is the feeling that you're not good enough and that others will soon find out — even when you're doing well. Many programmers, even experienced ones, feel it. Remember: everyone Googles things, and everyone started as a beginner."
+      },
+      "analogy": {
+        "sq": "Si nxënësi që merr notë të lartë në provim dhe mendon „pata fat, pyetjet ishin të lehta“ — në vend që ta pranojë që mësoi mirë.",
+        "en": "Like the student who gets top marks and thinks “I got lucky, the questions were easy” — instead of accepting that they studied well."
+      },
+      "code": null,
+      "related": [
+        "junior-senior",
+        "mentor",
+        "soft-skills"
+      ]
+    },
+    {
+      "id": "hardware-software",
+      "en": "Hardware / software",
+      "sq": "Pajisje / programe",
+      "aliases": [
+        "hardware",
+        "software",
+        "harduer",
+        "softuer"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "Hardware-i janë pjesët fizike të kompjuterit që i prek — procesori, ekrani, tastiera. Software-i janë programet që punojnë në to — sistemi operativ, shfletuesi, lojërat. Pa software, hardware-i s'bën asgjë; pa hardware, software-i s'ka ku të punojë.",
+        "en": "Hardware is the physical parts of a computer you can touch — the processor, screen, keyboard. Software is the programs that run on it — the operating system, the browser, games. Without software, hardware does nothing; without hardware, software has nowhere to run."
+      },
+      "analogy": {
+        "sq": "Si fletorja dhe ajo që shkruan në të: fletorja (hardware) është po ajo, por përmbajtja (software) e bën fletore matematike apo ditar.",
+        "en": "Like a notebook and what you write in it: the notebook (hardware) is the same, but the contents (software) make it a maths notebook or a diary."
+      },
+      "code": null,
+      "related": [
+        "operating-system",
+        "cpu",
+        "app"
+      ]
+    },
+    {
+      "id": "motherboard",
+      "en": "Motherboard",
+      "sq": "Pllaka amë",
+      "aliases": [
+        "pllakë amë",
+        "mainboard"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "Pllaka amë është pllaka e madhe brenda kompjuterit ku lidhen të gjitha pjesët e tjera: procesori, RAM-i, disku, kartela grafike. Ajo i lejon të flasin me njëra-tjetrën.",
+        "en": "The motherboard is the big board inside a computer that every other part plugs into: the processor, RAM, disk, graphics card. It lets them all talk to each other."
+      },
+      "analogy": {
+        "sq": "Si tryeza e madhe e darkës në familje: të gjithë ulen rreth saj, dhe aty ndahen ushqimi e bisedat.",
+        "en": "Like the big family dinner table: everyone sits around it, and that's where the food and conversations are shared."
+      },
+      "code": null,
+      "related": [
+        "cpu",
+        "ram",
+        "gpu"
+      ]
+    },
+    {
+      "id": "storage-ssd",
+      "en": "Storage (SSD / HDD)",
+      "sq": "Disku (SSD / HDD)",
+      "aliases": [
+        "ssd",
+        "hdd",
+        "hard disk",
+        "disk",
+        "hapësirë ruajtjeje"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "Disku është vendi ku kompjuteri i ruan përgjithmonë skedarët dhe programet, edhe kur fiket. SSD-të janë të shpejta dhe pa pjesë lëvizëse; HDD-të e vjetra janë më të ngadalta, por më të lira për shumë hapësirë.",
+        "en": "Storage is where the computer keeps files and programs permanently, even when it's switched off. SSDs are fast with no moving parts; older HDDs are slower but cheaper for lots of space."
+      },
+      "analogy": {
+        "sq": "Nëse RAM-i është tavolina ku punon tani, disku është rafti i librave: më i ngadaltë për t'u arritur, por gjithçka mbetet aty.",
+        "en": "If RAM is the desk you're working at, storage is the bookcase: slower to reach, but everything stays there."
+      },
+      "code": null,
+      "related": [
+        "ram",
+        "file-system",
+        "backup"
+      ]
+    },
+    {
+      "id": "file-system",
+      "en": "File & folder",
+      "sq": "Skedar dhe dosje",
+      "aliases": [
+        "file",
+        "folder",
+        "directory",
+        "dosje",
+        "skedar",
+        "fajll"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "Skedari është një gjë e ruajtur në kompjuter — një dokument, një foto ose një program. Dosja (folder) është një „kuti“ që mban skedarë dhe dosje të tjera, që t'i mbash të rregullta. Një projekt programimi është thjesht një dosje me skedarë.",
+        "en": "A file is one saved item on a computer — a document, a photo or a program. A folder is a “box” that holds files and other folders to keep them organised. A programming project is just a folder full of files."
+      },
+      "analogy": {
+        "sq": "Si fletoret (skedarët) brenda çantës (dosjes), me një kuti të vogël lapsash brenda saj (dosje brenda dosjes).",
+        "en": "Like notebooks (files) inside a school bag (folder), with a small pencil case inside it (a folder inside a folder)."
+      },
+      "code": null,
+      "related": [
+        "file-path",
+        "file-extension",
+        "storage-ssd"
+      ]
+    },
+    {
+      "id": "file-extension",
+      "en": "File extension",
+      "sq": "Prapashtesa e skedarit",
+      "aliases": [
+        "extension",
+        "ekstension",
+        ".txt",
+        ".exe",
+        ".py"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "Prapashtesa janë shkronjat pas pikës në emrin e skedarit — .html, .py, .jpg — që i tregojnë kompjuterit çfarë lloj skedari është dhe me cilin program ta hapë.",
+        "en": "The file extension is the letters after the dot in a file's name — .html, .py, .jpg — that tell the computer what kind of file it is and which program should open it."
+      },
+      "analogy": {
+        "sq": "Si etiketat në kavanozët e dimrit: „ajvar“, „turshi“, „reçel“ — nga etiketa e di menjëherë çfarë ka brenda dhe si ta përdorësh.",
+        "en": "Like the labels on winter jars: “ajvar”, “pickles”, “jam” — from the label you know straight away what's inside and how to use it."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "from pathlib import Path\nprint(Path(\"detyra.py\").suffix)  # .py\nprint(Path(\"foto.jpg\").suffix)   # .jpg"
+      },
+      "related": [
+        "file-system",
+        "file-path",
+        "data-type"
+      ]
+    },
+    {
+      "id": "file-path",
+      "en": "File path",
+      "sq": "Shtegu i skedarit",
+      "aliases": [
+        "path",
+        "shtegu",
+        "absolute path",
+        "relative path",
+        "rruga e skedarit"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "Shtegu është „adresa“ e një skedari në kompjuter, p.sh. /Users/arta/projekti/index.html. Shtegu absolut nis nga rrënja e diskut; ai relativ nis nga dosja ku je tani, p.sh. css/style.css.",
+        "en": "A file path is a file's “address” on the computer, e.g. /Users/arta/project/index.html. An absolute path starts from the root of the disk; a relative path starts from the folder you're in, e.g. css/style.css."
+      },
+      "analogy": {
+        "sq": "Si adresa e plotë e shtëpisë (absolute) krahasuar me „dy dyer më poshtë“ (relative) — e dyta vlen vetëm nëse e di ku ndodhesh.",
+        "en": "Like a full home address (absolute) versus “two doors down” (relative) — the second only works if you know where you're standing."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "from pathlib import Path\nshtegu = Path(\"css\") / \"style.css\"  # relativ\nprint(shtegu.resolve())            # shtegu i plotë (absolut)"
+      },
+      "related": [
+        "file-system",
+        "url",
+        "terminal"
+      ]
+    },
+    {
+      "id": "router",
+      "en": "Router",
+      "sq": null,
+      "aliases": [
+        "ruter",
+        "wifi router",
+        "modem"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "Router-i është pajisja në shtëpi që i lidh të gjitha pajisjet e tua — telefonin, laptopin, televizorin — me njëra-tjetrën dhe me internetin. Ai ia dërgon të dhënat pajisjes së duhur, si një postier.",
+        "en": "A router is the device at home that connects all your devices — phone, laptop, TV — to each other and to the internet. It sends data to the right device, like a postman."
+      },
+      "analogy": {
+        "sq": "Si mamaja që e merr postën te dera dhe ia jep secilit atë që i takon: letrën e babait babait, revistën ty.",
+        "en": "Like Mum picking up the post at the door and handing each person what's theirs: Dad's letter to Dad, the magazine to you."
+      },
+      "code": null,
+      "related": [
+        "wifi",
+        "ip-address",
+        "bandwidth"
+      ]
+    },
+    {
+      "id": "wifi",
+      "en": "Wi-Fi",
+      "sq": null,
+      "aliases": [
+        "wifi",
+        "wireless",
+        "internet pa kabllo",
+        "hotspot"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "Wi-Fi-ja është mënyra si pajisjet lidhen me router-in dhe me internetin pa kabllo, përmes valëve radio. Sa më larg router-it, aq më i dobët sinjali — dhe muret e trasha e ngadalësojnë.",
+        "en": "Wi-Fi is how devices connect to the router and the internet without cables, using radio waves. The further from the router, the weaker the signal — and thick walls slow it down."
+      },
+      "analogy": {
+        "sq": "Si të flasësh me dikë në dhomën tjetër pa telefon: dëgjoheni mirë kur jeni afër, por sa më shumë mure në mes, aq më keq.",
+        "en": "Like talking to someone in the next room without a phone: you hear each other well up close, but the more walls in between, the worse it gets."
+      },
+      "code": null,
+      "related": [
+        "router",
+        "bandwidth",
+        "latency"
+      ]
+    },
+    {
+      "id": "internet-vs-web",
+      "en": "Internet vs Web",
+      "sq": "Interneti dhe ueb-i",
+      "aliases": [
+        "internet",
+        "web",
+        "www",
+        "world wide web",
+        "ueb"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "Interneti është rrjeti botëror që lidh miliona kompjuterë me kabllo dhe valë. Ueb-i (www) është vetëm një nga shërbimet që punojnë mbi internet — faqet që i hap në shfletues. Email-i, lojërat online dhe shumë aplikacione e përdorin internetin, por s'janë „ueb“.",
+        "en": "The internet is the worldwide network connecting millions of computers through cables and radio. The web (www) is just one of the services that run on the internet — the pages you open in a browser. Email, online games and many apps use the internet, but aren't “the web”."
+      },
+      "analogy": {
+        "sq": "Si rrugët e vendit dhe autobusët: interneti janë rrugët, ueb-i është një linjë autobusi që udhëton mbi to — por në të njëjtat rrugë qarkullojnë edhe kamionë e vetura.",
+        "en": "Like a country's roads and its buses: the internet is the roads, the web is one bus line running on them — but trucks and cars use the same roads too."
+      },
+      "code": null,
+      "related": [
+        "browser",
+        "http",
+        "server"
+      ]
+    },
+    {
+      "id": "bandwidth",
+      "en": "Bandwidth / internet speed",
+      "sq": "Shpejtësia e internetit",
+      "aliases": [
+        "bandwidth",
+        "mbps",
+        "download speed",
+        "upload",
+        "shpejtësi"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "Bandwidth-i është sa të dhëna mund të kalojnë në lidhjen tënde në një sekondë, zakonisht në Mbps. Sa më i madh, aq më shpejt shkarkohen skedarët dhe aq më shumë njerëz mund ta përdorin njëherësh.",
+        "en": "Bandwidth is how much data can pass through your connection each second, usually measured in Mbps. The bigger it is, the faster files download and the more people can use it at once."
+      },
+      "analogy": {
+        "sq": "Si gjerësia e rrugës: në një rrugë me katër korsi kalojnë njëherësh më shumë vetura se në një rrugicë fshati.",
+        "en": "Like the width of a road: a four-lane road lets more cars through at once than a village lane."
+      },
+      "code": null,
+      "related": [
+        "latency",
+        "router",
+        "wifi"
+      ]
+    },
+    {
+      "id": "latency",
+      "en": "Latency (ping)",
+      "sq": "Vonesa (ping)",
+      "aliases": [
+        "ping",
+        "lag",
+        "ms",
+        "vonesë"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "Latency-ja (ose ping-u) është koha që i duhet një mesazhi të shkojë te serveri dhe të kthehet, në milisekonda. Në lojërat online ping-u i ulët është shumë i rëndësishëm; ping-u i lartë do të thotë „lag“.",
+        "en": "Latency (or ping) is how long a message takes to reach the server and come back, in milliseconds. In online games low ping matters a lot; high ping means “lag”."
+      },
+      "analogy": {
+        "sq": "Bandwidth-i është sa e gjerë është rruga; latency-ja është sa larg e ke shtëpinë e shokut. Edhe në autostradë, nëse shoku jeton larg, rruga zgjat.",
+        "en": "Bandwidth is how wide the road is; latency is how far away your friend's house is. Even on a motorway, if your friend lives far away, the trip takes time."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "ping google.com\n# 64 bytes from ...: time=18.4 ms   ← kjo është vonesa"
+      },
+      "related": [
+        "bandwidth",
+        "server",
+        "cdn"
+      ]
+    },
+    {
+      "id": "driver",
+      "en": "Driver",
+      "sq": null,
+      "aliases": [
+        "drajver",
+        "device driver"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "Driver-i është një program i vogël që i mëson sistemit operativ si të flasë me një pajisje — printerin, kartelën grafike, mausin. Kur një pajisje s'punon, shpesh i duhet një driver i ri.",
+        "en": "A driver is a small program that teaches the operating system how to talk to a device — a printer, a graphics card, a mouse. When a device won't work, it often needs a new driver."
+      },
+      "analogy": {
+        "sq": "Si përkthyesi që e merr gjyshja kur shkon te mjeku jashtë shtetit: pa të, s'merren vesh dot.",
+        "en": "Like the interpreter grandma brings to a doctor's appointment abroad: without them, nobody understands each other."
+      },
+      "code": null,
+      "related": [
+        "operating-system",
+        "hardware-software",
+        "gpu"
+      ]
+    },
+    {
+      "id": "boot",
+      "en": "Boot (startup)",
+      "sq": "Nisja e kompjuterit",
+      "aliases": [
+        "booting",
+        "restart",
+        "rinisje",
+        "bios"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "Boot-i është procesi kur e ndez kompjuterin: hardware-i kontrollohet, pastaj ngarkohet sistemi operativ derisa të shfaqet ekrani i hyrjes. „Rinise kompjuterin“ shpesh e rregullon një problem, sepse gjithçka nis nga e para.",
+        "en": "Booting is what happens when you switch the computer on: the hardware checks itself, then the operating system loads until the login screen appears. “Restart your computer” often fixes a problem, because everything starts fresh."
+      },
+      "analogy": {
+        "sq": "Si rutina e mëngjesit: zgjohesh, lahesh, vishesh, ha mëngjes — vetëm pas gjithë kësaj je gati për ditën.",
+        "en": "Like your morning routine: wake up, wash, get dressed, eat breakfast — only after all that are you ready for the day."
+      },
+      "code": null,
+      "related": [
+        "operating-system",
+        "kernel",
+        "ram"
+      ]
+    },
+    {
+      "id": "process",
+      "en": "Process",
+      "sq": "Proces",
+      "aliases": [
+        "procesi",
+        "task manager",
+        "activity monitor",
+        "pid"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "Procesi është një program që po punon tani në kompjuter. Çdo aplikacion i hapur është të paktën një proces, me memorien dhe numrin e vet (PID). Te Task Manager (Windows) ose Activity Monitor (Mac) i sheh të gjitha dhe mund ta mbyllësh atë që ka ngecur.",
+        "en": "A process is a program that's running on the computer right now. Every open app is at least one process, with its own memory and number (PID). In Task Manager (Windows) or Activity Monitor (Mac) you can see them all and close one that's frozen."
+      },
+      "analogy": {
+        "sq": "Nëse programi është receta, procesi është gatimi që po ndodh tani në sobë — mund të kesh disa gjella që gatuhen njëherësh.",
+        "en": "If a program is the recipe, a process is the cooking happening on the stove right now — you can have several dishes cooking at once."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import os\nprint(\"Ky program është procesi me numrin\", os.getpid())"
+      },
+      "related": [
+        "operating-system",
+        "ram",
+        "cpu"
+      ]
+    },
+    {
+      "id": "kernel",
+      "en": "Kernel",
+      "sq": "Bërthama e sistemit",
+      "aliases": [
+        "kerneli",
+        "linux kernel",
+        "bërthamë"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "Kernel-i është zemra e sistemit operativ: ai vendos cili program e përdor procesorin, memorien dhe pajisjet, dhe kur. Programet e zakonshme s'flasin direkt me hardware-in — i kërkojnë kernel-it.",
+        "en": "The kernel is the core of the operating system: it decides which program gets to use the processor, memory and devices, and when. Ordinary programs don't talk to the hardware directly — they ask the kernel."
+      },
+      "analogy": {
+        "sq": "Si sekretaria e shkollës që cakton kush e merr sallën e sportit dhe kur: klasat s'hyjnë vetë kur të duan, i kërkojnë asaj.",
+        "en": "Like the school office assigning who gets the sports hall and when: classes don't just walk in whenever they want — they ask the office."
+      },
+      "code": null,
+      "related": [
+        "operating-system",
+        "linux",
+        "process"
+      ]
+    },
+    {
+      "id": "encoding-utf8",
+      "en": "Character encoding (UTF-8)",
+      "sq": "Kodimi i karaktereve",
+      "aliases": [
+        "utf-8",
+        "utf8",
+        "unicode",
+        "ascii",
+        "encoding",
+        "kodim"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "Kodimi i karaktereve është rregulli si kthehen shkronjat në numra që kompjuteri i ruan. UTF-8 është standardi që mbështet çdo gjuhë, përfshirë ë dhe ç; kur sheh „Ã«“ në vend të „ë“, zakonisht kodimi është gabim.",
+        "en": "Character encoding is the rule for turning letters into numbers the computer can store. UTF-8 is the standard that supports every language, including ë and ç; when you see “Ã«” instead of “ë”, the encoding is usually wrong."
+      },
+      "analogy": {
+        "sq": "Si alfabeti Morse ose numërimi i shkronjave në një lojë me kode të fshehta: të dy palët duhet ta përdorin të njëjtin kod, përndryshe mesazhi del pa kuptim.",
+        "en": "Like Morse code, or numbering letters in a secret-code game: both sides must use the same code, or the message comes out as gibberish."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "teksti = \"Përshëndetje\"\nbajtet = teksti.encode(\"utf-8\")\nprint(bajtet)                  # b'P\\xc3\\xabrsh\\xc3\\xabndetje'\nprint(bajtet.decode(\"utf-8\"))  # Përshëndetje"
+      },
+      "related": [
+        "bit-byte",
+        "string",
+        "html"
+      ]
+    },
+    {
+      "id": "compression-zip",
+      "en": "Compression (ZIP)",
+      "sq": "Kompresim (ZIP)",
+      "aliases": [
+        "zip",
+        "rar",
+        "kompresim",
+        "unzip",
+        "ngjeshje"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "Kompresimi i bën skedarët më të vegjël duke gjetur dhe shkurtuar pjesët që përsëriten, që të zënë më pak vend dhe të dërgohen më shpejt. Skedarët .zip mbledhin shumë skedarë në një dhe i ngjeshin.",
+        "en": "Compression makes files smaller by finding and shortening the repeated parts, so they take up less space and send faster. .zip files bundle many files into one and squeeze them down."
+      },
+      "analogy": {
+        "sq": "Si kur e fut jorganin në një qese vakumi para se ta vendosësh në dollap: i njëjti jorgan, por zë sa një e treta e vendit.",
+        "en": "Like putting a duvet into a vacuum bag before storing it: same duvet, but it takes up a third of the space."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import zipfile\nwith zipfile.ZipFile(\"projekti.zip\", \"w\") as z:\n    z.write(\"index.html\")\n    z.write(\"style.css\")"
+      },
+      "related": [
+        "file-system",
+        "file-extension",
+        "bit-byte"
+      ]
+    },
+    {
+      "id": "io-devices",
+      "en": "Input & output devices",
+      "sq": "Pajisjet hyrëse dhe dalëse",
+      "aliases": [
+        "input device",
+        "output device",
+        "keyboard",
+        "mouse",
+        "monitor",
+        "printer",
+        "tastierë",
+        "maus",
+        "periferike"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "Pajisjet hyrëse i japin të dhëna kompjuterit — tastiera, mausi, mikrofoni, kamera. Pajisjet dalëse e tregojnë rezultatin — ekrani, altoparlantët, printeri. Ekrani me prekje është të dyja njëherësh.",
+        "en": "Input devices give data to the computer — keyboard, mouse, microphone, camera. Output devices show the result — screen, speakers, printer. A touchscreen is both at once."
+      },
+      "analogy": {
+        "sq": "Si në klasë: ti pyet me gojë (hyrja), mësuesja e shkruan përgjigjen në tabelë (dalja).",
+        "en": "Like in class: you ask a question out loud (input), the teacher writes the answer on the board (output)."
+      },
+      "code": null,
+      "related": [
+        "hardware-software",
+        "driver",
+        "input"
+      ]
+    },
+    {
+      "id": "keyboard-shortcut",
+      "en": "Keyboard shortcut",
+      "sq": "Shkurtore tastiere",
+      "aliases": [
+        "shortcut",
+        "ctrl+c",
+        "ctrl+v",
+        "ctrl+z",
+        "cmd+c",
+        "shkurtore"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "Shkurtoret e tastierës janë kombinime tastesh që e bëjnë një veprim shpejt: Ctrl+C kopjon, Ctrl+V ngjit, Ctrl+Z zhbën, Ctrl+S ruan (në Mac me Cmd). Programuesit i përdorin gjithë kohën — kursejnë shumë minuta çdo ditë.",
+        "en": "Keyboard shortcuts are key combinations that do something quickly: Ctrl+C copies, Ctrl+V pastes, Ctrl+Z undoes, Ctrl+S saves (Cmd on a Mac). Programmers use them all the time — they save many minutes every day."
+      },
+      "analogy": {
+        "sq": "Si një pasim me një prekje, në vend që ta ndalosh topin, ta rregullosh e pastaj ta pasosh — i njëjti rezultat, shumë më shpejt.",
+        "en": "Like a one-touch pass instead of stopping the ball, setting it and then passing — same result, much faster."
+      },
+      "code": null,
+      "related": [
+        "ide",
+        "terminal",
+        "io-devices"
+      ]
+    },
+    {
+      "id": "software-update",
+      "en": "Software update",
+      "sq": "Përditësim",
+      "aliases": [
+        "update",
+        "upgrade",
+        "përditëso",
+        "version i ri"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "Përditësimi është një version i ri i një programi që rregullon bug-e, mbyll dobësi sigurie ose shton veçori. Ndonjëherë të mërzitin, por përditësimet e sigurisë janë mbrojtja më e thjeshtë që ke.",
+        "en": "An update is a new version of a program that fixes bugs, closes security holes or adds features. They can be annoying, but security updates are the simplest protection you have."
+      },
+      "analogy": {
+        "sq": "Si servisi i rregullt i veturës: e ndërron vajin dhe frenat para se të prishen, jo pasi të kesh mbetur në rrugë.",
+        "en": "Like a car's regular service: you change the oil and brakes before they fail, not after you've broken down."
+      },
+      "code": null,
+      "related": [
+        "vulnerability",
+        "bug",
+        "operating-system"
+      ]
+    },
+    {
+      "id": "app",
+      "en": "App (application)",
+      "sq": "Aplikacion",
+      "aliases": [
+        "aplikacioni",
+        "application",
+        "program",
+        "apk"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "Aplikacioni (app) është një program që kryen një punë të caktuar për përdoruesin — shfletuesi, kalkulatori, WhatsApp-i, një lojë. Mund të jetë në telefon, në kompjuter ose në ueb (web app), si ky fjalor.",
+        "en": "An app (application) is a program that does a specific job for the user — a browser, a calculator, WhatsApp, a game. It can live on a phone, a computer or the web (a web app), like this glossary."
+      },
+      "analogy": {
+        "sq": "Si dyqanet e ndryshme në një qendër tregtare: secili ka punën e vet — njëri shet këpucë, tjetri ushqim — por të gjitha janë në të njëjtën ndërtesë (telefonin).",
+        "en": "Like the different shops in a mall: each has its own job — one sells shoes, another food — but they're all in the same building (your phone)."
+      },
+      "code": null,
+      "related": [
+        "hardware-software",
+        "operating-system",
+        "frontend"
+      ]
+    },
+    {
+      "id": "pixel-resolution",
+      "en": "Pixel & resolution",
+      "sq": "Piksel dhe rezolucion",
+      "aliases": [
+        "pixel",
+        "piksel",
+        "resolution",
+        "rezolucion",
+        "1080p",
+        "4k",
+        "px"
+      ],
+      "category": "computer",
+      "explanation": {
+        "sq": "Pikseli është pika më e vogël me ngjyrë në një ekran ose foto. Rezolucioni është sa piksele ka — p.sh. 1920×1080. Sa më shumë piksele, aq më e mprehtë figura. Në CSS, njësia px u referohet pikselëve.",
+        "en": "A pixel is the smallest coloured dot on a screen or in an image. Resolution is how many pixels there are — e.g. 1920×1080. The more pixels, the sharper the picture. In CSS, the px unit refers to pixels."
+      },
+      "analogy": {
+        "sq": "Si qilimi që gjyshja e ka thurur me mijëra nyje të vogla: nga afër sheh vetëm pika me ngjyra, nga larg sheh figurën e plotë.",
+        "en": "Like a rug grandma wove from thousands of tiny knots: up close you see only coloured dots, from further away you see the whole picture."
+      },
+      "code": null,
+      "related": [
+        "svg",
+        "responsive-design",
+        "css"
       ]
     }
   ]
