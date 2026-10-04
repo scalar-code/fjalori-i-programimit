@@ -5063,8 +5063,7 @@
       "sq": "Grup të dhënash",
       "aliases": [
         "data set",
-        "të dhëna",
-        "csv"
+        "të dhëna"
       ],
       "category": "data-ai",
       "explanation": {
@@ -12979,6 +12978,761 @@
         "ide",
         "java",
         "debug"
+      ]
+    },
+    {
+      "id": "hello-world",
+      "en": "Hello, World!",
+      "sq": "Përshëndetje, botë!",
+      "aliases": [
+        "hello world",
+        "programi i parë",
+        "pershendetje bote"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "„Hello, World!“ është programi i parë tradicional që shkruan kur mëson një gjuhë të re: thjesht shfaq një përshëndetje në ekran. Nëse punon, do të thotë që gjithçka është instaluar si duhet dhe je gati të fillosh.",
+        "en": "“Hello, World!” is the traditional first program you write when learning a new language: it just shows a greeting on screen. If it works, everything is installed correctly and you're ready to start."
+      },
+      "analogy": {
+        "sq": "Si fjala e parë që shkruan në një fletore të re: s'ka rëndësi çfarë thotë — tregon që lapsi shkruan dhe fletorja është gati.",
+        "en": "Like the first word you write in a new notebook: what it says doesn't matter — it shows the pen works and the notebook's ready."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "print(\"Përshëndetje, botë!\")\n# JavaScript: console.log(\"Përshëndetje, botë!\");"
+      },
+      "related": [
+        "print-function",
+        "programming-language",
+        "syntax"
+      ]
+    },
+    {
+      "id": "statement-expression",
+      "en": "Statement vs expression",
+      "sq": "Urdhër dhe shprehje",
+      "aliases": [
+        "statement",
+        "expression",
+        "shprehje",
+        "urdhër"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Shprehja (expression) është çdo copë kodi që jep një vlerë — p.sh. 2 + 3 ose emri.upper(). Urdhri (statement) është një rresht që bën diçka — p.sh. krijon një variabël, ose një if. Shumë urdhra kanë shprehje brenda.",
+        "en": "An expression is any piece of code that produces a value — like 2 + 3 or name.upper(). A statement is a line that does something — like creating a variable, or an if. Many statements contain expressions."
+      },
+      "analogy": {
+        "sq": "Shprehja është si „2 lugë sheqer“ — një sasi; urdhri është si „hidh 2 lugë sheqer në kafe“ — një veprim.",
+        "en": "An expression is like “2 spoons of sugar” — an amount; a statement is like “add 2 spoons of sugar to the coffee” — an action."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "2 + 3                 # shprehje: jep 5\ntotali = 2 + 3        # urdhër që përdor një shprehje\nif totali > 4: print(\"Më shumë se 4\")  # urdhër if"
+      },
+      "related": [
+        "syntax",
+        "operator",
+        "condition"
+      ]
+    },
+    {
+      "id": "assignment",
+      "en": "Assignment (=)",
+      "sq": "Caktimi i vlerës",
+      "aliases": [
+        "assign",
+        "caktim",
+        "= vs =="
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Caktimi me shenjën = i jep një vlerë një variable: mosha = 16. Kujdes: në programim = s'do të thotë „është i barabartë me“ si në matematikë — për krahasim përdoret ==.",
+        "en": "Assignment with the = sign gives a variable a value: age = 16. Careful: in programming = doesn't mean “is equal to” like in maths — for comparing you use ==."
+      },
+      "analogy": {
+        "sq": "Si ta ngjitësh etiketën me emër në një kuti: „kjo kuti tani quhet mosha dhe ka 16 brenda“ — jo pyetje, por veprim.",
+        "en": "Like sticking a name label on a box: “this box is now called age and holds 16” — not a question, an action."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "mosha = 16          # caktim\nmosha = mosha + 1   # e njëjta variabël, vlerë e re: 17\nprint(mosha == 17)  # krahasim: True"
+      },
+      "related": [
+        "variable",
+        "operator",
+        "strict-equality"
+      ]
+    },
+    {
+      "id": "function-call",
+      "en": "Function call",
+      "sq": "Thirrja e funksionit",
+      "aliases": [
+        "call",
+        "thirrje",
+        "invoke"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Thirrja e funksionit është momenti kur e përdor një funksion: shkruan emrin e tij me kllapa — p.sh. pershendet(\"Arta\") — dhe kodi brenda tij ekzekutohet. Pa kllapat, funksioni s'ekzekutohet.",
+        "en": "A function call is the moment you use a function: you write its name with brackets — like greet(\"Arta\") — and the code inside runs. Without the brackets, the function doesn't run."
+      },
+      "analogy": {
+        "sq": "Receta (funksioni) është në libër, por gjella bëhet vetëm kur dikush thotë „gatuaje tani!“ — kjo është thirrja.",
+        "en": "The recipe (the function) is in the book, but the dish only gets made when someone says “cook it now!” — that's the call."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def pershendet(emri):\n    print(\"Përshëndetje,\", emri)\n\npershendet(\"Arta\")  # thirrja — tani ekzekutohet"
+      },
+      "related": [
+        "function",
+        "argument",
+        "return-value"
+      ]
+    },
+    {
+      "id": "switch-case",
+      "en": "switch / match",
+      "sq": "Zgjedhje me shumë raste",
+      "aliases": [
+        "switch case",
+        "match case",
+        "switch statement"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "switch (në JavaScript, Java, C) ose match (në Python) zgjedh çfarë të bëjë sipas vlerës së një variable, pa shkruar shumë if/else me radhë. Është më i lexueshëm kur ke shumë raste të mundshme.",
+        "en": "switch (in JavaScript, Java, C) or match (in Python) chooses what to do based on a variable's value, without writing lots of if/else in a row. It's more readable when there are many possible cases."
+      },
+      "analogy": {
+        "sq": "Si makina e kafesë me butona: shtyp 1 — espreso, 2 — makiato, 3 — çaj. Një zgjedhje, shumë rezultate të mundshme.",
+        "en": "Like a coffee machine with buttons: press 1 — espresso, 2 — macchiato, 3 — tea. One choice, many possible results."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "match dita:\n    case \"e shtunë\" | \"e diel\": print(\"Fundjavë!\")\n    case _: print(\"Ditë shkolle\")"
+      },
+      "related": [
+        "condition",
+        "logical-operators",
+        "enum"
+      ]
+    },
+    {
+      "id": "truthy-falsy",
+      "en": "Truthy & falsy",
+      "sq": null,
+      "aliases": [
+        "truthy",
+        "falsy"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Në Python dhe JavaScript çdo vlerë mund të përdoret në një if: disa vlera llogariten si „false“ (falsy) — 0, teksti bosh \"\", lista bosh, null/None — dhe të gjitha të tjerat si „true“ (truthy).",
+        "en": "In Python and JavaScript, any value can be used in an if: some values count as “false” (falsy) — 0, the empty string \"\", an empty list, null/None — and everything else counts as “true” (truthy)."
+      },
+      "analogy": {
+        "sq": "Si kur mamaja pyet „A ka qumësht në frigorifer?“: një shishe bosh llogaritet „jo“, edhe pse shishja është aty.",
+        "en": "Like Mum asking “Is there milk in the fridge?”: an empty bottle counts as “no”, even though the bottle is there."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "emri = \"\"\nif not emri:\n    print(\"Shkruaj emrin!\")  # teksti bosh është falsy\nif [1, 2]: print(\"Lista ka elemente\")  # truthy"
+      },
+      "related": [
+        "boolean",
+        "condition",
+        "null"
+      ]
+    },
+    {
+      "id": "concatenation",
+      "en": "Concatenation",
+      "sq": "Bashkimi i tekstit",
+      "aliases": [
+        "concat",
+        "bashkim teksti",
+        "string concatenation"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Concatenation do të thotë t'i bashkosh dy ose më shumë tekste në një, zakonisht me +. Kujdes: numrat duhet të kthehen në tekst para se t'i bashkosh — ose përdor f-string ose template literal.",
+        "en": "Concatenation means joining two or more strings into one, usually with +. Careful: numbers must be turned into text before joining — or use an f-string or template literal."
+      },
+      "analogy": {
+        "sq": "Si t'i lidhësh vagonët e trenit lodër njëri pas tjetrit: „Për“ + „shën“ + „detje“ = një tren i vetëm.",
+        "en": "Like coupling toy train carriages one after another: “Hel” + “lo” + “!” = one single train."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "emri = \"Arta\"\nprint(\"Përshëndetje, \" + emri + \"!\")\nprint(\"Mosha: \" + str(16))  # numri kthehet në tekst"
+      },
+      "related": [
+        "string",
+        "f-string",
+        "template-literal"
+      ]
+    },
+    {
+      "id": "side-effect",
+      "en": "Side effect",
+      "sq": "Efekt anësor",
+      "aliases": [
+        "side effects",
+        "efekte anësore"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Efekti anësor është kur një funksion ndryshon diçka jashtë vetes — shkruan në ekran, ndryshon një variabël globale, ruan në databazë — përveç kthimit të rezultatit. S'janë të këqija, por duhen mbajtur nën kontroll.",
+        "en": "A side effect is when a function changes something outside itself — prints to the screen, changes a global variable, saves to a database — besides returning its result. They're not bad, but they need keeping under control."
+      },
+      "analogy": {
+        "sq": "Si kur e gatuan gjellën, por e lë kuzhinën rrëmujë: gjella (rezultati) del, por ke ndryshuar edhe diçka tjetër.",
+        "en": "Like cooking a dish but leaving the kitchen a mess: the dish (the result) comes out, but you've changed something else too."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "totali = 0\ndef shto(x):\n    global totali\n    totali += x  # efekt anësor: ndryshon diçka jashtë funksionit"
+      },
+      "related": [
+        "pure-function",
+        "function",
+        "scope"
+      ]
+    },
+    {
+      "id": "pure-function",
+      "en": "Pure function",
+      "sq": "Funksion i pastër",
+      "aliases": [
+        "pure"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Funksioni i pastër jep gjithmonë të njëjtin rezultat për të njëjtat të dhëna dhe s'ndryshon asgjë jashtë vetes. Testohet dhe kuptohet lehtë — si funksionet në matematikë.",
+        "en": "A pure function always gives the same result for the same inputs and changes nothing outside itself. It's easy to test and understand — like functions in maths."
+      },
+      "analogy": {
+        "sq": "Si kalkulatori: 2 + 2 jep gjithmonë 4, sa herë që ta shtypësh, dhe s'të ndryshon asgjë në tavolinë.",
+        "en": "Like a calculator: 2 + 2 always gives 4, however many times you press it, and nothing on your desk changes."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def katror(x):\n    return x * x  # i pastër: e njëjta hyrje → i njëjti rezultat"
+      },
+      "related": [
+        "side-effect",
+        "functional-programming",
+        "function"
+      ]
+    },
+    {
+      "id": "mutable-immutable",
+      "en": "Mutable vs immutable",
+      "sq": "I ndryshueshëm dhe i pandryshueshëm",
+      "aliases": [
+        "mutable",
+        "immutable",
+        "i pandryshueshëm",
+        "i ndryshueshëm"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Një vlerë e ndryshueshme (mutable) mund të ndryshohet pasi krijohet — si lista në Python. Një e pandryshueshme (immutable) s'ndryshon dot — si tekstet dhe tuple-t; çdo „ndryshim“ krijon një vlerë të re.",
+        "en": "A mutable value can be changed after it's created — like a Python list. An immutable one can't — like strings and tuples; every “change” creates a new value."
+      },
+      "analogy": {
+        "sq": "Lista është si fletorja me laps — e fshin dhe e rishkruan; teksti është si fleta e printuar — për ta ndryshuar, printon një të re.",
+        "en": "A list is like a notebook in pencil — you rub out and rewrite; a string is like a printed sheet — to change it, you print a new one."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "lista = [1, 2]; lista.append(3)  # mutable: e njëjta listë ndryshon\nemri = \"arta\"; emri.upper()       # immutable: krijon tekst të ri\nprint(emri)                        # ende \"arta\""
+      },
+      "related": [
+        "list",
+        "tuple",
+        "string"
+      ]
+    },
+    {
+      "id": "value-vs-reference",
+      "en": "Value vs reference",
+      "sq": "Vlerë dhe referencë",
+      "aliases": [
+        "by reference",
+        "by value",
+        "referencë"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Kur ia jep një numër ose tekst një variable tjetër, kopjohet vlera. Por me lista dhe objekte, të dyja variablat shpesh tregojnë te i njëjti objekt (referencë) — ndryshon njërën, ndryshon edhe tjetra. Ky është burim i shumë bug-eve.",
+        "en": "When you assign a number or string to another variable, the value is copied. But with lists and objects, both variables often point to the same object (a reference) — change one and the other changes too. This causes lots of bugs."
+      },
+      "analogy": {
+        "sq": "T'ia japësh shokut një fotokopje të shënimeve (vlerë) është ndryshe nga t'ia japësh fletoren tënde (referencë): po shkroi në fletore, ndryshon edhe e jotja.",
+        "en": "Giving a friend a photocopy of your notes (value) is different from giving them your notebook (reference): if they write in it, yours changes too."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "a = [1, 2]\nb = a        # b tregon te e NJËJTA listë\nb.append(3)\nprint(a)     # [1, 2, 3] — u ndryshua edhe a!"
+      },
+      "related": [
+        "mutable-immutable",
+        "pointer",
+        "object"
+      ]
+    },
+    {
+      "id": "runtime",
+      "en": "Runtime vs compile time",
+      "sq": "Koha e ekzekutimit dhe e kompajlimit",
+      "aliases": [
+        "runtime",
+        "compile time",
+        "runtime error",
+        "gabim në ekzekutim"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Compile time është kur kodi përkthehet para se të nisë; runtime është kur programi po punon. Gabimet e sintaksës kapen herët, ndërsa gabimet në runtime — p.sh. pjesëtimi me zero — dalin vetëm kur programi arrin në atë rresht.",
+        "en": "Compile time is when code is translated before it starts; runtime is while the program is running. Syntax errors are caught early, while runtime errors — like dividing by zero — only appear when the program reaches that line."
+      },
+      "analogy": {
+        "sq": "Compile time është kur e lexon recetën para se të gatuash dhe vëren që mungon një hap; runtime është kur je duke gatuar dhe zbulon që s'ke vezë.",
+        "en": "Compile time is reading the recipe before cooking and spotting a missing step; runtime is when you're mid-cooking and find out you're out of eggs."
+      },
+      "code": null,
+      "related": [
+        "compiler",
+        "error",
+        "syntax"
+      ]
+    },
+    {
+      "id": "stack-trace",
+      "en": "Stack trace",
+      "sq": null,
+      "aliases": [
+        "traceback",
+        "stacktrace"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Stack trace-i është mesazhi i gjatë që shfaqet kur programi rrëzohet: tregon llojin e gabimit dhe rrugën e saktë — cili skedar, cili rresht, cili funksion — deri te vendi ku ndodhi. Lexoje nga fundi: aty zakonisht është shkaku.",
+        "en": "A stack trace is the long message shown when a program crashes: it gives the type of error and the exact path — which file, which line, which function — to where it happened. Read it from the bottom: that's usually where the cause is."
+      },
+      "analogy": {
+        "sq": "Si gjurmët me baltë nëpër shtëpi: tregojnë saktë nga hyri dikush dhe ku shkoi — deri te dhoma ku ndaloi.",
+        "en": "Like muddy footprints through the house: they show exactly where someone came in and where they went — right up to the room where they stopped."
+      },
+      "code": {
+        "language": "text",
+        "snippet": "Traceback (most recent call last):\n  File \"detyra.py\", line 3, in <module>\n    print(10 / 0)\nZeroDivisionError: division by zero"
+      },
+      "related": [
+        "error",
+        "debug",
+        "bug"
+      ]
+    },
+    {
+      "id": "breakpoint",
+      "en": "Breakpoint",
+      "sq": "Pikë ndalimi",
+      "aliases": [
+        "debugger",
+        "pikë ndalimi",
+        "breakpoints"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Breakpoint-i është një shenjë që e vendos në një rresht kodi te IDE-ja ose te DevTools: kur programi arrin aty, ndalet, dhe ti i sheh vlerat e të gjitha variablave dhe e ekzekuton kodin hap pas hapi.",
+        "en": "A breakpoint is a marker you put on a line of code in your IDE or DevTools: when the program reaches it, it pauses, and you can see every variable's value and step through the code line by line."
+      },
+      "analogy": {
+        "sq": "Si VAR-i që e ndal lojën në momentin e duhur: e shikon me qetësi çdo lojtar dhe çdo lëvizje para se të vazhdojë.",
+        "en": "Like VAR freezing play at the right moment: you calmly look at every player and every move before carrying on."
+      },
+      "code": null,
+      "related": [
+        "debug",
+        "ide",
+        "devtools"
+      ]
+    },
+    {
+      "id": "rubber-duck",
+      "en": "Rubber duck debugging",
+      "sq": "Debug me rosën e gomës",
+      "aliases": [
+        "rubber duck",
+        "rosa e gomës",
+        "rubber ducking"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Rubber duck debugging është një truk i thjeshtë: ia shpjegon kodin rresht pas rreshti dikujt — qoftë edhe një rose gome mbi tavolinë. Shpesh, ndërsa shpjegon, e kupton vetë ku është gabimi.",
+        "en": "Rubber duck debugging is a simple trick: you explain your code line by line to someone — even a rubber duck on your desk. Often, while explaining, you realise where the mistake is."
+      },
+      "analogy": {
+        "sq": "Si kur ia shpjegon shokut një ushtrim matematike dhe, në mes të fjalisë, thua: „Aha, tani e pashë gabimin!“",
+        "en": "Like explaining a maths problem to a friend and, mid-sentence, saying: “Oh, now I see the mistake!”"
+      },
+      "code": null,
+      "related": [
+        "debug",
+        "bug",
+        "pair-programming"
+      ]
+    },
+    {
+      "id": "off-by-one",
+      "en": "Off-by-one error",
+      "sq": "Gabim me një",
+      "aliases": [
+        "off by one",
+        "obo",
+        "gabim me nje"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Gabimi me një ndodh kur një cikël ose indeks shkon një hap më shumë ose më pak se duhet — p.sh. sepse harron që numërimi fillon nga 0, ose përdor <= në vend të <. Është ndër bug-et më të shpeshta.",
+        "en": "An off-by-one error is when a loop or index goes one step too far or not far enough — for example because you forget counting starts at 0, or use <= instead of <. It's one of the most common bugs."
+      },
+      "analogy": {
+        "sq": "Si kur numëron shtyllat e gardhit: 10 metra me një shtyllë çdo metër s'kanë 10 shtylla, por 11 — gjithmonë një më shumë se mendon.",
+        "en": "Like counting fence posts: 10 metres with a post every metre isn't 10 posts, it's 11 — always one more than you think."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "lista = [\"a\", \"b\", \"c\"]\nfor i in range(len(lista) + 1):  # gabim: shkon një hap më shumë\n    print(lista[i])               # IndexError kur i = 3"
+      },
+      "related": [
+        "array-index",
+        "loop",
+        "bug"
+      ]
+    },
+    {
+      "id": "stack-overflow-site",
+      "en": "Stack Overflow",
+      "sq": null,
+      "aliases": [
+        "stackoverflow"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Stack Overflow-i është faqja më e madhe e pyetjeve dhe përgjigjeve për programues: pothuajse për çdo gabim që të del, dikush ka pyetur më parë. Kopjo mesazhin e gabimit në Google dhe zakonisht përgjigjja është aty.",
+        "en": "Stack Overflow is the biggest question-and-answer site for programmers: almost any error you hit, someone has asked about before. Paste the error message into Google and the answer is usually there."
+      },
+      "analogy": {
+        "sq": "Si një bibliotekë e madhe ku mijëra mësues kanë lënë përgjigjet e pyetjeve që nxënësit bëjnë më shpesh.",
+        "en": "Like a huge library where thousands of teachers have left answers to the questions students ask most."
+      },
+      "code": null,
+      "related": [
+        "documentation",
+        "error",
+        "debug"
+      ]
+    },
+    {
+      "id": "clean-code",
+      "en": "Clean code",
+      "sq": "Kod i pastër",
+      "aliases": [
+        "readable code",
+        "kod i lexueshëm",
+        "lexueshmëri"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Kodi i pastër është kod që lexohet dhe kuptohet lehtë: emra të qartë, funksione të shkurtra që bëjnë një gjë, pa përsëritje dhe me komente vetëm aty ku duhen. Kodi lexohet shumë më shpesh se sa shkruhet.",
+        "en": "Clean code is code that's easy to read and understand: clear names, short functions that do one thing, no repetition and comments only where needed. Code is read far more often than it's written."
+      },
+      "analogy": {
+        "sq": "Si fletorja e nxënësit më të rregullt të klasës: kur e huazon, e kupton menjëherë çdo gjë.",
+        "en": "Like the tidiest student's notebook: when you borrow it, you understand everything straight away."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "# E paqartë:\ndef f(a, b): return a * b * 0.18\n# E pastër:\ndef llogarit_tvsh(cmimi, sasia): return cmimi * sasia * 0.18"
+      },
+      "related": [
+        "naming-convention",
+        "refactoring",
+        "dry-principle"
+      ]
+    },
+    {
+      "id": "spaghetti-code",
+      "en": "Spaghetti code",
+      "sq": "Kod shpageti",
+      "aliases": [
+        "spaghetti",
+        "kod i ngatërruar",
+        "messy code"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Kodi shpageti është kod aq i ngatërruar — me hapa që kërcejnë andej-këtej, funksione shumë të gjata dhe pa strukturë — sa s'e kupton dot askush, as autori pas disa javësh. Rifaktorimi është ilaçi.",
+        "en": "Spaghetti code is code so tangled — jumping all over the place, with very long functions and no structure — that nobody can follow it, not even the author a few weeks later. Refactoring is the cure."
+      },
+      "analogy": {
+        "sq": "Si një pjatë me shpageti: provo ta ndjekësh një fije nga fillimi deri në fund pa e humbur.",
+        "en": "Like a plate of spaghetti: try following one strand from start to finish without losing it."
+      },
+      "code": null,
+      "related": [
+        "clean-code",
+        "refactoring",
+        "technical-debt"
+      ]
+    },
+    {
+      "id": "linter",
+      "en": "Linter",
+      "sq": null,
+      "aliases": [
+        "eslint",
+        "lint",
+        "pylint",
+        "flake8"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Linter-i është një mjet që e lexon kodin tënd dhe të paralajmëron për gabime të mundshme dhe zakone të këqija — variabla që s'përdoren, gabime shtypi, stil i papërshtatshëm — para se ta ekzekutosh. ESLint-i (JavaScript) dhe Ruff-i (Python) janë më të njohurit.",
+        "en": "A linter is a tool that reads your code and warns you about likely mistakes and bad habits — unused variables, typos, inconsistent style — before you run it. ESLint (JavaScript) and Ruff (Python) are the best known."
+      },
+      "analogy": {
+        "sq": "Si mësuesja që ta lexon hartimin para provimit dhe t'i nënvizon me laps gabimet e mundshme.",
+        "en": "Like a teacher reading your essay before the exam and underlining likely mistakes in pencil."
+      },
+      "code": null,
+      "related": [
+        "code-formatter",
+        "pep8",
+        "clean-code"
+      ]
+    },
+    {
+      "id": "code-formatter",
+      "en": "Code formatter",
+      "sq": "Formatues kodi",
+      "aliases": [
+        "formatter",
+        "prettier",
+        "format code",
+        "formatim"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Formatuesi i kodit e rregullon vetë pamjen e kodit — hapësirat, dhëmbëzimin, thonjëzat, gjatësinë e rreshtave — sipas të njëjtit stil, sa herë që e ruan skedarin. Prettier-i (JavaScript) dhe Black-u (Python) janë më të njohurit.",
+        "en": "A code formatter automatically tidies how your code looks — spacing, indentation, quotes, line length — to one consistent style every time you save. Prettier (JavaScript) and Black (Python) are the best known."
+      },
+      "analogy": {
+        "sq": "Si t'i palosësh rrobat njësoj çdo herë: dollapi duket gjithmonë i rregullt, pavarësisht kush i futi.",
+        "en": "Like folding clothes the same way every time: the wardrobe always looks tidy, whoever put them away."
+      },
+      "code": null,
+      "related": [
+        "linter",
+        "pep8",
+        "indentation"
+      ]
+    },
+    {
+      "id": "version-control",
+      "en": "Version control",
+      "sq": "Kontrolli i versioneve",
+      "aliases": [
+        "vcs",
+        "source control",
+        "kontroll versionesh"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Kontrolli i versioneve është ruajtja e çdo ndryshimi në kod me datë, autor dhe përshkrim, që të kthehesh mbrapsht kur të duhet dhe të punosh në ekip pa ia fshirë punën njëri-tjetrit. Git-i është sistemi më i përdorur.",
+        "en": "Version control means saving every change to your code with a date, author and description, so you can go back when needed and work in a team without overwriting each other. Git is the most-used system."
+      },
+      "analogy": {
+        "sq": "Si ta ruash çdo version të hartimit si „hartimi_v1“, „v2“, „v3_final“ — vetëm se në mënyrë të rregullt dhe automatike.",
+        "en": "Like saving every draft of an essay as “essay_v1”, “v2”, “v3_final” — except neatly and automatically."
+      },
+      "code": null,
+      "related": [
+        "git",
+        "commit",
+        "github"
+      ]
+    },
+    {
+      "id": "pair-programming",
+      "en": "Pair programming",
+      "sq": "Programim në çift",
+      "aliases": [
+        "pairing",
+        "programim në dyshe"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Programimi në çift është kur dy programues punojnë në të njëjtin kod njëkohësisht: njëri shkruan (driver), tjetri e ndjek, mendon përpara dhe i kap gabimet (navigator). Pastaj i ndërrojnë rolet.",
+        "en": "Pair programming is when two programmers work on the same code at the same time: one types (the driver), the other follows along, thinks ahead and catches mistakes (the navigator). Then they swap."
+      },
+      "analogy": {
+        "sq": "Si udhëtimi me veturë me një shok: njëri nget, tjetri shikon hartën dhe paralajmëron për kthesat.",
+        "en": "Like a car trip with a friend: one drives, the other reads the map and warns about the turns."
+      },
+      "code": null,
+      "related": [
+        "code-review",
+        "mentor",
+        "rubber-duck"
+      ]
+    },
+    {
+      "id": "config-file",
+      "en": "Config file",
+      "sq": "Skedar konfigurimi",
+      "aliases": [
+        "config",
+        "configuration",
+        "konfigurim",
+        "settings file"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Skedari i konfigurimit i mban rregullimet e një programi jashtë kodit — p.sh. portën, gjuhën ose adresën e databazës — në formate si JSON, YAML ose .env. Kështu e ndryshon sjelljen pa e prekur kodin.",
+        "en": "A config file keeps a program's settings outside the code — like the port, language or database address — in formats such as JSON, YAML or .env. That way you change how it behaves without touching the code."
+      },
+      "analogy": {
+        "sq": "Si rregullimet e telefonit: e ndryshon gjuhën ose ziljen pa e hapur dhe rindërtuar telefonin.",
+        "en": "Like your phone's settings: you change the language or ringtone without opening up and rebuilding the phone."
+      },
+      "code": {
+        "language": "json",
+        "snippet": "{\n  \"porta\": 3000,\n  \"gjuha\": \"sq\",\n  \"pamja\": \"e errët\"\n}"
+      },
+      "related": [
+        "environment-variable",
+        "json",
+        "yaml"
+      ]
+    },
+    {
+      "id": "yaml",
+      "en": "YAML",
+      "sq": null,
+      "aliases": [
+        "yml",
+        ".yaml",
+        ".yml"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "YAML-i është një format teksti për konfigurime, shumë i lexueshëm për njerëzit: përdor dhëmbëzim në vend të kllapave. E takon te GitHub Actions, Docker Compose dhe shumë mjete të tjera.",
+        "en": "YAML is a text format for configuration that's very easy for people to read: it uses indentation instead of brackets. You'll meet it in GitHub Actions, Docker Compose and many other tools."
+      },
+      "analogy": {
+        "sq": "Si lista e detyrave e shkruar me nënpika: dhëmbëzimi tregon çfarë i përket çfarës.",
+        "en": "Like a to-do list with indented sub-points: the indentation shows what belongs to what."
+      },
+      "code": {
+        "language": "yaml",
+        "snippet": "emri: Fjalori i Programimit\ngjuhet:\n  - shqip\n  - anglisht"
+      },
+      "related": [
+        "config-file",
+        "json",
+        "github-actions"
+      ]
+    },
+    {
+      "id": "csv",
+      "en": "CSV",
+      "sq": null,
+      "aliases": [
+        "comma separated values",
+        ".csv",
+        "csv file"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "CSV-ja është formati më i thjeshtë për tabela: çdo rresht është një rresht teksti dhe kolonat ndahen me presje. E hapin Excel-i, pandas-i dhe pothuajse çdo program — ideale për të ndarë të dhëna.",
+        "en": "CSV is the simplest format for tables: each row is a line of text and the columns are separated by commas. Excel, pandas and almost every program can open it — ideal for sharing data."
+      },
+      "analogy": {
+        "sq": "Si ditari i klasës i shkruar në një fletore të thjeshtë, me presje mes kolonave në vend të vijave.",
+        "en": "Like the class register written in a plain notebook, with commas between columns instead of lines."
+      },
+      "code": {
+        "language": "csv",
+        "snippet": "emri,klasa,nota\nArta,10B,9\nBesnik,10B,8"
+      },
+      "related": [
+        "dataset",
+        "pandas",
+        "table"
+      ]
+    },
+    {
+      "id": "xml",
+      "en": "XML",
+      "sq": null,
+      "aliases": [
+        "extensible markup language",
+        ".xml"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "XML-ja është një format teksti për të dhëna, me etiketa si HTML-ja, por që i krijon vetë: <nxenes><emri>Arta</emri></nxenes>. Sot shpesh zëvendësohet nga JSON-i, por përdoret ende në Java, Android, Office dhe në sitemap-e.",
+        "en": "XML is a text format for data, with tags like HTML but ones you make up yourself: <student><name>Arta</name></student>. Today JSON often replaces it, but it's still used in Java, Android, Office files and sitemaps."
+      },
+      "analogy": {
+        "sq": "Si kutitë brenda kutive, secila me etiketën e vet: „Kuzhina“ → „Gotat“ → „Gota e kuqe“.",
+        "en": "Like boxes inside boxes, each with its own label: “Kitchen” → “Glasses” → “Red glass”."
+      },
+      "code": {
+        "language": "xml",
+        "snippet": "<nxenes>\n  <emri>Arta</emri>\n  <nota>9</nota>\n</nxenes>"
+      },
+      "related": [
+        "json",
+        "html",
+        "maven-gradle"
+      ]
+    },
+    {
+      "id": "script",
+      "en": "Script",
+      "sq": "Skript",
+      "aliases": [
+        "skript",
+        "skripti",
+        "scripting",
+        "script file"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Skripti është një program i vogël, zakonisht në një skedar të vetëm, që automatizon një punë — p.sh. riemërton skedarë, shkarkon të dhëna ose bën backup. Gjuhë si Python, Bash dhe JavaScript përdoren shumë për skripte.",
+        "en": "A script is a small program, usually a single file, that automates a task — like renaming files, downloading data or making a backup. Languages like Python, Bash and JavaScript are often used for scripts."
+      },
+      "analogy": {
+        "sq": "Si një recetë e shkurtër për një punë të vetme — „si të bësh çaj“ — jo gjithë libri i gatimit.",
+        "en": "Like a short recipe for one single task — “how to make tea” — not the whole cookbook."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "# riemerto.py — shton vitin para çdo foto\nimport os\nfor f in os.listdir(\"foto\"):\n    os.rename(\"foto/\" + f, \"foto/2026-\" + f)"
+      },
+      "related": [
+        "bash",
+        "python",
+        "terminal"
       ]
     }
   ]
