@@ -1371,8 +1371,7 @@
       "sq": null,
       "aliases": [
         "endpoints",
-        "pikë fundore",
-        "route"
+        "pikë fundore"
       ],
       "category": "web",
       "explanation": {
@@ -1399,9 +1398,7 @@
       "sq": "Kërkesë",
       "aliases": [
         "kërkesa",
-        "http request",
-        "get",
-        "post"
+        "http request"
       ],
       "category": "web",
       "explanation": {
@@ -1428,10 +1425,7 @@
       "sq": "Përgjigje",
       "aliases": [
         "përgjigja",
-        "http response",
-        "status code",
-        "404",
-        "200"
+        "http response"
       ],
       "category": "web",
       "explanation": {
@@ -2739,7 +2733,6 @@
       "sq": "Testim",
       "aliases": [
         "test",
-        "unit test",
         "testim njësie",
         "pytest"
       ],
@@ -10842,7 +10835,6 @@
       "en": "CSS colours (hex, rgb)",
       "sq": "Ngjyrat në CSS",
       "aliases": [
-        "hex",
         "rgb",
         "rgba",
         "hsl",
@@ -11298,7 +11290,6 @@
       "aliases": [
         "dry",
         "don't repeat yourself",
-        "kiss",
         "mos e përsërit veten"
       ],
       "category": "general",
@@ -13733,6 +13724,1528 @@
         "bash",
         "python",
         "terminal"
+      ]
+    },
+    {
+      "id": "spa",
+      "en": "Single-page app (SPA)",
+      "sq": "Aplikacion me një faqe",
+      "aliases": [
+        "spa",
+        "single page application",
+        "single-page"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "SPA-ja është një aplikacion ueb që ngarkon një faqe të vetme dhe pastaj e ndryshon përmbajtjen me JavaScript, pa e rifreskuar faqen — si Gmail-i, ose ky fjalor kur klikon nga një term te tjetri. Ndihet i shpejtë si një aplikacion telefoni.",
+        "en": "An SPA is a web app that loads a single page and then changes the content with JavaScript, without reloading — like Gmail, or this glossary when you click from one term to another. It feels fast, like a phone app."
+      },
+      "analogy": {
+        "sq": "Si tabela e bardhë në klasë: mësuesja fshin dhe shkruan diçka të re në të njëjtën tabelë, në vend që të ndërrojë klasë për çdo temë.",
+        "en": "Like a classroom whiteboard: the teacher wipes it and writes something new on the same board, instead of moving to a new classroom for each topic."
+      },
+      "code": null,
+      "related": [
+        "react",
+        "routing",
+        "ssr"
+      ]
+    },
+    {
+      "id": "ssr",
+      "en": "SSR vs CSR (rendering)",
+      "sq": "Renderimi në server dhe në shfletues",
+      "aliases": [
+        "ssr",
+        "csr",
+        "server-side rendering",
+        "client-side rendering",
+        "ssg",
+        "static site generation",
+        "rendering"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Renderimi është krijimi i HTML-së së faqes. Me SSR (në server) faqja vjen e gatshme nga serveri — e shpejtë dhe e mirë për Google-in. Me CSR (në shfletues) vjen bosh dhe e ndërton JavaScript-i. SSG-ja e krijon HTML-në një herë gjatë build-it — si ky fjalor.",
+        "en": "Rendering is creating a page's HTML. With SSR (server-side) the page arrives ready-made from the server — fast and good for Google. With CSR (client-side) it arrives empty and JavaScript builds it. SSG creates the HTML once at build time — like this glossary."
+      },
+      "analogy": {
+        "sq": "SSR është si pica që të vjen e pjekur nga piceria; CSR si pica e ngrirë që e pjek vetë në shtëpi; SSG si picat e pjekura që në mëngjes, gati në vitrinë.",
+        "en": "SSR is like pizza delivered already baked; CSR is a frozen pizza you bake at home; SSG is pizzas baked first thing in the morning, waiting in the shop window."
+      },
+      "code": null,
+      "related": [
+        "seo",
+        "spa",
+        "nextjs"
+      ]
+    },
+    {
+      "id": "static-site",
+      "en": "Static site",
+      "sq": "Faqe statike",
+      "aliases": [
+        "static website",
+        "jamstack"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Faqja statike përbëhet nga skedarë të gatshëm — HTML, CSS, JavaScript — që serveri thjesht i dërgon, pa databazë dhe pa kod që ekzekutohet në server. Është e shpejtë, e sigurt dhe shpesh hostohet falas. Ky fjalor është faqe statike.",
+        "en": "A static site is made of ready-made files — HTML, CSS, JavaScript — that the server simply sends, with no database and no server code running. It's fast, secure and often free to host. This glossary is a static site."
+      },
+      "analogy": {
+        "sq": "Si broshurat e printuara në hyrje të dyqanit: secili merr të njëjtën, menjëherë, pa pritur që dikush ta shkruajë.",
+        "en": "Like printed leaflets at a shop entrance: everyone gets the same one, instantly, without waiting for someone to write it."
+      },
+      "code": null,
+      "related": [
+        "hosting",
+        "ssr",
+        "github-pages"
+      ]
+    },
+    {
+      "id": "web-app",
+      "en": "Website vs web app",
+      "sq": "Faqe dhe aplikacion ueb",
+      "aliases": [
+        "web app",
+        "webapp",
+        "website",
+        "faqe interneti",
+        "sajt"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Faqja e internetit (website) kryesisht të jep informacion për ta lexuar — si një blog ose faqja e një restoranti. Aplikacioni ueb (web app) të lejon të bësh diçka — Gmail-i, Google Docs, ky fjalor me kërkim dhe karta. Kufiri mes tyre shpesh është i paqartë.",
+        "en": "A website mainly gives you information to read — like a blog or a restaurant's page. A web app lets you do something — Gmail, Google Docs, this glossary with its search and flashcards. The line between them is often blurry."
+      },
+      "analogy": {
+        "sq": "Faqja është si vitrina e dyqanit — e shikon; aplikacioni është si arka vetëshërbyese — e përdor.",
+        "en": "A website is like a shop window — you look at it; a web app is like a self-checkout — you use it."
+      },
+      "code": null,
+      "related": [
+        "spa",
+        "frontend",
+        "app"
+      ]
+    },
+    {
+      "id": "routing",
+      "en": "Routing",
+      "sq": "Rrugëzimi",
+      "aliases": [
+        "route",
+        "routes",
+        "rrugëzim"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Routing-u është mënyra si një aplikacion vendos çfarë të tregojë sipas adresës (URL): /term/api tregon termin API, /contact formularin e kontaktit. Ndodh në server ose, te SPA-të, në shfletues.",
+        "en": "Routing is how an app decides what to show based on the address (URL): /term/api shows the API term, /contact shows the contact form. It happens on the server or, in SPAs, in the browser."
+      },
+      "analogy": {
+        "sq": "Si recepsionisti i hotelit: i thua numrin e dhomës dhe të drejton te korridori dhe dera e duhur.",
+        "en": "Like a hotel receptionist: you give your room number and they direct you to the right corridor and door."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const rruget = {\n  \"/\": faqjaKryesore,\n  \"/contact\": kontakti,\n};\nrruget[location.pathname]();"
+      },
+      "related": [
+        "url",
+        "spa",
+        "endpoint"
+      ]
+    },
+    {
+      "id": "rest-api",
+      "en": "REST API",
+      "sq": null,
+      "aliases": [
+        "rest",
+        "restful"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "REST-i është mënyra më e zakonshme për të ndërtuar API: çdo gjë ka adresën e vet (p.sh. /studentet/42) dhe përdoren metodat HTTP — GET për të lexuar, POST për të krijuar, PUT për të ndryshuar, DELETE për të fshirë. Të dhënat zakonisht dërgohen si JSON.",
+        "en": "REST is the most common way to build APIs: everything has its own address (e.g. /students/42) and HTTP methods are used — GET to read, POST to create, PUT to update, DELETE to remove. Data is usually sent as JSON."
+      },
+      "analogy": {
+        "sq": "Si sekretaria e shkollës me sportele të qarta: te njëri merr vërtetim, te tjetri dorëzon formular, te tjetri anulon regjistrimin — gjithmonë me të njëjtat rregulla.",
+        "en": "Like a school office with clear counters: at one you get a certificate, at another you hand in a form, at another you cancel an enrolment — always by the same rules."
+      },
+      "code": {
+        "language": "text",
+        "snippet": "GET    /api/studentet     → lista e studentëve\nGET    /api/studentet/42  → studenti 42\nPOST   /api/studentet     → krijo një student\nDELETE /api/studentet/42  → fshije"
+      },
+      "related": [
+        "api",
+        "http-methods",
+        "json"
+      ]
+    },
+    {
+      "id": "graphql",
+      "en": "GraphQL",
+      "sq": null,
+      "aliases": [
+        "graph ql",
+        "gql"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "GraphQL-i është një mënyrë tjetër për të ndërtuar API, ku klienti kërkon saktë fushat që i duhen në një kërkesë të vetme — as më shumë, as më pak. E krijoi Facebook-u; është alternativë ndaj REST-it.",
+        "en": "GraphQL is another way to build APIs, where the client asks for exactly the fields it needs in a single request — no more, no less. Facebook created it; it's an alternative to REST."
+      },
+      "analogy": {
+        "sq": "Me REST merr menynë fikse të ditës; me GraphQL i thua kamarierit saktë: „vetëm sallatë dhe lëng, pa bukë“.",
+        "en": "With REST you get the fixed set menu; with GraphQL you tell the waiter exactly: “just the salad and a juice, no bread”."
+      },
+      "code": {
+        "language": "graphql",
+        "snippet": "query { student(id: 42) { emri notat } }"
+      },
+      "related": [
+        "rest-api",
+        "api",
+        "json"
+      ]
+    },
+    {
+      "id": "http-methods",
+      "en": "HTTP methods (GET, POST, PUT, DELETE)",
+      "sq": "Metodat HTTP",
+      "aliases": [
+        "get",
+        "post",
+        "put",
+        "delete",
+        "patch",
+        "http verbs"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Metodat HTTP tregojnë çfarë do të bësh me një kërkesë: GET merr të dhëna, POST dërgon diçka të re, PUT/PATCH ndryshon diçka ekzistuese, DELETE fshin. Janë „foljet“ e komunikimit mes klientit dhe serverit.",
+        "en": "HTTP methods say what you want to do with a request: GET fetches data, POST sends something new, PUT/PATCH changes something existing, DELETE removes. They're the “verbs” of client–server communication."
+      },
+      "analogy": {
+        "sq": "Si te biblioteka: „më jep librin“ (GET), „po dhuroj një libër“ (POST), „po e rregulloj kopertinën“ (PUT), „hiqeni nga katalogu“ (DELETE).",
+        "en": "Like at the library: “give me the book” (GET), “I'm donating a book” (POST), “I'm fixing the cover” (PUT), “take it out of the catalogue” (DELETE)."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "await fetch(\"/api/studentet\");  // GET\nawait fetch(\"/api/studentet\", { method: \"POST\", body: JSON.stringify({ emri: \"Arta\" }) });\nawait fetch(\"/api/studentet/42\", { method: \"DELETE\" });"
+      },
+      "related": [
+        "request",
+        "rest-api",
+        "crud"
+      ]
+    },
+    {
+      "id": "http-status-codes",
+      "en": "HTTP status codes",
+      "sq": "Kodet e statusit HTTP",
+      "aliases": [
+        "status code",
+        "404",
+        "200",
+        "500",
+        "301",
+        "kod statusi"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Kodet e statusit janë numrat që serveri i kthen me çdo përgjigje: 200 — në rregull, 301 — u zhvendos, 404 — nuk u gjet, 500 — gabim në server. Shifra e parë tregon llojin: 2 sukses, 3 ridrejtim, 4 gabim i klientit, 5 gabim i serverit.",
+        "en": "Status codes are the numbers a server returns with every response: 200 — OK, 301 — moved, 404 — not found, 500 — server error. The first digit tells you the type: 2 success, 3 redirect, 4 client error, 5 server error."
+      },
+      "analogy": {
+        "sq": "Si përgjigjet e kamarierit: „urdhëroni“ (200), „ju zhvendosëm te tavolina tjetër“ (301), „s'e kemi në meny“ (404), „u prish furra“ (500).",
+        "en": "Like a waiter's answers: “here you go” (200), “we've moved you to another table” (301), “that's not on the menu” (404), “the oven broke” (500)."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const r = await fetch(\"/term/xyz\");\nconsole.log(r.status);  // 404"
+      },
+      "related": [
+        "response",
+        "http",
+        "error"
+      ]
+    },
+    {
+      "id": "query-string",
+      "en": "Query parameters (?q=)",
+      "sq": "Parametrat e kërkimit",
+      "aliases": [
+        "query string",
+        "query params",
+        "url parameters",
+        "searchparams"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Parametrat e kërkimit janë pjesa e URL-së pas ?, në formën emri=vlera, të ndara me & — p.sh. ?qyteti=Prishtina&dita=sot. Përdoren për kërkime, filtra dhe faqe, pa e ndryshuar adresën kryesore.",
+        "en": "Query parameters are the part of a URL after ?, as name=value pairs separated by & — e.g. ?city=Prishtina&day=today. They're used for searches, filters and pagination, without changing the main address."
+      },
+      "analogy": {
+        "sq": "Si shënimet te porosia: „pica — e madhe, pa qepë“. Pica është po ajo, detajet ndryshojnë.",
+        "en": "Like notes on an order: “pizza — large, no onions”. Same pizza, different details."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const url = new URL(\"https://shembull.com/kerko?q=api&faqja=2\");\nconsole.log(url.searchParams.get(\"q\"));      // \"api\"\nconsole.log(url.searchParams.get(\"faqja\"));  // \"2\""
+      },
+      "related": [
+        "url",
+        "request",
+        "endpoint"
+      ]
+    },
+    {
+      "id": "websocket",
+      "en": "WebSocket",
+      "sq": null,
+      "aliases": [
+        "websockets",
+        "ws",
+        "socket",
+        "real-time"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "WebSocket-i mban të hapur një lidhje të vazhdueshme mes shfletuesit dhe serverit, që të dy të dërgojnë mesazhe kur të duan — pa pritur një kërkesë. Përdoret për chat-e, lojëra online dhe rezultate live.",
+        "en": "A WebSocket keeps an open, continuous connection between the browser and the server, so both can send messages whenever they want — without waiting for a request. It's used for chat apps, online games and live scores."
+      },
+      "analogy": {
+        "sq": "HTTP-ja është si të dërgosh letra; WebSocket-i është si një telefonatë e hapur: flisni të dy kur të doni, pa e mbyllur linjën.",
+        "en": "HTTP is like sending letters; a WebSocket is like an open phone call: you both talk whenever you want, without hanging up."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const ws = new WebSocket(\"wss://chat.example.com\");\nws.onmessage = (e) => console.log(\"Mesazh i ri:\", e.data);\nws.send(\"Përshëndetje!\");"
+      },
+      "related": [
+        "http",
+        "server",
+        "api"
+      ]
+    },
+    {
+      "id": "webhook",
+      "en": "Webhook",
+      "sq": null,
+      "aliases": [
+        "webhooks",
+        "callback url"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Webhook-u është kur një shërbim i dërgon vetë një njoftim serverit tënd sa herë ndodh diçka — p.sh. GitHub-i i thotë Vercel-it „ka një push të ri“. Në vend që ti të pyesësh vazhdimisht, të njoftojnë ata.",
+        "en": "A webhook is when a service sends your server a notification by itself whenever something happens — e.g. GitHub tells Vercel “there's a new push”. Instead of you asking over and over, they tell you."
+      },
+      "analogy": {
+        "sq": "Si kur ia lë numrin dyqanit: „më merrni kur të vijnë atletet“ — në vend që të shkosh çdo ditë e të pyesësh.",
+        "en": "Like leaving your number with a shop: “call me when the trainers arrive” — instead of going in every day to ask."
+      },
+      "code": null,
+      "related": [
+        "api",
+        "ci-cd",
+        "callback"
+      ]
+    },
+    {
+      "id": "pwa",
+      "en": "PWA (Progressive Web App)",
+      "sq": "Aplikacion ueb progresiv",
+      "aliases": [
+        "pwa",
+        "progressive web app",
+        "service worker",
+        "installable"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "PWA-ja është një faqe ueb që sillet si aplikacion telefoni: mund ta „instalosh“ në ekranin kryesor, hapet pa shiritin e shfletuesit dhe mund të punojë edhe pa internet, falë një „service worker“.",
+        "en": "A PWA is a website that behaves like a phone app: you can “install” it on your home screen, it opens without the browser bar and can even work offline, thanks to a “service worker”."
+      },
+      "analogy": {
+        "sq": "Si t'i fotokopjosh shënimet që t'i kesh edhe pa çantë: e njëjta përmbajtje, gjithmonë me vete.",
+        "en": "Like photocopying your notes so you have them even without your bag: same content, always with you."
+      },
+      "code": null,
+      "related": [
+        "spa",
+        "cache",
+        "app"
+      ]
+    },
+    {
+      "id": "iframe",
+      "en": "iframe",
+      "sq": null,
+      "aliases": [
+        "embed",
+        "inline frame"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "iframe-i është një „dritare“ brenda faqes që shfaq një faqe tjetër — p.sh. një video YouTube, një hartë Google ose një formular. E vendos me etiketën <iframe src=\"...\">.",
+        "en": "An iframe is a “window” inside a page that shows another page — like a YouTube video, a Google map or a form. You add it with the <iframe src=\"...\"> tag."
+      },
+      "analogy": {
+        "sq": "Si televizori në murin e kafenesë: kafeneja është faqja jote, televizori tregon diçka që vjen nga diku tjetër.",
+        "en": "Like a TV on a café wall: the café is your page, the TV shows something coming from somewhere else."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<iframe width=\"560\" height=\"315\"\n  src=\"https://www.youtube.com/embed/VIDEO_ID\"\n  title=\"Video mësimi\"></iframe>"
+      },
+      "related": [
+        "html",
+        "html-attribute",
+        "xss"
+      ]
+    },
+    {
+      "id": "canvas",
+      "en": "Canvas (<canvas>)",
+      "sq": null,
+      "aliases": [
+        "html canvas",
+        "getcontext"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Etiketa <canvas> është një „pëlhurë“ bosh në faqe ku vizaton me JavaScript — forma, grafikë, animacione dhe lojëra 2D. Ndryshe nga SVG-ja, vizatimi përbëhet nga piksele.",
+        "en": "The <canvas> tag is an empty “canvas” on the page where you draw with JavaScript — shapes, charts, animations and 2D games. Unlike SVG, the drawing is made of pixels."
+      },
+      "analogy": {
+        "sq": "Si fleta e bardhë në orën e artit: ti vendos çfarë vizaton, pikë pas pike.",
+        "en": "Like a blank sheet in art class: you decide what to draw, dot by dot."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const ctx = document.querySelector(\"canvas\").getContext(\"2d\");\nctx.fillStyle = \"crimson\";\nctx.fillRect(20, 20, 100, 60);  // një drejtkëndësh i kuq"
+      },
+      "related": [
+        "svg",
+        "javascript",
+        "pixel-resolution"
+      ]
+    },
+    {
+      "id": "css-transition",
+      "en": "CSS transitions & animations",
+      "sq": "Tranzicionet dhe animacionet në CSS",
+      "aliases": [
+        "transition",
+        "animation",
+        "@keyframes",
+        "css animation",
+        "animacion"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Tranzicionet i bëjnë ndryshimet në CSS të ndodhin butë — p.sh. një buton që e ndërron ngjyrën ngadalë kur kalon mausi sipër. Animacionet me @keyframes i lëvizin elementet vetë, pa pritur veprim nga përdoruesi.",
+        "en": "Transitions make CSS changes happen smoothly — like a button slowly changing colour when you hover over it. Animations with @keyframes move elements by themselves, without waiting for the user."
+      },
+      "analogy": {
+        "sq": "Si rregulluesi i dritës në dhomë: në vend që drita të ndizet me një goditje, rritet ngadalë.",
+        "en": "Like a dimmer switch: instead of the light snapping on, it rises slowly."
+      },
+      "code": {
+        "language": "css",
+        "snippet": ".butoni { transition: background 0.3s; }\n.butoni:hover { background: crimson; }\n@keyframes kercim { 50% { transform: translateY(-10px); } }"
+      },
+      "related": [
+        "css",
+        "pseudo-class",
+        "ux"
+      ]
+    },
+    {
+      "id": "dark-mode",
+      "en": "Dark mode",
+      "sq": "Pamja e errët",
+      "aliases": [
+        "dark theme",
+        "prefers-color-scheme",
+        "tema e errët"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Dark mode është versioni i errët i një faqeje: sfond i errët dhe tekst i çelët, më i këndshëm natën. Faqja e di çfarë preferon pajisja përmes prefers-color-scheme në CSS. Ky fjalor e ka — butoni me hënë lart djathtas.",
+        "en": "Dark mode is a dark version of a page: dark background and light text, easier on the eyes at night. The page knows what the device prefers through prefers-color-scheme in CSS. This glossary has it — the moon button at the top right."
+      },
+      "analogy": {
+        "sq": "Si ta ulësh dritën e dhomës në mbrëmje: e njëjta dhomë, vetëm më e qetë për sytë.",
+        "en": "Like dimming the room lights in the evening: same room, just easier on the eyes."
+      },
+      "code": {
+        "language": "css",
+        "snippet": "@media (prefers-color-scheme: dark) {\n  body { background: #121214; color: #ecebf0; }\n}"
+      },
+      "related": [
+        "css-variables",
+        "css",
+        "accessibility"
+      ]
+    },
+    {
+      "id": "form-validation",
+      "en": "Form validation",
+      "sq": "Validimi i formularit",
+      "aliases": [
+        "required",
+        "minlength",
+        "validim formulari"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Validimi i formularit kontrollon që përdoruesi i ka plotësuar fushat siç duhet para se ta dërgojë — p.sh. email-i ka @, fjalëkalimi është mjaft i gjatë. HTML-ja e bën vetë me required, type=\"email\" dhe minlength, por serveri duhet të kontrollojë sërish.",
+        "en": "Form validation checks that the user filled in the fields correctly before sending — e.g. the email has an @, the password is long enough. HTML does it itself with required, type=\"email\" and minlength, but the server must check again."
+      },
+      "analogy": {
+        "sq": "Si zyrtari te sporteli që të thotë „të mungon nënshkrimi“ para se ta pranojë formularin.",
+        "en": "Like the clerk at the counter who says “you've missed the signature” before accepting your form."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<input type=\"email\" required>\n<input type=\"password\" minlength=\"8\" required>\n<button>Regjistrohu</button>"
+      },
+      "related": [
+        "form",
+        "input-validation",
+        "input-button"
+      ]
+    },
+    {
+      "id": "cookie-consent",
+      "en": "Cookie consent (GDPR)",
+      "sq": "Pëlqimi për cookie",
+      "aliases": [
+        "gdpr",
+        "cookie banner",
+        "privatësi",
+        "consent"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Në Evropë, ligjet e privatësisë si GDPR-ja kërkojnë që faqet të pyesin para se të ruajnë cookie gjurmuese ose të mbledhin të dhëna personale. Prandaj shumë faqe shfaqin një banner „Prano / Refuzo“. Analitika pa cookie, si ajo e këtij fjalori, s'ka nevojë për të.",
+        "en": "In Europe, privacy laws like GDPR require sites to ask before storing tracking cookies or collecting personal data. That's why many sites show an “Accept / Decline” banner. Cookie-free analytics, like this glossary's, doesn't need one."
+      },
+      "analogy": {
+        "sq": "Si kur dikush pyet „a mund t'ju bëj një foto?“ para se ta bëjë — në vend që t'ju fotografojë pa e ditur.",
+        "en": "Like someone asking “may I take your photo?” before taking it — instead of snapping you without you knowing."
+      },
+      "code": null,
+      "related": [
+        "cookie",
+        "session",
+        "local-storage"
+      ]
+    },
+    {
+      "id": "lazy-loading",
+      "en": "Lazy loading",
+      "sq": "Ngarkim i vonuar",
+      "aliases": [
+        "lazy load",
+        "loading=lazy"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Lazy loading do të thotë t'i ngarkosh fotot, videot ose pjesët e faqes vetëm kur përdoruesi po afrohet t'i shohë, jo të gjitha që në fillim. Faqja hapet më shpejt dhe kursehen të dhënat celulare.",
+        "en": "Lazy loading means loading images, videos or parts of a page only when the user is about to see them, not all at the start. The page opens faster and saves mobile data."
+      },
+      "analogy": {
+        "sq": "Si kamarieri që e sjell ëmbëlsirën vetëm kur e ke mbaruar gjellën kryesore, jo të gjitha pjatat njëherësh.",
+        "en": "Like a waiter who brings dessert only when you've finished the main course, not every plate at once."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<img src=\"foto-e-madhe.jpg\" loading=\"lazy\" alt=\"Pamje e qytetit\">"
+      },
+      "related": [
+        "web-performance",
+        "img-tag",
+        "cache"
+      ]
+    },
+    {
+      "id": "minification",
+      "en": "Minification",
+      "sq": "Minifikim",
+      "aliases": [
+        "minify",
+        "minified",
+        ".min.js"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Minifikimi heq nga kodi CSS dhe JavaScript gjithçka që s'i duhet kompjuterit — hapësirat, komentet, emrat e gjatë — që skedarët të jenë më të vegjël dhe faqja të ngarkohet më shpejt. Bëhet automatikisht gjatë build-it.",
+        "en": "Minification strips everything the computer doesn't need from CSS and JavaScript — spaces, comments, long names — so files are smaller and the page loads faster. It happens automatically during the build."
+      },
+      "analogy": {
+        "sq": "Si telegrami i dikurshëm: „MBERRIJ NESER ORA 5“ — pa fjalë të tepërta, i njëjti kuptim.",
+        "en": "Like an old-fashioned telegram: “ARRIVING TOMORROW 5PM” — no extra words, same meaning."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "// Para:\nfunction mblidh(numri1, numri2) { return numri1 + numri2; }\n// Pas minifikimit:\nfunction m(a,b){return a+b}"
+      },
+      "related": [
+        "web-performance",
+        "vite",
+        "javascript"
+      ]
+    },
+    {
+      "id": "web-performance",
+      "en": "Web performance (Lighthouse)",
+      "sq": "Shpejtësia e faqes",
+      "aliases": [
+        "lighthouse",
+        "pagespeed",
+        "core web vitals",
+        "page speed"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Performanca e ueb-it është sa shpejt hapet dhe reagon një faqe. Lighthouse-i (te DevTools i Chrome-it) e mat dhe të jep pikë nga 0 deri në 100, bashkë me këshilla — p.sh. foto më të vogla ose më pak JavaScript.",
+        "en": "Web performance is how quickly a page loads and responds. Lighthouse (in Chrome DevTools) measures it and gives a score from 0 to 100, plus tips — like smaller images or less JavaScript."
+      },
+      "analogy": {
+        "sq": "Si testi i shpejtësisë së lojtarëve në parasezon: ta mat kohën dhe të thotë ku të përmirësohesh.",
+        "en": "Like a pre-season sprint test for players: it times you and tells you where to improve."
+      },
+      "code": null,
+      "related": [
+        "lazy-loading",
+        "minification",
+        "devtools"
+      ]
+    },
+    {
+      "id": "open-graph",
+      "en": "Open Graph tags",
+      "sq": null,
+      "aliases": [
+        "og tags",
+        "og:image",
+        "open graph",
+        "social preview"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Etiketat Open Graph janë meta-etiketa në <head> që i tregojnë WhatsApp-it, Facebook-ut dhe rrjeteve të tjera çfarë titulli, përshkrimi dhe fotoje të shfaqin kur dikush e ndan lidhjen tënde. Çdo faqe e këtij fjalori i ka.",
+        "en": "Open Graph tags are meta tags in the <head> that tell WhatsApp, Facebook and other networks which title, description and image to show when someone shares your link. Every page of this glossary has them."
+      },
+      "analogy": {
+        "sq": "Si etiketa e produktit në vitrinë: para se të hyjë, kalimtari e sheh foton, emrin dhe çmimin.",
+        "en": "Like a product label in a shop window: before walking in, the passer-by sees the picture, name and price."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<meta property=\"og:title\" content=\"API – Çfarë është?\">\n<meta property=\"og:image\" content=\"https://fjalori.dev/og-image.png\">"
+      },
+      "related": [
+        "seo",
+        "html",
+        "url"
+      ]
+    },
+    {
+      "id": "sitemap",
+      "en": "Sitemap",
+      "sq": "Harta e faqes",
+      "aliases": [
+        "sitemap.xml",
+        "site map",
+        "harta e faqes"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Sitemap-i është një skedar XML me listën e të gjitha faqeve të një sajti, që Google-i t'i gjejë dhe t'i indeksojë më lehtë. Ky fjalor e krijon automatikisht nga terms.json në çdo build.",
+        "en": "A sitemap is an XML file listing every page of a site, so Google can find and index them more easily. This glossary generates it automatically from terms.json on every build."
+      },
+      "analogy": {
+        "sq": "Si harta e qendrës tregtare në hyrje: e tregon çdo dyqan dhe ku ndodhet, që të mos humbasësh.",
+        "en": "Like the map at a shopping centre entrance: it shows every shop and where it is, so you don't get lost."
+      },
+      "code": {
+        "language": "xml",
+        "snippet": "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n  <url><loc>https://fjalori.dev/term/api</loc></url>\n</urlset>"
+      },
+      "related": [
+        "seo",
+        "xml",
+        "robots-txt"
+      ]
+    },
+    {
+      "id": "robots-txt",
+      "en": "robots.txt",
+      "sq": null,
+      "aliases": [
+        "robots",
+        "crawler"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "robots.txt është një skedar i vogël në rrënjën e sajtit që u tregon robotëve të motorëve të kërkimit (si ai i Google-it) cilat faqe mund t'i vizitojnë dhe ku ndodhet sitemap-i.",
+        "en": "robots.txt is a small file at the root of a site that tells search-engine robots (like Google's) which pages they may visit and where the sitemap is."
+      },
+      "analogy": {
+        "sq": "Si tabela në derën e klasës: „Hyrja e lirë“ ose „Mos hyni — provim“.",
+        "en": "Like a sign on a classroom door: “Come in” or “Do not enter — exam in progress”."
+      },
+      "code": {
+        "language": "text",
+        "snippet": "User-agent: *\nAllow: /\nSitemap: https://fjalori.dev/sitemap.xml"
+      },
+      "related": [
+        "sitemap",
+        "seo",
+        "server"
+      ]
+    },
+    {
+      "id": "sass",
+      "en": "Sass (SCSS)",
+      "sq": null,
+      "aliases": [
+        "scss",
+        "sass",
+        "css preprocessor"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Sass-i është një „CSS me superfuqi“: shton variabla, rregulla brenda rregullave (nesting) dhe funksione, e pastaj kthehet në CSS të zakonshme për shfletuesin. Sot CSS-ja i ka marrë vetë shumë nga këto veçori.",
+        "en": "Sass is “CSS with superpowers”: it adds variables, rules inside rules (nesting) and functions, then turns into ordinary CSS for the browser. Today CSS has adopted many of these features itself."
+      },
+      "analogy": {
+        "sq": "Si një recetë me shkurtime: „brumi bazë + mbushja X“ — kuzhinieri e zgjeron vetë në recetën e plotë.",
+        "en": "Like a recipe with shortcuts: “basic dough + filling X” — the cook expands it into the full recipe."
+      },
+      "code": {
+        "language": "scss",
+        "snippet": "$e-kuqe: #c8323c;\n.karta {\n  color: $e-kuqe;\n  &:hover { opacity: 0.8; }\n}"
+      },
+      "related": [
+        "css",
+        "css-variables",
+        "transpiler"
+      ]
+    },
+    {
+      "id": "design-pattern",
+      "en": "Design pattern",
+      "sq": "Model projektimi",
+      "aliases": [
+        "design patterns",
+        "singleton",
+        "observer",
+        "factory pattern"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Design pattern-at janë zgjidhje të provuara për probleme që përsëriten në programim — si „Singleton“ (vetëm një objekt i një lloji) ose „Observer“ (njoftoji të gjithë kur ndryshon diçka). S'janë kod i gatshëm, por receta të mendimit.",
+        "en": "Design patterns are proven solutions to problems that keep coming up in programming — like “Singleton” (only one object of a kind) or “Observer” (notify everyone when something changes). They're not ready-made code, but recipes for thinking."
+      },
+      "analogy": {
+        "sq": "Si taktikat e njohura në futboll — 4-4-2, kundërsulmi, presioni i lartë: s'i shpik çdo trajner nga e para, e zgjedh atë që i përshtatet situatës.",
+        "en": "Like well-known football tactics — 4-4-2, the counter-attack, the high press: no coach invents them from scratch; they pick the one that suits the situation."
+      },
+      "code": null,
+      "related": [
+        "oop",
+        "mvc",
+        "solid"
+      ]
+    },
+    {
+      "id": "mvc",
+      "en": "MVC (Model–View–Controller)",
+      "sq": null,
+      "aliases": [
+        "mvc",
+        "model view controller"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "MVC-ja është një mënyrë për ta ndarë një aplikacion në tri pjesë: Model (të dhënat), View (çfarë sheh përdoruesi) dhe Controller (logjika që i lidh). Shumë framework-e — Laravel, Django, Spring — e përdorin.",
+        "en": "MVC is a way of splitting an app into three parts: Model (the data), View (what the user sees) and Controller (the logic connecting them). Many frameworks — Laravel, Django, Spring — use it."
+      },
+      "analogy": {
+        "sq": "Si restoranti: kuzhina me përbërësit (Model), salla ku ulen klientët (View) dhe kamarieri që merr porosinë e sjell pjatën (Controller).",
+        "en": "Like a restaurant: the kitchen and ingredients (Model), the dining room where guests sit (View) and the waiter who takes orders and brings the food (Controller)."
+      },
+      "code": null,
+      "related": [
+        "design-pattern",
+        "framework",
+        "backend"
+      ]
+    },
+    {
+      "id": "solid",
+      "en": "SOLID principles",
+      "sq": "Parimet SOLID",
+      "aliases": [
+        "solid",
+        "single responsibility"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "SOLID-i janë pesë parime për të shkruar kod OOP që ndryshohet lehtë. Më i rëndësishmi për fillestarët është i pari: „Single Responsibility“ — çdo klasë ose funksion duhet të bëjë vetëm një punë.",
+        "en": "SOLID is five principles for writing OOP code that's easy to change. The most important one for beginners is the first: “Single Responsibility” — every class or function should do just one job."
+      },
+      "analogy": {
+        "sq": "Si orari i mësuesve: mësuesi i matematikës jep matematikë, ai i fizikës fizikë — jo një mësues që jep gjithçka dhe s'arrin ta bëjë asgjë mirë.",
+        "en": "Like the teaching timetable: the maths teacher teaches maths, the physics teacher physics — not one teacher doing everything and nothing well."
+      },
+      "code": null,
+      "related": [
+        "oop",
+        "clean-code",
+        "design-pattern"
+      ]
+    },
+    {
+      "id": "kiss-yagni",
+      "en": "KISS & YAGNI",
+      "sq": null,
+      "aliases": [
+        "kiss",
+        "yagni",
+        "keep it simple",
+        "you aren't gonna need it"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "KISS („Keep It Simple, Stupid“ — mbaje të thjeshtë) dhe YAGNI („You Aren't Gonna Need It“ — s'do të të duhet) janë dy parime: zgjidh mënyrën më të thjeshtë që punon dhe mos ndërto sot veçori që „ndoshta do të duhen një ditë“.",
+        "en": "KISS (“Keep It Simple, Stupid”) and YAGNI (“You Aren't Gonna Need It”) are two principles: pick the simplest approach that works, and don't build features today that you “might need one day”."
+      },
+      "analogy": {
+        "sq": "Si ta bësh valixhen për një fundjavë: merr atë që të duhet vërtet, jo tri palë këpucë „për çdo rast“.",
+        "en": "Like packing for a weekend away: take what you'll actually need, not three pairs of shoes “just in case”."
+      },
+      "code": null,
+      "related": [
+        "dry-principle",
+        "clean-code",
+        "mvp"
+      ]
+    },
+    {
+      "id": "linked-list",
+      "en": "Linked list",
+      "sq": "Listë e lidhur",
+      "aliases": [
+        "linkedlist",
+        "listë e lidhur"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Lista e lidhur është një strukturë të dhënash ku çdo element (nyje) mban vlerën e vet dhe një „tregues“ drejt elementit të radhës. Shtimi dhe heqja janë të shpejta, por për të arritur te elementi i 100-të duhet të kalosh nëpër të gjithë të mëparshmit.",
+        "en": "A linked list is a data structure where each item (node) holds its value and a “pointer” to the next item. Adding and removing are fast, but to reach the 100th item you have to walk through all the ones before it."
+      },
+      "analogy": {
+        "sq": "Si loja e gjuetisë së thesarit: çdo shënim të tregon ku është shënimi tjetër — s'mund të kërcesh direkt te i fundit.",
+        "en": "Like a treasure hunt: each clue tells you where the next one is — you can't jump straight to the last."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "class Nyje:\n    def __init__(self, vlera, tjetra=None):\n        self.vlera, self.tjetra = vlera, tjetra\n\nlista = Nyje(1, Nyje(2, Nyje(3)))  # 1 → 2 → 3"
+      },
+      "related": [
+        "data-structure",
+        "pointer",
+        "array"
+      ]
+    },
+    {
+      "id": "hash-table",
+      "en": "Hash table",
+      "sq": "Tabelë hash",
+      "aliases": [
+        "hashtable",
+        "tabelë hash",
+        "hash function"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Tabela hash është struktura që qëndron pas dictionary-ve dhe HashMap-ëve: një funksion hash e kthen çelësin në një numër që tregon menjëherë ku ruhet vlera. Prandaj kërkimi sipas çelësit është pothuajse i menjëhershëm, edhe me miliona elemente.",
+        "en": "A hash table is the structure behind dictionaries and HashMaps: a hash function turns the key into a number that points straight to where the value is stored. That's why looking up by key is almost instant, even with millions of items."
+      },
+      "analogy": {
+        "sq": "Si kutitë postare me numër: e di menjëherë në cilën kuti është letra jote, pa i hapur të gjitha.",
+        "en": "Like numbered post-office boxes: you know straight away which box holds your letter, without opening them all."
+      },
+      "code": null,
+      "related": [
+        "dictionary",
+        "hashmap",
+        "data-structure"
+      ]
+    },
+    {
+      "id": "graph-structure",
+      "en": "Graph (data structure)",
+      "sq": "Graf",
+      "aliases": [
+        "graph",
+        "graf",
+        "nodes and edges"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Grafi është një strukturë me nyje të lidhura me vija (lidhje) — si një rrjet. Përdoret për rrjetet sociale (kush e njeh kë), për hartat (cilat qytete lidhen) dhe për të gjetur rrugën më të shkurtër.",
+        "en": "A graph is a structure of nodes connected by lines (edges) — like a network. It's used for social networks (who knows whom), maps (which cities connect) and finding the shortest route."
+      },
+      "analogy": {
+        "sq": "Si harta e rrugëve mes qyteteve: qytetet janë nyjet, rrugët janë lidhjet — dhe Google Maps-i gjen rrugën më të shkurtër.",
+        "en": "Like a road map between cities: the cities are nodes, the roads are edges — and Google Maps finds the shortest route."
+      },
+      "code": null,
+      "related": [
+        "data-structure",
+        "tree-structure",
+        "algorithm"
+      ]
+    },
+    {
+      "id": "hexadecimal",
+      "en": "Hexadecimal",
+      "sq": "Sistemi heksadecimal",
+      "aliases": [
+        "hex",
+        "heksadecimal",
+        "base 16",
+        "0x"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Sistemi heksadecimal numëron me 16 shifra: 0–9 dhe A–F (ku A = 10, F = 15). Përdoret sepse është më i shkurtër se binari — p.sh. ngjyrat në CSS si #FF0000 (e kuqja) ose adresat në memorie.",
+        "en": "Hexadecimal counts with 16 digits: 0–9 and A–F (where A = 10, F = 15). It's used because it's shorter than binary — like CSS colours such as #FF0000 (red) or memory addresses."
+      },
+      "analogy": {
+        "sq": "Si të numërosh me duzina në vend të dhjetësheve: vezët shiten me duzinë (12) — vetëm se këtu grupi është 16.",
+        "en": "Like counting in dozens instead of tens: eggs come by the dozen (12) — except here the group is 16."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "print(hex(255))       # 0xff\nprint(int(\"ff\", 16))  # 255\nprint(int(\"c8\", 16))  # 200 — e kuqja te #c8323c"
+      },
+      "related": [
+        "binary",
+        "css-colors",
+        "bit-byte"
+      ]
+    },
+    {
+      "id": "flowchart",
+      "en": "Flowchart",
+      "sq": "Diagramë rrjedhëse",
+      "aliases": [
+        "flow chart",
+        "diagramë",
+        "diagram rrjedhe"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Flowchart-i është një vizatim i një algoritmi me forma dhe shigjeta: drejtkëndësha për veprimet, romb për vendimet (po/jo) dhe shigjeta për radhën. Mësohet shpesh në shkollë para se të fillosh të shkruash kod.",
+        "en": "A flowchart is a drawing of an algorithm using shapes and arrows: rectangles for actions, diamonds for decisions (yes/no) and arrows for the order. It's often taught at school before you start writing code."
+      },
+      "analogy": {
+        "sq": "Si udhëzimet e montimit të mobiljeve me foto dhe shigjeta: i ndjek shigjetat dhe e di gjithmonë hapin e radhës.",
+        "en": "Like flat-pack furniture instructions with pictures and arrows: follow the arrows and you always know the next step."
+      },
+      "code": null,
+      "related": [
+        "algorithm",
+        "pseudocode",
+        "condition"
+      ]
+    },
+    {
+      "id": "sdk",
+      "en": "SDK",
+      "sq": "Paketë zhvillimi",
+      "aliases": [
+        "software development kit"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "SDK-ja (Software Development Kit) është një paketë me mjete, librari dhe dokumentacion që të duhen për të ndërtuar për një platformë të caktuar — p.sh. Android SDK për aplikacione Android, ose SDK-ja e një shërbimi si Stripe.",
+        "en": "An SDK (Software Development Kit) is a bundle of tools, libraries and documentation you need to build for a particular platform — like the Android SDK for Android apps, or a service's SDK such as Stripe's."
+      },
+      "analogy": {
+        "sq": "Si kutia që vjen me një set LEGO teknik: pjesët, udhëzimet dhe veglat e veçanta — gjithçka për atë model.",
+        "en": "Like the box that comes with a technical LEGO set: the pieces, the instructions and the special tools — everything for that model."
+      },
+      "code": null,
+      "related": [
+        "library",
+        "api",
+        "framework"
+      ]
+    },
+    {
+      "id": "tdd",
+      "en": "TDD (Test-driven development)",
+      "sq": "Zhvillim i drejtuar nga testet",
+      "aliases": [
+        "tdd",
+        "test driven development",
+        "red green refactor"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "TDD-ja është një mënyrë pune ku testin e shkruan para kodit: fillimisht testi dështon (i kuq), pastaj shkruan kodin minimal që ta kalojë (i gjelbër), dhe në fund e rregullon kodin (refactor).",
+        "en": "TDD is a way of working where you write the test before the code: first the test fails (red), then you write the minimum code to pass it (green), and finally you tidy up the code (refactor)."
+      },
+      "analogy": {
+        "sq": "Si ta shkruash fillimisht pyetjen e provimit dhe përgjigjen e saktë, e pastaj të mësosh derisa ta japësh atë përgjigje.",
+        "en": "Like writing the exam question and its correct answer first, then studying until you can give that answer."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def test_mblidh():\n    assert mblidh(2, 3) == 5  # 1. shkruaj testin (dështon)\ndef mblidh(a, b):\n    return a + b              # 2. shkruaj kodin që e kalon"
+      },
+      "related": [
+        "testing",
+        "refactoring",
+        "unit-integration-test"
+      ]
+    },
+    {
+      "id": "unit-integration-test",
+      "en": "Unit vs integration test",
+      "sq": "Test njësie dhe test integrimi",
+      "aliases": [
+        "unit test",
+        "integration test",
+        "e2e",
+        "end-to-end test"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Testi i njësisë kontrollon një pjesë të vogël kodi veç e veç, zakonisht një funksion. Testi i integrimit kontrollon nëse disa pjesë punojnë mirë bashkë — p.sh. kodi me databazën. Testet end-to-end e provojnë gjithë aplikacionin si përdorues.",
+        "en": "A unit test checks one small piece of code on its own, usually a function. An integration test checks whether several pieces work well together — like the code with the database. End-to-end tests try the whole app like a user would."
+      },
+      "analogy": {
+        "sq": "Si te vetura: e kontrollon çdo pjesë veç (frenat, dritat), pastaj nëse punojnë bashkë, dhe në fund bën një xhiro të plotë.",
+        "en": "Like with a car: check each part on its own (brakes, lights), then whether they work together, and finally take it for a full test drive."
+      },
+      "code": null,
+      "related": [
+        "testing",
+        "tdd",
+        "mocking"
+      ]
+    },
+    {
+      "id": "mocking",
+      "en": "Mock",
+      "sq": null,
+      "aliases": [
+        "mocking",
+        "mock",
+        "stub",
+        "fake"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Mock-u është një version i rremë i diçkaje që përdoret gjatë testeve — p.sh. një API e rreme që kthen gjithmonë të njëjtën përgjigje — që testet të jenë të shpejta dhe të mos varen nga interneti ose databaza e vërtetë.",
+        "en": "A mock is a fake version of something used during tests — like a fake API that always returns the same answer — so tests are fast and don't depend on the internet or the real database."
+      },
+      "analogy": {
+        "sq": "Si muri me manekinë në stërvitje për gjuajtjet e lira: s'janë mbrojtës të vërtetë, por mjaftojnë për t'u stërvitur.",
+        "en": "Like the dummy wall used to practise free kicks: not real defenders, but good enough to train against."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "from unittest.mock import Mock\nmoti = Mock(return_value={\"temp\": 20})\nprint(moti())  # {'temp': 20} — pa thirrur API-në e vërtetë"
+      },
+      "related": [
+        "testing",
+        "unit-integration-test",
+        "api"
+      ]
+    },
+    {
+      "id": "race-condition",
+      "en": "Race condition",
+      "sq": "Gara e kushteve",
+      "aliases": [
+        "deadlock",
+        "gara"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Race condition ndodh kur dy pjesë të një programi punojnë njëkohësisht me të njëjtat të dhëna dhe rezultati varet nga cila mbaron e para. Gabimi del vetëm herë pas here, ndaj gjendet me vështirësi.",
+        "en": "A race condition happens when two parts of a program work on the same data at the same time and the result depends on which finishes first. The bug only shows up now and then, so it's hard to find."
+      },
+      "analogy": {
+        "sq": "Si kur dy vëllezër hyjnë njëkohësisht në llogarinë e përbashkët dhe secili tërheq 50 euro nga 60 që kanë — të dy shohin „ka mjaft“, por në fund llogaria del në minus.",
+        "en": "Like two brothers using a shared account at the same moment, each withdrawing 50 euros from the 60 they have — both see “enough money”, but the account ends up negative."
+      },
+      "code": null,
+      "related": [
+        "thread-concurrency",
+        "asynchronous",
+        "bug"
+      ]
+    },
+    {
+      "id": "code-smell",
+      "en": "Code smell",
+      "sq": "Kod që „vjen erë“",
+      "aliases": [
+        "smell",
+        "code smells"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Code smell-i është një shenjë që diçka në kod mund të jetë problematike — një funksion shumë i gjatë, kod i kopjuar në disa vende, shumë parametra. S'është domosdoshmërisht bug, por paralajmëron që duhet rifaktorim.",
+        "en": "A code smell is a sign that something in the code might be a problem — a very long function, code copied in several places, too many parameters. It's not necessarily a bug, but a warning that refactoring is needed."
+      },
+      "analogy": {
+        "sq": "Si era e çuditshme nga frigoriferi: ende s'e di çfarë është prishur, por e di që duhet kontrolluar.",
+        "en": "Like a strange smell from the fridge: you don't know yet what's gone off, but you know it needs checking."
+      },
+      "code": null,
+      "related": [
+        "refactoring",
+        "clean-code",
+        "spaghetti-code"
+      ]
+    },
+    {
+      "id": "microservices",
+      "en": "Monolith vs microservices",
+      "sq": "Monolit dhe mikroshërbime",
+      "aliases": [
+        "microservices",
+        "monolith",
+        "mikroshërbime",
+        "monolit"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Monoliti është një aplikacion i ndërtuar si një bllok i vetëm; mikroshërbimet e ndajnë aplikacionin në shumë shërbime të vogla që punojnë veç e veç dhe flasin me njëri-tjetrin. Për fillestarët dhe projektet e vogla, monoliti zakonisht është zgjedhja më e mirë.",
+        "en": "A monolith is an app built as a single block; microservices split the app into lots of small services that run separately and talk to each other. For beginners and small projects, a monolith is usually the better choice."
+      },
+      "analogy": {
+        "sq": "Monoliti është një restorant me një kuzhinë që bën gjithçka; mikroshërbimet janë një food court ku çdo tezgë bën vetëm një gjë — pica, qebapë, ëmbëlsira.",
+        "en": "A monolith is one restaurant with one kitchen making everything; microservices are a food court where each stall does just one thing — pizza, kebabs, desserts."
+      },
+      "code": null,
+      "related": [
+        "backend",
+        "docker",
+        "api"
+      ]
+    },
+    {
+      "id": "big-data",
+      "en": "Big data",
+      "sq": "Të dhëna masive",
+      "aliases": [
+        "të dhëna të mëdha"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Big data janë sasi aq të mëdha të dhënash — miliarda rreshta që rriten çdo sekondë — sa s'përpunohen dot me mjete të zakonshme si Excel-i. Kërkojnë shumë kompjuterë që punojnë bashkë.",
+        "en": "Big data is amounts of data so large — billions of rows, growing every second — that ordinary tools like Excel can't handle them. It needs many computers working together."
+      },
+      "analogy": {
+        "sq": "Nëse statistikat e një ndeshjeje janë një fletore, big data janë çdo lëvizje e çdo lojtari në çdo ndeshje të botës, çdo sekondë.",
+        "en": "If one match's stats are a notebook, big data is every move of every player in every match in the world, every second."
+      },
+      "code": null,
+      "related": [
+        "dataset",
+        "data-warehouse",
+        "sharding-replication"
+      ]
+    },
+    {
+      "id": "data-warehouse",
+      "en": "Data warehouse & data lake",
+      "sq": "Depo të dhënash",
+      "aliases": [
+        "data warehouse",
+        "data lake",
+        "dwh",
+        "bigquery",
+        "snowflake"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Data warehouse-i është një databazë e madhe ku kompania i mbledh të dhënat e pastruara nga shumë burime, për raporte dhe analiza. Data lake-u ruan të dhëna të papërpunuara të çdo lloji, „siç vijnë“, për t'u përdorur më vonë.",
+        "en": "A data warehouse is a large database where a company gathers cleaned-up data from many sources, for reports and analysis. A data lake stores raw data of any kind, “as it comes”, to be used later."
+      },
+      "analogy": {
+        "sq": "Warehouse-i është si magazina e rregullt e supermarketit me çdo gjë në raftin e vet; lake-u si bodrumi ku gjithçka hidhet në kuti, për t'u renditur kur të duhet.",
+        "en": "A warehouse is like a supermarket's tidy storeroom with everything on its shelf; a lake is like a basement where everything's tossed into boxes, to be sorted when needed."
+      },
+      "code": null,
+      "related": [
+        "etl",
+        "big-data",
+        "database"
+      ]
+    },
+    {
+      "id": "etl",
+      "en": "ETL (Extract, Transform, Load)",
+      "sq": null,
+      "aliases": [
+        "etl",
+        "data pipeline",
+        "pipeline të dhënash"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "ETL-ja janë tre hapat për t'i lëvizur të dhënat: Extract (i merr nga burimet), Transform (i pastron dhe i rregullon) dhe Load (i ruan në databazën ose warehouse-in e destinacionit).",
+        "en": "ETL is the three steps for moving data: Extract (take it from the sources), Transform (clean and reshape it) and Load (save it into the target database or warehouse)."
+      },
+      "analogy": {
+        "sq": "Si bërja e reçelit: i mbledh frutat (extract), i lan, i qëron e i gatuan (transform), dhe e mbush në kavanoza (load).",
+        "en": "Like making jam: pick the fruit (extract), wash, peel and cook it (transform), and fill the jars (load)."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import pandas as pd\ndf = pd.read_csv(\"shitjet.csv\")             # Extract\ndf[\"totali\"] = df[\"sasia\"] * df[\"cmimi\"]    # Transform\ndf.to_sql(\"shitjet\", db)                    # Load"
+      },
+      "related": [
+        "data-warehouse",
+        "pandas",
+        "dataset"
+      ]
+    },
+    {
+      "id": "sharding-replication",
+      "en": "Replication & sharding",
+      "sq": "Replikim dhe ndarje",
+      "aliases": [
+        "replication",
+        "sharding",
+        "replica",
+        "shard"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Replikimi mban disa kopje të njëjta të databazës në serverë të ndryshëm, që nëse bie njëri, të punojnë të tjerët. Sharding-u e ndan databazën në pjesë — p.sh. përdoruesit A–M në një server, N–Z në një tjetër — që të përballojë shumë të dhëna.",
+        "en": "Replication keeps several identical copies of a database on different servers, so if one fails, the others keep working. Sharding splits the database into pieces — e.g. users A–M on one server, N–Z on another — so it can handle lots of data."
+      },
+      "analogy": {
+        "sq": "Replikimi është si fotokopjet e ditarit në dy zyra; sharding-u si ndarja e ditarit në vëllime sipas klasës.",
+        "en": "Replication is like photocopies of the register in two offices; sharding is like splitting the register into volumes by class."
+      },
+      "code": null,
+      "related": [
+        "database",
+        "scalability",
+        "backup"
+      ]
+    },
+    {
+      "id": "spreadsheet",
+      "en": "Spreadsheet (Excel)",
+      "sq": "Fletëllogaritëse",
+      "aliases": [
+        "excel",
+        "google sheets",
+        "fletëllogaritëse",
+        "formula excel"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Fletëllogaritësja (Excel, Google Sheets) është një tabelë me qeliza ku shkruan të dhëna dhe formula që llogaritin vetë — p.sh. =AVERAGE(B2:B10). Shpesh është „databaza“ e parë që përdorin njerëzit, dhe një hap i mirë drejt programimit.",
+        "en": "A spreadsheet (Excel, Google Sheets) is a table of cells where you type data and formulas that calculate by themselves — like =AVERAGE(B2:B10). It's often people's first “database”, and a good step towards programming."
+      },
+      "analogy": {
+        "sq": "Si ditari i notave që e llogarit vetë mesataren sa herë shton një notë të re.",
+        "en": "Like a grade book that works out the average by itself every time you add a grade."
+      },
+      "code": {
+        "language": "text",
+        "snippet": "=AVERAGE(B2:B10)\n=IF(C2>=50, \"Kaloi\", \"Ngeli\")"
+      },
+      "related": [
+        "table",
+        "csv",
+        "data-visualization"
+      ]
+    },
+    {
+      "id": "data-science",
+      "en": "Data science",
+      "sq": "Shkenca e të dhënave",
+      "aliases": [
+        "data scientist",
+        "data analyst",
+        "analizë të dhënash"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Shkenca e të dhënave është përdorimi i programimit, statistikës dhe njohurive për një fushë për të nxjerrë përfundime nga të dhënat — p.sh. cilat produkte shiten më shumë dhe pse. Python-i, pandas-i dhe Jupyter-i janë mjetet e saj kryesore.",
+        "en": "Data science is using programming, statistics and knowledge of a field to draw conclusions from data — like which products sell most and why. Python, pandas and Jupyter are its main tools."
+      },
+      "analogy": {
+        "sq": "Si analisti i klubit që i studion statistikat e çdo ndeshjeje dhe i thotë trajnerit: „sulmojmë më mirë nga krahu i majtë“.",
+        "en": "Like the club analyst who studies every match's stats and tells the coach: “we attack better down the left”."
+      },
+      "code": null,
+      "related": [
+        "pandas",
+        "statistics-basics",
+        "machine-learning"
+      ]
+    },
+    {
+      "id": "data-visualization",
+      "en": "Data visualization",
+      "sq": "Vizualizim i të dhënave",
+      "aliases": [
+        "dataviz",
+        "chart",
+        "grafik",
+        "vizualizim"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Vizualizimi i të dhënave është kthimi i numrave në grafikë — shtylla, vija, harta — që njerëzit t'i kuptojnë me një shikim. Një grafik i mirë e tregon menjëherë atë që një tabelë me 1000 rreshta e fsheh.",
+        "en": "Data visualization is turning numbers into charts — bars, lines, maps — so people understand them at a glance. A good chart instantly shows what a table of 1,000 rows hides."
+      },
+      "analogy": {
+        "sq": "Si grafiku i notave të klasës në tabelë: me një shikim e sheh kush po përmirësohet, pa e lexuar çdo notë.",
+        "en": "Like a chart of the class's grades on the board: at a glance you see who's improving, without reading every grade."
+      },
+      "code": null,
+      "related": [
+        "matplotlib",
+        "data-science",
+        "spreadsheet"
+      ]
+    },
+    {
+      "id": "statistics-basics",
+      "en": "Mean, median & mode",
+      "sq": "Mesatarja, mediana dhe moda",
+      "aliases": [
+        "mean",
+        "median",
+        "mode",
+        "mesatare",
+        "mediana",
+        "statistika"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Mesatarja është shuma e vlerave pjesëtuar me numrin e tyre; mediana është vlera në mes kur i rendit; moda është vlera që përsëritet më shpesh. Mediana është më e drejtë kur ka vlera ekstreme — p.sh. te pagat.",
+        "en": "The mean is the sum of the values divided by how many there are; the median is the middle value when you sort them; the mode is the value that appears most often. The median is fairer when there are extreme values — like salaries."
+      },
+      "analogy": {
+        "sq": "Nëse në një dhomë janë katër njerëz me pagë 500 euro dhe një milioner, mesatarja tingëllon e lartë, por mediana e tregon të vërtetën: 500.",
+        "en": "If a room has four people earning 500 euros and one millionaire, the mean sounds high, but the median tells the truth: 500."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import statistics as st\npagat = [500, 500, 500, 500, 100000]\nprint(st.mean(pagat))    # 20400 — mashtruese\nprint(st.median(pagat))  # 500 — më e drejtë"
+      },
+      "related": [
+        "data-science",
+        "numpy",
+        "dataset"
+      ]
+    },
+    {
+      "id": "transformer",
+      "en": "Transformer (AI)",
+      "sq": null,
+      "aliases": [
+        "attention",
+        "transformer model"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Transformer-i është lloji i rrjetit nervor që qëndron pas LLM-ve të sotme si GPT-ja dhe Claude-i. Ideja kryesore quhet „attention“: për çdo fjalë, modeli shikon cilat fjalë të tjera në fjali janë më të rëndësishme për ta kuptuar atë.",
+        "en": "A transformer is the type of neural network behind today's LLMs like GPT and Claude. Its key idea is called “attention”: for each word, the model looks at which other words in the sentence matter most for understanding it."
+      },
+      "analogy": {
+        "sq": "Si kur e lexon fjalinë „Arta i dha librin Besës sepse ajo e kishte harruar të sajin“ dhe e kupton menjëherë që „ajo“ është Besa — sepse i lidh fjalët me njëra-tjetrën.",
+        "en": "Like reading “Arta gave the book to Besa because she had forgotten hers” and knowing right away that “she” is Besa — because you connect the words to each other."
+      },
+      "code": null,
+      "related": [
+        "llm",
+        "neural-network",
+        "deep-learning"
+      ]
+    },
+    {
+      "id": "reinforcement-learning",
+      "en": "Reinforcement learning",
+      "sq": "Mësim përmes shpërblimit",
+      "aliases": [
+        "rl",
+        "rlhf",
+        "reinforcement"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Në mësimin përmes shpërblimit, programi mëson duke provuar: merr „shpërblim“ kur bën diçka mirë dhe „ndëshkim“ kur gabon, derisa e gjen strategjinë më të mirë. Kështu mësuan kompjuterët të fitojnë në shah dhe në Go.",
+        "en": "In reinforcement learning, the program learns by trying: it gets a “reward” when it does well and a “penalty” when it gets it wrong, until it finds the best strategy. That's how computers learned to win at chess and Go."
+      },
+      "analogy": {
+        "sq": "Si stërvitja e një qeni: kur ulet me komandë merr një biskotë, dhe me kohë e mëson pa e menduar.",
+        "en": "Like training a dog: when it sits on command it gets a treat, and over time it learns without thinking."
+      },
+      "code": null,
+      "related": [
+        "machine-learning",
+        "ai-agent",
+        "training"
+      ]
+    },
+    {
+      "id": "gradient-descent",
+      "en": "Gradient descent",
+      "sq": "Zbritja e gradientit",
+      "aliases": [
+        "gradient",
+        "optimizer",
+        "learning rate"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Gradient descent-i është mënyra si një model IA mëson gjatë trajnimit: e mat sa gabon dhe i ndryshon pak numrat e vet në drejtimin që e zvogëlon gabimin — hap pas hapi, mijëra herë.",
+        "en": "Gradient descent is how an AI model learns during training: it measures how wrong it is and nudges its numbers slightly in the direction that reduces the error — step by step, thousands of times."
+      },
+      "analogy": {
+        "sq": "Si kur zbret nga mali në mjegull: s'e sheh luginën, por në çdo hap shkon nga ana ku toka zbret më shumë — derisa arrin poshtë.",
+        "en": "Like walking down a mountain in fog: you can't see the valley, but with every step you head where the ground slopes down most — until you reach the bottom."
+      },
+      "code": null,
+      "related": [
+        "training",
+        "loss-function",
+        "neural-network"
+      ]
+    },
+    {
+      "id": "loss-function",
+      "en": "Loss function",
+      "sq": "Funksioni i humbjes",
+      "aliases": [
+        "loss",
+        "cost function",
+        "error function"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Funksioni i humbjes është numri që tregon sa gabon një model: sa më i madh, aq më keq. Gjatë trajnimit, qëllimi është ta zvogëlosh këtë numër sa më shumë.",
+        "en": "A loss function is the number that says how wrong a model is: the bigger, the worse. During training, the goal is to make this number as small as possible."
+      },
+      "analogy": {
+        "sq": "Si golat e pësuar për një ekip që stërvitet: sa më shumë gola pëson, aq më shumë duhet ta përmirësojë mbrojtjen.",
+        "en": "Like goals conceded for a team in training: the more it lets in, the more the defence needs to improve."
+      },
+      "code": null,
+      "related": [
+        "gradient-descent",
+        "training",
+        "model"
+      ]
+    },
+    {
+      "id": "accuracy-precision",
+      "en": "Accuracy, precision & recall",
+      "sq": "Saktësia, precizioni dhe recall-i",
+      "aliases": [
+        "accuracy",
+        "precision",
+        "recall",
+        "f1 score",
+        "saktësi"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Këto janë mënyrat si matet sa mirë punon një model: accuracy — sa përqind e përgjigjeve janë të sakta; precision — nga ato që i tha „po“, sa ishin vërtet „po“; recall — nga të gjitha „po“-të e vërteta, sa i gjeti.",
+        "en": "These are ways to measure how well a model works: accuracy — what percentage of answers are right; precision — of the ones it said “yes” to, how many really were “yes”; recall — of all the real “yes” cases, how many it found."
+      },
+      "analogy": {
+        "sq": "Si filtri i spam-it: precision do të thotë që s't'i fshin gabimisht email-et e rëndësishme; recall do të thotë që s'i lë spam-et të kalojnë.",
+        "en": "Like a spam filter: precision means it doesn't wrongly bin important emails; recall means it doesn't let spam slip through."
+      },
+      "code": null,
+      "related": [
+        "classification",
+        "model",
+        "machine-learning"
+      ]
+    },
+    {
+      "id": "diffusion-model",
+      "en": "Diffusion model (AI images)",
+      "sq": "Model difuzioni",
+      "aliases": [
+        "diffusion",
+        "stable diffusion",
+        "image generation",
+        "midjourney",
+        "dall-e"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Modelet e difuzionit janë IA-ja që krijon foto nga teksti. Mësojnë duke parë si „prishet“ një foto me zhurmë, dhe pastaj bëjnë të kundërtën: nisin nga zhurma dhe e pastrojnë hap pas hapi, derisa del fotoja e përshkruar.",
+        "en": "Diffusion models are the AI that creates images from text. They learn by watching an image get “ruined” with noise, then do the reverse: start from noise and clean it up step by step until the described image appears."
+      },
+      "analogy": {
+        "sq": "Si kur e pastron pak nga pak një dritare shumë të pluhurosur, dhe pas çdo fshirjeje pamja jashtë bëhet më e qartë.",
+        "en": "Like cleaning a very dusty window bit by bit, with the view outside getting clearer after every wipe."
+      },
+      "code": null,
+      "related": [
+        "generative-ai",
+        "neural-network",
+        "multimodal"
+      ]
+    },
+    {
+      "id": "open-weights",
+      "en": "Open-weight model",
+      "sq": "Model me pesha të hapura",
+      "aliases": [
+        "open source ai",
+        "open weights",
+        "llama",
+        "local ai",
+        "ollama"
+      ],
+      "category": "data-ai",
+      "explanation": {
+        "sq": "Modeli me pesha të hapura është një model IA që publikohet që ta shkarkosh dhe ta përdorësh vetë, edhe në kompjuterin tënd pa internet — p.sh. Llama ose Mistral. Ndryshon nga modelet që i përdor vetëm përmes faqes ose API-së së një kompanie.",
+        "en": "An open-weight model is an AI model released for you to download and run yourself, even on your own computer offline — like Llama or Mistral. That's different from models you can only use through a company's website or API."
+      },
+      "analogy": {
+        "sq": "Si receta që ta japin ta gatuash vetë në shtëpi, krahasuar me gjellën që mund ta porositësh vetëm në restorant.",
+        "en": "Like a recipe you're given to cook at home, compared with a dish you can only order at the restaurant."
+      },
+      "code": null,
+      "related": [
+        "open-source",
+        "llm",
+        "model"
       ]
     }
   ]
