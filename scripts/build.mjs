@@ -13,6 +13,7 @@ import { fileURLToPath } from "node:url";
 import { setData, allTerms, allCategories } from "../js/data.js";
 import * as views from "../js/views.js";
 import { flashcards } from "../js/flashcards.js";
+import { contact } from "../js/contact.js";
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
 const OUT = join(ROOT, "dist");
@@ -52,6 +53,7 @@ function writePage(path, view, { type = "website", jsonLd = null, noindex = fals
 
   const meta = [
     `<meta name="description" content="${esc(view.description)}">`,
+    `<meta name="author" content="ScalarCode">`,
     noindex ? `<meta name="robots" content="noindex">` : `<link rel="canonical" href="${url}">`,
     // Open Graph: what WhatsApp, Instagram, Facebook, Telegram… show when the link is shared
     `<meta property="og:type" content="${type}">`,
@@ -85,7 +87,18 @@ function writePage(path, view, { type = "website", jsonLd = null, noindex = fals
   if (!noindex) sitemap.push(url);
 }
 
-writePage("/", views.home());
+writePage("/", views.home(), {
+  // Tells Google the site's name and who made it
+  jsonLd: {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE_NAME,
+    url: `${SITE_URL}/`,
+    inLanguage: ["sq", "en"],
+    publisher: { "@type": "Organization", name: "ScalarCode", url: "https://github.com/scalar-code" },
+  },
+});
+writePage("/contact", contact());
 writePage("/flashcards", flashcards());
 
 for (const category of allCategories()) {

@@ -32,6 +32,8 @@ fjalori-i-programimit/
 │   ├── main.js           ← starts the app and picks the page from the URL (/term/api)
 │   ├── views.js          ← one function per page: home, term, category, not found
 │   ├── flashcards.js     ← the flashcards page (/flashcards)
+│   ├── contact.js        ← the contact page (/contact)
+│   ├── config.js         ← EmailJS settings for the contact form
 │   ├── data.js           ← holds terms.json and offers helpers (getTerm, wordOfTheDay…)
 │   ├── search.js         ← the search (works with or without ë and ç)
 │   └── i18n.js           ← every interface text (and page title) in Albanian and English
@@ -119,6 +121,17 @@ play instantly. `npm run build` warns if a term has no recording yet.
    ~/.fjalori-tts/bin/python scripts/generate-audio.py --model ~/.fjalori-tts/sq_AL-edon-medium.onnx
    ```
 3. Commit the `audio/` folder together with `data/terms.json`.
+
+## Contact form
+
+`/contact` sends messages with [EmailJS](https://www.emailjs.com) (free: 200 emails/month),
+straight from the browser — no backend. The recipient address is set in the EmailJS
+template, so it never appears in the site's code.
+
+Setup: create an EmailJS account, add an **Outlook** email service, create a template
+that uses `{{from_name}}`, `{{reply_to}}`, `{{topic}}`, `{{message}}` and `{{page}}`, then put
+the Public Key, Service ID and Template ID in `js/config.js`. Until those are filled in,
+the form shows "being set up" instead of sending.
 
 ## Deploy
 

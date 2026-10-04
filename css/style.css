@@ -747,9 +747,55 @@ kbd {
   .fc-keys { display: none; }
 }
 
+/* ---------- contact page ---------- */
+
+.contact-head h1 { font-size: clamp(1.8rem, 6vw, 2.4rem); }
+.contact-head .lede { margin: 8px 0 24px; font-size: 1.05rem; max-width: 52ch; }
+
+.contact-layout { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+
+.contact-form { display: grid; gap: 16px; margin-bottom: 0; }
+.field { display: grid; gap: 6px; font-size: 0.88rem; font-weight: 600; color: var(--muted); }
+.field input, .field select, .field textarea {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.field textarea { resize: vertical; min-height: 140px; line-height: 1.5; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--focus); box-shadow: 0 0 0 3px color-mix(in srgb, var(--focus) 20%, transparent); }
+.contact-send { justify-self: start; }
+.contact-send:disabled { opacity: 0.6; cursor: wait; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+.form-status { margin: 0; font-size: 0.95rem; min-height: 1.4em; }
+.form-status.is-success { color: hsl(150 60% 32%); }
+.form-status.is-error { color: var(--accent); }
+[data-theme="dark"] .form-status.is-success { color: hsl(150 55% 65%); }
+
+.about-card { margin-bottom: 0; }
+.about-card h2 { margin-bottom: 8px; }
+.about-card p { margin: 0 0 12px; font-size: 0.95rem; }
+.about-by { display: flex; align-items: center; gap: 6px; color: var(--muted); }
+.about-by strong { color: var(--text); }
+
+/* ---------- footer ---------- */
+
+.footer-inner { display: flex; justify-content: space-between; align-items: flex-end; gap: 12px 24px; flex-wrap: wrap; }
+.site-footer .made-by { font-size: 0.9rem; white-space: nowrap; }
+.site-footer .made-by strong { color: var(--text); font-weight: 650; letter-spacing: 0.01em; }
+.site-footer .made-by a { color: var(--accent); text-decoration: none; font-weight: 500; }
+.site-footer .made-by a:hover { text-decoration: underline; }
+
 /* ---------- small screens ---------- */
 
 @media (max-width: 560px) {
+  .contact-layout { grid-template-columns: 1fr; }
   body { font-size: 16px; }
   main { padding-top: 20px; }
   .brand-name { font-size: 0.95rem; }

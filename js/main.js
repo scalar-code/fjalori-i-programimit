@@ -8,12 +8,14 @@ import { loadData } from "./data.js";
 import { t, getLang, otherLang, setLang } from "./i18n.js";
 import * as views from "./views.js";
 import { flashcards } from "./flashcards.js";
+import { contact } from "./contact.js";
 
 // The address decides the page:
 //   /                → home
 //   /term/api        → term page
 //   /category/web    → category page
 //   /flashcards      → flashcards
+//   /contact         → contact form
 // To add a page: write a function that returns { title, description, html, mount },
 // add one line here, and one writePage(...) line in scripts/build.mjs.
 const routes = {
@@ -21,6 +23,7 @@ const routes = {
   term: (id) => views.term(id),
   category: (id) => views.category(id),
   flashcards: () => flashcards(),
+  contact: () => contact(),
 };
 
 const main = document.getElementById("main");
