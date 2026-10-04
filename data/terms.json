@@ -27,6 +27,19 @@
       }
     },
     {
+      "id": "java",
+      "icon": "Jv",
+      "hue": 10,
+      "name": {
+        "sq": "Java",
+        "en": "Java"
+      },
+      "description": {
+        "sq": "Gjuha që mësohet shumë në shkolla e fakultete dhe që përdorin bankat, Android-i dhe kompanitë e mëdha.",
+        "en": "The language taught in many schools and universities, and used by banks, Android and big companies."
+      }
+    },
+    {
       "id": "web",
       "icon": "</>",
       "hue": 160,
@@ -4776,10 +4789,9 @@
       "en": "Java",
       "sq": null,
       "aliases": [
-        "jvm",
         "java language"
       ],
-      "category": "languages",
+      "category": "java",
       "explanation": {
         "sq": "Java-ja është një gjuhë programimi e njohur dhe e rreptë, që përdoret shumë në shkolla e fakultete, në aplikacione Android dhe në sisteme të mëdha të bankave e kompanive. Pavarësisht emrit, s'ka lidhje me JavaScript-in.",
         "en": "Java is a popular, strict programming language used a lot in schools and universities, in Android apps and in large systems at banks and companies. Despite the name, it has nothing to do with JavaScript."
@@ -11532,7 +11544,6 @@
       "sq": "Klasa në JavaScript",
       "aliases": [
         "js class",
-        "constructor",
         "new keyword"
       ],
       "category": "javascript",
@@ -12270,6 +12281,704 @@
         "programming-language",
         "c-sharp",
         "standard-library"
+      ]
+    },
+    {
+      "id": "jvm",
+      "en": "JVM (Java Virtual Machine)",
+      "sq": "Makina virtuale e Java-s",
+      "aliases": [
+        "jvm",
+        "java virtual machine"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "JVM-ja është programi që e ekzekuton kodin Java. Kodi yt përkthehet në bytecode, dhe JVM-ja e ekzekuton atë në çdo sistem — Windows, Mac apo Linux. Kjo është arsyeja e motos së Java-s: „Shkruaje një herë, ekzekutoje kudo.“",
+        "en": "The JVM is the program that runs Java code. Your code is translated into bytecode, and the JVM runs it on any system — Windows, Mac or Linux. That's the reason for Java's motto: “Write once, run anywhere.”"
+      },
+      "analogy": {
+        "sq": "Si një përkthyes që udhëton me ty në çdo vend: ti flet gjithmonë njësoj, dhe ai ua përkthen vendasve kudo që të jesh.",
+        "en": "Like an interpreter who travels with you to every country: you always speak the same way, and they translate for the locals wherever you are."
+      },
+      "code": null,
+      "related": [
+        "bytecode",
+        "java",
+        "jdk-jre"
+      ]
+    },
+    {
+      "id": "jdk-jre",
+      "en": "JDK & JRE",
+      "sq": null,
+      "aliases": [
+        "jdk",
+        "jre",
+        "java development kit",
+        "openjdk"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "JDK-ja (Java Development Kit) është paketa që e instalon për të shkruar programe Java: përmban kompajlerin javac, JVM-në dhe mjete të tjera. JRE-ja është vetëm pjesa që duhet për t'i ekzekutuar programet. Si fillestar, instalo një JDK, p.sh. OpenJDK.",
+        "en": "The JDK (Java Development Kit) is the package you install to write Java programs: it includes the javac compiler, the JVM and other tools. The JRE is just the part needed to run programs. As a beginner, install a JDK, such as OpenJDK."
+      },
+      "analogy": {
+        "sq": "JDK-ja është gjithë kuzhina me veglat për të gatuar; JRE-ja është vetëm tavolina dhe pjatat për të ngrënë.",
+        "en": "The JDK is the whole kitchen with tools for cooking; the JRE is just the table and plates for eating."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "javac Pershendetje.java  # kompajlo\njava Pershendetje        # ekzekuto"
+      },
+      "related": [
+        "jvm",
+        "compiler",
+        "java"
+      ]
+    },
+    {
+      "id": "main-method",
+      "en": "public static void main",
+      "sq": "Metoda main",
+      "aliases": [
+        "main method",
+        "psvm",
+        "main(string[] args)"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "public static void main(String[] args) është pika ku nis çdo program Java — JVM-ja e kërkon këtë metodë dhe e ekzekuton të parën. Fillestarët shpesh e kopjojnë pa e kuptuar, por çdo fjalë ka kuptim: public (e arritshme), static (pa objekt), void (s'kthen asgjë).",
+        "en": "public static void main(String[] args) is where every Java program starts — the JVM looks for this method and runs it first. Beginners often copy it without understanding, but each word means something: public (accessible), static (no object needed), void (returns nothing)."
+      },
+      "analogy": {
+        "sq": "Si zilja e parë e mëngjesit në shkollë: pa të, asnjë orë nuk fillon — çdo ditë nis pikërisht aty.",
+        "en": "Like the first school bell of the morning: without it, no lesson starts — every day begins right there."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "public class App {\n    public static void main(String[] args) {\n        System.out.println(\"Programi nisi!\");\n    }\n}"
+      },
+      "related": [
+        "java",
+        "static-keyword",
+        "access-modifiers"
+      ]
+    },
+    {
+      "id": "println",
+      "en": "System.out.println()",
+      "sq": null,
+      "aliases": [
+        "println",
+        "system.out",
+        "sout",
+        "print java"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "System.out.println() shfaq tekst në konsolë dhe kalon në rresht të ri — si print() i Python-it. System.out.print() bën të njëjtën gjë, por pa kaluar në rresht të ri.",
+        "en": "System.out.println() prints text to the console and moves to a new line — like Python's print(). System.out.print() does the same without the new line."
+      },
+      "analogy": {
+        "sq": "Si ta shkruash një fjali në tabelë dhe pastaj të kalosh te rreshti tjetër.",
+        "en": "Like writing a sentence on the board and then moving down to the next line."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "System.out.println(\"Përshëndetje!\");\nSystem.out.println(\"Mosha: \" + 16);\nSystem.out.print(\"Pa rresht të ri\");"
+      },
+      "related": [
+        "print-function",
+        "console",
+        "string"
+      ]
+    },
+    {
+      "id": "primitive-types",
+      "en": "Primitive types (int, double, boolean, char)",
+      "sq": "Tipet primitive",
+      "aliases": [
+        "double",
+        "char",
+        "long",
+        "primitive types",
+        "tipet primitive"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Java-ja ka tetë tipe bazë (primitive) për vlera të thjeshta: int për numra të plotë, double për numra me presje, boolean për true/false, char për një shkronjë, plus long, short, byte dhe float. Ndryshe nga Python-i, tipin duhet ta shkruash vetë.",
+        "en": "Java has eight basic (primitive) types for simple values: int for whole numbers, double for decimals, boolean for true/false, char for a single letter, plus long, short, byte and float. Unlike Python, you have to write the type yourself."
+      },
+      "analogy": {
+        "sq": "Si enët e ndryshme në kuzhinë: gota për ujë, filxhani për kafe, tasi për supë — secila për një lloj të caktuar.",
+        "en": "Like the different containers in a kitchen: a glass for water, a cup for coffee, a bowl for soup — each for one particular kind."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "int mosha = 16;\ndouble cmimi = 1.20;\nboolean kaloi = true;\nchar nota = 'A';"
+      },
+      "related": [
+        "data-type",
+        "static-dynamic-typing",
+        "integer"
+      ]
+    },
+    {
+      "id": "java-string-equals",
+      "en": "String & equals()",
+      "sq": null,
+      "aliases": [
+        "equals",
+        "string java",
+        ".equals()",
+        "== java"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Në Java, tekstet (String) krahasohen me .equals(), jo me ==. Shenja == kontrollon nëse janë i njëjti objekt në memorie, jo nëse kanë të njëjtën përmbajtje — një nga gabimet më të shpeshta të fillestarëve.",
+        "en": "In Java, text (String) is compared with .equals(), not ==. The == sign checks whether they're the same object in memory, not whether they have the same content — one of the most common beginner mistakes."
+      },
+      "analogy": {
+        "sq": "Si dy kopje të të njëjtit libër: == pyet „a është ky pikërisht libri im?“, equals() pyet „a kanë të njëjtin tekst?“.",
+        "en": "Like two copies of the same book: == asks “is this my exact book?”, equals() asks “do they have the same text?”."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "String a = \"Arta\";\nString b = new String(\"Arta\");\nSystem.out.println(a == b);       // false — objekte të ndryshme\nSystem.out.println(a.equals(b));  // true  — përmbajtje e njëjtë"
+      },
+      "related": [
+        "string",
+        "strict-equality",
+        "object"
+      ]
+    },
+    {
+      "id": "scanner",
+      "en": "Scanner (keyboard input)",
+      "sq": null,
+      "aliases": [
+        "scanner",
+        "java.util.scanner",
+        "nextline",
+        "input java"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Scanner-i është klasa që e përdor në Java për të lexuar çfarë shkruan përdoruesi në tastierë — si input() i Python-it. nextLine() lexon një rresht teksti, nextInt() një numër.",
+        "en": "Scanner is the class you use in Java to read what the user types on the keyboard — like Python's input(). nextLine() reads a line of text, nextInt() reads a number."
+      },
+      "analogy": {
+        "sq": "Si mësuesja që bën një pyetje dhe e shkruan përgjigjen tënde në fletore.",
+        "en": "Like a teacher asking a question and writing your answer in her notebook."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "Scanner sc = new Scanner(System.in);\nSystem.out.print(\"Si e ke emrin? \");\nString emri = sc.nextLine();\nSystem.out.println(\"Përshëndetje, \" + emri);"
+      },
+      "related": [
+        "input",
+        "println",
+        "java"
+      ]
+    },
+    {
+      "id": "java-array",
+      "en": "Arrays (Java)",
+      "sq": "Vargjet në Java",
+      "aliases": [
+        "int[]",
+        "array java",
+        "string[]"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Vargu në Java ka madhësi fikse që e cakton kur e krijon, dhe mban vetëm vlera të të njëjtit tip. Nëse të duhet një listë që rritet, përdor ArrayList.",
+        "en": "An array in Java has a fixed size set when you create it, and holds only values of the same type. If you need a list that grows, use ArrayList."
+      },
+      "analogy": {
+        "sq": "Si dollapët e numëruar në dhomën e zhveshjes: janë saktësisht 20 — s'e shton dot të 21-in pa ndërtuar një rresht të ri.",
+        "en": "Like numbered lockers in a changing room: there are exactly 20 — you can't add a 21st without building a new row."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "int[] notat = {8, 9, 10};\nSystem.out.println(notat[0]);      // 8\nSystem.out.println(notat.length);  // 3\nString[] emrat = new String[5];    // 5 vende bosh"
+      },
+      "related": [
+        "array",
+        "arraylist",
+        "array-index"
+      ]
+    },
+    {
+      "id": "arraylist",
+      "en": "ArrayList",
+      "sq": null,
+      "aliases": [
+        "list java",
+        "java list"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "ArrayList-i është një listë në Java që rritet dhe zvogëlohet vetë — mund të shtosh dhe të heqësh elemente kur të duash, ndryshe nga vargu i thjeshtë. Është struktura që përdoret më shpesh në Java.",
+        "en": "ArrayList is a list in Java that grows and shrinks by itself — you can add and remove items whenever you like, unlike a plain array. It's the most-used data structure in Java."
+      },
+      "analogy": {
+        "sq": "Si lista e blerjeve në telefon: shton e fshin sa të duash, pa u merakosur për vendin.",
+        "en": "Like a shopping list on your phone: add and delete items as much as you like without worrying about space."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "ArrayList<String> blerjet = new ArrayList<>();\nblerjet.add(\"bukë\");\nblerjet.add(\"qumësht\");\nblerjet.remove(\"bukë\");\nSystem.out.println(blerjet);  // [qumësht]"
+      },
+      "related": [
+        "list",
+        "java-array",
+        "java-generics"
+      ]
+    },
+    {
+      "id": "hashmap",
+      "en": "HashMap",
+      "sq": null,
+      "aliases": [
+        "map java",
+        "hash map"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "HashMap-i ruan çifte çelës–vlerë në Java, si dictionary-ja në Python: e gjen vlerën shumë shpejt sipas çelësit. P.sh. emri i nxënësit → nota.",
+        "en": "HashMap stores key–value pairs in Java, like a Python dictionary: it finds a value very quickly by its key. For example, a student's name → their grade."
+      },
+      "analogy": {
+        "sq": "Si ditari elektronik: shkruan emrin dhe të del menjëherë nota.",
+        "en": "Like an electronic register: type the name and the grade pops up instantly."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "HashMap<String, Integer> notat = new HashMap<>();\nnotat.put(\"Arta\", 9);\nnotat.put(\"Besnik\", 8);\nSystem.out.println(notat.get(\"Arta\"));  // 9"
+      },
+      "related": [
+        "dictionary",
+        "map-set",
+        "java-generics"
+      ]
+    },
+    {
+      "id": "access-modifiers",
+      "en": "public, private, protected",
+      "sq": "Modifikuesit e aksesit",
+      "aliases": [
+        "public",
+        "private",
+        "protected",
+        "access modifier"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Modifikuesit e aksesit vendosin kush mund ta përdorë një klasë, metodë ose variabël: public — kushdo; private — vetëm brenda klasës; protected — klasa dhe ato që e trashëgojnë. Janë mënyra si Java-ja e zbaton kapsulimin.",
+        "en": "Access modifiers decide who can use a class, method or variable: public — anyone; private — only inside the class; protected — the class and those that inherit from it. They're how Java enforces encapsulation."
+      },
+      "analogy": {
+        "sq": "Si dhomat e shtëpisë: dhoma e ndenjes është për të gjithë mysafirët (public), dhoma jote vetëm për ty (private), kuzhina për familjen (protected).",
+        "en": "Like the rooms in a house: the living room is for all guests (public), your bedroom just for you (private), the kitchen for the family (protected)."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "public class Llogari {\n    private double shuma;  // askush jashtë s'e prek\n    public void depozito(double x) { if (x > 0) shuma += x; }  // kushdo e thërret\n}"
+      },
+      "related": [
+        "encapsulation",
+        "class",
+        "oop"
+      ]
+    },
+    {
+      "id": "static-keyword",
+      "en": "static",
+      "sq": null,
+      "aliases": [
+        "static method",
+        "statike"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Fjala static do të thotë që një variabël ose metodë i përket vetë klasës, jo çdo objekti veç e veç. Mund ta përdorësh pa krijuar objekt — p.sh. Math.sqrt(16) — dhe vlera static ndahet nga të gjitha objektet.",
+        "en": "The static keyword means a variable or method belongs to the class itself, not to each object separately. You can use it without creating an object — like Math.sqrt(16) — and a static value is shared by all objects."
+      },
+      "analogy": {
+        "sq": "Si orari i shkollës në korridor: nuk ka çdo nxënës kopjen e vet — është një për gjithë shkollën.",
+        "en": "Like the school timetable in the hallway: each student doesn't have their own copy — there's one for the whole school."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "class Nxenes {\n    static int numri = 0;           // një për gjithë klasën\n    Nxenes() { numri++; }\n}\nSystem.out.println(Math.sqrt(16));  // 4.0 — pa krijuar objekt"
+      },
+      "related": [
+        "class",
+        "main-method",
+        "object"
+      ]
+    },
+    {
+      "id": "final-keyword",
+      "en": "final",
+      "sq": null,
+      "aliases": [
+        "final variable",
+        "konstante java"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Fjala final në Java do të thotë „s'ndryshon më“: një variabël final s'mund të marrë vlerë të re (si const në JavaScript), një metodë final s'mund të mbishkruhet, dhe një klasë final s'mund të trashëgohet.",
+        "en": "The final keyword in Java means “can't change any more”: a final variable can't get a new value (like const in JavaScript), a final method can't be overridden, and a final class can't be inherited from."
+      },
+      "analogy": {
+        "sq": "Si emri në certifikatën e lindjes: pasi shkruhet, mbetet ai.",
+        "en": "Like the name on a birth certificate: once it's written, it stays."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "final double TVSH = 0.18;\nTVSH = 0.20;  // Gabim! final s'ndryshohet"
+      },
+      "related": [
+        "constant",
+        "let-const-var",
+        "inheritance"
+      ]
+    },
+    {
+      "id": "constructor",
+      "en": "Constructor",
+      "sq": "Konstruktor",
+      "aliases": [
+        "konstruktori",
+        "constructor"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Konstruktori është një metodë e veçantë që ekzekutohet automatikisht kur krijon një objekt të ri me new. Përdoret për t'i dhënë objektit vlerat fillestare. Në Java ka të njëjtin emër me klasën.",
+        "en": "A constructor is a special method that runs automatically when you create a new object with new. It's used to give the object its starting values. In Java it has the same name as the class."
+      },
+      "analogy": {
+        "sq": "Si dita kur lind një fëmijë: menjëherë i jepet emri, data dhe vendi i lindjes.",
+        "en": "Like the day a baby is born: it immediately gets a name, a date and a place of birth."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "class Lojtar {\n    String emri;\n    Lojtar(String emri) { this.emri = emri; }  // konstruktori\n}\nLojtar l = new Lojtar(\"Arbër\");"
+      },
+      "related": [
+        "class",
+        "object",
+        "js-class"
+      ]
+    },
+    {
+      "id": "java-for-each",
+      "en": "Enhanced for loop (for-each)",
+      "sq": null,
+      "aliases": [
+        "for each java",
+        "enhanced for"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Cikli for-each në Java kalon nëpër çdo element të një vargu ose liste pa u marrë me indekse: for (String emri : emrat). Është mënyra më e lexueshme kur të duhen vetëm vlerat.",
+        "en": "Java's for-each loop goes through every item of an array or list without dealing with indexes: for (String name : names). It's the most readable choice when you only need the values."
+      },
+      "analogy": {
+        "sq": "Si mësuesja që thotë „çdo nxënës në këtë rresht, ngrihu“ — pa i numëruar bankat.",
+        "en": "Like the teacher saying “everyone in this row, stand up” — without counting desks."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "String[] qytetet = {\"Prishtinë\", \"Tiranë\", \"Shkup\"};\nfor (String q : qytetet) {\n    System.out.println(q);\n}"
+      },
+      "related": [
+        "loop",
+        "for-of",
+        "arraylist"
+      ]
+    },
+    {
+      "id": "java-exceptions",
+      "en": "Exceptions in Java",
+      "sq": "Përjashtimet në Java",
+      "aliases": [
+        "throws",
+        "checked exception",
+        "exception java",
+        "ioexception"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Java-ja i trajton gabimet me exceptions: kodin e rrezikshëm e fut në try, gabimin e kap në catch. Disa exception-e janë „checked“ — kompajleri të detyron t'i trajtosh ose t'i deklarosh me throws.",
+        "en": "Java handles errors with exceptions: risky code goes in try, the error is caught in catch. Some exceptions are “checked” — the compiler forces you to handle them or declare them with throws."
+      },
+      "analogy": {
+        "sq": "Si portieri pas mbrojtjes — vetëm se në Java gjyqtari (kompajleri) s'e nis ndeshjen nëse s'ke vënë portier për disa gjuajtje.",
+        "en": "Like the goalkeeper behind the defence — except in Java the referee (the compiler) won't start the match unless you've put a keeper in for certain shots."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "try {\n    int rezultati = 10 / 0;\n} catch (ArithmeticException e) {\n    System.out.println(\"Nuk pjesëtohet me zero!\");\n}"
+      },
+      "related": [
+        "error",
+        "try-catch",
+        "nullpointerexception"
+      ]
+    },
+    {
+      "id": "nullpointerexception",
+      "en": "NullPointerException",
+      "sq": null,
+      "aliases": [
+        "npe",
+        "null pointer",
+        "nullpointer"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "NullPointerException-i është gabimi më i famshëm i Java-s: ndodh kur përpiqesh të përdorësh një variabël që s'tregon te asnjë objekt (është null) — p.sh. kur thërret një metodë mbi të.",
+        "en": "NullPointerException is Java's most famous error: it happens when you try to use a variable that points to no object (it's null) — like calling a method on it."
+      },
+      "analogy": {
+        "sq": "Si ta thërrasësh një kontakt pa numër të ruajtur: emri është aty, por numri s'është — telefonata dështon menjëherë.",
+        "en": "Like calling a contact with no number saved: the name is there, but there's no number — the call fails immediately."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "String emri = null;\nSystem.out.println(emri.length());  // NullPointerException!\nif (emri != null) System.out.println(emri.length());  // mbrojtja"
+      },
+      "related": [
+        "null",
+        "java-exceptions",
+        "bug"
+      ]
+    },
+    {
+      "id": "java-package",
+      "en": "package & import (Java)",
+      "sq": null,
+      "aliases": [
+        "package java",
+        "import java",
+        "java.util"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Në Java, klasat organizohen në package (si dosje), p.sh. java.util. Me import e merr një klasë nga një package tjetër, që ta përdorësh në skedarin tënd — p.sh. import java.util.ArrayList;.",
+        "en": "In Java, classes are organised into packages (like folders), e.g. java.util. With import you bring a class from another package into your file — e.g. import java.util.ArrayList;."
+      },
+      "analogy": {
+        "sq": "Si raftet e bibliotekës sipas lëndës: kur të duhet një libër nga rafti i historisë, e merr dhe e sjell te tavolina jote.",
+        "en": "Like library shelves by subject: when you need a book from the history shelf, you fetch it to your desk."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "package al.fjalori;\nimport java.util.ArrayList;\nimport java.util.Scanner;"
+      },
+      "related": [
+        "module",
+        "es-modules",
+        "standard-library"
+      ]
+    },
+    {
+      "id": "method-overloading",
+      "en": "Method overloading",
+      "sq": "Mbingarkim metodash",
+      "aliases": [
+        "overloading",
+        "overload",
+        "mbingarkim"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Overloading-u do të thotë të kesh disa metoda me të njëjtin emër, por me parametra të ndryshëm. Java-ja zgjedh vetë cilën ta thërrasë sipas argumenteve që i jep.",
+        "en": "Overloading means having several methods with the same name but different parameters. Java picks which one to call based on the arguments you give it."
+      },
+      "analogy": {
+        "sq": "Si porosia „një kafe“: pa asgjë tjetër merr espreso; „një kafe me qumësht“ merr makiato — e njëjta fjalë, rezultati sipas detajeve.",
+        "en": "Like ordering “a coffee”: with nothing else you get an espresso; “a coffee with milk” gets you a macchiato — same word, the result depends on the details."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "int mblidh(int a, int b) { return a + b; }\ndouble mblidh(double a, double b) { return a + b; }\nString mblidh(String a, String b) { return a + b; }"
+      },
+      "related": [
+        "method",
+        "polymorphism",
+        "parameter"
+      ]
+    },
+    {
+      "id": "abstract-class",
+      "en": "Abstract class",
+      "sq": "Klasë abstrakte",
+      "aliases": [
+        "klasa abstrakte",
+        "abstract method",
+        "abstract class"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Klasa abstrakte është një klasë „gjysmë e gatshme“ që s'mund të përdoret direkt për të krijuar objekte — shërben si bazë për klasa të tjera, që duhet t'i plotësojnë metodat e saj abstrakte.",
+        "en": "An abstract class is a “half-finished” class that can't be used directly to create objects — it serves as a base for other classes, which must fill in its abstract methods."
+      },
+      "analogy": {
+        "sq": "Si receta bazë e brumit me shënimin „mbushja sipas dëshirës“: brumin s'e ha dot vetëm — dikush duhet ta mbarojë me spinaq, djathë apo mish.",
+        "en": "Like a basic dough recipe marked “filling of your choice”: you can't eat the dough on its own — someone has to finish it with spinach, cheese or meat."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "abstract class Kafshe {\n    abstract String ze();\n}\nclass Qen extends Kafshe { String ze() { return \"Hau!\"; } }"
+      },
+      "related": [
+        "inheritance",
+        "interface",
+        "oop"
+      ]
+    },
+    {
+      "id": "java-generics",
+      "en": "Generics (<T>)",
+      "sq": "Gjenerikët",
+      "aliases": [
+        "generics",
+        "<t>",
+        "generic type",
+        "gjenerike"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Gjenerikët të lejojnë të shkruash klasa dhe metoda që punojnë me çdo tip, duke e treguar tipin brenda kllapave < > — p.sh. ArrayList<String> mban vetëm tekste. Kështu kompajleri i kap gabimet që herët.",
+        "en": "Generics let you write classes and methods that work with any type, while naming the type in angle brackets < > — e.g. ArrayList<String> holds only text. That way the compiler catches mistakes early."
+      },
+      "analogy": {
+        "sq": "Si kutitë e ushqimit me etiketë: e njëjta kuti, por kur shkruan „vetëm oriz“, askush s'fut sheqer brenda.",
+        "en": "Like labelled food boxes: the same box, but once you write “rice only”, nobody puts sugar in it."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "ArrayList<String> emrat = new ArrayList<>();\nemrat.add(\"Arta\");\nemrat.add(42);  // Gabim! Lista pranon vetëm String"
+      },
+      "related": [
+        "arraylist",
+        "data-type",
+        "static-dynamic-typing"
+      ]
+    },
+    {
+      "id": "java-streams",
+      "en": "Streams (Java)",
+      "sq": null,
+      "aliases": [
+        "stream",
+        "stream api",
+        "streams java"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Stream-et në Java të lejojnë t'i përpunosh listat në stil funksional — filter, map, sum — në një zinxhir të lexueshëm, në vend të cikleve të gjata. Janë si map/filter/reduce i JavaScript-it.",
+        "en": "Streams in Java let you process lists in a functional style — filter, map, sum — as one readable chain, instead of long loops. They're like JavaScript's map/filter/reduce."
+      },
+      "analogy": {
+        "sq": "Si linja e prodhimit të lëngjeve: frutat kalojnë stacion pas stacioni — larje, qërim, shtrydhje — dhe në fund del lëngu.",
+        "en": "Like a juice production line: the fruit moves station by station — washing, peeling, squeezing — and juice comes out the end."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "List<Integer> notat = List.of(6, 9, 4, 10);\nint shuma = notat.stream()\n    .filter(n -> n >= 5)\n    .mapToInt(n -> n).sum();  // 25"
+      },
+      "related": [
+        "functional-programming",
+        "array-methods",
+        "lambda"
+      ]
+    },
+    {
+      "id": "maven-gradle",
+      "en": "Maven & Gradle",
+      "sq": null,
+      "aliases": [
+        "maven",
+        "gradle",
+        "pom.xml",
+        "build.gradle"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Maven-i dhe Gradle-i janë mjetet që menaxhojnë projektet Java: shkarkojnë libraritë që të duhen (varësitë), e kompajlojnë kodin dhe e paketojnë programin — si npm-i për JavaScript ose pip-i për Python.",
+        "en": "Maven and Gradle are the tools that manage Java projects: they download the libraries you need (dependencies), compile the code and package the program — like npm for JavaScript or pip for Python."
+      },
+      "analogy": {
+        "sq": "Si një ndihmës kuzhine që t'i blen përbërësit e recetës, i përgatit dhe ta jep gjellën gati për t'u shërbyer.",
+        "en": "Like a kitchen assistant who buys the ingredients on the recipe, preps them and hands you the dish ready to serve."
+      },
+      "code": {
+        "language": "xml",
+        "snippet": "<dependency>\n  <groupId>com.google.code.gson</groupId>\n  <artifactId>gson</artifactId>\n  <version>2.11.0</version>\n</dependency>"
+      },
+      "related": [
+        "dependency",
+        "npm",
+        "pip"
+      ]
+    },
+    {
+      "id": "spring-boot",
+      "en": "Spring Boot",
+      "sq": null,
+      "aliases": [
+        "spring",
+        "spring framework",
+        "springboot"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Spring Boot-i është framework-u më i njohur për të ndërtuar backend dhe API me Java. E përdorin shumë bankat dhe kompanitë e mëdha; me pak kod nis një server të plotë.",
+        "en": "Spring Boot is the most popular framework for building backends and APIs with Java. Banks and large companies use it a lot; with a little code you get a full server running."
+      },
+      "analogy": {
+        "sq": "Si një shtëpi e parafabrikuar: muret, instalimet dhe dyert vijnë gati — ti vendos vetëm si i rregullon dhomat.",
+        "en": "Like a prefab house: the walls, wiring and doors come ready — you just decide how to arrange the rooms."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "@RestController\npublic class Pershendetje {\n    @GetMapping(\"/pershendetje\")\n    public String hello() { return \"Tungjatjeta!\"; }\n}"
+      },
+      "related": [
+        "framework",
+        "backend",
+        "api"
+      ]
+    },
+    {
+      "id": "intellij",
+      "en": "IntelliJ IDEA",
+      "sq": null,
+      "aliases": [
+        "intellij",
+        "jetbrains",
+        "eclipse",
+        "netbeans"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "IntelliJ IDEA është IDE-ja më e përdorur për Java: të sugjeron kod, t'i gjen gabimet ndërsa shkruan dhe të ndihmon ta rregullosh projektin. Versioni Community është falas; Eclipse dhe NetBeans janë alternativa të tjera.",
+        "en": "IntelliJ IDEA is the most-used IDE for Java: it suggests code, finds mistakes as you type and helps you organise your project. The Community edition is free; Eclipse and NetBeans are other options."
+      },
+      "analogy": {
+        "sq": "Si tavolina e punës e një mjeshtri, ku çdo vegël është në vendin e vet dhe dikush të paralajmëron para se ta presësh drurin gabim.",
+        "en": "Like a craftsman's workbench where every tool has its place and someone warns you before you cut the wood wrong."
+      },
+      "code": null,
+      "related": [
+        "ide",
+        "java",
+        "debug"
       ]
     }
   ]
