@@ -40,6 +40,19 @@
       }
     },
     {
+      "id": "javascript",
+      "icon": "JS",
+      "hue": 290,
+      "name": {
+        "sq": "JavaScript",
+        "en": "JavaScript"
+      },
+      "description": {
+        "sq": "Gjuha e ueb-it: nga butonat në shfletues te serverët me Node.js.",
+        "en": "The language of the web: from buttons in the browser to servers with Node.js."
+      }
+    },
+    {
       "id": "databases",
       "icon": "db",
       "hue": 30,
@@ -619,7 +632,7 @@
       "aliases": [
         "js"
       ],
-      "category": "web",
+      "category": "javascript",
       "explanation": {
         "sq": "JavaScript-i është gjuha e programimit që i jep jetë faqes: reagon kur klikon një buton, ndryshon përmbajtjen pa e rifreskuar faqen, kontrollon formularët. Punon drejtpërdrejt në shfletues, e me Node.js mund të punojë edhe në server.",
         "en": "JavaScript is the programming language that brings a page to life: it reacts when you click a button, updates content without reloading, checks forms. It runs right in the browser, and with Node.js it can run on a server too."
@@ -1943,10 +1956,7 @@
       "en": "SQL",
       "sq": null,
       "aliases": [
-        "structured query language",
-        "mysql",
-        "postgresql",
-        "sqlite"
+        "structured query language"
       ],
       "category": "databases",
       "explanation": {
@@ -2942,7 +2952,7 @@
         "node",
         "nodejs"
       ],
-      "category": "web",
+      "category": "javascript",
       "explanation": {
         "sq": "Node.js e lejon JavaScript-in të punojë jashtë shfletuesit — në kompjuterin tënd ose në server. Me të ndërtohen backend-e, mjete për terminal dhe shumë më tepër.",
         "en": "Node.js lets JavaScript run outside the browser — on your computer or on a server. People use it to build backends, terminal tools and much more."
@@ -3178,7 +3188,7 @@
         ".then",
         "premtimi"
       ],
-      "category": "web",
+      "category": "javascript",
       "explanation": {
         "sq": "Promise-i në JavaScript është një objekt që përfaqëson një rezultat që do të vijë më vonë — ose me sukses, ose me gabim. Me .then() thua çfarë të bëhet kur të vijë rezultati.",
         "en": "A Promise in JavaScript is an object representing a result that will arrive later — either successfully or with an error. With .then() you say what to do when the result arrives."
@@ -3390,8 +3400,6 @@
       "en": "NoSQL",
       "sq": null,
       "aliases": [
-        "mongodb",
-        "firebase",
         "document database",
         "jo-relacionale"
       ],
@@ -4466,7 +4474,7 @@
         "arrow",
         "funksion me shigjetë"
       ],
-      "category": "web",
+      "category": "javascript",
       "explanation": {
         "sq": "Funksioni shigjetë është një mënyrë më e shkurtër për të shkruar funksione në JavaScript, me simbolin =>. Përdoret shumë për funksione të vogla që i jep si argument, p.sh. te addEventListener.",
         "en": "An arrow function is a shorter way to write functions in JavaScript, using the => symbol. It's used a lot for small functions you pass as an argument, e.g. to addEventListener."
@@ -4494,7 +4502,7 @@
         "backticks",
         "${}"
       ],
-      "category": "web",
+      "category": "javascript",
       "explanation": {
         "sq": "Template literal është një tekst në JavaScript i shkruar me shenjat ` (backticks), ku vlerat i fut direkt me ${ }. Është njësoj si f-string-u i Python-it.",
         "en": "A template literal is a JavaScript string written with ` (backticks), where you put values right inside with ${ }. It's just like Python's f-string."
@@ -9097,6 +9105,1438 @@
         "svg",
         "responsive-design",
         "css"
+      ]
+    },
+    {
+      "id": "relational-database",
+      "en": "Relational database",
+      "sq": "Databazë relacionale",
+      "aliases": [
+        "rdbms",
+        "relacionale",
+        "sql database"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Databaza relacionale i ruan të dhënat në tabela që lidhen me njëra-tjetrën përmes çelësave — p.sh. tabela e nxënësve dhe tabela e notave. Me të punon me SQL. Shembuj: PostgreSQL, MySQL, SQLite.",
+        "en": "A relational database stores data in tables that are linked to each other by keys — like a students table and a grades table. You work with it using SQL. Examples: PostgreSQL, MySQL, SQLite."
+      },
+      "analogy": {
+        "sq": "Si dosjet e shkollës që i referohen njëra-tjetrës: lista e nxënësve në një dosje, notat në një tjetër, të lidhura me numrin e nxënësit.",
+        "en": "Like school files that refer to each other: the student list in one file, grades in another, linked by student number."
+      },
+      "code": null,
+      "related": [
+        "sql",
+        "table",
+        "foreign-key"
+      ]
+    },
+    {
+      "id": "database-index",
+      "en": "Index (database)",
+      "sq": "Indeks (databazë)",
+      "aliases": [
+        "db index",
+        "create index",
+        "indeksim"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Indeksi në databazë është një strukturë shtesë që e bën kërkimin në një kolonë shumë më të shpejtë — në vend që databaza t'i kontrollojë të gjitha rreshtat një nga një. Kostoja: pak më shumë hapësirë dhe shkrime pak më të ngadalta.",
+        "en": "A database index is an extra structure that makes searching a column much faster — instead of the database checking every row one by one. The cost: a bit more space and slightly slower writes."
+      },
+      "analogy": {
+        "sq": "Si indeksi në fund të librit: në vend që ta shfletosh gjithë librin për fjalën „fotosintezë“, shkon te indeksi dhe e gjen faqen menjëherë.",
+        "en": "Like the index at the back of a book: instead of flipping through the whole book for “photosynthesis”, you check the index and find the page right away."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "db.execute(\"CREATE INDEX idx_emri ON nxenesit(emri)\")\n# tani kjo kërkesë bëhet shumë më e shpejtë:\ndb.execute(\"SELECT * FROM nxenesit WHERE emri = 'Arta'\")"
+      },
+      "related": [
+        "query",
+        "table",
+        "sql"
+      ]
+    },
+    {
+      "id": "transaction",
+      "en": "Transaction",
+      "sq": "Transaksion",
+      "aliases": [
+        "transaksioni",
+        "acid",
+        "rollback"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Transaksioni është një grup veprimesh në databazë që ose kryhen të gjitha, ose asnjë. Nëse diçka dështon në mes, gjithçka kthehet mbrapsht (rollback), që të dhënat të mos mbeten gjysmake.",
+        "en": "A transaction is a group of database operations that either all happen or none do. If something fails halfway, everything is rolled back, so the data is never left half-done."
+      },
+      "analogy": {
+        "sq": "Si transferta bankare: paratë duhet të dalin nga llogaria jote DHE të hyjnë te shoku. Nëse njëra dështon, anulohen të dyja — paratë s'zhduken dot në mes.",
+        "en": "Like a bank transfer: the money must leave your account AND arrive in your friend's. If either fails, both are cancelled — the money can't vanish in between."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "with db:  # nëse diçka dështon, gjithçka kthehet mbrapsht\n    db.execute(\"UPDATE llogarite SET shuma = shuma - 50 WHERE id = 1\")\n    db.execute(\"UPDATE llogarite SET shuma = shuma + 50 WHERE id = 2\")"
+      },
+      "related": [
+        "database",
+        "sql",
+        "crud"
+      ]
+    },
+    {
+      "id": "normalization",
+      "en": "Normalization",
+      "sq": "Normalizim",
+      "aliases": [
+        "normalizimi",
+        "normal form",
+        "3nf"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Normalizimi është mënyra si i organizon tabelat që e njëjta e dhënë të mos përsëritet në shumë vende. P.sh. adresën e klientit e ruan një herë në tabelën e klientëve, jo në çdo porosi. Kështu, kur ndryshon, e ndryshon vetëm në një vend.",
+        "en": "Normalization is how you organise tables so the same piece of data isn't repeated in lots of places. For example, you store a customer's address once in the customers table, not in every order. That way, when it changes, you change it in one place."
+      },
+      "analogy": {
+        "sq": "Si numri i telefonit të gjyshes: e ruan një herë në kontakte, nuk e shkruan në çdo letër. Kur ajo e ndërron numrin, e ndryshon vetëm një herë.",
+        "en": "Like grandma's phone number: you save it once in your contacts instead of writing it on every note. When she changes it, you update it once."
+      },
+      "code": null,
+      "related": [
+        "schema",
+        "table",
+        "foreign-key"
+      ]
+    },
+    {
+      "id": "postgresql",
+      "en": "PostgreSQL",
+      "sq": null,
+      "aliases": [
+        "postgres",
+        "psql",
+        "pg"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "PostgreSQL-i (ose „Postgres“) është një nga databazat relacionale më të fuqishme dhe më të njohura, falas dhe open source. Përdoret nga startup-et deri te kompanitë e mëdha.",
+        "en": "PostgreSQL (or “Postgres”) is one of the most powerful and popular relational databases, free and open source. It's used everywhere from startups to large companies."
+      },
+      "analogy": {
+        "sq": "Si një magazinë e madhe dhe e rregullt me rafte për çdo gjë: mban shumë dhe gjithçka gjendet shpejt e saktë.",
+        "en": "Like a big, well-organised warehouse with shelves for everything: it holds a lot and you find things quickly and accurately."
+      },
+      "code": {
+        "language": "sql",
+        "snippet": "CREATE TABLE nxenesit (id SERIAL PRIMARY KEY, emri TEXT);\nINSERT INTO nxenesit (emri) VALUES ('Arta');\nSELECT * FROM nxenesit;"
+      },
+      "related": [
+        "sql",
+        "relational-database",
+        "database"
+      ]
+    },
+    {
+      "id": "mysql",
+      "en": "MySQL",
+      "sq": null,
+      "aliases": [
+        "my sql",
+        "mariadb"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "MySQL-i është një databazë relacionale falas dhe shumë e përhapur, sidomos në faqet me PHP dhe WordPress. MariaDB-ja është një version shumë i ngjashëm, i krijuar nga i njëjti autor.",
+        "en": "MySQL is a free and very widespread relational database, especially for PHP and WordPress sites. MariaDB is a very similar version created by the same author."
+      },
+      "analogy": {
+        "sq": "Si buka e furrës së lagjes: s'është më e veçanta, por është kudo dhe të gjithë e njohin.",
+        "en": "Like bread from the local bakery: not the fanciest, but it's everywhere and everyone knows it."
+      },
+      "code": null,
+      "related": [
+        "sql",
+        "php",
+        "relational-database"
+      ]
+    },
+    {
+      "id": "sqlite",
+      "en": "SQLite",
+      "sq": null,
+      "aliases": [
+        "sqlite3",
+        "sqlite database"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "SQLite-i është një databazë e vogël që ruhet e gjitha në një skedar të vetëm, pa server. Vjen e gatshme me Python-in dhe përdoret në çdo telefon — ideale për të mësuar SQL dhe për projekte të vogla.",
+        "en": "SQLite is a small database stored entirely in a single file, with no server. It comes built into Python and is used on every phone — ideal for learning SQL and for small projects."
+      },
+      "analogy": {
+        "sq": "Si një fletore xhepi në vend të një arkivi të madh: e mban me vete, s'të duhet asnjë sekretare, dhe për shumë punë mjafton plotësisht.",
+        "en": "Like a pocket notebook instead of a big archive: you carry it with you, need no secretary, and for many jobs it's all you need."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import sqlite3\ndb = sqlite3.connect(\"shkolla.db\")  # e krijon skedarin nëse s'ekziston\ndb.execute(\"CREATE TABLE IF NOT EXISTS nxenesit (emri TEXT)\")"
+      },
+      "related": [
+        "sql",
+        "python",
+        "database"
+      ]
+    },
+    {
+      "id": "mongodb",
+      "en": "MongoDB",
+      "sq": null,
+      "aliases": [
+        "mongo",
+        "mongoose"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "MongoDB-ja është databaza NoSQL më e njohur: i ruan të dhënat si dokumente të ngjashme me JSON, jo në tabela. Përdoret shpesh me Node.js, sepse të dhënat duken njësoj si objektet në JavaScript.",
+        "en": "MongoDB is the most popular NoSQL database: it stores data as JSON-like documents rather than in tables. It's often used with Node.js, because the data looks just like JavaScript objects."
+      },
+      "analogy": {
+        "sq": "Si dosja personale e çdo nxënësi ku mund të futësh çfarëdo letre — jo një tabelë ku çdo rresht duhet t'i ketë të njëjtat kolona.",
+        "en": "Like a personal folder for each student where you can put any paper — not a table where every row needs the same columns."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "await db.collection(\"nxenesit\").insertOne({ emri: \"Arta\", notat: [9, 10] });\nconst arta = await db.collection(\"nxenesit\").findOne({ emri: \"Arta\" });"
+      },
+      "related": [
+        "nosql",
+        "json",
+        "node-js"
+      ]
+    },
+    {
+      "id": "redis",
+      "en": "Redis",
+      "sq": null,
+      "aliases": [
+        "redis cache",
+        "key-value"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Redis-i është një databazë shumë e shpejtë që i mban të dhënat në memorie (RAM), në formë çelës–vlerë. Përdoret kryesisht si cache, për seanca dhe për numërues që ndryshojnë shpesh.",
+        "en": "Redis is a very fast database that keeps data in memory (RAM) as key–value pairs. It's mainly used as a cache, for sessions and for counters that change often."
+      },
+      "analogy": {
+        "sq": "Si shënimet në pëllëmbë para provimit: shumë të shpejta për t'i parë, por s'janë vendi ku mban gjithë librin.",
+        "en": "Like notes scribbled on your palm before an exam: super quick to check, but not where you keep the whole textbook."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import redis\nr = redis.Redis()\nr.set(\"vizitoret\", 0)\nr.incr(\"vizitoret\")  # +1 për çdo vizitor"
+      },
+      "related": [
+        "cache",
+        "ram",
+        "nosql"
+      ]
+    },
+    {
+      "id": "firebase",
+      "en": "Firebase",
+      "sq": null,
+      "aliases": [
+        "firestore",
+        "google firebase"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Firebase-i është një platformë e Google-it që të jep të gatshme databazë, kyçje përdoruesish dhe hostim, pa e ndërtuar vetë backend-in. E zgjedhin shumë fillestarë për aplikacionet e para.",
+        "en": "Firebase is a Google platform that gives you a database, user login and hosting ready-made, without building your own backend. Many beginners pick it for their first apps."
+      },
+      "analogy": {
+        "sq": "Si të marrësh me qira një apartament të mobiluar me rrymë, ujë e internet të lidhur: hyn dhe fillon të jetosh menjëherë.",
+        "en": "Like renting a furnished flat with electricity, water and internet already connected: move in and start living straight away."
+      },
+      "code": null,
+      "related": [
+        "nosql",
+        "authentication",
+        "backend"
+      ]
+    },
+    {
+      "id": "group-by",
+      "en": "GROUP BY & aggregate functions",
+      "sq": "Grupim dhe funksione përmbledhëse",
+      "aliases": [
+        "group by",
+        "count",
+        "sum",
+        "avg",
+        "aggregate"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "GROUP BY i grupon rreshtat që kanë të njëjtën vlerë, dhe funksionet përmbledhëse — COUNT, SUM, AVG, MAX — llogaritin diçka për çdo grup. P.sh. sa nxënës ka çdo klasë, ose mesataren e notave për çdo lëndë.",
+        "en": "GROUP BY groups rows that share the same value, and aggregate functions — COUNT, SUM, AVG, MAX — calculate something for each group. For example, how many students each class has, or the average grade per subject."
+      },
+      "analogy": {
+        "sq": "Si kur mësuesja i ndan fletët e provimit në grumbuj sipas klasës dhe numëron sa ka në secilin.",
+        "en": "Like a teacher sorting exam papers into piles by class and counting how many are in each."
+      },
+      "code": {
+        "language": "sql",
+        "snippet": "SELECT klasa, COUNT(*) AS nxenes, AVG(nota) AS mesatarja\nFROM nxenesit\nGROUP BY klasa;"
+      },
+      "related": [
+        "sql",
+        "query",
+        "table"
+      ]
+    },
+    {
+      "id": "sql-where",
+      "en": "WHERE & ORDER BY",
+      "sq": "Filtrimi dhe renditja në SQL",
+      "aliases": [
+        "where",
+        "order by",
+        "limit",
+        "filtrim sql"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "WHERE i filtron rreshtat — merr vetëm ata që plotësojnë një kusht — dhe ORDER BY i rendit rezultatet, p.sh. nga nota më e lartë te më e ulëta. Bashkë me LIMIT, janë pjesët më të përdorura të një query.",
+        "en": "WHERE filters rows — keeping only those that meet a condition — and ORDER BY sorts the results, e.g. from highest grade to lowest. Together with LIMIT, they're the most-used parts of a query."
+      },
+      "analogy": {
+        "sq": "Si filtrat në një dyqan online: „vetëm atlete, numër 42“ (WHERE), „rendit nga më e lira“ (ORDER BY), „trego 10 të parat“ (LIMIT).",
+        "en": "Like the filters in an online shop: “only trainers, size 42” (WHERE), “sort by cheapest” (ORDER BY), “show the first 10” (LIMIT)."
+      },
+      "code": {
+        "language": "sql",
+        "snippet": "SELECT emri, nota FROM nxenesit\nWHERE klasa = '10B'\nORDER BY nota DESC\nLIMIT 3;"
+      },
+      "related": [
+        "sql",
+        "query",
+        "condition"
+      ]
+    },
+    {
+      "id": "er-diagram",
+      "en": "ER diagram",
+      "sq": "Diagrami ER",
+      "aliases": [
+        "entity relationship",
+        "erd",
+        "diagram databaze"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Diagrami ER (entitet–relacion) është një vizatim i databazës: kutitë janë tabelat, vijat tregojnë si lidhen — p.sh. „një klasë ka shumë nxënës“. E vizaton para se t'i krijosh tabelat, që ta kesh planin të qartë.",
+        "en": "An ER (entity–relationship) diagram is a drawing of a database: boxes are tables, lines show how they connect — like “one class has many students”. You draw it before creating the tables, so the plan is clear."
+      },
+      "analogy": {
+        "sq": "Si trungu familjar i vizatuar: kutitë janë njerëzit, vijat tregojnë kush është prind i kujt.",
+        "en": "Like a drawn family tree: the boxes are people, the lines show who is whose parent."
+      },
+      "code": null,
+      "related": [
+        "schema",
+        "relational-database",
+        "foreign-key"
+      ]
+    },
+    {
+      "id": "connection-string",
+      "en": "Connection string",
+      "sq": "Vargu i lidhjes",
+      "aliases": [
+        "database url",
+        "db url",
+        "dsn"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Connection string-u është një rresht teksti që i tregon programit si të lidhet me databazën: adresën, portën, emrin e përdoruesit, fjalëkalimin dhe emrin e databazës. Përmban sekrete, ndaj mbahet në një variabël mjedisi, jo në kod.",
+        "en": "A connection string is a line of text telling your program how to connect to the database: the address, port, username, password and database name. It contains secrets, so it's kept in an environment variable, not in the code."
+      },
+      "analogy": {
+        "sq": "Si udhëzimet për te banesa e një shoku: adresa, kati, numri i derës dhe kodi i portës — mos ia jep kujtdo.",
+        "en": "Like directions to a friend's flat: the address, floor, door number and the entry code — don't give them to just anyone."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import os\n# p.sh. postgresql://perdoruesi:fjalekalimi@localhost:5432/shkolla\nurl = os.environ[\"DATABASE_URL\"]"
+      },
+      "related": [
+        "environment-variable",
+        "database",
+        "port"
+      ]
+    },
+    {
+      "id": "seed-data",
+      "en": "Seed data",
+      "sq": "Të dhëna fillestare",
+      "aliases": [
+        "seed",
+        "seeding",
+        "të dhëna testi",
+        "fixtures"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Seed data janë të dhëna shembull që i fut në databazë në fillim — p.sh. disa përdorues dhe produkte testi — që aplikacioni të mos jetë bosh kur e zhvillon ose e teston.",
+        "en": "Seed data is sample data you put into the database at the start — like a few test users and products — so the app isn't empty while you develop or test it."
+      },
+      "analogy": {
+        "sq": "Si malli i parë që e vendos në raftet e një dyqani të ri para hapjes, që klientët e parë të gjejnë diçka.",
+        "en": "Like the first stock you put on a new shop's shelves before opening, so the first customers find something."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "nxenesit = [(\"Arta\",), (\"Besnik\",), (\"Dua\",)]\ndb.executemany(\"INSERT INTO nxenesit (emri) VALUES (?)\", nxenesit)"
+      },
+      "related": [
+        "database",
+        "testing",
+        "migration"
+      ]
+    },
+    {
+      "id": "print-function",
+      "en": "print()",
+      "sq": null,
+      "aliases": [
+        "print",
+        "printo",
+        "shfaq"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "print() është funksioni që shfaq tekst ose vlera në ekran (në terminal). Zakonisht është rreshti i parë që shkruan çdo fillestar në Python, dhe mjeti më i thjeshtë për të parë çfarë po ndodh në kod.",
+        "en": "print() is the function that shows text or values on the screen (in the terminal). It's usually the first line every Python beginner writes, and the simplest tool for seeing what's happening in your code."
+      },
+      "analogy": {
+        "sq": "Si të ngresh dorën dhe ta thuash përgjigjen me zë në klasë: atë që ke në mendje, ua tregon të gjithëve.",
+        "en": "Like raising your hand and saying the answer out loud in class: what's in your head, you share with everyone."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "print(\"Përshëndetje, botë!\")\nprint(\"Mosha:\", 16)\nprint(2 + 3)  # 5"
+      },
+      "related": [
+        "python",
+        "string",
+        "console"
+      ]
+    },
+    {
+      "id": "if-name-main",
+      "en": "if __name__ == \"__main__\"",
+      "sq": null,
+      "aliases": [
+        "__name__",
+        "__main__",
+        "name main"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "Ky rresht i famshëm kontrollon nëse skedari po ekzekutohet direkt (python skedari.py) apo po importohet nga një skedar tjetër. Kodi brenda tij ekzekutohet vetëm kur e nis vetë atë skedar.",
+        "en": "This famous line checks whether the file is being run directly (python file.py) or imported from another file. The code inside it only runs when you start that file yourself."
+      },
+      "analogy": {
+        "sq": "Si mësuesja që thotë: „Nëse jeni në klasën time, filloni ushtrimin; nëse thjesht kaloni për të marrë një libër, mos e filloni.“",
+        "en": "Like a teacher saying: “If you're in my class, start the exercise; if you're just popping in to borrow a book, don't.”"
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def kryesorja():\n    print(\"Programi nisi!\")\n\nif __name__ == \"__main__\":\n    kryesorja()"
+      },
+      "related": [
+        "module",
+        "function",
+        "python"
+      ]
+    },
+    {
+      "id": "with-statement",
+      "en": "with (context manager)",
+      "sq": null,
+      "aliases": [
+        "with",
+        "context manager",
+        "with open"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "Fjala with në Python e hap diçka — p.sh. një skedar — dhe kujdeset ta mbyllë vetë kur mbaron, edhe nëse ndodh një gabim. Kështu s'harron kurrë ta mbyllësh.",
+        "en": "Python's with keyword opens something — like a file — and takes care of closing it when you're done, even if an error happens. That way you never forget to close it."
+      },
+      "analogy": {
+        "sq": "Si dera e frigoriferit që mbyllet vetë: e merr qumështin dhe largohesh — s'ke pse kujtohesh ta mbyllësh.",
+        "en": "Like a fridge door that closes itself: you grab the milk and walk away — no need to remember to shut it."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "with open(\"shenime.txt\", \"w\", encoding=\"utf-8\") as f:\n    f.write(\"Përshëndetje!\")\n# këtu skedari është mbyllur vetë"
+      },
+      "related": [
+        "file-handling",
+        "error",
+        "python"
+      ]
+    },
+    {
+      "id": "decorator",
+      "en": "Decorator",
+      "sq": "Dekorator",
+      "aliases": [
+        "dekorator",
+        "@decorator"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "Dekoratori është një funksion që „mbështjell“ një funksion tjetër për t'i shtuar diçka — p.sh. matjen e kohës ose kontrollin e kyçjes — pa e ndryshuar kodin e tij. Shkruhet me @ sipër funksionit.",
+        "en": "A decorator is a function that “wraps” another function to add something to it — like timing it or checking login — without changing its code. You write it with @ above the function."
+      },
+      "analogy": {
+        "sq": "Si ta mbështjellësh një dhuratë: dhurata brenda mbetet e njëjtë, por tani ka edhe letër të bukur dhe fjongo.",
+        "en": "Like wrapping a present: the gift inside stays the same, but now it has nice paper and a bow too."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def me_pershendetje(f):\n    def e_re(): print(\"Mirë se erdhe!\"); f()\n    return e_re\n@me_pershendetje\ndef menyja(): print(\"Menyja\")"
+      },
+      "related": [
+        "function",
+        "flask",
+        "python"
+      ]
+    },
+    {
+      "id": "generator",
+      "en": "Generator (yield)",
+      "sq": "Gjenerator",
+      "aliases": [
+        "yield",
+        "gjenerator",
+        "generators"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "Gjeneratori është një funksion që i jep vlerat një nga një me yield, në vend që t'i krijojë të gjitha njëherësh. Kursen shumë memorie kur punon me vargje shumë të gjata ose të pafundme.",
+        "en": "A generator is a function that hands out values one at a time with yield, instead of creating them all at once. It saves a lot of memory when working with very long or endless sequences."
+      },
+      "analogy": {
+        "sq": "Si furra që nxjerr bukë të freskët një nga një sipas radhës së klientëve, në vend që të pjekë njëqind bukë njëherësh që mund të mos shiten.",
+        "en": "Like a bakery handing out fresh loaves one at a time as customers arrive, instead of baking a hundred at once that might not sell."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def numero(deri):\n    for i in range(1, deri + 1):\n        yield i\nfor n in numero(3):\n    print(n)  # 1, 2, 3"
+      },
+      "related": [
+        "loop",
+        "function",
+        "range"
+      ]
+    },
+    {
+      "id": "args-kwargs",
+      "en": "*args and **kwargs",
+      "sq": null,
+      "aliases": [
+        "args",
+        "kwargs",
+        "*args",
+        "**kwargs"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "*args dhe **kwargs i lejojnë një funksioni të pranojë sa argumente të duash: *args i mbledh si tuple (pa emër), **kwargs si dictionary (me emër).",
+        "en": "*args and **kwargs let a function accept any number of arguments: *args collects them as a tuple (unnamed), **kwargs as a dictionary (named)."
+      },
+      "analogy": {
+        "sq": "Si porosia në piceri: „një pica me…“ dhe pastaj shton sa përbërës të duash, pa e ditur kuzhinieri më parë sa do të jenë.",
+        "en": "Like ordering at a pizzeria: “a pizza with…” and then you add as many toppings as you like, without the cook knowing in advance how many."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def pica(*perberesit, **detaje):\n    print(perberesit, detaje)\n\npica(\"djathë\", \"kërpudha\", madhesia=\"e madhe\")\n# ('djathë', 'kërpudha') {'madhesia': 'e madhe'}"
+      },
+      "related": [
+        "function",
+        "parameter",
+        "tuple"
+      ]
+    },
+    {
+      "id": "enumerate",
+      "en": "enumerate()",
+      "sq": null,
+      "aliases": [
+        "enumerate"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "enumerate() të jep në një cikël njëkohësisht pozicionin (indeksin) dhe vlerën e çdo elementi, që të mos i numërosh vetë.",
+        "en": "enumerate() gives you both the position (index) and the value of each item in a loop, so you don't have to count yourself."
+      },
+      "analogy": {
+        "sq": "Si spikeri në stadium që e lajmëron çdo lojtar me numër dhe emër: „numri 1, Arbër; numri 2, Dren…“",
+        "en": "Like the stadium announcer calling out each player's number and name: “number 1, Arbër; number 2, Dren…”"
+      },
+      "code": {
+        "language": "python",
+        "snippet": "lojtaret = [\"Arbër\", \"Dren\", \"Ilir\"]\nfor i, emri in enumerate(lojtaret, start=1):\n    print(i, emri)  # 1 Arbër, 2 Dren, 3 Ilir"
+      },
+      "related": [
+        "loop",
+        "list",
+        "array-index"
+      ]
+    },
+    {
+      "id": "zip-function",
+      "en": "zip()",
+      "sq": null,
+      "aliases": [
+        "zip function"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "zip() i bashkon dy ose më shumë lista element për element: i pari me të parin, i dyti me të dytin, e kështu me radhë.",
+        "en": "zip() pairs up two or more lists item by item: the first with the first, the second with the second, and so on."
+      },
+      "analogy": {
+        "sq": "Si zinxhiri i xhaketës: dhëmbët e dy anëve bashkohen një nga një, me radhë.",
+        "en": "Like a jacket zip: the teeth on both sides join one by one, in order."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "emrat = [\"Arta\", \"Besnik\"]\nnotat = [9, 8]\nfor emri, nota in zip(emrat, notat):\n    print(emri, nota)  # Arta 9, Besnik 8"
+      },
+      "related": [
+        "list",
+        "loop",
+        "tuple"
+      ]
+    },
+    {
+      "id": "sorted-function",
+      "en": "sorted() & sort()",
+      "sq": "Renditja",
+      "aliases": [
+        "sorted",
+        "sort",
+        "rendit",
+        "renditje"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "sorted() kthen një listë të re të renditur, ndërsa lista.sort() e rendit listën ekzistuese. Me reverse=True rendit nga më i madhi, dhe me key= zgjedh sipas çfarë të renditet.",
+        "en": "sorted() returns a new sorted list, while list.sort() sorts the existing list in place. With reverse=True it sorts from largest, and with key= you choose what to sort by."
+      },
+      "analogy": {
+        "sq": "Si kur mësuesja i rendit nxënësit sipas gjatësisë për foton e klasës: të njëjtët nxënës, vetëm në rregull.",
+        "en": "Like a teacher lining students up by height for the class photo: same students, just in order."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "notat = [7, 10, 5, 9]\nprint(sorted(notat))                # [5, 7, 9, 10]\nprint(sorted(notat, reverse=True))  # [10, 9, 7, 5]"
+      },
+      "related": [
+        "list",
+        "lambda",
+        "algorithm"
+      ]
+    },
+    {
+      "id": "type-hints",
+      "en": "Type hints",
+      "sq": "Shënimet e tipit",
+      "aliases": [
+        "type hint",
+        "typing",
+        "annotations",
+        "mypy"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "Type hints janë shënime opsionale në Python që tregojnë çfarë tipi pret një funksion dhe çfarë kthen — p.sh. emri: str. Python-i s'i detyron, por IDE-ja i përdor për të të paralajmëruar për gabime.",
+        "en": "Type hints are optional notes in Python that say what type a function expects and returns — like name: str. Python doesn't enforce them, but your IDE uses them to warn you about mistakes."
+      },
+      "analogy": {
+        "sq": "Si etiketat „pa gluten“ ose „vegan“ në meny: kuzhina s'të ndalon ta porositësh gabim, por të ndihmon të zgjedhësh drejt.",
+        "en": "Like “gluten-free” or “vegan” labels on a menu: the kitchen won't stop you ordering the wrong thing, but it helps you choose right."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def pershendet(emri: str, mosha: int) -> str:\n    return f\"{emri} është {mosha} vjeç\""
+      },
+      "related": [
+        "data-type",
+        "static-dynamic-typing",
+        "function"
+      ]
+    },
+    {
+      "id": "string-methods",
+      "en": "String methods (split, join, strip)",
+      "sq": "Metodat e tekstit",
+      "aliases": [
+        "split",
+        "strip",
+        "replace",
+        "upper",
+        "lower"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "Metodat e tekstit janë funksione të gatshme për të punuar me string-e: split() e ndan tekstin në listë, join() e bashkon, strip() i heq hapësirat në skaje, replace() zëvendëson fjalë, upper()/lower() i ndryshojnë shkronjat.",
+        "en": "String methods are ready-made functions for working with text: split() breaks it into a list, join() glues a list together, strip() removes spaces at the ends, replace() swaps words, upper()/lower() change the case."
+      },
+      "analogy": {
+        "sq": "Si thikat e ndryshme në kuzhinë: njëra për bukë, tjetra për perime, tjetra për mish — secila bën një punë të caktuar.",
+        "en": "Like the different knives in a kitchen: one for bread, one for vegetables, one for meat — each does one particular job."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "teksti = \"  arta,besnik,dua  \"\nemrat = teksti.strip().split(\",\")  # ['arta', 'besnik', 'dua']\nprint(\" - \".join(emrat).upper())   # ARTA - BESNIK - DUA"
+      },
+      "related": [
+        "string",
+        "method",
+        "list"
+      ]
+    },
+    {
+      "id": "file-handling",
+      "en": "Reading & writing files",
+      "sq": "Leximi dhe shkrimi i skedarëve",
+      "aliases": [
+        "open()",
+        "file io",
+        "read file",
+        "write file",
+        "lexo skedar"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "Me open() Python-i lexon dhe shkruan skedarë: „r“ për lexim, „w“ për shkrim (e fshin përmbajtjen e vjetër), „a“ për të shtuar në fund. Për tekst në shqip shto gjithmonë encoding=\"utf-8\", që ë dhe ç të mos prishen.",
+        "en": "With open(), Python reads and writes files: “r” to read, “w” to write (it wipes the old content), “a” to append at the end. For Albanian text always add encoding=\"utf-8\" so ë and ç don't get mangled."
+      },
+      "analogy": {
+        "sq": "Si fletorja: e hap për ta lexuar, ose shkruan në një faqe të re (w), ose shton në fund të faqes ku je (a).",
+        "en": "Like a notebook: you open it to read, or write on a fresh page (w), or add to the end of the current page (a)."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "with open(\"lista.txt\", \"a\", encoding=\"utf-8\") as f:\n    f.write(\"Bukë\\n\")\nwith open(\"lista.txt\", encoding=\"utf-8\") as f:\n    print(f.read())"
+      },
+      "related": [
+        "with-statement",
+        "encoding-utf8",
+        "file-system"
+      ]
+    },
+    {
+      "id": "numpy",
+      "en": "NumPy",
+      "sq": null,
+      "aliases": [
+        "np",
+        "numpy array"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "NumPy-ja është libraria bazë e Python-it për llogaritje me numra: punon me vargje dhe matrica shumë shpejt. Pandas-i, libraritë e machine learning dhe shumë të tjera ndërtohen mbi të.",
+        "en": "NumPy is Python's foundational library for number crunching: it works with arrays and matrices very fast. pandas, machine learning libraries and many others are built on top of it."
+      },
+      "analogy": {
+        "sq": "Si kalkulatori i fuqishëm i kontabilistit krahasuar me llogaritjen me laps: i njëjti rezultat, por për mijëra numra njëherësh.",
+        "en": "Like an accountant's powerful calculator compared with working it out in pencil: same result, but for thousands of numbers at once."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import numpy as np\nnotat = np.array([8, 9, 10, 7])\nprint(notat.mean())  # 8.5\nprint(notat * 10)    # [ 80  90 100  70]"
+      },
+      "related": [
+        "pandas",
+        "machine-learning",
+        "python"
+      ]
+    },
+    {
+      "id": "matplotlib",
+      "en": "Matplotlib",
+      "sq": null,
+      "aliases": [
+        "plt",
+        "pyplot",
+        "grafik python"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "Matplotlib-i është libraria më e njohur e Python-it për të vizatuar grafikë — vija, shtylla, pite — nga të dhënat. Përdoret shumë bashkë me NumPy-në dhe pandas-in.",
+        "en": "Matplotlib is Python's best-known library for drawing charts — lines, bars, pies — from data. It's used a lot together with NumPy and pandas."
+      },
+      "analogy": {
+        "sq": "Si letra milimetrike në orën e matematikës — vetëm se grafiku vizatohet vetë, brenda një sekonde.",
+        "en": "Like graph paper in maths class — except the chart draws itself in a second."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import matplotlib.pyplot as plt\nplt.bar([\"Mat\", \"Fiz\", \"Kim\"], [9, 8, 10])\nplt.title(\"Notat e mia\")\nplt.show()"
+      },
+      "related": [
+        "pandas",
+        "numpy",
+        "dataset"
+      ]
+    },
+    {
+      "id": "pep8",
+      "en": "PEP 8",
+      "sq": null,
+      "aliases": [
+        "pep8",
+        "stili python",
+        "style guide",
+        "black",
+        "ruff"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "PEP 8 është udhëzuesi zyrtar i stilit për kodin Python: 4 hapësira për dhëmbëzim, snake_case për emrat, rreshta jo shumë të gjatë. Mjete si Black ose Ruff e rregullojnë kodin vetë sipas tij.",
+        "en": "PEP 8 is the official style guide for Python code: 4 spaces for indentation, snake_case for names, lines that aren't too long. Tools like Black or Ruff fix your code to match it automatically."
+      },
+      "analogy": {
+        "sq": "Si rregullat e shkrimit të hartimit në shkollë: margjina, titulli në mes, paragrafë të qartë — që kushdo ta lexojë lehtë.",
+        "en": "Like the school rules for writing an essay: margins, a centred title, clear paragraphs — so anyone can read it easily."
+      },
+      "code": null,
+      "related": [
+        "naming-convention",
+        "indentation",
+        "python"
+      ]
+    },
+    {
+      "id": "requests",
+      "en": "requests (library)",
+      "sq": null,
+      "aliases": [
+        "python requests",
+        "http python"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "requests është libraria më e përdorur e Python-it për të folur me API dhe faqe interneti: me një rresht dërgon një kërkesë GET ose POST dhe merr përgjigjen, p.sh. si JSON.",
+        "en": "requests is Python's most popular library for talking to APIs and websites: in one line you send a GET or POST request and get the response, e.g. as JSON."
+      },
+      "analogy": {
+        "sq": "Si numri i telefonit të picerisë së preferuar: një telefonatë dhe porosia të vjen.",
+        "en": "Like your favourite pizzeria's phone number: one call and your order arrives."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import requests\nr = requests.get(\"https://api.example.com/moti?qyteti=Prishtina\")\nprint(r.status_code, r.json())"
+      },
+      "related": [
+        "api",
+        "request",
+        "package"
+      ]
+    },
+    {
+      "id": "repl",
+      "en": "REPL (Python shell)",
+      "sq": "Konsola interaktive",
+      "aliases": [
+        "python shell",
+        "interactive shell",
+        ">>>"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "REPL-i është konsola interaktive e Python-it ku shkruan një rresht kodi dhe sheh rezultatin menjëherë. E hap duke shkruar python3 në terminal — ideale për të provuar ide të vogla.",
+        "en": "The REPL is Python's interactive console where you type a line of code and see the result immediately. You open it by typing python3 in the terminal — perfect for trying out small ideas."
+      },
+      "analogy": {
+        "sq": "Si pyetjet me gojë në klasë: pyet, merr përgjigjen menjëherë, pyet sërish — pa e shkruar gjithë hartimin.",
+        "en": "Like quick oral questions in class: ask, get the answer straight away, ask again — without writing a whole essay."
+      },
+      "code": {
+        "language": "python",
+        "snippet": ">>> 2 + 3\n5\n>>> \"ë\".upper()\n'Ë'"
+      },
+      "related": [
+        "interpreter",
+        "terminal",
+        "python"
+      ]
+    },
+    {
+      "id": "let-const-var",
+      "en": "let, const & var",
+      "sq": null,
+      "aliases": [
+        "let",
+        "const",
+        "var",
+        "variabla js"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Në JavaScript, variablat krijohen me let (vlera mund të ndryshojë), const (vlera s'ricaktohet) ose var (mënyra e vjetër, që sot shmanget). Rregulli i thjeshtë: përdor const kudo, dhe let vetëm kur vlera duhet të ndryshojë.",
+        "en": "In JavaScript, variables are created with let (the value can change), const (the value can't be reassigned) or var (the old way, avoided today). The simple rule: use const everywhere, and let only when the value needs to change."
+      },
+      "analogy": {
+        "sq": "const është si data e lindjes — s'ndryshon; let si mosha — ndryshon çdo vit; var është si një fletore e vjetër që s'e përdor më askush.",
+        "en": "const is like your birthday — it never changes; let is like your age — it changes every year; var is like an old notebook nobody uses any more."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const emri = \"Arta\";  // s'ndryshon\nlet mosha = 16;\nmosha = 17;           // në rregull\n// emri = \"Besa\";     // Gabim! const s'ricaktohet"
+      },
+      "related": [
+        "variable",
+        "constant",
+        "scope"
+      ]
+    },
+    {
+      "id": "strict-equality",
+      "en": "=== vs ==",
+      "sq": "Barazia e rreptë",
+      "aliases": [
+        "===",
+        "==",
+        "strict equality",
+        "barazim"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Në JavaScript, === kontrollon nëse dy vlera janë të barabarta edhe në tip, ndërsa == përpiqet t'i kthejë në të njëjtin tip para krahasimit — gjë që sjell surpriza, si \"5\" == 5 → true. Përdor gjithmonë ===.",
+        "en": "In JavaScript, === checks whether two values are equal including their type, while == tries to convert them to the same type first — which leads to surprises, like \"5\" == 5 → true. Always use ===."
+      },
+      "analogy": {
+        "sq": "=== është si arkëtari që kontrollon edhe shumën, edhe nëse kartëmonedha është e vërtetë; == është ai që thotë „5 janë 5“, edhe kur njëra është para e vërtetë e tjetra para loje.",
+        "en": "=== is the cashier who checks both the amount and that the note is real; == is the one who says “5 is 5”, even when one is a real note and the other is play money."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "console.log(5 === 5);    // true\nconsole.log(\"5\" === 5);  // false (tipe të ndryshme)\nconsole.log(\"5\" == 5);   // true  ← surprizë!\nconsole.log(0 == \"\");    // true  ← edhe më surprizë!"
+      },
+      "related": [
+        "operator",
+        "type-coercion",
+        "data-type"
+      ]
+    },
+    {
+      "id": "array-methods",
+      "en": "map, filter & reduce",
+      "sq": "Metodat e vargjeve",
+      "aliases": [
+        "map",
+        "filter",
+        "reduce",
+        "array methods",
+        "metoda vargu"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "map(), filter() dhe reduce() janë metodat më të përdorura të vargjeve në JavaScript: map e ndryshon çdo element, filter mban vetëm ata që plotësojnë një kusht, reduce i bashkon të gjithë në një vlerë (p.sh. shumën).",
+        "en": "map(), filter() and reduce() are JavaScript's most-used array methods: map transforms every item, filter keeps only those that pass a test, reduce combines them all into one value (like a sum)."
+      },
+      "analogy": {
+        "sq": "Si në kuzhinë me një shportë mollësh: map — i qëron të gjitha; filter — mban vetëm të kuqet; reduce — i bën të gjitha një kavanoz reçel.",
+        "en": "Like a basket of apples in the kitchen: map — peel them all; filter — keep only the red ones; reduce — turn them all into one jar of jam."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const cmimet = [2, 15, 8, 30];\nconst meTVSH = cmimet.map((c) => c * 1.18);\nconst teLira = cmimet.filter((c) => c < 10);         // [2, 8]\nconst totali = cmimet.reduce((sh, c) => sh + c, 0);  // 55"
+      },
+      "related": [
+        "array",
+        "functional-programming",
+        "arrow-function"
+      ]
+    },
+    {
+      "id": "destructuring",
+      "en": "Destructuring",
+      "sq": "Shpërbërje",
+      "aliases": [
+        "destructure",
+        "shpërbërja"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Destructuring është një mënyrë e shkurtër për t'i nxjerrë vlerat nga një objekt ose varg direkt në variabla, në një rresht të vetëm.",
+        "en": "Destructuring is a shortcut for pulling values out of an object or array straight into variables, in a single line."
+      },
+      "analogy": {
+        "sq": "Si kur e hap çantën e pazarit dhe i vendos menjëherë bukën, qumështin e vezët secilën në vendin e vet — me një lëvizje.",
+        "en": "Like opening the shopping bag and putting the bread, milk and eggs each in their place — in one go."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const studenti = { emri: \"Arta\", mosha: 16, qyteti: \"Pejë\" };\nconst { emri, qyteti } = studenti;\nconst [iPari, iDyti] = [\"Arbër\", \"Dren\"];\nconsole.log(emri, qyteti, iPari);  // Arta Pejë Arbër"
+      },
+      "related": [
+        "object",
+        "array",
+        "spread-operator"
+      ]
+    },
+    {
+      "id": "spread-operator",
+      "en": "Spread & rest (...)",
+      "sq": null,
+      "aliases": [
+        "...",
+        "spread",
+        "rest",
+        "spread operator"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Tri pikat ... në JavaScript e „hapin“ një varg ose objekt (spread) — p.sh. për ta kopjuar ose bashkuar — ose mbledhin shumë vlera në një (rest) te parametrat e funksionit.",
+        "en": "The three dots ... in JavaScript “spread out” an array or object (spread) — e.g. to copy or merge it — or gather many values into one (rest) in function parameters."
+      },
+      "analogy": {
+        "sq": "Si kur i derdh frutat nga dy shporta në një tas të madh: të gjitha bashkë, pa i zbrazur shportat origjinale.",
+        "en": "Like pouring the fruit from two baskets into one big bowl: all together, without emptying the original baskets."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const pemet = [\"mollë\", \"dardhë\"];\nconst teGjitha = [...pemet, \"karotë\"];       // [\"mollë\", \"dardhë\", \"karotë\"]\nconst studenti = { emri: \"Arta\", mosha: 16 };\nconst meMoshenERe = { ...studenti, mosha: 17 };  // kopje me moshë të re"
+      },
+      "related": [
+        "array",
+        "object",
+        "destructuring"
+      ]
+    },
+    {
+      "id": "type-coercion",
+      "en": "Type coercion",
+      "sq": "Konvertim automatik i tipit",
+      "aliases": [
+        "coercion",
+        "implicit conversion",
+        "konvertim automatik"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Type coercion është kur JavaScript-i e ndryshon vetë tipin e një vlere pa ta kërkuar ti — p.sh. \"5\" + 1 jep \"51\" (tekst), por \"5\" - 1 jep 4 (numër). Është shkaku i shumë bug-eve të çuditshme.",
+        "en": "Type coercion is when JavaScript changes a value's type on its own without you asking — e.g. \"5\" + 1 gives \"51\" (text), but \"5\" - 1 gives 4 (a number). It's behind lots of strange bugs."
+      },
+      "analogy": {
+        "sq": "Si kur i thua gjyshes „më sill pesë“ dhe ajo të sjell pesë mollë, ndërsa ti doje pesë euro: e „kuptoi“ vetë, por jo si e doje ti.",
+        "en": "Like asking grandma to “bring five” and she brings five apples when you meant five euros: she “figured it out” herself, just not the way you meant."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "console.log(\"5\" + 1);          // \"51\" (bashkim teksti)\nconsole.log(\"5\" - 1);          // 4    (zbritje numrash)\nconsole.log(Number(\"5\") + 1);  // 6    ← konvertim i qëllimshëm"
+      },
+      "related": [
+        "type-conversion",
+        "strict-equality",
+        "data-type"
+      ]
+    },
+    {
+      "id": "hoisting",
+      "en": "Hoisting",
+      "sq": "Ngritja (hoisting)",
+      "aliases": [
+        "hoist",
+        "ngritje"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Hoisting është sjellja e JavaScript-it që i „ngre“ deklarimet e funksioneve dhe të variablave në krye të kodit para se ta ekzekutojë. Prandaj mund ta thërrasësh një funksion para se ta kesh shkruar — por me let/const s'mund ta përdorësh variablën para deklarimit.",
+        "en": "Hoisting is JavaScript's behaviour of “lifting” function and variable declarations to the top of the code before running it. That's why you can call a function before it's written — but with let/const you can't use the variable before it's declared."
+      },
+      "analogy": {
+        "sq": "Si lista e prezencës që mësuesja e lexon në fillim të orës: e di kush është në klasë para se të nisë mësimi, edhe nëse dikush ulet në vend më vonë.",
+        "en": "Like the register the teacher reads at the start of class: she knows who's in the room before the lesson begins, even if someone only sits down later."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "pershendet();  // punon, edhe pse funksioni është më poshtë\n\nfunction pershendet() {\n  console.log(\"Përshëndetje!\");\n}"
+      },
+      "related": [
+        "scope",
+        "function",
+        "let-const-var"
+      ]
+    },
+    {
+      "id": "closure",
+      "en": "Closure",
+      "sq": null,
+      "aliases": [
+        "closures",
+        "mbyllje"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Closure-i është kur një funksion „mban mend“ variablat e vendit ku u krijua, edhe pasi ai vend ka mbaruar së ekzekutuari. Përdoret shumë për numërues, për të fshehur të dhëna dhe në callback-e.",
+        "en": "A closure is when a function “remembers” the variables from where it was created, even after that place has finished running. It's used a lot for counters, hiding data and in callbacks."
+      },
+      "analogy": {
+        "sq": "Si një fëmijë që ikën nga shtëpia për në universitet, por e merr me vete çelësin e shtëpisë: edhe larg, ka ende akses te ajo që i përkiste.",
+        "en": "Like a child leaving home for university but taking the house key: even far away, they still have access to what was theirs."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "function numerues() {\n  let n = 0;\n  return () => ++n;  // e mban mend n-në\n}\nconst tjetri = numerues(); tjetri(); console.log(tjetri());  // 2"
+      },
+      "related": [
+        "function",
+        "scope",
+        "callback"
+      ]
+    },
+    {
+      "id": "this-keyword",
+      "en": "this",
+      "sq": null,
+      "aliases": [
+        "this keyword",
+        "this js"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Fjala this në JavaScript i referohet objektit që po e thërret funksionin. Brenda një metode të objektit, this është vetë objekti. Është ndër gjërat më ngatërruese për fillestarët, sepse vlera e tij varet nga mënyra si thirret funksioni.",
+        "en": "The this keyword in JavaScript refers to the object that's calling the function. Inside an object's method, this is the object itself. It's one of the most confusing things for beginners, because its value depends on how the function is called."
+      },
+      "analogy": {
+        "sq": "Si fjala „unë“: kuptimi i saj varet nga kush e thotë — kur e thotë Arta, „unë“ është Arta; kur e thotë Besniku, është Besniku.",
+        "en": "Like the word “I”: its meaning depends on who says it — when Arta says it, “I” is Arta; when Besnik says it, it's Besnik."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const studenti = {\n  emri: \"Arta\",\n  pershendet() { console.log(\"Unë jam \" + this.emri); },\n};\nstudenti.pershendet();  // Unë jam Arta"
+      },
+      "related": [
+        "object",
+        "method",
+        "class"
+      ]
+    },
+    {
+      "id": "es-modules",
+      "en": "Modules (import / export)",
+      "sq": "Modulet në JavaScript",
+      "aliases": [
+        "export",
+        "es modules",
+        "esm",
+        "import export"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Modulet të lejojnë ta ndash kodin JavaScript në shumë skedarë: me export e bën diçka të përdorshme jashtë skedarit, me import e merr në një skedar tjetër. Ky fjalor punon kështu: main.js importon views.js dhe data.js.",
+        "en": "Modules let you split JavaScript code across many files: export makes something usable outside the file, import brings it into another file. This glossary works this way: main.js imports views.js and data.js."
+      },
+      "analogy": {
+        "sq": "Si fletoret e lëndëve që ia huazon shokut: çdo lëndë në fletoren e vet (moduli), dhe ai merr vetëm atë që i duhet (import).",
+        "en": "Like lending subject notebooks to a friend: each subject has its own notebook (module), and they borrow only the one they need (import)."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "// matematika.js\nexport function mblidh(a, b) { return a + b; }\n// main.js\nimport { mblidh } from \"./matematika.js\";\nconsole.log(mblidh(2, 3));  // 5"
+      },
+      "related": [
+        "module",
+        "javascript",
+        "npm"
+      ]
+    },
+    {
+      "id": "set-timeout",
+      "en": "setTimeout & setInterval",
+      "sq": null,
+      "aliases": [
+        "settimeout",
+        "setinterval",
+        "timer",
+        "kohëmatës"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "setTimeout() e ekzekuton një funksion një herë pasi kalon një kohë e caktuar, ndërsa setInterval() e ekzekuton përsëri e përsëri çdo disa milisekonda — p.sh. për një orë që lëviz ose një numërim mbrapsht.",
+        "en": "setTimeout() runs a function once after a set delay, while setInterval() runs it again and again every few milliseconds — for a ticking clock or a countdown, for example."
+      },
+      "analogy": {
+        "sq": "setTimeout është si alarmi i furrës: „bie pas 30 minutash“; setInterval është si zilja e shkollës që bie çdo 45 minuta.",
+        "en": "setTimeout is like the oven timer: “ring in 30 minutes”; setInterval is like the school bell that rings every 45 minutes."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "setTimeout(() => console.log(\"Pica u bë!\"), 2000);  // pas 2 sekondash\nlet s = 3;\nconst id = setInterval(() => { console.log(s--); if (s < 0) clearInterval(id); }, 1000);"
+      },
+      "related": [
+        "callback",
+        "asynchronous",
+        "event"
+      ]
+    },
+    {
+      "id": "optional-chaining",
+      "en": "Optional chaining (?.)",
+      "sq": null,
+      "aliases": [
+        "?.",
+        "??",
+        "nullish coalescing"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Optional chaining (?.) të lejon ta lexosh një vlerë thellë brenda një objekti pa u rrëzuar programi nëse një pjesë mungon — në vend të gabimit merr undefined. Me ?? cakton një vlerë rezervë.",
+        "en": "Optional chaining (?.) lets you read a value deep inside an object without crashing if part of it is missing — you get undefined instead of an error. With ?? you set a fallback value."
+      },
+      "analogy": {
+        "sq": "Si kur pyet: „A ka mami telefon? Nëse po, cili është numri?“ — në vend që ta supozosh se ka dhe të ngecësh pa përgjigje.",
+        "en": "Like asking: “Does Mum have a phone? If so, what's the number?” — instead of assuming she has one and getting stuck."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const perdoruesi = { emri: \"Arta\" };\nconsole.log(perdoruesi.adresa?.qyteti);         // undefined, pa gabim\nconsole.log(perdoruesi.adresa?.qyteti ?? \"—\");  // \"—\""
+      },
+      "related": [
+        "object",
+        "null",
+        "error"
+      ]
+    },
+    {
+      "id": "query-selector",
+      "en": "querySelector()",
+      "sq": null,
+      "aliases": [
+        "queryselector",
+        "queryselectorall",
+        "getelementbyid"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "document.querySelector() e gjen elementin e parë në faqe që përputhet me një përzgjedhës CSS — p.sh. \"#titulli\" ose \".butoni\" — që ta lexosh ose ta ndryshosh me JavaScript. querySelectorAll() i gjen të gjithë.",
+        "en": "document.querySelector() finds the first element on the page matching a CSS selector — like \"#title\" or \".button\" — so you can read or change it with JavaScript. querySelectorAll() finds them all."
+      },
+      "analogy": {
+        "sq": "Si kur mësuesja thotë „Nxënësi me bluzë të kuqe, eja te tabela“: e përshkruan kë kërkon, dhe ai del.",
+        "en": "Like the teacher saying “The student in the red shirt, come to the board”: she describes who she wants, and they step forward."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const titulli = document.querySelector(\"#titulli\");\ntitulli.textContent = \"Mirë se vini!\";\ndocument.querySelectorAll(\".karta\").forEach((k) => k.classList.add(\"e-re\"));"
+      },
+      "related": [
+        "dom",
+        "css-selector",
+        "javascript"
+      ]
+    },
+    {
+      "id": "ternary-operator",
+      "en": "Ternary operator (? :)",
+      "sq": "Operatori ternar",
+      "aliases": [
+        "ternary",
+        "? :",
+        "conditional operator",
+        "ternar"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Operatori ternar është një if/else i shkurtër në një rresht: kushti ? vlera nëse po : vlera nëse jo. Ekziston në JavaScript, Java, C dhe shumë gjuhë të tjera.",
+        "en": "The ternary operator is a short if/else on one line: condition ? value if true : value if false. It exists in JavaScript, Java, C and many other languages."
+      },
+      "analogy": {
+        "sq": "Si vendimi i gjyqtarit me një fjalë: „Gol? Po — 1:0. Jo — vazhdo.“ — pa fjalim të gjatë.",
+        "en": "Like a referee's one-word call: “Goal? Yes — 1:0. No — play on.” — no long speech."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const piket = 62;\nconst rezultati = piket >= 50 ? \"Kaloi\" : \"Ngeli\";\nconsole.log(rezultati);  // Kaloi"
+      },
+      "related": [
+        "condition",
+        "operator",
+        "javascript"
+      ]
+    },
+    {
+      "id": "typeof",
+      "en": "typeof",
+      "sq": null,
+      "aliases": [
+        "type of"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "typeof të tregon çfarë tipi ka një vlerë në JavaScript: \"number\", \"string\", \"boolean\", \"object\", \"undefined\"… Është i dobishëm kur bën debug ose kur kontrollon çfarë ke marrë nga një formular.",
+        "en": "typeof tells you what type a value has in JavaScript: \"number\", \"string\", \"boolean\", \"object\", \"undefined\"… It's useful when debugging or checking what you got from a form."
+      },
+      "analogy": {
+        "sq": "Si kur e nuhat kavanozin para se ta hedhësh në gjellë: kripë apo sheqer?",
+        "en": "Like sniffing the jar before tipping it into the dish: salt or sugar?"
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "console.log(typeof 42);    // \"number\"\nconsole.log(typeof \"42\");  // \"string\"\nconsole.log(typeof null);  // \"object\"  ← çudi e vjetër e JS-së"
+      },
+      "related": [
+        "data-type",
+        "type-coercion",
+        "debug"
+      ]
+    },
+    {
+      "id": "nan",
+      "en": "NaN (Not a Number)",
+      "sq": null,
+      "aliases": [
+        "nan",
+        "not a number",
+        "isnan"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "NaN do të thotë „Not a Number“ — „nuk është numër“. E merr kur një llogaritje me numra dështon, p.sh. Number(\"abc\") ose 0/0. Çudia: NaN s'është i barabartë as me veten, ndaj kontrollohet me Number.isNaN().",
+        "en": "NaN means “Not a Number”. You get it when a number calculation fails, like Number(\"abc\") or 0/0. The odd part: NaN isn't even equal to itself, so you check for it with Number.isNaN()."
+      },
+      "analogy": {
+        "sq": "Si kur kalkulatori i arkës shfaq „Error“ sepse dikush shtypi një shkronjë: rezultati s'është zero, thjesht s'është numër.",
+        "en": "Like the till calculator showing “Error” because someone typed a letter: the result isn't zero, it just isn't a number."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const mosha = Number(\"shtatëmbëdhjetë\");\nconsole.log(mosha);                // NaN\nconsole.log(mosha === NaN);        // false (!)\nconsole.log(Number.isNaN(mosha));  // true"
+      },
+      "related": [
+        "type-coercion",
+        "data-type",
+        "input-validation"
+      ]
+    },
+    {
+      "id": "express-js",
+      "en": "Express.js",
+      "sq": null,
+      "aliases": [
+        "express",
+        "expressjs"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Express-i është framework-u më i njohur për të ndërtuar backend me Node.js: me pak rreshta krijon një server që pret kërkesa dhe kthen faqe ose JSON — shpesh hapi i parë drejt ndërtimit të API-ve.",
+        "en": "Express is the best-known framework for building backends with Node.js: in a few lines you create a server that receives requests and sends back pages or JSON — often the first step towards building APIs."
+      },
+      "analogy": {
+        "sq": "Si një kioskë e vogël ushqimi: e ngre shpejt, me pak pajisje, dhe fillon t'u shërbesh klientëve menjëherë.",
+        "en": "Like a small food kiosk: quick to set up, with little equipment, and you start serving customers straight away."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "import express from \"express\";\nconst app = express();\napp.get(\"/api/pershendetje\", (req, res) => res.json({ mesazhi: \"Tungjatjeta!\" }));\napp.listen(3000);"
+      },
+      "related": [
+        "node-js",
+        "backend",
+        "api"
+      ]
+    },
+    {
+      "id": "nextjs",
+      "en": "Next.js",
+      "sq": null,
+      "aliases": [
+        "next",
+        "next js"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Next.js-i është një framework mbi React-in për ndërtimin e faqeve të plota: të jep faqe me URL të vërteta, HTML të gatshëm për Google-in dhe backend në të njëjtin projekt. Është krijuar nga Vercel-i.",
+        "en": "Next.js is a framework built on React for making complete websites: it gives you pages with real URLs, ready-made HTML for Google and a backend in the same project. It's made by Vercel."
+      },
+      "analogy": {
+        "sq": "Nëse React-i janë tullat, Next.js-i është shtëpia e gatshme e ndërtuar me ato tulla — me dyer, dritare e instalime.",
+        "en": "If React is the bricks, Next.js is a ready-built house made from those bricks — with doors, windows and wiring."
+      },
+      "code": null,
+      "related": [
+        "react",
+        "framework",
+        "seo"
+      ]
+    },
+    {
+      "id": "vue",
+      "en": "Vue.js",
+      "sq": null,
+      "aliases": [
+        "vue",
+        "vuejs",
+        "nuxt"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Vue-ja është një framework JavaScript për ndërtimin e ndërfaqeve, i njohur si i lehtë për fillestarët: e mban bashkë HTML-në, CSS-në dhe JavaScript-in e një komponenti në një skedar të vetëm.",
+        "en": "Vue is a JavaScript framework for building user interfaces, known for being beginner-friendly: it keeps a component's HTML, CSS and JavaScript together in a single file."
+      },
+      "analogy": {
+        "sq": "Si një set i gatshëm për të bërë byrek: gjithçka që të duhet është në një kuti, me udhëzime të qarta.",
+        "en": "Like a byrek-making kit: everything you need is in one box, with clear instructions."
+      },
+      "code": {
+        "language": "vue",
+        "snippet": "<template>\n  <button @click=\"numri++\">Klikime: {{ numri }}</button>\n</template>\n<script setup> import { ref } from \"vue\"; const numri = ref(0); </script>"
+      },
+      "related": [
+        "react",
+        "component",
+        "framework"
+      ]
+    },
+    {
+      "id": "angular",
+      "en": "Angular",
+      "sq": null,
+      "aliases": [
+        "angularjs",
+        "angular framework"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Angular-i është një framework i madh i Google-it për aplikacione ueb, i shkruar me TypeScript. Vjen me shumë gjëra të gatshme dhe rregulla të qarta, ndaj e përdorin shpesh kompanitë e mëdha dhe projektet afatgjata.",
+        "en": "Angular is a large framework from Google for web applications, written in TypeScript. It comes with lots built in and clear rules, so big companies and long-term projects often use it."
+      },
+      "analogy": {
+        "sq": "Si një akademi futbolli me rregullore të rreptë: më shumë rregulla për t'u mësuar në fillim, por të gjithë luajnë njësoj dhe ekipi punon si sahat.",
+        "en": "Like a football academy with strict rules: more to learn at the start, but everyone plays the same way and the team runs like clockwork."
+      },
+      "code": null,
+      "related": [
+        "typescript",
+        "framework",
+        "react"
       ]
     }
   ]
