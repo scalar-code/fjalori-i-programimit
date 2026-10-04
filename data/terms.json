@@ -877,7 +877,6 @@
       "sq": "Vlerë boshe",
       "aliases": [
         "none",
-        "undefined",
         "nil",
         "bosh"
       ],
@@ -4613,8 +4612,6 @@
       "sq": "Konsola",
       "aliases": [
         "console.log",
-        "devtools",
-        "f12",
         "konsola e shfletuesit"
       ],
       "category": "web",
@@ -10537,6 +10534,1742 @@
         "typescript",
         "framework",
         "react"
+      ]
+    },
+    {
+      "id": "html-tag",
+      "en": "HTML tag & element",
+      "sq": "Etiketë dhe element HTML",
+      "aliases": [
+        "tag",
+        "element",
+        "etiketë html",
+        "html element"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Etiketa HTML është një fjalë brenda kllapave këndore, si <p> ose <h1>, që i tregon shfletuesit çfarë lloj përmbajtjeje vjen. Shumica vijnë në çifte — hapëse <p> dhe mbyllëse </p> — dhe bashkë me përmbajtjen në mes formojnë një element.",
+        "en": "An HTML tag is a word inside angle brackets, like <p> or <h1>, that tells the browser what kind of content comes next. Most come in pairs — an opening <p> and a closing </p> — and together with the content between them they form an element."
+      },
+      "analogy": {
+        "sq": "Si një sanduiç: feta e bukës sipër (<p>) dhe feta poshtë (</p>), me mbushjen (tekstin) në mes.",
+        "en": "Like a sandwich: the top slice (<p>) and the bottom slice (</p>), with the filling (the text) in between."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<p>Ky është një paragraf.</p>\n<h1>Ky është një titull</h1>\n<br>  <!-- disa etiketa s'kanë mbyllëse -->"
+      },
+      "related": [
+        "html",
+        "html-attribute",
+        "semantic-html"
+      ]
+    },
+    {
+      "id": "html-attribute",
+      "en": "HTML attribute",
+      "sq": "Atribut HTML",
+      "aliases": [
+        "attribute",
+        "atribut",
+        "href",
+        "src",
+        "alt"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Atributi është një informacion shtesë brenda etiketës hapëse, në formën emri=\"vlera\" — p.sh. href te lidhjet, src dhe alt te fotot, class dhe id për stilim. Ai e plotëson ose e ndryshon sjelljen e elementit.",
+        "en": "An attribute is extra information inside an opening tag, written as name=\"value\" — like href on links, src and alt on images, class and id for styling. It adds to or changes how the element behaves."
+      },
+      "analogy": {
+        "sq": "Si etiketa në një produkt në dyqan: produkti është po ai, por etiketa shton detaje — çmimin, madhësinë, ngjyrën.",
+        "en": "Like the label on a product in a shop: the product's the same, but the label adds details — price, size, colour."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<a href=\"https://fjalori.dev\" target=\"_blank\">Fjalori</a>\n<img src=\"logo.png\" alt=\"Logoja e faqes\">"
+      },
+      "related": [
+        "html-tag",
+        "anchor-link",
+        "img-tag"
+      ]
+    },
+    {
+      "id": "anchor-link",
+      "en": "<a> link",
+      "sq": "Lidhje (<a>)",
+      "aliases": [
+        "a tag",
+        "hyperlink",
+        "anchor"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Etiketa <a> krijon një lidhje që të çon në një faqe tjetër, në një pjesë të së njëjtës faqe, ose hap një email. Adresa vendoset te atributi href. Lidhjet janë ato që e bëjnë ueb-in „rrjet“.",
+        "en": "The <a> tag creates a link that takes you to another page, to a part of the same page, or opens an email. The address goes in the href attribute. Links are what make the web a “web”."
+      },
+      "analogy": {
+        "sq": "Si tabelat e rrugës: „Prishtinë 20 km →“ — vetëm se këtu, me një klikim je atje.",
+        "en": "Like road signs: “Prishtina 20 km →” — except here, one click and you're there."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<a href=\"/term/api\">Shiko termin API</a>\n<a href=\"#kontakt\">Shko te kontakti</a>\n<a href=\"mailto:info@shembull.com\">Na shkruaj</a>"
+      },
+      "related": [
+        "html-attribute",
+        "url",
+        "html"
+      ]
+    },
+    {
+      "id": "img-tag",
+      "en": "<img> image",
+      "sq": "Foto (<img>)",
+      "aliases": [
+        "img",
+        "image tag",
+        "foto html"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Etiketa <img> vendos një foto në faqe: src tregon ku ndodhet fotoja, alt përshkruan çfarë tregon ajo — për lexuesit e ekranit dhe për rastin kur fotoja s'ngarkohet. <img> s'ka etiketë mbyllëse.",
+        "en": "The <img> tag puts an image on the page: src says where the picture is, alt describes what it shows — for screen readers and in case the image doesn't load. <img> has no closing tag."
+      },
+      "analogy": {
+        "sq": "Si një kornizë në mur me një shënim poshtë: src i tregon ku ta gjejë foton, alt shkruan „familja në plazh“ për kë s'e sheh dot.",
+        "en": "Like a picture frame on the wall with a caption underneath: src says where to find the photo, alt says “family at the beach” for anyone who can't see it."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<img src=\"foto/prizreni.jpg\" alt=\"Pamje e Prizrenit natën\" width=\"400\">"
+      },
+      "related": [
+        "html-attribute",
+        "accessibility",
+        "svg"
+      ]
+    },
+    {
+      "id": "headings",
+      "en": "Headings (<h1>–<h6>)",
+      "sq": "Titujt (<h1>–<h6>)",
+      "aliases": [
+        "h1",
+        "h2",
+        "heading",
+        "tituj"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Etiketat <h1> deri <h6> janë titujt e faqes, nga më i rëndësishmi te më i vogli. Çdo faqe duhet të ketë një <h1> kryesor; nëntitujt vijnë me radhë. Google-i dhe lexuesit e ekranit i përdorin për ta kuptuar strukturën.",
+        "en": "The <h1> to <h6> tags are a page's headings, from most to least important. Every page should have one main <h1>; subheadings follow in order. Google and screen readers use them to understand the structure."
+      },
+      "analogy": {
+        "sq": "Si titujt në librin e shkollës: titulli i kapitullit (h1), pastaj nënkapitujt (h2), pastaj pikat brenda tyre (h3).",
+        "en": "Like headings in a school textbook: the chapter title (h1), then sections (h2), then the points inside them (h3)."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<h1>Fjalori i Programimit</h1>\n<h2>Kategoritë</h2>\n<h3>Web</h3>"
+      },
+      "related": [
+        "html",
+        "semantic-html",
+        "seo"
+      ]
+    },
+    {
+      "id": "html-lists",
+      "en": "Lists (<ul>, <ol>)",
+      "sq": "Listat në HTML",
+      "aliases": [
+        "ul",
+        "ol",
+        "li",
+        "listë html"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "HTML-ja ka dy lloje kryesore listash: <ul> për lista me pika (pa renditje) dhe <ol> për lista me numra (me renditje). Çdo element i listës futet në <li>. Edhe menytë e navigimit zakonisht janë <ul>.",
+        "en": "HTML has two main kinds of list: <ul> for bulleted (unordered) lists and <ol> for numbered (ordered) lists. Each item goes inside <li>. Navigation menus are usually <ul> too."
+      },
+      "analogy": {
+        "sq": "<ul> është lista e blerjeve (s'ka rëndësi radha), <ol> është receta (hapi 1, hapi 2, hapi 3).",
+        "en": "<ul> is a shopping list (order doesn't matter), <ol> is a recipe (step 1, step 2, step 3)."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<ol>\n  <li>Ziej ujin</li>\n  <li>Hidh makaronat</li>\n</ol>"
+      },
+      "related": [
+        "html",
+        "html-tag",
+        "semantic-html"
+      ]
+    },
+    {
+      "id": "input-button",
+      "en": "<input> & <button>",
+      "sq": "Fushë dhe buton",
+      "aliases": [
+        "input html",
+        "button",
+        "buton",
+        "textbox",
+        "checkbox"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "<input> është fusha ku përdoruesi shkruan ose zgjedh diçka — tekst, email, fjalëkalim, datë, kuti zgjedhjeje — sipas atributit type. <button> është butoni që e klikon për të dërguar formularin ose për të nisur një veprim.",
+        "en": "<input> is the field where the user types or picks something — text, email, password, date, checkbox — depending on its type attribute. <button> is the button you click to submit a form or trigger an action."
+      },
+      "analogy": {
+        "sq": "Si formulari në sportelin e bankës: kutitë bosh ku shkruan emrin (input) dhe vula në fund që e dorëzon (button).",
+        "en": "Like the form at a bank counter: the empty boxes where you write your name (input) and the stamp at the bottom that submits it (button)."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<input type=\"email\" placeholder=\"emri@shembull.com\">\n<input type=\"checkbox\"> Pranoj kushtet\n<button type=\"submit\">Dërgo</button>"
+      },
+      "related": [
+        "form",
+        "html",
+        "event"
+      ]
+    },
+    {
+      "id": "class-vs-id",
+      "en": "class vs id",
+      "sq": "class dhe id",
+      "aliases": [
+        "class attribute",
+        "id attribute",
+        "klasa css"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "class dhe id janë atribute për t'i emërtuar elementet, që t'i stilosh me CSS ose t'i gjesh me JavaScript. Një id duhet të jetë unik në faqe (vetëm një element), ndërsa e njëjta class mund të përdoret te sa elemente të duash.",
+        "en": "class and id are attributes for naming elements so you can style them with CSS or find them with JavaScript. An id must be unique on the page (just one element), while the same class can be used on as many elements as you like."
+      },
+      "analogy": {
+        "sq": "id është si numri personal i nxënësit — e ka vetëm një; class është si „klasa 10B“ — e ndajnë shumë nxënës bashkë.",
+        "en": "An id is like a student's personal number — only one person has it; a class is like “class 10B” — many students share it."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<h1 id=\"titulli\">Mirë se vini</h1>\n<div class=\"karta\">API</div>\n<div class=\"karta\">HTML</div>"
+      },
+      "related": [
+        "css-selector",
+        "html-attribute",
+        "query-selector"
+      ]
+    },
+    {
+      "id": "viewport-meta",
+      "en": "Viewport meta tag",
+      "sq": "Meta-etiketa viewport",
+      "aliases": [
+        "viewport",
+        "meta viewport",
+        "width=device-width"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Meta-etiketa viewport i thotë telefonit ta shfaqë faqen në gjerësinë e vërtetë të ekranit, në vend që ta zvogëlojë si faqe kompjuteri. Pa të, edhe CSS-ja responsive s'punon si duhet në telefon.",
+        "en": "The viewport meta tag tells phones to show the page at the screen's real width, instead of shrinking it down like a desktop page. Without it, even responsive CSS won't work properly on phones."
+      },
+      "analogy": {
+        "sq": "Si t'ia japësh rrobaqepëses masat e sakta të fëmijës, në vend që ta veshësh me një fustan të madh e ta palosësh.",
+        "en": "Like giving the tailor a child's exact measurements, instead of dressing them in an adult's dress and folding it up."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
+      },
+      "related": [
+        "responsive-design",
+        "html",
+        "css-units"
+      ]
+    },
+    {
+      "id": "css-units",
+      "en": "CSS units (px, rem, %)",
+      "sq": "Njësitë në CSS",
+      "aliases": [
+        "rem",
+        "em",
+        "vh",
+        "vw",
+        "njësi css",
+        "css units"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Njësitë në CSS tregojnë sa i madh është diçka: px janë piksele fikse, rem është në raport me madhësinë bazë të shkronjave (mirë për aksesueshmëri), % është në raport me elementin prind, vh/vw me madhësinë e ekranit.",
+        "en": "CSS units say how big something is: px are fixed pixels, rem is relative to the base font size (good for accessibility), % is relative to the parent element, vh/vw to the screen size."
+      },
+      "analogy": {
+        "sq": "Si në receta: „200 gram“ është masë fikse (px), „një filxhan“ varet nga filxhani (rem), „gjysma e tasit“ varet nga tasi (%).",
+        "en": "Like in recipes: “200 grams” is a fixed amount (px), “one cup” depends on the cup (rem), “half the bowl” depends on the bowl (%)."
+      },
+      "code": {
+        "language": "css",
+        "snippet": "h1    { font-size: 2rem; }   /* 2 herë madhësia bazë */\n.kuti { width: 50%; }        /* gjysma e prindit */\n.hero { height: 100vh; }     /* gjithë lartësia e ekranit */"
+      },
+      "related": [
+        "css",
+        "responsive-design",
+        "pixel-resolution"
+      ]
+    },
+    {
+      "id": "css-colors",
+      "en": "CSS colours (hex, rgb)",
+      "sq": "Ngjyrat në CSS",
+      "aliases": [
+        "hex",
+        "rgb",
+        "rgba",
+        "hsl",
+        "ngjyra",
+        "color",
+        "colour"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Në CSS ngjyrat shkruhen me emër (red), me kod hex (#c8323c), me rgb(200, 50, 60) ose me hsl. Kodi hex tregon sa të kuqe, të gjelbër dhe blu ka ngjyra, nga 00 deri në ff.",
+        "en": "In CSS, colours are written by name (red), as a hex code (#c8323c), as rgb(200, 50, 60) or as hsl. A hex code says how much red, green and blue the colour has, from 00 to ff."
+      },
+      "analogy": {
+        "sq": "Si përzierja e bojërave në orën e artit: pak e kuqe, pak blu, shumë e bardhë — dhe del ngjyra që do.",
+        "en": "Like mixing paints in art class: a bit of red, a bit of blue, lots of white — and you get the colour you want."
+      },
+      "code": {
+        "language": "css",
+        "snippet": ".titull { color: #c8323c; }                /* hex */\n.kuti   { background: rgb(240, 240, 240); }\n.hije   { color: rgba(0, 0, 0, 0.5); }      /* 50% e tejdukshme */"
+      },
+      "related": [
+        "css",
+        "css-variables",
+        "accessibility"
+      ]
+    },
+    {
+      "id": "css-display",
+      "en": "display (CSS)",
+      "sq": null,
+      "aliases": [
+        "display",
+        "display block",
+        "inline",
+        "inline-block",
+        "display none"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Vetia display vendos si sillet një element në faqe: block e zë gjithë rreshtin (si <div>), inline rri brenda tekstit (si <span>), none e fsheh plotësisht, ndërsa flex dhe grid hapin mënyrat moderne të rreshtimit.",
+        "en": "The display property decides how an element behaves on the page: block takes the whole line (like <div>), inline sits within text (like <span>), none hides it completely, while flex and grid unlock the modern layout methods."
+      },
+      "analogy": {
+        "sq": "block është si një tavë që zë gjithë raftin e furrës; inline si ullinjtë mbi pica, në rresht me gjithçka tjetër.",
+        "en": "block is like a baking tray that takes up a whole oven shelf; inline is like olives on a pizza, sitting in line with everything else."
+      },
+      "code": {
+        "language": "css",
+        "snippet": ".menyja  { display: flex; }\n.fshehur { display: none; }    /* nuk shfaqet fare */\nspan     { display: inline-block; }"
+      },
+      "related": [
+        "css",
+        "flexbox",
+        "css-grid"
+      ]
+    },
+    {
+      "id": "css-position",
+      "en": "position (CSS)",
+      "sq": null,
+      "aliases": [
+        "position",
+        "absolute",
+        "relative",
+        "fixed",
+        "sticky",
+        "z-index"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Vetia position vendos si pozicionohet një element: relative e lëviz pak nga vendi i vet, absolute e vendos saktë brenda prindit, fixed e mban në të njëjtin vend kur bën scroll, sticky e ngjit kur arrin te maja. z-index vendos cili del sipër kur mbivendosen.",
+        "en": "The position property decides how an element is placed: relative nudges it from its normal spot, absolute places it exactly inside its parent, fixed keeps it in place while you scroll, sticky makes it stick when it reaches the top. z-index decides which one is on top when they overlap."
+      },
+      "analogy": {
+        "sq": "Si në klasë: shumica ulen me radhë (normale), mësuesja qëndron gjithmonë para tabelës (fixed), ndërsa një poster ngjitet në mur në një pikë të saktë (absolute).",
+        "en": "Like a classroom: most students sit in order (normal flow), the teacher always stands at the front (fixed), and a poster is pinned to an exact spot on the wall (absolute)."
+      },
+      "code": {
+        "language": "css",
+        "snippet": ".koka       { position: sticky; top: 0; }  /* si koka e kësaj faqeje */\n.distinktiv { position: absolute; top: 8px; right: 8px; }"
+      },
+      "related": [
+        "css",
+        "css-display",
+        "css-box-model"
+      ]
+    },
+    {
+      "id": "pseudo-class",
+      "en": "Pseudo-class (:hover)",
+      "sq": "Pseudo-klasë",
+      "aliases": [
+        ":hover",
+        "hover",
+        ":focus",
+        ":nth-child",
+        "pseudo class"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Pseudo-klasa e stilon një element vetëm në një gjendje të caktuar — :hover kur kalon mausi sipër, :focus kur zgjidhet me tastierë, :first-child kur është i pari. Kështu butonat „reagojnë“ pa JavaScript.",
+        "en": "A pseudo-class styles an element only in a certain state — :hover when the mouse is over it, :focus when it's selected with the keyboard, :first-child when it's the first one. That's how buttons “react” without JavaScript."
+      },
+      "analogy": {
+        "sq": "Si drita e korridorit me sensor: ndizet vetëm kur kalon dikush — ndryshe qëndron e fikur.",
+        "en": "Like a hallway light with a sensor: it switches on only when someone walks past — otherwise it stays off."
+      },
+      "code": {
+        "language": "css",
+        "snippet": ".butoni:hover  { background: crimson; }\ninput:focus    { outline: 2px solid blue; }\nli:first-child { font-weight: bold; }"
+      },
+      "related": [
+        "css",
+        "css-selector",
+        "accessibility"
+      ]
+    },
+    {
+      "id": "css-grid",
+      "en": "CSS Grid",
+      "sq": null,
+      "aliases": [
+        "grid",
+        "display: grid",
+        "grid layout"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "CSS Grid është mënyra më e fuqishme për të ndërtuar paraqitje me rreshta dhe kolona njëkohësisht — p.sh. një galeri fotosh ose kartat e kategorive në këtë fjalor. Flexbox-i është për një drejtim; Grid-i për dy.",
+        "en": "CSS Grid is the most powerful way to build layouts with rows and columns at the same time — like a photo gallery or the category cards in this glossary. Flexbox is for one direction; Grid is for two."
+      },
+      "analogy": {
+        "sq": "Si rendi i bankave në klasë: rreshta dhe kolona të rregullta, ku çdo nxënës e ka vendin e vet.",
+        "en": "Like the desks in a classroom: neat rows and columns, with every student in their own spot."
+      },
+      "code": {
+        "language": "css",
+        "snippet": ".galeria {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);  /* 3 kolona të barabarta */\n  gap: 16px;\n}"
+      },
+      "related": [
+        "flexbox",
+        "css",
+        "responsive-design"
+      ]
+    },
+    {
+      "id": "devtools",
+      "en": "DevTools (Inspect)",
+      "sq": "Mjetet e zhvilluesit",
+      "aliases": [
+        "devtools",
+        "inspect",
+        "inspect element",
+        "f12",
+        "chrome devtools",
+        "inspekto"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "DevTools janë mjetet e fshehura në çdo shfletues (F12 ose klikim i djathtë → Inspect) ku sheh HTML-në dhe CSS-në e çdo faqeje, i ndryshon live, lexon gabimet në konsolë dhe sheh çdo kërkesë që bën faqja. Janë miku më i mirë i një programuesi ueb.",
+        "en": "DevTools are the tools hidden in every browser (F12 or right-click → Inspect) where you can see any page's HTML and CSS, change them live, read errors in the console and see every request the page makes. They're a web developer's best friend."
+      },
+      "analogy": {
+        "sq": "Si kapaku i motorit që e hap mekaniku: shoferi sheh vetëm timonin, mekaniku sheh gjithçka që punon nga brenda.",
+        "en": "Like the bonnet a mechanic opens: the driver only sees the steering wheel, the mechanic sees everything working inside."
+      },
+      "code": null,
+      "related": [
+        "console",
+        "debug",
+        "browser"
+      ]
+    },
+    {
+      "id": "favicon",
+      "en": "Favicon",
+      "sq": null,
+      "aliases": [
+        "ikona e faqes",
+        "site icon",
+        "favicon.ico"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Favicon-i është ikona e vogël që shfaqet në skedën e shfletuesit, te faqet e ruajtura dhe në ekranin e telefonit. Ikona e kuqe „ë“ e këtij fjalori është favicon-i i tij.",
+        "en": "A favicon is the small icon shown in the browser tab, in bookmarks and on a phone's home screen. This glossary's red “ë” icon is its favicon."
+      },
+      "analogy": {
+        "sq": "Si logoja e vogël mbi derën e dyqanit: mes shumë dyqaneve në rrugë, e njeh menjëherë.",
+        "en": "Like the small logo above a shop door: among all the shops on the street, you spot it straight away."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<link rel=\"icon\" href=\"/favicon.svg\" type=\"image/svg+xml\">"
+      },
+      "related": [
+        "html",
+        "svg",
+        "browser"
+      ]
+    },
+    {
+      "id": "web-fonts",
+      "en": "Web fonts",
+      "sq": "Shkronjat për ueb",
+      "aliases": [
+        "google fonts",
+        "@font-face",
+        "fonts",
+        "shkronja"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Web fonts janë shkronja që faqja i shkarkon nga interneti, që të duket njësoj në çdo pajisje — p.sh. nga Google Fonts. Për shqipen, zgjidh shkronja që i mbështesin plotësisht ë dhe ç; ky fjalor përdor Inter.",
+        "en": "Web fonts are typefaces a page downloads from the internet so it looks the same on every device — from Google Fonts, for example. For Albanian, pick fonts that fully support ë and ç; this glossary uses Inter."
+      },
+      "analogy": {
+        "sq": "Si dorëshkrimi i bukur i mësueses: e njëjta fjali, por me dorëshkrim tjetër ndihet krejt ndryshe.",
+        "en": "Like a teacher's beautiful handwriting: the same sentence feels completely different in different handwriting."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<link href=\"https://fonts.googleapis.com/css2?family=Inter&display=swap\" rel=\"stylesheet\">\n<style> body { font-family: \"Inter\", sans-serif; } </style>"
+      },
+      "related": [
+        "css",
+        "encoding-utf8",
+        "ui"
+      ]
+    },
+    {
+      "id": "data-structure",
+      "en": "Data structure",
+      "sq": "Strukturë të dhënash",
+      "aliases": [
+        "data structures",
+        "struktura e të dhënave",
+        "dsa"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Struktura e të dhënave është mënyra si i organizon të dhënat në kod, që t'i gjesh dhe t'i ndryshosh lehtë — p.sh. listë, dictionary, stack, pemë. Zgjedhja e strukturës së duhur e bën programin shumë më të shpejtë.",
+        "en": "A data structure is how you organise data in code so it's easy to find and change — like a list, dictionary, stack or tree. Picking the right structure makes a program much faster."
+      },
+      "analogy": {
+        "sq": "Si mënyrat e ndryshme për t'i rregulluar gjërat në shtëpi: rrobat në dollap me rafte, erëzat në kavanoza me etiketa, librat në raft sipas autorit — secila sipas asaj që të duhet.",
+        "en": "Like the different ways to organise things at home: clothes on wardrobe shelves, spices in labelled jars, books on a shelf by author — each suited to what you need."
+      },
+      "code": null,
+      "related": [
+        "array",
+        "dictionary",
+        "algorithm"
+      ]
+    },
+    {
+      "id": "stack-queue",
+      "en": "Stack & queue",
+      "sq": "Stivë dhe radhë",
+      "aliases": [
+        "stack",
+        "queue",
+        "lifo",
+        "fifo",
+        "stivë",
+        "radhë"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Stack-u (stiva) dhe queue-ja (radha) janë dy struktura të thjeshta të dhënash. Te stack-u, i fundit që hyn del i pari (LIFO); te queue-ja, i pari që hyn del i pari (FIFO). Butoni „Back“ i shfletuesit përdor një stack.",
+        "en": "A stack and a queue are two simple data structures. In a stack, the last item in is the first out (LIFO); in a queue, the first in is the first out (FIFO). The browser's “Back” button uses a stack."
+      },
+      "analogy": {
+        "sq": "Stack-u është si pirgu i pjatave: merr gjithmonë atë sipër. Queue-ja është si radha te furra: shërbehet ai që erdhi i pari.",
+        "en": "A stack is like a pile of plates: you always take the top one. A queue is like the line at the bakery: whoever came first gets served first."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "stiva = [1, 2, 3]\nstiva.pop()  # 3 — i fundit del i pari\nfrom collections import deque\nradha = deque([\"Arta\", \"Besnik\"]); radha.popleft()  # \"Arta\" — i pari del i pari"
+      },
+      "related": [
+        "data-structure",
+        "list",
+        "algorithm"
+      ]
+    },
+    {
+      "id": "tree-structure",
+      "en": "Tree (data structure)",
+      "sq": "Pemë (strukturë)",
+      "aliases": [
+        "tree",
+        "pemë",
+        "binary tree",
+        "nodes",
+        "nyje"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Pema është një strukturë të dhënash ku çdo element (nyje) mund të ketë „fëmijë“, duke nisur nga një rrënjë në krye. Dosjet në kompjuter, DOM-i i faqes dhe trungu familjar janë të gjitha pemë.",
+        "en": "A tree is a data structure where each item (node) can have “children”, starting from a single root at the top. Folders on your computer, a page's DOM and a family tree are all trees."
+      },
+      "analogy": {
+        "sq": "Si trungu familjar: stërgjyshi në krye, pastaj fëmijët e tij, pastaj nipërit — secili me degët e veta.",
+        "en": "Like a family tree: great-grandfather at the top, then his children, then the grandchildren — each with their own branches."
+      },
+      "code": null,
+      "related": [
+        "data-structure",
+        "dom",
+        "recursion"
+      ]
+    },
+    {
+      "id": "big-o",
+      "en": "Big O notation",
+      "sq": "Shënimi Big O",
+      "aliases": [
+        "big o",
+        "o(n)",
+        "complexity",
+        "kompleksitet",
+        "time complexity"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Big O tregon si rritet koha (ose memoria) që i duhet një algoritmi kur rriten të dhënat. O(1) do të thotë gjithmonë njësoj shpejt, O(n) rritet njësoj me të dhënat, O(n²) rritet shumë shpejt. Pyetet shpesh në intervistat teknike.",
+        "en": "Big O describes how the time (or memory) an algorithm needs grows as the data grows. O(1) means always equally fast, O(n) grows in step with the data, O(n²) grows very quickly. It comes up a lot in technical interviews."
+      },
+      "analogy": {
+        "sq": "Si ta gjesh një nxënës: nëse e di numrin e bankës, shkon direkt (O(1)); nëse pyet një nga një, zgjat sa ka nxënës (O(n)).",
+        "en": "Like finding a student: if you know their desk number, you go straight there (O(1)); if you ask each one in turn, it takes as long as there are students (O(n))."
+      },
+      "code": null,
+      "related": [
+        "algorithm",
+        "binary-search",
+        "sorting-algorithm"
+      ]
+    },
+    {
+      "id": "sorting-algorithm",
+      "en": "Sorting algorithm",
+      "sq": "Algoritëm renditjeje",
+      "aliases": [
+        "sorting",
+        "bubble sort",
+        "quick sort",
+        "merge sort"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Algoritmet e renditjes i vendosin elementet në rregull — p.sh. numrat nga më i vogli te më i madhi. Ka shumë mënyra: bubble sort është e thjeshtë por e ngadaltë, quick sort dhe merge sort janë shumë më të shpejta. Në praktikë përdor sorted() të gatshëm.",
+        "en": "Sorting algorithms put items in order — like numbers from smallest to largest. There are many ways: bubble sort is simple but slow, quick sort and merge sort are much faster. In practice you use the built-in sorted()."
+      },
+      "analogy": {
+        "sq": "Si t'i rregullosh letrat e lojës në dorë: ka shumë mënyra — një nga një, në grumbuj, sipas ngjyrës — dhe disa janë shumë më të shpejta se të tjerat.",
+        "en": "Like arranging playing cards in your hand: there are many ways — one by one, in piles, by suit — and some are much faster than others."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def bubble_sort(l):\n    for i in range(len(l)):\n        for j in range(len(l) - 1 - i):\n            if l[j] > l[j + 1]: l[j], l[j + 1] = l[j + 1], l[j]\n    return l"
+      },
+      "related": [
+        "algorithm",
+        "sorted-function",
+        "big-o"
+      ]
+    },
+    {
+      "id": "binary-search",
+      "en": "Binary search",
+      "sq": "Kërkim binar",
+      "aliases": [
+        "kërkim binar",
+        "bisect"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Kërkimi binar e gjen shpejt një vlerë në një listë të renditur: shikon mesin, dhe nëse vlera që kërkon është më e vogël, vazhdon te gjysma e majtë, përndryshe te e djathta — duke e përgjysmuar çdo herë. Për një milion elemente mjaftojnë rreth 20 hapa.",
+        "en": "Binary search quickly finds a value in a sorted list: it looks at the middle, and if the value you want is smaller, it continues in the left half, otherwise the right — halving it every time. For a million items, about 20 steps are enough."
+      },
+      "analogy": {
+        "sq": "Si loja „mendo një numër nga 1 deri në 100“: pyet „më i madh se 50?“, pastaj „se 75?“… dhe e gjen me 7 pyetje.",
+        "en": "Like the game “think of a number from 1 to 100”: ask “bigger than 50?”, then “than 75?”… and you find it in 7 questions."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import bisect\nnotat = [3, 5, 7, 9, 11]\nprint(bisect.bisect_left(notat, 9))  # 3 — pozicioni i 9-ës"
+      },
+      "related": [
+        "algorithm",
+        "big-o",
+        "sorting-algorithm"
+      ]
+    },
+    {
+      "id": "regex",
+      "en": "Regular expression (RegEx)",
+      "sq": "Shprehje e rregullt",
+      "aliases": [
+        "regex",
+        "regexp",
+        "regular expression"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "RegEx-i është një gjuhë e vogël modelesh për të kërkuar dhe kontrolluar tekst — p.sh. a duket diçka si email, ose për t'i gjetur të gjithë numrat e telefonit në një dokument. Duket i frikshëm në fillim, por kursen shumë punë.",
+        "en": "RegEx is a small pattern language for searching and checking text — like whether something looks like an email, or finding every phone number in a document. It looks scary at first, but saves a lot of work."
+      },
+      "analogy": {
+        "sq": "Si t'i thuash shitësit: „më gjej çdo produkt që fillon me 'çokollatë' dhe kushton nën 2 euro“ — një përshkrim i modelit, jo emri i saktë.",
+        "en": "Like telling a shop assistant: “find me every product starting with 'chocolate' that costs under 2 euros” — a description of a pattern, not an exact name."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import re\nteksti = \"Na thirrni: 044 123 456 ose 049 765 432\"\nprint(re.findall(r\"\\d{3} \\d{3} \\d{3}\", teksti))  # dy numrat"
+      },
+      "related": [
+        "string",
+        "input-validation",
+        "string-methods"
+      ]
+    },
+    {
+      "id": "abstraction",
+      "en": "Abstraction",
+      "sq": "Abstraksion",
+      "aliases": [
+        "abstraksioni",
+        "abstract"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Abstraksioni do të thotë t'i fshehësh detajet e ndërlikuara pas diçkaje të thjeshtë për t'u përdorur. Kur thërret print(), s'të duhet të dish si vizatohen shkronjat në ekran — funksioni e fsheh këtë për ty.",
+        "en": "Abstraction means hiding complicated details behind something simple to use. When you call print(), you don't need to know how letters get drawn on the screen — the function hides that for you."
+      },
+      "analogy": {
+        "sq": "Si telekomanda e televizorit: shtyp një buton dhe kanali ndërrohet, pa ditur asgjë për sinjalet dhe qarqet brenda.",
+        "en": "Like a TV remote: press a button and the channel changes, without knowing anything about the signals and circuits inside."
+      },
+      "code": null,
+      "related": [
+        "function",
+        "oop",
+        "encapsulation"
+      ]
+    },
+    {
+      "id": "dry-principle",
+      "en": "DRY principle",
+      "sq": "Parimi DRY",
+      "aliases": [
+        "dry",
+        "don't repeat yourself",
+        "kiss",
+        "mos e përsërit veten"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "DRY („Don't Repeat Yourself“ — mos e përsërit veten) do të thotë të mos e kopjosh të njëjtin kod në shumë vende: fute në një funksion ose variabël dhe ripërdore. Kështu, kur duhet ta ndryshosh, e ndryshon vetëm një herë.",
+        "en": "DRY (“Don't Repeat Yourself”) means not copying the same code into lots of places: put it in a function or variable and reuse it. That way, when it needs changing, you change it once."
+      },
+      "analogy": {
+        "sq": "Si ta shkruash recetën e brumit një herë dhe të thuash „bëj brumin“ në çdo recetë tjetër, në vend që ta rishkruash çdo herë.",
+        "en": "Like writing the dough recipe once and saying “make the dough” in every other recipe, instead of rewriting it each time."
+      },
+      "code": null,
+      "related": [
+        "function",
+        "refactoring",
+        "hard-coding"
+      ]
+    },
+    {
+      "id": "hard-coding",
+      "en": "Hard-coding",
+      "sq": null,
+      "aliases": [
+        "hardcode",
+        "hardcoded",
+        "magic number",
+        "vlerë fikse"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Hard-coding do të thotë t'i shkruash vlerat direkt në kod — p.sh. një çmim, një fjalëkalim ose një adresë — në vend që t'i marrësh nga një variabël, konfigurim ose databazë. Kur vlera ndryshon, duhet ta gjesh dhe ta ndryshosh në çdo vend.",
+        "en": "Hard-coding means writing values straight into the code — like a price, a password or an address — instead of taking them from a variable, config or database. When the value changes, you have to find and change it everywhere."
+      },
+      "analogy": {
+        "sq": "Si ta shkruash datën e provimit me bojë në çdo faqe të fletores në vend që ta shënosh një herë në kalendar: kur shtyhet provimi, ke shumë për të ndryshuar.",
+        "en": "Like writing the exam date in pen on every page of your notebook instead of once on a calendar: when the exam is moved, you've got a lot to change."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "cmimi = 10 * 1.18  # 1.18 është hard-coded\nTVSH = 1.18        # më mirë: një konstante me emër\ncmimi = 10 * TVSH"
+      },
+      "related": [
+        "constant",
+        "environment-variable",
+        "refactoring"
+      ]
+    },
+    {
+      "id": "boilerplate",
+      "en": "Boilerplate",
+      "sq": "Kod shabllon",
+      "aliases": [
+        "boilerplate code",
+        "shabllon",
+        "starter",
+        "template code"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Boilerplate-i është kodi standard që përsëritet pothuajse njësoj në çdo projekt — p.sh. struktura bazë e një faqeje HTML. Shumë mjete ta krijojnë automatikisht, që të fillosh direkt me pjesën interesante.",
+        "en": "Boilerplate is standard code that's repeated almost identically in every project — like the basic structure of an HTML page. Many tools generate it automatically so you can jump straight to the interesting part."
+      },
+      "analogy": {
+        "sq": "Si koka e çdo hartimi: emri, mbiemri, klasa, data — e njëjta çdo herë, para se të fillosh të shkruash vërtet.",
+        "en": "Like the header on every essay: name, surname, class, date — the same every time, before you start actually writing."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<!doctype html>\n<html lang=\"sq\">\n<head><meta charset=\"utf-8\"><title>Faqja ime</title></head>\n<body></body>\n</html>"
+      },
+      "related": [
+        "html",
+        "framework",
+        "code-snippet"
+      ]
+    },
+    {
+      "id": "code-snippet",
+      "en": "Code snippet",
+      "sq": "Copë kodi",
+      "aliases": [
+        "snippet",
+        "snippets"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Snippet-i është një copë e vogël kodi që tregon si bëhet diçka e caktuar — si shembujt në çdo faqe të këtij fjalori. Mund t'i ruash në IDE dhe t'i fusësh me një shkurtore.",
+        "en": "A snippet is a small piece of code showing how to do one specific thing — like the examples on every page of this glossary. You can save them in your IDE and insert them with a shortcut."
+      },
+      "analogy": {
+        "sq": "Si një këshillë e shkurtër gatimi në një kartolinë: „si ta bësh salcën e kosit“ — jo gjithë libri i recetave.",
+        "en": "Like a short cooking tip on a card: “how to make yoghurt sauce” — not the whole recipe book."
+      },
+      "code": null,
+      "related": [
+        "source-code",
+        "ide",
+        "boilerplate"
+      ]
+    },
+    {
+      "id": "deprecated",
+      "en": "Deprecated",
+      "sq": "I vjetëruar",
+      "aliases": [
+        "deprecation",
+        "i vjetruar",
+        "obsolete"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "Kur një funksion ose mjet shënohet „deprecated“, do të thotë që ende punon, por s'rekomandohet më dhe do të hiqet në një version të ardhshëm. Është paralajmërim për ta zëvendësuar me diçka më të re.",
+        "en": "When a function or tool is marked “deprecated”, it still works but is no longer recommended and will be removed in a future version. It's a warning to replace it with something newer."
+      },
+      "analogy": {
+        "sq": "Si libri i vjetër i shkollës që ende mund ta përdorësh këtë vit, por mësuesja paralajmëron që vitin tjetër do të ketë libër të ri.",
+        "en": "Like an old school textbook you can still use this year, but the teacher warns that next year there'll be a new one."
+      },
+      "code": null,
+      "related": [
+        "software-update",
+        "semver",
+        "documentation"
+      ]
+    },
+    {
+      "id": "semver",
+      "en": "Semantic versioning (SemVer)",
+      "sq": "Versionimi semantik",
+      "aliases": [
+        "semver",
+        "version number",
+        "v1.2.3",
+        "versionim"
+      ],
+      "category": "general",
+      "explanation": {
+        "sq": "SemVer-i është rregulli për numrat e versioneve si 2.4.1: numri i parë ndryshon kur ka ndryshime të mëdha që prishin përputhshmërinë, i dyti kur shtohen veçori të reja, i treti kur rregullohen bug-e.",
+        "en": "SemVer is the rule for version numbers like 2.4.1: the first number changes for big changes that break compatibility, the second when new features are added, the third when bugs are fixed."
+      },
+      "analogy": {
+        "sq": "Si modelet e një veture: 2.0.0 është model krejt i ri, 2.1.0 i njëjti model me pajisje të reja, 2.1.1 i njëjti me një riparim të vogël.",
+        "en": "Like car models: 2.0.0 is a brand-new model, 2.1.0 is the same model with new features, 2.1.1 is the same one with a small fix."
+      },
+      "code": {
+        "language": "json",
+        "snippet": "\"dependencies\": {\n  \"express\": \"^4.19.2\"\n}"
+      },
+      "related": [
+        "tag-release",
+        "dependency",
+        "npm"
+      ]
+    },
+    {
+      "id": "event-loop",
+      "en": "Event loop",
+      "sq": "Cikli i ngjarjeve",
+      "aliases": [
+        "call stack",
+        "task queue"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Event loop-i është mënyra si JavaScript-i, që bën vetëm një gjë njëherësh, arrin t'i përballojë klikimet, kohëmatësit dhe kërkesat në rrjet: punët që presin futen në radhë dhe ekzekutohen një nga një, sapo të mbarojë kodi aktual.",
+        "en": "The event loop is how JavaScript, which does only one thing at a time, manages clicks, timers and network requests: waiting tasks go into a queue and run one by one as soon as the current code finishes."
+      },
+      "analogy": {
+        "sq": "Si një kamarier i vetëm në kafene: e merr porosinë, e çon në kuzhinë dhe s'pret aty — u shërben tavolinave të tjera, dhe kur kafja është gati, e sjell.",
+        "en": "Like a single waiter in a café: takes an order, passes it to the kitchen and doesn't wait there — serves other tables, and when the coffee's ready, brings it over."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "console.log(\"1\");\nsetTimeout(() => console.log(\"3\"), 0);\nconsole.log(\"2\");  // del: 1, 2, 3"
+      },
+      "related": [
+        "asynchronous",
+        "set-timeout",
+        "promise"
+      ]
+    },
+    {
+      "id": "json-methods",
+      "en": "JSON.parse & JSON.stringify",
+      "sq": null,
+      "aliases": [
+        "json.parse",
+        "json.stringify",
+        "stringify"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "JSON.stringify() e kthen një objekt JavaScript në tekst JSON — p.sh. për ta dërguar te serveri ose për ta ruajtur në localStorage. JSON.parse() bën të kundërtën: e kthen tekstin JSON sërish në objekt.",
+        "en": "JSON.stringify() turns a JavaScript object into JSON text — to send it to a server or save it in localStorage, for example. JSON.parse() does the opposite: turns JSON text back into an object."
+      },
+      "analogy": {
+        "sq": "Si ta palosësh një fustan për ta futur në zarf (stringify) dhe ta hapësh sërish kur arrin (parse): i njëjti fustan, vetëm i palosur për udhëtim.",
+        "en": "Like folding a dress to fit it in an envelope (stringify) and unfolding it when it arrives (parse): the same dress, just folded for the journey."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const studenti = { emri: \"Arta\", mosha: 16 };\nconst teksti = JSON.stringify(studenti);  // '{\"emri\":\"Arta\",\"mosha\":16}'\nconst prapa = JSON.parse(teksti);         // objekt sërish\nconsole.log(prapa.emri);                  // Arta"
+      },
+      "related": [
+        "json",
+        "local-storage",
+        "object"
+      ]
+    },
+    {
+      "id": "for-of",
+      "en": "for...of & forEach",
+      "sq": null,
+      "aliases": [
+        "for of",
+        "foreach",
+        "for...of",
+        "for in"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "for...of dhe forEach() janë mënyrat më të thjeshta për të kaluar nëpër çdo element të një vargu në JavaScript, pa u marrë me indekse. for...in, ndërkaq, kalon nëpër çelësat e një objekti.",
+        "en": "for...of and forEach() are the simplest ways to go through every item in a JavaScript array, without dealing with indexes. for...in, meanwhile, goes through an object's keys."
+      },
+      "analogy": {
+        "sq": "Si mësuesja që i shpërndan fletët e provimit: i jep secilit nxënës një, me radhë, pa i numëruar bankat.",
+        "en": "Like the teacher handing out exam papers: gives one to each student in turn, without counting desks."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const qytetet = [\"Prishtinë\", \"Tiranë\", \"Shkup\"];\nfor (const q of qytetet) console.log(q);\nqytetet.forEach((q, i) => console.log(i, q));"
+      },
+      "related": [
+        "loop",
+        "array",
+        "array-methods"
+      ]
+    },
+    {
+      "id": "js-class",
+      "en": "class (JavaScript)",
+      "sq": "Klasa në JavaScript",
+      "aliases": [
+        "js class",
+        "constructor",
+        "new keyword"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Klasat në JavaScript janë shabllone për të krijuar objekte me të njëjtat veti dhe metoda. constructor() vendos vlerat fillestare, dhe me new krijon objekte të reja nga klasa.",
+        "en": "Classes in JavaScript are templates for creating objects with the same properties and methods. constructor() sets the starting values, and new creates fresh objects from the class."
+      },
+      "analogy": {
+        "sq": "Si formulari i anëtarësimit në një klub: i njëjti formular për të gjithë, por çdo anëtar i ri e plotëson me të dhënat e veta.",
+        "en": "Like a club membership form: the same form for everyone, but each new member fills it in with their own details."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "class Lojtar {\n  constructor(emri, numri) { this.emri = emri; this.numri = numri; }\n  prezanto() { return this.emri + \", numri \" + this.numri; }\n}\nconsole.log(new Lojtar(\"Arbër\", 10).prezanto());  // Arbër, numri 10"
+      },
+      "related": [
+        "class",
+        "oop",
+        "this-keyword"
+      ]
+    },
+    {
+      "id": "map-set",
+      "en": "Map & Set",
+      "sq": null,
+      "aliases": [
+        "new map",
+        "new set",
+        "map js",
+        "set js"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Map dhe Set janë struktura të dhënash në JavaScript: Map ruan çifte çelës–vlerë (si një objekt, por çelësi mund të jetë çfarëdo), Set ruan vlera unike pa dublikata.",
+        "en": "Map and Set are JavaScript data structures: a Map stores key–value pairs (like an object, but the key can be anything), a Set stores unique values with no duplicates."
+      },
+      "analogy": {
+        "sq": "Map-i është si ditari me emër → notë; Set-i është si lista e prezencës ku askush s'shënohet dy herë.",
+        "en": "A Map is like a register of name → grade; a Set is like an attendance list where nobody is marked twice."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const notat = new Map([[\"Arta\", 9], [\"Besnik\", 8]]);\nconsole.log(notat.get(\"Arta\"));  // 9\nconst unike = new Set([\"Pejë\", \"Pejë\", \"Tiranë\"]);\nconsole.log(unike.size);         // 2"
+      },
+      "related": [
+        "python-set",
+        "dictionary",
+        "data-structure"
+      ]
+    },
+    {
+      "id": "date-object",
+      "en": "Date",
+      "sq": "Data dhe ora në JavaScript",
+      "aliases": [
+        "new date",
+        "date js",
+        "timestamp"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Objekti Date në JavaScript punon me data dhe orë: të jep datën e sotme, i krahason datat dhe i formaton. Kujdes: muajt numërohen nga 0, pra janari është muaji 0.",
+        "en": "JavaScript's Date object works with dates and times: it gives you today's date, compares dates and formats them. Careful: months are counted from 0, so January is month 0."
+      },
+      "analogy": {
+        "sq": "Si kalendari në murin e klasës — vetëm se ky kalendar i numëron muajt nga zero, gjë që i ngatërron të gjithë herën e parë.",
+        "en": "Like the calendar on the classroom wall — except this one counts months from zero, which confuses everyone the first time."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const sot = new Date();\nconsole.log(sot.getFullYear());                // p.sh. 2026\nconsole.log(sot.toLocaleDateString(\"sq-AL\"));  // data në formatin shqip\nconsole.log(new Date(2026, 0, 1));             // 1 janar (muaji 0!)"
+      },
+      "related": [
+        "object",
+        "javascript",
+        "data-type"
+      ]
+    },
+    {
+      "id": "math-random",
+      "en": "Math.random()",
+      "sq": null,
+      "aliases": [
+        "math",
+        "random",
+        "math.floor",
+        "numër i rastësishëm"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Math.random() jep një numër të rastësishëm mes 0 dhe 1. Bashkë me Math.floor() e përdor për të marrë një numër të plotë të rastësishëm — p.sh. për zare, lojëra ose për të zgjedhur një term të rastit.",
+        "en": "Math.random() gives a random number between 0 and 1. Together with Math.floor() you use it to get a random whole number — for dice, games or picking a random term."
+      },
+      "analogy": {
+        "sq": "Si ta hedhësh zarin në një lojë tavoline: s'e di kurrë çfarë do të dalë.",
+        "en": "Like rolling dice in a board game: you never know what you'll get."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const zari = Math.floor(Math.random() * 6) + 1;  // 1 deri në 6\nconsole.log(\"Doli:\", zari);"
+      },
+      "related": [
+        "javascript",
+        "integer",
+        "algorithm"
+      ]
+    },
+    {
+      "id": "callback-hell",
+      "en": "Callback hell",
+      "sq": null,
+      "aliases": [
+        "pyramid of doom",
+        "nested callbacks"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Callback hell është kur callback-et futen brenda callback-eve aq shumë herë sa kodi bëhet një „piramidë“ e vështirë për t'u lexuar. Promise-t dhe async/await u krijuan pikërisht për ta zgjidhur këtë.",
+        "en": "Callback hell is when callbacks get nested inside callbacks so many times that the code turns into a hard-to-read “pyramid”. Promises and async/await were created precisely to fix this."
+      },
+      "analogy": {
+        "sq": "Si udhëzimet: „Kur të vish, merre çelësin te fqinji, e kur ta marrësh, hape derën, e kur ta hapësh, ndize dritën, e kur…“ — në fund s'kupton më asgjë.",
+        "en": "Like directions: “When you arrive, get the key from the neighbour, and when you have it, open the door, and when it's open, turn on the light, and when…” — by the end you're lost."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "merrPerdoruesin((p) => {\n  merrPorosite(p, (porosite) => {\n    merrDetajet(porosite[0], (d) => console.log(d));  // piramida rritet…\n  });\n});"
+      },
+      "related": [
+        "callback",
+        "promise",
+        "asynchronous"
+      ]
+    },
+    {
+      "id": "try-catch",
+      "en": "try...catch",
+      "sq": null,
+      "aliases": [
+        "try catch",
+        "catch",
+        "finally",
+        "throw"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "try...catch e kap një gabim në JavaScript që programi të mos rrëzohet: kodi i rrezikshëm futet te try, dhe nëse diçka shkon keq, ekzekutohet catch. Me throw mund ta krijosh vetë një gabim.",
+        "en": "try...catch catches an error in JavaScript so the program doesn't crash: risky code goes in try, and if something goes wrong, catch runs. With throw you can raise an error yourself."
+      },
+      "analogy": {
+        "sq": "Si portieri pas mbrojtjes: nëse topi i kalon mbrojtësit (try), portieri është aty ta kapë (catch).",
+        "en": "Like the goalkeeper behind the defence: if the ball gets past the defenders (try), the keeper is there to catch it (catch)."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "try {\n  const teDhenat = JSON.parse(\"{gabim\");\n} catch (e) {\n  console.log(\"JSON i pavlefshëm:\", e.message);\n}"
+      },
+      "related": [
+        "error",
+        "debug",
+        "promise"
+      ]
+    },
+    {
+      "id": "innerhtml-textcontent",
+      "en": "innerHTML vs textContent",
+      "sq": null,
+      "aliases": [
+        "innerhtml",
+        "textcontent",
+        "innertext"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Të dyja e ndryshojnë përmbajtjen e një elementi: textContent e fut si tekst të thjeshtë, ndërsa innerHTML e lexon si HTML. Me tekst që vjen nga përdoruesit përdor gjithmonë textContent — innerHTML ua hap derën sulmeve XSS.",
+        "en": "Both change an element's content: textContent inserts plain text, while innerHTML reads it as HTML. With text that comes from users, always use textContent — innerHTML opens the door to XSS attacks."
+      },
+      "analogy": {
+        "sq": "textContent është si ta kopjosh një fjali në tabelë fjalë për fjalë; innerHTML është si t'i bindesh çdo urdhri që shkruhet aty — edhe nëse dikush ka shkruar „fshije tabelën“.",
+        "en": "textContent is like copying a sentence onto the board word for word; innerHTML is like obeying every instruction written there — even if someone wrote “wipe the board”."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "el.textContent = \"<b>Përshëndetje</b>\";  // shfaqet si tekst: <b>Përshëndetje</b>\nel.innerHTML = \"<b>Përshëndetje</b>\";    // shfaqet me shkronja të trasha"
+      },
+      "related": [
+        "dom",
+        "xss",
+        "query-selector"
+      ]
+    },
+    {
+      "id": "undefined-null",
+      "en": "undefined vs null",
+      "sq": null,
+      "aliases": [
+        "undefined",
+        "null js"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Në JavaScript ka dy lloje „asgjëje“: undefined do të thotë që një variabël ekziston, por s'i është dhënë ende vlerë, ndërsa null është një „bosh“ që e vendos ti qëllimisht. Të dyja kontrollohen shpesh para se ta përdorësh një vlerë.",
+        "en": "JavaScript has two kinds of “nothing”: undefined means a variable exists but hasn't been given a value yet, while null is an “empty” you set on purpose. Both are often checked before using a value."
+      },
+      "analogy": {
+        "sq": "undefined është si një kuti në ditar ku mësuesi ende s'ka shkruar asgjë; null është si kur shkruan qëllimisht „—“ sepse nxënësi mungonte.",
+        "en": "undefined is like a register box the teacher hasn't filled in yet; null is like writing “—” on purpose because the student was absent."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "let mosha;\nconsole.log(mosha);              // undefined — s'ka vlerë ende\nlet nota = null;                 // qëllimisht bosh\nconsole.log(nota ?? \"pa notë\");  // \"pa notë\""
+      },
+      "related": [
+        "null",
+        "optional-chaining",
+        "typeof"
+      ]
+    },
+    {
+      "id": "vite",
+      "en": "Vite (bundler)",
+      "sq": null,
+      "aliases": [
+        "vite",
+        "bundler",
+        "webpack",
+        "build tool"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Vite-i është mjeti më i njohur sot për të nisur dhe ndërtuar projekte frontend: hap një server zhvillimi që rifreskohet menjëherë kur ndryshon kodin, dhe në fund i paketon të gjithë skedarët në pak skedarë të vegjël e të shpejtë për publikim.",
+        "en": "Vite is today's most popular tool for starting and building frontend projects: it runs a development server that updates instantly when you change code, and at the end bundles all your files into a few small, fast ones for publishing."
+      },
+      "analogy": {
+        "sq": "Si ta bësh valixhen para udhëtimit: gjatë javës gjërat janë shpërndarë nëpër dhomë, por për udhëtim i palos dhe i fut të gjitha në një valixhe kompakte.",
+        "en": "Like packing a suitcase before a trip: during the week your things are spread around the room, but for the journey you fold them all into one compact case."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "npm create vite@latest projekti-im\ncd projekti-im && npm install\nnpm run dev  # serveri i zhvillimit"
+      },
+      "related": [
+        "npm",
+        "node-js",
+        "react"
+      ]
+    },
+    {
+      "id": "jquery",
+      "en": "jQuery",
+      "sq": null,
+      "aliases": [
+        "jquery",
+        "$"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "jQuery-ja është një librari JavaScript shumë e vjetër dhe e famshme që e bënte më të lehtë punën me DOM-in dhe kërkesat në rrjet, me shenjën $. Sot JavaScript-i i ka vetë shumicën e këtyre aftësive, por do ta takosh ende në shumë faqe të vjetra.",
+        "en": "jQuery is a very old and famous JavaScript library that made working with the DOM and network requests easier, using the $ sign. Today JavaScript has most of these abilities built in, but you'll still meet it on many older sites."
+      },
+      "analogy": {
+        "sq": "Si telefoni i vjetër me butona i gjyshit: dikur ishte më i miri, ende punon dhe shumë e përdorin, por telefonat e rinj i bëjnë të njëjtat gjëra vetë.",
+        "en": "Like grandpa's old button phone: once the best, still works and lots of people still use it, but new phones do the same things on their own."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "$(\"#titulli\").text(\"Mirë se vini!\");  // jQuery\ndocument.querySelector(\"#titulli\").textContent = \"Mirë se vini!\";  // JS i sotëm"
+      },
+      "related": [
+        "library",
+        "dom",
+        "query-selector"
+      ]
+    },
+    {
+      "id": "inheritance",
+      "en": "Inheritance",
+      "sq": "Trashëgimi",
+      "aliases": [
+        "trashëgimia",
+        "extends",
+        "subclass",
+        "parent class"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Trashëgimia është kur një klasë e re merr gjithçka nga një klasë ekzistuese dhe shton ose ndryshon vetëm atë që i duhet. P.sh. klasa Portier trashëgon nga Lojtar dhe shton aftësinë „kap“.",
+        "en": "Inheritance is when a new class takes everything from an existing class and adds or changes only what it needs. For example, a Goalkeeper class inherits from Player and adds the ability to “catch”."
+      },
+      "analogy": {
+        "sq": "Si fëmija që i trashëgon sytë e nënës dhe buzëqeshjen e babait, por ka edhe talentet e veta.",
+        "en": "Like a child who inherits Mum's eyes and Dad's smile, but has their own talents too."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "class Lojtar:\n    def vrapo(self): print(\"Vrapon\")\nclass Portier(Lojtar):  # trashëgon nga Lojtar\n    def kap(self): print(\"Kap topin\")\nPortier().vrapo()       # punon — e trashëgoi"
+      },
+      "related": [
+        "oop",
+        "class",
+        "polymorphism"
+      ]
+    },
+    {
+      "id": "encapsulation",
+      "en": "Encapsulation",
+      "sq": "Kapsulim",
+      "aliases": [
+        "kapsulimi",
+        "private",
+        "public",
+        "getter",
+        "setter"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Kapsulimi do të thotë t'i fshehësh të dhënat e brendshme të një objekti dhe t'i lejosh të tjerët t'i ndryshojnë vetëm përmes metodave të caktuara. Kështu askush s'mund ta prishë objektin aksidentalisht.",
+        "en": "Encapsulation means hiding an object's internal data and letting others change it only through specific methods. That way nobody can break the object by accident."
+      },
+      "analogy": {
+        "sq": "Si bankomati: s'i sheh paratë brenda dhe s'i prek dot direkt — mund t'i marrësh vetëm përmes butonave dhe PIN-it.",
+        "en": "Like a cash machine: you can't see the money inside or touch it directly — you can only take it out through the buttons and your PIN."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "class Llogari:\n    def __init__(self): self.__shuma = 0  # e fshehur\n    def depozito(self, x):\n        if x > 0: self.__shuma += x       # vetëm përmes metodës"
+      },
+      "related": [
+        "oop",
+        "class",
+        "abstraction"
+      ]
+    },
+    {
+      "id": "polymorphism",
+      "en": "Polymorphism",
+      "sq": "Polimorfizëm",
+      "aliases": [
+        "polimorfizmi",
+        "override"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Polimorfizmi do të thotë që objekte të llojeve të ndryshme mund t'i përgjigjen të njëjtës metodë, secili në mënyrën e vet. P.sh. çdo kafshë ka metodën ze(), por qeni leh e macja mjaullin.",
+        "en": "Polymorphism means objects of different types can respond to the same method, each in its own way. For example, every animal has a sound() method, but a dog barks and a cat meows."
+      },
+      "analogy": {
+        "sq": "Si urdhri i trajnerit „sulmo!“: sulmuesi gjuan, mesfushori pason përpara, mbrojtësi del përpara — e njëjta fjalë, veprim tjetër për secilin.",
+        "en": "Like the coach shouting “attack!”: the striker shoots, the midfielder passes forward, the defender pushes up — same word, a different action for each."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "class Qen:\n    def ze(self): return \"Hau!\"\nclass Mace:\n    def ze(self): return \"Mjau!\"\nfor k in [Qen(), Mace()]: print(k.ze())  # Hau! Mjau!"
+      },
+      "related": [
+        "oop",
+        "inheritance",
+        "method"
+      ]
+    },
+    {
+      "id": "interface",
+      "en": "Interface",
+      "sq": "Ndërfaqe (interface)",
+      "aliases": [
+        "interfaces",
+        "protocol",
+        "contract",
+        "implements"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Interface-i është një „kontratë“ që thotë çfarë metodash duhet të ketë një klasë, pa thënë si i bën. Çdo klasë që e pranon kontratën duhet t'i ketë ato metoda. Përdoret shumë në Java, C# dhe TypeScript.",
+        "en": "An interface is a “contract” saying which methods a class must have, without saying how they work. Any class that signs up to the contract has to provide those methods. It's used a lot in Java, C# and TypeScript."
+      },
+      "analogy": {
+        "sq": "Si priza në mur: thotë vetëm „çdo pajisje duhet të ketë spinë me dy kunja“ — s'i intereson nëse është tharëse flokësh apo karikues.",
+        "en": "Like a wall socket: it only says “every device needs a two-pin plug” — it doesn't care whether it's a hairdryer or a charger."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "interface Kafshe { ze(): string; }\nclass Qen implements Kafshe {\n  ze() { return \"Hau!\"; }\n}"
+      },
+      "related": [
+        "oop",
+        "class",
+        "typescript"
+      ]
+    },
+    {
+      "id": "bytecode",
+      "en": "Bytecode",
+      "sq": "Bajtkod",
+      "aliases": [
+        "bajtkod",
+        ".pyc",
+        "jvm bytecode"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Bytecode-i është një formë e ndërmjetme e kodit — jo aq e lexueshme sa kodi burimor, por as gjuha e makinës. Java-ja dhe Python-i e kthejnë kodin tënd në bytecode, që pastaj e ekzekuton një „makinë virtuale“ (JVM ose makina e Python-it) në çdo kompjuter.",
+        "en": "Bytecode is an in-between form of code — not as readable as source code, but not machine language either. Java and Python turn your code into bytecode, which a “virtual machine” (the JVM or Python's own) then runs on any computer."
+      },
+      "analogy": {
+        "sq": "Si brumi i ngrirë: s'është më miell e ujë (kodi burimor), por as bukë e pjekur (gjuha e makinës) — çdo furrë (kompjuter) e mbaron pjekjen vetë.",
+        "en": "Like frozen dough: no longer flour and water (source code), but not baked bread either (machine code) — any oven (computer) can finish the baking."
+      },
+      "code": null,
+      "related": [
+        "compiler",
+        "interpreter",
+        "java"
+      ]
+    },
+    {
+      "id": "transpiler",
+      "en": "Transpiler",
+      "sq": "Transpilues",
+      "aliases": [
+        "transpile",
+        "babel",
+        "transpilim"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Transpiluesi e përkthen kodin nga një gjuhë në një tjetër të nivelit të ngjashëm — p.sh. TypeScript-in në JavaScript, ose JavaScript-in modern në një version më të vjetër që e kuptojnë shfletuesit e vjetër.",
+        "en": "A transpiler translates code from one language into another at a similar level — like TypeScript into JavaScript, or modern JavaScript into an older version that old browsers understand."
+      },
+      "analogy": {
+        "sq": "Si kur ia përkthen gjyshes një mesazh nga zhargoni i të rinjve në gjuhë të përditshme: e njëjta ide, me fjalë që i kupton ajo.",
+        "en": "Like translating a message from teen slang into everyday language for grandma: the same idea, in words she understands."
+      },
+      "code": null,
+      "related": [
+        "typescript",
+        "compiler",
+        "javascript"
+      ]
+    },
+    {
+      "id": "memory-leak",
+      "en": "Memory leak",
+      "sq": "Rrjedhje memorieje",
+      "aliases": [
+        "leak",
+        "memory leaks",
+        "rrjedhje memorie"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Rrjedhja e memories ndodh kur një program merr memorie dhe s'e liron kurrë, edhe kur s'i duhet më. Me kohë programi përdor gjithnjë e më shumë RAM, ngadalësohet dhe mund të rrëzohet.",
+        "en": "A memory leak happens when a program takes memory and never gives it back, even when it no longer needs it. Over time the program uses more and more RAM, slows down and can crash."
+      },
+      "analogy": {
+        "sq": "Si rubineti që pikon natën: një pikë s'është asgjë, por në mëngjes e gjen lavamanin plot.",
+        "en": "Like a dripping tap at night: one drop is nothing, but by morning the sink is full."
+      },
+      "code": null,
+      "related": [
+        "ram",
+        "garbage-collection",
+        "pointer"
+      ]
+    },
+    {
+      "id": "thread-concurrency",
+      "en": "Thread & concurrency",
+      "sq": "Thread dhe ekzekutim paralel",
+      "aliases": [
+        "thread",
+        "threads",
+        "concurrency",
+        "parallel",
+        "multithreading",
+        "paralelizëm"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Thread-i është një „rrjedhë“ ekzekutimi brenda një programi. Me shumë thread-e, një program mund të bëjë disa gjëra njëkohësisht — p.sh. të shkarkojë një skedar ndërsa ndërfaqja mbetet e lëvizshme. Është e fuqishme, por gabimet gjenden me vështirësi.",
+        "en": "A thread is a “line” of execution inside a program. With multiple threads, a program can do several things at once — like downloading a file while the interface stays responsive. It's powerful, but the bugs are hard to find."
+      },
+      "analogy": {
+        "sq": "Si disa kuzhinierë në të njëjtën kuzhinë: bashkë gatuajnë më shpejt, por nëse dy zgjasin dorën për të njëjtin tigan, ka përplasje.",
+        "en": "Like several cooks in the same kitchen: together they cook faster, but if two reach for the same pan at once, there's a clash."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import threading\ndef shkarko(): print(\"Duke shkarkuar…\")\nt = threading.Thread(target=shkarko)\nt.start()\nprint(\"Programi vazhdon ndërkohë\")"
+      },
+      "related": [
+        "process",
+        "asynchronous",
+        "cpu"
+      ]
+    },
+    {
+      "id": "programming-paradigm",
+      "en": "Programming paradigm",
+      "sq": "Paradigmë programimi",
+      "aliases": [
+        "paradigm",
+        "paradigmë",
+        "imperative",
+        "declarative"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Paradigma e programimit është një „stil“ ose mënyrë e të menduarit për të shkruar kod: imperative (hap pas hapi çfarë të bëjë kompjuteri), e orientuar nga objektet, funksionale ose deklarative (çfarë do, jo si). Shumë gjuhë lejojnë disa stile.",
+        "en": "A programming paradigm is a “style” or way of thinking about writing code: imperative (step by step what the computer should do), object-oriented, functional or declarative (what you want, not how). Many languages allow several styles."
+      },
+      "analogy": {
+        "sq": "Si mënyrat e ndryshme për të gatuar të njëjtën gjellë: ndjek recetën hap pas hapi, ose i thua thjesht kuzhinierit „dua një gjellë pikante me pulë“ dhe ai vendos si.",
+        "en": "Like different ways to cook the same dish: follow a recipe step by step, or just tell the chef “I want a spicy chicken dish” and let them decide how."
+      },
+      "code": null,
+      "related": [
+        "oop",
+        "functional-programming",
+        "programming-language"
+      ]
+    },
+    {
+      "id": "syntactic-sugar",
+      "en": "Syntactic sugar",
+      "sq": "Sheqer sintaksor",
+      "aliases": [
+        "syntax sugar",
+        "sheqer sintaksor"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Sheqeri sintaksor është një mënyrë më e shkurtër ose më e këndshme për të shkruar diçka që gjuha e di ta bëjë edhe në mënyrë më të gjatë. P.sh. x += 1 në vend të x = x + 1, ose funksionet shigjetë në JavaScript.",
+        "en": "Syntactic sugar is a shorter or nicer way to write something the language can already do in a longer way. For example, x += 1 instead of x = x + 1, or arrow functions in JavaScript."
+      },
+      "analogy": {
+        "sq": "Si sheqeri në kafe: kafja është po ajo, thjesht më e këndshme për t'u pirë.",
+        "en": "Like sugar in coffee: it's the same coffee, just nicer to drink."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "x = x + 1\nx += 1                                # e njëjta gjë, më shkurt\nkatroret = [n * n for n in range(5)]  # sheqer për një cikël for"
+      },
+      "related": [
+        "syntax",
+        "list-comprehension",
+        "arrow-function"
+      ]
+    },
+    {
+      "id": "enum",
+      "en": "Enum",
+      "sq": "Numërim (enum)",
+      "aliases": [
+        "enums",
+        "enumeration"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Enum-i është një grup emrash të paracaktuar për vlera që kanë vetëm disa mundësi — p.sh. ditët e javës, ngjyrat e semaforit ose statusi i një porosie. Kështu shmang gabimet e shtypit me tekst.",
+        "en": "An enum is a set of predefined names for values that only have a few possibilities — like days of the week, traffic-light colours or an order's status. That way you avoid typos with plain text."
+      },
+      "analogy": {
+        "sq": "Si semafori: ka vetëm tri ngjyra të mundshme — e kuqe, e verdhë, e gjelbër — kurrë „vjollcë“.",
+        "en": "Like a traffic light: only three possible colours — red, amber, green — never “purple”."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "from enum import Enum\nclass Semafori(Enum):\n    KUQ = 1; VERDHE = 2; GJELBER = 3\nprint(Semafori.KUQ)  # Semafori.KUQ"
+      },
+      "related": [
+        "constant",
+        "data-type",
+        "class"
+      ]
+    },
+    {
+      "id": "pascal",
+      "en": "Pascal",
+      "sq": null,
+      "aliases": [
+        "turbo pascal",
+        "delphi",
+        "free pascal"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Pascal-i është një gjuhë programimi nga viti 1970, e krijuar posaçërisht për mësimin e programimit. Për shumë vite është mësuar në shkolla, edhe në Shqipëri e Kosovë, dhe shumë mësues ende e përdorin.",
+        "en": "Pascal is a programming language from 1970, designed specifically for teaching programming. For many years it was taught in schools, including in Albania and Kosovo, and many teachers still use it."
+      },
+      "analogy": {
+        "sq": "Si abetarja e programimit: e thjeshtë dhe e rregullt, e menduar për t'i mësuar bazat para se të kalosh te librat e mëdhenj.",
+        "en": "Like a programming first-reader: simple and orderly, designed for learning the basics before moving on to bigger books."
+      },
+      "code": {
+        "language": "pascal",
+        "snippet": "program Pershendetje;\nbegin\n  writeln('Përshëndetje!');\nend."
+      },
+      "related": [
+        "programming-language",
+        "compiler",
+        "c-language"
+      ]
+    },
+    {
+      "id": "fortran",
+      "en": "Fortran",
+      "sq": null,
+      "aliases": [
+        "fortran language"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Fortran-i (1957) është një nga gjuhët e para të programimit, e krijuar për llogaritje shkencore. Edhe sot përdoret në fizikë, meteorologji dhe në superkompjuterë, sepse është shumë e shpejtë me numra.",
+        "en": "Fortran (1957) is one of the first programming languages, created for scientific computing. It's still used today in physics, weather forecasting and on supercomputers, because it's very fast with numbers."
+      },
+      "analogy": {
+        "sq": "Si makina e vjetër e qepjes e gjyshes: shumë e vjetër, por për punën e saj ende s'ka të dytë.",
+        "en": "Like grandma's old sewing machine: very old, but for its particular job it's still second to none."
+      },
+      "code": {
+        "language": "fortran",
+        "snippet": "program pershendetje\n  print *, \"Pershendetje!\"\nend program pershendetje"
+      },
+      "related": [
+        "programming-language",
+        "compiler",
+        "matlab"
+      ]
+    },
+    {
+      "id": "julia",
+      "en": "Julia",
+      "sq": null,
+      "aliases": [
+        "julia language",
+        "julialang"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Julia-ja është një gjuhë e re (2012) për shkencë dhe analizë të dhënash, që synon të jetë e lehtë për t'u shkruar si Python-i, por e shpejtë si C-ja. Përdoret në kërkime shkencore, financë dhe machine learning.",
+        "en": "Julia is a newer language (2012) for science and data analysis, aiming to be as easy to write as Python but as fast as C. It's used in scientific research, finance and machine learning."
+      },
+      "analogy": {
+        "sq": "Si një lojtar i ri që e ka teknikën e mesfushorit dhe shpejtësinë e sulmuesit.",
+        "en": "Like a young player with a midfielder's technique and a striker's speed."
+      },
+      "code": {
+        "language": "julia",
+        "snippet": "notat = [8, 9, 10]\nprintln(\"Mesatarja: \", sum(notat) / length(notat))"
+      },
+      "related": [
+        "python",
+        "r-language",
+        "programming-language"
+      ]
+    },
+    {
+      "id": "elixir",
+      "en": "Elixir",
+      "sq": null,
+      "aliases": [
+        "elixir lang",
+        "erlang",
+        "phoenix"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Elixir-i është një gjuhë funksionale e ndërtuar mbi Erlang-un, e njohur për aplikacione që duhet të përballojnë shumë përdorues njëkohësisht pa u rrëzuar — p.sh. chat-e dhe sisteme në kohë reale. WhatsApp-i u ndërtua mbi Erlang.",
+        "en": "Elixir is a functional language built on Erlang, known for apps that must handle huge numbers of users at once without falling over — like chat apps and real-time systems. WhatsApp was built on Erlang."
+      },
+      "analogy": {
+        "sq": "Si centrali i vjetër telefonik që lidhte mijëra telefonata njëkohësisht pa u bllokuar kurrë.",
+        "en": "Like an old telephone exchange connecting thousands of calls at once without ever jamming."
+      },
+      "code": {
+        "language": "elixir",
+        "snippet": "emri = \"Arta\"\nIO.puts(\"Përshëndetje, #{emri}!\")"
+      },
+      "related": [
+        "functional-programming",
+        "thread-concurrency",
+        "programming-language"
+      ]
+    },
+    {
+      "id": "objective-c",
+      "en": "Objective-C",
+      "sq": null,
+      "aliases": [
+        "objc",
+        "obj-c"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Objective-C-ja ishte gjuha kryesore e Apple-it për aplikacione iPhone dhe Mac para Swift-it (2014). Sot projektet e reja përdorin Swift, por shumë aplikacione të vjetra janë ende në Objective-C.",
+        "en": "Objective-C was Apple's main language for iPhone and Mac apps before Swift (2014). New projects use Swift today, but many older apps are still written in Objective-C."
+      },
+      "analogy": {
+        "sq": "Si shtëpia e vjetër e familjes ku ende jetohet: familja ka ndërtuar një të re (Swift), por e vjetra s'është shembur.",
+        "en": "Like the old family house people still live in: the family built a new one (Swift), but the old one hasn't been knocked down."
+      },
+      "code": {
+        "language": "objectivec",
+        "snippet": "#import <Foundation/Foundation.h>\nint main() {\n    NSLog(@\"Përshëndetje!\");\n    return 0;\n}"
+      },
+      "related": [
+        "swift",
+        "c-language",
+        "programming-language"
+      ]
+    },
+    {
+      "id": "visual-basic",
+      "en": "Visual Basic",
+      "sq": null,
+      "aliases": [
+        "vb",
+        "vb.net",
+        "vba"
+      ],
+      "category": "languages",
+      "explanation": {
+        "sq": "Visual Basic-u është një gjuhë e Microsoft-it e njohur për lehtësinë e saj: dikur u përdor shumë për programe Windows. Versioni i saj VBA përdoret edhe sot për të automatizuar punë në Excel dhe Word.",
+        "en": "Visual Basic is a Microsoft language known for being easy: it was once widely used for Windows programs. Its VBA version is still used today to automate tasks in Excel and Word."
+      },
+      "analogy": {
+        "sq": "Si „makroja“ e Excel-it që ia bën kontabilistes së shkollës brenda sekondave punën që do t'i merrte gjithë ditën.",
+        "en": "Like the Excel “macro” that does in seconds what would take the school accountant all day."
+      },
+      "code": {
+        "language": "vb",
+        "snippet": "Sub Pershendetje()\n    MsgBox \"Përshëndetje!\"\nEnd Sub"
+      },
+      "related": [
+        "programming-language",
+        "c-sharp",
+        "standard-library"
       ]
     }
   ]
