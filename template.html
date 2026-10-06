@@ -3,7 +3,7 @@
 <head>
   <!-- This is a TEMPLATE. scripts/build.mjs fills in the {{…}} parts for every page. -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>{{title}}</title>
   {{meta}}
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -76,5 +76,13 @@
       </p>
     </div>
   </footer>
+
+  <!-- Bottom navigation bar, shown on phones only (see .mobile-nav in style.css) -->
+  <nav class="mobile-nav" aria-label="Menu">
+    <a href="/" data-nav="home"><i class="fa-solid fa-house" aria-hidden="true"></i><span data-i18n="home">Kreu</span></a>
+    <a href="/" data-nav="search" data-focus-search><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><span data-i18n="navSearch">Kërko</span></a>
+    <a href="/flashcards" data-nav="flashcards"><i class="fa-solid fa-layer-group" aria-hidden="true"></i><span data-i18n="flashcards">Kartat</span></a>
+    <a href="/contact" data-nav="contact"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span data-i18n="contact">Kontakt</span></a>
+  </nav>
 </body>
 </html>

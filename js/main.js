@@ -69,6 +69,7 @@ function interceptLinks() {
     ) return;
     event.preventDefault();
     navigate(link.pathname);
+    if (link.hasAttribute("data-focus-search")) focusSearch();
   });
   window.addEventListener("popstate", render); // browser back/forward buttons
 
@@ -80,6 +81,23 @@ function interceptLinks() {
   });
 }
 
+// "Kërko" in the phone menu: go home and put the cursor in the search box
+function focusSearch() {
+  const search = document.getElementById("search");
+  if (!search) return;
+  search.scrollIntoView({ block: "center" });
+  search.focus();
+}
+
+// Which bottom-menu tab is the current page?
+function currentTab() {
+  const path = location.pathname;
+  if (path === "/") return "home";
+  if (path.startsWith("/flashcards")) return "flashcards";
+  if (path.startsWith("/contact")) return "contact";
+  return null;
+}
+
 // Header/footer text and button states that depend on language or theme
 function updateChrome() {
   const lang = getLang();
@@ -89,6 +107,14 @@ function updateChrome() {
   const langButton = document.getElementById("lang-toggle");
   langButton.setAttribute("aria-label", t("switchLanguage"));
   langButton.querySelectorAll("[data-lang]").forEach((el) => el.classList.toggle("active", el.dataset.lang === lang));
+
+  const tab = currentTab();
+  document.querySelectorAll(".mobile-nav a").forEach((a) => {
+    const active = a.dataset.nav === tab;
+    a.classList.toggle("active", active);
+    if (active) a.setAttribute("aria-current", "page");
+    else a.removeAttribute("aria-current");
+  });
 
   const dark = document.documentElement.dataset.theme === "dark";
   document.getElementById("theme-toggle").setAttribute("aria-label", t(dark ? "switchToLight" : "switchToDark"));

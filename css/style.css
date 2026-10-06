@@ -792,6 +792,47 @@ kbd {
 .site-footer .made-by a { color: var(--accent); text-decoration: none; font-weight: 500; }
 .site-footer .made-by a:hover { text-decoration: underline; }
 
+/* ---------- bottom navigation (phones) ---------- */
+
+.mobile-nav { display: none; }
+
+@media (max-width: 640px) {
+  .header-link { display: none; }
+
+  .mobile-nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    padding-bottom: env(safe-area-inset-bottom);
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid var(--border);
+  }
+  .mobile-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    padding: 9px 0 7px;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.72rem;
+    font-weight: 600;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .mobile-nav a i { font-size: 1.15rem; }
+  .mobile-nav a.active { color: var(--accent); }
+  .mobile-nav a:active { background: var(--surface-2); }
+
+  /* keep the last bit of every page visible above the bar */
+  body { padding-bottom: calc(62px + env(safe-area-inset-bottom)); }
+}
+
 /* ---------- small screens ---------- */
 
 @media (max-width: 560px) {
@@ -809,7 +850,6 @@ kbd {
 }
 
 @media (max-width: 480px) {
-  .header-link { display: none; }
   .fc-face { padding: 22px; min-height: 280px; }
 }
 
