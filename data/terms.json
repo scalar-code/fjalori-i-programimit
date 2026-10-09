@@ -15247,6 +15247,1147 @@
         "llm",
         "model"
       ]
+    },
+    {
+      "id": "wrapper-classes",
+      "en": "Wrapper classes (Integer, Double)",
+      "sq": "Klasat mbështjellëse",
+      "aliases": [
+        "integer class",
+        "autoboxing",
+        "boxing",
+        "wrapper"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Klasat mbështjellëse — Integer, Double, Boolean, Character — janë versionet „objekt“ të tipeve primitive. Të duhen sepse koleksionet si ArrayList mbajnë vetëm objekte: shkruan ArrayList<Integer>, jo ArrayList<int>. Java-ja i kthen vetë nga njëra te tjetra (autoboxing).",
+        "en": "Wrapper classes — Integer, Double, Boolean, Character — are the “object” versions of primitive types. You need them because collections like ArrayList only hold objects: you write ArrayList<Integer>, not ArrayList<int>. Java converts between them automatically (autoboxing)."
+      },
+      "analogy": {
+        "sq": "Si ta fusësh një mollë në një kuti dhuratash: molla është po ajo, por tani mund ta vendosësh në raftin ku pranohen vetëm kuti.",
+        "en": "Like putting an apple in a gift box: same apple, but now it fits on the shelf that only takes boxes."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "ArrayList<Integer> notat = new ArrayList<>();\nnotat.add(9);                     // int → Integer vetvetiu\nint ePara = notat.get(0);         // Integer → int\nint n = Integer.parseInt(\"42\");   // tekst → numër"
+      },
+      "related": [
+        "primitive-types",
+        "arraylist",
+        "java-generics"
+      ]
+    },
+    {
+      "id": "stringbuilder",
+      "en": "StringBuilder",
+      "sq": null,
+      "aliases": [
+        "string builder",
+        "append"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "StringBuilder-i është mënyra e shpejtë për të ndërtuar tekst pjesë-pjesë në Java. Meqë String-ët s'ndryshojnë, çdo + krijon një tekst të ri; në një cikël të gjatë kjo është e ngadaltë, ndërsa StringBuilder-i shton në të njëjtin vend.",
+        "en": "StringBuilder is the fast way to build up text piece by piece in Java. Since Strings can't change, every + creates a new string; in a long loop that's slow, while StringBuilder keeps adding in the same place."
+      },
+      "analogy": {
+        "sq": "Si ta shkruash një hartim në një fletore të vetme, në vend që ta rishkruash gjithë hartimin në fletë të re sa herë shton një fjali.",
+        "en": "Like writing an essay in one notebook, instead of copying the whole thing onto a new sheet every time you add a sentence."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "StringBuilder sb = new StringBuilder();\nfor (int i = 1; i <= 3; i++) sb.append(i).append(\" \");\nSystem.out.println(sb.toString());  // 1 2 3"
+      },
+      "related": [
+        "string",
+        "mutable-immutable",
+        "concatenation"
+      ]
+    },
+    {
+      "id": "super-keyword",
+      "en": "super",
+      "sq": null,
+      "aliases": [
+        "super()",
+        "super keyword",
+        "superclass"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Fjala super i referohet klasës prind. Me super(...) thërret konstruktorin e prindit, dhe me super.metoda() përdor versionin e prindit të një metode që e ke ndryshuar.",
+        "en": "The super keyword refers to the parent class. With super(...) you call the parent's constructor, and with super.method() you use the parent's version of a method you've changed."
+      },
+      "analogy": {
+        "sq": "Si kur thua „siç e bënte gjyshja“: e përdor recetën origjinale të prindit, pastaj i shton diçka tënden.",
+        "en": "Like saying “the way grandma made it”: you use the parent's original recipe, then add your own twist."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "class Portier extends Lojtar {\n    Portier(String emri) {\n        super(emri);  // thërret konstruktorin e Lojtar\n    }\n}"
+      },
+      "related": [
+        "inheritance",
+        "constructor",
+        "method-overriding"
+      ]
+    },
+    {
+      "id": "method-overriding",
+      "en": "Method overriding (@Override)",
+      "sq": "Mbishkrimi i metodës",
+      "aliases": [
+        "@override",
+        "overriding",
+        "mbishkrim"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Overriding-u është kur klasa fëmijë e rishkruan një metodë që e ka trashëguar nga prindi, që të sillet ndryshe. Shënimi @Override i thotë kompajlerit të kontrollojë që po e mbishkruan vërtet — dhe të paralajmëron nëse e ke gabuar emrin.",
+        "en": "Overriding is when a child class rewrites a method it inherited from its parent, so it behaves differently. The @Override annotation tells the compiler to check you really are overriding — and warns you if you mistyped the name."
+      },
+      "analogy": {
+        "sq": "Si receta e familjes për byrek që e trashëgon, por ti e bën me spinaq në vend të mishit — i njëjti emër, versioni yt.",
+        "en": "Like the family byrek recipe you inherit but make with spinach instead of meat — same name, your version."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "class Mace extends Kafshe {\n    @Override\n    String ze() { return \"Mjau!\"; }\n}"
+      },
+      "related": [
+        "polymorphism",
+        "inheritance",
+        "method-overloading"
+      ]
+    },
+    {
+      "id": "getters-setters",
+      "en": "Getters & setters",
+      "sq": "Metodat get dhe set",
+      "aliases": [
+        "getter setter",
+        "get set",
+        "accessors"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Getter-ët dhe setter-ët janë metoda të thjeshta për ta lexuar (getEmri()) dhe ndryshuar (setEmri()) një fushë private. Kështu klasa i vendos vetë rregullat — p.sh. mosha s'mund të jetë negative.",
+        "en": "Getters and setters are simple methods to read (getName()) and change (setName()) a private field. That way the class sets its own rules — like age can't be negative."
+      },
+      "analogy": {
+        "sq": "Si sporteli i bankës: kasafortën s'e prek vetë, por i kërkon nëpunësit — dhe ai kontrollon nëse kërkesa është në rregull.",
+        "en": "Like a bank counter: you don't touch the vault yourself, you ask the clerk — and they check the request is valid."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "private int mosha;\npublic int getMosha() { return mosha; }\npublic void setMosha(int m) { if (m >= 0) mosha = m; }"
+      },
+      "related": [
+        "encapsulation",
+        "access-modifiers",
+        "method"
+      ]
+    },
+    {
+      "id": "tostring",
+      "en": "toString()",
+      "sq": null,
+      "aliases": [
+        "to string"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "toString() është metoda që e kthen një objekt në tekst. Kur e printon një objekt pa e mbishkruar këtë metodë, del diçka si Lojtar@1b6d3586; kur e mbishkruan, zgjedh vetë si shfaqet.",
+        "en": "toString() is the method that turns an object into text. If you print an object without overriding it, you get something like Player@1b6d3586; when you override it, you choose how it's shown."
+      },
+      "analogy": {
+        "sq": "Si ta prezantosh veten në një takim: në vend të numrit të letërnjoftimit, thua „Jam Arta, nga Peja“.",
+        "en": "Like introducing yourself at a meeting: instead of your ID number, you say “I'm Arta, from Peja”."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "class Lojtar {\n    String emri = \"Arbër\";\n    @Override public String toString() { return \"Lojtari \" + emri; }\n}\nSystem.out.println(new Lojtar());  // Lojtari Arbër"
+      },
+      "related": [
+        "method-overriding",
+        "string",
+        "object"
+      ]
+    },
+    {
+      "id": "java-lambda",
+      "en": "Lambda expressions (Java)",
+      "sq": "Shprehjet lambda në Java",
+      "aliases": [
+        "->",
+        "lambda java"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Lambda-t në Java (që nga Java 8) janë funksione të shkurtra pa emër, të shkruara me shigjetën -> — p.sh. n -> n * 2. Përdoren shumë me stream-et, me forEach dhe për renditje.",
+        "en": "Lambdas in Java (since Java 8) are short nameless functions written with the -> arrow — like n -> n * 2. They're used a lot with streams, forEach and sorting."
+      },
+      "analogy": {
+        "sq": "Si shënimi i shpejtë në frigorifer — „merr bukë“ — në vend të një letre të gjatë.",
+        "en": "Like a quick note on the fridge — “get bread” — instead of a long letter."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "List<String> emrat = List.of(\"Dren\", \"Arta\", \"Ilir\");\nemrat.forEach(e -> System.out.println(e));\nemrat.stream().sorted().forEach(System.out::println);"
+      },
+      "related": [
+        "lambda",
+        "java-streams",
+        "arrow-function"
+      ]
+    },
+    {
+      "id": "optional-java",
+      "en": "Optional (Java)",
+      "sq": null,
+      "aliases": [
+        "optional",
+        "ofnullable",
+        "orelse"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Optional-i është një „kuti“ që mund të ketë një vlerë ose të jetë bosh. Në vend që të kthesh null (dhe të rrezikosh NullPointerException), kthen një Optional, dhe kush e përdor detyrohet ta mendojë rastin kur është bosh.",
+        "en": "Optional is a “box” that may contain a value or be empty. Instead of returning null (and risking a NullPointerException), you return an Optional, and whoever uses it is forced to think about the empty case."
+      },
+      "analogy": {
+        "sq": "Si kutia e drekës me etiketën „mund të jetë bosh“: para se të hash, e hap dhe e kontrollon.",
+        "en": "Like a lunchbox labelled “might be empty”: before eating, you open it and check."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "Optional<String> emri = Optional.ofNullable(merrEmrin());\nSystem.out.println(emri.orElse(\"Pa emër\"));"
+      },
+      "related": [
+        "nullpointerexception",
+        "null",
+        "optional-chaining"
+      ]
+    },
+    {
+      "id": "collections-framework",
+      "en": "Collections framework (List, Set, Map)",
+      "sq": "Koleksionet në Java",
+      "aliases": [
+        "collections",
+        "java collections",
+        "list set map"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Collections framework-u është grupi i strukturave të gatshme të të dhënave në Java: List (me renditje, si ArrayList), Set (pa dublikata, si HashSet) dhe Map (çelës–vlerë, si HashMap). Zgjedh atë që i përshtatet punës.",
+        "en": "The Collections framework is Java's set of ready-made data structures: List (ordered, like ArrayList), Set (no duplicates, like HashSet) and Map (key–value, like HashMap). You pick the one that fits the job."
+      },
+      "analogy": {
+        "sq": "Si vendet e ruajtjes në kuzhinë: sirtari për lugët (List), kavanozët me etiketa unike (Set), raftet me emra (Map) — secili për punën e vet.",
+        "en": "Like kitchen storage: a drawer for spoons (List), jars with unique labels (Set), named shelves (Map) — each for its own job."
+      },
+      "code": null,
+      "related": [
+        "arraylist",
+        "hashset",
+        "hashmap"
+      ]
+    },
+    {
+      "id": "hashset",
+      "en": "HashSet",
+      "sq": null,
+      "aliases": [
+        "set java"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "HashSet-i është një Set në Java: ruan vlera unike, pa dublikata dhe pa renditje të caktuar. Kontrolli nëse diçka ekziston (contains) është shumë i shpejtë.",
+        "en": "HashSet is a Set in Java: it stores unique values, with no duplicates and no particular order. Checking whether something exists (contains) is very fast."
+      },
+      "analogy": {
+        "sq": "Si lista e prezencës: edhe nëse dikush e shkruan emrin dy herë, në listë del vetëm një herë.",
+        "en": "Like an attendance list: even if someone writes their name twice, it appears only once."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "HashSet<String> qytetet = new HashSet<>();\nqytetet.add(\"Pejë\"); qytetet.add(\"Pejë\"); qytetet.add(\"Tiranë\");\nSystem.out.println(qytetet.size());            // 2\nSystem.out.println(qytetet.contains(\"Pejë\"));  // true"
+      },
+      "related": [
+        "python-set",
+        "collections-framework",
+        "hash-table"
+      ]
+    },
+    {
+      "id": "iterator",
+      "en": "Iterator",
+      "sq": "Iterator",
+      "aliases": [
+        "hasnext",
+        "next()"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Iterator-i është një objekt që të lejon të kalosh nëpër elementet e një koleksioni një nga një, me hasNext() dhe next(). Është i dobishëm kur duhet të heqësh elemente gjatë kalimit, gjë që me for-each shkakton gabim.",
+        "en": "An Iterator is an object that lets you walk through a collection's items one by one, with hasNext() and next(). It's useful when you need to remove items while looping, which causes an error with for-each."
+      },
+      "analogy": {
+        "sq": "Si arkëtari që i skanon produktet një nga një nga shporta: „ka tjetër? po — skano“, derisa shporta mbaron.",
+        "en": "Like a cashier scanning items one by one from the basket: “another one? yes — scan”, until the basket's empty."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "Iterator<Integer> it = notat.iterator();\nwhile (it.hasNext()) {\n    if (it.next() < 5) it.remove();  // heq notat nën 5\n}"
+      },
+      "related": [
+        "loop",
+        "java-for-each",
+        "collections-framework"
+      ]
+    },
+    {
+      "id": "java-records",
+      "en": "Records (Java)",
+      "sq": null,
+      "aliases": [
+        "record",
+        "java record"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Record-et (që nga Java 16) janë një mënyrë e shkurtër për të krijuar klasa që thjesht mbajnë të dhëna. Me një rresht të vetëm, Java-ja krijon vetë konstruktorin, getter-ët, equals() dhe toString().",
+        "en": "Records (since Java 16) are a short way to create classes that just hold data. In a single line, Java creates the constructor, getters, equals() and toString() for you."
+      },
+      "analogy": {
+        "sq": "Si formulari i gatshëm i regjistrimit: në vend që t'i vizatosh vetë vijat dhe kutitë, e merr të printuar dhe vetëm e plotëson.",
+        "en": "Like a ready-printed registration form: instead of drawing the lines and boxes yourself, you take the printed one and just fill it in."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "record Student(String emri, int mosha) {}\nStudent s = new Student(\"Arta\", 16);\nSystem.out.println(s.emri());  // Arta\nSystem.out.println(s);         // Student[emri=Arta, mosha=16]"
+      },
+      "related": [
+        "class",
+        "getters-setters",
+        "tostring"
+      ]
+    },
+    {
+      "id": "var-java",
+      "en": "var (Java)",
+      "sq": null,
+      "aliases": [
+        "var java",
+        "type inference"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Që nga Java 10, mund të shkruash var në vend të tipit kur Java-ja e kupton vetë nga vlera — p.sh. var lista = new ArrayList<String>();. Tipi mbetet i fiksuar; thjesht s'ke pse e shkruan dy herë.",
+        "en": "Since Java 10, you can write var instead of the type when Java can work it out from the value — e.g. var list = new ArrayList<String>();. The type is still fixed; you just don't have to write it twice."
+      },
+      "analogy": {
+        "sq": "Si kur mësuesja shkruan „Arta“ në ditar pa shtuar „nxënëse“ — kuptohet nga konteksti.",
+        "en": "Like the teacher writing “Arta” in the register without adding “student” — it's clear from context."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "var emri = \"Arta\";                 // String\nvar notat = new ArrayList<Integer>();\n// emri = 42;  // Gabim! tipi mbetet String"
+      },
+      "related": [
+        "let-const-var",
+        "static-dynamic-typing",
+        "primitive-types"
+      ]
+    },
+    {
+      "id": "try-with-resources",
+      "en": "try-with-resources",
+      "sq": null,
+      "aliases": [
+        "try with resources",
+        "autocloseable"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "try-with-resources e hap një burim — skedar, lidhje me databazën, Scanner — dhe e mbyll vetë kur mbaron blloku, edhe nëse ndodh gabim. Është si with-i i Python-it.",
+        "en": "try-with-resources opens a resource — a file, a database connection, a Scanner — and closes it automatically when the block ends, even if an error happens. It's like Python's with."
+      },
+      "analogy": {
+        "sq": "Si drita e korridorit me kohëmatës: ndizet kur hyn dhe fiket vetë pasi del.",
+        "en": "Like a timed hallway light: on when you walk in, off by itself after you leave."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "try (Scanner sc = new Scanner(new File(\"notat.txt\"))) {\n    while (sc.hasNextLine()) System.out.println(sc.nextLine());\n}  // skedari mbyllet vetë këtu"
+      },
+      "related": [
+        "with-statement",
+        "java-exceptions",
+        "file-handling"
+      ]
+    },
+    {
+      "id": "javadoc",
+      "en": "Javadoc",
+      "sq": null,
+      "aliases": [
+        "/**",
+        "doc comment"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Javadoc-u janë komentet e veçanta /** ... */ sipër klasave dhe metodave, që përshkruajnë çfarë bëjnë, parametrat dhe vlerën kthyese. Prej tyre krijohet automatikisht dokumentacion HTML, dhe IDE-ja i shfaq kur kalon mausi sipër.",
+        "en": "Javadoc is the special /** ... */ comments above classes and methods that describe what they do, their parameters and return value. HTML documentation is generated from them automatically, and your IDE shows them on hover."
+      },
+      "analogy": {
+        "sq": "Si etiketa e udhëzimeve në pjesën e pasme të një pajisjeje: çfarë bën, si përdoret, për çfarë të kesh kujdes.",
+        "en": "Like the instruction label on the back of an appliance: what it does, how to use it, what to watch out for."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "/**\n * Llogarit mesataren e notave.\n * @param notat lista e notave\n * @return mesatarja\n */"
+      },
+      "related": [
+        "documentation",
+        "comment",
+        "intellij"
+      ]
+    },
+    {
+      "id": "junit",
+      "en": "JUnit",
+      "sq": null,
+      "aliases": [
+        "unit test java",
+        "@test"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "JUnit-i është libraria më e njohur për të shkruar teste në Java. E shënon një metodë me @Test dhe i kontrollon rezultatet me assertEquals — IDE-ja i ekzekuton të gjitha dhe të tregon me jeshile ose me të kuqe cilat kaluan.",
+        "en": "JUnit is the best-known library for writing tests in Java. You mark a method with @Test and check results with assertEquals — your IDE runs them all and shows in green or red which passed."
+      },
+      "analogy": {
+        "sq": "Si fleta e korrigjimit të mësueses me ✓ dhe ✗: çdo pyetje kontrollohet, dhe në fund e sheh menjëherë sa të sakta ke.",
+        "en": "Like a teacher's marking sheet with ✓ and ✗: every question gets checked, and at the end you instantly see how many you got right."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "@Test\nvoid mblidhPunon() {\n    assertEquals(5, Kalkulator.mblidh(2, 3));\n}"
+      },
+      "related": [
+        "testing",
+        "unit-integration-test",
+        "tdd"
+      ]
+    },
+    {
+      "id": "jar-file",
+      "en": "JAR file",
+      "sq": "Skedar JAR",
+      "aliases": [
+        ".jar",
+        "java archive",
+        "executable jar"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Skedari JAR (Java ARchive) është një paketë e vetme që i mbledh të gjitha klasat dhe burimet e një programi Java — si një ZIP. Një JAR i ekzekutueshëm niset me java -jar programi.jar në çdo kompjuter që ka Java.",
+        "en": "A JAR (Java ARchive) file is a single package bundling all the classes and resources of a Java program — like a ZIP. An executable JAR runs with java -jar program.jar on any computer that has Java."
+      },
+      "analogy": {
+        "sq": "Si një kuti me të gjitha pjesët e një mobilje dhe udhëzimet brenda: një paketë, gati për t'u montuar kudo.",
+        "en": "Like a flat-pack box with all the furniture parts and instructions inside: one package, ready to assemble anywhere."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "java -jar fjalori.jar"
+      },
+      "related": [
+        "compression-zip",
+        "maven-gradle",
+        "jvm"
+      ]
+    },
+    {
+      "id": "annotations",
+      "en": "Annotations (@)",
+      "sq": "Anotacione",
+      "aliases": [
+        "annotation",
+        "anotacion",
+        "@deprecated"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Anotacionet janë shënime me @ që u japin informacion shtesë kompajlerit ose framework-eve — p.sh. @Override, @Test ose @GetMapping te Spring-u. Vetë s'e ndryshojnë kodin, por mjetet i lexojnë dhe veprojnë sipas tyre.",
+        "en": "Annotations are notes starting with @ that give extra information to the compiler or frameworks — like @Override, @Test or Spring's @GetMapping. They don't change the code by themselves, but tools read them and act on them."
+      },
+      "analogy": {
+        "sq": "Si ngjitëset në pakot e postës: „I brishtë“, „Prioritar“ — pakoja është po ajo, por postierët e trajtojnë ndryshe.",
+        "en": "Like stickers on parcels: “Fragile”, “Priority” — the parcel's the same, but the couriers handle it differently."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "@Override\n@Deprecated\n@Test\n@GetMapping(\"/api/terma\")"
+      },
+      "related": [
+        "decorator",
+        "method-overriding",
+        "spring-boot"
+      ]
+    },
+    {
+      "id": "instanceof",
+      "en": "instanceof",
+      "sq": null,
+      "aliases": [
+        "instance of"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "instanceof kontrollon nëse një objekt është i një lloji (klase) të caktuar, ose i një klase që e trashëgon atë. Kthen true ose false, dhe përdoret shpesh para se ta trajtosh objektin si atë lloj.",
+        "en": "instanceof checks whether an object is of a particular type (class), or of a class that inherits from it. It returns true or false, and is often used before treating the object as that type."
+      },
+      "analogy": {
+        "sq": "Si gjyqtari që ia kontrollon fanellën lojtarit para se ta lërë të hyjë: „a është nga ekipi ynë?“",
+        "en": "Like the referee checking a player's shirt before letting them on: “are they on our team?”"
+      },
+      "code": {
+        "language": "java",
+        "snippet": "Kafshe k = new Qen();\nif (k instanceof Qen q) {\n    System.out.println(\"Është qen: \" + q.ze());\n}"
+      },
+      "related": [
+        "inheritance",
+        "java-casting",
+        "typeof"
+      ]
+    },
+    {
+      "id": "java-casting",
+      "en": "Casting in Java",
+      "sq": "Konvertimi i tipit në Java",
+      "aliases": [
+        "(int)",
+        "cast java",
+        "downcasting",
+        "upcasting"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Casting-u e kthen një vlerë nga një tip në tjetrin duke e shkruar tipin në kllapa: (int) 9.7 jep 9 — pjesa pas presjes humbet. Me objektet, casting-u e trajton një Kafshe si Qen, por dështon gjatë ekzekutimit nëse s'është vërtet qen.",
+        "en": "Casting converts a value from one type to another by writing the type in brackets: (int) 9.7 gives 9 — the decimal part is lost. With objects, casting treats an Animal as a Dog, but fails at runtime if it isn't really a dog."
+      },
+      "analogy": {
+        "sq": "Si ta derdhësh lëngun nga një gotë e madhe në një më të vogël: një pjesë mund të derdhet jashtë.",
+        "en": "Like pouring juice from a big glass into a smaller one: some of it may spill."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "double nota = 9.7;\nint ePlote = (int) nota;  // 9 — humbet .7\nlong iMadh = 100;         // int → long pa cast"
+      },
+      "related": [
+        "type-conversion",
+        "primitive-types",
+        "instanceof"
+      ]
+    },
+    {
+      "id": "do-while",
+      "en": "do-while loop",
+      "sq": "Cikli do-while",
+      "aliases": [
+        "do while"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Cikli do-while e ekzekuton bllokun të paktën një herë dhe vetëm pastaj e kontrollon kushtin. Është i dobishëm kur duhet të pyesësh diçka të paktën një herë — p.sh. një meny që shfaqet derisa përdoruesi zgjedh „Dil“.",
+        "en": "A do-while loop runs the block at least once and only then checks the condition. It's useful when you must ask something at least once — like a menu that keeps showing until the user picks “Exit”."
+      },
+      "analogy": {
+        "sq": "Si ta provosh gjellën të paktën një herë para se të vendosësh nëse do më: kafshata e parë hahet gjithmonë.",
+        "en": "Like tasting a dish at least once before deciding whether you want more: the first bite always happens."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "int zgjedhja; do {\n    System.out.println(\"1. Luaj  2. Dil\");\n    zgjedhja = sc.nextInt();\n} while (zgjedhja != 2);"
+      },
+      "related": [
+        "while-loop",
+        "loop",
+        "scanner"
+      ]
+    },
+    {
+      "id": "integer-overflow",
+      "en": "Integer overflow",
+      "sq": "Tejmbushja e numrit",
+      "aliases": [
+        "overflow",
+        "int max",
+        "integer.max_value",
+        "tejmbushje"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Integer overflow ndodh kur një numër bëhet më i madh se sa mund të mbajë tipi i tij. Një int në Java mban deri rreth 2.1 miliardë; po ta kalosh, numri „kthehet“ në negativ pa asnjë paralajmërim. Për numra të mëdhenj përdor long.",
+        "en": "Integer overflow happens when a number gets bigger than its type can hold. A Java int holds up to about 2.1 billion; go past that and the number “wraps around” to negative without any warning. For big numbers use long."
+      },
+      "analogy": {
+        "sq": "Si kilometrazhi i një veture të vjetër me 6 shifra: pas 999 999 kthehet në 000 000, sikur vetura të ishte e re.",
+        "en": "Like the odometer on an old car with 6 digits: after 999,999 it rolls back to 000,000, as if the car were new."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "int max = Integer.MAX_VALUE;  // 2147483647\nSystem.out.println(max + 1);  // -2147483648 (!)\nlong iMadh = max + 1L;        // 2147483648 ✓"
+      },
+      "related": [
+        "primitive-types",
+        "integer",
+        "bug"
+      ]
+    },
+    {
+      "id": "jpa-hibernate",
+      "en": "JPA & Hibernate",
+      "sq": null,
+      "aliases": [
+        "jpa",
+        "hibernate",
+        "spring data",
+        "@entity"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "JPA-ja dhe Hibernate-i janë mënyra standarde në Java për të punuar me databazën përmes objekteve (ORM): e shënon një klasë me @Entity, dhe ata e kthejnë vetë në tabelë dhe i shkruajnë query-të SQL.",
+        "en": "JPA and Hibernate are Java's standard way of working with a database through objects (ORM): you mark a class with @Entity, and they turn it into a table and write the SQL queries for you."
+      },
+      "analogy": {
+        "sq": "Si sekretari që çdo letër tënde e kthen në formularin zyrtar të bashkisë: ti shkruan normalisht, ai i plotëson kutitë.",
+        "en": "Like a secretary who turns every letter you write into the town hall's official form: you write normally, they fill in the boxes."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "@Entity\npublic class Student {\n    @Id @GeneratedValue Long id;\n    String emri;\n}"
+      },
+      "related": [
+        "orm",
+        "spring-boot",
+        "database"
+      ]
+    },
+    {
+      "id": "android-studio",
+      "en": "Android Studio",
+      "sq": null,
+      "aliases": [
+        "android app",
+        "android java"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Android Studio-ja është IDE-ja zyrtare e Google-it për të ndërtuar aplikacione Android me Java ose Kotlin. Ka emulator telefoni, që ta shohësh aplikacionin tënd duke punuar pa pasur nevojë për telefon të vërtetë.",
+        "en": "Android Studio is Google's official IDE for building Android apps with Java or Kotlin. It has a phone emulator, so you can see your app running without needing a real phone."
+      },
+      "analogy": {
+        "sq": "Si një punishte e plotë për të ndërtuar lodra, me një „dhomë prove“ ku i provon para se t'ia japësh fëmijës.",
+        "en": "Like a fully equipped workshop for building toys, with a “test room” where you try them out before giving them to the child."
+      },
+      "code": null,
+      "related": [
+        "kotlin",
+        "intellij",
+        "ide"
+      ]
+    },
+    {
+      "id": "javafx-swing",
+      "en": "Swing & JavaFX",
+      "sq": null,
+      "aliases": [
+        "swing",
+        "javafx",
+        "java gui",
+        "jframe"
+      ],
+      "category": "java",
+      "explanation": {
+        "sq": "Swing-u dhe JavaFX-i janë libraritë e Java-s për të krijuar programe me dritare, butona dhe meny (GUI) për kompjuter. Shpesh përdoren në detyrat e shkollës dhe të fakultetit për aplikacionin e parë grafik.",
+        "en": "Swing and JavaFX are Java's libraries for making desktop programs with windows, buttons and menus (GUI). They're often used in school and university assignments for a first graphical app."
+      },
+      "analogy": {
+        "sq": "Si kompleti i bojërave dhe i letrës për vizatim: me to i jep programit tënd një pamje që mund ta klikosh.",
+        "en": "Like a set of paints and paper for drawing: they let you give your program a face you can click."
+      },
+      "code": {
+        "language": "java",
+        "snippet": "JFrame dritarja = new JFrame(\"Fjalori\");\ndritarja.add(new JButton(\"Kliko këtu\"));\ndritarja.setSize(300, 200);\ndritarja.setVisible(true);"
+      },
+      "related": [
+        "cli-gui",
+        "java",
+        "ui"
+      ]
+    },
+    {
+      "id": "cover-letter",
+      "en": "Cover letter",
+      "sq": "Letër motivimi",
+      "aliases": [
+        "letër motivuese",
+        "motivation letter"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Letra e motivimit është një tekst i shkurtër që e dërgon bashkë me CV-në, ku shpjegon pse të intereson ajo punë dhe pse je i përshtatshëm. Një letër e personalizuar për kompaninë bën shumë më tepër përshtypje se një shabllon i njëjtë për të gjithë.",
+        "en": "A cover letter is a short text you send with your CV, explaining why you want that job and why you're a good fit. A letter tailored to the company makes far more impression than the same template for everyone."
+      },
+      "analogy": {
+        "sq": "Si kur i shkruan gjyshes një letër personale në vend të një kartoline të printuar: ajo e kupton menjëherë që e ke menduar vërtet.",
+        "en": "Like writing grandma a personal letter instead of sending a printed card: she can tell straight away you really meant it."
+      },
+      "code": null,
+      "related": [
+        "cv-resume",
+        "job-interview",
+        "soft-skills"
+      ]
+    },
+    {
+      "id": "job-boards",
+      "en": "Job boards",
+      "sq": "Faqet e punës",
+      "aliases": [
+        "kosovajob",
+        "duapune",
+        "indeed",
+        "shpallje pune",
+        "job search"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Faqet e punës janë vendet ku kompanitë publikojnë shpalljet — si LinkedIn-i dhe Indeed-i ndërkombëtarisht, ose KosovaJob-i dhe Duapune-ja në rajon. Shumë punë IT gjenden edhe përmes grupeve në Facebook, Discord dhe rekomandimeve.",
+        "en": "Job boards are where companies post vacancies — like LinkedIn and Indeed internationally, or KosovaJob and Duapune in the region. Many IT jobs are also found through Facebook groups, Discord and recommendations."
+      },
+      "analogy": {
+        "sq": "Si tabela e njoftimeve në hyrje të supermarketit — vetëm se këtu të gjitha njoftimet janë për punë.",
+        "en": "Like the noticeboard at the supermarket entrance — except every notice here is a job."
+      },
+      "code": null,
+      "related": [
+        "linkedin",
+        "cv-resume",
+        "networking"
+      ]
+    },
+    {
+      "id": "networking",
+      "en": "Networking",
+      "sq": "Rrjetëzim",
+      "aliases": [
+        "rrjetëzimi",
+        "kontakte",
+        "meetup",
+        "komuniteti"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Networking-u do të thotë të njohësh njerëz në fushën tënde — në evente, meetup-e, hackathon-e ose online — dhe të mbash kontakt me ta. Shumë punë s'shpallen kurrë; gjenden përmes njerëzve që të njohin.",
+        "en": "Networking means getting to know people in your field — at events, meetups, hackathons or online — and staying in touch. Many jobs are never advertised; they're found through people who know you."
+      },
+      "analogy": {
+        "sq": "Si në lagje: kur dikush kërkon mjeshtër, i pyet fqinjët, dhe ata thonë „e njoh një djalë të mirë“ — kjo vlen më shumë se çdo reklamë.",
+        "en": "Like in a neighbourhood: when someone needs a tradesman, they ask the neighbours, who say “I know a good one” — worth more than any advert."
+      },
+      "code": null,
+      "related": [
+        "linkedin",
+        "hackathon",
+        "mentor"
+      ]
+    },
+    {
+      "id": "github-profile",
+      "en": "GitHub profile",
+      "sq": "Profili në GitHub",
+      "aliases": [
+        "profile readme",
+        "contribution graph"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Profili yt në GitHub është shpesh vendi i parë që shikon një punëdhënës: projektet e tua, sa shpesh shkruan kod (katrorët e gjelbër) dhe një README personal që të prezanton. Mbaje të rregullt, me 2–3 projekte të mira në krye.",
+        "en": "Your GitHub profile is often the first place an employer looks: your projects, how often you code (the green squares) and a personal README introducing you. Keep it tidy, with 2–3 good projects pinned at the top."
+      },
+      "analogy": {
+        "sq": "Si statistikat e një lojtari në faqen e klubit: golat, ndeshjet, asistimet — trajneri e sheh punën tënde, jo vetëm atë që thua.",
+        "en": "Like a player's stats on the club website: goals, matches, assists — the coach sees your work, not just what you say."
+      },
+      "code": null,
+      "related": [
+        "github",
+        "portfolio",
+        "readme"
+      ]
+    },
+    {
+      "id": "references",
+      "en": "References",
+      "sq": "Rekomandime",
+      "aliases": [
+        "referenca",
+        "rekomandim",
+        "recommendation letter"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Referencat janë njerëz — një ish-shef, mësues ose mentor — që e njohin punën tënde dhe që punëdhënësi mund t'i kontaktojë për të pyetur për ty. Pyeti gjithmonë para se ta japësh emrin e tyre.",
+        "en": "References are people — a former boss, teacher or mentor — who know your work and whom an employer can contact to ask about you. Always ask them before giving their name."
+      },
+      "analogy": {
+        "sq": "Si kur dikush pyet për një mjeshtër dhe ti thua: „pyete fqinjin, ia ka rregulluar banjën vitin e kaluar“.",
+        "en": "Like someone asking about a tradesman and you saying: “ask the neighbour, he did their bathroom last year”."
+      },
+      "code": null,
+      "related": [
+        "cv-resume",
+        "mentor",
+        "job-interview"
+      ]
+    },
+    {
+      "id": "job-offer-contract",
+      "en": "Job offer & contract",
+      "sq": "Oferta dhe kontrata e punës",
+      "aliases": [
+        "job offer",
+        "employment contract",
+        "ofertë pune",
+        "kontratë"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Oferta e punës është propozimi i kompanisë me pagën, orarin dhe kushtet; kontrata është dokumenti ligjor që e nënshkruan. Lexoje me kujdes para se ta firmosësh: pagën bruto dhe neto, orarin, pushimet, periudhën provuese dhe afatin e njoftimit.",
+        "en": "A job offer is the company's proposal with the salary, hours and conditions; the contract is the legal document you sign. Read it carefully before signing: gross and net pay, hours, holidays, probation period and notice period."
+      },
+      "analogy": {
+        "sq": "Si kur blen një veturë: para se të firmosësh, e lexon çdo rresht — çmimin, garancinë, kushtet — jo vetëm ngjyrën.",
+        "en": "Like buying a car: before signing, you read every line — price, warranty, conditions — not just the colour."
+      },
+      "code": null,
+      "related": [
+        "gross-net-salary",
+        "probation-period",
+        "salary-negotiation"
+      ]
+    },
+    {
+      "id": "probation-period",
+      "en": "Probation period",
+      "sq": "Periudha provuese",
+      "aliases": [
+        "probation",
+        "periudhë prove"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Periudha provuese janë muajt e parë në një punë të re (zakonisht 1–6 muaj), kur si kompania ashtu edhe ti shihni nëse përshtateni. Gjatë saj kontrata mund të ndërpritet më lehtë nga të dyja palët.",
+        "en": "The probation period is the first months at a new job (usually 1–6 months), when both the company and you see whether it's a good fit. During it, either side can end the contract more easily."
+      },
+      "analogy": {
+        "sq": "Si prova te një klub i ri: stërvitesh me ekipin disa javë para se të firmosësh për gjithë sezonin.",
+        "en": "Like a trial at a new club: you train with the team for a few weeks before signing for the whole season."
+      },
+      "code": null,
+      "related": [
+        "job-offer-contract",
+        "onboarding",
+        "junior-senior"
+      ]
+    },
+    {
+      "id": "gross-net-salary",
+      "en": "Gross vs net salary",
+      "sq": "Paga bruto dhe neto",
+      "aliases": [
+        "bruto",
+        "neto",
+        "gross",
+        "net salary",
+        "paga"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Paga bruto është shuma e plotë që shkruhet në kontratë; paga neto është ajo që të vjen në llogari pasi zbriten tatimi dhe kontributet (pensionale ose sigurimet shoqërore). Kur krahason oferta, pyet gjithmonë: „Kjo është bruto apo neto?“",
+        "en": "Gross salary is the full amount written in the contract; net salary is what lands in your account after tax and contributions (pension or social insurance) are taken off. When comparing offers, always ask: “Is that gross or net?”"
+      },
+      "analogy": {
+        "sq": "Si pjepri në treg dhe sa ha vërtet: bruto është i gjithë pjepri, neto është pjesa që mbetet pasi i heq lëvozhgën dhe farat.",
+        "en": "Like a melon at the market versus what you actually eat: gross is the whole melon, net is what's left after the rind and seeds."
+      },
+      "code": null,
+      "related": [
+        "job-offer-contract",
+        "salary-negotiation",
+        "freelancer"
+      ]
+    },
+    {
+      "id": "salary-negotiation",
+      "en": "Salary negotiation",
+      "sq": "Negocimi i pagës",
+      "aliases": [
+        "negotiation",
+        "negocim",
+        "raise",
+        "rritje page"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Negocimi i pagës është biseda ku kërkon një pagë më të mirë se oferta e parë — ose një rritje në punën aktuale. Përgatitu duke parë sa paguhen pozitat e ngjashme dhe fol për vlerën që sjell, jo për nevojat personale.",
+        "en": "Salary negotiation is the conversation where you ask for better pay than the first offer — or a raise in your current job. Prepare by checking what similar roles pay, and talk about the value you bring, not your personal needs."
+      },
+      "analogy": {
+        "sq": "Si pazari në tregun e së dielës: çmimi i parë rrallë është i fundit — por duhet ta dish sa vlen vërtet malli.",
+        "en": "Like bargaining at the Sunday market: the first price is rarely the last — but you need to know what the thing is really worth."
+      },
+      "code": null,
+      "related": [
+        "gross-net-salary",
+        "job-offer-contract",
+        "performance-review"
+      ]
+    },
+    {
+      "id": "full-time-part-time",
+      "en": "Full-time vs part-time",
+      "sq": "Me kohë të plotë dhe të pjesshme",
+      "aliases": [
+        "full-time",
+        "part-time",
+        "kohë e plotë",
+        "kohë e pjesshme"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Puna me kohë të plotë zakonisht është rreth 40 orë në javë; me kohë të pjesshme është më pak orë — shpesh e përshtatshme për studentët. Ka edhe kontrata për projekt ose me orë, sidomos te freelancing-u.",
+        "en": "Full-time work is usually about 40 hours a week; part-time is fewer hours — often a good fit for students. There are also per-project or hourly contracts, especially in freelancing."
+      },
+      "analogy": {
+        "sq": "Si orari i plotë i shkollës krahasuar me një kurs pasdite dy herë në javë.",
+        "en": "Like the full school timetable compared with an afternoon course twice a week."
+      },
+      "code": null,
+      "related": [
+        "freelancer",
+        "internship",
+        "remote-work"
+      ]
+    },
+    {
+      "id": "certification",
+      "en": "Certifications",
+      "sq": "Certifikata",
+      "aliases": [
+        "certificate",
+        "certifikim",
+        "aws certified",
+        "oracle certified"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Certifikatat janë provime zyrtare nga kompani si AWS, Microsoft, Google ose Oracle që vërtetojnë njohuritë e tua në një teknologji. Ndihmojnë, sidomos për cloud dhe siguri, por projektet e vërteta zakonisht vlejnë më shumë.",
+        "en": "Certifications are official exams from companies like AWS, Microsoft, Google or Oracle that prove your knowledge of a technology. They help, especially for cloud and security, but real projects usually count for more."
+      },
+      "analogy": {
+        "sq": "Si patenta e shoferit: vërteton që i di teorinë dhe rregullat, por përvoja në rrugë është ajo që të bën shofer të mirë.",
+        "en": "Like a driving licence: it proves you know the theory and rules, but experience on the road is what makes you a good driver."
+      },
+      "code": null,
+      "related": [
+        "portfolio",
+        "cloud",
+        "bootcamp"
+      ]
+    },
+    {
+      "id": "tech-lead",
+      "en": "Tech lead / team lead",
+      "sq": "Udhëheqës teknik",
+      "aliases": [
+        "team lead",
+        "lead developer",
+        "udhëheqës ekipi",
+        "engineering manager"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Tech lead-i është programuesi me përvojë që merr vendimet teknike të ekipit, i rishikon zgjidhjet dhe i ndihmon të tjerët, ndërsa ende shkruan kod. Engineering manager-i merret më shumë me njerëzit: rritjen e tyre, ekipin dhe planifikimin.",
+        "en": "A tech lead is the experienced programmer who makes the team's technical decisions, reviews solutions and helps others, while still writing code. An engineering manager focuses more on people: their growth, the team and planning."
+      },
+      "analogy": {
+        "sq": "Tech lead-i është si kapiteni në fushë që luan dhe e drejton lojën; manager-i është si trajneri anash fushës.",
+        "en": "A tech lead is like the captain on the pitch who plays and directs the game; the manager is like the coach on the sideline."
+      },
+      "code": null,
+      "related": [
+        "junior-senior",
+        "code-review",
+        "mentor"
+      ]
+    },
+    {
+      "id": "startup",
+      "en": "Startup",
+      "sq": null,
+      "aliases": [
+        "start-up",
+        "startup company"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Startup-i është një kompani e re që përpiqet të rritet shpejt me një produkt ose ide të re. Puna aty është e shpejtë dhe me shumë përgjegjësi — mëson shumë, por ka edhe më shumë pasiguri se në një kompani të madhe.",
+        "en": "A startup is a young company trying to grow fast with a new product or idea. Work there is fast-paced with lots of responsibility — you learn a lot, but there's more uncertainty than at a big company."
+      },
+      "analogy": {
+        "sq": "Si një qebaptore e re në lagje: pronari bën gjithçka vetë dhe e ndryshon menynë çdo javë — ose bëhet zinxhir, ose mbyllet.",
+        "en": "Like a new kebab shop in the neighbourhood: the owner does everything and changes the menu weekly — and it either becomes a chain or closes."
+      },
+      "code": null,
+      "related": [
+        "mvp",
+        "agile",
+        "product-manager"
+      ]
+    },
+    {
+      "id": "one-on-one",
+      "en": "1:1 meeting",
+      "sq": "Takim një me një",
+      "aliases": [
+        "one on one",
+        "1:1",
+        "1on1",
+        "takim individual"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Takimi 1:1 është një bisedë e rregullt, zakonisht çdo javë ose çdo dy javë, mes teje dhe shefit ose mentorit: si po shkon puna, ku ke vështirësi, çfarë do të mësosh. Është momenti i duhur për të pyetur pa u ndier keq.",
+        "en": "A 1:1 meeting is a regular chat, usually weekly or fortnightly, between you and your manager or mentor: how work's going, where you're stuck, what you want to learn. It's the right moment to ask questions without feeling awkward."
+      },
+      "analogy": {
+        "sq": "Si takimi me kujdestarin e klasës vetëm me ty: s'është provim, por një bisedë se si po ecën.",
+        "en": "Like a one-to-one with your form tutor: not an exam, just a chat about how you're getting on."
+      },
+      "code": null,
+      "related": [
+        "mentor",
+        "performance-review",
+        "soft-skills"
+      ]
+    },
+    {
+      "id": "performance-review",
+      "en": "Performance review",
+      "sq": "Vlerësimi i punës",
+      "aliases": [
+        "vlerësim",
+        "appraisal",
+        "feedback"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Vlerësimi i punës është një bisedë zyrtare, shpesh një ose dy herë në vit, ku shefi dhe ti flisni për punën tënde: çfarë shkoi mirë, çfarë duhet përmirësuar dhe — shpesh — për rritjen e pagës ose të pozitës.",
+        "en": "A performance review is a formal conversation, often once or twice a year, where your manager and you discuss your work: what went well, what to improve and — often — a raise or promotion."
+      },
+      "analogy": {
+        "sq": "Si dëftesa në fund të vitit shkollor, vetëm se këtu flisni edhe për planin e vitit tjetër.",
+        "en": "Like the end-of-year school report, except you also talk about next year's plan."
+      },
+      "code": null,
+      "related": [
+        "one-on-one",
+        "salary-negotiation",
+        "junior-senior"
+      ]
+    },
+    {
+      "id": "burnout",
+      "en": "Burnout",
+      "sq": "Lodhje e tejskajshme",
+      "aliases": [
+        "djegie profesionale",
+        "stress",
+        "work-life balance",
+        "ekuilibër"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Burnout-i është lodhja e thellë që vjen nga puna e tepërt dhe stresi i gjatë: humb energjinë, motivimin dhe kënaqësinë në punë. Pushimet, oraret e arsyeshme dhe biseda me dikë ndihmojnë — kodi pret, shëndeti jo.",
+        "en": "Burnout is the deep exhaustion that comes from overwork and long stress: you lose energy, motivation and enjoyment of the work. Breaks, reasonable hours and talking to someone help — the code can wait, your health can't."
+      },
+      "analogy": {
+        "sq": "Si lojtari që luan çdo ndeshje pa pushim: në fund lëndohet dhe rri jashtë më gjatë se po të kishte pushuar herët.",
+        "en": "Like a player who plays every match without rest: eventually they get injured and are out longer than if they'd rested early."
+      },
+      "code": null,
+      "related": [
+        "imposter-syndrome",
+        "remote-work",
+        "soft-skills"
+      ]
+    },
+    {
+      "id": "open-source-contribution",
+      "en": "Contributing to open source",
+      "sq": "Kontribut në open source",
+      "aliases": [
+        "contribute",
+        "kontribut",
+        "good first issue",
+        "oss"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Kontributi në open source do të thotë të ndihmosh projekte publike në GitHub — duke rregulluar një bug, duke përmirësuar dokumentacionin ose duke përkthyer diçka. Kërko issue-t me etiketën „good first issue“; është mënyrë e shkëlqyer për të mësuar dhe për ta pasuruar portofolin.",
+        "en": "Contributing to open source means helping public projects on GitHub — fixing a bug, improving the documentation or translating something. Look for issues labelled “good first issue”; it's a great way to learn and boost your portfolio."
+      },
+      "analogy": {
+        "sq": "Si vullnetarizmi në aksionin e pastrimit të lagjes: ndihmon diçka që e përdorin të gjithë, njeh njerëz dhe mëson nga të tjerët.",
+        "en": "Like volunteering at a neighbourhood clean-up: you help something everyone uses, meet people and learn from others."
+      },
+      "code": null,
+      "related": [
+        "open-source",
+        "pull-request",
+        "portfolio"
+      ]
+    },
+    {
+      "id": "pomodoro",
+      "en": "Pomodoro technique",
+      "sq": "Teknika Pomodoro",
+      "aliases": [
+        "pomodoro",
+        "time management",
+        "menaxhim kohe"
+      ],
+      "category": "career",
+      "explanation": {
+        "sq": "Teknika Pomodoro është një mënyrë e thjeshtë për t'u përqendruar: punon 25 minuta pa ndërprerje, pushon 5, dhe pas katër raundesh merr një pushim më të gjatë. Ndihmon shumë kur mëson programim ose kur një detyrë duket e madhe.",
+        "en": "The Pomodoro technique is a simple way to focus: work 25 minutes without interruption, rest 5, and after four rounds take a longer break. It helps a lot when learning to code or when a task feels huge."
+      },
+      "analogy": {
+        "sq": "Si ndeshja e ndarë në dy pjesë me pushim në mes: lojtarët japin maksimumin sepse e dinë që pushimi po vjen.",
+        "en": "Like a match split into halves with a break: players give their all because they know the break is coming."
+      },
+      "code": null,
+      "related": [
+        "soft-skills",
+        "burnout",
+        "deadline"
+      ]
     }
   ]
 }
