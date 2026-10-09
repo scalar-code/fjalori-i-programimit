@@ -889,7 +889,6 @@
       "en": "Null",
       "sq": "Vlerë boshe",
       "aliases": [
-        "none",
         "nil",
         "bosh"
       ],
@@ -1105,8 +1104,7 @@
         "exception",
         "gabim",
         "përjashtim",
-        "try",
-        "except"
+        "try"
       ],
       "category": "general",
       "explanation": {
@@ -1134,7 +1132,6 @@
       "aliases": [
         "vs code",
         "vscode",
-        "pycharm",
         "editor",
         "integrated development environment"
       ],
@@ -2623,7 +2620,6 @@
       "sq": "Fushëveprim",
       "aliases": [
         "fusha e veprimit",
-        "global",
         "local",
         "lokal"
       ],
@@ -2733,8 +2729,7 @@
       "sq": "Testim",
       "aliases": [
         "test",
-        "testim njësie",
-        "pytest"
+        "testim njësie"
       ],
       "category": "general",
       "explanation": {
@@ -2927,7 +2922,6 @@
       "aliases": [
         "varësitë",
         "dependencies",
-        "requirements.txt",
         "package.json"
       ],
       "category": "general",
@@ -16140,7 +16134,6 @@
       "aliases": [
         "negotiation",
         "negocim",
-        "raise",
         "rritje page"
       ],
       "category": "career",
@@ -16387,6 +16380,1235 @@
         "soft-skills",
         "burnout",
         "deadline"
+      ]
+    },
+    {
+      "id": "if-elif-else",
+      "en": "if / elif / else",
+      "sq": "Kushtet if, elif, else",
+      "aliases": [
+        "elif",
+        "else if python",
+        "kushti python"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "Me if, elif dhe else, programi yt në Python merr vendime: kontrollon kushtet me radhë dhe ekzekuton vetëm bllokun e parë që është i vërtetë. elif do të thotë „përndryshe, nëse…“, ndërsa else kapet kur asnjë kusht s'plotësohet.",
+        "en": "With if, elif and else, your Python program makes decisions: it checks the conditions in order and runs only the first block that's true. elif means “otherwise, if…”, and else catches everything when no condition matches."
+      },
+      "analogy": {
+        "sq": "Si mësuesja që vendos notën: nëse ke mbi 90 pikë — 5, përndryshe nëse mbi 75 — 4, e kështu me radhë; në fund, për të gjithë të tjerët, vlen një rregull i vetëm.",
+        "en": "Like a teacher deciding grades: above 90 points — A, otherwise above 75 — B, and so on; at the end, one rule covers everyone else."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "pike = 82\nif pike >= 90:   print(\"Nota 5\")\nelif pike >= 75: print(\"Nota 4\")\nelse:            print(\"Provo sërish\")"
+      },
+      "related": [
+        "condition",
+        "logical-operators",
+        "match-case"
+      ]
+    },
+    {
+      "id": "try-except",
+      "en": "try / except",
+      "sq": null,
+      "aliases": [
+        "except",
+        "try except",
+        "exception python"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "try/except është mënyra si Python-i kap gabimet që të mos rrëzohet programi. Kodin e rrezikshëm e vë te try, dhe te except shkruan çfarë ndodh nëse diçka shkon keq — p.sh. kur përdoruesi shkruan tekst në vend të numrit.",
+        "en": "try/except is how Python catches errors so the program doesn't crash. You put the risky code in try, and in except you say what happens if something goes wrong — like when the user types text instead of a number."
+      },
+      "analogy": {
+        "sq": "Si portieri pas mbrojtjes: nëse topi kalon mbrojtësit, ai është aty ta kapë para se të bëhet gol.",
+        "en": "Like the goalkeeper behind the defence: if the ball gets past the defenders, they're there to catch it before it's a goal."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "try:\n    mosha = int(input(\"Sa vjeç je? \"))\nexcept ValueError:\n    print(\"Shkruaj një numër, të lutem!\")"
+      },
+      "related": [
+        "error",
+        "raise",
+        "try-catch"
+      ]
+    },
+    {
+      "id": "raise",
+      "en": "raise",
+      "sq": null,
+      "aliases": [
+        "raise error",
+        "raise exception",
+        "hedh gabim"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "Me raise e „hedh“ vetë një gabim kur diçka nuk është në rregull — p.sh. kur dikush jep moshë negative. Kështu gabimi del menjëherë dhe qartë, në vend që programi të vazhdojë me të dhëna të gabuara.",
+        "en": "With raise you “throw” an error yourself when something isn't right — like when someone gives a negative age. That way the problem shows up immediately and clearly, instead of the program carrying on with bad data."
+      },
+      "analogy": {
+        "sq": "Si gjyqtari që fishkëllen menjëherë kur sheh faull, në vend që ta lërë lojën të vazhdojë sikur s'ka ndodhur gjë.",
+        "en": "Like a referee blowing the whistle the moment they see a foul, instead of letting play go on as if nothing happened."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def vendos_moshen(m):\n    if m < 0:\n        raise ValueError(\"Mosha s'mund të jetë negative\")\n    return m"
+      },
+      "related": [
+        "try-except",
+        "input-validation",
+        "error"
+      ]
+    },
+    {
+      "id": "python-none",
+      "en": "None (Python)",
+      "sq": null,
+      "aliases": [
+        "none",
+        "nonetype",
+        "is none"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "None është vlera e Python-it për „asgjë“ — si null në gjuhët e tjera. Një funksion pa return kthen None, dhe e kontrollon me „is None“.",
+        "en": "None is Python's value for “nothing” — like null in other languages. A function without a return gives back None, and you check for it with “is None”."
+      },
+      "analogy": {
+        "sq": "Si një karrige e rezervuar në klasë ku s'ulet askush: vendi ekziston, por është bosh.",
+        "en": "Like a reserved seat in class that nobody sits in: the place exists, but it's empty."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def pershendet(emri):\n    print(\"Tung\", emri)   # pa return\nrezultati = pershendet(\"Ilir\")\nprint(rezultati is None)  # True"
+      },
+      "related": [
+        "null",
+        "return-value",
+        "is-vs-equals"
+      ]
+    },
+    {
+      "id": "len-function",
+      "en": "len()",
+      "sq": null,
+      "aliases": [
+        "len",
+        "length python",
+        "gjatësia"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "len() të tregon sa elemente ka diçka: sa shkronja ka një tekst, sa vlera ka një listë ose sa çelësa ka një fjalor. Është nga funksionet që do t'i përdorësh më shpesh në Python.",
+        "en": "len() tells you how many items something has: how many characters in a string, how many values in a list or how many keys in a dictionary. It's one of the functions you'll use most in Python."
+      },
+      "analogy": {
+        "sq": "Si të numërosh sa nxënës janë në klasë para se të fillojë ora.",
+        "en": "Like counting how many students are in class before the lesson starts."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "print(len(\"Prishtina\"))       # 9\nprint(len([4, 5, 3]))         # 3\nprint(len({\"a\": 1, \"b\": 2}))  # 2"
+      },
+      "related": [
+        "list",
+        "string",
+        "string-methods"
+      ]
+    },
+    {
+      "id": "dict-methods",
+      "en": "Dictionary methods (get, keys, items)",
+      "sq": "Metodat e fjalorit",
+      "aliases": [
+        ".get()",
+        ".items()",
+        ".keys()",
+        ".values()",
+        "dict methods"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "Fjalorët në Python kanë metoda të dobishme: get() merr një vlerë pa gabim nëse çelësi s'ekziston, keys() jep çelësat, values() vlerat, dhe items() çiftet çelës–vlerë — shumë praktike në një cikël for.",
+        "en": "Python dictionaries have handy methods: get() fetches a value without an error if the key is missing, keys() gives the keys, values() the values, and items() the key–value pairs — very handy in a for loop."
+      },
+      "analogy": {
+        "sq": "Si lista e telefonit: mund të shohësh vetëm emrat, vetëm numrat, ose të dyja bashkë — dhe po kërkove dikë që s'është, thjesht s'del asgjë.",
+        "en": "Like your phone contacts: you can view just the names, just the numbers, or both together — and if you look up someone who isn't there, you just get nothing."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "notat = {\"Arta\": 5, \"Dren\": 4}\nprint(notat.get(\"Ilir\", \"s'ka notë\"))\nfor emri, nota in notat.items():\n    print(emri, nota)"
+      },
+      "related": [
+        "dictionary",
+        "method",
+        "loop"
+      ]
+    },
+    {
+      "id": "init-self",
+      "en": "__init__ and self",
+      "sq": "__init__ dhe self",
+      "aliases": [
+        "__init__",
+        "self",
+        "init python",
+        "konstruktori python"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "__init__ është metoda që Python-i e thërret vetë kur krijon një objekt të ri — konstruktori i klasës. self është vetë objekti: me self.emri = emri ruan të dhënat brenda tij, që t'i përdorësh më vonë.",
+        "en": "__init__ is the method Python calls automatically when creating a new object — the class constructor. self is the object itself: with self.name = name you store data inside it to use later."
+      },
+      "analogy": {
+        "sq": "Si formulari i regjistrimit ditën e parë të shkollës: sapo vjen një nxënës i ri, i shkruhen emri dhe klasa — dhe ai „vetë“ (self) i mban me vete.",
+        "en": "Like the registration form on the first day of school: as soon as a new student arrives, their name and class get written down — and they themselves (self) carry them around."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "class Nxenes:\n    def __init__(self, emri, klasa):\n        self.emri = emri\n        self.klasa = klasa\narta = Nxenes(\"Arta\", \"10-2\")"
+      },
+      "related": [
+        "class",
+        "constructor",
+        "object"
+      ]
+    },
+    {
+      "id": "dunder-methods",
+      "en": "Dunder methods (__str__, __len__)",
+      "sq": "Metodat speciale",
+      "aliases": [
+        "dunder",
+        "magic methods",
+        "__str__",
+        "__repr__",
+        "__len__"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "Dunder methods janë metodat me dy nënvizime në fillim dhe në fund (double underscore), si __str__ ose __len__. Ato i lejojnë objektet e tua të punojnë me funksionet e Python-it — p.sh. __str__ vendos çfarë del kur e printon objektin.",
+        "en": "Dunder methods are the methods with double underscores at both ends, like __str__ or __len__. They let your objects work with Python's built-in functions — for example __str__ decides what appears when you print the object."
+      },
+      "analogy": {
+        "sq": "Si prizat standarde në shtëpi: po ta kesh spinën e duhur, çdo pajisje funksionon me rrymën e shtëpisë.",
+        "en": "Like standard sockets at home: with the right plug, any appliance works with the house's electricity."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "class Ekip:\n    def __init__(self, emri): self.emri = emri\n    def __str__(self): return \"Ekipi \" + self.emri\nprint(Ekip(\"Prishtina\"))  # Ekipi Prishtina"
+      },
+      "related": [
+        "init-self",
+        "class",
+        "tostring"
+      ]
+    },
+    {
+      "id": "map-filter",
+      "en": "map() & filter()",
+      "sq": null,
+      "aliases": [
+        "map python",
+        "filter python"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "map() e zbaton një funksion te çdo element i një liste, ndërsa filter() mban vetëm elementet që e plotësojnë një kusht. Shpesh përdoren me lambda; në Python, list comprehension-i shpesh e bën të njëjtën punë më lexueshëm.",
+        "en": "map() applies a function to every item in a list, while filter() keeps only the items that pass a condition. They're often used with lambda; in Python, a list comprehension often does the same job more readably."
+      },
+      "analogy": {
+        "sq": "map() është si ta qërosh çdo patate në thes; filter() është si t'i ndash vetëm ato që nuk janë të prishura.",
+        "en": "map() is like peeling every potato in the sack; filter() is like picking out only the ones that aren't rotten."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "cmimet = [2, 5, 8]\nme_tvsh = list(map(lambda c: c * 1.18, cmimet))\nte_lira = list(filter(lambda c: c < 6, cmimet))  # [2, 5]"
+      },
+      "related": [
+        "lambda",
+        "list-comprehension",
+        "array-methods"
+      ]
+    },
+    {
+      "id": "in-operator",
+      "en": "in operator",
+      "sq": "Operatori in",
+      "aliases": [
+        "in",
+        "not in",
+        "in python"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "Fjala in kontrollon nëse diçka gjendet brenda një liste, teksti, fjalori ose bashkësie, dhe kthen True ose False. Lexohet pothuajse si anglisht e thjeshtë: if \"Pejë\" in qytetet:",
+        "en": "The in keyword checks whether something is inside a list, string, dictionary or set, and returns True or False. It reads almost like plain English: if \"Peja\" in cities:"
+      },
+      "analogy": {
+        "sq": "Si ta kontrollosh nëse emri yt është në listën e ftuarve para se të hysh në dasmë.",
+        "en": "Like checking whether your name is on the guest list before walking into the wedding."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "qytetet = [\"Prishtinë\", \"Pejë\", \"Tiranë\"]\nprint(\"Pejë\" in qytetet)      # True\nprint(\"a\" in \"Arta\")          # True\nprint(\"Durrës\" not in qytetet)  # True"
+      },
+      "related": [
+        "list",
+        "python-set",
+        "logical-operators"
+      ]
+    },
+    {
+      "id": "is-vs-equals",
+      "en": "is vs ==",
+      "sq": "Dallimi mes is dhe ==",
+      "aliases": [
+        "is",
+        "is not",
+        "== python",
+        "identity"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "== kontrollon nëse dy vlera janë të njëjta, ndërsa is kontrollon nëse janë fiks i njëjti objekt në memorie. Për krahasime normale përdor ==; is përdore kryesisht me None: if x is None.",
+        "en": "== checks whether two values are equal, while is checks whether they are exactly the same object in memory. For normal comparisons use ==; use is mainly with None: if x is None."
+      },
+      "analogy": {
+        "sq": "Dy fanella identike të Kosovës janë == (duken njësoj), por vetëm fanella jote është is fanella jote.",
+        "en": "Two identical Kosovo shirts are == (they look the same), but only your shirt is your shirt."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "a = [1, 2]\nb = [1, 2]\nprint(a == b)  # True  — njëjta vlerë\nprint(a is b)  # False — objekte të ndryshme"
+      },
+      "related": [
+        "python-none",
+        "value-vs-reference",
+        "strict-equality"
+      ]
+    },
+    {
+      "id": "match-case",
+      "en": "match / case",
+      "sq": null,
+      "aliases": [
+        "match",
+        "pattern matching",
+        "switch python"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "match/case (që nga Python 3.10) e krahason një vlerë me disa mundësi dhe ekzekuton rastin që përputhet — si switch-i në gjuhët e tjera. Shenja _ kap gjithçka tjetër.",
+        "en": "match/case (since Python 3.10) compares a value against several options and runs the matching case — like switch in other languages. The _ symbol catches everything else."
+      },
+      "analogy": {
+        "sq": "Si sportelet në postë: „pako? sporteli 1; letër? sporteli 2; tjetër? te informacioni“.",
+        "en": "Like the counters at the post office: “parcel? counter 1; letter? counter 2; anything else? information desk”."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "match dita:\n    case \"e shtunë\" | \"e diel\": print(\"Fundjavë!\")\n    case \"e hënë\":              print(\"Sërish shkollë\")\n    case _:                     print(\"Ditë e zakonshme\")"
+      },
+      "related": [
+        "switch-case",
+        "if-elif-else",
+        "condition"
+      ]
+    },
+    {
+      "id": "global-nonlocal",
+      "en": "global & nonlocal",
+      "sq": null,
+      "aliases": [
+        "global",
+        "nonlocal",
+        "global variable"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "Brenda një funksioni, Python-i krijon variabla të reja lokale. Nëse do ta ndryshosh një variabël jashtë funksionit, duhet të shkruash global (ose nonlocal për funksionet brenda funksioneve). Në praktikë, më mirë kthe vlerën me return.",
+        "en": "Inside a function, Python creates new local variables. If you want to change a variable outside the function, you have to write global (or nonlocal for functions inside functions). In practice, it's usually better to return the value."
+      },
+      "analogy": {
+        "sq": "Si tabela e klasës dhe fletorja jote: çfarë shkruan në fletore mbetet aty, përveç nëse ngrihesh dhe e shkruan qëllimisht në tabelë.",
+        "en": "Like the classroom board and your notebook: what you write in your notebook stays there, unless you deliberately get up and write it on the board."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "pikët = 0\ndef shto_gol():\n    global pikët\n    pikët += 1"
+      },
+      "related": [
+        "scope",
+        "variable",
+        "side-effect"
+      ]
+    },
+    {
+      "id": "random-module",
+      "en": "random module",
+      "sq": "Moduli random",
+      "aliases": [
+        "random python",
+        "randint",
+        "random.choice",
+        "shuffle"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "Moduli random jep numra dhe zgjedhje të rastësishme: randint() për një numër, choice() për të zgjedhur nga një listë, shuffle() për ta përzier. Është ideal për lojëra, kuize dhe për të provuar programe.",
+        "en": "The random module gives you random numbers and picks: randint() for a number, choice() to pick from a list, shuffle() to mix it up. It's perfect for games, quizzes and testing programs."
+      },
+      "analogy": {
+        "sq": "Si hedhja e zarit në „Mos u nxeh“, ose shorti para ndeshjes se kush e fillon lojën.",
+        "en": "Like rolling the dice in a board game, or the coin toss before a match to see who kicks off."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import random\nprint(random.randint(1, 6))               # zari\nprint(random.choice([\"gur\", \"letër\", \"gërshërë\"]))"
+      },
+      "related": [
+        "module",
+        "math-random",
+        "standard-library"
+      ]
+    },
+    {
+      "id": "datetime-module",
+      "en": "datetime module",
+      "sq": "Moduli datetime",
+      "aliases": [
+        "datetime",
+        "date python",
+        "data dhe ora",
+        "strftime"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "Moduli datetime punon me data dhe orë: të jep datën e sotme, llogarit sa ditë mbeten deri në një afat, ose e shfaq datën në formatin që do — p.sh. 09.10.2026.",
+        "en": "The datetime module works with dates and times: it gives you today's date, works out how many days are left until a deadline, or shows a date in whatever format you want — like 09.10.2026."
+      },
+      "analogy": {
+        "sq": "Si kalendari në mur bashkë me orën e dorës, por që di edhe të numërojë vetë ditët deri te pushimet.",
+        "en": "Like a wall calendar plus a wristwatch, that can also count the days to the holidays by itself."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "from datetime import date\nsot = date.today()\npushimet = date(2026, 12, 31)\nprint((pushimet - sot).days, \"ditë deri te pushimet\")\nprint(sot.strftime(\"%d.%m.%Y\"))"
+      },
+      "related": [
+        "module",
+        "date-object",
+        "standard-library"
+      ]
+    },
+    {
+      "id": "python-json",
+      "en": "json module (Python)",
+      "sq": "Moduli json në Python",
+      "aliases": [
+        "json.loads",
+        "json.dumps",
+        "json python",
+        "json.load"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "Moduli json e kthen tekstin JSON në fjalorë dhe lista të Python-it (loads/load), dhe anasjelltas (dumps/dump). Të duhet sa herë merr të dhëna nga një API ose i ruan në skedar.",
+        "en": "The json module turns JSON text into Python dictionaries and lists (loads/load), and back again (dumps/dump). You need it whenever you get data from an API or save it to a file."
+      },
+      "analogy": {
+        "sq": "Si përkthyesi në kufi: JSON-i është gjuha që flasin të gjithë faqet, dhe ky modul ia përkthen Python-it.",
+        "en": "Like a translator at the border: JSON is the language every website speaks, and this module translates it for Python."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import json\nteksti = '{\"emri\": \"Arta\", \"nota\": 5}'\nnxenesi = json.loads(teksti)\nprint(nxenesi[\"emri\"])          # Arta\nprint(json.dumps(nxenesi))"
+      },
+      "related": [
+        "json",
+        "dictionary",
+        "requests"
+      ]
+    },
+    {
+      "id": "pass-statement",
+      "en": "pass",
+      "sq": null,
+      "aliases": [
+        "pass python",
+        "placeholder"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "pass është një rresht që s'bën asgjë. Python-i nuk e lejon një bllok bosh, prandaj pass e mban vendin kur ende s'e ke shkruar kodin — p.sh. për një funksion që do ta mbarosh më vonë.",
+        "en": "pass is a line that does nothing. Python doesn't allow an empty block, so pass holds the place when you haven't written the code yet — like for a function you'll finish later."
+      },
+      "analogy": {
+        "sq": "Si ta lësh çantën në karrige që të mos ta zërë dikush tjetër vendin, derisa të kthehesh.",
+        "en": "Like leaving your bag on a chair so no one takes your seat until you come back."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def llogarit_noten():\n    pass  # do ta shkruaj nesër\n\nclass Lojtar:\n    pass"
+      },
+      "related": [
+        "indentation",
+        "function",
+        "break-continue"
+      ]
+    },
+    {
+      "id": "docstring",
+      "en": "Docstring",
+      "sq": null,
+      "aliases": [
+        "docstrings",
+        "\"\"\"",
+        "help()"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "Docstring-u është teksti me tre thonjëza \"\"\" në fillim të një funksioni ose klase, që shpjegon çfarë bën. Python-i e ruan, dhe e sheh me help(funksioni) ose kur kalon mausi sipër në editor.",
+        "en": "A docstring is the text in triple quotes \"\"\" at the start of a function or class, explaining what it does. Python keeps it, and you can see it with help(function) or by hovering in your editor."
+      },
+      "analogy": {
+        "sq": "Si etiketa në kavanozin e reçelit të gjyshes: „Kumbulla, 2026“ — kushdo e di menjëherë çfarë ka brenda.",
+        "en": "Like the label on grandma's jam jar: “Plum, 2026” — anyone knows straight away what's inside."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def mesatarja(notat):\n    \"\"\"Kthen mesataren e një liste me nota.\"\"\"\n    return sum(notat) / len(notat)\nhelp(mesatarja)"
+      },
+      "related": [
+        "comment",
+        "documentation",
+        "javadoc"
+      ]
+    },
+    {
+      "id": "dataclass",
+      "en": "Dataclass",
+      "sq": null,
+      "aliases": [
+        "@dataclass",
+        "dataclasses"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "@dataclass është një dekorator që krijon vetë __init__, __repr__ dhe krahasimin për një klasë që thjesht mban të dhëna. Shkruan vetëm fushat dhe tipet e tyre — Python-i bën pjesën tjetër.",
+        "en": "@dataclass is a decorator that automatically creates __init__, __repr__ and comparison for a class that just holds data. You only write the fields and their types — Python does the rest."
+      },
+      "analogy": {
+        "sq": "Si formulari i gatshëm i regjistrimit: s'i vizaton vetë kutitë, vetëm i plotëson.",
+        "en": "Like a ready-printed registration form: you don't draw the boxes yourself, you just fill them in."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "from dataclasses import dataclass\n@dataclass\nclass Libri:\n    titulli: str\n    faqet: int"
+      },
+      "related": [
+        "class",
+        "decorator",
+        "java-records"
+      ]
+    },
+    {
+      "id": "pytest",
+      "en": "pytest",
+      "sq": null,
+      "aliases": [
+        "py.test",
+        "test python",
+        "unittest"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "pytest-i është mjeti më i përdorur për të shkruar teste në Python. Shkruan funksione që fillojnë me test_ dhe përdor assert; me komandën pytest i ekzekuton të gjitha dhe sheh cilat kaluan.",
+        "en": "pytest is the most popular tool for writing tests in Python. You write functions starting with test_ and use assert; the pytest command runs them all and shows which passed."
+      },
+      "analogy": {
+        "sq": "Si provat e shpejta para provimit: i kalon një nga një dhe e di menjëherë ku je mirë e ku jo.",
+        "en": "Like practice quizzes before an exam: you go through them one by one and instantly know where you're strong and where you're not."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def mblidh(a, b):\n    return a + b\n\ndef test_mblidh():\n    assert mblidh(2, 3) == 5"
+      },
+      "related": [
+        "testing",
+        "unit-integration-test",
+        "junit"
+      ]
+    },
+    {
+      "id": "fastapi",
+      "en": "FastAPI",
+      "sq": null,
+      "aliases": [
+        "fast api",
+        "uvicorn"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "FastAPI-ja është një framework modern i Python-it për të ndërtuar API shumë shpejt. I përdor type hints për të kontrolluar të dhënat vetë dhe krijon automatikisht një faqe dokumentacioni ku i provon endpoint-et.",
+        "en": "FastAPI is a modern Python framework for building APIs very quickly. It uses type hints to validate data automatically and creates a documentation page where you can try your endpoints."
+      },
+      "analogy": {
+        "sq": "Si një kuzhinë e re restoranti me menynë e shtypur vetë: shefi gatuan, dhe klientët e shohin menjëherë çfarë mund të porosisin.",
+        "en": "Like a new restaurant kitchen that prints its own menu: the chef cooks, and customers instantly see what they can order."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "from fastapi import FastAPI\napp = FastAPI()\n@app.get(\"/terma/{id}\")\ndef merr_termin(id: str):\n    return {\"id\": id}"
+      },
+      "related": [
+        "rest-api",
+        "flask",
+        "type-hints"
+      ]
+    },
+    {
+      "id": "tkinter",
+      "en": "Tkinter",
+      "sq": null,
+      "aliases": [
+        "tk",
+        "gui python",
+        "dritare python"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "Tkinter-i është libraria e Python-it për të bërë programe me dritare, butona dhe fusha teksti (GUI). Vjen bashkë me Python-in, prandaj është mënyra më e lehtë për aplikacionin e parë grafik.",
+        "en": "Tkinter is Python's library for making programs with windows, buttons and text fields (GUI). It comes with Python, so it's the easiest way to build your first graphical app."
+      },
+      "analogy": {
+        "sq": "Si kompleti i parë i Lego-s: s'është më i fuqishmi, por me të ndërton shpejt diçka që e prek dhe e klikon.",
+        "en": "Like your first Lego set: not the most powerful, but you quickly build something you can see and click."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import tkinter as tk\ndritarja = tk.Tk()\ntk.Button(dritarja, text=\"Kliko\").pack()\ndritarja.mainloop()"
+      },
+      "related": [
+        "cli-gui",
+        "javafx-swing",
+        "standard-library"
+      ]
+    },
+    {
+      "id": "pygame",
+      "en": "Pygame",
+      "sq": null,
+      "aliases": [
+        "pygame library",
+        "lojëra python"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "Pygame-i është libraria e Python-it për të krijuar lojëra 2D: vizaton figura, lëviz personazhe, luan tinguj dhe lexon tastierën. Është mënyrë argëtuese për të mësuar ciklet, kushtet dhe klasat.",
+        "en": "Pygame is Python's library for making 2D games: it draws shapes, moves characters, plays sounds and reads the keyboard. It's a fun way to learn loops, conditions and classes."
+      },
+      "analogy": {
+        "sq": "Si një fushë futbolli bosh me top e porta: rregullat e lojës i shpik vetë.",
+        "en": "Like an empty football pitch with a ball and goals: you invent the rules of the game yourself."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import pygame\npygame.init()\nekrani = pygame.display.set_mode((640, 480))\npygame.draw.circle(ekrani, \"red\", (320, 240), 30)\npygame.display.flip()"
+      },
+      "related": [
+        "library",
+        "loop",
+        "event"
+      ]
+    },
+    {
+      "id": "web-scraping",
+      "en": "Web scraping",
+      "sq": "Nxjerrja e të dhënave nga faqet",
+      "aliases": [
+        "scraping",
+        "beautifulsoup",
+        "bs4",
+        "scraper",
+        "selenium"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "Web scraping-u është marrja automatike e të dhënave nga faqet e internetit me kod — p.sh. çmimet ose lajmet. Në Python përdoren requests dhe BeautifulSoup. Kontrollo gjithmonë rregullat e faqes (robots.txt) dhe mos e mbingarko serverin.",
+        "en": "Web scraping is collecting data from websites automatically with code — like prices or news headlines. In Python you use requests and BeautifulSoup. Always check the site's rules (robots.txt) and don't overload the server."
+      },
+      "analogy": {
+        "sq": "Si ta kopjosh orarin e autobusëve nga stacioni në fletore — vetëm se këtë e bën një robot, për qindra faqe.",
+        "en": "Like copying the bus timetable from the station into your notebook — except a robot does it, for hundreds of pages."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import requests\nfrom bs4 import BeautifulSoup\nhtml = requests.get(\"https://fjalori.dev\").text\ntitulli = BeautifulSoup(html, \"html.parser\").title.text\nprint(titulli)"
+      },
+      "related": [
+        "requests",
+        "robots-txt",
+        "html"
+      ]
+    },
+    {
+      "id": "requirements-txt",
+      "en": "requirements.txt",
+      "sq": null,
+      "aliases": [
+        "requirements",
+        "pip freeze",
+        "pip install -r"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "requirements.txt është skedari që i rendit të gjitha paketat që i duhen projektit tënd Python, me versionet e tyre. Kushdo që e merr projektin i instalon të gjitha me një komandë: pip install -r requirements.txt.",
+        "en": "requirements.txt is the file listing all the packages your Python project needs, with their versions. Anyone who gets the project installs them all with one command: pip install -r requirements.txt."
+      },
+      "analogy": {
+        "sq": "Si lista e përbërësve në krye të recetës: kushdo që do ta gatuajë e di saktë çfarë të blejë.",
+        "en": "Like the ingredients list at the top of a recipe: anyone who wants to cook it knows exactly what to buy."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "pip freeze > requirements.txt\npip install -r requirements.txt"
+      },
+      "related": [
+        "pip",
+        "virtual-environment",
+        "dependency"
+      ]
+    },
+    {
+      "id": "pycharm",
+      "en": "PyCharm",
+      "sq": null,
+      "aliases": [
+        "pycharm ide"
+      ],
+      "category": "python",
+      "explanation": {
+        "sq": "PyCharm-i është IDE-ja e JetBrains (të njëjtëve që bëjnë IntelliJ-n) e krijuar posaçërisht për Python: plotëson kodin, gjen gabimet, ka debugger dhe punon me venv. Versioni falas mjafton plotësisht për fillestarët.",
+        "en": "PyCharm is the IDE from JetBrains (the makers of IntelliJ) built specifically for Python: it completes code, finds mistakes, has a debugger and works with venv. The free version is plenty for beginners."
+      },
+      "analogy": {
+        "sq": "Si një tavolinë pune e organizuar ku çdo mjet e ka vendin e vet dhe të tregon vetë kur ke bërë gabim.",
+        "en": "Like an organised workbench where every tool has its place and that tells you when you've made a mistake."
+      },
+      "code": null,
+      "related": [
+        "ide",
+        "intellij",
+        "debug"
+      ]
+    },
+    {
+      "id": "sql-select",
+      "en": "SELECT",
+      "sq": null,
+      "aliases": [
+        "select",
+        "select from",
+        "select *"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "SELECT është komanda e SQL-së për të lexuar të dhëna nga një tabelë. Zgjedh cilat kolona do (ose * për të gjitha) dhe nga cila tabelë; pastaj mund të shtosh WHERE, ORDER BY e të tjera.",
+        "en": "SELECT is the SQL command for reading data from a table. You choose which columns you want (or * for all) and from which table; then you can add WHERE, ORDER BY and more."
+      },
+      "analogy": {
+        "sq": "Si t'i thuash bibliotekares: „Më jep titujt dhe autorët e të gjithë librave nga rafti i romaneve.“",
+        "en": "Like telling the librarian: “Give me the titles and authors of every book on the novels shelf.”"
+      },
+      "code": {
+        "language": "sql",
+        "snippet": "SELECT emri, nota\nFROM nxenesit\nWHERE klasa = '10-2'\nORDER BY nota DESC;"
+      },
+      "related": [
+        "sql",
+        "query",
+        "sql-where"
+      ]
+    },
+    {
+      "id": "sql-insert-update-delete",
+      "en": "INSERT, UPDATE, DELETE",
+      "sq": null,
+      "aliases": [
+        "insert",
+        "insert into",
+        "delete from",
+        "update set"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Këto janë tri komandat e SQL-së për të ndryshuar të dhënat: INSERT shton rreshta të rinj, UPDATE ndryshon rreshta ekzistues dhe DELETE i fshin. Te UPDATE dhe DELETE mos harro WHERE — përndryshe ndryshon gjithë tabelën!",
+        "en": "These are SQL's three commands for changing data: INSERT adds new rows, UPDATE changes existing rows and DELETE removes them. With UPDATE and DELETE, never forget WHERE — otherwise you change the whole table!"
+      },
+      "analogy": {
+        "sq": "Si ditari i klasës: shton një nxënës të ri, ia ndryshon notën dikujt, ose e heq një që u transferua — por kujdes të mos e fshish gjithë faqen.",
+        "en": "Like the class register: you add a new student, change someone's grade, or remove one who transferred — but careful not to wipe the whole page."
+      },
+      "code": {
+        "language": "sql",
+        "snippet": "INSERT INTO nxenesit (emri, nota) VALUES ('Arta', 5);\nUPDATE nxenesit SET nota = 4 WHERE emri = 'Dren';\nDELETE FROM nxenesit WHERE emri = 'Ilir';"
+      },
+      "related": [
+        "crud",
+        "sql",
+        "sql-where"
+      ]
+    },
+    {
+      "id": "sql-null",
+      "en": "NULL in SQL",
+      "sq": "NULL në SQL",
+      "aliases": [
+        "is null",
+        "is not null",
+        "coalesce"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "NULL në databazë do të thotë „vlerë që mungon“ — jo zero dhe jo tekst bosh. Nuk krahasohet me =, por me IS NULL ose IS NOT NULL.",
+        "en": "NULL in a database means “missing value” — not zero and not empty text. You don't compare it with =, but with IS NULL or IS NOT NULL."
+      },
+      "analogy": {
+        "sq": "Si një kuti bosh në formular ku personi s'e ka shkruar numrin e telefonit: s'është 0, thjesht s'dihet.",
+        "en": "Like an empty box on a form where the person didn't write a phone number: it's not 0, it's just unknown."
+      },
+      "code": {
+        "language": "sql",
+        "snippet": "SELECT emri FROM nxenesit\nWHERE telefoni IS NULL;"
+      },
+      "related": [
+        "null",
+        "sql-constraints",
+        "undefined-null"
+      ]
+    },
+    {
+      "id": "sql-constraints",
+      "en": "Constraints (NOT NULL, UNIQUE)",
+      "sq": "Kufizimet në databazë",
+      "aliases": [
+        "constraint",
+        "not null",
+        "unique",
+        "check constraint",
+        "kufizim"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Kufizimet janë rregulla që databaza i zbaton vetë: NOT NULL (fusha s'mund të jetë bosh), UNIQUE (s'lejohen dy vlera të njëjta, p.sh. email-i), CHECK (p.sh. mosha ≥ 0). Kështu të dhënat e gabuara s'hyjnë fare.",
+        "en": "Constraints are rules the database enforces itself: NOT NULL (the field can't be empty), UNIQUE (no two equal values, like email), CHECK (e.g. age ≥ 0). That way bad data never gets in."
+      },
+      "analogy": {
+        "sq": "Si roja në hyrje të stadiumit që s'të lë të hysh pa biletë, ose me një biletë që është përdorur njëherë.",
+        "en": "Like the steward at the stadium entrance who won't let you in without a ticket, or with one that's already been used."
+      },
+      "code": {
+        "language": "sql",
+        "snippet": "CREATE TABLE perdoruesit (\n  id INTEGER PRIMARY KEY,\n  email TEXT NOT NULL UNIQUE,\n  mosha INTEGER CHECK (mosha >= 0)\n);"
+      },
+      "related": [
+        "primary-key",
+        "foreign-key",
+        "input-validation"
+      ]
+    },
+    {
+      "id": "auto-increment",
+      "en": "Auto increment",
+      "sq": "Numërim automatik",
+      "aliases": [
+        "autoincrement",
+        "serial",
+        "identity column"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Auto increment do të thotë që databaza i jep vetë çdo rreshti të ri një numër ID-je, një më shumë se i pari: 1, 2, 3… Kështu s'ke pse e mendon vetë ID-në dhe s'ka rrezik dublikatash.",
+        "en": "Auto increment means the database gives every new row an ID number by itself, one more than the last: 1, 2, 3… That way you don't have to make up the ID and there's no risk of duplicates."
+      },
+      "analogy": {
+        "sq": "Si makina e numrave në bankë: çdo klient i ri merr numrin e radhës pa pyetur askënd.",
+        "en": "Like the ticket machine at the bank: every new customer gets the next number without asking anyone."
+      },
+      "code": {
+        "language": "sql",
+        "snippet": "CREATE TABLE porosite (\n  id SERIAL PRIMARY KEY,  -- 1, 2, 3...\n  produkti TEXT\n);"
+      },
+      "related": [
+        "primary-key",
+        "increment",
+        "postgresql"
+      ]
+    },
+    {
+      "id": "sql-data-types",
+      "en": "SQL data types",
+      "sq": "Tipet e të dhënave në SQL",
+      "aliases": [
+        "varchar",
+        "int sql",
+        "text sql"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Çdo kolonë në një tabelë ka tip: INTEGER për numra të plotë, VARCHAR ose TEXT për tekst, DECIMAL për para, BOOLEAN për po/jo, DATE dhe TIMESTAMP për data. Tipi i duhur i mban të dhënat të sakta dhe databazën të shpejtë.",
+        "en": "Every column in a table has a type: INTEGER for whole numbers, VARCHAR or TEXT for text, DECIMAL for money, BOOLEAN for yes/no, DATE and TIMESTAMP for dates. The right type keeps data accurate and the database fast."
+      },
+      "analogy": {
+        "sq": "Si sirtarët e dollapit: çorapet në njërin, bluzat në tjetrin — s'i fut këpucët në sirtarin e çorapeve.",
+        "en": "Like the drawers in a wardrobe: socks in one, shirts in another — you don't put shoes in the sock drawer."
+      },
+      "code": {
+        "language": "sql",
+        "snippet": "CREATE TABLE produktet (\n  emri VARCHAR(100),\n  cmimi DECIMAL(8, 2), ne_stok BOOLEAN,\n  shtuar_me DATE\n);"
+      },
+      "related": [
+        "data-type",
+        "table",
+        "schema"
+      ]
+    },
+    {
+      "id": "sql-view",
+      "en": "View",
+      "sq": "Pamje (view)",
+      "aliases": [
+        "create view",
+        "sql view",
+        "database view"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Një view është një query i ruajtur me emër, që e përdor si të ishte tabelë. S'i ruan vetë të dhënat — sa herë e lexon, e ekzekuton query-n — por ta thjeshton punën dhe të lejon t'u tregosh të tjerëve vetëm disa kolona.",
+        "en": "A view is a saved query with a name that you use as if it were a table. It doesn't store the data itself — each time you read it, it runs the query — but it simplifies your work and lets you show others only certain columns."
+      },
+      "analogy": {
+        "sq": "Si një dritare në mur: s'është dhomë më vete, por të tregon gjithmonë pjesën e kopshtit që të intereson, ashtu siç është tani.",
+        "en": "Like a window in the wall: it isn't a separate room, but it always shows you the part of the garden you care about, as it is right now."
+      },
+      "code": {
+        "language": "sql",
+        "snippet": "CREATE VIEW nxenesit_e_shkelqyer AS\nSELECT emri, nota FROM nxenesit WHERE nota = 5;\n\nSELECT * FROM nxenesit_e_shkelqyer;"
+      },
+      "related": [
+        "query",
+        "table",
+        "sql-select"
+      ]
+    },
+    {
+      "id": "stored-procedure",
+      "en": "Stored procedure",
+      "sq": "Procedurë e ruajtur",
+      "aliases": [
+        "procedure",
+        "stored proc",
+        "call procedure"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Stored procedure është një grup komandash SQL i ruajtur brenda databazës me një emër, që e thërret kur të duash — si një funksion që jeton në databazë. Përdoret shpesh në sisteme të mëdha bankare dhe në SQL Server.",
+        "en": "A stored procedure is a group of SQL commands saved inside the database under a name, which you call whenever you want — like a function that lives in the database. They're common in big banking systems and SQL Server."
+      },
+      "analogy": {
+        "sq": "Si recetat e ruajtura të një furre buke: punëtori thotë vetëm „bëj bukën e mëngjesit“, dhe të gjithë hapat dihen.",
+        "en": "Like a bakery's saved recipes: the worker just says “make the morning bread” and every step is already known."
+      },
+      "code": {
+        "language": "sql",
+        "snippet": "CREATE PROCEDURE rrit_notat(IN klasa_id INT)\n  UPDATE nxenesit SET nota = nota + 1\n  WHERE klasa = klasa_id AND nota < 5;\n\nCALL rrit_notat(3);"
+      },
+      "related": [
+        "function",
+        "database-trigger",
+        "mysql"
+      ]
+    },
+    {
+      "id": "database-trigger",
+      "en": "Trigger",
+      "sq": "Trigger (shkrepës)",
+      "aliases": [
+        "sql trigger",
+        "create trigger",
+        "shkrepës"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Trigger-i është kod që databaza e ekzekuton vetë kur ndodh diçka në një tabelë — p.sh. pas çdo INSERT ose para çdo UPDATE. Përdoret për t'i mbajtur shënim ndryshimet ose për të përditësuar tabela të tjera.",
+        "en": "A trigger is code the database runs by itself when something happens in a table — like after every INSERT or before every UPDATE. It's used to log changes or to update other tables."
+      },
+      "analogy": {
+        "sq": "Si dera automatike e supermarketit: s'e hap askush me dorë — hapet vetë sa herë dikush afrohet.",
+        "en": "Like the supermarket's automatic door: nobody opens it by hand — it opens by itself whenever someone walks up."
+      },
+      "code": {
+        "language": "sql",
+        "snippet": "CREATE TRIGGER pas_porosise\nAFTER INSERT ON porosite\nFOR EACH ROW\n  UPDATE produktet SET stoku = stoku - 1\n  WHERE id = NEW.produkt_id;"
+      },
+      "related": [
+        "event",
+        "stored-procedure",
+        "transaction"
+      ]
+    },
+    {
+      "id": "subquery",
+      "en": "Subquery",
+      "sq": "Nënquery",
+      "aliases": [
+        "nested query",
+        "sub query",
+        "query brenda query"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Subquery është një query brenda një query tjetër, në kllapa. P.sh. së pari gjen notën mesatare, pastaj zgjedh nxënësit mbi atë mesatare — gjithçka në një komandë të vetme.",
+        "en": "A subquery is a query inside another query, in brackets. For example, first it finds the average grade, then selects the students above that average — all in a single command."
+      },
+      "analogy": {
+        "sq": "Si t'i thuash shitësit: „më jep të gjitha fanellat që kushtojnë më pak se fanella më e shtrenjtë e Barcelonës“ — fillimisht duhet ta gjejë atë çmim.",
+        "en": "Like telling a shop assistant: “give me every shirt cheaper than the most expensive Barcelona shirt” — first they have to find that price."
+      },
+      "code": {
+        "language": "sql",
+        "snippet": "SELECT emri FROM nxenesit\nWHERE nota > (SELECT AVG(nota) FROM nxenesit);"
+      },
+      "related": [
+        "query",
+        "sql-select",
+        "group-by"
+      ]
+    },
+    {
+      "id": "table-relationships",
+      "en": "One-to-many & many-to-many",
+      "sq": "Lidhjet mes tabelave",
+      "aliases": [
+        "one-to-many",
+        "many-to-many",
+        "one-to-one",
+        "relationship",
+        "junction table"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Tabelat lidhen me njëra-tjetrën në tri mënyra: një-me-një (një person, një pasaportë), një-me-shumë (një klasë, shumë nxënës) dhe shumë-me-shumë (nxënësit dhe lëndët), që kërkon një tabelë të tretë lidhëse.",
+        "en": "Tables relate to each other in three ways: one-to-one (one person, one passport), one-to-many (one class, many students) and many-to-many (students and subjects), which needs a third linking table."
+      },
+      "analogy": {
+        "sq": "Si në shkollë: çdo nxënës ka një ditar (një-me-një), një klasë ka shumë nxënës (një-me-shumë), dhe çdo nxënës ka shumë lëndë, ndërsa çdo lëndë ka shumë nxënës (shumë-me-shumë) — për këtë duhet orari.",
+        "en": "Like at school: each student has one record book (one-to-one), a class has many students (one-to-many), and each student takes many subjects while each subject has many students (many-to-many) — that's what the timetable is for."
+      },
+      "code": {
+        "language": "sql",
+        "snippet": "CREATE TABLE nxenes_lende (\n  nxenes_id INT REFERENCES nxenesit(id),\n  lende_id  INT REFERENCES lendet(id)\n);"
+      },
+      "related": [
+        "foreign-key",
+        "er-diagram",
+        "join"
+      ]
+    },
+    {
+      "id": "connection-pool",
+      "en": "Connection pool",
+      "sq": "Grup lidhjesh",
+      "aliases": [
+        "pooling",
+        "db pool",
+        "pool"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Hapja e një lidhjeje me databazën kërkon kohë, prandaj aplikacionet mbajnë gati një „pishinë“ me disa lidhje të hapura dhe i ripërdorin. Kështu çdo kërkesë merr menjëherë një lidhje të lirë, në vend që të hapë një të re.",
+        "en": "Opening a database connection takes time, so apps keep a “pool” of a few connections open and reuse them. That way every request instantly gets a free connection instead of opening a new one."
+      },
+      "analogy": {
+        "sq": "Si taksitë që presin te stacioni i trenit: s'e thërret taksinë nga shtëpia — merr të parën e lirë që është aty.",
+        "en": "Like taxis waiting at the train station: you don't call one from home — you take the first free one that's already there."
+      },
+      "code": null,
+      "related": [
+        "connection-string",
+        "scalability",
+        "backend"
+      ]
+    },
+    {
+      "id": "query-optimization",
+      "en": "Query optimization (EXPLAIN)",
+      "sq": "Optimizimi i query-ve",
+      "aliases": [
+        "explain",
+        "slow query",
+        "query plan",
+        "query e ngadaltë"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Optimizimi i query-ve është puna për t'i bërë kërkesat në databazë më të shpejta: shton indekse, merr vetëm kolonat që të duhen, shmang SELECT * në tabela të mëdha. Me EXPLAIN sheh si e ekzekuton databaza query-n tënde.",
+        "en": "Query optimization is the work of making database requests faster: adding indexes, fetching only the columns you need, avoiding SELECT * on big tables. With EXPLAIN you see how the database runs your query."
+      },
+      "analogy": {
+        "sq": "Si ta planifikosh rrugën para se të nisesh: në vend që t'i kalosh të gjitha rrugët e qytetit, merr atë më të shkurtrën.",
+        "en": "Like planning your route before setting off: instead of driving through every street in town, you take the shortest one."
+      },
+      "code": {
+        "language": "sql",
+        "snippet": "EXPLAIN SELECT * FROM nxenesit WHERE emri = 'Arta';\nCREATE INDEX idx_emri ON nxenesit(emri);"
+      },
+      "related": [
+        "database-index",
+        "web-performance",
+        "big-o"
+      ]
+    },
+    {
+      "id": "prepared-statement",
+      "en": "Prepared statement",
+      "sq": "Query me parametra",
+      "aliases": [
+        "parameterized query",
+        "placeholder query",
+        "query me parametra",
+        "bind parameters"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Prepared statement do të thotë që query-n e shkruan me vende bosh (? ose %s), dhe vlerat e përdoruesit i jep veçmas. Databaza s'i ngatërron kurrë me kodin — kjo është mbrojtja kryesore kundër SQL injection.",
+        "en": "A prepared statement means you write the query with blanks (? or %s) and pass the user's values separately. The database never mistakes them for code — this is the main defence against SQL injection."
+      },
+      "analogy": {
+        "sq": "Si një formular me kuti: çfarëdo që të shkruajë dikush brenda kutisë së emrit, mbetet emër — s'mund ta ndryshojë vetë formularin.",
+        "en": "Like a form with boxes: whatever someone writes in the name box stays a name — it can't change the form itself."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "emri = input(\"Emri: \")\ncursor.execute(\n    \"SELECT * FROM nxenesit WHERE emri = ?\", (emri,)\n)"
+      },
+      "related": [
+        "sql-injection",
+        "query",
+        "input-validation"
+      ]
+    },
+    {
+      "id": "database-gui",
+      "en": "Database GUI tools",
+      "sq": "Mjetet grafike për databaza",
+      "aliases": [
+        "phpmyadmin",
+        "dbeaver",
+        "pgadmin",
+        "tableplus",
+        "mysql workbench"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Mjetet grafike si phpMyAdmin, DBeaver, pgAdmin ose MySQL Workbench të lejojnë t'i shohësh dhe t'i ndryshosh tabelat me klikime, si në Excel, dhe të shkruash query me ndihmë. Shumë të dobishme kur mëson SQL.",
+        "en": "Graphical tools like phpMyAdmin, DBeaver, pgAdmin or MySQL Workbench let you view and edit tables by clicking, like in Excel, and write queries with help. Very useful when you're learning SQL."
+      },
+      "analogy": {
+        "sq": "Si dritarja e akuariumit: në vend që ta imagjinosh çfarë ka brenda, i sheh peshqit drejtpërdrejt.",
+        "en": "Like the glass of an aquarium: instead of imagining what's inside, you see the fish directly."
+      },
+      "code": null,
+      "related": [
+        "mysql",
+        "postgresql",
+        "cli-gui"
+      ]
+    },
+    {
+      "id": "supabase",
+      "en": "Supabase",
+      "sq": null,
+      "aliases": [
+        "supabase db"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Supabase-i është një shërbim që të jep një databazë PostgreSQL gati në cloud, bashkë me login, ruajtje skedarësh dhe API të krijuar automatikisht. Shpesh quhet alternativa me burim të hapur e Firebase-it.",
+        "en": "Supabase is a service that gives you a ready PostgreSQL database in the cloud, along with login, file storage and an automatically generated API. It's often called the open-source alternative to Firebase."
+      },
+      "analogy": {
+        "sq": "Si një apartament i mobiluar: s'ke pse e blen vetë çdo karrige — hyn dhe fillon të jetosh.",
+        "en": "Like a furnished flat: you don't buy every chair yourself — you move in and start living."
+      },
+      "code": null,
+      "related": [
+        "firebase",
+        "postgresql",
+        "backend"
+      ]
+    },
+    {
+      "id": "soft-delete",
+      "en": "Soft delete",
+      "sq": "Fshirje e butë",
+      "aliases": [
+        "deleted_at",
+        "is_deleted",
+        "archive"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Soft delete do të thotë që një rresht nuk fshihet vërtet, por shënohet si i fshirë — p.sh. me një kolonë deleted_at. Kështu mund ta rikthesh nëse dikush e fshiu gabimisht, dhe historia mbetet.",
+        "en": "Soft delete means a row isn't really deleted, just marked as deleted — for example with a deleted_at column. That way you can restore it if someone deleted it by mistake, and the history is kept."
+      },
+      "analogy": {
+        "sq": "Si koshi i plehrave në kompjuter: skedari duket i zhdukur, por mund ta nxjerrësh sërish derisa ta zbrazësh koshin.",
+        "en": "Like the recycle bin on your computer: the file looks gone, but you can get it back until you empty the bin."
+      },
+      "code": {
+        "language": "sql",
+        "snippet": "UPDATE perdoruesit SET deleted_at = NOW() WHERE id = 7;\nSELECT * FROM perdoruesit WHERE deleted_at IS NULL;"
+      },
+      "related": [
+        "sql-insert-update-delete",
+        "backup",
+        "sql-null"
+      ]
+    },
+    {
+      "id": "vector-database",
+      "en": "Vector database",
+      "sq": "Databazë vektoriale",
+      "aliases": [
+        "vector db",
+        "pinecone",
+        "pgvector",
+        "chroma"
+      ],
+      "category": "databases",
+      "explanation": {
+        "sq": "Databaza vektoriale ruan embedding-e — lista numrash që përfaqësojnë kuptimin e tekstit ose imazheve — dhe gjen shpejt ato më të ngjashmet. Është zemra e RAG-ut: i ndihmon chatbot-et të gjejnë dokumentet e duhura para se të përgjigjen.",
+        "en": "A vector database stores embeddings — lists of numbers representing the meaning of text or images — and quickly finds the most similar ones. It's the heart of RAG: it helps chatbots find the right documents before answering."
+      },
+      "analogy": {
+        "sq": "Si bibliotekari që s'kërkon sipas titullit, por sipas kuptimit: „më jep libra që flasin për diçka të ngjashme me këtë“.",
+        "en": "Like a librarian who searches not by title but by meaning: “give me books about something similar to this”."
+      },
+      "code": null,
+      "related": [
+        "embedding",
+        "rag",
+        "nosql"
       ]
     }
   ]
