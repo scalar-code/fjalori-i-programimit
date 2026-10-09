@@ -40,6 +40,19 @@
       }
     },
     {
+      "id": "cpp",
+      "icon": "C++",
+      "hue": 125,
+      "name": {
+        "sq": "C++",
+        "en": "C++"
+      },
+      "description": {
+        "sq": "Gjuha e shpejtë që mësohet në shumë gjimnaze e fakultete, dhe që qëndron pas lojërave, shfletuesve dhe garave të programimit.",
+        "en": "The fast language taught in many high schools and universities, and behind games, browsers and programming contests."
+      }
+    },
+    {
       "id": "web",
       "icon": "</>",
       "hue": 160,
@@ -4805,7 +4818,7 @@
         "cpp",
         "c plus plus"
       ],
-      "category": "languages",
+      "category": "cpp",
       "explanation": {
         "sq": "C++ është një gjuhë programimi shumë e shpejtë, që të jep kontroll të madh mbi kompjuterin dhe memorien. Përdoret për lojëra video dhe programe që duhet të jenë shumë të shpejta, dhe shpesh mësohet në gjimnaz e fakultet.",
         "en": "C++ is a very fast programming language that gives you a lot of control over the computer and its memory. It's used for video games and programs that must be very fast, and it's often taught in high school and university."
@@ -4819,9 +4832,9 @@
         "snippet": "#include <iostream>\nint main() {\n    std::cout << \"Përshëndetje!\" << std::endl;\n    return 0;\n}"
       },
       "related": [
-        "programming-language",
-        "compiler",
-        "ram"
+        "cpp-iostream",
+        "std-vector",
+        "pointer"
       ]
     },
     {
@@ -17609,6 +17622,1511 @@
         "embedding",
         "rag",
         "nosql"
+      ]
+    },
+    {
+      "id": "cpp-iostream",
+      "en": "cout & cin (iostream)",
+      "sq": "cout dhe cin",
+      "aliases": [
+        "cout",
+        "cin",
+        "iostream",
+        "std::cout",
+        "std::cin",
+        "endl"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "cout dhe cin janë mënyra si një program C++ flet me përdoruesin: cout << shfaq tekst në ekran, ndërsa cin >> lexon atë që shkruan përdoruesi. Të dyja vijnë nga libraria <iostream>.",
+        "en": "cout and cin are how a C++ program talks to the user: cout << shows text on screen, while cin >> reads what the user types. Both come from the <iostream> library."
+      },
+      "analogy": {
+        "sq": "Si sporteli i postës: cout është sporteli ku të japin letra, cin është kutia ku i fut letrat e tua.",
+        "en": "Like a post office counter: cout is where letters are handed to you, cin is the box where you drop yours in."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "int mosha;\nstd::cout << \"Sa vjeç je? \";\nstd::cin >> mosha;\nstd::cout << \"Pas 10 vitesh: \" << mosha + 10 << \"\\n\";"
+      },
+      "related": [
+        "c-plus-plus",
+        "input",
+        "print-function"
+      ]
+    },
+    {
+      "id": "include-directive",
+      "en": "#include",
+      "sq": null,
+      "aliases": [
+        "include",
+        "#include <>",
+        "include iostream"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "#include i thotë kompajlerit ta fusë një skedar tjetër në kodin tënd para se ta përkthejë — zakonisht një librari si <iostream> ose <vector>, ose një header tëndin si \"loja.h\". Pa të, s'mund t'i përdorësh ato funksione.",
+        "en": "#include tells the compiler to paste another file into your code before translating it — usually a library like <iostream> or <vector>, or your own header like \"game.h\". Without it you can't use those functions."
+      },
+      "analogy": {
+        "sq": "Si t'i thuash kuzhinierit „merr edhe librin e recetave të ëmbëlsirave“ para se të fillojë gatimin.",
+        "en": "Like telling the cook “grab the dessert recipe book too” before they start cooking."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "#include <iostream>   // libraritë standarde\n#include <vector>\n#include \"loja.h\"     // skedari yt"
+      },
+      "related": [
+        "header-files",
+        "preprocessor-macros",
+        "module"
+      ]
+    },
+    {
+      "id": "namespace-std",
+      "en": "namespace & std::",
+      "sq": "Hapësira e emrave (namespace)",
+      "aliases": [
+        "namespace",
+        "std::",
+        "using namespace std",
+        "std"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Një namespace është një „mbiemër“ për emrat në kod, që dy gjëra me të njëjtin emër të mos ngatërrohen. Gjithçka nga libraria standarde e C++ jeton te std, prandaj shkruan std::cout. Me using namespace std; s'ke pse e shkruan çdo herë — mirë për detyra, por shmange në projekte të mëdha.",
+        "en": "A namespace is a “surname” for names in code, so two things with the same name don't get mixed up. Everything from the C++ standard library lives in std, which is why you write std::cout. With using namespace std; you don't have to type it every time — fine for homework, but avoid it in big projects."
+      },
+      "analogy": {
+        "sq": "Si dy nxënës me emrin Arbër në të njëjtën klasë: mësuesja thotë „Arbër Krasniqi“ dhe „Arbër Gashi“ që të dihet kë po thërret.",
+        "en": "Like two students called Arbër in the same class: the teacher says “Arbër Krasniqi” and “Arbër Gashi” so it's clear who she means."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "using namespace std;   // tani mjafton cout\ncout << \"Tung!\";\nstd::cout << \"Tung!\";  // njësoj, pa using"
+      },
+      "related": [
+        "scope",
+        "standard-library",
+        "cpp-iostream"
+      ]
+    },
+    {
+      "id": "cpp-main",
+      "en": "int main()",
+      "sq": "Funksioni main në C++",
+      "aliases": [
+        "main()",
+        "int main",
+        "return 0"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Çdo program C++ fillon te funksioni int main(). Kompjuteri e ekzekuton kodin brenda tij nga lart poshtë, dhe return 0; në fund i thotë sistemit që programi mbaroi pa probleme.",
+        "en": "Every C++ program starts at the int main() function. The computer runs the code inside it from top to bottom, and return 0; at the end tells the system the program finished without problems."
+      },
+      "analogy": {
+        "sq": "Si dera kryesore e shkollës: ka shumë dhoma, por të gjithë hyjnë nga aty.",
+        "en": "Like the school's main entrance: there are lots of rooms, but everyone comes in through there."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "#include <iostream>\nint main() {\n    std::cout << \"Programi im i parë!\\n\";\n    return 0;   // 0 = gjithçka në rregull\n}"
+      },
+      "related": [
+        "main-method",
+        "hello-world",
+        "function"
+      ]
+    },
+    {
+      "id": "cpp-data-types",
+      "en": "C++ data types (int, double, char, bool)",
+      "sq": "Tipet e të dhënave në C++",
+      "aliases": [
+        "int c++",
+        "double c++",
+        "long long"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Në C++ çdo variabël duhet ta ketë tipin e shkruar: int për numra të plotë, double për numra me presje, char për një shkronjë, bool për true/false, dhe long long për numra shumë të mëdhenj. Tipi vendos sa memorie zë variabla.",
+        "en": "In C++ every variable must have its type written: int for whole numbers, double for decimals, char for a single letter, bool for true/false, and long long for very big numbers. The type decides how much memory the variable takes."
+      },
+      "analogy": {
+        "sq": "Si enët në kuzhinë: gota për ujë, filxhani për kafe, tenxherja për supë — secila për llojin e vet dhe me madhësinë e vet.",
+        "en": "Like containers in a kitchen: a glass for water, a cup for coffee, a pot for soup — each for its own kind of thing and its own size."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "int mosha = 17;\ndouble cmimi = 2.50;\nchar nota = 'A';\nbool kaloi = true;\nlong long popullsia = 8000000000LL;"
+      },
+      "related": [
+        "data-type",
+        "primitive-types",
+        "sizeof-operator"
+      ]
+    },
+    {
+      "id": "cpp-string",
+      "en": "std::string",
+      "sq": "Teksti në C++ (string)",
+      "aliases": [
+        "string c++",
+        "getline",
+        "std::getline"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "std::string është tipi i C++ për tekst. Mund t'i bashkosh me +, t'ua marrësh gjatësinë me .size(), dhe me getline() lexon një rresht të tërë nga përdoruesi (cin >> ndalet te hapësira e parë).",
+        "en": "std::string is C++'s type for text. You can join strings with +, get their length with .size(), and getline() reads a whole line from the user (cin >> stops at the first space)."
+      },
+      "analogy": {
+        "sq": "Si një varg rruazash: mund t'i shtosh rruaza, t'i numërosh, ose ta presësh në dy pjesë.",
+        "en": "Like a string of beads: you can add beads, count them, or cut it in two."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "std::string emri;\nstd::getline(std::cin, emri);     // p.sh. \"Arta Berisha\"\nstd::cout << \"Tung, \" + emri << \"\\n\";\nstd::cout << emri.size() << \" shkronja\\n\";"
+      },
+      "related": [
+        "string",
+        "cpp-iostream",
+        "concatenation"
+      ]
+    },
+    {
+      "id": "cpp-for-loop",
+      "en": "for loop (C++)",
+      "sq": "Cikli for në C++",
+      "aliases": [
+        "for c++",
+        "for (int i = 0",
+        "i++"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Cikli for klasik në C++ ka tri pjesë në kllapa: ku fillon (int i = 0), deri kur vazhdon (i < 10) dhe si ndryshon pas çdo hapi (i++). Është cikli që përdoret më shumë në detyrat e shkollës.",
+        "en": "The classic C++ for loop has three parts in brackets: where it starts (int i = 0), how long it keeps going (i < 10) and how it changes after each step (i++). It's the loop used most in school assignments."
+      },
+      "analogy": {
+        "sq": "Si xhirot rreth fushës në stërvitje: fillon nga xhiroja 1, vazhdon deri në 10, dhe pas çdo xhiroje shton një.",
+        "en": "Like laps around the pitch in training: start at lap 1, keep going until 10, and add one after every lap."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "for (int i = 1; i <= 5; i++) {\n    std::cout << i << \" x 7 = \" << i * 7 << \"\\n\";\n}"
+      },
+      "related": [
+        "loop",
+        "increment",
+        "range-based-for"
+      ]
+    },
+    {
+      "id": "function-prototype",
+      "en": "Function declaration (prototype)",
+      "sq": "Deklarimi i funksionit",
+      "aliases": [
+        "function declaration",
+        "deklarim",
+        "function prototype"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Në C++ një funksion duhet të jetë i njohur para se ta përdorësh. Prandaj shpesh shkruan vetëm „kokën“ e tij lart (prototipin) — emrin, parametrat dhe tipin e kthimit — dhe trupin e plotë më poshtë ose në një skedar tjetër.",
+        "en": "In C++ a function must be known before you use it. So you often write just its “head” at the top (the prototype) — name, parameters and return type — and the full body further down or in another file."
+      },
+      "analogy": {
+        "sq": "Si menyja e restorantit: të tregon emrat e gjellëve dhe çmimet që në fillim, ndërsa receta e plotë është në kuzhinë.",
+        "en": "Like a restaurant menu: it tells you the dishes and prices up front, while the full recipe is back in the kitchen."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "int mblidh(int a, int b);   // prototipi\n\nint main() { std::cout << mblidh(2, 3); }\n\nint mblidh(int a, int b) { return a + b; }"
+      },
+      "related": [
+        "function",
+        "header-files",
+        "parameter"
+      ]
+    },
+    {
+      "id": "cpp-reference",
+      "en": "References & pass by reference (&)",
+      "sq": "Referencat në C++",
+      "aliases": [
+        "reference c++",
+        "pass by reference",
+        "int&",
+        "alias variable"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Një referencë (&) është një emër i dytë për të njëjtën variabël. Kur një funksion merr parametër me &, punon me origjinalin, jo me një kopje — kështu mund ta ndryshojë, dhe s'humbet kohë duke kopjuar objekte të mëdha.",
+        "en": "A reference (&) is a second name for the same variable. When a function takes a parameter with &, it works on the original, not a copy — so it can change it, and no time is wasted copying big objects."
+      },
+      "analogy": {
+        "sq": "Si nofka: „Beni“ dhe „Besnik“ janë i njëjti person — po i dhe diçka Benit, ia dhe Besnikut.",
+        "en": "Like a nickname: “Beni” and “Besnik” are the same person — give something to Beni and you've given it to Besnik."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "void dyfisho(int& x) { x = x * 2; }\n\nint pike = 5;\ndyfisho(pike);\nstd::cout << pike;   // 10"
+      },
+      "related": [
+        "value-vs-reference",
+        "pointer",
+        "parameter"
+      ]
+    },
+    {
+      "id": "address-dereference",
+      "en": "Address-of (&) and dereference (*)",
+      "sq": "Adresa dhe vlera e pointer-it",
+      "aliases": [
+        "&x",
+        "*ptr",
+        "dereference",
+        "address of",
+        "adresa e memories"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Te pointer-ët, & e merr adresën e një variable në memorie, ndërsa * shkon te ajo adresë dhe merr (ose ndryshon) vlerën që gjendet aty. int* p = &x; do të thotë „p mban adresën e x-it“.",
+        "en": "With pointers, & takes a variable's address in memory, while * goes to that address and reads (or changes) the value there. int* p = &x; means “p holds the address of x”."
+      },
+      "analogy": {
+        "sq": "& është si ta shkruash adresën e shtëpisë së shokut në letër; * është si të shkosh te ajo adresë dhe të trokasësh në derë.",
+        "en": "& is like writing your friend's home address on paper; * is like going to that address and knocking on the door."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "int x = 7;\nint* p = &x;            // p = adresa e x\nstd::cout << *p;        // 7\n*p = 20;                // tani x = 20"
+      },
+      "related": [
+        "pointer",
+        "nullptr",
+        "ram"
+      ]
+    },
+    {
+      "id": "nullptr",
+      "en": "nullptr",
+      "sq": null,
+      "aliases": [
+        "null c++",
+        "null ptr"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "nullptr është vlera e një pointer-i që s'tregon askund. Nëse përpiqesh ta lexosh (*p) një pointer që është nullptr, programi rrëzohet — prandaj kontrollo gjithmonë para se ta përdorësh.",
+        "en": "nullptr is the value of a pointer that points nowhere. If you try to read through (*p) a pointer that's nullptr, the program crashes — so always check before using it."
+      },
+      "analogy": {
+        "sq": "Si një adresë bosh në zarf: s'ke ku ta dërgosh letrën; po u nise gjithsesi, humb rrugës.",
+        "en": "Like a blank address on an envelope: there's nowhere to send the letter; set off anyway and you get lost."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "int* p = nullptr;\nif (p != nullptr) {\n    std::cout << *p;\n}"
+      },
+      "related": [
+        "null",
+        "pointer",
+        "segmentation-fault"
+      ]
+    },
+    {
+      "id": "new-delete",
+      "en": "new & delete",
+      "sq": null,
+      "aliases": [
+        "new c++",
+        "delete c++",
+        "dynamic memory",
+        "memorie dinamike"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Me new kërkon memorie gjatë ekzekutimit (në heap), dhe me delete e kthen kur s'të duhet më. Po harrove delete, memoria s'lirohet kurrë (memory leak). Në C++ modern përdor më shpesh vector ose smart pointers, që e bëjnë këtë vetë.",
+        "en": "With new you ask for memory while the program runs (on the heap), and with delete you give it back when you no longer need it. Forget delete and the memory is never freed (a memory leak). In modern C++ you more often use vector or smart pointers, which do this for you."
+      },
+      "analogy": {
+        "sq": "Si të marrësh me qira një sallë për ditëlindje: po s'ia ktheve çelësat pronarit, salla mbetet e zënë përgjithmonë.",
+        "en": "Like renting a hall for a birthday: if you don't give the keys back, the hall stays booked forever."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "int* notat = new int[30];   // 30 vende në heap\nnotat[0] = 5;\ndelete[] notat;             // kthe memorien"
+      },
+      "related": [
+        "memory-leak",
+        "stack-vs-heap",
+        "smart-pointers"
+      ]
+    },
+    {
+      "id": "cpp-array",
+      "en": "Arrays in C++",
+      "sq": "Vargjet në C++",
+      "aliases": [
+        "array c++",
+        "int arr[]",
+        "c array"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Një varg (array) në C++ mban një numër të fiksuar elementesh të të njëjtit tip, njëri pas tjetrit në memorie. Madhësia vendoset që në fillim dhe s'ndryshon, dhe C++ nuk të ndal po dole jashtë kufijve — ndaj shpesh përdoret vector-i.",
+        "en": "An array in C++ holds a fixed number of items of the same type, one after another in memory. Its size is set at the start and doesn't change, and C++ won't stop you if you go past the end — which is why vector is often used instead."
+      },
+      "analogy": {
+        "sq": "Si kutia e vezëve me 10 vende: s'mund t'i shtosh vendin e 11-të, dhe po e fute dorën përtej kutisë, prek diçka tjetër.",
+        "en": "Like an egg box with 10 slots: you can't add an 11th, and if you reach past the box you touch something else."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "int notat[5] = {5, 4, 3, 5, 4};\nstd::cout << notat[0];   // 5\n// notat[5] — jashtë kufijve!"
+      },
+      "related": [
+        "array",
+        "std-vector",
+        "undefined-behavior"
+      ]
+    },
+    {
+      "id": "std-vector",
+      "en": "std::vector",
+      "sq": "Vektori në C++",
+      "aliases": [
+        "vector<int>",
+        "push_back",
+        "dynamic array"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "vector-i është „lista“ e C++: një varg që rritet vetë kur shton elemente me push_back(). Di vetë madhësinë e vet (.size()) dhe e liron memorien vetë. Është kontejneri që do ta përdorësh më shpesh.",
+        "en": "vector is C++'s “list”: an array that grows by itself when you add items with push_back(). It knows its own size (.size()) and frees its memory automatically. It's the container you'll use most."
+      },
+      "analogy": {
+        "sq": "Si një tren që i shton vagonë sa herë hipin më shumë pasagjerë.",
+        "en": "Like a train that adds carriages whenever more passengers get on."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "#include <vector>\nstd::vector<int> notat = {5, 4};\nnotat.push_back(3);\nstd::cout << notat.size();   // 3"
+      },
+      "related": [
+        "arraylist",
+        "list",
+        "stl"
+      ]
+    },
+    {
+      "id": "std-map",
+      "en": "std::map",
+      "sq": "Map-i në C++",
+      "aliases": [
+        "map c++",
+        "map<string, int>"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "std::map ruan çifte çelës–vlerë, të renditura sipas çelësit — si fjalori i Python-it. E kërkon vlerën me map[\"çelësi\"], dhe kur kalon nëpër to, dalin me radhë alfabetike.",
+        "en": "std::map stores key–value pairs, sorted by key — like a Python dictionary. You look up a value with map[\"key\"], and when you loop through, they come out in alphabetical order."
+      },
+      "analogy": {
+        "sq": "Si regjistri i notave me emrat e nxënësve sipas alfabetit: kërkon emrin, gjen notën.",
+        "en": "Like a grade book with students' names in alphabetical order: look up the name, find the grade."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "std::map<std::string, int> notat;\nnotat[\"Arta\"] = 5;\nnotat[\"Dren\"] = 4;\nfor (auto& [emri, nota] : notat) std::cout << emri << \" \" << nota << \"\\n\";"
+      },
+      "related": [
+        "hashmap",
+        "dictionary",
+        "unordered-map"
+      ]
+    },
+    {
+      "id": "unordered-map",
+      "en": "unordered_map & unordered_set",
+      "sq": null,
+      "aliases": [
+        "unordered_map",
+        "unordered_set",
+        "std::set",
+        "set c++"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "unordered_map dhe unordered_set përdorin tabela hash, prandaj kërkimi është shumë i shpejtë, por pa renditje. std::set mban vlera unike të renditura. Në garat e programimit, unordered_map shpesh e bën zgjidhjen mjaft të shpejtë.",
+        "en": "unordered_map and unordered_set use hash tables, so lookups are very fast, but with no order. std::set keeps unique values in sorted order. In programming contests, unordered_map often makes a solution fast enough."
+      },
+      "analogy": {
+        "sq": "map-i është si një raft librash sipas alfabetit; unordered_map-i është si dollapët me numra në palestër — e gjen menjëherë, por s'janë në ndonjë radhë të bukur.",
+        "en": "map is like an alphabetical bookshelf; unordered_map is like numbered gym lockers — you find yours instantly, but they're in no nice order."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "std::unordered_set<std::string> pare;\npare.insert(\"Pejë\");\nif (pare.count(\"Pejë\")) std::cout << \"E kemi parë\";"
+      },
+      "related": [
+        "hash-table",
+        "std-map",
+        "hashset"
+      ]
+    },
+    {
+      "id": "std-pair",
+      "en": "std::pair",
+      "sq": null,
+      "aliases": [
+        "pair",
+        "make_pair",
+        "first second"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "std::pair mban dy vlera bashkë, që mund të jenë të tipeve të ndryshme, dhe i merr me .first dhe .second. Përdoret shpesh për pikat (x, y) ose për çifte si emër–notë.",
+        "en": "std::pair holds two values together, which can be of different types, and you get them with .first and .second. It's often used for points (x, y) or pairs like name–grade."
+      },
+      "analogy": {
+        "sq": "Si çiftet e vallëzimit: dy persona që lëvizin gjithmonë bashkë.",
+        "en": "Like dance partners: two people who always move together."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "std::pair<std::string, int> lojtari = {\"Rashica\", 7};\nstd::cout << lojtari.first << \" #\" << lojtari.second;"
+      },
+      "related": [
+        "tuple",
+        "std-map",
+        "stl"
+      ]
+    },
+    {
+      "id": "stl",
+      "en": "STL (Standard Template Library)",
+      "sq": "Libraria standarde e shablloneve",
+      "aliases": [
+        "standard template library",
+        "c++ stl",
+        "containers"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "STL-ja është pjesa e librarisë standarde të C++ me kontejnerë të gatshëm (vector, map, set, queue, stack), algoritme (sort, find) dhe iteratorë. Me të s'ke pse i shkruan vetë strukturat bazë të të dhënave.",
+        "en": "The STL is the part of C++'s standard library with ready-made containers (vector, map, set, queue, stack), algorithms (sort, find) and iterators. With it you don't have to write the basic data structures yourself."
+      },
+      "analogy": {
+        "sq": "Si kutia e veglave e mjeshtrit: çekiçi, kaçavida, metri — s'i bën vetë, i merr dhe punon.",
+        "en": "Like a tradesman's toolbox: hammer, screwdriver, tape measure — you don't make them, you pick them up and work."
+      },
+      "code": null,
+      "related": [
+        "standard-library",
+        "std-vector",
+        "stl-algorithms"
+      ]
+    },
+    {
+      "id": "stl-algorithms",
+      "en": "STL algorithms (sort, find)",
+      "sq": "Algoritmet e STL-së",
+      "aliases": [
+        "<algorithm>",
+        "std::sort",
+        "std::find",
+        "reverse",
+        "max_element"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Libraria <algorithm> ka funksione të gatshme për punët e zakonshme: sort() rendit, find() kërkon, reverse() kthen mbrapsht, max_element() gjen më të madhin. Janë të testuara dhe shumë të shpejta.",
+        "en": "The <algorithm> library has ready-made functions for common jobs: sort() orders, find() searches, reverse() flips, max_element() finds the biggest. They're well tested and very fast."
+      },
+      "analogy": {
+        "sq": "Si makinat në një furrë të madhe buke: një që përzien brumin, një që e pret — s'ke pse i bën të gjitha me dorë.",
+        "en": "Like the machines in a big bakery: one mixes the dough, one slices — you don't do it all by hand."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "#include <algorithm>\nstd::vector<int> v = {4, 1, 3};\nstd::sort(v.begin(), v.end());           // 1 3 4\nstd::reverse(v.begin(), v.end());        // 4 3 1"
+      },
+      "related": [
+        "sorting-algorithm",
+        "stl",
+        "cpp-iterators"
+      ]
+    },
+    {
+      "id": "cpp-iterators",
+      "en": "Iterators (C++)",
+      "sq": "Iteratorët në C++",
+      "aliases": [
+        "begin()",
+        "end()",
+        "iterator c++"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Iteratorët janë si „gishta“ që tregojnë një element brenda një kontejneri. begin() tregon të parin, end() vendin pas të fundit. Algoritmet e STL-së punojnë me një çift iteratorësh, p.sh. sort(v.begin(), v.end()).",
+        "en": "Iterators are like “fingers” pointing at an item inside a container. begin() points at the first, end() at the spot just past the last. STL algorithms work with a pair of iterators, e.g. sort(v.begin(), v.end())."
+      },
+      "analogy": {
+        "sq": "Si gishti që e kalon rresht pas rreshti kur lexon një listë.",
+        "en": "Like your finger moving line by line as you read down a list."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "std::vector<int> v = {5, 4, 3};\nfor (auto it = v.begin(); it != v.end(); ++it) {\n    std::cout << *it << \" \";\n}"
+      },
+      "related": [
+        "iterator",
+        "stl-algorithms",
+        "pointer"
+      ]
+    },
+    {
+      "id": "cpp-class-struct",
+      "en": "class & struct (C++)",
+      "sq": "Klasat dhe struct-et në C++",
+      "aliases": [
+        "struct",
+        "class c++",
+        "struct c++"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Në C++ i krijon tipet e tua me class ose struct. Janë pothuajse njësoj; i vetmi dallim është se te struct gjithçka është public si parazgjedhje, ndërsa te class private. Zakonisht struct përdoret për të dhëna të thjeshta.",
+        "en": "In C++ you create your own types with class or struct. They're almost the same; the only difference is that in a struct everything is public by default, while in a class it's private. Usually struct is used for simple data."
+      },
+      "analogy": {
+        "sq": "struct-i është si një kuti e hapur me ndarje; class-i është si një kuti me kyç, ku vendos vetë çfarë lejohet të shihet.",
+        "en": "A struct is like an open box with compartments; a class is like a locked box where you decide what can be seen."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "struct Pika { int x; int y; };\nclass Llogari {\n    double bilanci = 0;      // private\npublic: void depozito(double s) { bilanci += s; }\n};"
+      },
+      "related": [
+        "class",
+        "cpp-access-specifiers",
+        "object"
+      ]
+    },
+    {
+      "id": "cpp-access-specifiers",
+      "en": "public, private, protected (C++)",
+      "sq": "Specifikuesit e qasjes në C++",
+      "aliases": [
+        "public:",
+        "private:",
+        "protected:",
+        "access specifiers"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Në një klasë C++, public: tregon çfarë mund ta përdorë kushdo, private: çfarë sheh vetëm vetë klasa, dhe protected: çfarë shohin edhe klasat që e trashëgojnë. Kështu i mbron të dhënat nga ndryshimet e gabuara.",
+        "en": "In a C++ class, public: marks what anyone can use, private: what only the class itself can see, and protected: what classes that inherit from it can also see. That's how you protect data from wrong changes."
+      },
+      "analogy": {
+        "sq": "Si një shtëpi: dhoma e ndenjes është public, dhoma jote e gjumit private, dhe kuzhina protected — vetëm familja hyn aty.",
+        "en": "Like a house: the living room is public, your bedroom is private, and the kitchen is protected — only family goes in there."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "class Lojtar {\npublic:    std::string emri;\nprotected: int paga;\nprivate:   std::string fjalekalimi;\n};"
+      },
+      "related": [
+        "access-modifiers",
+        "encapsulation",
+        "cpp-class-struct"
+      ]
+    },
+    {
+      "id": "destructor",
+      "en": "Constructor & destructor (C++)",
+      "sq": "Konstruktori dhe destruktori",
+      "aliases": [
+        "destructor",
+        "~",
+        "destruktor",
+        "constructor c++"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Konstruktori ekzekutohet kur krijohet një objekt, dhe destruktori (~EmriKlases) kur objekti zhduket. Destruktori është vendi për të pastruar — p.sh. të mbyllësh një skedar ose të lirosh memorie.",
+        "en": "The constructor runs when an object is created, and the destructor (~ClassName) when the object goes away. The destructor is the place to clean up — like closing a file or freeing memory."
+      },
+      "analogy": {
+        "sq": "Si hyrja dhe dalja nga hoteli: në hyrje të japin çelësin, në dalje e kthen dhe dhoma pastrohet.",
+        "en": "Like checking in and out of a hotel: at check-in you get the key, at check-out you hand it back and the room gets cleaned."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "class Dhoma {\npublic:\n    Dhoma()  { std::cout << \"Hyra\\n\"; }\n    ~Dhoma() { std::cout << \"Dola, u pastrua\\n\"; }\n};"
+      },
+      "related": [
+        "constructor",
+        "raii",
+        "object"
+      ]
+    },
+    {
+      "id": "copy-constructor",
+      "en": "Copy constructor & rule of three",
+      "sq": "Konstruktori i kopjimit",
+      "aliases": [
+        "copy constructor",
+        "rule of three",
+        "rule of five",
+        "deep copy",
+        "shallow copy"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Konstruktori i kopjimit vendos çfarë ndodh kur krijon një objekt si kopje të një tjetri. Nëse klasa jote menaxhon memorie me pointer-ë, kopja e paracaktuar kopjon vetëm adresën — dhe dy objekte e fshijnë të njëjtën memorie. „Rregulli i treve“ thotë: po shkrove destruktor, shkruaj edhe kopjimin dhe caktimin.",
+        "en": "The copy constructor decides what happens when you create an object as a copy of another. If your class manages memory with pointers, the default copy only copies the address — and two objects end up deleting the same memory. The “rule of three” says: if you write a destructor, also write copying and assignment."
+      },
+      "analogy": {
+        "sq": "Si ta fotokopjosh një çelës kasafortë: po kopjove vetëm etiketën „kasaforta 3“, të dy kanë të njëjtën kasafortë — po e boshatisi njëri, e gjen bosh edhe tjetri.",
+        "en": "Like copying a safe-deposit key: copy just the “box 3” label and you both share the same box — if one empties it, the other finds it empty too."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "class Liste {\n    int* te_dhenat;\npublic: Liste(const Liste& tjeter);  // kopjimi\n    ~Liste();                     // destruktori\n};"
+      },
+      "related": [
+        "destructor",
+        "value-vs-reference",
+        "smart-pointers"
+      ]
+    },
+    {
+      "id": "virtual-functions",
+      "en": "virtual functions & override",
+      "sq": "Funksionet virtuale",
+      "aliases": [
+        "virtual",
+        "override c++",
+        "dynamic dispatch",
+        "vtable"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Në C++, që klasa fëmijë ta mbishkruajë një metodë dhe të thirret versioni i saj edhe përmes një pointer-i të prindit, metoda duhet të shënohet virtual te prindi. Fjala override te fëmija e kontrollon që e ke bërë saktë.",
+        "en": "In C++, for a child class to override a method and have its version called even through a parent pointer, the method must be marked virtual in the parent. The override keyword in the child checks you did it right."
+      },
+      "analogy": {
+        "sq": "Si kur trajneri thotë „lojtari i radhës, gjuaj penalltinë“ — secili lojtar e gjuan në mënyrën e vet, edhe pse urdhri është i njëjtë.",
+        "en": "Like the coach saying “next player, take the penalty” — each player takes it their own way, even though the instruction is the same."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "class Kafshe { public: virtual std::string ze() { return \"...\"; } };\nclass Mace : public Kafshe {\npublic: std::string ze() override { return \"Mjau\"; }\n};"
+      },
+      "related": [
+        "polymorphism",
+        "method-overriding",
+        "pure-virtual-function"
+      ]
+    },
+    {
+      "id": "pure-virtual-function",
+      "en": "Pure virtual function (= 0)",
+      "sq": "Funksion thjesht virtual",
+      "aliases": [
+        "= 0",
+        "pure virtual",
+        "abstract class c++",
+        "interface c++"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Një funksion thjesht virtual (virtual ... = 0) s'ka trup — thjesht thotë „çdo klasë fëmijë duhet ta ketë këtë“. Klasa që ka të paktën një të tillë bëhet abstrakte: s'mund të krijosh objekte prej saj, vetëm prej fëmijëve.",
+        "en": "A pure virtual function (virtual ... = 0) has no body — it just says “every child class must have this”. A class with at least one becomes abstract: you can't create objects from it, only from its children."
+      },
+      "analogy": {
+        "sq": "Si rregullorja e kampionatit që thotë „çdo ekip duhet të ketë portier“ — por s'të thotë kush; secili ekip e vendos vetë.",
+        "en": "Like league rules saying “every team must have a goalkeeper” — without saying who; each team decides for itself."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "class Forme {\npublic:\n    virtual double siperfaqja() = 0;  // pa trup\n};\n// Forme f;  // Gabim! klasë abstrakte"
+      },
+      "related": [
+        "abstract-class",
+        "interface",
+        "virtual-functions"
+      ]
+    },
+    {
+      "id": "cpp-inheritance",
+      "en": "Inheritance in C++ (: public)",
+      "sq": "Trashëgimia në C++",
+      "aliases": [
+        ": public",
+        "derived class",
+        "base class",
+        "multiple inheritance"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Në C++ një klasë trashëgon nga një tjetër me „: public Prindi“. Fëmija merr fushat dhe metodat e prindit dhe mund t'u shtojë të tijat. Ndryshe nga Java, C++ lejon edhe trashëgimi nga disa klasa njëkohësisht.",
+        "en": "In C++ a class inherits from another with “: public Parent”. The child gets the parent's fields and methods and can add its own. Unlike Java, C++ also allows inheriting from several classes at once."
+      },
+      "analogy": {
+        "sq": "Si fëmija që trashëgon sytë nga nëna dhe gjatësinë nga babai — dhe ka edhe talentin e vet.",
+        "en": "Like a child who inherits their mother's eyes and their father's height — and has their own talent too."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "class Lojtar { public: std::string emri; };\nclass Portier : public Lojtar {\npublic: int pritje = 0;\n};"
+      },
+      "related": [
+        "inheritance",
+        "virtual-functions",
+        "cpp-access-specifiers"
+      ]
+    },
+    {
+      "id": "operator-overloading",
+      "en": "Operator overloading",
+      "sq": "Mbingarkimi i operatorëve",
+      "aliases": [
+        "operator+",
+        "operator<<",
+        "overload operator"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Operator overloading të lejon të vendosësh çfarë bëjnë +, ==, << e të tjerë për klasat e tua. P.sh. dy objekte Pike mund t'i mbledhësh me + si të ishin numra.",
+        "en": "Operator overloading lets you decide what +, ==, << and others do for your own classes. For example, two Point objects can be added with + as if they were numbers."
+      },
+      "analogy": {
+        "sq": "Si ta mësosh një robot që „+“ te frutat do të thotë „vendosi në të njëjtën shportë“.",
+        "en": "Like teaching a robot that “+” with fruit means “put them in the same basket”."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "struct Pika { int x, y; };\nPika operator+(Pika a, Pika b) {\n    return {a.x + b.x, a.y + b.y};\n}\nPika c = Pika{1, 2} + Pika{3, 4};   // {4, 6}"
+      },
+      "related": [
+        "method-overloading",
+        "polymorphism",
+        "syntactic-sugar"
+      ]
+    },
+    {
+      "id": "cpp-templates",
+      "en": "Templates",
+      "sq": "Shabllonet (templates)",
+      "aliases": [
+        "template",
+        "template<typename T>",
+        "typename"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Templates të lejojnë të shkruash një funksion ose klasë një herë, që punon me çdo tip — int, double, string. vector<int> dhe vector<string> janë i njëjti template me tipe të ndryshme. Janë si generics-at e Java-s.",
+        "en": "Templates let you write a function or class once that works with any type — int, double, string. vector<int> and vector<string> are the same template with different types. They're like Java's generics."
+      },
+      "analogy": {
+        "sq": "Si kallëpi i biskotave: i njëjti kallëp, por mund ta mbushësh me brumë çokollate, vanilje ose kanelle.",
+        "en": "Like a cookie cutter: the same cutter, but you can use chocolate, vanilla or cinnamon dough."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "template <typename T>\nT maksimumi(T a, T b) { return a > b ? a : b; }\n\nmaksimumi(3, 7);        // 7\nmaksimumi(2.5, 1.5);    // 2.5"
+      },
+      "related": [
+        "java-generics",
+        "std-vector",
+        "stl"
+      ]
+    },
+    {
+      "id": "cpp-const",
+      "en": "const in C++",
+      "sq": "const në C++",
+      "aliases": [
+        "const&",
+        "const reference",
+        "const correctness",
+        "constexpr"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "const do të thotë „kjo s'ndryshon“. Me const int MAX = 100; krijon një konstante, dhe me const std::string& emri një funksion e merr tekstin pa e kopjuar dhe pa e ndryshuar. constexpr shkon më larg: llogaritet që gjatë kompajlimit.",
+        "en": "const means “this doesn't change”. With const int MAX = 100; you make a constant, and with const std::string& name a function takes the text without copying or changing it. constexpr goes further: it's worked out at compile time."
+      },
+      "analogy": {
+        "sq": "Si një libër i bibliotekës: mund ta lexosh sa të duash, por s'lejohet të shkruash në të.",
+        "en": "Like a library book: you can read it as much as you like, but you're not allowed to write in it."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "const int MAX_NXENES = 30;\nvoid pershendet(const std::string& emri) {\n    std::cout << \"Tung, \" << emri;\n}"
+      },
+      "related": [
+        "constant",
+        "cpp-reference",
+        "mutable-immutable"
+      ]
+    },
+    {
+      "id": "auto-keyword",
+      "en": "auto (C++)",
+      "sq": null,
+      "aliases": [
+        "auto",
+        "type deduction"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "auto i thotë kompajlerit „gjeje vetë tipin nga vlera“. Ndihmon sidomos kur tipi është i gjatë, si te iteratorët. Tipi mbetet i fiksuar — thjesht s'ke pse e shkruan.",
+        "en": "auto tells the compiler “work out the type from the value”. It helps especially when the type is long, like with iterators. The type is still fixed — you just don't have to write it."
+      },
+      "analogy": {
+        "sq": "Si kur kamarieri e kupton vetë që kafeja e mëngjesit për ty është makiato, pa ia thënë çdo ditë.",
+        "en": "Like a waiter who knows your morning coffee is a macchiato without you saying it every day."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "auto nota = 5;                 // int\nauto cmimi = 2.5;              // double\nauto it = notat.begin();       // std::vector<int>::iterator"
+      },
+      "related": [
+        "var-java",
+        "static-dynamic-typing",
+        "cpp-iterators"
+      ]
+    },
+    {
+      "id": "range-based-for",
+      "en": "Range-based for loop",
+      "sq": "Cikli for mbi koleksion",
+      "aliases": [
+        "for each c++",
+        "for (auto x :",
+        "range for"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Cikli for i bazuar në koleksion (që nga C++11) kalon nëpër çdo element pa numërues: for (int n : notat). Me auto& mund t'i ndryshosh elementet direkt, dhe me const auto& i lexon pa i kopjuar.",
+        "en": "The range-based for loop (since C++11) goes through every item without a counter: for (int n : grades). With auto& you can change the items directly, and with const auto& you read them without copying."
+      },
+      "analogy": {
+        "sq": "Si mësuesja që ua shpërndan fletët e provimit të gjithë nxënësve në rresht, pa i numëruar.",
+        "en": "Like the teacher handing out exam papers to everyone in the row, without counting them."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "std::vector<int> notat = {4, 5, 3};\nfor (int& n : notat) n++;        // rrit çdo notë\nfor (const auto& n : notat) std::cout << n << \" \";"
+      },
+      "related": [
+        "java-for-each",
+        "for-of",
+        "cpp-for-loop"
+      ]
+    },
+    {
+      "id": "lambda-cpp",
+      "en": "Lambda expressions (C++)",
+      "sq": "Shprehjet lambda në C++",
+      "aliases": [
+        "[]()",
+        "lambda c++",
+        "capture"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Lambda-t në C++ janë funksione të shkurtra pa emër, të shkruara me [](parametrat) { trupi }. Kllapat katrore [] tregojnë cilat variabla nga jashtë mund t'i përdorë. Përdoren shumë me sort() dhe algoritme të tjera.",
+        "en": "Lambdas in C++ are short nameless functions written as [](parameters) { body }. The square brackets [] say which outside variables they may use. They're used a lot with sort() and other algorithms."
+      },
+      "analogy": {
+        "sq": "Si një shënim i shpejtë për zëvendësmësuesin: „rendit fletët sipas notës, nga më e larta“ — vlen vetëm për sot.",
+        "en": "Like a quick note for the substitute teacher: “sort the papers by grade, highest first” — only for today."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "std::vector<int> v = {3, 9, 1};\nstd::sort(v.begin(), v.end(),\n          [](int a, int b) { return a > b; });   // 9 3 1"
+      },
+      "related": [
+        "lambda",
+        "java-lambda",
+        "stl-algorithms"
+      ]
+    },
+    {
+      "id": "smart-pointers",
+      "en": "Smart pointers (unique_ptr, shared_ptr)",
+      "sq": "Pointer-ët e zgjuar",
+      "aliases": [
+        "unique_ptr",
+        "shared_ptr",
+        "make_unique",
+        "smart pointer"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Smart pointer-ët janë pointer-ë që e lirojnë vetë memorien kur s'duhet më — s'ke pse shkruan delete. unique_ptr ka vetëm një pronar; shared_ptr numëron sa e përdorin dhe e fshin kur largohet i fundit. Në C++ modern përdor këta në vend të new/delete.",
+        "en": "Smart pointers are pointers that free the memory themselves when it's no longer needed — no need to write delete. unique_ptr has a single owner; shared_ptr counts how many use it and deletes it when the last one leaves. In modern C++ use these instead of new/delete."
+      },
+      "analogy": {
+        "sq": "shared_ptr është si drita në dhomën e përbashkët të konviktit: e fik i fundit që del.",
+        "en": "shared_ptr is like the light in a shared dorm room: the last one to leave switches it off."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "#include <memory>\nauto p = std::make_unique<Lojtar>(\"Arta\");\np->luaj();\n// s'ka delete — lirohet vetë"
+      },
+      "related": [
+        "new-delete",
+        "raii",
+        "memory-leak"
+      ]
+    },
+    {
+      "id": "raii",
+      "en": "RAII",
+      "sq": null,
+      "aliases": [
+        "resource acquisition is initialization"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "RAII (Resource Acquisition Is Initialization) është ideja kryesore e C++: një burim (memorie, skedar, lidhje) e merr në konstruktor dhe e liron në destruktor. Kështu, kur objekti del nga scope-i, gjithçka pastrohet vetë — edhe nëse ndodh gabim.",
+        "en": "RAII (Resource Acquisition Is Initialization) is C++'s key idea: you grab a resource (memory, a file, a connection) in the constructor and release it in the destructor. So when the object goes out of scope, everything is cleaned up automatically — even if an error happens."
+      },
+      "analogy": {
+        "sq": "Si dera e frigoriferit me drita: ndizet kur e hap, fiket vetë kur e mbyll — s'ke nevojë ta mbash mend.",
+        "en": "Like a fridge light: on when you open the door, off by itself when you close it — nothing to remember."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "{\n    std::ifstream skedari(\"notat.txt\");  // hapet\n    // ... lexo\n}   // mbyllet vetë këtu"
+      },
+      "related": [
+        "destructor",
+        "smart-pointers",
+        "try-with-resources"
+      ]
+    },
+    {
+      "id": "stack-vs-heap",
+      "en": "Stack vs heap",
+      "sq": "Stack dhe heap",
+      "aliases": [
+        "stack memory",
+        "heap memory",
+        "memoria stack",
+        "memoria heap"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Programi ka dy zona kryesore memorieje. Stack-u është i shpejtë dhe i vogël: variablat lokale vendosen aty dhe zhduken vetë kur mbaron funksioni. Heap-i është i madh: aty kërkon memorie me new (ose vector) dhe ajo mbetet derisa ta lirosh.",
+        "en": "A program has two main memory areas. The stack is fast and small: local variables go there and vanish automatically when the function ends. The heap is big: you ask for memory there with new (or vector) and it stays until you free it."
+      },
+      "analogy": {
+        "sq": "Stack-u është si tavolina jote e punës: e vogël, gjithçka përdorë, dhe e pastron në fund të ditës. Heap-i është si magazina: shumë vend, por duhet ta mbash mend vetë çfarë ke lënë aty.",
+        "en": "The stack is like your desk: small, everything to hand, cleared at the end of the day. The heap is like a storeroom: lots of space, but you have to remember what you left there."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "void f() {\n    int a = 5;              // stack — zhduket vetë\n    int* b = new int(5);    // heap — mbetet\n    delete b;\n}"
+      },
+      "related": [
+        "new-delete",
+        "stack-queue",
+        "ram"
+      ]
+    },
+    {
+      "id": "segmentation-fault",
+      "en": "Segmentation fault",
+      "sq": "Gabim segmentimi",
+      "aliases": [
+        "segfault",
+        "segmentation fault (core dumped)",
+        "access violation"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Segmentation fault është kur programi përpiqet të prekë memorie që s'i takon — p.sh. përmes një pointer-i nullptr, ose duke dalë jashtë kufijve të një vargu. Sistemi e ndal menjëherë programin. Është gabimi më i zakonshëm i fillestarëve në C++.",
+        "en": "A segmentation fault is when the program tries to touch memory that isn't its own — like through a nullptr pointer, or by going past the end of an array. The system stops the program immediately. It's the most common beginner error in C++."
+      },
+      "analogy": {
+        "sq": "Si të përpiqesh të hysh në banesën e fqinjit me çelësin tënd: roja të ndal menjëherë te dera.",
+        "en": "Like trying to get into the neighbour's flat with your key: security stops you at the door straight away."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "int* p = nullptr;\nstd::cout << *p;   // Segmentation fault!"
+      },
+      "related": [
+        "nullptr",
+        "undefined-behavior",
+        "debug"
+      ]
+    },
+    {
+      "id": "undefined-behavior",
+      "en": "Undefined behavior",
+      "sq": "Sjellje e papërcaktuar",
+      "aliases": [
+        "ub",
+        "undefined behaviour"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Sjellja e papërcaktuar ndodh kur bën diçka që rregullat e C++ s'e lejojnë — p.sh. lexon jashtë një vargu ose përdor një variabël pa i dhënë vlerë. Programi mund të duket sikur punon, të japë rezultate të çuditshme ose të rrëzohet — dhe sot ndryshe nga nesër.",
+        "en": "Undefined behaviour happens when you do something C++'s rules don't allow — like reading past the end of an array or using a variable you never gave a value. The program might seem to work, give weird results or crash — and differently today than tomorrow."
+      },
+      "analogy": {
+        "sq": "Si të ngasësh në të kundërt në një rrugë njëkahëshe natën: ndoshta s'ndodh asgjë, ndoshta ndodh katastrofë — s'mund ta parashikosh.",
+        "en": "Like driving the wrong way down a one-way street at night: maybe nothing happens, maybe disaster — you can't predict it."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "int x;                 // pa vlerë!\nstd::cout << x;        // çfarëdo numri\nint v[3]; v[10] = 1;   // jashtë kufijve"
+      },
+      "related": [
+        "segmentation-fault",
+        "bug",
+        "cpp-array"
+      ]
+    },
+    {
+      "id": "cpp-exceptions",
+      "en": "Exceptions in C++ (throw, catch)",
+      "sq": "Përjashtimet në C++",
+      "aliases": [
+        "throw c++",
+        "catch c++",
+        "try catch c++",
+        "std::exception"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Në C++ e hedh një gabim me throw dhe e kap me try/catch. Kështu gabimi mund të trajtohet në një vend tjetër, larg nga ku ndodhi. Libraria standarde ka gabime të gatshme si std::runtime_error.",
+        "en": "In C++ you throw an error with throw and catch it with try/catch. That way the error can be handled somewhere else, away from where it happened. The standard library has ready-made errors like std::runtime_error."
+      },
+      "analogy": {
+        "sq": "Si lojtari që e pasoj topin te portieri kur s'di çfarë të bëjë me të: dikush tjetër e trajton.",
+        "en": "Like a player passing the ball back to the keeper when they don't know what to do with it: someone else deals with it."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "try {\n    if (shuma < 0) throw std::runtime_error(\"Shumë negative\");\n} catch (const std::exception& e) {\n    std::cout << \"Gabim: \" << e.what();\n}"
+      },
+      "related": [
+        "try-catch",
+        "java-exceptions",
+        "error"
+      ]
+    },
+    {
+      "id": "linker",
+      "en": "Compiling & linking",
+      "sq": "Kompajlimi dhe lidhja",
+      "aliases": [
+        "linker",
+        "linking",
+        "undefined reference",
+        "object file",
+        ".o"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Një program C++ ndërtohet në dy hapa: kompajleri e përkthen çdo skedar .cpp në kod makine (skedar .o), pastaj linker-i i bashkon të gjithë në një program të ekzekutueshëm. Gabimi „undefined reference“ vjen nga linker-i: ke deklaruar një funksion, por s'e ke shkruar askund.",
+        "en": "A C++ program is built in two steps: the compiler translates each .cpp file into machine code (an .o file), then the linker joins them all into one executable. The “undefined reference” error comes from the linker: you declared a function but never wrote it anywhere."
+      },
+      "analogy": {
+        "sq": "Si të shtypësh kapitujt e një libri veç e veç (kompajlimi) dhe pastaj t'i qepësh bashkë në një libër (lidhja).",
+        "en": "Like printing a book's chapters separately (compiling) and then binding them into one book (linking)."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "g++ -c loja.cpp       # → loja.o\ng++ -c main.cpp       # → main.o\ng++ loja.o main.o -o loja"
+      },
+      "related": [
+        "compiler",
+        "gcc-clang",
+        "header-files"
+      ]
+    },
+    {
+      "id": "gcc-clang",
+      "en": "g++, GCC & Clang",
+      "sq": null,
+      "aliases": [
+        "g++",
+        "gcc",
+        "clang",
+        "mingw",
+        "msvc"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "g++ (pjesë e GCC-së), Clang dhe MSVC i Microsoft-it janë kompajlerët më të njohur të C++. E kthejnë kodin tënd në program që ekzekutohet. Në Windows, MinGW të jep g++; shumë IDE e kanë të instaluar brenda.",
+        "en": "g++ (part of GCC), Clang and Microsoft's MSVC are the best-known C++ compilers. They turn your code into a program that runs. On Windows, MinGW gives you g++; many IDEs come with one built in."
+      },
+      "analogy": {
+        "sq": "Si përkthyesit e ndryshëm të të njëjtit libër: secili e kthen në gjuhën e kompjuterit, me stilin e vet.",
+        "en": "Like different translators of the same book: each turns it into the computer's language, in their own style."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "g++ -std=c++20 -Wall main.cpp -o programi\n./programi"
+      },
+      "related": [
+        "compiler",
+        "linker",
+        "cpp-ide"
+      ]
+    },
+    {
+      "id": "cpp-ide",
+      "en": "C++ IDEs (Code::Blocks, Visual Studio)",
+      "sq": "IDE për C++",
+      "aliases": [
+        "code::blocks",
+        "codeblocks",
+        "dev-c++",
+        "visual studio",
+        "clion"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Për C++ përdoren shpesh Code::Blocks dhe Dev-C++ (sidomos në shkolla), Visual Studio në Windows, CLion ose VS Code me shtojca. Ato e kanë kompajlerin dhe debugger-in brenda, që ta ekzekutosh programin me një klik.",
+        "en": "Common C++ tools are Code::Blocks and Dev-C++ (especially in schools), Visual Studio on Windows, CLion or VS Code with extensions. They have the compiler and debugger built in, so you can run your program with one click."
+      },
+      "analogy": {
+        "sq": "Si një punishte me të gjitha veglat në mur: s'ke pse i kërkon nëpër shtëpi.",
+        "en": "Like a workshop with every tool hanging on the wall: no need to hunt for them around the house."
+      },
+      "code": null,
+      "related": [
+        "ide",
+        "gcc-clang",
+        "debug"
+      ]
+    },
+    {
+      "id": "header-files",
+      "en": "Header files (.h / .hpp)",
+      "sq": "Skedarët header",
+      "aliases": [
+        ".h",
+        ".hpp",
+        "header file",
+        "#pragma once",
+        "include guard"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Në C++ kodi zakonisht ndahet në dy skedarë: header-i (.h) që thotë çfarë ekziston — klasat dhe prototipet e funksioneve — dhe .cpp-ja që e ka kodin e plotë. #pragma once në krye të header-it e pengon të përfshihet dy herë.",
+        "en": "In C++ code is usually split into two files: the header (.h) saying what exists — classes and function prototypes — and the .cpp with the full code. #pragma once at the top of a header stops it being included twice."
+      },
+      "analogy": {
+        "sq": "Header-i është si tabela e përmbajtjes së librit; .cpp-ja janë vetë kapitujt.",
+        "en": "The header is like a book's table of contents; the .cpp files are the chapters themselves."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "// loja.h\n#pragma once\nint piket(int gola);\n\n// loja.cpp → int piket(int gola) { return gola * 3; }"
+      },
+      "related": [
+        "include-directive",
+        "function-prototype",
+        "linker"
+      ]
+    },
+    {
+      "id": "preprocessor-macros",
+      "en": "Preprocessor & macros (#define)",
+      "sq": "Paraprocesori dhe makrot",
+      "aliases": [
+        "#define",
+        "macro",
+        "makro",
+        "#ifdef",
+        "preprocessor"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Paraprocesori e lexon kodin para kompajlerit dhe zbaton komandat me # — #include, #define, #ifdef. #define krijon makro që zëvendësohen si tekst. Në C++ modern preferohen const dhe funksionet, sepse makrot s'kontrollohen nga kompajleri.",
+        "en": "The preprocessor reads the code before the compiler and carries out the # commands — #include, #define, #ifdef. #define creates macros that get replaced as text. In modern C++, const and functions are preferred, because macros aren't checked by the compiler."
+      },
+      "analogy": {
+        "sq": "Si funksioni „gjej dhe zëvendëso“ në Word, që ekzekutohet mbi gjithë hartimin para se t'ia dorëzosh mësueses.",
+        "en": "Like Word's “find and replace” run over your whole essay before you hand it in."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "#define MAX 100\n#ifdef DEBUG\n    std::cout << \"Po testojmë...\\n\";\n#endif"
+      },
+      "related": [
+        "include-directive",
+        "cpp-const",
+        "compiler"
+      ]
+    },
+    {
+      "id": "cmake",
+      "en": "CMake & Makefile",
+      "sq": null,
+      "aliases": [
+        "cmake",
+        "makefile",
+        "make",
+        "cmakelists.txt"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Kur projekti ka shumë skedarë, s'i kompajlon me dorë: Makefile-i ose CMake-u i shkruajnë një herë hapat e ndërtimit, dhe pastaj mjafton një komandë. CMake-u është standardi i sotëm për projektet C++ — si Maven-i për Java-n.",
+        "en": "When a project has many files, you don't compile them by hand: a Makefile or CMake writes down the build steps once, and then one command is enough. CMake is today's standard for C++ projects — like Maven for Java."
+      },
+      "analogy": {
+        "sq": "Si udhëzimet e montimit të një dollapi IKEA: i ndjek hap pas hapi, dhe rezultati del njësoj çdo herë.",
+        "en": "Like the assembly instructions for an IKEA wardrobe: follow them step by step and you get the same result every time."
+      },
+      "code": {
+        "language": "cmake",
+        "snippet": "cmake_minimum_required(VERSION 3.20)\nproject(Loja)\nadd_executable(loja main.cpp loja.cpp)"
+      },
+      "related": [
+        "maven-gradle",
+        "linker",
+        "dependency"
+      ]
+    },
+    {
+      "id": "cpp-standards",
+      "en": "C++ standards (C++11, C++17, C++20)",
+      "sq": "Versionet e C++",
+      "aliases": [
+        "c++11",
+        "c++17",
+        "c++20",
+        "c++23",
+        "modern c++"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "C++ përditësohet çdo tre vjet me një version të ri. C++11 e ndryshoi gjuhën shumë (auto, lambda, smart pointers) dhe quhet fillimi i „C++ modern“; C++17 dhe C++20 shtuan edhe më shumë. Me -std=c++20 i thua kompajlerit cilin version të përdorë.",
+        "en": "C++ gets a new version every three years. C++11 changed the language a lot (auto, lambdas, smart pointers) and is seen as the start of “modern C++”; C++17 and C++20 added even more. With -std=c++20 you tell the compiler which version to use."
+      },
+      "analogy": {
+        "sq": "Si modelet e një veture që del çdo disa vjet: e njëjta markë, por modeli i ri ka kamerë mbrapa dhe ekran me prekje.",
+        "en": "Like a car model that's updated every few years: same brand, but the new one has a reversing camera and a touchscreen."
+      },
+      "code": null,
+      "related": [
+        "semver",
+        "c-plus-plus",
+        "gcc-clang"
+      ]
+    },
+    {
+      "id": "sizeof-operator",
+      "en": "sizeof",
+      "sq": null,
+      "aliases": [
+        "sizeof()",
+        "bytes c++"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "sizeof të tregon sa bajt zë një tip ose variabël në memorie — p.sh. sizeof(int) zakonisht është 4, sizeof(double) 8. Ndihmon të kuptosh sa memorie përdor programi.",
+        "en": "sizeof tells you how many bytes a type or variable takes in memory — for example sizeof(int) is usually 4, sizeof(double) 8. It helps you understand how much memory your program uses."
+      },
+      "analogy": {
+        "sq": "Si ta matësh sa vend zë një valixhe para se ta futësh në bagazh.",
+        "en": "Like measuring how much space a suitcase takes before putting it in the boot."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "std::cout << sizeof(char);    // 1\nstd::cout << sizeof(int);     // 4\nstd::cout << sizeof(double);  // 8"
+      },
+      "related": [
+        "bit-byte",
+        "cpp-data-types",
+        "ram"
+      ]
+    },
+    {
+      "id": "enum-class",
+      "en": "enum class",
+      "sq": null,
+      "aliases": [
+        "scoped enum",
+        "enum c++"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "enum class krijon një tip me një listë të fiksuar vlerash me emër — p.sh. Ngjyra::Kuqe. Ndryshe nga enum-i i vjetër, emrat s'përzihen me pjesën tjetër të kodit dhe s'kthehen vetë në numra, prandaj është më i sigurt.",
+        "en": "enum class creates a type with a fixed list of named values — like Colour::Red. Unlike the old enum, the names don't leak into the rest of the code and don't silently turn into numbers, so it's safer."
+      },
+      "analogy": {
+        "sq": "Si semafori: ka vetëm tri ngjyra, dhe secila ka emrin e vet — s'mund të jetë „vjollcë“.",
+        "en": "Like a traffic light: only three colours, each with its own name — it can't be “purple”."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "enum class Semafor { Kuqe, Verdhe, Gjelber };\nSemafor s = Semafor::Kuqe;\nif (s == Semafor::Kuqe) std::cout << \"Ndal!\";"
+      },
+      "related": [
+        "enum",
+        "constant",
+        "switch-case"
+      ]
+    },
+    {
+      "id": "static-cast",
+      "en": "static_cast",
+      "sq": null,
+      "aliases": [
+        "static_cast",
+        "cast c++",
+        "dynamic_cast",
+        "type casting c++"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "static_cast<tipi>(vlera) e kthen qartë një vlerë në një tip tjetër, p.sh. int në double, që pjesëtimi të japë presje. Është mënyra e sigurt dhe e lexueshme e C++ në vend të (double) të vjetër të C-së.",
+        "en": "static_cast<type>(value) clearly converts a value to another type, like int to double so division gives decimals. It's C++'s safe, readable way instead of C's old (double) style."
+      },
+      "analogy": {
+        "sq": "Si ta kthesh qartë monedhën në këmbimore — me faturë — në vend që ta bësh „me sy“.",
+        "en": "Like exchanging currency at a bureau — with a receipt — instead of “eyeballing” it."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "int shuma = 7, numri = 2;\ndouble mesatarja = static_cast<double>(shuma) / numri;  // 3.5\n// pa cast: 7 / 2 = 3"
+      },
+      "related": [
+        "type-conversion",
+        "java-casting",
+        "cpp-data-types"
+      ]
+    },
+    {
+      "id": "cpp-file-io",
+      "en": "File I/O (fstream)",
+      "sq": "Skedarët në C++",
+      "aliases": [
+        "fstream",
+        "ifstream",
+        "ofstream",
+        "read file c++"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Me <fstream>, ifstream lexon nga skedarët dhe ofstream shkruan në to — me të njëjtat << dhe >> që i përdor me cout dhe cin. Skedari mbyllet vetë kur objekti del nga scope-i.",
+        "en": "With <fstream>, ifstream reads from files and ofstream writes to them — using the same << and >> you use with cout and cin. The file closes by itself when the object goes out of scope."
+      },
+      "analogy": {
+        "sq": "Si fletorja e detyrave: me ofstream shkruan në të, me ifstream e lexon atë që ke shkruar dje.",
+        "en": "Like a homework notebook: with ofstream you write in it, with ifstream you read what you wrote yesterday."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "#include <fstream>\nstd::ofstream dalja(\"notat.txt\");\ndalja << \"Arta 5\\n\";\nstd::ifstream hyrja(\"notat.txt\");"
+      },
+      "related": [
+        "file-handling",
+        "cpp-iostream",
+        "raii"
+      ]
+    },
+    {
+      "id": "competitive-programming",
+      "en": "Competitive programming",
+      "sq": "Programimi garues",
+      "aliases": [
+        "olimpiada",
+        "olympiad",
+        "codeforces",
+        "icpc",
+        "bits/stdc++.h"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Programimi garues janë garat ku zgjidh probleme algoritmike sa më shpejt dhe me kod sa më efikas — si olimpiadat e informatikës, Codeforces ose ICPC. C++ është gjuha më e përdorur aty, falë shpejtësisë dhe STL-së.",
+        "en": "Competitive programming is contests where you solve algorithm problems as fast as possible with code that's as efficient as possible — like informatics olympiads, Codeforces or ICPC. C++ is the most-used language there, thanks to its speed and the STL."
+      },
+      "analogy": {
+        "sq": "Si gara e shahut me orë: s'mjafton të gjesh lëvizjen e duhur, duhet ta gjesh brenda kohës.",
+        "en": "Like speed chess: finding the right move isn't enough, you have to find it before the clock runs out."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "#include <bits/stdc++.h>\nusing namespace std;\nint main() { int n; cin >> n; cout << n * (n + 1) / 2; }"
+      },
+      "related": [
+        "algorithm",
+        "big-o",
+        "stl"
+      ]
+    },
+    {
+      "id": "unreal-engine",
+      "en": "Unreal Engine",
+      "sq": null,
+      "aliases": [
+        "unreal",
+        "ue5",
+        "game engine",
+        "motor lojërash"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Unreal Engine-i është një nga motorët më të fuqishëm për të bërë lojëra video dhe grafika 3D, dhe kodi i tij shkruhet në C++. Shumë lojëra të mëdha (dhe efekte filmash) janë bërë me të.",
+        "en": "Unreal Engine is one of the most powerful engines for making video games and 3D graphics, and its code is written in C++. Many big games (and film effects) are made with it."
+      },
+      "analogy": {
+        "sq": "Si një studio filmi e gatshme me kamera, drita dhe skena: ti sjell vetëm historinë.",
+        "en": "Like a ready-made film studio with cameras, lights and sets: you just bring the story."
+      },
+      "code": null,
+      "related": [
+        "c-plus-plus",
+        "framework",
+        "gpu"
+      ]
+    },
+    {
+      "id": "arduino",
+      "en": "Arduino",
+      "sq": null,
+      "aliases": [
+        "microcontroller",
+        "mikrokontrollues",
+        "embedded",
+        "iot"
+      ],
+      "category": "cpp",
+      "explanation": {
+        "sq": "Arduino-ja është një pllakë e vogël elektronike që e programon me një version të thjeshtë të C++ për të kontrolluar drita, motorë dhe sensorë. Është mënyra më e njohur për të filluar me robotikë dhe pajisje „smart“ në shkollë.",
+        "en": "Arduino is a small electronics board you program with a simple version of C++ to control lights, motors and sensors. It's the most popular way to get started with robotics and “smart” devices at school."
+      },
+      "analogy": {
+        "sq": "Si truri i një lodre robot: ti i shkruan rregullat, dhe ai i ndez dritat ose i lëviz rrotat.",
+        "en": "Like the brain of a toy robot: you write the rules, and it switches on the lights or turns the wheels."
+      },
+      "code": {
+        "language": "cpp",
+        "snippet": "void setup() { pinMode(13, OUTPUT); }\nvoid loop() {\n    digitalWrite(13, HIGH); delay(500);\n    digitalWrite(13, LOW);  delay(500);\n}"
+      },
+      "related": [
+        "hardware-software",
+        "c-language",
+        "loop"
       ]
     }
   ]
