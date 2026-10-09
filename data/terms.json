@@ -2821,9 +2821,7 @@
       "sq": "Ngjarje",
       "aliases": [
         "ngjarja",
-        "click",
-        "event listener",
-        "addeventlistener"
+        "click"
       ],
       "category": "general",
       "explanation": {
@@ -2876,8 +2874,6 @@
       "en": "Asynchronous (async)",
       "sq": "Asinkron",
       "aliases": [
-        "async",
-        "await",
         "asinkrone"
       ],
       "category": "general",
@@ -2934,8 +2930,7 @@
       "sq": "Varësi",
       "aliases": [
         "varësitë",
-        "dependencies",
-        "package.json"
+        "dependencies"
       ],
       "category": "general",
       "explanation": {
@@ -4226,9 +4221,7 @@
         "casting",
         "konvertim",
         "int()",
-        "str()",
-        "parseint",
-        "number()"
+        "str()"
       ],
       "category": "general",
       "explanation": {
@@ -4842,8 +4835,7 @@
       "en": "PHP",
       "sq": null,
       "aliases": [
-        "laravel",
-        "wordpress"
+        "laravel"
       ],
       "category": "languages",
       "explanation": {
@@ -15831,7 +15823,6 @@
       "en": "Integer overflow",
       "sq": "Tejmbushja e numrit",
       "aliases": [
-        "overflow",
         "int max",
         "integer.max_value",
         "tejmbushje"
@@ -19127,6 +19118,1561 @@
         "hardware-software",
         "c-language",
         "loop"
+      ]
+    },
+    {
+      "id": "html-document-structure",
+      "en": "HTML document structure (<!DOCTYPE>, head, body)",
+      "sq": "Struktura e një faqeje HTML",
+      "aliases": [
+        "<!doctype html>",
+        "doctype",
+        "<head>",
+        "<body>",
+        "html boilerplate"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Çdo faqe HTML ka të njëjtin skelet: <!DOCTYPE html> në krye, pastaj <html> me dy pjesë — <head> për informacionin që s'shihet (titulli, stilet, meta tag-et) dhe <body> për gjithçka që sheh përdoruesi.",
+        "en": "Every HTML page has the same skeleton: <!DOCTYPE html> at the top, then <html> with two parts — <head> for the information you don't see (title, styles, meta tags) and <body> for everything the user sees."
+      },
+      "analogy": {
+        "sq": "Si një letër zyrtare: zarfi me adresën dhe pullën (head) dhe vetë letra që lexohet (body).",
+        "en": "Like an official letter: the envelope with the address and stamp (head) and the letter itself that gets read (body)."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<!DOCTYPE html>\n<html lang=\"sq\">\n  <head><title>Faqja ime</title></head>\n  <body><h1>Mirë se vini!</h1></body>\n</html>"
+      },
+      "related": [
+        "html",
+        "meta-tags",
+        "html-tag"
+      ]
+    },
+    {
+      "id": "meta-tags",
+      "en": "Meta tags (title, description)",
+      "sq": "Meta tag-et",
+      "aliases": [
+        "meta tag",
+        "meta description",
+        "<title>",
+        "<meta>"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Meta tag-et janë rreshta në <head> që i japin informacion shfletuesit dhe Google-it për faqen: <title> është titulli në skedë dhe në rezultatet e kërkimit, ndërsa meta description është përshkrimi i shkurtër poshtë titullit.",
+        "en": "Meta tags are lines in the <head> that tell the browser and Google about the page: <title> is the title in the tab and in search results, while the meta description is the short summary under the title."
+      },
+      "analogy": {
+        "sq": "Si etiketa në kopertinën e librit: titulli dhe një fjali në pjesën e pasme që të bind ta hapësh.",
+        "en": "Like the label on a book: the title and one sentence on the back that convinces you to open it."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<title>Fjalori i Programimit</title>\n<meta name=\"description\" content=\"Termat e programimit në shqip.\">\n<meta charset=\"utf-8\">"
+      },
+      "related": [
+        "seo",
+        "open-graph",
+        "html-document-structure"
+      ]
+    },
+    {
+      "id": "html-table",
+      "en": "HTML tables",
+      "sq": "Tabelat në HTML",
+      "aliases": [
+        "<table>",
+        "tr",
+        "td",
+        "th",
+        "tabelë html"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Me <table> krijon tabela në faqe: <tr> është një rresht, <th> një qelizë titulli dhe <td> një qelizë e zakonshme. Përdori për të dhëna tabelare — orare, rezultate, çmime — jo për ta ndërtuar paraqitjen e faqes.",
+        "en": "With <table> you create tables on a page: <tr> is a row, <th> a header cell and <td> a normal cell. Use them for tabular data — timetables, scores, prices — not for laying out the page."
+      },
+      "analogy": {
+        "sq": "Si tabela e renditjes në kampionat: rreshta për ekipet, kolona për ndeshjet, golat dhe pikët.",
+        "en": "Like a league table: rows for the teams, columns for matches, goals and points."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<table>\n  <tr><th>Ekipi</th><th>Pikë</th></tr>\n  <tr><td>Prishtina</td><td>42</td></tr>\n  <tr><td>Ballkani</td><td>45</td></tr>\n</table>"
+      },
+      "related": [
+        "html-tag",
+        "semantic-html",
+        "spreadsheet"
+      ]
+    },
+    {
+      "id": "form-elements",
+      "en": "label, select & textarea",
+      "sq": "Elementet e formularit",
+      "aliases": [
+        "label",
+        "textarea",
+        "<option>",
+        "dropdown",
+        "<select>"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Përveç <input>, formularët kanë <label> (teksti që tregon çfarë të shkruash, i lidhur me fushën përmes for), <select> me <option> për listë zgjedhjesh, dhe <textarea> për tekst të gjatë. Label-i i mirë e bën formularin të qasshëm.",
+        "en": "Besides <input>, forms have <label> (the text saying what to type, linked to the field with for), <select> with <option> for a dropdown, and <textarea> for long text. Good labels make a form accessible."
+      },
+      "analogy": {
+        "sq": "Si formulari i regjistrimit në shkollë: etiketa „Emri:“, një kuti për të shkruar, një listë për të zgjedhur klasën, dhe një hapësirë e madhe për „vërejtje“.",
+        "en": "Like a school registration form: a “Name:” label, a box to write in, a list to pick your class, and a big space for “comments”."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<label for=\"qyteti\">Qyteti</label>\n<select id=\"qyteti\">\n  <option>Prishtinë</option><option>Tiranë</option>\n</select>\n<textarea placeholder=\"Mesazhi...\"></textarea>"
+      },
+      "related": [
+        "form",
+        "input-button",
+        "accessibility"
+      ]
+    },
+    {
+      "id": "css-specificity",
+      "en": "CSS specificity",
+      "sq": "Specifiteti në CSS",
+      "aliases": [
+        "specificity",
+        "!important",
+        "cascade",
+        "kaskada"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Kur dy rregulla CSS i japin të njëjtit element stile të ndryshme, fiton ai më specifik: një #id mund më shumë se një .klasë, dhe një .klasë më shumë se një tag. Nëse janë njësoj, fiton ai që shkruhet më poshtë. !important i kapërcen të gjitha — por përdore rrallë.",
+        "en": "When two CSS rules give the same element different styles, the more specific one wins: an #id beats a .class, and a .class beats a tag. If they're equal, the one written later wins. !important overrides everything — but use it rarely."
+      },
+      "analogy": {
+        "sq": "Si urdhrat në shtëpi: „të gjithë fëmijët në shtrat në 10“ vlen, por „Ardi mund të rrijë deri në 11 sonte“ është më specifik — dhe fiton.",
+        "en": "Like house rules: “all kids in bed at 10” applies, but “Ardi can stay up till 11 tonight” is more specific — and wins."
+      },
+      "code": {
+        "language": "css",
+        "snippet": "p { color: black; }          /* më i dobëti */\n.shenim { color: blue; }     /* fiton mbi p */\n#kryesor { color: red; }     /* fiton mbi .shenim */"
+      },
+      "related": [
+        "css-selector",
+        "class-vs-id",
+        "css"
+      ]
+    },
+    {
+      "id": "css-pseudo-element",
+      "en": "::before & ::after",
+      "sq": "Pseudo-elementet",
+      "aliases": [
+        "pseudo-element",
+        "::before",
+        "::after",
+        "content:"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Pseudo-elementet ::before dhe ::after shtojnë përmbajtje dekorative para ose pas një elementi vetëm me CSS, pa e prekur HTML-në — p.sh. një ikonë, një vijë ose thonjëza. Gjithmonë kërkojnë vetinë content.",
+        "en": "The ::before and ::after pseudo-elements add decorative content before or after an element using only CSS, without touching the HTML — like an icon, a line or quote marks. They always need the content property."
+      },
+      "analogy": {
+        "sq": "Si fjongoja që ia vendos dhuratës nga jashtë: dhurata është po ajo, vetëm duket më bukur.",
+        "en": "Like the bow you stick on a present: the present's the same, it just looks nicer."
+      },
+      "code": {
+        "language": "css",
+        "snippet": ".e-re::after {\n  content: \" ✨ E RE\";\n  color: crimson;\n}"
+      },
+      "related": [
+        "pseudo-class",
+        "css-selector",
+        "css"
+      ]
+    },
+    {
+      "id": "css-transform",
+      "en": "CSS transform",
+      "sq": "Transformimet në CSS",
+      "aliases": [
+        "transform",
+        "rotate",
+        "translate"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "transform e lëviz (translate), e rrotullon (rotate), e zmadhon (scale) ose e anon një element, pa i prekur elementet përreth. Bashkë me transition, krijon efekte të lëmuara — p.sh. një kartë që zmadhohet pak kur kalon mausi sipër.",
+        "en": "transform moves (translate), rotates (rotate), scales (scale) or skews an element, without affecting the elements around it. Together with transition, it creates smooth effects — like a card that grows slightly on hover."
+      },
+      "analogy": {
+        "sq": "Si ta marrësh një foto nga muri dhe ta kthesh pak ose ta afrosh te sytë — korniza në mur mbetet në vend.",
+        "en": "Like taking a photo off the wall and tilting it or bringing it closer to your eyes — the frame on the wall stays put."
+      },
+      "code": {
+        "language": "css",
+        "snippet": ".karta { transition: transform 0.2s; }\n.karta:hover {\n  transform: scale(1.05) rotate(-1deg);\n}"
+      },
+      "related": [
+        "css-transition",
+        "pseudo-class",
+        "css"
+      ]
+    },
+    {
+      "id": "css-overflow",
+      "en": "overflow",
+      "sq": null,
+      "aliases": [
+        "overflow hidden",
+        "overflow scroll",
+        "overflow auto",
+        "scrollbar",
+        "text-overflow"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "overflow vendos çfarë ndodh kur përmbajtja s'nxë brenda kutisë së saj: visible (del jashtë), hidden (pritet), scroll ose auto (shfaqet shiriti i lëvizjes). Shumë probleme me „faqja lëviz anash në celular“ vijnë nga overflow-i.",
+        "en": "overflow decides what happens when content doesn't fit inside its box: visible (spills out), hidden (gets cut off), scroll or auto (a scrollbar appears). Lots of “the page scrolls sideways on mobile” problems come from overflow."
+      },
+      "analogy": {
+        "sq": "Si kur mbush shumë gotën: ose derdhet (visible), ose e mbulon me kapak (hidden), ose e hedh në një gotë me thupër (scroll).",
+        "en": "Like overfilling a glass: it either spills (visible), you put a lid on it (hidden), or you pour it into a glass with a straw (scroll)."
+      },
+      "code": {
+        "language": "css",
+        "snippet": ".kutia {\n  height: 200px;\n  overflow: auto;   /* scroll kur s'nxë */\n}"
+      },
+      "related": [
+        "css-box-model",
+        "responsive-design",
+        "css"
+      ]
+    },
+    {
+      "id": "css-shadows",
+      "en": "box-shadow & border-radius",
+      "sq": "Hijet dhe qoshet e rrumbullakëta",
+      "aliases": [
+        "box-shadow",
+        "border-radius",
+        "text-shadow",
+        "hije",
+        "rounded corners"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "border-radius i rrumbullakos qoshet e një elementi (me 50% bëhet rreth), ndërsa box-shadow i shton hije, që të duket sikur „ngrihet“ nga faqja. Janë dy nga vetitë më të përdorura për butona dhe karta moderne.",
+        "en": "border-radius rounds an element's corners (at 50% it becomes a circle), while box-shadow adds a shadow so it looks like it's “lifting” off the page. They're two of the most-used properties for modern buttons and cards."
+      },
+      "analogy": {
+        "sq": "Si ta vendosësh një kartolinë mbi tavolinë në diell: qoshet e rrumbullakëta dhe hija poshtë saj e bëjnë të duket e vërtetë.",
+        "en": "Like a postcard lying on a table in the sun: the rounded corners and the shadow under it make it look real."
+      },
+      "code": {
+        "language": "css",
+        "snippet": ".karta {\n  border-radius: 12px;\n  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);\n}\n.avatar { border-radius: 50%; }"
+      },
+      "related": [
+        "css-box-model",
+        "css-colors",
+        "ui"
+      ]
+    },
+    {
+      "id": "css-reset",
+      "en": "CSS reset / normalize",
+      "sq": null,
+      "aliases": [
+        "reset css",
+        "normalize.css",
+        "box-sizing: border-box"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Çdo shfletues ka stilet e veta të paracaktuara — margjina, madhësi titujsh — që ndryshojnë pak nga njëri te tjetri. Një CSS reset i fshin ose i barazon këto, që faqja jote të duket njësoj kudo dhe të nisësh nga zero.",
+        "en": "Every browser has its own default styles — margins, heading sizes — that differ slightly between browsers. A CSS reset removes or evens them out, so your page looks the same everywhere and you start from scratch."
+      },
+      "analogy": {
+        "sq": "Si ta pastrosh tabelën plotësisht para se të fillosh mësimin, që të mos mbetet asgjë nga ora e kaluar.",
+        "en": "Like wiping the board completely before the lesson, so nothing's left over from the last class."
+      },
+      "code": {
+        "language": "css",
+        "snippet": "*, *::before, *::after { box-sizing: border-box; }\nbody { margin: 0; }\nimg { max-width: 100%; display: block; }"
+      },
+      "related": [
+        "css-box-model",
+        "browser-compatibility",
+        "css"
+      ]
+    },
+    {
+      "id": "aria-attributes",
+      "en": "ARIA attributes",
+      "sq": "Atributet ARIA",
+      "aliases": [
+        "aria",
+        "aria-label",
+        "aria-hidden",
+        "screen reader"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Atributet ARIA (aria-label, aria-hidden, role) u japin informacion shtesë lexuesve të ekranit që përdorin njerëzit me shikim të dobët — p.sh. çfarë bën një buton që ka vetëm ikonë. Rregulli i parë: përdor HTML semantike kur mundesh, ARIA vetëm kur s'mjafton.",
+        "en": "ARIA attributes (aria-label, aria-hidden, role) give extra information to the screen readers used by people with low vision — like what an icon-only button does. Rule one: use semantic HTML when you can, ARIA only when that's not enough."
+      },
+      "analogy": {
+        "sq": "Si shkrimi Braille në butonat e ashensorit: s'e ndryshon ashensorin, por ia bën të qartë kujtdo që s'mund t'i shohë numrat.",
+        "en": "Like Braille on lift buttons: it doesn't change the lift, but makes it clear to anyone who can't see the numbers."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<button aria-label=\"Mbyll menynë\">\n  <i class=\"fa-solid fa-xmark\" aria-hidden=\"true\"></i>\n</button>"
+      },
+      "related": [
+        "accessibility",
+        "semantic-html",
+        "html-attribute"
+      ]
+    },
+    {
+      "id": "component-library",
+      "en": "UI component libraries",
+      "sq": "Libraritë e komponentëve",
+      "aliases": [
+        "ui library",
+        "material ui",
+        "mui",
+        "shadcn",
+        "chakra ui",
+        "design system"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Libraritë e komponentëve — si MUI, shadcn/ui ose Chakra — të japin butona, formularë, meny dhe dritare të gatshme, të dizajnuara mirë dhe të qasshme. Në vend që t'i ndërtosh vetë, i merr dhe i përshtat me ngjyrat e tua.",
+        "en": "Component libraries — like MUI, shadcn/ui or Chakra — give you ready-made buttons, forms, menus and dialogs that are well designed and accessible. Instead of building them yourself, you take them and adjust them to your colours."
+      },
+      "analogy": {
+        "sq": "Si pjesët e gatshme të Lego-s: s'i derdh vetë tullat, thjesht ndërton me to.",
+        "en": "Like ready-made Lego pieces: you don't mould the bricks yourself, you just build with them."
+      },
+      "code": null,
+      "related": [
+        "component",
+        "react",
+        "tailwind-css"
+      ]
+    },
+    {
+      "id": "figma",
+      "en": "Figma",
+      "sq": null,
+      "aliases": [
+        "figma design",
+        "ui design",
+        "prototip dizajni"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Figma-ja është mjeti më i përdorur për të dizajnuar faqe dhe aplikacione para se t'i programosh. Punon në shfletues, disa njerëz mund ta editojnë njëkohësisht, dhe programuesit marrin prej saj ngjyrat, madhësitë dhe hapësirat e sakta.",
+        "en": "Figma is the most-used tool for designing websites and apps before you code them. It runs in the browser, several people can edit at once, and developers get exact colours, sizes and spacing from it."
+      },
+      "analogy": {
+        "sq": "Si plani i arkitektit para se të fillojë ndërtimi i shtëpisë: të gjithë e shohin si do të duket, dhe mjeshtrit punojnë sipas tij.",
+        "en": "Like an architect's plan before building a house: everyone sees how it'll look, and the builders follow it."
+      },
+      "code": null,
+      "related": [
+        "wireframe",
+        "ui",
+        "ux"
+      ]
+    },
+    {
+      "id": "wireframe",
+      "en": "Wireframe & mockup",
+      "sq": "Skica e faqes",
+      "aliases": [
+        "wireframe",
+        "mockup",
+        "skicë",
+        "low-fidelity"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Wireframe-i është një skicë e thjeshtë bardh e zi e një faqeje — kutia për menynë, për fotot, për tekstin — pa ngjyra dhe pa detaje. Mockup-i është versioni i plotë vizual. Nisesh me wireframe që t'i rregullosh idetë shpejt.",
+        "en": "A wireframe is a simple black-and-white sketch of a page — a box for the menu, the photos, the text — with no colours or details. A mockup is the full visual version. You start with a wireframe to sort out ideas quickly."
+      },
+      "analogy": {
+        "sq": "Si skica me laps para se ta pikturosh një tablo: vendos ku shkon çdo gjë, pastaj i hedh ngjyrat.",
+        "en": "Like a pencil sketch before painting a picture: you decide where everything goes, then add the colours."
+      },
+      "code": null,
+      "related": [
+        "figma",
+        "ux",
+        "mvp"
+      ]
+    },
+    {
+      "id": "cms-wordpress",
+      "en": "CMS (WordPress)",
+      "sq": "Sistem për menaxhimin e përmbajtjes",
+      "aliases": [
+        "cms",
+        "wordpress",
+        "content management system",
+        "strapi",
+        "headless cms"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Një CMS (Content Management System) si WordPress-i të lejon të krijosh dhe ndryshosh përmbajtjen e një faqeje — artikuj, foto, faqe — pa shkruar kod, përmes një paneli. Një pjesë e madhe e faqeve në internet janë ndërtuar me WordPress.",
+        "en": "A CMS (Content Management System) like WordPress lets you create and change a website's content — articles, photos, pages — without writing code, through a dashboard. A large share of the web's sites are built with WordPress."
+      },
+      "analogy": {
+        "sq": "Si tabela e njoftimeve e shkollës me një sekretare: ti i jep tekstin, ajo e vendos bukur pa qenë nevoja të dish si ndërtohet tabela.",
+        "en": "Like the school noticeboard with a secretary: you give them the text, they put it up nicely without you needing to know how the board works."
+      },
+      "code": null,
+      "related": [
+        "php",
+        "web-app",
+        "hosting"
+      ]
+    },
+    {
+      "id": "vercel-netlify",
+      "en": "Vercel & Netlify",
+      "sq": null,
+      "aliases": [
+        "vercel",
+        "netlify",
+        "cloudflare pages",
+        "render"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Vercel-i dhe Netlify-ja janë platforma që e publikojnë faqen tënde direkt nga GitHub-i: sa herë bën push, faqja ndërtohet dhe del live vetë, me HTTPS dhe CDN. Kanë plan falas që mjafton për projektet personale — ky fjalor jeton në Vercel.",
+        "en": "Vercel and Netlify are platforms that publish your site straight from GitHub: every time you push, the site builds and goes live automatically, with HTTPS and a CDN. They have a free plan that's plenty for personal projects — this glossary lives on Vercel."
+      },
+      "analogy": {
+        "sq": "Si një shtypshkronjë që e printon dhe e shpërndan gazetën tënde vetë sa herë dorëzon një artikull të ri.",
+        "en": "Like a printing house that prints and delivers your newspaper by itself every time you hand in a new article."
+      },
+      "code": null,
+      "related": [
+        "deploy",
+        "hosting",
+        "ci-cd"
+      ]
+    },
+    {
+      "id": "landing-page",
+      "en": "Landing page",
+      "sq": "Faqe hyrëse",
+      "aliases": [
+        "homepage",
+        "faqja kryesore",
+        "hero section"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Landing page-i është faqja ku „zbret“ vizitori — shpesh nga një reklamë ose kërkim — dhe që ka një qëllim të vetëm: ta bindë të regjistrohet, të blejë ose të provojë diçka. Zakonisht ka një titull të madh (hero), përfitime dhe një buton të qartë.",
+        "en": "A landing page is the page where a visitor “lands” — often from an ad or a search — and it has one goal: convincing them to sign up, buy or try something. It usually has a big headline (hero), benefits and one clear button."
+      },
+      "analogy": {
+        "sq": "Si vitrina e dyqanit në rrugë: duhet të të ndalë dhe të të bindë të hysh brenda brenda pak sekondash.",
+        "en": "Like a shop window on the street: it has to stop you and get you inside within a few seconds."
+      },
+      "code": null,
+      "related": [
+        "ux",
+        "seo",
+        "web-analytics"
+      ]
+    },
+    {
+      "id": "web-analytics",
+      "en": "Web analytics",
+      "sq": "Analitika e faqes",
+      "aliases": [
+        "analytics",
+        "google analytics",
+        "page views",
+        "vizita",
+        "plausible"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Analitika e faqes mat sa njerëz e vizitojnë faqen tënde, nga vijnë, cilat faqe lexojnë dhe sa kohë qëndrojnë. Mjete si Google Analytics, Plausible ose Vercel Analytics t'i tregojnë në grafikë — mos harro privatësinë dhe pëlqimin e cookie-ve.",
+        "en": "Web analytics measures how many people visit your site, where they come from, which pages they read and how long they stay. Tools like Google Analytics, Plausible or Vercel Analytics show it in charts — don't forget privacy and cookie consent."
+      },
+      "analogy": {
+        "sq": "Si numëruesi në hyrje të stadiumit, që të tregon sa tifozë erdhën dhe nga cila portë hynë.",
+        "en": "Like the turnstile counter at the stadium, telling you how many fans came and which gate they used."
+      },
+      "code": null,
+      "related": [
+        "seo",
+        "cookie-consent",
+        "landing-page"
+      ]
+    },
+    {
+      "id": "browser-compatibility",
+      "en": "Browser compatibility",
+      "sq": "Përputhshmëria me shfletuesit",
+      "aliases": [
+        "caniuse",
+        "can i use",
+        "cross-browser",
+        "vendor prefix"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Jo çdo shfletues i mbështet të gjitha veçoritë e reja të HTML-së, CSS-së dhe JavaScript-it njëkohësisht. Faqja caniuse.com të tregon ku punon secila veçori, që ta dish nëse mund ta përdorësh pa problem për të gjithë vizitorët.",
+        "en": "Not every browser supports all the new HTML, CSS and JavaScript features at the same time. The site caniuse.com shows where each feature works, so you know whether you can safely use it for all your visitors."
+      },
+      "analogy": {
+        "sq": "Si një prizë e re: para se ta blesh pajisjen, kontrollon nëse spina i përshtatet prizave në shtëpi.",
+        "en": "Like a new plug: before buying the appliance, you check the plug fits the sockets at home."
+      },
+      "code": null,
+      "related": [
+        "browser",
+        "polyfill",
+        "css-reset"
+      ]
+    },
+    {
+      "id": "image-formats",
+      "en": "Image formats (JPG, PNG, WebP, SVG)",
+      "sq": "Formatet e fotove",
+      "aliases": [
+        "jpg",
+        "jpeg",
+        "png",
+        "webp",
+        "avif",
+        "gif"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Formati i fotos ndikon shumë në shpejtësinë e faqes: JPG për fotografi, PNG për imazhe me sfond transparent, SVG për ikona dhe logo, dhe WebP/AVIF — më të rejat — që janë shumë më të lehta me të njëjtën cilësi.",
+        "en": "The image format makes a big difference to page speed: JPG for photos, PNG for images with a transparent background, SVG for icons and logos, and WebP/AVIF — the newest — which are much smaller at the same quality."
+      },
+      "analogy": {
+        "sq": "Si të zgjedhësh valixhen e duhur për udhëtim: për një fundjavë s'merr valixhen më të madhe në shtëpi.",
+        "en": "Like picking the right suitcase for a trip: for a weekend you don't take the biggest one in the house."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<picture>\n  <source srcset=\"foto.avif\" type=\"image/avif\">\n  <img src=\"foto.jpg\" alt=\"Ura e Mitrovicës\" width=\"800\" height=\"500\">\n</picture>"
+      },
+      "related": [
+        "img-tag",
+        "web-performance",
+        "svg"
+      ]
+    },
+    {
+      "id": "nginx-apache",
+      "en": "Web servers (Nginx, Apache)",
+      "sq": "Serverët ueb",
+      "aliases": [
+        "nginx",
+        "apache",
+        "web server",
+        "reverse proxy"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Nginx-i dhe Apache-ja janë programet që rrinë në server dhe u dërgojnë faqet vizitorëve kur i kërkojnë. Nginx-i shpesh përdoret edhe si „reverse proxy“: i pret kërkesat dhe ia kalon aplikacionit tënd Node ose Python.",
+        "en": "Nginx and Apache are the programs that sit on a server and send pages to visitors when they ask for them. Nginx is often also used as a “reverse proxy”: it receives requests and passes them on to your Node or Python app."
+      },
+      "analogy": {
+        "sq": "Si kamarieri në restorant: merr porosinë nga klienti, ia çon kuzhinës, dhe ia sjell pjatën në tavolinë.",
+        "en": "Like a waiter in a restaurant: takes the order from the customer, passes it to the kitchen, and brings the plate to the table."
+      },
+      "code": null,
+      "related": [
+        "server",
+        "hosting",
+        "load-balancer"
+      ]
+    },
+    {
+      "id": "url-slug",
+      "en": "Slug",
+      "sq": null,
+      "aliases": [
+        "url slug",
+        "pretty url",
+        "clean url",
+        "permalink"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Slug-u është pjesa e lexueshme e një adrese që identifikon faqen — p.sh. te fjalori.dev/term/api, slug-u është „api“. Slug-ët e mirë janë të shkurtër, me shkronja të vogla, me viza në vend të hapësirave, dhe pa ë e ç.",
+        "en": "A slug is the readable part of an address that identifies the page — e.g. in fjalori.dev/term/api, the slug is “api”. Good slugs are short, lowercase, with hyphens instead of spaces, and without special characters."
+      },
+      "analogy": {
+        "sq": "Si emri në zilen e derës: në vend të „Banesa nr. 4827“, shkruan „Krasniqi“ — e gjen kushdo menjëherë.",
+        "en": "Like the name on a doorbell: instead of “Flat no. 4827”, it says “Krasniqi” — anyone finds it straight away."
+      },
+      "code": null,
+      "related": [
+        "url",
+        "seo",
+        "routing"
+      ]
+    },
+    {
+      "id": "redirect",
+      "en": "Redirect (301, 302)",
+      "sq": "Ridrejtim",
+      "aliases": [
+        "302",
+        "ridrejtim",
+        "redirect url"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Një redirect e dërgon vetë vizitorin nga një adresë te një tjetër. 301 do të thotë „u zhvendos përgjithmonë“ (dhe Google e kalon renditjen te adresa e re), ndërsa 302 do të thotë „përkohësisht“. Përdoret kur ndryshon domenin ose adresën e një faqeje.",
+        "en": "A redirect automatically sends the visitor from one address to another. 301 means “moved permanently” (and Google passes the ranking to the new address), while 302 means “temporarily”. It's used when you change your domain or a page's address."
+      },
+      "analogy": {
+        "sq": "Si shënimi në derën e dyqanit të vjetër: „U zhvendosëm te rruga Nënë Tereza nr. 12“.",
+        "en": "Like the sign on the old shop door: “We've moved to 12 Mother Teresa Street”."
+      },
+      "code": null,
+      "related": [
+        "http-status-codes",
+        "url",
+        "domain"
+      ]
+    },
+    {
+      "id": "hamburger-menu",
+      "en": "Hamburger menu & navbar",
+      "sq": "Menyja hamburger",
+      "aliases": [
+        "hamburger",
+        "navbar",
+        "navigation bar",
+        "menu",
+        "meny",
+        "☰"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Navbar-i është shiriti i navigimit në krye (ose në fund) të faqes me lidhjet kryesore. Në celular, ku s'ka vend, lidhjet fshihen pas një butoni me tri vija ☰ — menyja „hamburger“ — që hapet kur e prek.",
+        "en": "A navbar is the navigation bar at the top (or bottom) of a page with the main links. On phones, where there's no room, the links hide behind a three-line ☰ button — the “hamburger” menu — that opens when you tap it."
+      },
+      "analogy": {
+        "sq": "Si dera e dollapit: në dhomë të vogël s'i mban rrobat të shpërndara, i fsheh pas derës dhe e hap kur të duhen.",
+        "en": "Like a wardrobe door: in a small room you don't leave clothes everywhere, you hide them behind a door and open it when you need them."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<button aria-label=\"Hap menynë\" aria-expanded=\"false\">☰</button>\n<nav hidden>\n  <a href=\"/\">Kreu</a> <a href=\"/contact\">Kontakt</a>\n</nav>"
+      },
+      "related": [
+        "responsive-design",
+        "semantic-html",
+        "ux"
+      ]
+    },
+    {
+      "id": "modal-dialog",
+      "en": "Modal & dialog",
+      "sq": "Dritarja modale",
+      "aliases": [
+        "modal",
+        "popup",
+        "pop-up",
+        "<dialog>",
+        "lightbox"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Një modal është një dritare që del mbi faqe dhe e bllokon pjesën tjetër derisa ta mbyllësh — p.sh. „A je i sigurt që do ta fshish?“. HTML-ja ka elementin <dialog> që e bën këtë me qasshmëri të integruar.",
+        "en": "A modal is a window that pops up over the page and blocks the rest until you close it — like “Are you sure you want to delete this?”. HTML has the <dialog> element that does this with accessibility built in."
+      },
+      "analogy": {
+        "sq": "Si kur mësuesja të thërret në tabelë: e gjithë klasa ndalet derisa të kthehesh në bankë.",
+        "en": "Like when the teacher calls you up to the board: the whole class pauses until you sit back down."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<dialog id=\"konfirmo\">\n  <p>A je i sigurt?</p>\n  <button onclick=\"konfirmo.close()\">Po</button>\n</dialog>"
+      },
+      "related": [
+        "ux",
+        "ui",
+        "accessibility"
+      ]
+    },
+    {
+      "id": "pagination",
+      "en": "Pagination & infinite scroll",
+      "sq": "Faqosja",
+      "aliases": [
+        "pagination",
+        "infinite scroll",
+        "faqosje",
+        "load more",
+        "next page"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Kur ka shumë rezultate, s'i shfaq të gjitha njëherësh. Me pagination i ndan në faqe (1, 2, 3…), ndërsa me infinite scroll ngarkon më shumë vetë kur përdoruesi arrin në fund — si te Instagram-i.",
+        "en": "When there are lots of results, you don't show them all at once. With pagination you split them into pages (1, 2, 3…), while with infinite scroll you load more automatically when the user reaches the bottom — like Instagram."
+      },
+      "analogy": {
+        "sq": "Pagination është si faqet e një libri; infinite scroll është si një rrotull letre që s'mbaron kurrë.",
+        "en": "Pagination is like the pages of a book; infinite scroll is like a roll of paper that never ends."
+      },
+      "code": null,
+      "related": [
+        "query-string",
+        "lazy-loading",
+        "web-performance"
+      ]
+    },
+    {
+      "id": "breadcrumbs",
+      "en": "Breadcrumbs",
+      "sq": "Gjurmët e navigimit",
+      "aliases": [
+        "breadcrumb",
+        "breadcrumb navigation",
+        "kreu / kategoria"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Breadcrumbs janë rreshti i vogël në krye të faqes si „Kreu / Java / HashSet“, që të tregon ku je dhe të lejon të kthehesh një nivel prapa me një klik. E sheh edhe në këtë fjalor, sipër çdo termi.",
+        "en": "Breadcrumbs are the small line at the top of a page like “Home / Java / HashSet”, showing where you are and letting you go back a level with one click. You can see them on this glossary too, above every term."
+      },
+      "analogy": {
+        "sq": "Si thërrimet e bukës te përralla e Hansit dhe Gretës: të tregojnë rrugën nga ke ardhur.",
+        "en": "Like the breadcrumbs in Hansel and Gretel: they show you the way you came."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<nav aria-label=\"Breadcrumb\">\n  <a href=\"/\">Kreu</a> / <a href=\"/category/java\">Java</a> / HashSet\n</nav>"
+      },
+      "related": [
+        "ux",
+        "routing",
+        "seo"
+      ]
+    },
+    {
+      "id": "http-headers",
+      "en": "HTTP headers",
+      "sq": "Header-at e HTTP-së",
+      "aliases": [
+        "headers",
+        "content-type",
+        "authorization header",
+        "user-agent"
+      ],
+      "category": "web",
+      "explanation": {
+        "sq": "Header-at e HTTP-së janë informacione shtesë që udhëtojnë me çdo kërkesë dhe përgjigje — p.sh. Content-Type tregon nëse po dërgohet JSON apo HTML, Authorization mban token-in e hyrjes, Cache-Control vendos sa kohë ruhet përgjigja.",
+        "en": "HTTP headers are extra pieces of information that travel with every request and response — like Content-Type saying whether it's JSON or HTML, Authorization carrying the login token, and Cache-Control deciding how long the response is kept."
+      },
+      "analogy": {
+        "sq": "Si shënimet në zarfin e një pakoje: „I brishtë“, „Dërguesi: …“, „Mbaje në vend të ftohtë“ — s'janë vetë dhurata, por tregojnë si të trajtohet.",
+        "en": "Like the labels on a parcel: “Fragile”, “Sender: …”, “Keep cool” — not the gift itself, but how to handle it."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "fetch(\"/api/terma\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({ id: \"api\" }),\n});"
+      },
+      "related": [
+        "http",
+        "request",
+        "cors"
+      ]
+    },
+    {
+      "id": "async-await",
+      "en": "async / await",
+      "sq": null,
+      "aliases": [
+        "async",
+        "await",
+        "async function"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "async/await është mënyra e lexueshme për të punuar me Promise-at. Funksioni shënohet async, dhe me await pret rezultatin e një pune që zgjat (si fetch) sikur të ishte kod i zakonshëm, rresht pas rreshti — pa zinxhirë .then().",
+        "en": "async/await is the readable way to work with Promises. You mark the function async, and with await you wait for the result of something slow (like fetch) as if it were normal code, line by line — no .then() chains."
+      },
+      "analogy": {
+        "sq": "Si porosia në furrë: e jep porosinë, prit derisa të jetë gati (await), pastaj vazhdon me ditën — por furra s'ndalet për klientët e tjerë.",
+        "en": "Like ordering at the bakery: you place the order, wait until it's ready (await), then get on with your day — but the bakery doesn't stop for other customers."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "async function merrTermat() {\n  const pergjigja = await fetch(\"/data/terms.json\");\n  const te_dhenat = await pergjigja.json();\n  return te_dhenat.terms;\n}"
+      },
+      "related": [
+        "promise",
+        "fetch",
+        "asynchronous"
+      ]
+    },
+    {
+      "id": "promise-all",
+      "en": "Promise.all",
+      "sq": null,
+      "aliases": [
+        "promise.all",
+        "promise.race",
+        "promise.allsettled",
+        "parallel requests"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Promise.all nis disa punë asinkrone njëkohësisht dhe pret derisa të mbarojnë të gjitha. Është shumë më e shpejtë se t'i presësh një nga një. Nëse dështon njëra, dështon e gjitha — për këtë ekziston Promise.allSettled.",
+        "en": "Promise.all starts several async tasks at the same time and waits until they've all finished. It's much faster than waiting for them one by one. If one fails, the whole thing fails — that's what Promise.allSettled is for."
+      },
+      "analogy": {
+        "sq": "Si t'i vësh në zjarr makaronat, salcën dhe ujin për çaj njëkohësisht, në vend që t'i gatuash një nga një.",
+        "en": "Like putting the pasta, the sauce and the tea water on at the same time, instead of cooking them one after another."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const [termat, zerat] = await Promise.all([\n  fetch(\"/data/terms.json\").then((r) => r.json()),\n  fetch(\"/audio/manifest.json\").then((r) => r.json()),\n]);"
+      },
+      "related": [
+        "async-await",
+        "promise",
+        "thread-concurrency"
+      ]
+    },
+    {
+      "id": "event-listener",
+      "en": "addEventListener",
+      "sq": null,
+      "aliases": [
+        "event listener",
+        "addeventlistener",
+        "onclick",
+        "click event"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "addEventListener i thotë një elementi: „kur të ndodhë kjo ngjarje (click, input, submit…), ekzekuto këtë funksion“. Është mënyra kryesore si faqja reagon ndaj përdoruesit.",
+        "en": "addEventListener tells an element: “when this event happens (click, input, submit…), run this function”. It's the main way a page reacts to the user."
+      },
+      "analogy": {
+        "sq": "Si zilja e derës: s'bën asgjë derisa dikush ta shtypë — pastaj ti ngrihesh dhe e hap.",
+        "en": "Like a doorbell: nothing happens until someone presses it — then you get up and open the door."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const butoni = document.querySelector(\"#ruaj\");\nbutoni.addEventListener(\"click\", () => {\n  alert(\"U ruajt!\");\n});"
+      },
+      "related": [
+        "event",
+        "callback",
+        "query-selector"
+      ]
+    },
+    {
+      "id": "prevent-default",
+      "en": "event.preventDefault()",
+      "sq": null,
+      "aliases": [
+        "preventdefault",
+        "event object",
+        "e.target",
+        "stoppropagation"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Çdo funksion që dëgjon një ngjarje merr një objekt event me detaje — p.sh. e.target është elementi i klikuar. Me e.preventDefault() e ndal sjelljen normale të shfletuesit, si rifreskimin e faqes kur dërgohet një formular.",
+        "en": "Every function listening to an event receives an event object with details — like e.target, the element that was clicked. With e.preventDefault() you stop the browser's normal behaviour, like reloading the page when a form is submitted."
+      },
+      "analogy": {
+        "sq": "Si t'i thuash kamerierit „prit, mos e sill ende llogarinë“ — ai do ta bënte automatikisht, por ti e ndal.",
+        "en": "Like telling the waiter “wait, don't bring the bill yet” — they'd normally do it automatically, but you stop them."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "formulari.addEventListener(\"submit\", (e) => {\n  e.preventDefault();          // mos e rifresko faqen\n  console.log(e.target);       // vetë formulari\n});"
+      },
+      "related": [
+        "event-listener",
+        "form",
+        "form-validation"
+      ]
+    },
+    {
+      "id": "event-bubbling",
+      "en": "Event bubbling & delegation",
+      "sq": "Përhapja e ngjarjeve",
+      "aliases": [
+        "bubbling",
+        "event delegation",
+        "capturing",
+        "delegim"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Kur klikon një element, ngjarja „ngjitet“ edhe te prindërit e tij, deri te document — kjo quhet bubbling. Kjo të lejon të vendosësh një listener të vetëm te prindi për qindra elemente fëmijë (event delegation), në vend të një për secilin.",
+        "en": "When you click an element, the event “bubbles up” to its parents too, all the way to document — that's called bubbling. It lets you put a single listener on the parent for hundreds of child elements (event delegation), instead of one each."
+      },
+      "analogy": {
+        "sq": "Si kur një nxënës ngre dorën: e sheh mësuesja, por edhe drejtori që kalon në korridor — s'ka nevojë për një roje te çdo bankë.",
+        "en": "Like a student raising their hand: the teacher sees it, but so does the head walking past — no need for a guard at every desk."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "lista.addEventListener(\"click\", (e) => {\n  const termi = e.target.closest(\"li\");\n  if (termi) console.log(\"Klikove:\", termi.textContent);\n});"
+      },
+      "related": [
+        "event-listener",
+        "dom",
+        "event"
+      ]
+    },
+    {
+      "id": "create-element",
+      "en": "createElement & appendChild",
+      "sq": null,
+      "aliases": [
+        "createelement",
+        "appendchild",
+        "remove()",
+        "dom manipulation"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Me document.createElement() krijon një element të ri HTML nga JavaScript-i, i jep tekst dhe klasa, dhe me append() e vendos në faqe. Me remove() e heq. Kështu ndërtohen listat dinamike — p.sh. rezultatet e kërkimit.",
+        "en": "With document.createElement() you create a new HTML element from JavaScript, give it text and classes, and with append() you put it on the page. With remove() you take it away. That's how dynamic lists are built — like search results."
+      },
+      "analogy": {
+        "sq": "Si ta shkruash një emër në një kartë dhe ta ngjitësh në tabelën e njoftimeve.",
+        "en": "Like writing a name on a card and pinning it to the noticeboard."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const li = document.createElement(\"li\");\nli.textContent = \"Variabël\";\nli.classList.add(\"termi\");\ndocument.querySelector(\"ul\").append(li);"
+      },
+      "related": [
+        "dom",
+        "innerhtml-textcontent",
+        "classlist"
+      ]
+    },
+    {
+      "id": "classlist",
+      "en": "classList",
+      "sq": null,
+      "aliases": [
+        "classlist.add",
+        "classlist.toggle",
+        "classlist.remove",
+        "toggle class"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "classList të lejon t'i shtosh (add), heqësh (remove) ose ndërrosh (toggle) klasat CSS të një elementi nga JavaScript-i. Është mënyra më e pastër për të ndryshuar pamjen — stilin e lë te CSS-ja, JS-ja vetëm ndërron klasën.",
+        "en": "classList lets you add, remove or toggle an element's CSS classes from JavaScript. It's the cleanest way to change how something looks — the style stays in CSS, JS just switches the class."
+      },
+      "analogy": {
+        "sq": "Si çelësi i dritës: s'e ndërton llambën nga e para çdo herë, vetëm e ndez ose e fik.",
+        "en": "Like a light switch: you don't rebuild the lamp every time, you just flip it on or off."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const menyja = document.querySelector(\".menyja\");\nbutoni.addEventListener(\"click\", () => {\n  menyja.classList.toggle(\"e-hapur\");\n});"
+      },
+      "related": [
+        "class-vs-id",
+        "dark-mode",
+        "create-element"
+      ]
+    },
+    {
+      "id": "object-methods",
+      "en": "Object.keys, values, entries",
+      "sq": "Metodat e Object-it",
+      "aliases": [
+        "object.keys",
+        "object.values",
+        "object.entries",
+        "object.assign"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Object.keys() të jep emrat e vetive të një objekti, Object.values() vlerat, dhe Object.entries() çiftet [çelës, vlerë]. Janë mënyra si kalon me cikël nëpër një objekt, ose e kthen në varg për të përdorur map dhe filter.",
+        "en": "Object.keys() gives you an object's property names, Object.values() the values, and Object.entries() the [key, value] pairs. They're how you loop over an object, or turn it into an array to use map and filter."
+      },
+      "analogy": {
+        "sq": "Si ta shohësh listën e kontakteve vetëm me emra, vetëm me numra, ose me të dyja bashkë.",
+        "en": "Like viewing your contacts as names only, numbers only, or both together."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const notat = { Arta: 5, Dren: 4 };\nObject.keys(notat);     // [\"Arta\", \"Dren\"]\nfor (const [emri, nota] of Object.entries(notat)) {\n  console.log(emri, nota);\n}"
+      },
+      "related": [
+        "object",
+        "for-of",
+        "dict-methods"
+      ]
+    },
+    {
+      "id": "array-search-methods",
+      "en": "find, some, every, includes",
+      "sq": "Metodat e kërkimit në varg",
+      "aliases": [
+        "find",
+        "findindex",
+        "some",
+        "every",
+        "includes",
+        "indexof"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Këto metoda kërkojnë brenda një vargu: find() kthen elementin e parë që plotëson një kusht, some() pyet „a ka të paktën një?“, every() „a janë të gjithë?“, dhe includes() „a gjendet kjo vlerë?“.",
+        "en": "These methods search inside an array: find() returns the first item matching a condition, some() asks “is there at least one?”, every() “are they all?”, and includes() “is this value in there?”."
+      },
+      "analogy": {
+        "sq": "Si mësuesja në klasë: „Kush e ka bërë detyrën?“ (find), „A e ka bërë kush?“ (some), „A e kanë bërë të gjithë?“ (every).",
+        "en": "Like a teacher in class: “Who did the homework?” (find), “Did anyone do it?” (some), “Did everyone do it?” (every)."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const notat = [5, 4, 2, 5];\nnotat.find((n) => n < 3);      // 2\nnotat.some((n) => n === 5);    // true\nnotat.every((n) => n >= 2);    // true\nnotat.includes(3);             // false"
+      },
+      "related": [
+        "array-methods",
+        "array",
+        "in-operator"
+      ]
+    },
+    {
+      "id": "array-sort-js",
+      "en": "Array sort (JavaScript)",
+      "sq": "Renditja e vargjeve në JS",
+      "aliases": [
+        "sort js",
+        "array.sort",
+        "localecompare",
+        "tosorted"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "sort() rendit një varg, por kujdes: si parazgjedhje i krahason si tekst, prandaj [10, 9, 1].sort() jep [1, 10, 9]! Për numra jep funksionin (a, b) => a - b, dhe për tekst shqip përdor localeCompare që ë-ja dhe ç-ja të dalin në vendin e duhur.",
+        "en": "sort() orders an array, but watch out: by default it compares items as text, so [10, 9, 1].sort() gives [1, 10, 9]! For numbers pass (a, b) => a - b, and for text use localeCompare so accented letters land in the right place."
+      },
+      "analogy": {
+        "sq": "Si ta renditësh klasën sipas gjatësisë: duhet t'u thuash qartë „krahasoni centimetrat“, jo „krahasoni emrat“.",
+        "en": "Like lining the class up by height: you need to say clearly “compare centimetres”, not “compare names”."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "[10, 9, 1].sort();                  // [1, 10, 9] (!)\n[10, 9, 1].sort((a, b) => a - b);   // [1, 9, 10]\n[\"Çlirim\", \"Arta\", \"Ëngjëll\"].sort((a, b) => a.localeCompare(b, \"sq\"));"
+      },
+      "related": [
+        "sorting-algorithm",
+        "array-methods",
+        "type-coercion"
+      ]
+    },
+    {
+      "id": "js-string-methods",
+      "en": "String methods (JavaScript)",
+      "sq": "Metodat e tekstit në JS",
+      "aliases": [
+        "includes js",
+        "split js",
+        "trim",
+        "touppercase",
+        "replaceall",
+        "padstart"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Teksti në JavaScript ka shumë metoda të gatshme: trim() heq hapësirat anash, toLowerCase() e bën me shkronja të vogla, includes() kërkon brenda, split() e ndan në varg, slice() merr një pjesë dhe replaceAll() zëvendëson.",
+        "en": "Strings in JavaScript have lots of built-in methods: trim() removes surrounding spaces, toLowerCase() makes it lowercase, includes() searches inside, split() breaks it into an array, slice() takes a part and replaceAll() replaces."
+      },
+      "analogy": {
+        "sq": "Si veglat e rrobaqepëses: gërshërët (slice), hekuri (trim), shiriti metër (length) — secila për një punë me copën e stofit.",
+        "en": "Like a tailor's tools: scissors (slice), iron (trim), tape measure (length) — each for one job on the fabric."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const emri = \"  Arta Berisha \";\nemri.trim().toUpperCase();        // \"ARTA BERISHA\"\n\"a,b,c\".split(\",\");               // [\"a\", \"b\", \"c\"]\n\"Prishtina\".slice(0, 4);          // \"Pris\""
+      },
+      "related": [
+        "string",
+        "string-methods",
+        "template-literal"
+      ]
+    },
+    {
+      "id": "default-parameters",
+      "en": "Default parameters",
+      "sq": "Parametrat e paracaktuar",
+      "aliases": [
+        "default parameter",
+        "default value",
+        "vlerë e paracaktuar"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Parametrave të një funksioni mund t'u japësh vlerë të paracaktuar me =. Nëse kush e thërret funksionin s'e jep atë vlerë, përdoret e paracaktuara në vend të undefined.",
+        "en": "You can give a function's parameters a default value with =. If whoever calls the function doesn't pass that value, the default is used instead of undefined."
+      },
+      "analogy": {
+        "sq": "Si porosia e zakonshme te kafeneja e lagjes: po s'the asgjë, të sjellin makiaton si gjithmonë.",
+        "en": "Like your usual at the local café: if you don't say anything, they bring your usual macchiato."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "function pershendet(emri = \"mik\") {\n  return \"Tung, \" + emri + \"!\";\n}\npershendet();         // \"Tung, mik!\"\npershendet(\"Arta\");   // \"Tung, Arta!\""
+      },
+      "related": [
+        "parameter",
+        "argument",
+        "undefined-null"
+      ]
+    },
+    {
+      "id": "short-circuit",
+      "en": "Short-circuit evaluation (&&, ||)",
+      "sq": "Vlerësimi i shkurtuar",
+      "aliases": [
+        "short circuit",
+        "logical and or"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "&& dhe || s'kthejnë vetëm true/false — kthejnë njërën nga vlerat. a || b jep a-në nëse është truthy, përndryshe b-në (mirë për vlera rezervë). a && b ekzekuton b-në vetëm nëse a është truthy. Për null/undefined, ?? është më i saktë.",
+        "en": "&& and || don't just return true/false — they return one of the values. a || b gives a if it's truthy, otherwise b (handy for fallbacks). a && b only evaluates b if a is truthy. For null/undefined, ?? is more precise."
+      },
+      "analogy": {
+        "sq": "Si „nëse s'ka bukë, merr simite“: shkon te alternativa vetëm nëse e para mungon.",
+        "en": "Like “if there's no bread, get rolls”: you only go for the backup if the first thing is missing."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const emri = perdoruesi.emri || \"Mysafir\";\nperdoruesi.admin && shfaqPanelin();\nconst sasia = 0 ?? 10;   // 0 (?? s'e konsideron 0 si bosh)"
+      },
+      "related": [
+        "logical-operators",
+        "truthy-falsy",
+        "optional-chaining"
+      ]
+    },
+    {
+      "id": "js-prototype",
+      "en": "Prototype (JavaScript)",
+      "sq": "Prototipi në JavaScript",
+      "aliases": [
+        "prototype chain",
+        "__proto__",
+        "prototypal inheritance",
+        "zinxhiri i prototipeve"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Në JavaScript, çdo objekt ka një „prototip“ — një objekt tjetër nga i cili trashëgon metoda. Kur thërret [1,2].map(), map-i s'është te vargu yt, por te Array.prototype. Edhe class-at e JS-së në të vërtetë punojnë me prototipe nga poshtë.",
+        "en": "In JavaScript, every object has a “prototype” — another object it inherits methods from. When you call [1,2].map(), map isn't on your array, it's on Array.prototype. Even JS classes actually use prototypes under the hood."
+      },
+      "analogy": {
+        "sq": "Si fjalori i familjes: po s'e di një fjalë, pyet prindin; po s'e di as ai, pyet gjyshin — derisa dikush e di.",
+        "en": "Like family knowledge: if you don't know something, ask your parent; if they don't, ask your grandparent — until someone does."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "const varg = [1, 2];\nObject.getPrototypeOf(varg) === Array.prototype;  // true\nvarg.hasOwnProperty(\"map\");                       // false"
+      },
+      "related": [
+        "js-class",
+        "inheritance",
+        "object"
+      ]
+    },
+    {
+      "id": "use-strict",
+      "en": "\"use strict\"",
+      "sq": "Modaliteti strikt",
+      "aliases": [
+        "use strict",
+        "strict mode"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "\"use strict\" në krye të një skedari e ndez modalitetin strikt: JavaScript-i bëhet më i rreptë dhe i kthen disa gabime të heshtura në gabime të qarta — p.sh. përdorimin e një variable pa e deklaruar. Modulet ES dhe class-at janë strikte automatikisht.",
+        "en": "\"use strict\" at the top of a file turns on strict mode: JavaScript becomes stricter and turns some silent mistakes into clear errors — like using a variable you never declared. ES modules and classes are strict automatically."
+      },
+      "analogy": {
+        "sq": "Si gjyqtari që e luan ndeshjen sipas rregullave të plota, në vend që t'i lërë të kalojnë gabimet e vogla.",
+        "en": "Like a referee who applies the full rulebook instead of letting small fouls slide."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "\"use strict\";\nemri = \"Arta\";   // ReferenceError: emri is not defined"
+      },
+      "related": [
+        "let-const-var",
+        "es-modules",
+        "linter"
+      ]
+    },
+    {
+      "id": "number-parsing",
+      "en": "parseInt, Number & toFixed",
+      "sq": "Konvertimi i numrave në JS",
+      "aliases": [
+        "parseint",
+        "parsefloat",
+        "number()",
+        "tofixed",
+        "tostring js"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Çdo gjë që vjen nga një <input> është tekst, edhe nëse përdoruesi shkruan numër. Me Number() ose parseInt() e kthen në numër, dhe me toFixed(2) e shfaq me dy shifra pas presjes — p.sh. për çmime.",
+        "en": "Everything that comes from an <input> is text, even if the user typed a number. Number() or parseInt() turns it into a number, and toFixed(2) shows it with two decimals — like for prices."
+      },
+      "analogy": {
+        "sq": "Si ta lexosh numrin e shkruar me dorë në një faturë dhe ta fusësh në kalkulator: duhet ta kthesh nga „shkrim“ në „numër“.",
+        "en": "Like reading a handwritten number on a receipt and typing it into a calculator: you have to turn it from “writing” into a “number”."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "\"5\" + 1;                  // \"51\" (tekst!)\nNumber(\"5\") + 1;          // 6\nparseInt(\"42px\");         // 42\n(19.5).toFixed(2);        // \"19.50\""
+      },
+      "related": [
+        "type-conversion",
+        "type-coercion",
+        "nan"
+      ]
+    },
+    {
+      "id": "debounce-throttle",
+      "en": "Debounce & throttle",
+      "sq": null,
+      "aliases": [
+        "debounce",
+        "throttle",
+        "debouncing"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Debounce pret derisa përdoruesi të ndalojë për një moment (p.sh. 300 ms pa shtypur) para se ta ekzekutojë funksionin — ideal për kërkimin ndërsa shkruan. Throttle e lejon funksionin të ekzekutohet maksimumi një herë në një interval — ideal për scroll.",
+        "en": "Debounce waits until the user pauses for a moment (e.g. 300 ms without typing) before running the function — perfect for search-as-you-type. Throttle lets the function run at most once per interval — perfect for scrolling."
+      },
+      "analogy": {
+        "sq": "Debounce është si ashensori që pret disa sekonda pasi hyn i fundit para se të nisë; throttle është si autobusi që niset çdo 15 minuta, sido që të vijnë pasagjerët.",
+        "en": "Debounce is like a lift that waits a few seconds after the last person gets in before moving; throttle is like a bus that leaves every 15 minutes, however people arrive."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "let kohemates;\nkerkimi.addEventListener(\"input\", () => {\n  clearTimeout(kohemates);\n  kohemates = setTimeout(kerko, 300);\n});"
+      },
+      "related": [
+        "set-timeout",
+        "event-listener",
+        "web-performance"
+      ]
+    },
+    {
+      "id": "window-object",
+      "en": "window & document",
+      "sq": "Objektet window dhe document",
+      "aliases": [
+        "window",
+        "bom",
+        "location",
+        "navigator",
+        "window object"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Në shfletues, window është objekti më i madh: dritarja me gjithçka brenda — location (adresa), localStorage, alert(), setTimeout(). document është faqja HTML brenda saj, nga ku i kap elementet. Në Node.js, këto s'ekzistojnë.",
+        "en": "In the browser, window is the biggest object: the whole window with everything in it — location (the address), localStorage, alert(), setTimeout(). document is the HTML page inside it, where you grab elements from. In Node.js, these don't exist."
+      },
+      "analogy": {
+        "sq": "window është gjithë shtëpia; document është dhoma ku ndodhet faqja jote.",
+        "en": "window is the whole house; document is the room your page lives in."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "console.log(window.location.pathname);   // \"/term/api\"\nwindow.innerWidth;                         // gjerësia e dritares\ndocument.title = \"Titull i ri\";"
+      },
+      "related": [
+        "dom",
+        "browser",
+        "node-js"
+      ]
+    },
+    {
+      "id": "package-json",
+      "en": "package.json",
+      "sq": null,
+      "aliases": [
+        "package json",
+        "scripts",
+        "npm run",
+        "package-lock.json"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "package.json është „letërnjoftimi“ i një projekti JavaScript: emri, versioni, paketat që i duhen (dependencies) dhe komandat (scripts) si npm run dev ose npm run build. package-lock.json fiksojnë versionet e sakta.",
+        "en": "package.json is the “ID card” of a JavaScript project: its name, version, the packages it needs (dependencies) and commands (scripts) like npm run dev or npm run build. package-lock.json pins the exact versions."
+      },
+      "analogy": {
+        "sq": "Si lista e përbërësve dhe hapave në krye të recetës: kushdo e di çfarë të blejë dhe si ta gatuajë.",
+        "en": "Like the ingredients and steps at the top of a recipe: anyone knows what to buy and how to cook it."
+      },
+      "code": {
+        "language": "json",
+        "snippet": "{\n  \"name\": \"fjalori\",\n  \"scripts\": { \"build\": \"node scripts/build.mjs\" },\n  \"dependencies\": { \"react\": \"^19.0.0\" }\n}"
+      },
+      "related": [
+        "npm",
+        "dependency",
+        "node-modules"
+      ]
+    },
+    {
+      "id": "node-modules",
+      "en": "node_modules",
+      "sq": null,
+      "aliases": [
+        "node modules",
+        "node_modules folder"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "node_modules është dosja ku npm-ja i instalon të gjitha paketat e projektit — shpesh me mijëra skedarë. S'e ngarkon kurrë në GitHub (shtoje në .gitignore): kushdo e krijon sërish me npm install nga package.json.",
+        "en": "node_modules is the folder where npm installs all the project's packages — often thousands of files. Never upload it to GitHub (add it to .gitignore): anyone can recreate it with npm install from package.json."
+      },
+      "analogy": {
+        "sq": "Si magazina e përbërësve të një restoranti: s'ia dërgon klientit bashkë me recetën — ai i blen vetë sipas listës.",
+        "en": "Like a restaurant's storeroom: you don't send it to someone along with the recipe — they buy the ingredients themselves from the list."
+      },
+      "code": null,
+      "related": [
+        "package-json",
+        "npm",
+        "gitignore"
+      ]
+    },
+    {
+      "id": "jest-vitest",
+      "en": "Jest & Vitest",
+      "sq": null,
+      "aliases": [
+        "jest",
+        "vitest",
+        "test js",
+        "expect",
+        "testing library"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Jest-i dhe Vitest-i janë mjetet më të përdorura për të shkruar teste në JavaScript. Shkruan test() me një përshkrim dhe kontrollon me expect(...).toBe(...); komanda npm test i ekzekuton të gjitha.",
+        "en": "Jest and Vitest are the most-used tools for writing tests in JavaScript. You write test() with a description and check with expect(...).toBe(...); the npm test command runs them all."
+      },
+      "analogy": {
+        "sq": "Si provat para provimit: i kalon një nga një dhe e di menjëherë ku je gati e ku jo.",
+        "en": "Like practice tests before the exam: you go through them one by one and know at once where you're ready and where you're not."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "import { test, expect } from \"vitest\";\ntest(\"mbledh dy numra\", () => {\n  expect(mblidh(2, 3)).toBe(5);\n});"
+      },
+      "related": [
+        "testing",
+        "unit-integration-test",
+        "pytest"
+      ]
+    },
+    {
+      "id": "react-hooks",
+      "en": "React hooks (useState, useEffect)",
+      "sq": "Hooks në React",
+      "aliases": [
+        "hooks",
+        "usestate",
+        "useeffect",
+        "useref",
+        "custom hook"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Hooks janë funksionet speciale të React-it që fillojnë me „use“. useState i jep një komponenti memorie (p.sh. një numërues), dhe useEffect ekzekuton kod pasi komponenti shfaqet — p.sh. për të marrë të dhëna nga një API.",
+        "en": "Hooks are React's special functions starting with “use”. useState gives a component memory (like a counter), and useEffect runs code after the component appears — like fetching data from an API."
+      },
+      "analogy": {
+        "sq": "useState është si tabela e rezultatit në stadium: sa herë ndryshon, ekrani përditësohet vetë.",
+        "en": "useState is like the stadium scoreboard: every time it changes, the screen updates itself."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "function Numeruesi() {\n  const [gola, setGola] = useState(0);\n  return <button onClick={() => setGola(gola + 1)}>Gola: {gola}</button>;\n}"
+      },
+      "related": [
+        "react",
+        "props-state",
+        "component"
+      ]
+    },
+    {
+      "id": "props-state",
+      "en": "Props & state",
+      "sq": "Props dhe state",
+      "aliases": [
+        "props",
+        "state",
+        "react state",
+        "react props"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Në React, props janë të dhënat që një komponent i merr nga prindi — si parametrat e një funksioni, dhe s'i ndryshon vetë. State janë të dhënat që komponenti i mban dhe i ndryshon vetë; sa herë ndryshon state-i, komponenti rishfaqet.",
+        "en": "In React, props are the data a component receives from its parent — like a function's parameters, and it doesn't change them itself. State is data the component keeps and changes itself; every time state changes, the component re-renders."
+      },
+      "analogy": {
+        "sq": "Props janë si emri që të kanë dhënë prindërit (s'e ndryshon vetë); state është si disponimi yt (ndryshon gjatë ditës).",
+        "en": "Props are like the name your parents gave you (you don't change it); state is like your mood (it changes through the day)."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "function Karta({ titulli }) {           // props\n  const [hapur, setHapur] = useState(false); // state\n  return <h3 onClick={() => setHapur(!hapur)}>{titulli}</h3>;\n}"
+      },
+      "related": [
+        "react-hooks",
+        "component",
+        "react"
+      ]
+    },
+    {
+      "id": "virtual-dom",
+      "en": "Virtual DOM",
+      "sq": null,
+      "aliases": [
+        "vdom",
+        "reconciliation",
+        "re-render"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Virtual DOM-i është një kopje e lehtë e faqes që React-i (dhe Vue-ja) e mban në memorie. Kur ndryshon diçka, e krahason kopjen e re me të vjetrën dhe ndryshon në faqen e vërtetë vetëm pjesët që u ndryshuan — gjë që është më e shpejtë.",
+        "en": "The Virtual DOM is a lightweight copy of the page that React (and Vue) keep in memory. When something changes, it compares the new copy with the old one and updates only the parts of the real page that changed — which is faster."
+      },
+      "analogy": {
+        "sq": "Si të krahasosh dy foto të klasës për të gjetur kush mungon, dhe të shkruash vetëm ata në listë — në vend që ta rishkruash gjithë listën.",
+        "en": "Like comparing two class photos to spot who's missing and only writing those names down — instead of rewriting the whole register."
+      },
+      "code": null,
+      "related": [
+        "dom",
+        "react",
+        "vue"
+      ]
+    },
+    {
+      "id": "axios",
+      "en": "Axios",
+      "sq": null,
+      "aliases": [
+        "axios.get",
+        "http client"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Axios-i është një librari e njohur për të bërë kërkesa HTTP nga JavaScript-i — si fetch, por me disa lehtësi: e kthen JSON-in vetë, ka timeout dhe i trajton gabimet e serverit si gabime. Sot fetch-i mjafton shpesh, por Axios-in do ta takosh në shumë projekte.",
+        "en": "Axios is a popular library for making HTTP requests from JavaScript — like fetch, but with a few conveniences: it parses JSON for you, has timeouts and treats server errors as errors. Today fetch is often enough, but you'll meet Axios in many projects."
+      },
+      "analogy": {
+        "sq": "Si një korrier me shërbim të plotë: jo vetëm e sjell pakon, por edhe e hap dhe ta vendos në tavolinë.",
+        "en": "Like a full-service courier: they don't just deliver the parcel, they open it and put it on your table."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "import axios from \"axios\";\nconst { data } = await axios.get(\"/api/terma\");\nconsole.log(data);"
+      },
+      "related": [
+        "fetch",
+        "http-methods",
+        "rest-api"
+      ]
+    },
+    {
+      "id": "deno-bun",
+      "en": "Deno & Bun",
+      "sq": null,
+      "aliases": [
+        "deno",
+        "bun",
+        "javascript runtime"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Deno-ja dhe Bun-i janë alternativa më të reja të Node.js-it për ta ekzekutuar JavaScript-in jashtë shfletuesit. Bun-i është i njohur për shpejtësinë, Deno-ja për sigurinë; të dy e mbështesin TypeScript-in pa konfigurim shtesë.",
+        "en": "Deno and Bun are newer alternatives to Node.js for running JavaScript outside the browser. Bun is known for its speed, Deno for its security; both support TypeScript without extra setup."
+      },
+      "analogy": {
+        "sq": "Si markat e reja të veturave elektrike krahasuar me një markë të vjetër e të njohur: të gjitha të çojnë në destinacion, me veçori pak të ndryshme.",
+        "en": "Like new electric car brands next to an old, trusted one: they all get you there, with slightly different features."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "bun run index.ts\ndeno run main.ts"
+      },
+      "related": [
+        "node-js",
+        "typescript",
+        "runtime"
+      ]
+    },
+    {
+      "id": "polyfill",
+      "en": "Polyfill",
+      "sq": null,
+      "aliases": [
+        "polyfills",
+        "core-js"
+      ],
+      "category": "javascript",
+      "explanation": {
+        "sq": "Një polyfill është kod që e shton një veçori të re të JavaScript-it në shfletuesit e vjetër që s'e kanë ende. Kështu mund të përdorësh metoda moderne pa i lënë jashtë përdoruesit me shfletues të vjetër.",
+        "en": "A polyfill is code that adds a new JavaScript feature to older browsers that don't have it yet. That way you can use modern methods without leaving out users on old browsers."
+      },
+      "analogy": {
+        "sq": "Si një përshtatës për prizë kur udhëton jashtë shtetit: pajisja jote moderne punon edhe në prizat e vjetra.",
+        "en": "Like a plug adapter when you travel abroad: your modern device works in the old sockets too."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "if (!Array.prototype.at) {\n  Array.prototype.at = function (i) {\n    return this[i < 0 ? this.length + i : i];\n  };\n}"
+      },
+      "related": [
+        "browser-compatibility",
+        "transpiler",
+        "js-prototype"
       ]
     }
   ]
