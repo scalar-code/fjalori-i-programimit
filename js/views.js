@@ -51,7 +51,9 @@ function renderResults(query) {
   const results = searchTerms(allTerms(), query);
   if (results.length === 0) return `<li><p class="empty">${esc(t("noResults", query.trim()))}</p></li>`;
 
-  return results
+  // Nothing matched the spelling exactly, so these are the closest spellings
+  const hint = results.fuzzy ? `<li><p class="empty">${esc(t("didYouMean", query.trim()))}</p></li>` : "";
+  return hint + results
     .map((term, i) => {
       const category = getCategory(term.category);
       return `<li>
