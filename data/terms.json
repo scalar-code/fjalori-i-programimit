@@ -148,12 +148,25 @@
       "icon": "•••",
       "hue": 95,
       "name": {
-        "sq": "Siguria & Cloud",
-        "en": "Security & Cloud"
+        "sq": "Siguria",
+        "en": "Security"
       },
       "description": {
-        "sq": "Si mbrohen llogaritë dhe të dhënat, dhe ku jetojnë aplikacionet sot.",
-        "en": "How accounts and data are protected, and where apps live today."
+        "sq": "Si mbrohen llogaritë, të dhënat dhe aplikacionet nga hakerët dhe mashtrimet.",
+        "en": "How accounts, data and apps are protected from hackers and scams."
+      }
+    },
+    {
+      "id": "cloud",
+      "icon": "ops",
+      "hue": 220,
+      "name": {
+        "sq": "Cloud & DevOps",
+        "en": "Cloud & DevOps"
+      },
+      "description": {
+        "sq": "Ku jetojnë aplikacionet sot dhe si arrijnë nga kompjuteri yt te mijëra përdorues — serverë, kontejnerë dhe publikim automatik.",
+        "en": "Where apps live today and how they get from your computer to thousands of users — servers, containers and automatic deployment."
       }
     },
     {
@@ -2534,12 +2547,9 @@
       "sq": "Re kompjuterike",
       "aliases": [
         "reja",
-        "cloud computing",
-        "aws",
-        "azure",
-        "google cloud"
+        "cloud computing"
       ],
-      "category": "security",
+      "category": "cloud",
       "explanation": {
         "sq": "Cloud-i do të thotë të përdorësh kompjuterët dhe hapësirën e ruajtjes së dikujt tjetër përmes internetit, në vend të atyre që ke vetë. Kur ruan foto në Google Drive ose publikon faqen në Vercel, po përdor cloud-in.",
         "en": "The cloud means using someone else's computers and storage over the internet instead of your own. When you save photos to Google Drive or publish a site on Vercel, you're using the cloud."
@@ -4429,10 +4439,8 @@
       "en": "Production (dev vs prod)",
       "sq": "Mjedisi i prodhimit",
       "aliases": [
-        "prod",
         "dev",
         "development",
-        "staging",
         "live",
         "mjedis zhvillimi"
       ],
@@ -4931,7 +4939,7 @@
         "docker container",
         "dockerfile"
       ],
-      "category": "security",
+      "category": "cloud",
       "explanation": {
         "sq": "Docker-i e paketon një aplikacion bashkë me gjithçka që i duhet — versionin e Python-it, libraritë, rregullimet — në një „kontejner“. Kështu punon njësoj në kompjuterin tënd, në të shokut dhe në server.",
         "en": "Docker packages an app together with everything it needs — the Python version, libraries, settings — into a “container”. That way it runs the same on your computer, your friend's and the server."
@@ -4960,7 +4968,7 @@
         "continuous integration",
         "pipeline"
       ],
-      "category": "security",
+      "category": "cloud",
       "explanation": {
         "sq": "CI/CD është automatizimi që, sa herë bën push, i ekzekuton vetë testet (CI) dhe, nëse kalojnë, e publikon aplikacionin (CD). Ky fjalor e përdor: çdo push në GitHub del live në Vercel vetvetiu.",
         "en": "CI/CD is automation that, every time you push, runs your tests by itself (CI) and, if they pass, publishes the app (CD). This glossary uses it: every push to GitHub goes live on Vercel automatically."
@@ -6787,7 +6795,6 @@
         "virus",
         "virusi",
         "trojan",
-        "ransomware",
         "spyware"
       ],
       "category": "security",
@@ -7156,7 +7163,7 @@
         "lambda functions",
         "edge functions"
       ],
-      "category": "security",
+      "category": "cloud",
       "explanation": {
         "sq": "Serverless do të thotë që kodin e backend-it e shkruan si funksione të vogla, dhe shërbimi cloud (p.sh. Vercel ose AWS Lambda) i nis vetëm kur vjen një kërkesë. S'ke server për të mirëmbajtur dhe paguan vetëm për kohën që punon kodi. Serverët ekzistojnë — thjesht s'merresh ti me ta.",
         "en": "Serverless means you write backend code as small functions, and the cloud service (e.g. Vercel or AWS Lambda) only starts them when a request comes in. There's no server to maintain and you only pay while the code runs. The servers still exist — you just don't deal with them."
@@ -7184,7 +7191,7 @@
         "kube",
         "orkestrim kontejnerësh"
       ],
-      "category": "security",
+      "category": "cloud",
       "explanation": {
         "sq": "Kubernetes-i është një sistem që menaxhon automatikisht shumë kontejnerë Docker në shumë serverë: i nis, i rinis kur rrëzohen dhe shton të tjerë kur rritet trafiku. E përdorin kompanitë e mëdha; për projekte të vogla zakonisht s'të duhet.",
         "en": "Kubernetes is a system that automatically manages lots of Docker containers across many servers: starting them, restarting them when they crash and adding more when traffic grows. Big companies use it; small projects usually don't need it."
@@ -7209,7 +7216,7 @@
         "cloudflare",
         "edge network"
       ],
-      "category": "security",
+      "category": "cloud",
       "explanation": {
         "sq": "CDN-ja është një rrjet serverësh nëpër botë që mbajnë kopje të faqes tënde (foto, CSS, JavaScript) afër vizitorëve. Kështu një vizitor nga Prishtina e merr faqen nga një server afër, jo nga Amerika — dhe hapet shumë më shpejt.",
         "en": "A CDN is a network of servers around the world that keep copies of your site (images, CSS, JavaScript) close to visitors. That way a visitor in Prishtina gets the site from a nearby server, not from America — and it loads much faster."
@@ -7233,7 +7240,7 @@
         "load balancing",
         "balancim ngarkese"
       ],
-      "category": "security",
+      "category": "cloud",
       "explanation": {
         "sq": "Load balancer-i i ndan kërkesat që vijnë mes disa serverëve, që asnjëri të mos mbingarkohet. Nëse një server bie, i dërgon kërkesat te të tjerët, dhe faqja vazhdon të punojë.",
         "en": "A load balancer splits incoming requests across several servers so none of them gets overloaded. If one server goes down, it sends requests to the others, and the site keeps working."
@@ -7261,7 +7268,7 @@
         "platform as a service",
         "infrastructure as a service"
       ],
-      "category": "security",
+      "category": "cloud",
       "explanation": {
         "sq": "Këto janë tri nivele shërbimesh cloud. IaaS të jep serverë bosh (si AWS EC2); PaaS të jep një platformë ku vetëm e vendos kodin (si Vercel-i); SaaS të jep një aplikacion të gatshëm për ta përdorur (si Gmail-i ose Google Docs).",
         "en": "These are three levels of cloud service. IaaS gives you bare servers (like AWS EC2); PaaS gives you a platform where you just drop in your code (like Vercel); SaaS gives you a ready-made app to use (like Gmail or Google Docs)."
@@ -7286,7 +7293,7 @@
         "virtualbox",
         "ec2"
       ],
-      "category": "security",
+      "category": "cloud",
       "explanation": {
         "sq": "Makina virtuale është një „kompjuter brenda kompjuterit“: një sistem operativ i plotë që punon si program mbi një kompjuter tjetër. Në cloud, kur merr me qira një server, zakonisht merr një VM.",
         "en": "A virtual machine is a “computer inside a computer”: a full operating system running as a program on another machine. In the cloud, when you rent a server, you usually get a VM."
@@ -7312,7 +7319,7 @@
         "shkallëzim",
         "autoscaling"
       ],
-      "category": "security",
+      "category": "cloud",
       "explanation": {
         "sq": "Shkallëzueshmëria është aftësia e një aplikacioni të përballojë më shumë përdorues pa u ngadalësuar — duke shtuar serverë ose fuqi kur rritet trafiku dhe duke i hequr kur bie.",
         "en": "Scalability is an app's ability to handle more users without slowing down — adding servers or power when traffic grows and removing them when it drops."
@@ -7338,7 +7345,7 @@
         "99.9%",
         "sla"
       ],
-      "category": "security",
+      "category": "cloud",
       "explanation": {
         "sq": "Uptime-i është sa kohë një faqe ose shërbim është në punë dhe i arritshëm, zakonisht në përqindje — p.sh. 99.9% do të thotë rreth 9 orë jashtë pune në vit. Downtime-i është koha kur nuk punon.",
         "en": "Uptime is how much of the time a site or service is up and reachable, usually as a percentage — 99.9% means roughly 9 hours of downtime a year. Downtime is the time it's not working."
@@ -7363,7 +7370,7 @@
         "nameserver",
         "dns record"
       ],
-      "category": "security",
+      "category": "cloud",
       "explanation": {
         "sq": "DNS-ja është „numratori i telefonave“ i internetit: kur shkruan një domen si google.com, DNS-ja e kthen në adresën IP të serverit të duhur. Kur lidh një domen me Vercel-in, ndryshon pikërisht rregullat e DNS-së.",
         "en": "DNS is the internet's phone book: when you type a domain like google.com, DNS turns it into the IP address of the right server. When you connect a domain to Vercel, it's the DNS records you change."
@@ -7389,7 +7396,7 @@
         "blob storage",
         "cloud storage"
       ],
-      "category": "security",
+      "category": "cloud",
       "explanation": {
         "sq": "Object storage është ruajtje në cloud për skedarë të çdo lloji — foto, video, backup-e — të vendosur në „kova“ (buckets) dhe të arritshëm me URL. Shembulli më i njohur është Amazon S3; është i lirë dhe zgjerohet pa kufi.",
         "en": "Object storage is cloud storage for files of any kind — photos, videos, backups — kept in “buckets” and reachable by URL. The best-known example is Amazon S3; it's cheap and grows without limits."
@@ -7418,7 +7425,7 @@
         "sentry",
         "observability"
       ],
-      "category": "security",
+      "category": "cloud",
       "explanation": {
         "sq": "Monitorimi do të thotë ta mbikëqyrësh aplikacionin vazhdimisht — shpejtësinë, gabimet, përdorimin e serverit — dhe të marrësh njoftim kur diçka shkon keq, shpesh para se ta vërejnë përdoruesit.",
         "en": "Monitoring means watching your app all the time — speed, errors, server usage — and getting alerted when something goes wrong, often before users notice."
@@ -7444,7 +7451,7 @@
         "region",
         "rajon"
       ],
-      "category": "security",
+      "category": "cloud",
       "explanation": {
         "sq": "Qendra e të dhënave është një ndërtesë e madhe plot serverë, me ftohje dhe energji rezervë. Kompanitë cloud i kanë nëpër botë dhe i quajnë „regions“ (rajone); zgjedh rajonin më afër përdoruesve të tu, p.sh. Frankfurtin për Ballkanin.",
         "en": "A data center is a big building full of servers, with cooling and backup power. Cloud companies have them around the world and call them “regions”; you pick the region closest to your users, e.g. Frankfurt for the Balkans."
@@ -19571,8 +19578,7 @@
       "aliases": [
         "vercel",
         "netlify",
-        "cloudflare pages",
-        "render"
+        "cloudflare pages"
       ],
       "category": "web",
       "explanation": {
@@ -33548,8 +33554,7 @@
       "aliases": [
         "csp",
         "security headers",
-        "hsts",
-        "x-frame-options"
+        "hsts"
       ],
       "category": "security",
       "explanation": {
@@ -33676,7 +33681,7 @@
         "compose.yaml",
         "docker compose up"
       ],
-      "category": "security",
+      "category": "cloud",
       "explanation": {
         "sq": "Docker Compose të lejon ta nisësh një aplikacion me disa kontejnerë — p.sh. serveri, databaza dhe Redis — me një skedar YAML dhe një komandë të vetme: docker compose up.",
         "en": "Docker Compose lets you start an app made of several containers — e.g. the server, the database and Redis — with one YAML file and a single command: docker compose up."
@@ -35863,6 +35868,1574 @@
         "divide-and-conquer",
         "bitwise-operators",
         "public-key-cryptography"
+      ]
+    },
+    {
+      "id": "ransomware",
+      "en": "Ransomware",
+      "sq": null,
+      "aliases": [
+        "ransomware attack",
+        "ransom"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Ransomware-i është malware që i kripton të gjithë skedarët e tu dhe kërkon para (shpesh në kriptovalutë) për t'i zhbllokuar. Ka goditur spitale, bashki dhe kompani të mëdha. Mbrojtja më e mirë: backup-e të rregullta që s'janë të lidhura me kompjuterin.",
+        "en": "Ransomware is malware that encrypts all your files and demands money (often in crypto) to unlock them. It has hit hospitals, councils and big companies. The best defence: regular backups that aren't connected to the computer."
+      },
+      "analogy": {
+        "sq": "Si një hajdut që s'të vjedh asgjë, por ta mbyll shtëpinë me kyçin e vet dhe të kërkon para për çelësin.",
+        "en": "Like a burglar who steals nothing but locks your house with their own lock and demands money for the key."
+      },
+      "code": null,
+      "related": [
+        "malware",
+        "backup",
+        "encryption"
+      ]
+    },
+    {
+      "id": "keylogger",
+      "en": "Keylogger",
+      "sq": null,
+      "aliases": [
+        "keystroke logger",
+        "keylogging"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Një keylogger është program (ose pajisje e vogël) që regjistron fshehurazi çdo tast që shtyp — fjalëkalime, mesazhe, numra kartash. Prandaj mos u kyç në llogaritë e tua në kompjuterë publikë ose të panjohur.",
+        "en": "A keylogger is a program (or small device) that secretly records every key you press — passwords, messages, card numbers. That's why you shouldn't log in to your accounts on public or unknown computers."
+      },
+      "analogy": {
+        "sq": "Si dikush që të shikon mbi sup ndërsa shkruan PIN-in në bankomat.",
+        "en": "Like someone looking over your shoulder while you type your PIN at the cash machine."
+      },
+      "code": null,
+      "related": [
+        "malware",
+        "two-factor",
+        "password-manager"
+      ]
+    },
+    {
+      "id": "cryptographic-hash",
+      "en": "Cryptographic hashes (SHA-256)",
+      "sq": "Hash-et kriptografike",
+      "aliases": [
+        "sha-256",
+        "sha256",
+        "md5",
+        "sha-1",
+        "checksum"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Një hash kriptografik si SHA-256 e kthen çdo skedar ose tekst në një „gjurmë“ unike me gjatësi të fiksuar. Po ndryshoi qoftë edhe një shkronjë, gjurma ndryshon krejt. Përdoret për të kontrolluar që një shkarkim s'është ndryshuar. MD5 dhe SHA-1 janë të vjetër dhe s'janë më të sigurt.",
+        "en": "A cryptographic hash like SHA-256 turns any file or text into a unique fixed-length “fingerprint”. Change even one letter and the fingerprint changes completely. It's used to check a download hasn't been tampered with. MD5 and SHA-1 are old and no longer safe."
+      },
+      "analogy": {
+        "sq": "Si gjurma e gishtit: e njëjta për të njëjtin person, dhe e pamundur të rindërtosh personin prej saj.",
+        "en": "Like a fingerprint: always the same for the same person, and impossible to rebuild the person from it."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "shasum -a 256 programi.zip\n# 9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08"
+      },
+      "related": [
+        "hash-function",
+        "password-hashing",
+        "digital-signature"
+      ]
+    },
+    {
+      "id": "digital-signature",
+      "en": "Digital signature",
+      "sq": "Nënshkrimi digjital",
+      "aliases": [
+        "digital signature",
+        "code signing"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Një nënshkrim digjital vërteton dy gjëra: kush e krijoi një dokument ose program, dhe që s'është ndryshuar që atëherë. Krijohet me çelësin privat dhe kontrollohet me atë publik. Përditësimet e sistemit dhe aplikacionet në telefon janë të nënshkruara kështu.",
+        "en": "A digital signature proves two things: who created a document or program, and that it hasn't changed since. It's made with the private key and checked with the public one. System updates and phone apps are signed this way."
+      },
+      "analogy": {
+        "sq": "Si vula dhe nënshkrimi i noterit në një kontratë: e di kush e firmosi dhe që s'e ka prekur askush më pas.",
+        "en": "Like a notary's stamp and signature on a contract: you know who signed it and that nobody touched it afterwards."
+      },
+      "code": null,
+      "related": [
+        "public-key-cryptography",
+        "cryptographic-hash",
+        "ssl-certificate"
+      ]
+    },
+    {
+      "id": "end-to-end-encryption",
+      "en": "End-to-end encryption",
+      "sq": "Kriptimi nga skaji në skaj",
+      "aliases": [
+        "e2ee",
+        "end to end",
+        "signal protocol"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Me kriptimin nga skaji në skaj, mesazhet kriptohen në telefonin tënd dhe hapen vetëm në telefonin e marrësit — as kompania që e ofron shërbimin (WhatsApp, Signal) s'mund t'i lexojë.",
+        "en": "With end-to-end encryption, messages are encrypted on your phone and only opened on the recipient's phone — not even the company running the service (WhatsApp, Signal) can read them."
+      },
+      "analogy": {
+        "sq": "Si një kuti e kyçur që e dërgon me postë: postieri e mbart, por vetëm marrësi e ka çelësin.",
+        "en": "Like a locked box sent by post: the postman carries it, but only the recipient has the key."
+      },
+      "code": null,
+      "related": [
+        "encryption",
+        "public-key-cryptography",
+        "man-in-the-middle"
+      ]
+    },
+    {
+      "id": "jwt",
+      "en": "JWT (JSON Web Token)",
+      "sq": null,
+      "aliases": [
+        "json web token",
+        "jwt token"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "JWT-ja është një token me tre pjesë (header.payload.signature) që mban informacion për përdoruesin dhe është i nënshkruar nga serveri. Kështu serveri e di kush je pa e kërkuar në databazë çdo herë. Mos vendos kurrë sekrete në payload — kushdo mund ta lexojë.",
+        "en": "A JWT is a three-part token (header.payload.signature) holding information about the user, signed by the server. That way the server knows who you are without looking you up in the database every time. Never put secrets in the payload — anyone can read it."
+      },
+      "analogy": {
+        "sq": "Si një bilet koncerti me vulë: roja s'ka nevojë të telefonojë arkën, vula mjafton.",
+        "en": "Like a concert ticket with a stamp: the steward doesn't need to phone the box office, the stamp is enough."
+      },
+      "code": {
+        "language": "text",
+        "snippet": "eyJhbGciOiJIUzI1NiJ9.eyJlbXJpIjoiQXJ0YSJ9.4pcPyMD09olPSyXnrXCjTwXyr4BsezdI1AVTmud2fU4\n   header            payload (emri: Arta)   nënshkrimi"
+      },
+      "related": [
+        "token",
+        "authentication",
+        "digital-signature"
+      ]
+    },
+    {
+      "id": "passkeys",
+      "en": "Passkeys",
+      "sq": null,
+      "aliases": [
+        "passkey",
+        "passwordless",
+        "webauthn",
+        "fido2"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Passkey-t janë mënyra e re për t'u kyçur pa fjalëkalim: telefoni ose kompjuteri yt ruan një çelës të fshehtë dhe e konfirmon me gisht, fytyrë ose PIN. S'mund të vidhen me phishing, sepse s'ka asgjë për të shkruar.",
+        "en": "Passkeys are the new way to log in without a password: your phone or computer stores a secret key and confirms it with your fingerprint, face or PIN. They can't be phished, because there's nothing to type."
+      },
+      "analogy": {
+        "sq": "Si çelësi i veturës me sensor: afrohesh dhe dera hapet — s'ke kod për ta harruar ose për t'ia treguar dikujt.",
+        "en": "Like a keyless car fob: walk up and the door opens — no code to forget or give away."
+      },
+      "code": null,
+      "related": [
+        "authentication",
+        "public-key-cryptography",
+        "biometrics"
+      ]
+    },
+    {
+      "id": "biometrics",
+      "en": "Biometrics (fingerprint, Face ID)",
+      "sq": "Biometria",
+      "aliases": [
+        "fingerprint",
+        "face id",
+        "touch id",
+        "gjurmë gishti",
+        "biometric"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Biometria të identifikon me diçka që je — gjurmën e gishtit, fytyrën, zërin. Në telefon, të dhënat biometrike ruhen në një çip të veçantë dhe s'dërgohen në internet. Është e shpejtë, por zakonisht përdoret bashkë me një PIN rezervë.",
+        "en": "Biometrics identify you by something you are — your fingerprint, face, voice. On phones, biometric data is kept in a special chip and never sent online. It's fast, but usually backed up by a PIN."
+      },
+      "analogy": {
+        "sq": "Si roja që të njeh nga fytyra dhe s'ka nevojë të shohë kartën.",
+        "en": "Like a doorman who recognises your face and doesn't need to see your card."
+      },
+      "code": null,
+      "related": [
+        "authentication",
+        "two-factor",
+        "passkeys"
+      ]
+    },
+    {
+      "id": "data-breach",
+      "en": "Data breach",
+      "sq": "Rrjedhja e të dhënave",
+      "aliases": [
+        "breach",
+        "have i been pwned",
+        "data leak"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Një rrjedhje të dhënash ndodh kur hakerët vjedhin informacion nga një kompani — email-e, fjalëkalime, numra telefoni. Në faqen haveibeenpwned.com mund të kontrollosh nëse email-i yt është prekur. Prandaj mos e përdor të njëjtin fjalëkalim kudo.",
+        "en": "A data breach happens when hackers steal information from a company — emails, passwords, phone numbers. On haveibeenpwned.com you can check whether your email was affected. That's why you shouldn't reuse the same password everywhere."
+      },
+      "analogy": {
+        "sq": "Si kur dikush vjedh regjistrin e anëtarëve të palestrës — tani e di emrin dhe adresën e të gjithëve.",
+        "en": "Like someone stealing the gym's membership register — now they know everyone's name and address."
+      },
+      "code": null,
+      "related": [
+        "password-manager",
+        "vulnerability",
+        "data-privacy"
+      ]
+    },
+    {
+      "id": "data-privacy",
+      "en": "Data privacy & GDPR",
+      "sq": "Privatësia e të dhënave",
+      "aliases": [
+        "privacy",
+        "data protection",
+        "personal data",
+        "të dhëna personale",
+        "ligji për mbrojtjen e të dhënave"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Privatësia e të dhënave do të thotë që njerëzit kontrollojnë çfarë mblidhet për ta dhe si përdoret. GDPR-ja e BE-së dhe ligjet për mbrojtjen e të dhënave në Shqipëri dhe Kosovë kërkojnë që të mbledhësh vetëm sa të duhet, t'i ruash të sigurta dhe t'i fshish kur kërkohet.",
+        "en": "Data privacy means people control what's collected about them and how it's used. The EU's GDPR and the data protection laws in Albania and Kosovo require you to collect only what you need, keep it safe and delete it on request."
+      },
+      "analogy": {
+        "sq": "Si mjeku që s'ua tregon kujt sëmundjet e pacientëve — informacioni është i tyre, jo i tiji.",
+        "en": "Like a doctor who never tells anyone about patients' illnesses — the information is theirs, not the doctor's."
+      },
+      "code": null,
+      "related": [
+        "cookie-consent",
+        "data-breach",
+        "encryption"
+      ]
+    },
+    {
+      "id": "clickjacking",
+      "en": "Clickjacking",
+      "sq": null,
+      "aliases": [
+        "ui redressing",
+        "x-frame-options",
+        "frame-ancestors"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Te clickjacking-u, një faqe e keqe e fsheh faqen tënde në një iframe të padukshëm dhe të mashtron të klikosh diçka atje — p.sh. „Fshi llogarinë“ — ndërsa mendon se po klikon një buton tjetër. Mbrohesh duke mos lejuar që faqja jote të hapet në iframe të huaj.",
+        "en": "In clickjacking, a malicious page hides your site in an invisible iframe and tricks you into clicking something there — e.g. “Delete account” — while you think you're clicking a different button. You defend against it by not letting your site open inside foreign iframes."
+      },
+      "analogy": {
+        "sq": "Si një xham i pastër mbi një buton: mendon se po shtyp ziles, por po hap portën e garazhit.",
+        "en": "Like a clear pane over a button: you think you're ringing the bell but you're opening the garage door."
+      },
+      "code": null,
+      "related": [
+        "iframe",
+        "content-security-policy",
+        "http-headers"
+      ]
+    },
+    {
+      "id": "path-traversal",
+      "en": "Path traversal",
+      "sq": "Kalimi jashtë dosjes",
+      "aliases": [
+        "directory traversal",
+        "../",
+        "dot dot slash"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Path traversal ndodh kur një aplikacion e merr emrin e skedarit nga përdoruesi pa e kontrolluar, dhe sulmuesi shkruan diçka si ../../etc/passwd për të lexuar skedarë jashtë dosjes së lejuar. Kontrollo gjithmonë që rruga mbetet brenda dosjes.",
+        "en": "Path traversal happens when an app takes a file name from the user without checking it, and the attacker types something like ../../etc/passwd to read files outside the allowed folder. Always check the path stays inside the folder."
+      },
+      "analogy": {
+        "sq": "Si një mysafir që i thua „merr një libër nga rafti“ dhe ai shkon e hap sirtarët e dhomës tënde të gjumit.",
+        "en": "Like a guest you tell “take a book from the shelf” who goes and opens your bedroom drawers."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "from pathlib import Path\nbaza = Path(\"ngarkime\").resolve()\nskedari = (baza / emri_nga_perdoruesi).resolve()\nif not skedari.is_relative_to(baza): raise PermissionError(\"Jo!\")"
+      },
+      "related": [
+        "input-validation",
+        "file-path",
+        "owasp-top-10"
+      ]
+    },
+    {
+      "id": "idor",
+      "en": "IDOR (insecure direct object reference)",
+      "sq": null,
+      "aliases": [
+        "insecure direct object reference",
+        "broken access control"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "IDOR ndodh kur një aplikacion të lejon të shohësh të dhëna vetëm duke ndryshuar numrin në adresë — nga /fatura/101 në /fatura/102 — pa kontrolluar nëse ajo faturë është e jotja. Serveri duhet të kontrollojë gjithmonë që objekti i përket përdoruesit.",
+        "en": "IDOR happens when an app lets you see data just by changing the number in the address — from /invoice/101 to /invoice/102 — without checking whether that invoice is yours. The server must always check the object belongs to the user."
+      },
+      "analogy": {
+        "sq": "Si një hotel ku çelësi yt hap çdo dhomë po të ndryshosh numrin e shkruar mbi të.",
+        "en": "Like a hotel where your key opens any room if you change the number written on it."
+      },
+      "code": null,
+      "related": [
+        "authorization",
+        "owasp-top-10",
+        "least-privilege"
+      ]
+    },
+    {
+      "id": "threat-modeling",
+      "en": "Threat modeling",
+      "sq": "Modelimi i rreziqeve",
+      "aliases": [
+        "threat model",
+        "stride",
+        "attack surface"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Modelimi i rreziqeve është të mendosh para se të ndërtosh: çfarë po mbroj, kush mund ta sulmojë, si, dhe çfarë ndodh nëse ia del? Kështu i gjen dobësitë në plan, kur rregullimi kushton shumë më pak.",
+        "en": "Threat modeling means thinking before you build: what am I protecting, who might attack it, how, and what happens if they succeed? That way you find weaknesses on paper, when fixing them costs far less."
+      },
+      "analogy": {
+        "sq": "Si plani i sigurisë para një ndeshjeje të madhe: ku mund të hyjnë njerëz pa biletë, ku mund të ketë rrëmujë.",
+        "en": "Like the security plan before a big match: where could people sneak in, where could trouble start."
+      },
+      "code": null,
+      "related": [
+        "vulnerability",
+        "penetration-testing",
+        "least-privilege"
+      ]
+    },
+    {
+      "id": "sandbox-security",
+      "en": "Sandboxing",
+      "sq": "Izolimi në „sandbox“",
+      "aliases": [
+        "sandbox",
+        "sandboxed",
+        "isolation"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Një sandbox e ekzekuton një program ose një faqe të izoluar nga pjesa tjetër e sistemit, që edhe nëse është e keqe, të mos prekë dot skedarët e tu. Çdo skedë e shfletuesit dhe çdo aplikacion në telefon punon në sandbox-in e vet.",
+        "en": "A sandbox runs a program or web page isolated from the rest of the system, so even if it's malicious it can't touch your files. Every browser tab and every phone app runs in its own sandbox."
+      },
+      "analogy": {
+        "sq": "Si kutia me rërë në park: fëmijët luajnë sa të duan, por rëra s'del në rrugë.",
+        "en": "Like the sandpit in the park: kids play as much as they like, but the sand doesn't end up in the street."
+      },
+      "code": null,
+      "related": [
+        "virtual-machine",
+        "docker",
+        "least-privilege"
+      ]
+    },
+    {
+      "id": "zero-trust",
+      "en": "Zero trust",
+      "sq": "Zero besim",
+      "aliases": [
+        "zero trust security",
+        "never trust always verify"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "„Zero trust“ do të thotë që askush s'besohet automatikisht — as brenda rrjetit të kompanisë. Çdo kërkesë kontrollohet: kush je, nga cila pajisje, a ke leje. Ndryshe nga modeli i vjetër „kalaja me mure“, ku kushdo brenda besohej.",
+        "en": "“Zero trust” means nobody is trusted automatically — not even inside the company network. Every request is checked: who you are, from which device, whether you're allowed. Unlike the old “castle with walls” model, where anyone inside was trusted."
+      },
+      "analogy": {
+        "sq": "Si një ndërtesë ku të kontrollojnë kartën te çdo derë, jo vetëm te hyrja kryesore.",
+        "en": "Like a building where your card is checked at every door, not just the main entrance."
+      },
+      "code": null,
+      "related": [
+        "least-privilege",
+        "authentication",
+        "vpn"
+      ]
+    },
+    {
+      "id": "red-blue-team",
+      "en": "Red team & blue team",
+      "sq": "Ekipi i kuq dhe ekipi blu",
+      "aliases": [
+        "red team",
+        "blue team",
+        "purple team"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Në siguri, ekipi i kuq luan rolin e sulmuesve dhe provon të hyjë në sisteme, ndërsa ekipi blu i mbron dhe i zbulon sulmet. Stërvitjet mes tyre e bëjnë kompaninë më të përgatitur për sulme të vërteta.",
+        "en": "In security, the red team plays the attackers and tries to break into systems, while the blue team defends and detects the attacks. Exercises between them leave the company better prepared for real attacks."
+      },
+      "analogy": {
+        "sq": "Si stërvitja e ekipit kur gjysma luan sulm dhe gjysma mbrojtje.",
+        "en": "Like team training where half play attack and half play defence."
+      },
+      "code": null,
+      "related": [
+        "penetration-testing",
+        "incident-response",
+        "ctf"
+      ]
+    },
+    {
+      "id": "ctf",
+      "en": "CTF (Capture the Flag)",
+      "sq": null,
+      "aliases": [
+        "capture the flag",
+        "ctf competition",
+        "picoctf"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "CTF-të janë gara sigurie ku zgjidh sfida — gjen dobësi, thyen kode, analizon skedarë — për të gjetur një „flamur“ të fshehtë. Ka gara për fillestarë si picoCTF; janë mënyra më argëtuese dhe e ligjshme për të mësuar hakimin etik.",
+        "en": "CTFs are security competitions where you solve challenges — find weaknesses, crack codes, analyse files — to uncover a hidden “flag”. There are beginner contests like picoCTF; they're the most fun and legal way to learn ethical hacking."
+      },
+      "analogy": {
+        "sq": "Si gjuetia e thesarit, por me enigma kompjuterike.",
+        "en": "Like a treasure hunt, but with computer puzzles."
+      },
+      "code": null,
+      "related": [
+        "penetration-testing",
+        "hackathon",
+        "competitive-programming"
+      ]
+    },
+    {
+      "id": "cookie-security-flags",
+      "en": "Secure cookie flags (HttpOnly, Secure, SameSite)",
+      "sq": "Atributet e sigurisë së cookie-ve",
+      "aliases": [
+        "httponly",
+        "samesite",
+        "secure cookie",
+        "cookie flags"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Cookie-t e sesionit duhet të kenë tre atribute: HttpOnly (JavaScript-i s'mund t'i lexojë — mbron nga XSS), Secure (dërgohen vetëm me HTTPS) dhe SameSite (s'dërgohen nga faqe të tjera — mbron nga CSRF).",
+        "en": "Session cookies should have three flags: HttpOnly (JavaScript can't read them — protects against XSS), Secure (sent only over HTTPS) and SameSite (not sent from other sites — protects against CSRF)."
+      },
+      "analogy": {
+        "sq": "Si tri kyçe në të njëjtën derë, secila kundër një lloj hajduti.",
+        "en": "Like three locks on the same door, each against a different kind of burglar."
+      },
+      "code": {
+        "language": "text",
+        "snippet": "Set-Cookie: sesioni=abc123; HttpOnly; Secure; SameSite=Lax"
+      },
+      "related": [
+        "cookie",
+        "session",
+        "csrf"
+      ]
+    },
+    {
+      "id": "session-hijacking",
+      "en": "Session hijacking",
+      "sq": "Rrëmbimi i sesionit",
+      "aliases": [
+        "cookie theft",
+        "session theft",
+        "hijacking"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Te rrëmbimi i sesionit, sulmuesi vjedh cookie-n ose token-in tënd të sesionit dhe hyn në llogarinë tënde pa fjalëkalim. Mbrohesh me HTTPS kudo, cookie HttpOnly, sesione që skadojnë dhe dalje nga llogaria në kompjuterë publikë.",
+        "en": "In session hijacking, the attacker steals your session cookie or token and gets into your account without the password. You defend with HTTPS everywhere, HttpOnly cookies, sessions that expire and logging out on public computers."
+      },
+      "analogy": {
+        "sq": "Si dikush që ta merr byzylykun e festivalit dhe hyn në vendin tënd.",
+        "en": "Like someone taking your festival wristband and getting in as you."
+      },
+      "code": null,
+      "related": [
+        "session",
+        "cookie-security-flags",
+        "xss"
+      ]
+    },
+    {
+      "id": "incident-response",
+      "en": "Incident response",
+      "sq": "Reagimi ndaj incidenteve",
+      "aliases": [
+        "security incident",
+        "postmortem",
+        "breach response"
+      ],
+      "category": "security",
+      "explanation": {
+        "sq": "Kur ndodh një sulm ose problem i madh, ekipi ndjek një plan: e zbulon, e izolon, e rregullon, njofton kë duhet, dhe në fund shkruan një „postmortem“ — çfarë ndodhi dhe si të mos përsëritet. Pa fajësuar njerëz.",
+        "en": "When an attack or major problem happens, the team follows a plan: detect it, contain it, fix it, notify who needs to know, and finally write a “postmortem” — what happened and how to stop it happening again. Without blaming people."
+      },
+      "analogy": {
+        "sq": "Si zjarrfikësit: shuajnë zjarrin, pastaj studiojnë si filloi që të mos ndodhë më.",
+        "en": "Like firefighters: put out the fire, then study how it started so it doesn't happen again."
+      },
+      "code": null,
+      "related": [
+        "data-breach",
+        "monitoring",
+        "red-blue-team"
+      ]
+    },
+    {
+      "id": "aws",
+      "en": "AWS (Amazon Web Services)",
+      "sq": null,
+      "aliases": [
+        "aws",
+        "amazon web services",
+        "lambda aws",
+        "s3 aws"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "AWS-ja është platforma cloud më e madhe në botë, nga Amazon-i: qindra shërbime për serverë (EC2), ruajtje (S3), databaza (RDS), funksione (Lambda) e shumë të tjera. Shumë kompani dhe startup-e në rajon e përdorin.",
+        "en": "AWS is the world's biggest cloud platform, from Amazon: hundreds of services for servers (EC2), storage (S3), databases (RDS), functions (Lambda) and much more. Many companies and startups in the region use it."
+      },
+      "analogy": {
+        "sq": "Si një qendër tregtare gjigante ku gjen çdo gjë që i duhet një aplikacioni.",
+        "en": "Like a giant shopping centre with everything an app could need."
+      },
+      "code": null,
+      "related": [
+        "cloud",
+        "azure",
+        "google-cloud"
+      ]
+    },
+    {
+      "id": "azure",
+      "en": "Microsoft Azure",
+      "sq": null,
+      "aliases": [
+        "azure",
+        "microsoft cloud",
+        "azure devops"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Azure është platforma cloud e Microsoft-it, e dyta më e madhe pas AWS-së. Shumë e përdorur nga kompanitë që punojnë me .NET, Windows dhe Office 365, dhe nga bankat e institucionet.",
+        "en": "Azure is Microsoft's cloud platform, the second biggest after AWS. It's widely used by companies working with .NET, Windows and Office 365, and by banks and institutions."
+      },
+      "analogy": {
+        "sq": "Si një tjetër qendër tregtare e madhe, ku dyqanet e Microsoft-it janë në hyrje.",
+        "en": "Like another big shopping centre, with Microsoft's shops at the entrance."
+      },
+      "code": null,
+      "related": [
+        "cloud",
+        "aws",
+        "dotnet"
+      ]
+    },
+    {
+      "id": "google-cloud",
+      "en": "Google Cloud",
+      "sq": null,
+      "aliases": [
+        "google cloud",
+        "gcp",
+        "google cloud platform",
+        "bigquery cloud"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Google Cloud (GCP) është platforma cloud e Google-it, e njohur sidomos për të dhënat dhe IA-në (BigQuery, Vertex AI) dhe për Kubernetes-in, që e shpiku vetë Google-i.",
+        "en": "Google Cloud (GCP) is Google's cloud platform, known especially for data and AI (BigQuery, Vertex AI) and for Kubernetes, which Google itself invented."
+      },
+      "analogy": {
+        "sq": "Si qendra e tretë tregtare, me dyqanet më të mira për të dhëna.",
+        "en": "Like the third shopping centre, with the best shops for data."
+      },
+      "code": null,
+      "related": [
+        "cloud",
+        "kubernetes",
+        "data-warehouse"
+      ]
+    },
+    {
+      "id": "availability-zone",
+      "en": "Regions & availability zones",
+      "sq": "Rajonet dhe zonat e disponueshmërisë",
+      "aliases": [
+        "availability zone",
+        "az",
+        "multi-region",
+        "aws region"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Ofruesit e cloud-it i kanë qendrat e të dhënave në „rajone“ (p.sh. Frankfurt), dhe çdo rajon ka disa „zona“ — ndërtesa të ndara me rrymë dhe internet të vetin. Po e vendose aplikacionin në disa zona, s'bie edhe nëse një ndërtesë mbetet pa rrymë.",
+        "en": "Cloud providers have their data centres in “regions” (e.g. Frankfurt), and each region has several “zones” — separate buildings with their own power and internet. Put your app in several zones and it stays up even if one building loses power."
+      },
+      "analogy": {
+        "sq": "Si një dyqan me disa degë në qytet: po u mbyll njëra, klientët shkojnë te tjetra.",
+        "en": "Like a shop with several branches in town: if one closes, customers go to another."
+      },
+      "code": null,
+      "related": [
+        "data-center",
+        "uptime",
+        "disaster-recovery"
+      ]
+    },
+    {
+      "id": "docker-image",
+      "en": "Docker image vs container",
+      "sq": "Imazhi dhe kontejneri Docker",
+      "aliases": [
+        "docker image",
+        "image vs container",
+        "docker build",
+        "docker run"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Një imazh Docker është paketa e mbyllur me aplikacionin dhe gjithçka që i duhet — si një recetë e ngrirë. Një kontejner është kopja që po punon e atij imazhi. Nga një imazh mund të nisësh sa kontejnerë të duash.",
+        "en": "A Docker image is the sealed package with the app and everything it needs — like a frozen meal. A container is a running copy of that image. From one image you can start as many containers as you like."
+      },
+      "analogy": {
+        "sq": "Imazhi është kallëpi i ëmbëlsirës; kontejnerët janë ëmbëlsirat që dalin prej tij.",
+        "en": "The image is the cake tin; the containers are the cakes that come out of it."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "docker build -t fjalori .\ndocker run -p 8000:8000 fjalori"
+      },
+      "related": [
+        "docker",
+        "container-registry",
+        "docker-compose"
+      ]
+    },
+    {
+      "id": "container-registry",
+      "en": "Container registry (Docker Hub)",
+      "sq": "Regjistri i kontejnerëve",
+      "aliases": [
+        "docker hub",
+        "registry",
+        "ghcr",
+        "ecr",
+        "docker push"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Një regjistër kontejnerësh është vendi online ku ruhen imazhet Docker — Docker Hub, GitHub Container Registry ose ai i AWS-së. Serverat i shkarkojnë imazhet prej andej kur nisin aplikacionin.",
+        "en": "A container registry is the online place where Docker images are stored — Docker Hub, GitHub Container Registry or AWS's. Servers download images from there when they start the app."
+      },
+      "analogy": {
+        "sq": "Si një magazinë qendrore e kallëpeve nga ku çdo furrë merr atë që i duhet.",
+        "en": "Like a central warehouse of cake tins where every bakery picks up what it needs."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "docker push ghcr.io/scalarcode/fjalori:1.0\ndocker pull nginx:latest"
+      },
+      "related": [
+        "docker-image",
+        "docker",
+        "npm"
+      ]
+    },
+    {
+      "id": "docker-volume",
+      "en": "Docker volumes",
+      "sq": "Volumet në Docker",
+      "aliases": [
+        "volume",
+        "docker volume",
+        "persistent storage",
+        "bind mount"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Kontejnerët janë të përkohshëm: kur fshihen, çdo gjë brenda tyre humbet. Një volum ruan të dhënat jashtë kontejnerit — p.sh. databazën — që të mbeten edhe kur kontejneri rinis.",
+        "en": "Containers are temporary: when deleted, everything inside them is lost. A volume stores data outside the container — like the database — so it survives when the container restarts."
+      },
+      "analogy": {
+        "sq": "Si dollapi në palestër: rrobat i lë aty edhe kur ti largohesh.",
+        "en": "Like a gym locker: your stuff stays there even when you leave."
+      },
+      "code": {
+        "language": "yaml",
+        "snippet": "services:\n  db:\n    image: postgres:16\n    volumes: [\"te-dhenat:/var/lib/postgresql/data\"]"
+      },
+      "related": [
+        "docker",
+        "docker-compose",
+        "storage-ssd"
+      ]
+    },
+    {
+      "id": "kubernetes-pod",
+      "en": "Pods & deployments (Kubernetes)",
+      "sq": "Pod-et dhe deployment-et",
+      "aliases": [
+        "pod",
+        "deployment k8s",
+        "kubectl"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Në Kubernetes, një pod është njësia më e vogël — një ose disa kontejnerë që punojnë bashkë. Një deployment thotë „dua 3 kopje të këtij aplikacioni“, dhe Kubernetes-i i mban gjithmonë 3, duke rinisur ato që bien.",
+        "en": "In Kubernetes, a pod is the smallest unit — one or a few containers working together. A deployment says “I want 3 copies of this app”, and Kubernetes always keeps 3 running, restarting any that crash."
+      },
+      "analogy": {
+        "sq": "Si trajneri që gjithmonë mban 11 lojtarë në fushë: po u lëndua njëri, hyn menjëherë zëvendësuesi.",
+        "en": "Like a coach who always keeps 11 players on the pitch: if one gets injured, a sub comes straight on."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "kubectl get pods\nkubectl scale deployment fjalori --replicas=3"
+      },
+      "related": [
+        "kubernetes",
+        "helm",
+        "docker"
+      ]
+    },
+    {
+      "id": "helm",
+      "en": "Helm",
+      "sq": null,
+      "aliases": [
+        "helm chart",
+        "helm install"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Helm-i është „menaxheri i paketave“ për Kubernetes: një „chart“ i bashkon të gjitha skedarët YAML që duhen për një aplikacion, që ta instalosh me një komandë dhe ta përditësosh lehtë.",
+        "en": "Helm is the “package manager” for Kubernetes: a “chart” bundles all the YAML files an app needs, so you install it with one command and update it easily."
+      },
+      "analogy": {
+        "sq": "Si një kuti mobiljesh me të gjitha pjesët dhe udhëzimet brenda.",
+        "en": "Like a flat-pack box with all the parts and instructions inside."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "helm install databaza bitnami/postgresql"
+      },
+      "related": [
+        "kubernetes",
+        "npm",
+        "yaml"
+      ]
+    },
+    {
+      "id": "infrastructure-as-code",
+      "en": "Infrastructure as Code (IaC)",
+      "sq": "Infrastruktura si kod",
+      "aliases": [
+        "iac",
+        "infrastructure as code"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Infrastruktura si kod do të thotë t'i përshkruash serverët, databazat dhe rrjetet në skedarë kodi, në vend që t'i krijosh me klikime në panel. Kështu mund ta rikrijosh të gjithë sistemin me një komandë, dhe ndryshimet ruhen në Git.",
+        "en": "Infrastructure as Code means describing servers, databases and networks in code files, instead of creating them by clicking in a dashboard. That way you can recreate the whole system with one command, and changes are tracked in Git."
+      },
+      "analogy": {
+        "sq": "Si plani i arkitektit: me të, mund ta ndërtosh të njëjtën shtëpi sa herë të duash.",
+        "en": "Like an architect's plan: with it, you can build the same house as many times as you like."
+      },
+      "code": null,
+      "related": [
+        "terraform",
+        "ansible",
+        "gitops"
+      ]
+    },
+    {
+      "id": "terraform",
+      "en": "Terraform",
+      "sq": null,
+      "aliases": [
+        "terraform",
+        "opentofu",
+        "hcl"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Terraform-i është mjeti më i njohur për infrastrukturë si kod: e shkruan çfarë do (një server, një databazë) dhe terraform apply e krijon në AWS, Azure ose Google Cloud. terraform plan të tregon çfarë do të ndryshojë para se ta bëjë.",
+        "en": "Terraform is the best-known Infrastructure as Code tool: you write what you want (a server, a database) and terraform apply creates it on AWS, Azure or Google Cloud. terraform plan shows what will change before it does it."
+      },
+      "analogy": {
+        "sq": "Si një porosi te ndërtuesi: „dua këtë“ — dhe ai të tregon planin para se të nisë punën.",
+        "en": "Like an order to a builder: “I want this” — and they show you the plan before starting work."
+      },
+      "code": {
+        "language": "hcl",
+        "snippet": "resource \"aws_s3_bucket\" \"fotot\" {\n  bucket = \"fjalori-fotot\"\n}"
+      },
+      "related": [
+        "infrastructure-as-code",
+        "aws",
+        "cloud"
+      ]
+    },
+    {
+      "id": "ansible",
+      "en": "Ansible",
+      "sq": null,
+      "aliases": [
+        "ansible playbook",
+        "configuration management",
+        "chef",
+        "puppet"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Ansible-i i konfiguron serverët automatikisht: instalon programe, kopjon skedarë dhe ndryshon cilësime në 1 ose 1000 serverë njëkohësisht, sipas një „playbook“ në YAML.",
+        "en": "Ansible configures servers automatically: it installs programs, copies files and changes settings on 1 or 1,000 servers at once, following a YAML “playbook”."
+      },
+      "analogy": {
+        "sq": "Si një listë udhëzimesh që ua jep të gjithë punëtorëve njëherësh, në vend që t'ia shpjegosh secilit veç.",
+        "en": "Like a single instruction sheet handed to all the workers at once, instead of explaining to each one."
+      },
+      "code": {
+        "language": "yaml",
+        "snippet": "- hosts: serverat\n  tasks:\n    - apt: { name: nginx, state: present }"
+      },
+      "related": [
+        "infrastructure-as-code",
+        "terraform",
+        "linux"
+      ]
+    },
+    {
+      "id": "jenkins",
+      "en": "Jenkins",
+      "sq": null,
+      "aliases": [
+        "jenkins pipeline",
+        "jenkinsfile ci"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Jenkins-i është një nga mjetet më të vjetra dhe më të përhapura për CI/CD — e ndërton, e teston dhe e publikon kodin automatikisht. Shumë kompani të mëdha e përdorin ende, edhe pse GitHub Actions po bëhet më i popullarizuar.",
+        "en": "Jenkins is one of the oldest and most widespread CI/CD tools — it builds, tests and deploys code automatically. Many big companies still use it, though GitHub Actions is becoming more popular."
+      },
+      "analogy": {
+        "sq": "Si roboti në linjën e fabrikës që e kontrollon çdo produkt para se të dalë.",
+        "en": "Like the robot on a factory line that checks every product before it leaves."
+      },
+      "code": null,
+      "related": [
+        "ci-cd",
+        "github-actions",
+        "groovy"
+      ]
+    },
+    {
+      "id": "blue-green-deployment",
+      "en": "Blue-green deployment",
+      "sq": "Publikimi blu-jeshil",
+      "aliases": [
+        "blue green",
+        "zero downtime deployment"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Te blue-green deployment, ke dy kopje të plota të aplikacionit: „blu“ (ajo që përdorin njerëzit tani) dhe „jeshile“ (versioni i ri). Kur e jeshilja është gati dhe e testuar, e kalon trafikun te ajo në një sekondë — dhe po pati problem, kthehesh te bluja.",
+        "en": "With blue-green deployment, you have two full copies of the app: “blue” (the one people use now) and “green” (the new version). When green is ready and tested, you switch the traffic to it in a second — and if there's a problem, you switch back to blue."
+      },
+      "analogy": {
+        "sq": "Si dy skena në një koncert: ndërsa një grup këndon, tjetri përgatitet në skenën tjetër.",
+        "en": "Like two stages at a festival: while one band plays, the next sets up on the other stage."
+      },
+      "code": null,
+      "related": [
+        "canary-release",
+        "rollback",
+        "load-balancer"
+      ]
+    },
+    {
+      "id": "canary-release",
+      "en": "Canary release",
+      "sq": "Publikimi gradual",
+      "aliases": [
+        "canary",
+        "canary deployment",
+        "gradual rollout",
+        "staged rollout"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Te canary release, versioni i ri i dërgohet fillimisht vetëm një pjese të vogël të përdoruesve (p.sh. 5%). Nëse gjithçka shkon mirë, rritet gradualisht deri në 100%; nëse jo, problemi prek vetëm pak njerëz.",
+        "en": "In a canary release, the new version first goes to only a small slice of users (e.g. 5%). If all goes well, it's gradually raised to 100%; if not, the problem only affects a few people."
+      },
+      "analogy": {
+        "sq": "Si kanarina që minatorët e merrnin në minierë: po kishte gaz, e vinin re para se të rrezikohej gjithë grupi.",
+        "en": "Like the canary miners took underground: if there was gas, they noticed before the whole team was in danger."
+      },
+      "code": null,
+      "related": [
+        "blue-green-deployment",
+        "feature-flags",
+        "monitoring"
+      ]
+    },
+    {
+      "id": "rollback",
+      "en": "Rollback (deployment)",
+      "sq": "Kthimi prapa i publikimit",
+      "aliases": [
+        "roll back",
+        "revert deployment"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Rollback do të thotë ta kthesh aplikacionin te versioni i mëparshëm kur versioni i ri ka problem. Platformat si Vercel e bëjnë me një klik, sepse çdo publikim ruhet.",
+        "en": "A rollback means returning the app to the previous version when the new one has a problem. Platforms like Vercel do it in one click, because every deployment is kept."
+      },
+      "analogy": {
+        "sq": "Si „Ctrl+Z“ për gjithë faqen në internet.",
+        "en": "Like “Ctrl+Z” for the whole website."
+      },
+      "code": null,
+      "related": [
+        "deploy",
+        "revert",
+        "blue-green-deployment"
+      ]
+    },
+    {
+      "id": "feature-flags",
+      "en": "Feature flags",
+      "sq": "Çelësat e veçorive",
+      "aliases": [
+        "feature toggle",
+        "feature flag",
+        "launchdarkly"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Një feature flag është një çelës në kod që e ndez ose e fik një veçori pa publikim të ri — p.sh. ta shohin vetëm testuesit, ose ta fikësh menjëherë nëse ka problem.",
+        "en": "A feature flag is a switch in the code that turns a feature on or off without a new deployment — e.g. only testers see it, or you switch it off instantly if there's a problem."
+      },
+      "analogy": {
+        "sq": "Si çelësat e dritave në shtëpi: instalimi është gati, ti vendos kur ndizet.",
+        "en": "Like the light switches at home: the wiring's in, you decide when the light comes on."
+      },
+      "code": {
+        "language": "javascript",
+        "snippet": "if (flamujt.kerkimiIRi) shfaqKerkiminERi();\nelse shfaqKerkiminEVjeter();"
+      },
+      "related": [
+        "canary-release",
+        "config-file",
+        "deploy"
+      ]
+    },
+    {
+      "id": "deployment-environments",
+      "en": "Environments (dev, staging, production)",
+      "sq": "Ambientet e punës",
+      "aliases": [
+        "dev environment",
+        "prod",
+        "preview deployment",
+        "staging environment"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Zakonisht një aplikacion ka disa ambiente: development (në kompjuterin tënd), staging (kopje e production-it për testim) dhe production (versioni që përdorin njerëzit). Kodi kalon nga njëri te tjetri vetëm kur është testuar.",
+        "en": "An app usually has several environments: development (on your computer), staging (a copy of production for testing) and production (the version people use). Code moves from one to the next only once tested."
+      },
+      "analogy": {
+        "sq": "Si prova e teatrit: fillimisht në shtëpi, pastaj prova e përgjithshme në skenë, dhe vetëm në fund shfaqja para publikut.",
+        "en": "Like a play: first rehearsals at home, then the dress rehearsal on stage, and only then the show in front of an audience."
+      },
+      "code": null,
+      "related": [
+        "production",
+        "environment-variable",
+        "deploy"
+      ]
+    },
+    {
+      "id": "twelve-factor-app",
+      "en": "Twelve-factor app",
+      "sq": "Aplikacioni me 12 faktorë",
+      "aliases": [
+        "12 factor",
+        "twelve factor"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "„The Twelve-Factor App“ është një listë me 12 rregulla për aplikacione që punojnë mirë në cloud — p.sh. konfigurimi në variabla ambienti, log-et si rrjedhë teksti, procese pa gjendje që mund të shumëfishohen.",
+        "en": "“The Twelve-Factor App” is a list of 12 rules for apps that work well in the cloud — e.g. config in environment variables, logs as a stream of text, stateless processes that can be multiplied."
+      },
+      "analogy": {
+        "sq": "Si rregullat e higjienës në një kuzhinë profesionale: ndiqi dhe çdo gjë shkon më mirë.",
+        "en": "Like the hygiene rules in a professional kitchen: follow them and everything runs better."
+      },
+      "code": null,
+      "related": [
+        "environment-variable",
+        "scalability",
+        "log"
+      ]
+    },
+    {
+      "id": "log-aggregation",
+      "en": "Log aggregation (ELK, Loki)",
+      "sq": "Mbledhja e log-eve",
+      "aliases": [
+        "elk",
+        "elasticsearch",
+        "kibana",
+        "loki",
+        "centralized logging"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Kur aplikacioni punon në shumë serverë, log-et janë të shpërndara kudo. Mjetet si ELK (Elasticsearch, Logstash, Kibana) ose Grafana Loki i mbledhin në një vend, që t'i kërkosh dhe t'i filtrosh lehtë.",
+        "en": "When an app runs on many servers, its logs are scattered everywhere. Tools like ELK (Elasticsearch, Logstash, Kibana) or Grafana Loki collect them in one place so you can search and filter them easily."
+      },
+      "analogy": {
+        "sq": "Si t'i mbledhësh ditarët e të gjithë kapitenëve të flotës në një bibliotekë.",
+        "en": "Like collecting the logbooks of every captain in the fleet into one library."
+      },
+      "code": null,
+      "related": [
+        "log",
+        "monitoring",
+        "prometheus-grafana"
+      ]
+    },
+    {
+      "id": "prometheus-grafana",
+      "en": "Metrics (Prometheus & Grafana)",
+      "sq": "Metrikat",
+      "aliases": [
+        "prometheus",
+        "grafana",
+        "metrics",
+        "dashboard monitoring"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Metrikat janë numra që maten vazhdimisht — sa kërkesa në sekondë, sa i ngadaltë është serveri, sa memorie përdor. Prometheus-i i mbledh, dhe Grafana i shfaq në grafikë të bukur në një panel.",
+        "en": "Metrics are numbers measured continuously — requests per second, how slow the server is, how much memory it uses. Prometheus collects them, and Grafana shows them in nice charts on a dashboard."
+      },
+      "analogy": {
+        "sq": "Si paneli i veturës: shpejtësia, karburanti, temperatura — të gjitha me një shikim.",
+        "en": "Like a car dashboard: speed, fuel, temperature — all at a glance."
+      },
+      "code": null,
+      "related": [
+        "monitoring",
+        "log-aggregation",
+        "alerting-on-call"
+      ]
+    },
+    {
+      "id": "alerting-on-call",
+      "en": "Alerting & on-call",
+      "sq": "Alarmet dhe kujdestaria",
+      "aliases": [
+        "on-call",
+        "pagerduty",
+        "alert",
+        "pager"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Kur një metrikë kalon një kufi — p.sh. faqja kthen shumë gabime 500 — sistemi dërgon një alarm. Programuesi „on-call“ (në kujdestari) e merr në telefon, edhe natën, dhe e rregullon problemin.",
+        "en": "When a metric crosses a threshold — e.g. the site returns lots of 500 errors — the system sends an alert. The on-call developer gets it on their phone, even at night, and fixes the problem."
+      },
+      "analogy": {
+        "sq": "Si mjeku kujdestar në spital: s'është gjithmonë në punë, por kur bie telefoni, shkon.",
+        "en": "Like the doctor on call at a hospital: not always working, but when the phone rings, they go."
+      },
+      "code": null,
+      "related": [
+        "monitoring",
+        "incident-response",
+        "slo-sli"
+      ]
+    },
+    {
+      "id": "slo-sli",
+      "en": "SLO & SLI",
+      "sq": null,
+      "aliases": [
+        "slo",
+        "sli",
+        "error budget",
+        "service level objective"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "SLI-ja është një matje e cilësisë (p.sh. % e kërkesave që kanë sukses), SLO-ja është objektivi (p.sh. 99.9% gjatë muajit). Diferenca është „buxheti i gabimeve“ — sa mund të dështosh para se të ndalosh veçoritë e reja dhe të merresh me stabilitetin.",
+        "en": "An SLI is a quality measurement (e.g. % of successful requests), an SLO is the target (e.g. 99.9% over the month). The gap is the “error budget” — how much you can fail before you stop new features and focus on stability."
+      },
+      "analogy": {
+        "sq": "Si objektivi i autobusit: „95% e linjave në kohë“ — dhe po ra nën të, ndryshon diçka.",
+        "en": "Like a bus company's target: “95% of buses on time” — and if it drops below, something changes."
+      },
+      "code": null,
+      "related": [
+        "uptime",
+        "monitoring",
+        "alerting-on-call"
+      ]
+    },
+    {
+      "id": "api-gateway",
+      "en": "API gateway",
+      "sq": null,
+      "aliases": [
+        "api gateway",
+        "gateway"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Një API gateway është dera e vetme e hyrjes për të gjitha shërbimet e një sistemi: i pranon kërkesat, kontrollon hyrjen, kufizon trafikun dhe ia kalon secilën shërbimit të duhur. Shumë e zakonshme me mikroshërbime.",
+        "en": "An API gateway is the single front door for all of a system's services: it receives requests, checks access, limits traffic and passes each one to the right service. Very common with microservices."
+      },
+      "analogy": {
+        "sq": "Si recepsioni i një spitali: të gjithë hyjnë nga aty dhe dërgohen te reparti i duhur.",
+        "en": "Like a hospital's reception: everyone comes in there and gets sent to the right ward."
+      },
+      "code": null,
+      "related": [
+        "microservices",
+        "rate-limiting",
+        "load-balancer"
+      ]
+    },
+    {
+      "id": "message-queue",
+      "en": "Message queues (RabbitMQ, Kafka)",
+      "sq": "Radhët e mesazheve",
+      "aliases": [
+        "rabbitmq",
+        "kafka",
+        "sqs",
+        "message broker",
+        "queue system"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Një radhë mesazhesh i lejon pjesët e një sistemi të komunikojnë pa pritur njëra-tjetrën: njëra e lë mesazhin („dërgo email-in e mirëseardhjes“), tjetra e merr kur të jetë gati. Kështu sistemi s'bie kur ka shumë punë njëherësh.",
+        "en": "A message queue lets parts of a system communicate without waiting for each other: one leaves a message (“send the welcome email”), another picks it up when ready. That way the system doesn't collapse under bursts of work."
+      },
+      "analogy": {
+        "sq": "Si radha e porosive në kuzhinën e restorantit: kamerieri i ngjit fletët, kuzhinierët i marrin me radhë.",
+        "en": "Like the order tickets in a restaurant kitchen: waiters pin them up, cooks take them in turn."
+      },
+      "code": null,
+      "related": [
+        "pub-sub",
+        "microservices",
+        "asynchronous"
+      ]
+    },
+    {
+      "id": "pub-sub",
+      "en": "Publish/subscribe (pub/sub)",
+      "sq": "Publikim/abonim",
+      "aliases": [
+        "pubsub",
+        "publish subscribe",
+        "event bus"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Te pub/sub, një shërbim „publikon“ një ngjarje (p.sh. „porosia u pagua“), dhe të gjithë ata që janë „abonuar“ e marrin — email-i, magazina, faturat — pa e njohur njëri-tjetrin.",
+        "en": "With pub/sub, one service “publishes” an event (e.g. “order paid”), and everyone who has “subscribed” receives it — email, warehouse, invoicing — without knowing each other."
+      },
+      "analogy": {
+        "sq": "Si një kanal në YouTube: publikon një video dhe çdo abonent merr njoftim.",
+        "en": "Like a YouTube channel: you post a video and every subscriber gets a notification."
+      },
+      "code": null,
+      "related": [
+        "message-queue",
+        "events-csharp",
+        "webhook"
+      ]
+    },
+    {
+      "id": "edge-computing",
+      "en": "Edge computing",
+      "sq": "Llogaritja në skaj",
+      "aliases": [
+        "edge network compute"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Edge computing do të thotë ta ekzekutosh kodin në serverë sa më afër përdoruesit — p.sh. në një server në Vjenë për dikë në Prishtinë, në vend të një serveri në Amerikë. Faqja përgjigjet shumë më shpejt.",
+        "en": "Edge computing means running code on servers as close to the user as possible — e.g. a server in Vienna for someone in Prishtina, instead of one in America. The site responds much faster."
+      },
+      "analogy": {
+        "sq": "Si furrat e bukës në çdo lagje në vend të një fabrike të vetme në anën tjetër të vendit.",
+        "en": "Like a bakery in every neighbourhood instead of one factory on the other side of the country."
+      },
+      "code": null,
+      "related": [
+        "cdn",
+        "latency",
+        "serverless"
+      ]
+    },
+    {
+      "id": "cold-start",
+      "en": "Cold start",
+      "sq": "Nisja e ftohtë",
+      "aliases": [
+        "cold start serverless",
+        "warm start"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Te serverless, kur një funksion s'është përdorur për ca kohë, platforma e „fik“. Kërkesa e parë pas kësaj duhet ta nisë nga e para — kjo vonesë quhet „cold start“. Kërkesat pasuese janë të shpejta.",
+        "en": "With serverless, when a function hasn't been used for a while the platform “switches it off”. The first request after that has to start it from scratch — this delay is called a “cold start”. Later requests are fast."
+      },
+      "analogy": {
+        "sq": "Si vetura në mëngjes dimri: herën e parë do pak kohë të ndizet, pastaj ecën normalisht.",
+        "en": "Like a car on a winter morning: it takes a moment to start the first time, then runs normally."
+      },
+      "code": null,
+      "related": [
+        "serverless",
+        "latency",
+        "edge-computing"
+      ]
+    },
+    {
+      "id": "cloud-costs",
+      "en": "Cloud costs & free tiers",
+      "sq": "Kostot e cloud-it",
+      "aliases": [
+        "cloud bill",
+        "free tier",
+        "pay as you go",
+        "billing alert"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Në cloud paguan vetëm aq sa përdor — por një gabim (një server i harruar ndezur, një cikël i pafund) mund të sjellë faturë të madhe. Shumë ofrues kanë „free tier“ për projekte të vogla. Vendos gjithmonë një alarm buxheti.",
+        "en": "In the cloud you only pay for what you use — but a mistake (a forgotten server left running, an endless loop) can bring a huge bill. Many providers have a “free tier” for small projects. Always set a budget alert."
+      },
+      "analogy": {
+        "sq": "Si fatura e rrymës: s'paguan për llambën e fikur, por po e harrove kondicionerin ndezur gjithë muajin, e ndien.",
+        "en": "Like the electricity bill: you don't pay for a switched-off lamp, but leave the AC on all month and you'll feel it."
+      },
+      "code": null,
+      "related": [
+        "cloud",
+        "serverless",
+        "monitoring"
+      ]
+    },
+    {
+      "id": "vps",
+      "en": "VPS (virtual private server)",
+      "sq": "Server virtual privat",
+      "aliases": [
+        "vps",
+        "digitalocean",
+        "hetzner",
+        "linode",
+        "droplet"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Një VPS është një server virtual që e merr me qira me pak euro në muaj (DigitalOcean, Hetzner, Linode) dhe ku ke kontroll të plotë: instalon Linux-in, serverin web dhe databazën vetë. Mënyrë e mirë për të mësuar si funksionojnë serverët.",
+        "en": "A VPS is a virtual server you rent for a few euros a month (DigitalOcean, Hetzner, Linode) with full control: you install Linux, the web server and the database yourself. A great way to learn how servers work."
+      },
+      "analogy": {
+        "sq": "Si një apartament me qira: është i yti për ta rregulluar si të duash, por ndërtesa është e pronarit.",
+        "en": "Like a rented flat: yours to arrange as you like, but the building belongs to the landlord."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "ssh root@203.0.113.10\napt update && apt install nginx"
+      },
+      "related": [
+        "virtual-machine",
+        "hosting",
+        "ssh-key"
+      ]
+    },
+    {
+      "id": "cron-job",
+      "en": "Cron jobs",
+      "sq": "Detyrat e planifikuara",
+      "aliases": [
+        "cron",
+        "crontab",
+        "scheduled task",
+        "scheduled job"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Një cron job është një komandë që ekzekutohet automatikisht në kohë të caktuara — p.sh. çdo natë në 3:00 për backup, ose çdo të hënë për raporte. Shkruhet me pesë fusha: minuta, ora, dita, muaji, dita e javës.",
+        "en": "A cron job is a command that runs automatically at set times — e.g. every night at 3:00 for a backup, or every Monday for reports. It's written with five fields: minute, hour, day, month, day of week."
+      },
+      "analogy": {
+        "sq": "Si zilja e shkollës që bie vetë çdo 45 minuta.",
+        "en": "Like the school bell that rings by itself every 45 minutes."
+      },
+      "code": {
+        "language": "text",
+        "snippet": "0 3 * * *  /home/arta/backup.sh     # çdo natë në 3:00\n0 9 * * 1  /home/arta/raporti.sh   # çdo të hënë në 9:00"
+      },
+      "related": [
+        "task-scheduler",
+        "backup",
+        "linux"
+      ]
+    },
+    {
+      "id": "disaster-recovery",
+      "en": "Disaster recovery",
+      "sq": "Rikuperimi pas fatkeqësive",
+      "aliases": [
+        "dr",
+        "rpo",
+        "rto",
+        "business continuity"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Rikuperimi pas fatkeqësive është plani për ta rikthyer sistemin pas një problemi të madh — një qendër të dhënash pa rrymë, një sulm, një fshirje e gabuar. Dy pyetje kyçe: sa të dhëna mund të humbasim (RPO) dhe sa shpejt duhet të kthehemi (RTO)?",
+        "en": "Disaster recovery is the plan to bring a system back after a major problem — a data centre losing power, an attack, an accidental deletion. Two key questions: how much data can we lose (RPO) and how fast must we be back (RTO)?"
+      },
+      "analogy": {
+        "sq": "Si plani i evakuimit dhe çelësat rezervë të shtëpisë te gjyshja: shpresojmë të mos na duhen kurrë.",
+        "en": "Like the evacuation plan and the spare house keys at grandma's: we hope we never need them."
+      },
+      "code": null,
+      "related": [
+        "backup",
+        "availability-zone",
+        "incident-response"
+      ]
+    },
+    {
+      "id": "vendor-lock-in",
+      "en": "Vendor lock-in",
+      "sq": "Varësia nga një ofrues",
+      "aliases": [
+        "lock-in",
+        "multi-cloud",
+        "portability"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Vendor lock-in ndodh kur e ndërton aplikacionin aq shumë me shërbimet speciale të një ofruesi, sa kalimi te një tjetër bëhet shumë i shtrenjtë. Standardet e hapura si Docker dhe Kubernetes e zvogëlojnë këtë rrezik.",
+        "en": "Vendor lock-in happens when you build your app so deeply on one provider's special services that moving to another becomes very expensive. Open standards like Docker and Kubernetes reduce this risk."
+      },
+      "analogy": {
+        "sq": "Si një telefon me karikues që s'e gjen askund tjetër: po ndërrove markë, duhet t'i ndërrosh të gjitha.",
+        "en": "Like a phone with a charger you can't find anywhere else: switch brands and you have to replace everything."
+      },
+      "code": null,
+      "related": [
+        "cloud",
+        "docker",
+        "open-source"
+      ]
+    },
+    {
+      "id": "iam",
+      "en": "IAM (identity & access management)",
+      "sq": "Menaxhimi i identiteteve dhe qasjes",
+      "aliases": [
+        "identity and access management",
+        "iam role",
+        "iam policy",
+        "service account"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "IAM-i në cloud vendos kush (njerëz ose programe) mund të bëjë çfarë: kush mund të lexojë një bucket, kush mund të fshijë një server. Rregulli i artë: secili merr vetëm lejet që i duhen, asgjë më shumë.",
+        "en": "IAM in the cloud decides who (people or programs) can do what: who can read a bucket, who can delete a server. The golden rule: everyone gets only the permissions they need, nothing more."
+      },
+      "analogy": {
+        "sq": "Si kartat e hyrjes në një spital: infermierët hyjnë në reparte, vetëm farmacistët në farmaci.",
+        "en": "Like access cards in a hospital: nurses get into the wards, only pharmacists into the pharmacy."
+      },
+      "code": null,
+      "related": [
+        "least-privilege",
+        "authorization",
+        "aws"
+      ]
+    },
+    {
+      "id": "gitops",
+      "en": "GitOps",
+      "sq": null,
+      "aliases": [
+        "gitops",
+        "argo cd",
+        "flux"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Te GitOps, gjendja e gjithë infrastrukturës dhe aplikacioneve ruhet në një repository Git. Për të ndryshuar diçka në production, bën një pull request; një mjet si Argo CD e sheh ndryshimin dhe e zbaton vetë.",
+        "en": "With GitOps, the state of all infrastructure and apps is kept in a Git repository. To change something in production, you make a pull request; a tool like Argo CD sees the change and applies it automatically."
+      },
+      "analogy": {
+        "sq": "Si plani i shtëpisë që, sa herë e ndryshon në letër, punëtorët e ndërtojnë vetë.",
+        "en": "Like a house plan where, whenever you change it on paper, the builders build it by themselves."
+      },
+      "code": null,
+      "related": [
+        "infrastructure-as-code",
+        "pull-request",
+        "kubernetes"
+      ]
+    },
+    {
+      "id": "load-testing",
+      "en": "Load testing",
+      "sq": "Testimi i ngarkesës",
+      "aliases": [
+        "stress test",
+        "k6",
+        "jmeter",
+        "performance testing"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Testimi i ngarkesës e simulon mijëra përdorues njëkohësisht për të parë kur ngadalësohet ose bie aplikacioni — para se ta zbulosh ditën e lansimit. Mjete si k6 dhe JMeter e bëjnë këtë.",
+        "en": "Load testing simulates thousands of users at once to see when the app slows down or breaks — before you find out on launch day. Tools like k6 and JMeter do this."
+      },
+      "analogy": {
+        "sq": "Si ta provosh urën me kamionë të rëndë para se ta hapësh për trafikun.",
+        "en": "Like testing a bridge with heavy trucks before opening it to traffic."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "k6 run --vus 500 --duration 1m testi.js"
+      },
+      "related": [
+        "scalability",
+        "web-performance",
+        "testing"
+      ]
+    },
+    {
+      "id": "dns-records",
+      "en": "DNS records (A, CNAME, MX)",
+      "sq": "Regjistrimet DNS",
+      "aliases": [
+        "a record",
+        "cname",
+        "mx record",
+        "txt record",
+        "dns settings"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Regjistrimet DNS i tregojnë internetit ku të shkojë: A e lidh domenin me një adresë IP, CNAME e drejton te një emër tjetër (p.sh. te Vercel-i), MX tregon ku shkojnë email-et, TXT përdoret për verifikime si Google Search Console.",
+        "en": "DNS records tell the internet where to go: A links a domain to an IP address, CNAME points it to another name (e.g. Vercel), MX says where emails go, and TXT is used for verifications like Google Search Console."
+      },
+      "analogy": {
+        "sq": "Si fletoret e adresave të postës: secila rresht thotë ku dërgohet çfarë.",
+        "en": "Like the post office's address books: each line says where what gets delivered."
+      },
+      "code": {
+        "language": "text",
+        "snippet": "fjalori.dev.      A      76.76.21.21\nwww.fjalori.dev.  CNAME  cname.vercel-dns.com."
+      },
+      "related": [
+        "dns",
+        "domain",
+        "email-protocols"
+      ]
+    },
+    {
+      "id": "heroku-render",
+      "en": "PaaS hosts (Render, Railway, Heroku)",
+      "sq": "Platformat për backend",
+      "aliases": [
+        "heroku",
+        "render",
+        "railway",
+        "fly.io",
+        "paas hosting"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Platforma si Render, Railway dhe Heroku e publikojnë backend-in tënd (Node, Python, Java) direkt nga GitHub, pa pasur nevojë të menaxhosh serverë. Ideale për projektet e para me server dhe databazë.",
+        "en": "Platforms like Render, Railway and Heroku deploy your backend (Node, Python, Java) straight from GitHub, without you managing servers. Ideal for your first projects with a server and a database."
+      },
+      "analogy": {
+        "sq": "Si një restorant me kuzhinë të gatshme me qira: ti gatuan, ata merren me rrymën, ujin dhe pastrimin.",
+        "en": "Like renting a ready-made restaurant kitchen: you cook, they handle the power, water and cleaning."
+      },
+      "code": null,
+      "related": [
+        "saas-paas-iaas",
+        "vercel-netlify",
+        "deploy"
+      ]
+    },
+    {
+      "id": "chaos-engineering",
+      "en": "Chaos engineering",
+      "sq": "Inxhinieria e kaosit",
+      "aliases": [
+        "chaos monkey",
+        "fault injection",
+        "resilience testing"
+      ],
+      "category": "cloud",
+      "explanation": {
+        "sq": "Inxhinieria e kaosit i shkakton qëllimisht probleme sistemit — fik një server, ngadalëson rrjetin — për të parë nëse mbijeton. Netflix-i e bëri të famshme me „Chaos Monkey“. Më mirë t'i gjesh vetë dobësitë se sa t'i gjejnë përdoruesit.",
+        "en": "Chaos engineering deliberately causes problems in a system — switching off a server, slowing the network — to see whether it survives. Netflix made it famous with “Chaos Monkey”. Better to find the weaknesses yourself than have users find them."
+      },
+      "analogy": {
+        "sq": "Si stërvitja e zjarrfikësve me zjarr të vërtetë, por të kontrolluar.",
+        "en": "Like firefighters training with a real but controlled fire."
+      },
+      "code": null,
+      "related": [
+        "disaster-recovery",
+        "availability-zone",
+        "load-testing"
       ]
     }
   ]
