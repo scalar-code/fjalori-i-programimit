@@ -14,6 +14,19 @@
       }
     },
     {
+      "id": "algorithms",
+      "icon": "O(n)",
+      "hue": 40,
+      "name": {
+        "sq": "Algoritme & struktura të dhënash",
+        "en": "Algorithms & data structures"
+      },
+      "description": {
+        "sq": "Si zgjidhen problemet me kod në mënyrë të zgjuar — lënda kryesore në fakultet, olimpiada dhe intervista pune.",
+        "en": "How to solve problems with code cleverly — the core subject at university, in olympiads and in job interviews."
+      }
+    },
+    {
       "id": "python",
       "icon": "py",
       "hue": 205,
@@ -1037,7 +1050,7 @@
         "algoritmi",
         "algoritme"
       ],
-      "category": "general",
+      "category": "algorithms",
       "explanation": {
         "sq": "Algoritmi është një listë hapash të qartë, njëri pas tjetrit, për të zgjidhur një problem. Para se të shkruash kod, shpesh e mendon algoritmin: çfarë duhet bërë dhe me çfarë radhe.",
         "en": "An algorithm is a clear list of steps, one after another, for solving a problem. Before writing code, you often think through the algorithm: what needs to happen and in what order."
@@ -2633,7 +2646,7 @@
         "rekursioni",
         "rekursiv"
       ],
-      "category": "general",
+      "category": "algorithms",
       "explanation": {
         "sq": "Rekursioni ndodh kur një funksion e thërret veten, çdo herë me një problem pak më të vogël, derisa arrin një rast aq të thjeshtë sa ta zgjidhë menjëherë. Pa këtë „rast bazë“, funksioni do të vazhdonte pafundësisht.",
         "en": "Recursion is when a function calls itself, each time with a slightly smaller problem, until it reaches a case simple enough to solve right away. Without that “base case”, it would go on forever."
@@ -11094,7 +11107,7 @@
         "struktura e të dhënave",
         "dsa"
       ],
-      "category": "general",
+      "category": "algorithms",
       "explanation": {
         "sq": "Struktura e të dhënave është mënyra si i organizon të dhënat në kod, që t'i gjesh dhe t'i ndryshosh lehtë — p.sh. listë, dictionary, stack, pemë. Zgjedhja e strukturës së duhur e bën programin shumë më të shpejtë.",
         "en": "A data structure is how you organise data in code so it's easy to find and change — like a list, dictionary, stack or tree. Picking the right structure makes a program much faster."
@@ -11122,7 +11135,7 @@
         "stivë",
         "radhë"
       ],
-      "category": "general",
+      "category": "algorithms",
       "explanation": {
         "sq": "Stack-u (stiva) dhe queue-ja (radha) janë dy struktura të thjeshta të dhënash. Te stack-u, i fundit që hyn del i pari (LIFO); te queue-ja, i pari që hyn del i pari (FIFO). Butoni „Back“ i shfletuesit përdor një stack.",
         "en": "A stack and a queue are two simple data structures. In a stack, the last item in is the first out (LIFO); in a queue, the first in is the first out (FIFO). The browser's “Back” button uses a stack."
@@ -11148,11 +11161,10 @@
       "aliases": [
         "tree",
         "pemë",
-        "binary tree",
         "nodes",
         "nyje"
       ],
-      "category": "general",
+      "category": "algorithms",
       "explanation": {
         "sq": "Pema është një strukturë të dhënash ku çdo element (nyje) mund të ketë „fëmijë“, duke nisur nga një rrënjë në krye. Dosjet në kompjuter, DOM-i i faqes dhe trungu familjar janë të gjitha pemë.",
         "en": "A tree is a data structure where each item (node) can have “children”, starting from a single root at the top. Folders on your computer, a page's DOM and a family tree are all trees."
@@ -11179,7 +11191,7 @@
         "kompleksitet",
         "time complexity"
       ],
-      "category": "general",
+      "category": "algorithms",
       "explanation": {
         "sq": "Big O tregon si rritet koha (ose memoria) që i duhet një algoritmi kur rriten të dhënat. O(1) do të thotë gjithmonë njësoj shpejt, O(n) rritet njësoj me të dhënat, O(n²) rritet shumë shpejt. Pyetet shpesh në intervistat teknike.",
         "en": "Big O describes how the time (or memory) an algorithm needs grows as the data grows. O(1) means always equally fast, O(n) grows in step with the data, O(n²) grows very quickly. It comes up a lot in technical interviews."
@@ -11200,12 +11212,9 @@
       "en": "Sorting algorithm",
       "sq": "Algoritëm renditjeje",
       "aliases": [
-        "sorting",
-        "bubble sort",
-        "quick sort",
-        "merge sort"
+        "sorting"
       ],
-      "category": "general",
+      "category": "algorithms",
       "explanation": {
         "sq": "Algoritmet e renditjes i vendosin elementet në rregull — p.sh. numrat nga më i vogli te më i madhi. Ka shumë mënyra: bubble sort është e thjeshtë por e ngadaltë, quick sort dhe merge sort janë shumë më të shpejta. Në praktikë përdor sorted() të gatshëm.",
         "en": "Sorting algorithms put items in order — like numbers from smallest to largest. There are many ways: bubble sort is simple but slow, quick sort and merge sort are much faster. In practice you use the built-in sorted()."
@@ -11231,7 +11240,7 @@
       "aliases": [
         "kërkim binar"
       ],
-      "category": "general",
+      "category": "algorithms",
       "explanation": {
         "sq": "Kërkimi binar e gjen shpejt një vlerë në një listë të renditur: shikon mesin, dhe nëse vlera që kërkon është më e vogël, vazhdon te gjysma e majtë, përndryshe te e djathta — duke e përgjysmuar çdo herë. Për një milion elemente mjaftojnë rreth 20 hapa.",
         "en": "Binary search quickly finds a value in a sorted list: it looks at the middle, and if the value you want is smaller, it continues in the left half, otherwise the right — halving it every time. For a million items, about 20 steps are enough."
@@ -14562,7 +14571,7 @@
         "linkedlist",
         "listë e lidhur"
       ],
-      "category": "general",
+      "category": "algorithms",
       "explanation": {
         "sq": "Lista e lidhur është një strukturë të dhënash ku çdo element (nyje) mban vlerën e vet dhe një „tregues“ drejt elementit të radhës. Shtimi dhe heqja janë të shpejta, por për të arritur te elementi i 100-të duhet të kalosh nëpër të gjithë të mëparshmit.",
         "en": "A linked list is a data structure where each item (node) holds its value and a “pointer” to the next item. Adding and removing are fast, but to reach the 100th item you have to walk through all the ones before it."
@@ -14587,10 +14596,9 @@
       "sq": "Tabelë hash",
       "aliases": [
         "hashtable",
-        "tabelë hash",
-        "hash function"
+        "tabelë hash"
       ],
-      "category": "general",
+      "category": "algorithms",
       "explanation": {
         "sq": "Tabela hash është struktura që qëndron pas dictionary-ve dhe HashMap-ëve: një funksion hash e kthen çelësin në një numër që tregon menjëherë ku ruhet vlera. Prandaj kërkimi sipas çelësit është pothuajse i menjëhershëm, edhe me miliona elemente.",
         "en": "A hash table is the structure behind dictionaries and HashMaps: a hash function turns the key into a number that points straight to where the value is stored. That's why looking up by key is almost instant, even with millions of items."
@@ -14615,7 +14623,7 @@
         "graf",
         "nodes and edges"
       ],
-      "category": "general",
+      "category": "algorithms",
       "explanation": {
         "sq": "Grafi është një strukturë me nyje të lidhura me vija (lidhje) — si një rrjet. Përdoret për rrjetet sociale (kush e njeh kë), për hartat (cilat qytete lidhen) dhe për të gjetur rrugën më të shkurtër.",
         "en": "A graph is a structure of nodes connected by lines (edges) — like a network. It's used for social networks (who knows whom), maps (which cities connect) and finding the shortest route."
@@ -18003,8 +18011,7 @@
       "sq": "Vektori në C++",
       "aliases": [
         "vector<int>",
-        "push_back",
-        "dynamic array"
+        "push_back"
       ],
       "category": "cpp",
       "explanation": {
@@ -23733,8 +23740,7 @@
       "en": "std::list",
       "sq": null,
       "aliases": [
-        "list c++",
-        "doubly linked list"
+        "list c++"
       ],
       "category": "cpp",
       "explanation": {
@@ -34474,6 +34480,1389 @@
         "remote-work",
         "job-offer-contract",
         "outsourcing"
+      ]
+    },
+    {
+      "id": "space-complexity",
+      "en": "Space complexity",
+      "sq": "Kompleksiteti i hapësirës",
+      "aliases": [
+        "memory complexity",
+        "o(1) space",
+        "extra space"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Kompleksiteti i hapësirës tregon sa memorie shtesë i duhet një algoritmi ndërsa rriten të dhënat. Një algoritëm që krijon një kopje të listës përdor O(n) hapësirë; një që punon brenda saj përdor O(1).",
+        "en": "Space complexity tells you how much extra memory an algorithm needs as the data grows. An algorithm that makes a copy of the list uses O(n) space; one that works inside it uses O(1)."
+      },
+      "analogy": {
+        "sq": "Si sa tavolina shtesë të duhen për të renditur letrat: disa metoda i rendisin në dorë, të tjerat duan gjithë dyshemenë.",
+        "en": "Like how many extra tables you need to sort papers: some methods sort them in your hands, others need the whole floor."
+      },
+      "code": null,
+      "related": [
+        "big-o",
+        "ram",
+        "amortized-analysis"
+      ]
+    },
+    {
+      "id": "best-worst-case",
+      "en": "Best, worst & average case",
+      "sq": "Rasti më i mirë, më i keq dhe mesatar",
+      "aliases": [
+        "worst case",
+        "best case",
+        "average case",
+        "rasti më i keq"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "I njëjti algoritëm mund të jetë i shpejtë ose i ngadaltë sipas të dhënave. Kërkimi linear e gjen menjëherë nëse elementi është i pari (rasti më i mirë), por i kalon të gjitha nëse s'ekziston (rasti më i keq). Zakonisht na intereson rasti më i keq.",
+        "en": "The same algorithm can be fast or slow depending on the data. Linear search finds the item instantly if it's first (best case), but checks everything if it isn't there (worst case). We usually care about the worst case."
+      },
+      "analogy": {
+        "sq": "Si kërkimi i çelësave: ndonjëherë janë në xhepin e parë, ndonjëherë i kërkon gjithë shtëpinë.",
+        "en": "Like looking for your keys: sometimes they're in the first pocket, sometimes you search the whole house."
+      },
+      "code": null,
+      "related": [
+        "big-o",
+        "linear-search",
+        "quicksort"
+      ]
+    },
+    {
+      "id": "amortized-analysis",
+      "en": "Amortized analysis",
+      "sq": "Analiza mesatare në kohë",
+      "aliases": [
+        "amortized",
+        "amortized o(1)"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Disa veprime janë zakonisht shumë të shpejta, por herë pas here shumë të ngadalta — p.sh. shtimi në një listë dinamike kur duhet të zmadhohet. Analiza „amortized“ e llogarit koston mesatare gjatë shumë veprimeve: shtimi mbetet O(1).",
+        "en": "Some operations are usually very fast but occasionally very slow — like appending to a dynamic list when it has to grow. Amortized analysis averages the cost over many operations: appending stays O(1)."
+      },
+      "analogy": {
+        "sq": "Si ta blesh një abonim vjetor: ditën e parë paguan shumë, por për çdo ditë del lirë.",
+        "en": "Like buying a yearly pass: you pay a lot on day one, but it works out cheap per day."
+      },
+      "code": null,
+      "related": [
+        "dynamic-array",
+        "big-o",
+        "vector-capacity"
+      ]
+    },
+    {
+      "id": "np-complete",
+      "en": "P vs NP & NP-complete",
+      "sq": "P kundrejt NP",
+      "aliases": [
+        "p vs np",
+        "np-hard",
+        "np complete",
+        "travelling salesman"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Disa probleme zgjidhen shpejt (P). Për të tjerat — si gjetja e rrugës më të shkurtër që kalon nëpër 50 qytete — s'njihet asnjë metodë e shpejtë, edhe pse një zgjidhje kontrollohet lehtë (NP). Nëse P = NP është një nga pyetjet më të mëdha të pazgjidhura në matematikë.",
+        "en": "Some problems are solved quickly (P). For others — like finding the shortest route through 50 cities — no fast method is known, even though a solution is easy to check (NP). Whether P = NP is one of the biggest unsolved questions in maths."
+      },
+      "analogy": {
+        "sq": "Si një sudoku i vështirë: ta zgjidhësh merr orë, por ta kontrollosh nëse është i saktë merr një minutë.",
+        "en": "Like a hard sudoku: solving it takes hours, but checking a filled-in one takes a minute."
+      },
+      "code": null,
+      "related": [
+        "big-o",
+        "heuristic",
+        "brute-force-approach"
+      ]
+    },
+    {
+      "id": "heuristic",
+      "en": "Heuristic",
+      "sq": "Heuristika",
+      "aliases": [
+        "heuristics",
+        "rule of thumb",
+        "approximation"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Një heuristikë është një rregull i zgjuar që gjen shpejt një zgjidhje „mjaft të mirë“, edhe pse jo gjithmonë më të mirën. Përdoret kur zgjidhja perfekte do të zgjaste shumë — p.sh. në GPS ose në lojëra.",
+        "en": "A heuristic is a clever rule that quickly finds a “good enough” solution, though not always the best one. It's used when the perfect solution would take too long — like in GPS or games."
+      },
+      "analogy": {
+        "sq": "Si kur zgjedh radhën më të shkurtër në supermarket: zakonisht ia qëllon, edhe pse ndonjëherë dikush para teje ka 100 produkte.",
+        "en": "Like picking the shortest queue at the supermarket: usually right, though sometimes the person ahead has 100 items."
+      },
+      "code": null,
+      "related": [
+        "a-star",
+        "greedy-algorithm",
+        "np-complete"
+      ]
+    },
+    {
+      "id": "bubble-sort",
+      "en": "Bubble sort",
+      "sq": "Renditja me flluska",
+      "aliases": [
+        "bubble sort",
+        "flluska"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Bubble sort krahason vazhdimisht çifte fqinjësh dhe i ndërron nëse janë në rend të gabuar, derisa elementet e mëdha „ngjiten“ në fund si flluska. E thjeshtë për t'u kuptuar, por e ngadaltë: O(n²).",
+        "en": "Bubble sort keeps comparing neighbouring pairs and swaps them if they're in the wrong order, until the big items “bubble up” to the end. Simple to understand, but slow: O(n²)."
+      },
+      "analogy": {
+        "sq": "Si nxënësit në rresht që krahasojnë gjatësinë me shokun pranë dhe ndërrojnë vendet, derisa të renditen të gjithë.",
+        "en": "Like students in a line comparing heights with the person next to them and swapping, until everyone's in order."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def bubble(v):\n    for i in range(len(v)):\n        for j in range(len(v) - 1 - i):\n            if v[j] > v[j + 1]: v[j], v[j + 1] = v[j + 1], v[j]\n    return v"
+      },
+      "related": [
+        "sorting-algorithm",
+        "selection-sort",
+        "big-o"
+      ]
+    },
+    {
+      "id": "selection-sort",
+      "en": "Selection sort",
+      "sq": "Renditja me zgjedhje",
+      "aliases": [
+        "selection sort"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Selection sort gjen elementin më të vogël dhe e vendos në fillim, pastaj më të voglin nga ata që mbetën, e kështu me radhë. Gjithmonë O(n²), por bën pak ndërrime.",
+        "en": "Selection sort finds the smallest item and puts it first, then the smallest of the rest, and so on. Always O(n²), but it makes few swaps."
+      },
+      "analogy": {
+        "sq": "Si të zgjedhësh lojtarët për ekip: së pari më i miri, pastaj më i miri nga të mbeturit.",
+        "en": "Like picking players for a team: the best first, then the best of those left."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def selection(v):\n    for i in range(len(v)):\n        m = min(range(i, len(v)), key=v.__getitem__)\n        v[i], v[m] = v[m], v[i]\n    return v"
+      },
+      "related": [
+        "sorting-algorithm",
+        "bubble-sort",
+        "insertion-sort"
+      ]
+    },
+    {
+      "id": "insertion-sort",
+      "en": "Insertion sort",
+      "sq": "Renditja me futje",
+      "aliases": [
+        "insertion sort"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Insertion sort merr elementet një nga një dhe e fut secilin në vendin e duhur mes atyre që janë renditur tashmë. O(n²) në rastin e keq, por shumë e shpejtë kur lista është pothuajse e renditur.",
+        "en": "Insertion sort takes the items one at a time and slots each into the right place among those already sorted. O(n²) in the worst case, but very fast when the list is nearly sorted."
+      },
+      "analogy": {
+        "sq": "Si t'i rendisësh letrat në dorë gjatë një loje: çdo letër të re e fut në vendin e saj.",
+        "en": "Like sorting cards in your hand during a game: each new card slides into its place."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def insertion(v):\n    for i in range(1, len(v)):\n        x, j = v[i], i - 1\n        while j >= 0 and v[j] > x: v[j + 1] = v[j]; j -= 1\n        v[j + 1] = x"
+      },
+      "related": [
+        "sorting-algorithm",
+        "selection-sort",
+        "best-worst-case"
+      ]
+    },
+    {
+      "id": "merge-sort",
+      "en": "Merge sort",
+      "sq": "Renditja me bashkim",
+      "aliases": [
+        "merge sort",
+        "mergesort"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Merge sort e ndan listën përgjysmë vazhdimisht derisa çdo pjesë ka një element, pastaj i bashkon pjesët e renditura dy nga dy. Gjithmonë O(n log n) dhe e qëndrueshme — shembulli klasik i „ndaj dhe sundo“.",
+        "en": "Merge sort keeps splitting the list in half until each piece has one item, then merges the sorted pieces two by two. Always O(n log n) and stable — the classic example of “divide and conquer”."
+      },
+      "analogy": {
+        "sq": "Si dy mësues që secili rendit gjysmën e fletëve të provimit, dhe pastaj i bashkojnë duke marrë gjithmonë më të voglën nga të dy grumbujt.",
+        "en": "Like two teachers each sorting half the exam papers, then merging them by always taking the smaller from the two piles."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def merge_sort(v):\n    if len(v) <= 1: return v\n    a, b = merge_sort(v[:len(v) // 2]), merge_sort(v[len(v) // 2:])\n    return [(a if a and (not b or a[0] <= b[0]) else b).pop(0)\n            for _ in range(len(a) + len(b))]"
+      },
+      "related": [
+        "divide-and-conquer",
+        "quicksort",
+        "stable-sort"
+      ]
+    },
+    {
+      "id": "quicksort",
+      "en": "Quicksort",
+      "sq": "Renditja e shpejtë",
+      "aliases": [
+        "quick sort",
+        "quicksort",
+        "pivot"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Quicksort zgjedh një element „pivot“, i vendos më të vegjlit majtas dhe më të mëdhenjtë djathtas, dhe pastaj e përsërit për secilën anë. Mesatarisht O(n log n) dhe shumë i shpejtë në praktikë; me pivot të keq mund të bëhet O(n²).",
+        "en": "Quicksort picks a “pivot” item, puts the smaller ones on the left and the bigger on the right, then repeats for each side. O(n log n) on average and very fast in practice; with a bad pivot it can become O(n²)."
+      },
+      "analogy": {
+        "sq": "Si ta ndash klasën: „kush është më i shkurtër se Ardi, majtas; më i gjatë, djathtas“ — dhe e përsërit në çdo grup.",
+        "en": "Like splitting a class: “shorter than Ardi to the left, taller to the right” — and repeating in each group."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def quicksort(v):\n    if len(v) <= 1: return v\n    p, *tjeret = v\n    return quicksort([x for x in tjeret if x < p]) + [p] + \\\n           quicksort([x for x in tjeret if x >= p])"
+      },
+      "related": [
+        "divide-and-conquer",
+        "merge-sort",
+        "best-worst-case"
+      ]
+    },
+    {
+      "id": "counting-sort",
+      "en": "Counting sort",
+      "sq": "Renditja me numërim",
+      "aliases": [
+        "counting sort",
+        "radix sort",
+        "bucket sort"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Kur vlerat janë numra të vegjël (p.sh. notat 1–5), counting sort thjesht numëron sa herë shfaqet secila dhe i shkruan me radhë. Punon në O(n) — më shpejt se çdo renditje me krahasime.",
+        "en": "When values are small numbers (e.g. grades 1–5), counting sort just counts how often each appears and writes them out in order. It runs in O(n) — faster than any comparison sort."
+      },
+      "analogy": {
+        "sq": "Si numërimi i votave: s'i rendit fletët, thjesht numëron sa vota mori secili.",
+        "en": "Like counting votes: you don't sort the ballots, you just count how many each candidate got."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "notat = [5, 3, 5, 1, 4, 3]\nnumri = [0] * 6\nfor n in notat: numri[n] += 1\nprint([n for n in range(6) for _ in range(numri[n])])"
+      },
+      "related": [
+        "sorting-algorithm",
+        "big-o",
+        "collections-module"
+      ]
+    },
+    {
+      "id": "stable-sort",
+      "en": "Stable sort",
+      "sq": "Renditja e qëndrueshme",
+      "aliases": [
+        "stable sorting",
+        "sort stability"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Një renditje është e qëndrueshme nëse elementet me vlerë të barabartë e ruajnë radhën e tyre fillestare. P.sh. po i renditi nxënësit sipas notës, ata me të njëjtën notë mbeten sipas alfabetit siç ishin. sorted() i Python-it është i qëndrueshëm.",
+        "en": "A sort is stable if items with equal values keep their original order. E.g. if you sort students by grade, those with the same grade stay alphabetical as they were. Python's sorted() is stable."
+      },
+      "analogy": {
+        "sq": "Si radha në bankë kur thërrasin sipas shërbimit: ata që presin për të njëjtin shërbim ruajnë radhën që kishin.",
+        "en": "Like a bank queue called by service type: people waiting for the same service keep their place."
+      },
+      "code": null,
+      "related": [
+        "sorting-algorithm",
+        "merge-sort",
+        "sorted-function"
+      ]
+    },
+    {
+      "id": "linear-search",
+      "en": "Linear search",
+      "sq": "Kërkimi linear",
+      "aliases": [
+        "linear search",
+        "sequential search",
+        "kërkim një nga një"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Kërkimi linear i kontrollon elementet një nga një derisa e gjen atë që kërkon. Punon në çdo listë, edhe të parenditur, por është O(n) — për lista të mëdha të renditura, kërkimi binar është shumë më i shpejtë.",
+        "en": "Linear search checks items one by one until it finds what you're looking for. It works on any list, even unsorted, but it's O(n) — for big sorted lists, binary search is much faster."
+      },
+      "analogy": {
+        "sq": "Si ta kërkosh një emër në një listë të pa renditur duke e lexuar nga lart poshtë.",
+        "en": "Like looking for a name in an unsorted list by reading it from top to bottom."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def gjej(v, x):\n    for i, e in enumerate(v):\n        if e == x: return i\n    return -1"
+      },
+      "related": [
+        "binary-search",
+        "big-o",
+        "best-worst-case"
+      ]
+    },
+    {
+      "id": "two-pointers",
+      "en": "Two pointers technique",
+      "sq": "Teknika e dy treguesve",
+      "aliases": [
+        "two pointers",
+        "dy tregues"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Te teknika e dy treguesve, mban dy pozicione në listë — shpesh njërin në fillim dhe tjetrin në fund — dhe i lëviz drejt njëri-tjetrit. Shumë probleme që duken O(n²) bëhen O(n).",
+        "en": "With the two pointers technique, you keep two positions in a list — often one at the start and one at the end — and move them towards each other. Many problems that look O(n²) become O(n)."
+      },
+      "analogy": {
+        "sq": "Si dy njerëz që e kërkojnë njëri-tjetrin në një korridor, duke u nisur nga dy skajet.",
+        "en": "Like two people looking for each other in a corridor, starting from opposite ends."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def ka_shumen(v, s):   # v e renditur\n    i, j = 0, len(v) - 1\n    while i < j:\n        if v[i] + v[j] == s: return True\n        i, j = (i + 1, j) if v[i] + v[j] < s else (i, j - 1)"
+      },
+      "related": [
+        "sliding-window",
+        "binary-search",
+        "palindrome"
+      ]
+    },
+    {
+      "id": "sliding-window",
+      "en": "Sliding window",
+      "sq": "Dritarja rrëshqitëse",
+      "aliases": [
+        "sliding window",
+        "window technique"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Te dritarja rrëshqitëse, shikon një „copë“ të listës me gjatësi të caktuar dhe e lëviz një hap në çdo radhë, duke shtuar elementin e ri dhe hequr të vjetrin — në vend që ta rillogaritësh gjithë copën nga e para.",
+        "en": "With a sliding window, you look at a “slice” of the list of fixed length and move it one step at a time, adding the new item and removing the old one — instead of recalculating the whole slice from scratch."
+      },
+      "analogy": {
+        "sq": "Si dritarja e trenit: peizazhi ndryshon pak nga pak, s'e sheh krejt të ri çdo sekondë.",
+        "en": "Like a train window: the view changes a little at a time, not completely new every second."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def maks_ne_3_dite(v):\n    s = best = sum(v[:3])\n    for i in range(3, len(v)):\n        s += v[i] - v[i - 3]; best = max(best, s)\n    return best"
+      },
+      "related": [
+        "two-pointers",
+        "prefix-sum",
+        "array"
+      ]
+    },
+    {
+      "id": "prefix-sum",
+      "en": "Prefix sums",
+      "sq": "Shumat paraprake",
+      "aliases": [
+        "prefix sum",
+        "cumulative sum",
+        "running total"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Me shumat paraprake, llogarit një herë shumën nga fillimi deri te çdo pozicion. Pastaj shumën e çdo pjese të listës e merr në një hap: p[j] - p[i]. Shumë e dobishme në gara programimi.",
+        "en": "With prefix sums, you calculate once the sum from the start up to each position. Then the sum of any slice of the list takes one step: p[j] - p[i]. Very handy in programming contests."
+      },
+      "analogy": {
+        "sq": "Si kilometrazhi i veturës: për të ditur sa ke ecur mes dy qyteteve, zbret dy numra, s'i numëron kilometrat sërish.",
+        "en": "Like a car's odometer: to know how far you drove between two towns, you subtract two numbers instead of recounting."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "from itertools import accumulate\nv = [3, 1, 4, 1, 5]\np = [0, *accumulate(v)]     # [0, 3, 4, 8, 9, 14]\nprint(p[4] - p[1])          # shuma e v[1:4] = 6"
+      },
+      "related": [
+        "sliding-window",
+        "numeric-algorithms",
+        "dynamic-programming"
+      ]
+    },
+    {
+      "id": "brute-force-approach",
+      "en": "Brute-force approach",
+      "sq": "Zgjidhja me forcë",
+      "aliases": [
+        "exhaustive search",
+        "try everything",
+        "provo të gjitha"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Zgjidhja me forcë i provon të gjitha mundësitë një nga një. Është e lehtë për t'u shkruar dhe gjithmonë e saktë, por shpesh shumë e ngadaltë. Shpesh fillon me të, dhe pastaj kërkon një ide më të zgjuar.",
+        "en": "The brute-force approach tries every possibility one by one. It's easy to write and always correct, but often very slow. You often start with it, then look for a cleverer idea."
+      },
+      "analogy": {
+        "sq": "Si t'i provosh të gjitha kombinimet e drynit të biçikletës nga 000 te 999.",
+        "en": "Like trying every combination on a bike lock from 000 to 999."
+      },
+      "code": null,
+      "related": [
+        "backtracking",
+        "big-o",
+        "np-complete"
+      ]
+    },
+    {
+      "id": "divide-and-conquer",
+      "en": "Divide and conquer",
+      "sq": "Ndaj dhe sundo",
+      "aliases": [
+        "divide and conquer",
+        "përça dhe sundo"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "„Ndaj dhe sundo“ e ndan një problem të madh në copa më të vogla të të njëjtit lloj, i zgjidh ato (shpesh me rekursion) dhe i bashkon përgjigjet. Merge sort, quicksort dhe kërkimi binar punojnë kështu.",
+        "en": "“Divide and conquer” splits a big problem into smaller pieces of the same kind, solves them (often recursively) and combines the answers. Merge sort, quicksort and binary search work this way."
+      },
+      "analogy": {
+        "sq": "Si pastrimi i shtëpisë me shokë: secili merr një dhomë, dhe në fund e gjithë shtëpia është e pastër.",
+        "en": "Like cleaning the house with friends: each takes a room, and at the end the whole house is clean."
+      },
+      "code": null,
+      "related": [
+        "recursion",
+        "merge-sort",
+        "binary-search"
+      ]
+    },
+    {
+      "id": "greedy-algorithm",
+      "en": "Greedy algorithm",
+      "sq": "Algoritmi lakmitar",
+      "aliases": [
+        "greedy",
+        "lakmitar"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Një algoritëm „lakmitar“ zgjedh në çdo hap atë që duket më e mira tani, pa menduar për të ardhmen. Ndonjëherë jep zgjidhjen perfekte (p.sh. kthimi i kusurit me monedhat euro), ndonjëherë jo.",
+        "en": "A greedy algorithm picks whatever looks best right now at each step, without thinking ahead. Sometimes it gives the perfect solution (e.g. giving change with euro coins), sometimes not."
+      },
+      "analogy": {
+        "sq": "Si arkëtari që kthen kusurin duke dhënë gjithmonë monedhën më të madhe që mundet.",
+        "en": "Like a cashier giving change by always handing over the biggest coin possible."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def kusuri(shuma, monedhat=(200, 100, 50, 20, 10, 5, 2, 1)):\n    rez = []\n    for m in monedhat:\n        while shuma >= m: shuma -= m; rez.append(m)\n    return rez"
+      },
+      "related": [
+        "dynamic-programming",
+        "heuristic",
+        "minimum-spanning-tree"
+      ]
+    },
+    {
+      "id": "dynamic-programming",
+      "en": "Dynamic programming",
+      "sq": "Programimi dinamik",
+      "aliases": [
+        "dp",
+        "dynamic programming",
+        "tabulation"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Programimi dinamik e zgjidh një problem duke e ndarë në nënprobleme që përsëriten, dhe duke e ruajtur përgjigjen e secilit që të mos e llogarisë dy herë. Është teknika që e bën Fibonaccin(100) të menjëhershëm.",
+        "en": "Dynamic programming solves a problem by splitting it into repeating subproblems and storing each answer so it's never computed twice. It's the technique that makes Fibonacci(100) instant."
+      },
+      "analogy": {
+        "sq": "Si ta shkruash në fletore rezultatin e çdo ushtrimi të vështirë, që herën tjetër ta kopjosh në vend që ta zgjidhësh sërish.",
+        "en": "Like writing down the result of every hard exercise so next time you copy it instead of solving it again."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def menyrat(n):           # sa mënyra për të ngjitur n shkallë (1 ose 2)\n    dp = [1, 1] + [0] * n\n    for i in range(2, n + 1): dp[i] = dp[i - 1] + dp[i - 2]\n    return dp[n]"
+      },
+      "related": [
+        "memoization",
+        "fibonacci",
+        "recursion"
+      ]
+    },
+    {
+      "id": "memoization",
+      "en": "Memoization",
+      "sq": "Memorizimi i rezultateve",
+      "aliases": [
+        "memoize",
+        "memo",
+        "caching results"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Memoization do të thotë ta mbash mend rezultatin e një funksioni për çdo hyrje, që herën tjetër ta kthesh menjëherë. Në Python e bën me @lru_cache. Është „versioni nga lart poshtë“ i programimit dinamik.",
+        "en": "Memoization means remembering a function's result for each input, so next time you return it straight away. In Python you do it with @lru_cache. It's the “top-down” version of dynamic programming."
+      },
+      "analogy": {
+        "sq": "Si kur mëson tabelën e shumëzimit përmendësh: 7 × 8 s'e llogarit më, e di.",
+        "en": "Like learning your times tables by heart: you don't work out 7 × 8 any more, you just know it."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "memo = {}\ndef fib(n):\n    if n < 2: return n\n    if n not in memo: memo[n] = fib(n - 1) + fib(n - 2)\n    return memo[n]"
+      },
+      "related": [
+        "dynamic-programming",
+        "functools",
+        "cache"
+      ]
+    },
+    {
+      "id": "backtracking",
+      "en": "Backtracking",
+      "sq": "Kthimi prapa",
+      "aliases": [
+        "backtrack",
+        "kthim prapa"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Backtracking ndërton një zgjidhje hap pas hapi dhe, sapo kupton se rruga s'të çon askund, kthehet një hap prapa dhe provon tjetrën. Përdoret për sudoku, labirinte dhe problemin e 8 mbretëreshave.",
+        "en": "Backtracking builds a solution step by step and, as soon as it sees a path leads nowhere, goes back one step and tries another. It's used for sudoku, mazes and the 8 queens puzzle."
+      },
+      "analogy": {
+        "sq": "Si të dalësh nga një labirint: kur gjen mur, kthehesh te kryqëzimi i fundit dhe provon rrugën tjetër.",
+        "en": "Like getting out of a maze: when you hit a wall, you go back to the last junction and try another way."
+      },
+      "code": null,
+      "related": [
+        "recursion",
+        "dfs",
+        "brute-force-approach"
+      ]
+    },
+    {
+      "id": "base-case",
+      "en": "Base case",
+      "sq": "Rasti bazë",
+      "aliases": [
+        "base case",
+        "stopping condition",
+        "kushti i ndalimit"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Çdo funksion rekursiv ka nevojë për një rast bazë — kushtin kur ndalet dhe s'e thërret më veten. Pa të, rekursioni s'mbaron kurrë dhe programi rrëzohet me „stack overflow“.",
+        "en": "Every recursive function needs a base case — the condition where it stops and no longer calls itself. Without one, the recursion never ends and the program crashes with a “stack overflow”."
+      },
+      "analogy": {
+        "sq": "Si fundi i shkallëve: pa të, do të zbrisje përgjithmonë.",
+        "en": "Like the bottom of the stairs: without it, you'd keep going down forever."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def numero_mbrapsht(n):\n    if n == 0:            # rasti bazë\n        print(\"Nisu!\"); return\n    print(n); numero_mbrapsht(n - 1)"
+      },
+      "related": [
+        "recursion",
+        "stack-frame",
+        "infinite-loop"
+      ]
+    },
+    {
+      "id": "iterative-vs-recursive",
+      "en": "Iterative vs recursive",
+      "sq": "Përsëritja dhe rekursioni",
+      "aliases": [
+        "iteration vs recursion",
+        "iterative",
+        "recursive solution"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Shumë probleme mund të zgjidhen me cikël (iterativ) ose me një funksion që thërret veten (rekursiv). Rekursioni është shpesh më i lexueshëm për pemë dhe grafe; cikli zakonisht përdor më pak memorie dhe s'rrezikon stack overflow.",
+        "en": "Many problems can be solved with a loop (iterative) or a function that calls itself (recursive). Recursion is often more readable for trees and graphs; a loop usually uses less memory and doesn't risk a stack overflow."
+      },
+      "analogy": {
+        "sq": "Si ngjitja e shkallëve: mund t'i numërosh hap pas hapi (cikël), ose t'i thuash vetes „ngjit një, pastaj bëj sërish të njëjtën gjë“ (rekursion).",
+        "en": "Like climbing stairs: count them step by step (a loop), or tell yourself “climb one, then do the same again” (recursion)."
+      },
+      "code": null,
+      "related": [
+        "recursion",
+        "loop",
+        "base-case"
+      ]
+    },
+    {
+      "id": "dynamic-array",
+      "en": "Dynamic array",
+      "sq": "Vargu dinamik",
+      "aliases": [
+        "resizable array",
+        "growable array",
+        "list python internals"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Një varg dinamik (si list i Python-it, ArrayList i Java-s, vector i C++) rezervon pak vend shtesë; kur mbushet, krijon një varg dy herë më të madh dhe i kopjon elementet. Kështu shtimi në fund mbetet mesatarisht O(1).",
+        "en": "A dynamic array (like Python's list, Java's ArrayList, C++'s vector) reserves a bit of extra space; when it fills up, it creates an array twice as big and copies the items over. That way appending stays O(1) on average."
+      },
+      "analogy": {
+        "sq": "Si të kalosh në një shtëpi dy herë më të madhe sa herë familja s'nxë më.",
+        "en": "Like moving to a house twice as big every time the family outgrows it."
+      },
+      "code": null,
+      "related": [
+        "array",
+        "amortized-analysis",
+        "std-vector"
+      ]
+    },
+    {
+      "id": "doubly-linked-list",
+      "en": "Doubly linked list",
+      "sq": "Lista e lidhur dyfishe",
+      "aliases": [
+        "doubly linked list",
+        "circular linked list"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Në një listë të lidhur dyfishe, çdo nyje di edhe të mëparshmen, jo vetëm të ardhshmen. Kështu mund të ecësh në të dy drejtimet dhe ta heqësh një nyje shpejt. Butonat „Prapa“ dhe „Para“ të shfletuesit mund të ndërtohen kështu.",
+        "en": "In a doubly linked list, each node knows the previous one as well as the next. So you can walk both ways and remove a node quickly. A browser's “Back” and “Forward” buttons can be built this way."
+      },
+      "analogy": {
+        "sq": "Si vagonët e trenit të lidhur nga të dy anët: mund të ecësh nga njëri te tjetri në çdo drejtim.",
+        "en": "Like train carriages linked at both ends: you can walk from one to the next in either direction."
+      },
+      "code": null,
+      "related": [
+        "linked-list",
+        "std-list",
+        "lru-cache"
+      ]
+    },
+    {
+      "id": "heap-data-structure",
+      "en": "Heap",
+      "sq": "Grumbulli (heap)",
+      "aliases": [
+        "binary heap",
+        "min heap",
+        "max heap",
+        "heapq"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Një heap është një pemë e veçantë ku prindi është gjithmonë më i vogël (min-heap) ose më i madh (max-heap) se fëmijët. Kështu elementi më i vogël merret në O(1) dhe shtimi/heqja bëhen në O(log n). Është baza e radhës me përparësi.",
+        "en": "A heap is a special tree where the parent is always smaller (min-heap) or bigger (max-heap) than its children. So the smallest item is available in O(1) and adding/removing take O(log n). It's the basis of the priority queue."
+      },
+      "analogy": {
+        "sq": "Si hierarkia në një kompani: drejtori është gjithmonë në krye, dhe kur largohet, dikush ngjitet menjëherë në vendin e tij.",
+        "en": "Like a company hierarchy: the boss is always at the top, and when they leave, someone moves up immediately."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "import heapq\nv = [5, 1, 8, 3]\nheapq.heapify(v)\nprint(heapq.heappop(v))   # 1 — gjithmonë më i vogli"
+      },
+      "related": [
+        "priority-queue",
+        "tree-structure",
+        "binary-tree"
+      ]
+    },
+    {
+      "id": "binary-tree",
+      "en": "Binary tree",
+      "sq": "Pema binare",
+      "aliases": [
+        "binary tree",
+        "left child",
+        "right child"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Një pemë binare është pemë ku çdo nyje ka maksimumi dy fëmijë — majtas dhe djathtas. Është baza e shumë strukturave të tjera: pemëve të kërkimit, heap-eve dhe pemëve të shprehjeve matematikore.",
+        "en": "A binary tree is a tree where each node has at most two children — left and right. It's the basis of many other structures: search trees, heaps and maths expression trees."
+      },
+      "analogy": {
+        "sq": "Si pema familjare që shkon mbrapsht: çdo person ka dy prindër.",
+        "en": "Like a family tree going backwards: every person has two parents."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "class Nyje:\n    def __init__(self, vlera):\n        self.vlera = vlera\n        self.majtas = self.djathtas = None"
+      },
+      "related": [
+        "tree-structure",
+        "binary-search-tree",
+        "tree-traversal"
+      ]
+    },
+    {
+      "id": "binary-search-tree",
+      "en": "Binary search tree (BST)",
+      "sq": "Pema binare e kërkimit",
+      "aliases": [
+        "bst",
+        "binary search tree"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Në një pemë binare kërkimi, çdo vlerë në të majtë të një nyjeje është më e vogël, dhe çdo vlerë në të djathtë më e madhe. Kështu kërkimi, shtimi dhe heqja bëhen në O(log n) — për sa kohë pema mbetet e balancuar.",
+        "en": "In a binary search tree, every value to the left of a node is smaller and every value to the right is bigger. So searching, inserting and removing take O(log n) — as long as the tree stays balanced."
+      },
+      "analogy": {
+        "sq": "Si loja „mendo një numër“: „më i madh apo më i vogël?“ — dhe çdo përgjigje e përgjysmon kërkimin.",
+        "en": "Like the “guess my number” game: “higher or lower?” — and each answer halves the search."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def gjej(nyje, x):\n    while nyje and nyje.vlera != x:\n        nyje = nyje.majtas if x < nyje.vlera else nyje.djathtas\n    return nyje"
+      },
+      "related": [
+        "binary-tree",
+        "balanced-tree",
+        "binary-search"
+      ]
+    },
+    {
+      "id": "balanced-tree",
+      "en": "Balanced trees (AVL, red-black)",
+      "sq": "Pemët e balancuara",
+      "aliases": [
+        "avl tree",
+        "red-black tree",
+        "self-balancing tree"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Nëse në një pemë kërkimi i shton numrat me radhë (1, 2, 3…), ajo bëhet një vijë e gjatë dhe kërkimi ngadalësohet në O(n). Pemët vetë-balancuese si AVL dhe red-black e rirregullojnë veten që të mbeten të shkurtra. TreeMap dhe std::map i përdorin.",
+        "en": "If you insert numbers in order (1, 2, 3…) into a search tree, it becomes one long line and searching slows to O(n). Self-balancing trees like AVL and red-black rearrange themselves to stay short. TreeMap and std::map use them."
+      },
+      "analogy": {
+        "sq": "Si një peshore me dy pjata që e rregullon vetë peshën që të mos anojë nga njëra anë.",
+        "en": "Like a balance scale that adjusts itself so it never tips to one side."
+      },
+      "code": null,
+      "related": [
+        "binary-search-tree",
+        "treemap-treeset",
+        "std-map"
+      ]
+    },
+    {
+      "id": "b-tree",
+      "en": "B-tree",
+      "sq": null,
+      "aliases": [
+        "b-tree",
+        "b+ tree",
+        "btree"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "B-tree është një pemë ku çdo nyje mban shumë vlera dhe ka shumë fëmijë, që pema të jetë shumë e ulët. Kështu duhen pak lexime nga disku — prandaj pothuajse çdo databazë i ndërton indekset e saj si B-tree.",
+        "en": "A B-tree is a tree where each node holds many values and has many children, so the tree stays very short. That means few reads from disk — which is why almost every database builds its indexes as B-trees."
+      },
+      "analogy": {
+        "sq": "Si një bibliotekë me kate, ku çdo kat ka shumë rafte: me pak shkallë arrin te çdo libër.",
+        "en": "Like a library with floors where each floor has many shelves: few stairs to reach any book."
+      },
+      "code": null,
+      "related": [
+        "database-index",
+        "balanced-tree",
+        "storage-ssd"
+      ]
+    },
+    {
+      "id": "trie",
+      "en": "Trie (prefix tree)",
+      "sq": "Pema e prefikseve",
+      "aliases": [
+        "trie",
+        "prefix tree",
+        "autocomplete"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Një trie ruan fjalët shkronjë pas shkronje në një pemë, ku fjalët që fillojnë njësoj ndajnë të njëjtën degë. Kështu gjen menjëherë të gjitha fjalët që fillojnë me „pro…“ — si plotësimi automatik në tastierën e telefonit.",
+        "en": "A trie stores words letter by letter in a tree, where words starting the same way share the same branch. So you instantly find every word starting with “pro…” — like autocomplete on your phone keyboard."
+      },
+      "analogy": {
+        "sq": "Si fjalori i shtypur ku të gjitha fjalët me „pro“ janë në të njëjtën faqe.",
+        "en": "Like a printed dictionary where every word starting with “pro” is on the same page."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "trie = {}\nfor fjala in [\"program\", \"projekt\", \"proces\"]:\n    nyje = trie\n    for s in fjala: nyje = nyje.setdefault(s, {})\n    nyje[\"$\"] = True"
+      },
+      "related": [
+        "tree-structure",
+        "dictionary",
+        "search-engine"
+      ]
+    },
+    {
+      "id": "hash-function",
+      "en": "Hash function",
+      "sq": "Funksioni hash",
+      "aliases": [
+        "hash function",
+        "hash()"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Një funksion hash e kthen çdo vlerë (një fjalë, një skedar) në një numër me madhësi të fiksuar. E njëjta hyrje jep gjithmonë të njëjtin hash. Tabelat hash e përdorin për të ditur ku ta ruajnë një element; siguria e përdor për fjalëkalimet.",
+        "en": "A hash function turns any value (a word, a file) into a number of fixed size. The same input always gives the same hash. Hash tables use it to know where to store an item; security uses it for passwords."
+      },
+      "analogy": {
+        "sq": "Si sistemi i fjalorit ku çdo fjalë ka faqen e saj sipas shkronjës së parë.",
+        "en": "Like a dictionary system where every word has its page by first letter."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "print(hash(\"Arta\"))           # një numër i madh\nprint(hash(\"Arta\") % 10)      # kova 0–9 ku ruhet"
+      },
+      "related": [
+        "hash-table",
+        "hash-collision",
+        "password-hashing"
+      ]
+    },
+    {
+      "id": "hash-collision",
+      "en": "Hash collision",
+      "sq": "Përplasja e hash-it",
+      "aliases": [
+        "collision",
+        "chaining",
+        "open addressing"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Një përplasje ndodh kur dy vlera të ndryshme marrin të njëjtin hash dhe duan të njëjtin vend në tabelë. Tabelat hash e zgjidhin duke mbajtur një listë të vogël në atë vend (chaining) ose duke kërkuar vendin tjetër të lirë.",
+        "en": "A collision happens when two different values get the same hash and want the same spot in the table. Hash tables solve it by keeping a small list at that spot (chaining) or by looking for the next free spot."
+      },
+      "analogy": {
+        "sq": "Si dy nxënës me të njëjtin numër dollapi: ose e ndajnë, ose njëri merr dollapin fqinj të lirë.",
+        "en": "Like two students given the same locker number: they share it, or one takes the next free locker."
+      },
+      "code": null,
+      "related": [
+        "hash-function",
+        "hash-table",
+        "hashmap"
+      ]
+    },
+    {
+      "id": "adjacency-list",
+      "en": "Adjacency list & matrix",
+      "sq": "Lista dhe matrica e fqinjësisë",
+      "aliases": [
+        "adjacency list",
+        "adjacency matrix",
+        "graph representation"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Një graf ruhet në kod në dy mënyra: lista e fqinjësisë (për çdo nyje, lista e fqinjëve të saj) — e mirë për grafe me pak lidhje — ose matrica e fqinjësisë (tabelë po/jo për çdo çift) — e mirë kur lidhjet janë shumë.",
+        "en": "A graph is stored in code in two ways: an adjacency list (for each node, the list of its neighbours) — good for graphs with few connections — or an adjacency matrix (a yes/no table for every pair) — good when there are many."
+      },
+      "analogy": {
+        "sq": "Lista është si kontaktet e secilit në telefon; matrica është si tabela „kush njeh kë“ e gjithë klasës.",
+        "en": "The list is like everyone's phone contacts; the matrix is like a “who knows whom” table for the whole class."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "qytetet = {\n    \"Prishtinë\": [\"Pejë\", \"Prizren\", \"Shkup\"],\n    \"Pejë\": [\"Prishtinë\"],\n}"
+      },
+      "related": [
+        "graph-structure",
+        "bfs",
+        "dictionary"
+      ]
+    },
+    {
+      "id": "union-find",
+      "en": "Union-find (disjoint set)",
+      "sq": "Bashkësitë e ndara",
+      "aliases": [
+        "disjoint set",
+        "dsu",
+        "union find"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Union-find mban grupe elementesh dhe i përgjigjet shpejt dy pyetjeve: „në cilin grup është ky?“ dhe „bashkoji këta dy grupe“. Përdoret për të gjetur nëse dy pika në një rrjet janë të lidhura dhe në algoritmin e Kruskal-it.",
+        "en": "Union-find keeps groups of items and quickly answers two questions: “which group is this in?” and “merge these two groups”. It's used to find whether two points in a network are connected and in Kruskal's algorithm."
+      },
+      "analogy": {
+        "sq": "Si grupet e miqve në shkollë: kur dy grupe bëhen shokë, bëhen një grup i vetëm.",
+        "en": "Like friend groups at school: when two groups become friends, they become one group."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "prindi = list(range(10))\ndef gjej(x):\n    while prindi[x] != x: x = prindi[x]\n    return x\ndef bashko(a, b): prindi[gjej(a)] = gjej(b)"
+      },
+      "related": [
+        "minimum-spanning-tree",
+        "graph-structure",
+        "tree-structure"
+      ]
+    },
+    {
+      "id": "segment-tree",
+      "en": "Segment tree & Fenwick tree",
+      "sq": "Pema e segmenteve",
+      "aliases": [
+        "segment tree",
+        "fenwick tree",
+        "binary indexed tree",
+        "bit tree"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Pema e segmenteve dhe pema Fenwick ruajnë informacion për copa të një liste, që t'u përgjigjen shpejt pyetjeve si „sa është shuma nga pozicioni 3 te 8?“ edhe kur lista ndryshon shpesh — të dyja në O(log n). Shumë të përdorura në gara.",
+        "en": "Segment trees and Fenwick trees store information about slices of a list, to quickly answer questions like “what's the sum from position 3 to 8?” even when the list changes often — both in O(log n). Widely used in contests."
+      },
+      "analogy": {
+        "sq": "Si raportet e shitjeve: për çdo ditë, javë dhe muaj — që të mos i mbledhësh të gjitha faturat nga e para çdo herë.",
+        "en": "Like sales reports by day, week and month — so you don't add up every receipt from scratch each time."
+      },
+      "code": null,
+      "related": [
+        "prefix-sum",
+        "binary-tree",
+        "competitive-programming"
+      ]
+    },
+    {
+      "id": "lru-cache",
+      "en": "LRU cache",
+      "sq": null,
+      "aliases": [
+        "lru",
+        "least recently used",
+        "cache eviction"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Një cache LRU (Least Recently Used) mban vetëm N elementet e përdorura së fundmi; kur mbushet, hedh atë që s'është përdorur prej më shumë kohësh. Ndërtohet me një tabelë hash dhe një listë të lidhur dyfishe — pyetje klasike në intervista.",
+        "en": "An LRU (Least Recently Used) cache keeps only the N most recently used items; when full, it throws out the one unused for longest. It's built from a hash table and a doubly linked list — a classic interview question."
+      },
+      "analogy": {
+        "sq": "Si rafti i vogël pranë tavolinës: mban librat që i ke përdorur së fundmi, dhe atë që s'e ke hapur prej kohësh e kthen në bibliotekë.",
+        "en": "Like the small shelf by your desk: it keeps the books you used recently, and the one you haven't opened in ages goes back to the library."
+      },
+      "code": null,
+      "related": [
+        "cache",
+        "doubly-linked-list",
+        "hash-table"
+      ]
+    },
+    {
+      "id": "tree-traversal",
+      "en": "Tree traversal (inorder, preorder, postorder)",
+      "sq": "Përshkimi i pemës",
+      "aliases": [
+        "inorder",
+        "preorder",
+        "postorder",
+        "level order"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Të përshkosh një pemë do të thotë t'i vizitosh të gjitha nyjet në një radhë të caktuar: preorder (prindi, pastaj fëmijët), inorder (majtas, prindi, djathtas — jep vlerat e renditura në një BST) dhe postorder (fëmijët, pastaj prindi).",
+        "en": "Traversing a tree means visiting every node in a certain order: preorder (parent, then children), inorder (left, parent, right — gives sorted values in a BST) and postorder (children, then parent)."
+      },
+      "analogy": {
+        "sq": "Si të vizitosh të gjithë kushërinjtë në pemën familjare sipas një rregulli, që të mos harrosh asnjë.",
+        "en": "Like visiting all your relatives in the family tree following a rule, so you don't miss anyone."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def inorder(n):\n    if n:\n        inorder(n.majtas); print(n.vlera); inorder(n.djathtas)"
+      },
+      "related": [
+        "binary-tree",
+        "dfs",
+        "recursion"
+      ]
+    },
+    {
+      "id": "bfs",
+      "en": "Breadth-first search (BFS)",
+      "sq": "Kërkimi në gjerësi",
+      "aliases": [
+        "bfs",
+        "breadth first search",
+        "level by level"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "BFS e eksploron një graf nivel pas niveli: së pari të gjithë fqinjët e afërt, pastaj fqinjët e tyre, e kështu me radhë, duke përdorur një radhë (queue). Në grafe pa pesha, gjen rrugën më të shkurtër.",
+        "en": "BFS explores a graph level by level: first all the nearby neighbours, then their neighbours, and so on, using a queue. In unweighted graphs, it finds the shortest path."
+      },
+      "analogy": {
+        "sq": "Si valët kur hedh një gur në liqen: zgjerohen rreth e qark, një rreth pas tjetrit.",
+        "en": "Like ripples when you throw a stone in a lake: they spread out ring after ring."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def bfs(graf, fillimi):   # deque nga collections\n    pare, radha = {fillimi}, deque([fillimi])\n    while radha:\n        for f in graf[radha.popleft()]:\n            if f not in pare: pare.add(f); radha.append(f)"
+      },
+      "related": [
+        "dfs",
+        "graph-structure",
+        "stack-queue"
+      ]
+    },
+    {
+      "id": "dfs",
+      "en": "Depth-first search (DFS)",
+      "sq": "Kërkimi në thellësi",
+      "aliases": [
+        "dfs",
+        "depth first search"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "DFS ecën sa më thellë në një degë të grafit para se të kthehet prapa dhe të provojë degën tjetër — me rekursion ose me një stack. Përdoret për labirinte, për të gjetur cikle dhe për renditje topologjike.",
+        "en": "DFS goes as deep as possible down one branch of the graph before backing up and trying the next — using recursion or a stack. It's used for mazes, finding cycles and topological sorting."
+      },
+      "analogy": {
+        "sq": "Si të eksplorosh një shpellë: shkon deri në fund të një tuneli, pastaj kthehesh dhe provon tjetrin.",
+        "en": "Like exploring a cave: go to the end of one tunnel, then come back and try the next."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def dfs(graf, nyje, pare=None):\n    pare = pare or set(); pare.add(nyje)\n    for f in graf[nyje]:\n        if f not in pare: dfs(graf, f, pare)\n    return pare"
+      },
+      "related": [
+        "bfs",
+        "backtracking",
+        "topological-sort"
+      ]
+    },
+    {
+      "id": "dijkstra",
+      "en": "Dijkstra's algorithm",
+      "sq": "Algoritmi i Dijkstrës",
+      "aliases": [
+        "dijkstra",
+        "shortest path",
+        "rruga më e shkurtër"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Algoritmi i Dijkstrës gjen rrugën më të shkurtër nga një pikë te të gjitha të tjerat në një graf me distanca (pa vlera negative). Gjithmonë vazhdon nga vendi më i afërt që s'është vizituar ende, me një radhë me përparësi.",
+        "en": "Dijkstra's algorithm finds the shortest path from one point to all others in a graph with distances (no negative values). It always continues from the closest unvisited place, using a priority queue."
+      },
+      "analogy": {
+        "sq": "Si GPS-i që llogarit rrugën më të shpejtë nga Prishtina në Tiranë duke krahasuar të gjitha rrugët e mundshme.",
+        "en": "Like a GPS working out the fastest route from Prishtina to Tirana by comparing every possible road."
+      },
+      "code": null,
+      "related": [
+        "graph-structure",
+        "heap-data-structure",
+        "a-star"
+      ]
+    },
+    {
+      "id": "a-star",
+      "en": "A* pathfinding",
+      "sq": "Algoritmi A*",
+      "aliases": [
+        "a*",
+        "a star",
+        "pathfinding"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "A* është si Dijkstra, por me një „hamendësim të zgjuar“ (heuristikë) se sa larg është destinacioni — kështu kërkon së pari në drejtimin e duhur. Përdoret shumë në lojëra, që personazhet të gjejnë rrugën.",
+        "en": "A* is like Dijkstra, but with a “smart guess” (heuristic) of how far the destination is — so it searches in the right direction first. It's used a lot in games for characters to find their way."
+      },
+      "analogy": {
+        "sq": "Si kur kërkon një dyqan në qytet dhe ecën në drejtim të tij, në vend që t'i provosh të gjitha rrugët rreth e rrotull.",
+        "en": "Like looking for a shop in town and walking towards it, instead of trying every street around you."
+      },
+      "code": null,
+      "related": [
+        "dijkstra",
+        "heuristic",
+        "unity"
+      ]
+    },
+    {
+      "id": "topological-sort",
+      "en": "Topological sort",
+      "sq": "Renditja topologjike",
+      "aliases": [
+        "topological order",
+        "dependency order",
+        "dag"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Renditja topologjike i rendit detyrat që varen nga njëra-tjetra, që çdo detyrë të vijë pas atyre që i duhen. Punon në grafe pa cikle (DAG). Kështu vendos npm-ja ose Maven-i rendin e instalimit të paketave.",
+        "en": "A topological sort orders tasks that depend on each other, so each comes after the ones it needs. It works on graphs without cycles (DAGs). That's how npm or Maven decide the order to install packages."
+      },
+      "analogy": {
+        "sq": "Si radha e veshjes në mëngjes: çorapet para këpucëve, këmisha para xhaketës.",
+        "en": "Like getting dressed in the morning: socks before shoes, shirt before jacket."
+      },
+      "code": null,
+      "related": [
+        "dfs",
+        "dependency",
+        "graph-structure"
+      ]
+    },
+    {
+      "id": "minimum-spanning-tree",
+      "en": "Minimum spanning tree",
+      "sq": "Pema minimale e shtrirjes",
+      "aliases": [
+        "mst",
+        "kruskal",
+        "prim"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Pema minimale e shtrirjes i lidh të gjitha pikat e një grafi me koston totale më të vogël, pa cikle. Algoritmet e Kruskal-it dhe Prim-it e gjejnë. Përdoret për të planifikuar rrjete kabllosh, rrugësh ose ujësjellësi.",
+        "en": "A minimum spanning tree connects every point of a graph at the lowest total cost, with no cycles. Kruskal's and Prim's algorithms find it. It's used to plan networks of cables, roads or water pipes."
+      },
+      "analogy": {
+        "sq": "Si ta lidhësh internetin në të gjitha fshatrat e komunës me sa më pak kabllo.",
+        "en": "Like connecting internet to every village in the municipality with as little cable as possible."
+      },
+      "code": null,
+      "related": [
+        "greedy-algorithm",
+        "union-find",
+        "graph-structure"
+      ]
+    },
+    {
+      "id": "palindrome",
+      "en": "Palindrome",
+      "sq": "Palindromi",
+      "aliases": [
+        "palindrome",
+        "palindrom"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Një palindrom lexohet njësoj nga e majta dhe nga e djathta — „radar“, „kapak“, 12321. Kontrolli i palindromit është ushtrim klasik për fillestarët me tekst, cikle dhe dy tregues.",
+        "en": "A palindrome reads the same left to right and right to left — “radar”, “level”, 12321. Checking for a palindrome is a classic beginner exercise with strings, loops and two pointers."
+      },
+      "analogy": {
+        "sq": "Si fjala „kapak“: e kthen mbrapsht dhe është e njëjta.",
+        "en": "Like the word “level”: flip it and it's the same."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def eshte_palindrom(s):\n    s = s.lower().replace(\" \", \"\")\n    return s == s[::-1]\neshte_palindrom(\"Kapak\")   # True"
+      },
+      "related": [
+        "two-pointers",
+        "slicing",
+        "string"
+      ]
+    },
+    {
+      "id": "anagram",
+      "en": "Anagram",
+      "sq": "Anagrami",
+      "aliases": [
+        "anagrams",
+        "anagram check"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Dy fjalë janë anagrame nëse kanë saktësisht të njëjtat shkronja në rend tjetër — „sorra“ dhe „roras“. Kontrollohet duke i renditur shkronjat ose duke i numëruar me një fjalor.",
+        "en": "Two words are anagrams if they have exactly the same letters in a different order — “listen” and “silent”. You check by sorting the letters or counting them with a dictionary."
+      },
+      "analogy": {
+        "sq": "Si dy fjalë të ndërtuara me të njëjtat copa Scrabble.",
+        "en": "Like two words built from the same Scrabble tiles."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "from collections import Counter\ndef jane_anagrame(a, b):\n    return Counter(a.lower()) == Counter(b.lower())\njane_anagrame(\"listen\", \"silent\")   # True"
+      },
+      "related": [
+        "collections-module",
+        "sorting-algorithm",
+        "hash-table"
+      ]
+    },
+    {
+      "id": "gcd-euclid",
+      "en": "GCD (Euclidean algorithm)",
+      "sq": "Pjesëtuesi më i madh i përbashkët",
+      "aliases": [
+        "gcd",
+        "euclid",
+        "pmp",
+        "euklid",
+        "lcm"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Algoritmi i Euklidit gjen pjesëtuesin më të madh të përbashkët (PMP) të dy numrave duke e zëvendësuar vazhdimisht numrin e madh me mbetjen e pjesëtimit. Është nga algoritmet më të vjetra në botë — mbi 2000 vjet.",
+        "en": "Euclid's algorithm finds the greatest common divisor (GCD) of two numbers by repeatedly replacing the bigger number with the remainder of dividing. It's one of the oldest algorithms in the world — over 2,000 years old."
+      },
+      "analogy": {
+        "sq": "Si ta presësh një dysheme drejtkëndëshe në pllaka katrore sa më të mëdha, pa mbetje.",
+        "en": "Like tiling a rectangular floor with the biggest square tiles possible, with nothing left over."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def pmp(a, b):\n    while b:\n        a, b = b, a % b\n    return a\npmp(48, 18)   # 6"
+      },
+      "related": [
+        "modulo",
+        "algorithm",
+        "prime-sieve"
+      ]
+    },
+    {
+      "id": "prime-sieve",
+      "en": "Sieve of Eratosthenes",
+      "sq": "Sita e Eratostenit",
+      "aliases": [
+        "sieve",
+        "prime numbers",
+        "numrat e thjeshtë",
+        "is prime"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Sita e Eratostenit gjen të gjithë numrat e thjeshtë deri në N: fillon nga 2 dhe fshin të gjithë shumëfishat e tij, pastaj kalon te numri tjetër i pa fshirë, e kështu me radhë. Ata që mbeten janë të thjeshtë.",
+        "en": "The Sieve of Eratosthenes finds every prime number up to N: start at 2 and cross out all its multiples, then move to the next uncrossed number, and so on. The ones left are prime."
+      },
+      "analogy": {
+        "sq": "Si sita e miellit: e shkund dhe në fund mbeten vetëm kokrrat që s'kalojnë.",
+        "en": "Like a flour sieve: shake it and only the grains that don't fall through are left."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def te_thjeshtat(n):\n    p = [True] * (n + 1); p[0] = p[1] = False\n    for i in range(2, int(n ** 0.5) + 1):\n        if p[i]: p[i * i::i] = [False] * len(p[i * i::i])\n    return [i for i, x in enumerate(p) if x]"
+      },
+      "related": [
+        "gcd-euclid",
+        "algorithm",
+        "big-o"
+      ]
+    },
+    {
+      "id": "fibonacci",
+      "en": "Fibonacci sequence",
+      "sq": "Vargu i Fibonaçit",
+      "aliases": [
+        "fibonacci",
+        "fib",
+        "fibonaçi"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Vargu i Fibonaçit fillon me 0 dhe 1, dhe çdo numër tjetër është shuma e dy të mëparshmëve: 0, 1, 1, 2, 3, 5, 8, 13… Është shembulli klasik për rekursionin — dhe për të treguar pse rekursioni pa memoization është shumë i ngadaltë.",
+        "en": "The Fibonacci sequence starts with 0 and 1, and each next number is the sum of the two before: 0, 1, 1, 2, 3, 5, 8, 13… It's the classic example of recursion — and of why recursion without memoization is very slow."
+      },
+      "analogy": {
+        "sq": "Si lulet e lulediellit dhe kokrrat e ananasit, që rriten në spirale sipas këtyre numrave.",
+        "en": "Like sunflower seeds and pineapple scales, which grow in spirals following these numbers."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def fib(n):\n    a, b = 0, 1\n    for _ in range(n): a, b = b, a + b\n    return a\nprint([fib(i) for i in range(10)])"
+      },
+      "related": [
+        "recursion",
+        "memoization",
+        "dynamic-programming"
+      ]
+    },
+    {
+      "id": "factorial",
+      "en": "Factorial (n!)",
+      "sq": "Faktoriali",
+      "aliases": [
+        "factorial",
+        "n!",
+        "faktorial"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Faktoriali i n-së (n!) është prodhimi 1 × 2 × 3 × … × n — p.sh. 5! = 120. Tregon në sa mënyra mund të renditen n gjëra, dhe rritet jashtëzakonisht shpejt: 20! ka 19 shifra. Ushtrim klasik për rekursionin.",
+        "en": "The factorial of n (n!) is the product 1 × 2 × 3 × … × n — e.g. 5! = 120. It tells you how many ways n things can be ordered, and it grows incredibly fast: 20! has 19 digits. A classic recursion exercise."
+      },
+      "analogy": {
+        "sq": "Si në sa mënyra mund të ulen 5 shokë në 5 karrige: 120.",
+        "en": "Like how many ways 5 friends can sit on 5 chairs: 120."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def faktoriali(n):\n    return 1 if n <= 1 else n * faktoriali(n - 1)\nprint(faktoriali(5))   # 120"
+      },
+      "related": [
+        "recursion",
+        "base-case",
+        "big-o"
+      ]
+    },
+    {
+      "id": "fast-exponentiation",
+      "en": "Fast exponentiation",
+      "sq": "Fuqizimi i shpejtë",
+      "aliases": [
+        "binary exponentiation",
+        "exponentiation by squaring",
+        "modpow",
+        "pow mod"
+      ],
+      "category": "algorithms",
+      "explanation": {
+        "sq": "Për të llogaritur aⁿ, në vend që të shumëzosh a me veten n herë, e ngre në katror dhe e përgjysmon n-në — vetëm rreth log n hapa. Përdoret në kriptografi dhe gara, shpesh me modul: pow(a, n, m) në Python.",
+        "en": "To compute aⁿ, instead of multiplying a by itself n times, you square it and halve n — only about log n steps. It's used in cryptography and contests, often with a modulus: pow(a, n, m) in Python."
+      },
+      "analogy": {
+        "sq": "Si palosja e një flete letre: çdo palosje e dyfishon trashësinë, dhe pas pak palosjesh është shumë e trashë.",
+        "en": "Like folding a sheet of paper: each fold doubles the thickness, and after a few folds it's very thick."
+      },
+      "code": {
+        "language": "python",
+        "snippet": "def fuqi(a, n, r=1):\n    while n:\n        if n & 1: r *= a\n        a, n = a * a, n >> 1\n    return r"
+      },
+      "related": [
+        "divide-and-conquer",
+        "bitwise-operators",
+        "public-key-cryptography"
       ]
     }
   ]
