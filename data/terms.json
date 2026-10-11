@@ -131,6 +131,19 @@
       }
     },
     {
+      "id": "php",
+      "icon": "php",
+      "hue": 250,
+      "name": {
+        "sq": "PHP",
+        "en": "PHP"
+      },
+      "description": {
+        "sq": "Gjuha që qëndron pas WordPress-it dhe Laravel-it — shumë e kërkuar nga kompanitë web në Shqipëri dhe Kosovë.",
+        "en": "The language behind WordPress and Laravel — in high demand at web companies in Albania and Kosovo."
+      }
+    },
+    {
       "id": "databases",
       "icon": "db",
       "hue": 30,
@@ -3523,8 +3536,7 @@
       "sq": null,
       "aliases": [
         "object relational mapping",
-        "sqlalchemy",
-        "prisma"
+        "sqlalchemy"
       ],
       "category": "databases",
       "explanation": {
@@ -4893,10 +4905,8 @@
       "id": "php",
       "en": "PHP",
       "sq": null,
-      "aliases": [
-        "laravel"
-      ],
-      "category": "languages",
+      "aliases": [],
+      "category": "php",
       "explanation": {
         "sq": "PHP-ja është një gjuhë programimi për backend-in e faqeve të internetit. Shumë faqe punojnë me PHP, përfshirë WordPress-in, dhe Laravel-i është framework-u më i njohur për të.",
         "en": "PHP is a programming language for the backend of websites. Lots of sites run on PHP, including WordPress, and Laravel is its best-known framework."
@@ -4910,9 +4920,9 @@
         "snippet": "<?php\n$emri = \"Driton\";\necho \"Përshëndetje, $emri!\";"
       },
       "related": [
-        "backend",
-        "server",
-        "framework"
+        "laravel",
+        "composer",
+        "php-variables"
       ]
     },
     {
@@ -17556,7 +17566,6 @@
       "en": "Database GUI tools",
       "sq": "Mjetet grafike për databaza",
       "aliases": [
-        "phpmyadmin",
         "dbeaver",
         "pgadmin",
         "tableplus",
@@ -37922,8 +37931,7 @@
       "sq": "Tipet ndihmëse",
       "aliases": [
         "pick",
-        "omit",
-        "returntype"
+        "omit"
       ],
       "category": "typescript",
       "explanation": {
@@ -38032,7 +38040,6 @@
       "sq": "Tipet me kusht",
       "aliases": [
         "conditional type",
-        "infer",
         "t extends u ? x : y"
       ],
       "category": "typescript",
@@ -38445,8 +38452,7 @@
       "sq": "Tipet asinkrone",
       "aliases": [
         "promise<t>",
-        "async function type",
-        "awaited"
+        "async function type"
       ],
       "category": "typescript",
       "explanation": {
@@ -38816,6 +38822,4237 @@
         "express-js",
         "decorators-ts",
         "dependency-injection"
+      ]
+    },
+    {
+      "id": "primitive-types-ts",
+      "en": "Primitive types in TypeScript",
+      "sq": "Tipet bazë në TypeScript",
+      "aliases": [
+        "string number boolean",
+        "bigint",
+        "symbol ts"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "TypeScript-i ka të njëjtat tipe bazë si JavaScript-i, por i shkruan qartë: string, number (s'ka int dhe float veç), boolean, bigint për numra shumë të mëdhenj, symbol, null dhe undefined.",
+        "en": "TypeScript has the same basic types as JavaScript, but writes them out: string, number (no separate int and float), boolean, bigint for very big numbers, symbol, null and undefined."
+      },
+      "analogy": {
+        "sq": "Si enët bazë në kuzhinë: gota, pjata, tasi — gjithçka tjetër ndërtohet prej tyre.",
+        "en": "Like the basic kitchenware: glass, plate, bowl — everything else builds on them."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "let emri: string = \"Arta\";\nlet mosha: number = 16.5;\nlet aktiv: boolean = true;\nlet iMadh: bigint = 9007199254740993n;"
+      },
+      "related": [
+        "type-annotations",
+        "primitive-types",
+        "data-type"
+      ]
+    },
+    {
+      "id": "object-types",
+      "en": "Object types",
+      "sq": "Tipet e objekteve",
+      "aliases": [
+        "object type",
+        "inline type",
+        "{ emri: string }"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Një objekt mund ta përshkruash direkt, pa interface: { emri: string; mosha: number }. Për forma që përdoren në shumë vende, më mirë i jep emër me type ose interface.",
+        "en": "You can describe an object directly, without an interface: { name: string; age: number }. For shapes used in many places, it's better to give it a name with type or interface."
+      },
+      "analogy": {
+        "sq": "Si ta përshkruash një pako me fjalë në vend të një etikete standarde.",
+        "en": "Like describing a parcel in words instead of using a standard label."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "function shfaq(n: { emri: string; mosha: number }) {\n  console.log(n.emri, n.mosha);\n}"
+      },
+      "related": [
+        "ts-interface-type",
+        "js-object-literal",
+        "optional-properties"
+      ]
+    },
+    {
+      "id": "array-types",
+      "en": "Array types (T[] & Array<T>)",
+      "sq": "Tipet e vargjeve",
+      "aliases": [
+        "number[]",
+        "array<t>"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Një varg me numra shkruhet number[] ose Array<number> — të dyja janë e njëjta gjë. TypeScript-i të ndalon të fusësh tekst në një varg numrash.",
+        "en": "An array of numbers is written number[] or Array<number> — both mean the same. TypeScript stops you putting text into an array of numbers."
+      },
+      "analogy": {
+        "sq": "Si një kuti vezësh: mban vetëm vezë, jo mollë.",
+        "en": "Like an egg box: it holds eggs, not apples."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "const notat: number[] = [5, 4, 3];\nconst emrat: Array<string> = [\"Arta\", \"Dren\"];\n// notat.push(\"pesë\");   // Gabim"
+      },
+      "related": [
+        "array",
+        "tuples-ts",
+        "generics-ts"
+      ]
+    },
+    {
+      "id": "void-ts",
+      "en": "void (TypeScript)",
+      "sq": null,
+      "aliases": [
+        "void return",
+        ": void"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "void do të thotë që një funksion s'kthen asgjë që na intereson — si një funksion që thjesht printon. Ndryshe nga never, një funksion void mbaron normalisht.",
+        "en": "void means a function returns nothing we care about — like a function that just prints. Unlike never, a void function finishes normally."
+      },
+      "analogy": {
+        "sq": "Si porosia „pastroje dhomën“: s'pret t'i sjellin gjë mbrapsht.",
+        "en": "Like the instruction “clean the room”: you don't expect anything back."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "function log(mesazhi: string): void {\n  console.log(mesazhi);\n}"
+      },
+      "related": [
+        "void-keyword",
+        "never-type",
+        "function-types"
+      ]
+    },
+    {
+      "id": "type-widening",
+      "en": "Type widening",
+      "sq": "Zgjerimi i tipit",
+      "aliases": [
+        "widening",
+        "let vs const type"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Me const emri = \"Arta\", TypeScript-i e di që tipi është saktësisht \"Arta\". Me let, e „zgjeron“ në string, sepse mund të ndryshojë. Kjo shpjegon pse ndonjëherë të duhet as const.",
+        "en": "With const name = \"Arta\", TypeScript knows the type is exactly \"Arta\". With let, it “widens” it to string, because it might change. That's why you sometimes need as const."
+      },
+      "analogy": {
+        "sq": "Si një karrige me emrin tënd (const) krahasuar me një karrige çfarëdo në klasë (let).",
+        "en": "Like a chair with your name on it (const) compared with any chair in the classroom (let)."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "const a = \"sq\";   // tipi: \"sq\"\nlet b = \"sq\";     // tipi: string"
+      },
+      "related": [
+        "literal-types",
+        "as-const",
+        "let-const-var"
+      ]
+    },
+    {
+      "id": "excess-property-checks",
+      "en": "Excess property checks",
+      "sq": "Kontrolli i fushave të tepërta",
+      "aliases": [
+        "excess property",
+        "object literal may only specify known properties"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Kur i jep një objekt të ri direkt një variable me tip, TypeScript-i ankohet nëse ka fusha që tipi s'i njeh — shpesh kjo kap gabime shtypi si „emr“ në vend të „emri“.",
+        "en": "When you assign a fresh object literal to a typed variable, TypeScript complains if it has fields the type doesn't know — this often catches typos like “nmae” instead of “name”."
+      },
+      "analogy": {
+        "sq": "Si sportelisti që të kthen formularin sepse ke plotësuar një kuti që s'ekziston.",
+        "en": "Like a clerk who hands back your form because you filled in a box that doesn't exist."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "interface Nxenes { emri: string }\nconst a: Nxenes = { emri: \"Arta\", emr: \"x\" };   // Gabim: 'emr' s'ekziston"
+      },
+      "related": [
+        "structural-typing",
+        "ts-interface-type",
+        "bug"
+      ]
+    },
+    {
+      "id": "assignability",
+      "en": "Assignability",
+      "sq": "Përputhshmëria e tipeve",
+      "aliases": [
+        "assignable",
+        "type compatibility",
+        "is not assignable to type"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Gabimi më i zakonshëm në TypeScript është „Type X is not assignable to type Y“ — do të thotë që vlera s'i përshtatet vendit ku po e vendos. Lexoje nga fundi: shpesh tregon saktë cila fushë mungon ose është e gabuar.",
+        "en": "The most common TypeScript error is “Type X is not assignable to type Y” — the value doesn't fit where you're putting it. Read it from the bottom: it often shows exactly which field is missing or wrong."
+      },
+      "analogy": {
+        "sq": "Si të provosh ta futësh një spinë të rrumbullakët në një prizë katrore.",
+        "en": "Like trying to fit a round plug into a square socket."
+      },
+      "code": null,
+      "related": [
+        "structural-typing",
+        "type-annotations",
+        "error"
+      ]
+    },
+    {
+      "id": "interface-extends",
+      "en": "Extending interfaces",
+      "sq": "Zgjerimi i interfejsave",
+      "aliases": [
+        "interface extends",
+        "extends interface"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Një interface mund të zgjerojë një tjetër me extends dhe të shtojë fusha të reja: interface Studenti extends Personi { nrStudenti: number }. Mund të zgjerojë edhe disa njëherësh.",
+        "en": "An interface can extend another with extends and add new fields: interface Student extends Person { studentNo: number }. It can extend several at once."
+      },
+      "analogy": {
+        "sq": "Si formulari i studentit që ka të gjitha fushat e formularit të personit, plus disa të tjera.",
+        "en": "Like a student form that has every field of the person form, plus a few more."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "interface Personi { emri: string }\ninterface Studenti extends Personi { nrStudenti: number }\nconst a: Studenti = { emri: \"Arta\", nrStudenti: 1042 };"
+      },
+      "related": [
+        "ts-interface-type",
+        "inheritance",
+        "intersection-types"
+      ]
+    },
+    {
+      "id": "declaration-merging",
+      "en": "Declaration merging",
+      "sq": "Bashkimi i deklarimeve",
+      "aliases": [
+        "interface merging",
+        "merge declarations"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Po e deklarove të njëjtin interface dy herë, TypeScript-i i bashkon në një. Kështu libraritë mund t'i zgjerojnë tipet e njëra-tjetrës — p.sh. t'i shtojnë një fushë objektit Window.",
+        "en": "Declare the same interface twice and TypeScript merges them into one. That's how libraries can extend each other's types — e.g. add a field to the Window object."
+      },
+      "analogy": {
+        "sq": "Si dy faqe me shënime për të njëjtin nxënës që bashkohen në një dosje.",
+        "en": "Like two pages of notes about the same student merged into one file."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "interface Konfig { gjuha: string }\ninterface Konfig { tema: string }\nconst k: Konfig = { gjuha: \"sq\", tema: \"dark\" };   // të dyja fushat"
+      },
+      "related": [
+        "declare-global",
+        "ts-interface-type",
+        "declaration-files"
+      ]
+    },
+    {
+      "id": "abstract-classes-ts",
+      "en": "Abstract classes (TypeScript)",
+      "sq": "Klasat abstrakte në TypeScript",
+      "aliases": [
+        "abstract ts",
+        "abstract method ts"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Një klasë abstract në TypeScript s'mund të krijohet direkt — shërben si bazë për klasa të tjera, dhe metodat abstract duhet t'i shkruajnë patjetër fëmijët.",
+        "en": "An abstract class in TypeScript can't be created directly — it's a base for other classes, and abstract methods must be written by the children."
+      },
+      "analogy": {
+        "sq": "Si rregullorja „çdo ekip duhet të ketë portier“, pa të thënë kush.",
+        "en": "Like the rule “every team must have a goalkeeper”, without saying who."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "abstract class Forme {\n  abstract siperfaqja(): number;\n}\nclass Katror extends Forme { constructor(private a: number) { super(); } siperfaqja() { return this.a ** 2; } }"
+      },
+      "related": [
+        "abstract-class",
+        "classes-ts",
+        "pure-virtual-function"
+      ]
+    },
+    {
+      "id": "private-vs-hash",
+      "en": "private vs #private",
+      "sq": "private dhe #private",
+      "aliases": [
+        "#private ts",
+        "private keyword ts",
+        "ecmascript private"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "TypeScript-i ka dy lloje fushash private: private (kontrollohet vetëm nga TypeScript-i, zhduket në JavaScript) dhe #emri (private e vërtetë e JavaScript-it, që s'mund të lexohet as gjatë ekzekutimit).",
+        "en": "TypeScript has two kinds of private fields: private (checked only by TypeScript, gone in JavaScript) and #name (JavaScript's real private, unreadable even at runtime)."
+      },
+      "analogy": {
+        "sq": "private është si tabela „Hyrja e ndaluar“; #private është si një derë e kyçur.",
+        "en": "private is like a “No entry” sign; #private is like a locked door."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "class Llogari {\n  private pin = 1234;      // vetëm TypeScript\n  #bilanci = 0;            // edhe JavaScript\n}"
+      },
+      "related": [
+        "private-fields-js",
+        "classes-ts",
+        "encapsulation"
+      ]
+    },
+    {
+      "id": "mixins-ts",
+      "en": "Mixins",
+      "sq": null,
+      "aliases": [
+        "mixin",
+        "mixins"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Një mixin është funksion që merr një klasë dhe kthen një klasë të re me aftësi shtesë. Kështu „përzien“ sjellje — p.sh. Kërcyes dhe Notues — pa trashëgimi të shumëfishtë.",
+        "en": "A mixin is a function that takes a class and returns a new class with extra abilities. That's how you “mix in” behaviour — e.g. Jumper and Swimmer — without multiple inheritance."
+      },
+      "analogy": {
+        "sq": "Si të shtosh copa shtesë në një figurë Lego: krahë, rrota, helikë.",
+        "en": "Like clipping extra pieces onto a Lego figure: wings, wheels, a propeller."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "type Klase = new (...a: any[]) => {};\nconst Kercyes = <B extends Klase>(Baza: B) =>\n  class extends Baza { kerce() { console.log(\"Hop!\"); } };"
+      },
+      "related": [
+        "inheritance",
+        "php-traits",
+        "classes-ts"
+      ]
+    },
+    {
+      "id": "generic-defaults",
+      "en": "Generic defaults",
+      "sq": "Vlerat e paracaktuara të gjenerikëve",
+      "aliases": [
+        "default type parameter",
+        "<t = string>"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Një parametër gjenerik mund të ketë tip të paracaktuar: type Pergjigja<T = unknown>. Po s'e dhe tipin, përdoret ai i paracaktuari.",
+        "en": "A generic parameter can have a default type: type Response<T = unknown>. If you don't specify the type, the default is used."
+      },
+      "analogy": {
+        "sq": "Si porosia e zakonshme te kafeneja.",
+        "en": "Like your usual order at the café."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "type Pergjigja<T = unknown> = { ok: boolean; data: T };\nconst a: Pergjigja = { ok: true, data: 5 };           // data: unknown\nconst b: Pergjigja<string[]> = { ok: true, data: [] };"
+      },
+      "related": [
+        "generics-ts",
+        "default-parameters",
+        "generic-constraints"
+      ]
+    },
+    {
+      "id": "infer-keyword",
+      "en": "infer",
+      "sq": null,
+      "aliases": [
+        "infer ts",
+        "infer keyword"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Brenda një tipi me kusht, infer i thotë TypeScript-it „gjeje vetë këtë pjesë“ — p.sh. çfarë tipi është brenda një Promise ose çfarë kthen një funksion.",
+        "en": "Inside a conditional type, infer tells TypeScript “work this part out yourself” — e.g. what type is inside a Promise or what a function returns."
+      },
+      "analogy": {
+        "sq": "Si ta hapësh një kuti dhe të shohësh çfarë ka brenda pa e lexuar etiketën.",
+        "en": "Like opening a box to see what's inside without reading the label."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "type Brenda<T> = T extends Promise<infer V> ? V : T;\ntype A = Brenda<Promise<number>>;   // number"
+      },
+      "related": [
+        "conditional-types",
+        "awaited-type",
+        "returntype-parameters"
+      ]
+    },
+    {
+      "id": "recursive-types",
+      "en": "Recursive types",
+      "sq": "Tipet rekursive",
+      "aliases": [
+        "recursive type",
+        "json type",
+        "tree type"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Një tip mund t'i referohet vetes — kështu përshkruan struktura që s'kanë fund të caktuar, si pemët, menytë me nënmeny ose çdo vlerë JSON.",
+        "en": "A type can refer to itself — that's how you describe structures with no fixed depth, like trees, menus with submenus or any JSON value."
+      },
+      "analogy": {
+        "sq": "Si kukullat ruse: brenda secilës mund të ketë një tjetër.",
+        "en": "Like Russian dolls: inside each one there may be another."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "type Meny = { titulli: string; nenmeny?: Meny[] };\ntype JSONVlere = string | number | boolean | null | JSONVlere[] | { [k: string]: JSONVlere };"
+      },
+      "related": [
+        "recursion",
+        "tree-structure",
+        "json"
+      ]
+    },
+    {
+      "id": "branded-types",
+      "en": "Branded types",
+      "sq": "Tipet me markë",
+      "aliases": [
+        "brand",
+        "nominal typing",
+        "opaque type"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Meqë TypeScript-i krahason sipas formës, një IdPerdoruesi dhe një IdPorosie (të dyja string) ngatërrohen lehtë. Një „markë“ e fshehtë i bën të dallueshme, që të mos e japësh njërën në vend të tjetrës.",
+        "en": "Because TypeScript compares by shape, a UserId and an OrderId (both strings) are easy to mix up. A hidden “brand” makes them distinct, so you can't pass one in place of the other."
+      },
+      "analogy": {
+        "sq": "Si dy çelësa që duken njësoj, por me ngjitëse me ngjyra të ndryshme.",
+        "en": "Like two identical-looking keys with different coloured tags."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "type IdPerdoruesi = string & { __marka: \"perdorues\" };\ntype IdPorosie = string & { __marka: \"porosi\" };\nfunction merr(id: IdPerdoruesi) {}\n// merr(\"abc\" as IdPorosie);   // Gabim"
+      },
+      "related": [
+        "structural-typing",
+        "intersection-types",
+        "type-assertions"
+      ]
+    },
+    {
+      "id": "assertion-functions",
+      "en": "Assertion functions (asserts)",
+      "sq": "Funksionet pohuese",
+      "aliases": [
+        "asserts",
+        "asserts x is",
+        "assert function ts"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Një funksion pohues hedh gabim nëse kushti s'plotësohet, dhe pas thirrjes TypeScript-i di që kushti është i vërtetë: function sigurohu(x: unknown): asserts x is string.",
+        "en": "An assertion function throws if a condition fails, and after the call TypeScript knows the condition holds: function ensure(x: unknown): asserts x is string."
+      },
+      "analogy": {
+        "sq": "Si roja që të ndal te dera nëse s'ke biletë — po kalove, je i sigurt brenda.",
+        "en": "Like a doorman who stops you if you have no ticket — once you're past, you're definitely in."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "function sigurohu(x: unknown): asserts x is string {\n  if (typeof x !== \"string\") throw new Error(\"S'është tekst\");\n}\nsigurohu(v); v.toUpperCase();   // tani v është string"
+      },
+      "related": [
+        "type-guards",
+        "assert-h",
+        "type-narrowing"
+      ]
+    },
+    {
+      "id": "exhaustiveness-checking",
+      "en": "Exhaustiveness checking",
+      "sq": "Kontrolli i plotësisë",
+      "aliases": [
+        "exhaustive switch",
+        "assertnever",
+        "satisfies never"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Me një rast default që pranon vetëm never, TypeScript-i të paralajmëron kur i shton një vlerë të re një union-i dhe harron ta trajtosh në switch.",
+        "en": "With a default case that only accepts never, TypeScript warns you when you add a new value to a union and forget to handle it in a switch."
+      },
+      "analogy": {
+        "sq": "Si lista e prezencës që të kujton nëse ke harruar dikë.",
+        "en": "Like a register that reminds you if you've forgotten someone."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "switch (f.lloji) {\n  case \"rreth\": return 1;\n  case \"katror\": return 2;\n  default: const s: never = f; return s;   // gabim po mungoi një rast\n}"
+      },
+      "related": [
+        "never-type",
+        "discriminated-unions",
+        "switch-case"
+      ]
+    },
+    {
+      "id": "awaited-type",
+      "en": "Awaited<T>",
+      "sq": null,
+      "aliases": [
+        "awaited"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Awaited<T> të jep tipin që merr pasi bën await — e „hap“ Promise-in, edhe nëse janë disa njëri brenda tjetrit.",
+        "en": "Awaited<T> gives you the type you get after await — it “unwraps” the Promise, even if several are nested."
+      },
+      "analogy": {
+        "sq": "Si të shikosh çfarë do të gjesh kur ta hapësh pakon.",
+        "en": "Like seeing what you'll find when you open the parcel."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "type A = Awaited<Promise<Promise<string>>>;   // string\ntype Termat = Awaited<ReturnType<typeof merrTermat>>;"
+      },
+      "related": [
+        "async-types-ts",
+        "infer-keyword",
+        "returntype-parameters"
+      ]
+    },
+    {
+      "id": "returntype-parameters",
+      "en": "ReturnType & Parameters",
+      "sq": null,
+      "aliases": [
+        "returntype",
+        "parameters<t>",
+        "instancetype"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "ReturnType<typeof f> të jep tipin që kthen një funksion, dhe Parameters<typeof f> tipet e parametrave të tij. Kështu s'ke pse i rishkruan tipet — i nxjerr nga funksioni ekzistues.",
+        "en": "ReturnType<typeof f> gives the type a function returns, and Parameters<typeof f> the types of its parameters. So you don't rewrite types — you derive them from the existing function."
+      },
+      "analogy": {
+        "sq": "Si ta marrësh përshkrimin e gjellës direkt nga receta, pa e rishkruar.",
+        "en": "Like taking the dish description straight from the recipe instead of rewriting it."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "function krijo(emri: string, mosha: number) { return { emri, mosha }; }\ntype Nxenes = ReturnType<typeof krijo>;       // { emri: string; mosha: number }\ntype Args = Parameters<typeof krijo>;          // [string, number]"
+      },
+      "related": [
+        "utility-types",
+        "keyof-typeof",
+        "infer-keyword"
+      ]
+    },
+    {
+      "id": "nonnullable-exclude",
+      "en": "Exclude, Extract & NonNullable",
+      "sq": null,
+      "aliases": [
+        "exclude",
+        "extract",
+        "nonnullable"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Këto tipe ndihmëse punojnë me union-e: Exclude<T, U> heq disa opsione, Extract<T, U> mban vetëm disa, dhe NonNullable<T> heq null dhe undefined.",
+        "en": "These helper types work on unions: Exclude<T, U> removes some options, Extract<T, U> keeps only some, and NonNullable<T> removes null and undefined."
+      },
+      "analogy": {
+        "sq": "Si ta pastrosh listën e mysafirëve: heq disa emra, ose mban vetëm familjen.",
+        "en": "Like editing a guest list: cross some names off, or keep only family."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "type Ngjyra = \"kuqe\" | \"blu\" | \"gjelber\";\ntype PaKuqe = Exclude<Ngjyra, \"kuqe\">;            // \"blu\" | \"gjelber\"\ntype Emri = NonNullable<string | null | undefined>; // string"
+      },
+      "related": [
+        "utility-types",
+        "union-types",
+        "strict-null-checks"
+      ]
+    },
+    {
+      "id": "object-keys-typing",
+      "en": "Why Object.keys returns string[]",
+      "sq": "Pse Object.keys kthen string[]",
+      "aliases": [
+        "object.keys type",
+        "object.keys string[]"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Shumë fillestarë habiten që Object.keys(obj) kthen string[] në vend të çelësave të saktë. Arsyeja: falë tipizimit strukturor, një objekt mund të ketë më shumë fusha se tipi i tij. Nëse je i sigurt, konvertoje me as (keyof T)[].",
+        "en": "Many beginners are surprised that Object.keys(obj) returns string[] instead of the exact keys. The reason: thanks to structural typing, an object may have more fields than its type. If you're sure, cast with as (keyof T)[]."
+      },
+      "analogy": {
+        "sq": "Si një çantë me etiketën „libra“ — por dikush mund të ketë futur edhe një sanduiç.",
+        "en": "Like a bag labelled “books” — but someone might have slipped a sandwich in too."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "const k = { gjuha: \"sq\", tema: \"dark\" };\nfor (const c of Object.keys(k) as (keyof typeof k)[]) console.log(k[c]);"
+      },
+      "related": [
+        "object-methods",
+        "structural-typing",
+        "keyof-typeof"
+      ]
+    },
+    {
+      "id": "optional-vs-undefined",
+      "en": "Optional vs undefined",
+      "sq": "Fushë opsionale apo undefined",
+      "aliases": [
+        "x?: t",
+        "x: t | undefined",
+        "exactoptionalpropertytypes"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "emri?: string do të thotë „fusha mund të mungojë fare“, ndërsa emri: string | undefined do të thotë „fusha duhet të jetë aty, edhe nëse vlera është undefined“. Dallimi ka rëndësi te objektet që dërgohen në API.",
+        "en": "name?: string means “the field may be missing entirely”, while name: string | undefined means “the field must be there, even if its value is undefined”. The difference matters for objects sent to an API."
+      },
+      "analogy": {
+        "sq": "Si dallimi mes „s'erdhi në mbledhje“ dhe „erdhi, por s'foli“.",
+        "en": "Like the difference between “didn't come to the meeting” and “came but didn't speak”."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "type A = { emri?: string };\ntype B = { emri: string | undefined };\nconst a: A = {};                     // në rregull\n// const b: B = {};                  // Gabim: mungon 'emri'"
+      },
+      "related": [
+        "optional-properties",
+        "strict-null-checks",
+        "undefined-null"
+      ]
+    },
+    {
+      "id": "double-assertion",
+      "en": "Double assertion (as unknown as T)",
+      "sq": "Pohimi i dyfishtë",
+      "aliases": [
+        "as unknown as",
+        "double cast"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Kur TypeScript-i s'të lejon një as sepse tipet s'kanë lidhje fare, disa shkruajnë x as unknown as T. Funksionon, por e fik plotësisht kontrollin — zakonisht është shenjë që diçka në tipe është gabim.",
+        "en": "When TypeScript won't allow an as because the types are completely unrelated, some people write x as unknown as T. It works, but it switches checking off completely — usually a sign something in your types is wrong."
+      },
+      "analogy": {
+        "sq": "Si ta ngjitësh një etiketë të re mbi një kuti pa e hapur fare.",
+        "en": "Like sticking a new label on a box without ever opening it."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "const n = \"5\" as unknown as number;   // kompajlohet… por është gënjeshtër"
+      },
+      "related": [
+        "type-assertions",
+        "any-type",
+        "unknown-type"
+      ]
+    },
+    {
+      "id": "json-parse-any",
+      "en": "JSON.parse returns any",
+      "sq": "JSON.parse kthen any",
+      "aliases": [
+        "json.parse any",
+        "typing json"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "JSON.parse() dhe response.json() kthejnë any, prandaj TypeScript-i s'kontrollon asgjë për të dhënat që vijnë nga jashtë. Ruaje rezultatin si unknown dhe kontrolloje — me një type guard ose me Zod.",
+        "en": "JSON.parse() and response.json() return any, so TypeScript checks nothing about data from outside. Store the result as unknown and check it — with a type guard or with Zod."
+      },
+      "analogy": {
+        "sq": "Si një pako nga një dërgues i panjohur: mos e hap pa e kontrolluar.",
+        "en": "Like a parcel from an unknown sender: don't open it without checking."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "const v: unknown = JSON.parse(teksti);\nconst termi = Termi.parse(v);   // Zod e kontrollon formën"
+      },
+      "related": [
+        "unknown-type",
+        "zod",
+        "json-methods"
+      ]
+    },
+    {
+      "id": "typing-fetch-responses",
+      "en": "Typing API responses",
+      "sq": "Tipet për përgjigjet e API-së",
+      "aliases": [
+        "fetch typescript",
+        "typed fetch",
+        "api types"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Kur merr të dhëna me fetch, TypeScript-i s'e di formën e tyre. I jep tipin vetë (Promise<Termi[]>), dhe për siguri të plotë i kontrollon me Zod — ose i gjeneron tipet automatikisht nga dokumentimi OpenAPI.",
+        "en": "When you fetch data, TypeScript doesn't know its shape. You give it the type yourself (Promise<Term[]>), and for full safety you check it with Zod — or generate the types automatically from the OpenAPI docs."
+      },
+      "analogy": {
+        "sq": "Si t'i thuash korrierit çfarë duhet të ketë pakoja — dhe ta kontrollosh kur arrin.",
+        "en": "Like telling the courier what the parcel should contain — and checking when it arrives."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "async function merr<T>(url: string): Promise<T> {\n  const r = await fetch(url);\n  if (!r.ok) throw new Error(String(r.status));\n  return r.json() as Promise<T>;\n}"
+      },
+      "related": [
+        "fetch",
+        "async-types-ts",
+        "generated-types"
+      ]
+    },
+    {
+      "id": "ts-expect-error",
+      "en": "@ts-expect-error & @ts-ignore",
+      "sq": null,
+      "aliases": [
+        "ts-ignore",
+        "ts-expect-error",
+        "ts-nocheck"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Komentet // @ts-ignore dhe // @ts-expect-error e heshtin gabimin e rreshtit tjetër. @ts-expect-error është më i mirë: po u rregullua gabimi më vonë, të paralajmëron që komenti s'duhet më.",
+        "en": "The comments // @ts-ignore and // @ts-expect-error silence the error on the next line. @ts-expect-error is better: if the error gets fixed later, it warns you the comment isn't needed any more."
+      },
+      "analogy": {
+        "sq": "Si një shënim „e di, do ta rregulloj“ — por që të kujton ta heqësh kur e ke rregulluar.",
+        "en": "Like a note saying “I know, I'll fix it” — that reminds you to remove it once you have."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "// @ts-expect-error — libraria e vjetër s'ka tipe për këtë\nvjeter.metodaESekrete();"
+      },
+      "related": [
+        "any-type",
+        "typescript-eslint",
+        "technical-debt"
+      ]
+    },
+    {
+      "id": "no-unchecked-indexed-access",
+      "en": "noUncheckedIndexedAccess",
+      "sq": null,
+      "aliases": [
+        "nouncheckedindexedaccess",
+        "array index undefined"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Si parazgjedhje, TypeScript-i mendon që notat[10] është gjithmonë number — edhe nëse vargu ka vetëm 3 elemente. Me noUncheckedIndexedAccess, tipi bëhet number | undefined dhe të detyron ta kontrollosh.",
+        "en": "By default, TypeScript assumes grades[10] is always a number — even if the array has only 3 items. With noUncheckedIndexedAccess, the type becomes number | undefined and you're forced to check."
+      },
+      "analogy": {
+        "sq": "Si të pyesësh për kutinë e 10-të të vezëve kur kutia ka vetëm 6 vende.",
+        "en": "Like asking about the 10th egg when the box only has 6 slots."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "const notat = [5, 4, 3];\nconst x = notat[10];   // me opsionin: number | undefined\nif (x !== undefined) console.log(x.toFixed(1));"
+      },
+      "related": [
+        "strict-mode-ts",
+        "tsconfig",
+        "off-by-one"
+      ]
+    },
+    {
+      "id": "module-resolution",
+      "en": "Module resolution (moduleResolution)",
+      "sq": "Gjetja e moduleve",
+      "aliases": [
+        "moduleresolution",
+        "nodenext",
+        "bundler resolution",
+        "cannot find module"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "moduleResolution i tregon TypeScript-it si t'i gjejë skedarët kur shkruan import. Për projekte me Vite përdoret \"bundler\", për Node \"nodenext\". Gabimi „Cannot find module“ shpesh vjen nga ky cilësim.",
+        "en": "moduleResolution tells TypeScript how to find files when you write import. Vite projects use \"bundler\", Node uses \"nodenext\". The “Cannot find module” error often comes from this setting."
+      },
+      "analogy": {
+        "sq": "Si GPS-i që duhet ta dijë nëse po ecën me veturë apo me biçikletë për të gjetur rrugën.",
+        "en": "Like a GPS that needs to know whether you're driving or cycling to find the route."
+      },
+      "code": null,
+      "related": [
+        "tsconfig",
+        "es-modules",
+        "path-aliases"
+      ]
+    },
+    {
+      "id": "path-aliases",
+      "en": "Path aliases (@/...)",
+      "sq": "Shkurtesat e rrugëve",
+      "aliases": [
+        "paths",
+        "@/components",
+        "baseurl",
+        "alias import"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Në vend të import { Butoni } from \"../../../components/Butoni\", me \"paths\" në tsconfig shkruan import { Butoni } from \"@/components/Butoni\". Kodi lexohet më mirë dhe s'prishet kur i lëviz skedarët.",
+        "en": "Instead of import { Button } from \"../../../components/Button\", with \"paths\" in tsconfig you write import { Button } from \"@/components/Button\". Code reads better and doesn't break when you move files."
+      },
+      "analogy": {
+        "sq": "Si ta ruash një adresë në GPS si „Shtëpia“ në vend që ta shkruash të plotë çdo herë.",
+        "en": "Like saving an address in the GPS as “Home” instead of typing it in full every time."
+      },
+      "code": {
+        "language": "json",
+        "snippet": "{ \"compilerOptions\": { \"paths\": { \"@/*\": [\"./src/*\"] } } }"
+      },
+      "related": [
+        "tsconfig",
+        "module-resolution",
+        "file-path"
+      ]
+    },
+    {
+      "id": "project-references",
+      "en": "Project references",
+      "sq": "Referencat mes projekteve",
+      "aliases": [
+        "references tsconfig",
+        "composite",
+        "tsc --build"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Në projekte të mëdha, me „project references“ e ndan kodin në disa pjesë TypeScript (p.sh. shared, frontend, backend) që kontrollohen veç. tsc --build e ndërton vetëm atë që ka ndryshuar — shumë më shpejt.",
+        "en": "In big projects, “project references” split the code into several TypeScript parts (e.g. shared, frontend, backend) checked separately. tsc --build rebuilds only what changed — much faster."
+      },
+      "analogy": {
+        "sq": "Si një libër me disa vëllime: rishtyp vetëm vëllimin ku ke bërë ndryshime.",
+        "en": "Like a multi-volume book: you reprint only the volume you changed."
+      },
+      "code": null,
+      "related": [
+        "monorepo",
+        "tsconfig",
+        "tsc"
+      ]
+    },
+    {
+      "id": "target-and-lib",
+      "en": "target & lib (tsconfig)",
+      "sq": null,
+      "aliases": [
+        "target",
+        "lib",
+        "es2022",
+        "esnext"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "target vendos në cilin version JavaScript-i përkthehet kodi (p.sh. ES2022), dhe lib vendos cilat API njeh TypeScript-i — DOM për shfletuesin, ose vetëm ES për Node.",
+        "en": "target decides which JavaScript version the code is compiled to (e.g. ES2022), and lib decides which APIs TypeScript knows about — DOM for the browser, or just ES for Node."
+      },
+      "analogy": {
+        "sq": "Si të zgjedhësh në cilën gjuhë përkthehet një libër dhe çfarë fjalori përdor përkthyesi.",
+        "en": "Like choosing which language a book is translated into and which dictionary the translator uses."
+      },
+      "code": {
+        "language": "json",
+        "snippet": "{ \"compilerOptions\": { \"target\": \"ES2022\", \"lib\": [\"ES2022\", \"DOM\"] } }"
+      },
+      "related": [
+        "tsconfig",
+        "browser-compatibility",
+        "dom-types"
+      ]
+    },
+    {
+      "id": "source-maps",
+      "en": "Source maps",
+      "sq": null,
+      "aliases": [
+        "source map",
+        ".map file",
+        "sourcemap"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Kur kodi kthehet nga TypeScript (ose minifikohet), rreshtat ndryshojnë. Një source map i lidh rreshtat e kodit final me ato të kodit tënd origjinal, që në DevTools dhe në gabime të shohësh skedarin .ts të saktë.",
+        "en": "When code is compiled from TypeScript (or minified), the lines change. A source map links the final code's lines back to your original code, so DevTools and error messages show the right .ts file."
+      },
+      "analogy": {
+        "sq": "Si një tabelë që të tregon cila faqe e përkthimit i përket cilës faqe të librit origjinal.",
+        "en": "Like a table showing which page of the translation matches which page of the original book."
+      },
+      "code": null,
+      "related": [
+        "devtools",
+        "minification",
+        "stack-trace"
+      ]
+    },
+    {
+      "id": "esbuild-swc",
+      "en": "esbuild & SWC",
+      "sq": null,
+      "aliases": [
+        "esbuild",
+        "swc",
+        "fast transpiler"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "esbuild (shkruar në Go) dhe SWC (në Rust) e përkthejnë TypeScript-in në JavaScript dhjetëra herë më shpejt se tsc — por pa kontrolluar tipet. Prandaj Vite i përdor për shpejtësi, dhe tsc mbetet për kontrollin.",
+        "en": "esbuild (written in Go) and SWC (in Rust) compile TypeScript to JavaScript dozens of times faster than tsc — but without checking types. That's why Vite uses them for speed, and tsc stays for checking."
+      },
+      "analogy": {
+        "sq": "Si një përkthyes shumë i shpejtë që s'e kontrollon gramatikën — për këtë ke redaktorin.",
+        "en": "Like a super-fast translator who doesn't check grammar — that's what the editor is for."
+      },
+      "code": null,
+      "related": [
+        "tsc",
+        "vite",
+        "transpiler"
+      ]
+    },
+    {
+      "id": "monorepo",
+      "en": "Monorepo (Turborepo, workspaces)",
+      "sq": null,
+      "aliases": [
+        "monorepo",
+        "turborepo",
+        "nx",
+        "workspaces"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Një monorepo mban disa projekte të lidhura — aplikacionin web, mobile, backend-in, libraritë e përbashkëta — në një repository të vetëm. Mjete si Turborepo dhe workspaces të pnpm/npm i ndërtojnë dhe testojnë bashkë.",
+        "en": "A monorepo keeps several related projects — the web app, mobile, backend, shared libraries — in a single repository. Tools like Turborepo and pnpm/npm workspaces build and test them together."
+      },
+      "analogy": {
+        "sq": "Si një ndërtesë me disa dyqane që ndajnë të njëjtën magazinë.",
+        "en": "Like a building with several shops sharing the same storeroom."
+      },
+      "code": null,
+      "related": [
+        "repository",
+        "pnpm",
+        "project-references"
+      ]
+    },
+    {
+      "id": "pnpm",
+      "en": "pnpm",
+      "sq": null,
+      "aliases": [
+        "pnpm install",
+        "yarn"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "pnpm është alternativë e npm-it, shumë më e shpejtë dhe që zë më pak vend në disk: secila paketë ruhet një herë në kompjuter dhe ndahet mes projekteve. Shumë e përdorur në monorepo. Yarn është një tjetër alternativë.",
+        "en": "pnpm is an alternative to npm, much faster and lighter on disk: each package is stored once on your computer and shared between projects. Widely used in monorepos. Yarn is another alternative."
+      },
+      "analogy": {
+        "sq": "Si një bibliotekë e përbashkët në lagje, në vend që çdo shtëpi ta blejë të njëjtin libër.",
+        "en": "Like a shared neighbourhood library instead of every house buying the same book."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "pnpm install\npnpm add zod"
+      },
+      "related": [
+        "npm",
+        "monorepo",
+        "node-modules"
+      ]
+    },
+    {
+      "id": "namespaces-ts",
+      "en": "Namespaces (TypeScript)",
+      "sq": null,
+      "aliases": [
+        "namespace ts",
+        "namespace keyword"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "namespace është mënyra e vjetër e TypeScript-it për të grupuar kodin, para se JavaScript-i të kishte modulet import/export. Sot e takon kryesisht në skedarë .d.ts të vjetër; në kod të ri përdor modulet.",
+        "en": "namespace is TypeScript's old way of grouping code, from before JavaScript had import/export modules. Today you mostly meet it in older .d.ts files; in new code, use modules."
+      },
+      "analogy": {
+        "sq": "Si fletoret me ndarje që përdorej para dosjeve elektronike.",
+        "en": "Like divided ring binders from before electronic folders."
+      },
+      "code": null,
+      "related": [
+        "es-modules",
+        "namespace-std",
+        "declaration-files"
+      ]
+    },
+    {
+      "id": "declare-global",
+      "en": "declare global",
+      "sq": null,
+      "aliases": [
+        "declare global",
+        "global augmentation",
+        "window type"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Me declare global i shton tipe objekteve globale — p.sh. një fushë që e vendos vetë te window. Pa këtë, TypeScript-i ankohet që window.konfig s'ekziston.",
+        "en": "With declare global you add types to global objects — e.g. a field you set yourself on window. Without it, TypeScript complains that window.config doesn't exist."
+      },
+      "analogy": {
+        "sq": "Si ta shtosh emrin tënd në tabelën e njoftimeve të shkollës, që ta njohin të gjithë.",
+        "en": "Like adding your name to the school noticeboard so everyone knows it."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "declare global {\n  interface Window { fjaloriVersioni: string }\n}\nwindow.fjaloriVersioni = \"1.0\";"
+      },
+      "related": [
+        "declaration-merging",
+        "declaration-files",
+        "window-object"
+      ]
+    },
+    {
+      "id": "tsdoc",
+      "en": "TSDoc comments",
+      "sq": null,
+      "aliases": [
+        "tsdoc",
+        "/** */ ts"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "TSDoc janë komente /** ... */ mbi funksionet dhe tipet, si JSDoc-u, por pa pasur nevojë të shkruash tipet — ato i ka tashmë TypeScript-i. Editori i shfaq kur kalon mausi sipër.",
+        "en": "TSDoc comments are /** ... */ above functions and types, like JSDoc, but without writing the types — TypeScript already has them. The editor shows them on hover."
+      },
+      "analogy": {
+        "sq": "Si etiketa e udhëzimeve në pjesën e pasme të pajisjes.",
+        "en": "Like the instruction label on the back of an appliance."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "/**\n * Kërkon terma, edhe me gabime shkrimi.\n * @param pyetja - teksti që shkruan përdoruesi\n */\nexport function kerko(pyetja: string): Termi[] { /* ... */ }"
+      },
+      "related": [
+        "jsdoc",
+        "javadoc",
+        "documentation"
+      ]
+    },
+    {
+      "id": "typescript-versions",
+      "en": "TypeScript versions",
+      "sq": "Versionet e TypeScript-it",
+      "aliases": [
+        "typescript 5",
+        "typescript 7",
+        "tsgo",
+        "typescript native"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "TypeScript-i del me version të ri rreth çdo tre muaj, me veçori dhe kontrolle të reja. Microsoft-i po e rishkruan kompajlerin në Go (TypeScript 7), që të jetë rreth 10 herë më i shpejtë në projekte të mëdha.",
+        "en": "TypeScript gets a new version roughly every three months, with new features and checks. Microsoft is rewriting the compiler in Go (TypeScript 7) to make it about 10 times faster on big projects."
+      },
+      "analogy": {
+        "sq": "Si përditësimet e telefonit: çdo pak muaj diçka e re.",
+        "en": "Like phone updates: something new every few months."
+      },
+      "code": null,
+      "related": [
+        "tsc",
+        "go",
+        "semver"
+      ]
+    },
+    {
+      "id": "typescript-handbook",
+      "en": "TypeScript Handbook",
+      "sq": null,
+      "aliases": [
+        "handbook",
+        "typescript docs",
+        "typescriptlang.org"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "TypeScript Handbook në typescriptlang.org është dokumentacioni zyrtar dhe falas — shkruar qartë, me shembuj që i provon direkt në Playground. Vendi i parë ku duhet të shkosh kur do të mësosh diçka të re.",
+        "en": "The TypeScript Handbook on typescriptlang.org is the free official documentation — clearly written, with examples you try straight in the Playground. The first place to go when you want to learn something new."
+      },
+      "analogy": {
+        "sq": "Si libri zyrtar i lëndës, i shkruar nga vetë krijuesit.",
+        "en": "Like the official course textbook, written by the creators themselves."
+      },
+      "code": null,
+      "related": [
+        "documentation",
+        "typescript-playground",
+        "typescript"
+      ]
+    },
+    {
+      "id": "type-challenges",
+      "en": "Type challenges",
+      "sq": "Sfidat me tipe",
+      "aliases": [
+        "type-challenges",
+        "type puzzles"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Type Challenges është një koleksion falas në GitHub me ushtrime ku duhet të shkruash tipe të avancuara — nga të lehtat (Pick) te shumë të vështirat. Mënyrë argëtuese për ta kuptuar thellë sistemin e tipeve.",
+        "en": "Type Challenges is a free GitHub collection of exercises where you write advanced types — from easy (Pick) to very hard. A fun way to understand the type system deeply."
+      },
+      "analogy": {
+        "sq": "Si enigmat e shahut: ushtrime të vogla që të mprehin mendjen.",
+        "en": "Like chess puzzles: small exercises that sharpen your mind."
+      },
+      "code": null,
+      "related": [
+        "utility-types",
+        "conditional-types",
+        "competitive-programming"
+      ]
+    },
+    {
+      "id": "using-declarations-ts",
+      "en": "using declarations",
+      "sq": null,
+      "aliases": [
+        "using ts",
+        "explicit resource management",
+        "symbol.dispose"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Me using (TypeScript 5.2+), një burim — skedar, lidhje me databazën — mbyllet vetë kur mbaron blloku, si with-i i Python-it ose using-u i C#-it. Objekti duhet të ketë metodën [Symbol.dispose].",
+        "en": "With using (TypeScript 5.2+), a resource — a file, a database connection — is closed automatically when the block ends, like Python's with or C#'s using. The object must have a [Symbol.dispose] method."
+      },
+      "analogy": {
+        "sq": "Si drita automatike në korridor: fiket vetë kur del.",
+        "en": "Like an automatic hallway light: it switches off when you leave."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "{\n  using lidhja = hapLidhjen();\n  lidhja.query(\"SELECT 1\");\n}   // lidhja mbyllet vetë këtu"
+      },
+      "related": [
+        "using-statement",
+        "with-statement",
+        "raii"
+      ]
+    },
+    {
+      "id": "dom-types",
+      "en": "DOM types (HTMLElement, HTMLInputElement)",
+      "sq": "Tipet e DOM-it",
+      "aliases": [
+        "htmlelement",
+        "htmlinputelement",
+        "queryselector type"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "TypeScript-i ka tipe për çdo element të faqes: HTMLElement, HTMLInputElement, HTMLButtonElement. querySelector(\"input\") e di vetë që kthen HTMLInputElement | null, por me një selektor klase duhet t'ia thuash ti.",
+        "en": "TypeScript has types for every page element: HTMLElement, HTMLInputElement, HTMLButtonElement. querySelector(\"input\") knows it returns HTMLInputElement | null, but with a class selector you have to tell it."
+      },
+      "analogy": {
+        "sq": "Si etiketat në çdo pjesë të një mobilje IKEA: e di saktë cila copë është cila.",
+        "en": "Like the labels on every IKEA furniture part: you know exactly which piece is which."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "const kerkimi = document.querySelector<HTMLInputElement>(\"#kerko\");\nkerkimi?.addEventListener(\"input\", () => console.log(kerkimi.value));"
+      },
+      "related": [
+        "dom",
+        "query-selector",
+        "dom-event-types"
+      ]
+    },
+    {
+      "id": "dom-event-types",
+      "en": "Event types (MouseEvent, KeyboardEvent)",
+      "sq": "Tipet e ngjarjeve",
+      "aliases": [
+        "mouseevent",
+        "keyboardevent",
+        "event type ts",
+        "submitevent"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Çdo ngjarje ka tipin e vet: MouseEvent për klikime, KeyboardEvent për tastierën (me e.key), SubmitEvent për formularët. TypeScript-i e di vetë tipin kur përdor addEventListener(\"click\", ...).",
+        "en": "Every event has its own type: MouseEvent for clicks, KeyboardEvent for the keyboard (with e.key), SubmitEvent for forms. TypeScript knows the type automatically when you use addEventListener(\"click\", ...)."
+      },
+      "analogy": {
+        "sq": "Si zilet e ndryshme në shkollë: njëra për pushim, tjetra për zjarr — secila me kuptimin e vet.",
+        "en": "Like different bells at school: one for break, another for fire — each with its own meaning."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "document.addEventListener(\"keydown\", (e) => {\n  if (e.key === \"/\") e.preventDefault();   // e: KeyboardEvent\n});"
+      },
+      "related": [
+        "event-listener",
+        "dom-types",
+        "prevent-default"
+      ]
+    },
+    {
+      "id": "react-hooks-ts",
+      "en": "Typing React hooks",
+      "sq": "Tipet te hooks-et e React-it",
+      "aliases": [
+        "usestate<t>",
+        "useref ts",
+        "typed hooks"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Me TypeScript, useState e kupton vetë tipin nga vlera fillestare. Kur vlera fillestare është null ose varg bosh, jepja tipin vetë: useState<Termi | null>(null).",
+        "en": "With TypeScript, useState infers the type from the initial value. When the initial value is null or an empty array, give the type yourself: useState<Term | null>(null)."
+      },
+      "analogy": {
+        "sq": "Si të shënosh në kavanoz bosh çfarë do të fusësh më vonë.",
+        "en": "Like labelling an empty jar with what you'll put in it later."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "const [termi, setTermi] = useState<Termi | null>(null);\nconst [lista, setLista] = useState<Termi[]>([]);\nconst ref = useRef<HTMLInputElement>(null);"
+      },
+      "related": [
+        "react-hooks",
+        "react-typescript",
+        "generics-ts"
+      ]
+    },
+    {
+      "id": "vue-typescript",
+      "en": "Vue with TypeScript",
+      "sq": "Vue me TypeScript",
+      "aliases": [
+        "vue ts",
+        "defineprops",
+        "script setup lang ts"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Vue 3 është shkruar vetë në TypeScript dhe e mbështet plotësisht: me <script setup lang=\"ts\"> dhe defineProps<{ titulli: string }>() i jep tipe props-eve të komponentit.",
+        "en": "Vue 3 is itself written in TypeScript and fully supports it: with <script setup lang=\"ts\"> and defineProps<{ title: string }>() you type a component's props."
+      },
+      "analogy": {
+        "sq": "Si React-i me TypeScript, por me stilin e Vue-së.",
+        "en": "Like React with TypeScript, but in Vue's style."
+      },
+      "code": {
+        "language": "html",
+        "snippet": "<script setup lang=\"ts\">\nconst props = defineProps<{ titulli: string; numri?: number }>();\n</script>"
+      },
+      "related": [
+        "vue",
+        "react-typescript",
+        "component"
+      ]
+    },
+    {
+      "id": "express-typescript",
+      "en": "Express with TypeScript",
+      "sq": "Express me TypeScript",
+      "aliases": [
+        "express ts",
+        "request response types"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Me paketën @types/express, Express-i merr tipe: Request dhe Response. Mund t'u japësh tipe edhe parametrave dhe body-t, që editori ta dijë çfarë vjen në kërkesë.",
+        "en": "With the @types/express package, Express gets types: Request and Response. You can also type the params and body, so the editor knows what comes in the request."
+      },
+      "analogy": {
+        "sq": "Si sportelisti që e di saktë çfarë dokumentesh duhet të sjellë çdo klient.",
+        "en": "Like a clerk who knows exactly which documents each customer must bring."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "import express, { Request, Response } from \"express\";\nconst app = express();\napp.get(\"/terma/:id\", (req: Request<{ id: string }>, res: Response) => {\n  res.json({ id: req.params.id });\n});"
+      },
+      "related": [
+        "express-js",
+        "definitely-typed",
+        "nestjs"
+      ]
+    },
+    {
+      "id": "prisma",
+      "en": "Prisma",
+      "sq": null,
+      "aliases": [
+        "prisma orm",
+        "prisma client",
+        "schema.prisma",
+        "drizzle"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Prisma-ja është një ORM për Node.js dhe TypeScript: e përshkruan databazën në schema.prisma, dhe ajo krijon një klient me tipe të sakta — editori të plotëson emrat e kolonave dhe të paralajmëron për gabime. Drizzle është alternativa më e lehtë.",
+        "en": "Prisma is an ORM for Node.js and TypeScript: you describe the database in schema.prisma, and it generates a client with exact types — the editor completes column names and warns about mistakes. Drizzle is the lighter alternative."
+      },
+      "analogy": {
+        "sq": "Si një sekretar që i njeh përmendësh të gjitha dosjet e arkivit.",
+        "en": "Like a secretary who knows every file in the archive by heart."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "const teMirat = await prisma.nxenes.findMany({\n  where: { nota: 5 },\n  orderBy: { emri: \"asc\" },\n});"
+      },
+      "related": [
+        "orm",
+        "entity-framework",
+        "migration"
+      ]
+    },
+    {
+      "id": "generated-types",
+      "en": "Generated types (OpenAPI, GraphQL)",
+      "sq": "Tipet e gjeneruara",
+      "aliases": [
+        "openapi-typescript",
+        "graphql codegen",
+        "codegen",
+        "type generation"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Në vend që t'i shkruash me dorë tipet e një API-je, mjetet si openapi-typescript ose GraphQL Code Generator i krijojnë automatikisht nga dokumentacioni i API-së. Po ndryshoi serveri, i rigjeneron dhe sheh menjëherë çfarë prishet.",
+        "en": "Instead of hand-writing an API's types, tools like openapi-typescript or GraphQL Code Generator create them automatically from the API's documentation. If the server changes, you regenerate and instantly see what breaks."
+      },
+      "analogy": {
+        "sq": "Si ta printosh menynë direkt nga sistemi i kuzhinës, në vend që ta rishkruash me dorë.",
+        "en": "Like printing the menu straight from the kitchen system instead of copying it by hand."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "npx openapi-typescript https://api.shembull.com/openapi.json -o api.d.ts"
+      },
+      "related": [
+        "swagger-openapi",
+        "graphql",
+        "typing-fetch-responses"
+      ]
+    },
+    {
+      "id": "php-tags",
+      "en": "PHP tags (<?php ?>)",
+      "sq": "Etiketat e PHP-së",
+      "aliases": [
+        "<?php",
+        "?>",
+        "php open tag",
+        "<?="
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Kodi PHP shkruhet brenda <?php ... ?>. Çdo gjë jashtë këtyre etiketave i dërgohet shfletuesit si HTML i zakonshëm. Në skedarët që kanë vetëm PHP, etiketa mbyllëse ?> zakonisht lihet jashtë.",
+        "en": "PHP code goes inside <?php ... ?>. Everything outside these tags is sent to the browser as ordinary HTML. In files containing only PHP, the closing ?> is usually left out."
+      },
+      "analogy": {
+        "sq": "Si kllapat në një recetë që thonë „këtu fillon pjesa e gatimit“.",
+        "en": "Like brackets in a recipe saying “the cooking part starts here”."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<h1>Mirë se vini!</h1>\n<p>Sot është <?php echo date(\"d.m.Y\"); ?></p>"
+      },
+      "related": [
+        "php",
+        "php-echo",
+        "php-templates"
+      ]
+    },
+    {
+      "id": "php-echo",
+      "en": "echo & print",
+      "sq": null,
+      "aliases": [
+        "echo",
+        "print php",
+        "printf php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "echo e shfaq tekstin në faqe — është mënyra më e zakonshme për të nxjerrë HTML nga PHP-ja. print bën pothuajse të njëjtën gjë; <?= $emri ?> është shkurtesa për <?php echo $emri ?>.",
+        "en": "echo outputs text to the page — the most common way to produce HTML from PHP. print does almost the same; <?= $name ?> is short for <?php echo $name ?>."
+      },
+      "analogy": {
+        "sq": "Si të flasësh me zë që të të dëgjojë e gjithë klasa.",
+        "en": "Like speaking out loud so the whole class hears you."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\n$emri = \"Arta\";\necho \"Tung, $emri!\";\n?>\n<p>Përshëndetje, <?= $emri ?></p>"
+      },
+      "related": [
+        "php-tags",
+        "print-function",
+        "php-strings"
+      ]
+    },
+    {
+      "id": "php-variables",
+      "en": "Variables in PHP ($)",
+      "sq": "Variablat në PHP",
+      "aliases": [
+        "$variable",
+        "php variable",
+        "dollar sign"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Në PHP, çdo variabël fillon me shenjën e dollarit: $emri, $mosha. S'ke nevojë ta deklarosh tipin — PHP-ja e kupton vetë nga vlera, si JavaScript-i dhe Python-i.",
+        "en": "In PHP, every variable starts with a dollar sign: $name, $age. You don't need to declare the type — PHP works it out from the value, like JavaScript and Python."
+      },
+      "analogy": {
+        "sq": "Si etiketa me shenjën $ te çdo kuti në magazinë, që të dallohen menjëherë.",
+        "en": "Like a $ sticker on every box in the storeroom, so they stand out at once."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\n$emri = \"Arta\";\n$mosha = 16;\n$mosha = $mosha + 1;"
+      },
+      "related": [
+        "variable",
+        "php-data-types",
+        "static-dynamic-typing"
+      ]
+    },
+    {
+      "id": "php-data-types",
+      "en": "PHP data types",
+      "sq": "Tipet e të dhënave në PHP",
+      "aliases": [
+        "int php",
+        "float php",
+        "bool php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "PHP-ja ka tipet string, int, float, bool, array, object dhe null. Me var_dump() ose gettype() sheh çfarë tipi ka një vlerë. PHP-ja i konverton tipet vetë kur duhet — ndonjëherë me surpriza.",
+        "en": "PHP has the types string, int, float, bool, array, object and null. With var_dump() or gettype() you see a value's type. PHP converts types by itself when needed — sometimes with surprises."
+      },
+      "analogy": {
+        "sq": "Si enët në kuzhinë, secila për llojin e vet.",
+        "en": "Like kitchen containers, each for its own kind of thing."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\nvar_dump(42);        // int(42)\nvar_dump(\"42\" + 1);  // int(43) — konvertim automatik\nvar_dump(1.5);       // float(1.5)"
+      },
+      "related": [
+        "data-type",
+        "type-coercion",
+        "php-strict-types"
+      ]
+    },
+    {
+      "id": "php-strings",
+      "en": "Strings in PHP (single vs double quotes)",
+      "sq": "Teksti në PHP",
+      "aliases": [
+        "single quotes php",
+        "double quotes php",
+        "string interpolation php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Në PHP, teksti me thonjëza të dyfishta \"Tung, $emri\" i zëvendëson variablat me vlerat e tyre; me thonjëza të njëfishta 'Tung, $emri' teksti mbetet fjalë për fjalë. Për shprehje më të ndërlikuara përdor kllapa: \"{$nxenesi['emri']}\".",
+        "en": "In PHP, double-quoted text \"Hi, $name\" replaces variables with their values; single-quoted 'Hi, $name' stays word for word. For more complex expressions use braces: \"{$student['name']}\"."
+      },
+      "analogy": {
+        "sq": "Thonjëzat e dyfishta janë si ftesa me emrin e plotësuar; të njëfishtat si ftesa me „____“ bosh.",
+        "en": "Double quotes are like an invitation with the name filled in; single quotes like one with a blank “____”."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\n$emri = \"Arta\";\necho \"Tung, $emri\";   // Tung, Arta\necho 'Tung, $emri';   // Tung, $emri"
+      },
+      "related": [
+        "string",
+        "php-concatenation",
+        "template-literal"
+      ]
+    },
+    {
+      "id": "php-concatenation",
+      "en": "String concatenation (.)",
+      "sq": "Bashkimi i teksteve në PHP",
+      "aliases": [
+        ". operator",
+        ".=",
+        "concat php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Në PHP, tekstet bashkohen me pikë (.), jo me + si në JavaScript: \"Tung, \" . $emri. Me .= shton në fund të një teksti ekzistues.",
+        "en": "In PHP, strings are joined with a dot (.), not + like in JavaScript: \"Hi, \" . $name. With .= you add to the end of an existing string."
+      },
+      "analogy": {
+        "sq": "Si t'i lidhësh vagonët e trenit me një lidhëse të vogël.",
+        "en": "Like coupling train carriages with a small link."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\n$teksti = \"Tung, \" . \"Arta\";\n$teksti .= \"!\";\necho $teksti;   // Tung, Arta!"
+      },
+      "related": [
+        "concatenation",
+        "php-strings",
+        "operator"
+      ]
+    },
+    {
+      "id": "php-constants",
+      "en": "Constants in PHP (const, define)",
+      "sq": "Konstantet në PHP",
+      "aliases": [
+        "define",
+        "const php",
+        "constant php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Konstantet në PHP shkruhen pa $ dhe s'ndryshojnë: const MAX_NXENES = 30; ose define(\"MAX_NXENES\", 30);. Zakonisht shkruhen me shkronja të mëdha.",
+        "en": "Constants in PHP have no $ and don't change: const MAX_STUDENTS = 30; or define(\"MAX_STUDENTS\", 30);. They're usually written in capitals."
+      },
+      "analogy": {
+        "sq": "Si data e lindjes: e njëjta përgjithmonë.",
+        "en": "Like a date of birth: the same forever."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\nconst TVSH = 0.18;\ndefine(\"EMRI_FAQES\", \"Fjalori\");\necho 100 * TVSH;"
+      },
+      "related": [
+        "constant",
+        "php-variables",
+        "naming-convention"
+      ]
+    },
+    {
+      "id": "php-arrays",
+      "en": "Arrays in PHP",
+      "sq": "Vargjet në PHP",
+      "aliases": [
+        "array php",
+        "[] php",
+        "indexed array"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Në PHP, një array mund të jetë listë me numra (indeksi 0, 1, 2…) ose fjalor me çelësa tekst — është e njëjta strukturë. Krijohet me [ ], dhe me $v[] = x shton në fund.",
+        "en": "In PHP, an array can be a numbered list (index 0, 1, 2…) or a dictionary with text keys — it's the same structure. You create it with [ ], and $v[] = x adds to the end."
+      },
+      "analogy": {
+        "sq": "Si një sirtar i shumëfishtë: mund t'i numërosh ndarjet ose t'u ngjitësh etiketa.",
+        "en": "Like a multi-section drawer: you can number the sections or put labels on them."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\n$qytetet = [\"Prishtinë\", \"Tiranë\"];\n$qytetet[] = \"Shkup\";\necho count($qytetet);   // 3\necho $qytetet[0];       // Prishtinë"
+      },
+      "related": [
+        "array",
+        "php-associative-arrays",
+        "php-array-functions"
+      ]
+    },
+    {
+      "id": "php-associative-arrays",
+      "en": "Associative arrays",
+      "sq": "Vargjet asociative",
+      "aliases": [
+        "associative array",
+        "key value php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Një array asociativ ka çelësa me emër në vend të numrave: [\"emri\" => \"Arta\", \"nota\" => 5]. Është si fjalori i Python-it ose objekti i JavaScript-it, dhe përdoret kudo në PHP.",
+        "en": "An associative array has named keys instead of numbers: [\"name\" => \"Arta\", \"grade\" => 5]. It's like a Python dictionary or a JavaScript object, and it's used everywhere in PHP."
+      },
+      "analogy": {
+        "sq": "Si dosja e nxënësit me etiketa: „emri“, „klasa“, „nota“.",
+        "en": "Like a student file with labels: “name”, “class”, “grade”."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\n$nxenesi = [\"emri\" => \"Arta\", \"nota\" => 5];\necho $nxenesi[\"emri\"];\n$nxenesi[\"klasa\"] = \"10-2\";"
+      },
+      "related": [
+        "php-arrays",
+        "dictionary",
+        "php-foreach"
+      ]
+    },
+    {
+      "id": "php-multidimensional-arrays",
+      "en": "Multidimensional arrays (PHP)",
+      "sq": "Vargjet shumëdimensionale në PHP",
+      "aliases": [
+        "nested array php",
+        "array of arrays php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Një array mund të mbajë array të tjerë — p.sh. një listë nxënësish ku secili është array asociativ. Kështu duken shpesh rezultatet nga databaza.",
+        "en": "An array can hold other arrays — e.g. a list of students where each is an associative array. That's often what database results look like."
+      },
+      "analogy": {
+        "sq": "Si një dollap me dosje, ku çdo dosje ka fletët e veta.",
+        "en": "Like a filing cabinet of folders, each with its own sheets."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "$klasa = [\n  [\"emri\" => \"Arta\", \"nota\" => 5],\n  [\"emri\" => \"Dren\", \"nota\" => 4],\n];\necho $klasa[1][\"emri\"];   // Dren"
+      },
+      "related": [
+        "php-associative-arrays",
+        "multidimensional-array",
+        "pdo"
+      ]
+    },
+    {
+      "id": "php-control-structures",
+      "en": "if, elseif & switch (PHP)",
+      "sq": "Kushtet në PHP",
+      "aliases": [
+        "if php",
+        "elseif",
+        "switch php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "PHP-ja i ka kushtet si gjuhët e tjera: if, elseif, else dhe switch. Në template HTML shpesh përdoret sintaksa alternative if: ... endif; që lexohet më mirë mes etiketave.",
+        "en": "PHP has conditions like other languages: if, elseif, else and switch. In HTML templates the alternative syntax if: ... endif; is often used because it reads better between tags."
+      },
+      "analogy": {
+        "sq": "Si mësuesja që vendos notën sipas pikëve.",
+        "en": "Like a teacher deciding the grade by points."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php if ($nota >= 5): ?>\n  <p>Shkëlqyeshëm!</p>\n<?php elseif ($nota >= 2): ?>\n  <p>Kaloi</p>\n<?php endif; ?>"
+      },
+      "related": [
+        "condition",
+        "php-match",
+        "php-templates"
+      ]
+    },
+    {
+      "id": "php-match",
+      "en": "match expression (PHP 8)",
+      "sq": "Shprehja match",
+      "aliases": [
+        "match php",
+        "match expression"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "match (që nga PHP 8) është si switch, por më i shkurtër dhe më i sigurt: kthen vlerë, krahason me ===, dhe hedh gabim nëse asnjë rast s'përputhet.",
+        "en": "match (since PHP 8) is like switch, but shorter and safer: it returns a value, compares with ===, and throws if no case matches."
+      },
+      "analogy": {
+        "sq": "Si sportelet në postë: çdo kërkesë shkon direkt te sporteli i saj.",
+        "en": "Like counters at the post office: each request goes straight to its counter."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "$mesazhi = match (true) {\n  $pike >= 90 => \"Nota 5\",\n  $pike >= 75 => \"Nota 4\",\n  default => \"Provo sërish\",\n};"
+      },
+      "related": [
+        "switch-case",
+        "php-control-structures",
+        "match-case"
+      ]
+    },
+    {
+      "id": "php-loops",
+      "en": "Loops in PHP (for, while)",
+      "sq": "Ciklet në PHP",
+      "aliases": [
+        "for php",
+        "while php",
+        "do while php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "PHP-ja ka cikle for, while dhe do-while si C-ja dhe Java-ja. Për të kaluar nëpër array, përdoret pothuajse gjithmonë foreach.",
+        "en": "PHP has for, while and do-while loops like C and Java. To go through an array, foreach is used almost always."
+      },
+      "analogy": {
+        "sq": "Si xhirot rreth fushës në stërvitje.",
+        "en": "Like laps around the pitch at training."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\nfor ($i = 1; $i <= 5; $i++) {\n  echo \"$i x 7 = \" . $i * 7 . \"<br>\";\n}"
+      },
+      "related": [
+        "loop",
+        "php-foreach",
+        "c-loops"
+      ]
+    },
+    {
+      "id": "php-foreach",
+      "en": "foreach (PHP)",
+      "sq": null,
+      "aliases": [
+        "foreach php",
+        "as $key => $value"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "foreach kalon nëpër çdo element të një array: foreach ($notat as $nota). Me foreach ($nxenesi as $celesi => $vlera) merr edhe çelësin, edhe vlerën.",
+        "en": "foreach goes through every item of an array: foreach ($grades as $grade). With foreach ($student as $key => $value) you get both the key and the value."
+      },
+      "analogy": {
+        "sq": "Si mësuesja që thërret çdo emër në regjistër me radhë.",
+        "en": "Like a teacher calling every name in the register in turn."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\n$notat = [\"Arta\" => 5, \"Dren\" => 4];\nforeach ($notat as $emri => $nota) {\n  echo \"$emri: $nota<br>\";\n}"
+      },
+      "related": [
+        "php-loops",
+        "php-associative-arrays",
+        "java-for-each"
+      ]
+    },
+    {
+      "id": "php-functions",
+      "en": "Functions in PHP",
+      "sq": "Funksionet në PHP",
+      "aliases": [
+        "function php",
+        "return php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Funksionet në PHP krijohen me function, mund të kenë parametra me vlerë të paracaktuar dhe tipe, dhe kthejnë vlerë me return. PHP-ja ka mbi 1000 funksione të gatshme.",
+        "en": "Functions in PHP are created with function, can have parameters with defaults and types, and return a value with return. PHP has over 1,000 built-in functions."
+      },
+      "analogy": {
+        "sq": "Si një recetë me emër që e përdor sa herë të duash.",
+        "en": "Like a named recipe you use whenever you want."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\nfunction pershendet(string $emri = \"mik\"): string {\n  return \"Tung, $emri!\";\n}\necho pershendet(\"Arta\");"
+      },
+      "related": [
+        "function",
+        "php-type-declarations",
+        "default-parameters"
+      ]
+    },
+    {
+      "id": "php-anonymous-functions",
+      "en": "Closures & arrow functions (fn)",
+      "sq": "Funksionet anonime në PHP",
+      "aliases": [
+        "closure php",
+        "fn php",
+        "anonymous function php",
+        "use keyword"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "PHP-ja ka funksione pa emër: function ($x) use ($y) { ... } — ku use merr variabla nga jashtë — dhe arrow functions të shkurtra fn($x) => $x * 2, që i shohin variablat jashtë vetvetiu.",
+        "en": "PHP has nameless functions: function ($x) use ($y) { ... } — where use brings in outside variables — and short arrow functions fn($x) => $x * 2, which see outside variables automatically."
+      },
+      "analogy": {
+        "sq": "Si një shënim i shpejtë në frigorifer.",
+        "en": "Like a quick note on the fridge."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\n$tvsh = 0.18;\n$meTvsh = fn($cmimi) => $cmimi * (1 + $tvsh);\necho $meTvsh(100);   // 118"
+      },
+      "related": [
+        "lambda",
+        "closure",
+        "php-array-functions"
+      ]
+    },
+    {
+      "id": "php-type-declarations",
+      "en": "Type declarations in PHP",
+      "sq": "Deklarimi i tipeve në PHP",
+      "aliases": [
+        "type hints php",
+        "return type php",
+        "typed properties"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "PHP-ja moderne të lejon t'u japësh tipe parametrave, vlerave kthyese dhe fushave të klasave: function mblidh(int $a, int $b): int. Gabimet kapen më herët dhe editori të ndihmon më shumë.",
+        "en": "Modern PHP lets you add types to parameters, return values and class properties: function add(int $a, int $b): int. Mistakes are caught earlier and the editor helps you more."
+      },
+      "analogy": {
+        "sq": "Si etiketat në kavanozët e kuzhinës.",
+        "en": "Like labels on kitchen jars."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\nfunction mesatarja(array $notat): float {\n  return array_sum($notat) / count($notat);\n}"
+      },
+      "related": [
+        "type-hints",
+        "php-strict-types",
+        "type-annotations"
+      ]
+    },
+    {
+      "id": "php-strict-types",
+      "en": "declare(strict_types=1)",
+      "sq": null,
+      "aliases": [
+        "strict_types",
+        "strict types php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Si parazgjedhje, PHP-ja e konverton vetë \"5\" në 5 kur një funksion pret int. Me declare(strict_types=1); në krye të skedarit, kjo s'lejohet më — merr gabim, dhe kodi bëhet më i parashikueshëm.",
+        "en": "By default, PHP converts \"5\" into 5 when a function expects an int. With declare(strict_types=1); at the top of the file, that's no longer allowed — you get an error, and code becomes more predictable."
+      },
+      "analogy": {
+        "sq": "Si gjyqtari që zbaton rregullat e plota.",
+        "en": "Like a referee who applies the full rulebook."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\ndeclare(strict_types=1);\nfunction dyfisho(int $x): int { return $x * 2; }\ndyfisho(\"5\");   // TypeError"
+      },
+      "related": [
+        "php-type-declarations",
+        "type-coercion",
+        "use-strict"
+      ]
+    },
+    {
+      "id": "php-nullable-union-types",
+      "en": "Nullable & union types (PHP)",
+      "sq": "Tipet nullable dhe union në PHP",
+      "aliases": [
+        "?string",
+        "nullable php",
+        "int|string",
+        "union types php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Me ?string thua që vlera mund të jetë tekst ose null. Që nga PHP 8, union types lejojnë disa tipe: int|string. Kështu tipet përshkruajnë saktë çfarë pranon kodi.",
+        "en": "With ?string you say the value can be text or null. Since PHP 8, union types allow several types: int|string. That way types describe exactly what the code accepts."
+      },
+      "analogy": {
+        "sq": "Si fusha „Telefoni (opsional)“ në formular.",
+        "en": "Like the “Phone (optional)” field on a form."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\nfunction gjej(int|string $id): ?array {\n  return $db[$id] ?? null;\n}"
+      },
+      "related": [
+        "union-types",
+        "nullable-types",
+        "php-null-coalescing"
+      ]
+    },
+    {
+      "id": "php-null-coalescing",
+      "en": "Null coalescing (??)",
+      "sq": "Operatori ??",
+      "aliases": [
+        "??=",
+        "null coalescing php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "$a ?? $b jep $a nëse ekziston dhe s'është null, përndryshe $b. Shumë e dobishme për të dhënat nga formularët: $_GET[\"faqja\"] ?? 1. Me ??= cakton vlerë vetëm nëse mungon.",
+        "en": "$a ?? $b gives $a if it exists and isn't null, otherwise $b. Very handy for form data: $_GET[\"page\"] ?? 1. With ??= you set a value only if it's missing."
+      },
+      "analogy": {
+        "sq": "Si „po s'ka bukë, merr simite“.",
+        "en": "Like “if there's no bread, get rolls”."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\n$faqja = $_GET[\"faqja\"] ?? 1;\n$konfig[\"gjuha\"] ??= \"sq\";"
+      },
+      "related": [
+        "optional-chaining",
+        "php-superglobals",
+        "short-circuit"
+      ]
+    },
+    {
+      "id": "php-spaceship",
+      "en": "Spaceship operator (<=>)",
+      "sq": "Operatori „anija kozmike“",
+      "aliases": [
+        "<=>",
+        "spaceship"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Operatori <=> krahason dy vlera dhe kthen -1, 0 ose 1 (më i vogël, i barabartë, më i madh). Është ideal për funksionet e renditjes me usort().",
+        "en": "The <=> operator compares two values and returns -1, 0 or 1 (smaller, equal, bigger). It's ideal for sorting functions with usort()."
+      },
+      "analogy": {
+        "sq": "Si peshorja me dy pjata që të tregon menjëherë cila anë është më e rëndë.",
+        "en": "Like a balance scale that instantly shows which side is heavier."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\necho 3 <=> 5;   // -1\nusort($nxenesit, fn($a, $b) => $b[\"nota\"] <=> $a[\"nota\"]);"
+      },
+      "related": [
+        "php-sorting",
+        "comparable-comparator",
+        "operator"
+      ]
+    },
+    {
+      "id": "php-string-functions",
+      "en": "String functions (strlen, explode, str_replace)",
+      "sq": "Funksionet e tekstit në PHP",
+      "aliases": [
+        "explode",
+        "implode",
+        "str_replace",
+        "strtoupper",
+        "str_contains",
+        "mb_strlen"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "PHP-ja ka shumë funksione për tekst: strlen() (gjatësia), strtoupper(), str_replace(), explode() (ndan në array), implode() (bashkon), str_contains(). Për ë dhe ç përdor versionet mb_, si mb_strlen().",
+        "en": "PHP has lots of string functions: strlen() (length), strtoupper(), str_replace(), explode() (split into an array), implode() (join), str_contains(). For special letters use the mb_ versions, like mb_strlen()."
+      },
+      "analogy": {
+        "sq": "Si veglat e rrobaqepëses për stofin.",
+        "en": "Like a tailor's tools for fabric."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\n$qytetet = explode(\",\", \"Pejë,Prizren,Gjakovë\");\necho implode(\" | \", $qytetet);\necho mb_strlen(\"Kosovë\");   // 6 (strlen jep 7)"
+      },
+      "related": [
+        "string-methods",
+        "php-strings",
+        "wide-characters"
+      ]
+    },
+    {
+      "id": "php-array-functions",
+      "en": "Array functions (array_map, array_filter, count)",
+      "sq": "Funksionet e vargjeve në PHP",
+      "aliases": [
+        "array_map",
+        "array_filter",
+        "in_array",
+        "array_sum",
+        "array_keys",
+        "array_merge"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "PHP-ja ka dhjetëra funksione për array: count(), in_array(), array_map(), array_filter(), array_sum(), array_merge(), array_keys(). Shumë punë që në gjuhë të tjera duan cikle bëhen me një rresht.",
+        "en": "PHP has dozens of array functions: count(), in_array(), array_map(), array_filter(), array_sum(), array_merge(), array_keys(). Lots of jobs that need loops elsewhere take one line."
+      },
+      "analogy": {
+        "sq": "Si kutia e veglave që vjen me raftin.",
+        "en": "Like the toolkit that comes with the shelf."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\n$notat = [5, 2, 4, 5];\n$kalues = array_filter($notat, fn($n) => $n >= 2);\necho array_sum($notat) / count($notat);   // 4"
+      },
+      "related": [
+        "array-methods",
+        "php-arrays",
+        "map-filter"
+      ]
+    },
+    {
+      "id": "php-sorting",
+      "en": "Sorting arrays in PHP (sort, usort, ksort)",
+      "sq": "Renditja e vargjeve në PHP",
+      "aliases": [
+        "sort php",
+        "usort",
+        "ksort",
+        "asort",
+        "rsort"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "PHP-ja ka disa funksione renditjeje: sort() (vlerat), rsort() (mbrapsht), asort() (vlerat, duke ruajtur çelësat), ksort() (sipas çelësave) dhe usort() me funksionin tënd të krahasimit. Të gjitha e ndryshojnë array-n direkt.",
+        "en": "PHP has several sorting functions: sort() (values), rsort() (reverse), asort() (values, keeping keys), ksort() (by keys) and usort() with your own comparison function. They all change the array in place."
+      },
+      "analogy": {
+        "sq": "Si t'i rendisësh fletët e provimit sipas emrit, notës ose datës.",
+        "en": "Like sorting exam papers by name, grade or date."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\n$notat = [\"Dren\" => 4, \"Arta\" => 5];\nksort($notat);    // sipas emrit\narsort($notat);   // sipas notës, nga më e larta"
+      },
+      "related": [
+        "sorting-algorithm",
+        "php-spaceship",
+        "php-array-functions"
+      ]
+    },
+    {
+      "id": "php-date",
+      "en": "Dates in PHP (date, DateTime)",
+      "sq": "Datat në PHP",
+      "aliases": [
+        "date()",
+        "datetime php",
+        "strtotime",
+        "carbon"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "date(\"d.m.Y\") jep datën e sotme në formatin që do. Për llogaritje me data përdoret DateTime (ose libraria Carbon te Laravel-i): shton ditë, krahason data, numëron diferencën.",
+        "en": "date(\"d.m.Y\") gives today's date in the format you want. For date maths, use DateTime (or the Carbon library in Laravel): add days, compare dates, count the difference."
+      },
+      "analogy": {
+        "sq": "Si kalendari në mur që di vetë të numërojë ditët.",
+        "en": "Like a wall calendar that counts the days itself."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\necho date(\"d.m.Y H:i\");\n$pushimet = new DateTime(\"2026-12-31\");\necho (new DateTime())->diff($pushimet)->days . \" ditë\";"
+      },
+      "related": [
+        "datetime-module",
+        "java-time",
+        "csharp-datetime"
+      ]
+    },
+    {
+      "id": "php-var-dump",
+      "en": "var_dump, print_r & dd()",
+      "sq": null,
+      "aliases": [
+        "var_dump",
+        "print_r",
+        "dd",
+        "dump php",
+        "debug php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "var_dump() e shfaq një vlerë me tipin dhe gjatësinë e saj, print_r() e shfaq array-n në mënyrë të lexueshme, dhe dd() i Laravel-it („dump and die“) e shfaq bukur dhe e ndal programin. Mjetet e para të debug-imit në PHP.",
+        "en": "var_dump() shows a value with its type and length, print_r() prints an array readably, and Laravel's dd() (“dump and die”) shows it nicely and stops the program. The first debugging tools in PHP."
+      },
+      "analogy": {
+        "sq": "Si ta zbrazësh çantën mbi tavolinë për të parë çfarë ka brenda.",
+        "en": "Like emptying your bag onto the table to see what's inside."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\n$nxenesi = [\"emri\" => \"Arta\", \"nota\" => 5];\nvar_dump($nxenesi);\necho \"<pre>\" . print_r($nxenesi, true) . \"</pre>\";"
+      },
+      "related": [
+        "debug",
+        "console",
+        "xdebug"
+      ]
+    },
+    {
+      "id": "php-json",
+      "en": "JSON in PHP (json_encode, json_decode)",
+      "sq": "JSON në PHP",
+      "aliases": [
+        "json_encode",
+        "json_decode",
+        "json php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "json_encode() e kthen një array ose objekt PHP në JSON, dhe json_decode($json, true) e kthen JSON-in në array. Kështu PHP-ja flet me JavaScript-in dhe me API të tjera.",
+        "en": "json_encode() turns a PHP array or object into JSON, and json_decode($json, true) turns JSON into an array. That's how PHP talks to JavaScript and other APIs."
+      },
+      "analogy": {
+        "sq": "Si përkthyesi mes PHP-së dhe gjuhës që flasin të gjitha faqet.",
+        "en": "Like the translator between PHP and the language every website speaks."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\nheader(\"Content-Type: application/json\");\necho json_encode([\"id\" => \"api\", \"emri\" => \"API\"]);\n$te_dhenat = json_decode($teksti, true);"
+      },
+      "related": [
+        "json",
+        "python-json",
+        "rest-api"
+      ]
+    },
+    {
+      "id": "php-heredoc",
+      "en": "Heredoc & nowdoc",
+      "sq": null,
+      "aliases": [
+        "heredoc",
+        "nowdoc",
+        "<<<"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Heredoc (<<<EOT ... EOT) të lejon të shkruash tekst të gjatë me shumë rreshta — p.sh. një email ose HTML — me variabla brenda, pa thonjëza dhe pa pika për bashkim.",
+        "en": "Heredoc (<<<EOT ... EOT) lets you write long multi-line text — e.g. an email or HTML — with variables inside, without quotes or dots to join it."
+      },
+      "analogy": {
+        "sq": "Si ta ngjitësh një letër të tërë në fletore në vend që ta kopjosh rresht pas rreshti.",
+        "en": "Like gluing a whole letter into your notebook instead of copying it line by line."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\n$email = <<<TXT\nPërshëndetje $emri,\nfaleminderit për regjistrimin!\nTXT;"
+      },
+      "related": [
+        "php-strings",
+        "text-blocks",
+        "template-literal"
+      ]
+    },
+    {
+      "id": "php-references",
+      "en": "References in PHP (&)",
+      "sq": "Referencat në PHP",
+      "aliases": [
+        "&$",
+        "reference php",
+        "pass by reference php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Si parazgjedhje, PHP-ja ua kalon funksioneve kopje të vlerave. Me & para parametrit (function rrit(&$x)) funksioni punon me origjinalin. Te foreach, &$v të lejon t'i ndryshosh elementet e array-t.",
+        "en": "By default, PHP passes copies of values to functions. With & before the parameter (function increase(&$x)) the function works on the original. In foreach, &$v lets you change the array's items."
+      },
+      "analogy": {
+        "sq": "Si t'i japësh dikujt fletoren tënde të vërtetë në vend të një fotokopjeje.",
+        "en": "Like handing someone your actual notebook instead of a photocopy."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\nfunction dyfisho(array &$v) { foreach ($v as &$x) $x *= 2; }\n$notat = [1, 2];\ndyfisho($notat);   // [2, 4]"
+      },
+      "related": [
+        "cpp-reference",
+        "value-vs-reference",
+        "pass-by-pointer"
+      ]
+    },
+    {
+      "id": "php-include-require",
+      "en": "include & require",
+      "sq": null,
+      "aliases": [
+        "require_once",
+        "include_once"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "include dhe require e fusin një skedar tjetër PHP në vendin ku i shkruan — p.sh. header.php në krye të çdo faqeje. Dallimi: nëse skedari mungon, require e ndal programin, include vetëm paralajmëron. _once siguron që të futet vetëm një herë.",
+        "en": "include and require insert another PHP file where you write them — e.g. header.php at the top of every page. The difference: if the file is missing, require stops the program, include only warns. _once makes sure it's included only once."
+      },
+      "analogy": {
+        "sq": "Si ta ngjitësh të njëjtin kokë letre në krye të çdo letre.",
+        "en": "Like using the same letterhead at the top of every letter."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\nrequire_once __DIR__ . \"/config.php\";\ninclude \"header.php\";\necho \"<main>Përmbajtja</main>\";\ninclude \"footer.php\";"
+      },
+      "related": [
+        "include-directive",
+        "module",
+        "php-templates"
+      ]
+    },
+    {
+      "id": "php-superglobals",
+      "en": "Superglobals ($_GET, $_POST, $_SERVER)",
+      "sq": "Variablat superglobale",
+      "aliases": [
+        "$_get",
+        "$_post",
+        "$_server",
+        "$_request",
+        "$_files",
+        "superglobal"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Superglobalet janë array të gatshëm që i sheh kudo në kod: $_GET (parametrat në adresë), $_POST (të dhënat e formularit), $_SERVER (informacion për kërkesën), $_SESSION, $_COOKIE, $_FILES. Mos u beso kurrë pa i kontrolluar!",
+        "en": "Superglobals are ready-made arrays visible everywhere: $_GET (parameters in the address), $_POST (form data), $_SERVER (information about the request), $_SESSION, $_COOKIE, $_FILES. Never trust them without checking!"
+      },
+      "analogy": {
+        "sq": "Si kutitë postare në hyrje të pallatit: çdo gjë që vjen nga jashtë kalon aty — edhe reklamat e padëshiruara.",
+        "en": "Like the letterboxes in a building's lobby: everything from outside arrives there — junk mail included."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\n$kerkimi = $_GET[\"q\"] ?? \"\";\n$metoda = $_SERVER[\"REQUEST_METHOD\"];   // \"GET\" ose \"POST\""
+      },
+      "related": [
+        "php-forms",
+        "query-string",
+        "input-validation"
+      ]
+    },
+    {
+      "id": "php-classes",
+      "en": "Classes & objects in PHP",
+      "sq": "Klasat dhe objektet në PHP",
+      "aliases": [
+        "class php",
+        "new php",
+        "object php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Në PHP krijon klasa me class dhe objekte me new. Fushat dhe metodat i arrin me shigjetën -> ($lojtari->emri), dhe brenda klasës objekti quhet $this.",
+        "en": "In PHP you create classes with class and objects with new. You reach properties and methods with the arrow -> ($player->name), and inside the class the object is called $this."
+      },
+      "analogy": {
+        "sq": "Si kallëpi i biskotave dhe biskotat që dalin prej tij.",
+        "en": "Like a cookie cutter and the cookies it makes."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "class Lojtar {\n  public function __construct(public string $emri, public int $gola = 0) {}\n  public function shenon(): void { $this->gola++; }\n}\n$l = new Lojtar(\"Arta\"); $l->shenon();"
+      },
+      "related": [
+        "class",
+        "php-constructor",
+        "object"
+      ]
+    },
+    {
+      "id": "php-constructor",
+      "en": "Constructors & property promotion (PHP)",
+      "sq": "Konstruktorët në PHP",
+      "aliases": [
+        "__construct",
+        "constructor php",
+        "constructor property promotion"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Konstruktori në PHP quhet __construct() dhe ekzekutohet kur krijon objektin. Që nga PHP 8, „property promotion“ të lejon t'i deklarosh dhe caktosh fushat direkt te parametrat e konstruktorit — shumë më pak kod.",
+        "en": "PHP's constructor is called __construct() and runs when you create the object. Since PHP 8, “property promotion” lets you declare and set properties right in the constructor's parameters — much less code."
+      },
+      "analogy": {
+        "sq": "Si formulari i regjistrimit ditën e parë të shkollës.",
+        "en": "Like the registration form on the first day of school."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "class Nxenes {\n  public function __construct(\n    private string $emri, private int $klasa = 10,\n  ) {}\n}"
+      },
+      "related": [
+        "constructor",
+        "php-classes",
+        "classes-ts"
+      ]
+    },
+    {
+      "id": "php-visibility",
+      "en": "Visibility (public, private, protected)",
+      "sq": "Dukshmëria në PHP",
+      "aliases": [
+        "public php",
+        "private php",
+        "protected php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Çdo fushë dhe metodë në PHP ka një nivel dukshmërie: public (kushdo), protected (klasa dhe fëmijët e saj), private (vetëm vetë klasa).",
+        "en": "Every property and method in PHP has a visibility level: public (anyone), protected (the class and its children), private (only the class itself)."
+      },
+      "analogy": {
+        "sq": "Si dhomat e shtëpisë: dhoma e ndenjes, kuzhina, dhoma jote.",
+        "en": "Like the rooms of a house: living room, kitchen, your bedroom."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\nclass Llogari {\n  private float $bilanci = 0;\n  public function depozito(float $s): void { $this->bilanci += $s; }\n}"
+      },
+      "related": [
+        "access-modifiers",
+        "encapsulation",
+        "php-classes"
+      ]
+    },
+    {
+      "id": "php-inheritance",
+      "en": "Inheritance in PHP (extends)",
+      "sq": "Trashëgimia në PHP",
+      "aliases": [
+        "extends php",
+        "parent::",
+        "inheritance php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Me extends, një klasë PHP trashëgon nga një tjetër, dhe me parent:: thërret metodat e prindit. PHP-ja lejon vetëm një prind; për të ndarë kod mes klasave të ndryshme përdor traits.",
+        "en": "With extends, a PHP class inherits from another, and parent:: calls the parent's methods. PHP allows only one parent; to share code between unrelated classes, use traits."
+      },
+      "analogy": {
+        "sq": "Si fëmija që trashëgon mbiemrin dhe zakonet e familjes.",
+        "en": "Like a child inheriting the family name and habits."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "class Portier extends Lojtar {\n  public function __construct(string $emri) {\n    parent::__construct($emri);\n  }\n}"
+      },
+      "related": [
+        "inheritance",
+        "php-traits",
+        "super-keyword"
+      ]
+    },
+    {
+      "id": "php-interfaces",
+      "en": "Interfaces in PHP",
+      "sq": "Interfejsat në PHP",
+      "aliases": [
+        "interface php",
+        "implements php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Një interface në PHP thotë çfarë metodash duhet të ketë një klasë, pa i shkruar. Klasa e premton me implements dhe mund të zbatojë disa interfejsa njëherësh. Laravel-i i përdor shumë për të ndërruar implementimet lehtë.",
+        "en": "An interface in PHP says which methods a class must have, without writing them. The class promises it with implements and can implement several at once. Laravel uses them a lot to swap implementations easily."
+      },
+      "analogy": {
+        "sq": "Si diploma e shoferit: kushdo që e ka premton se di të ngasë.",
+        "en": "Like a driving licence: anyone holding one promises they can drive."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\ninterface Pagesa { public function paguaj(float $shuma): bool; }\nclass PagesaMeKarte implements Pagesa {\n  public function paguaj(float $shuma): bool { return true; }\n}"
+      },
+      "related": [
+        "interface",
+        "php-abstract",
+        "dependency-injection"
+      ]
+    },
+    {
+      "id": "php-abstract",
+      "en": "Abstract classes (PHP)",
+      "sq": "Klasat abstrakte në PHP",
+      "aliases": [
+        "abstract php",
+        "abstract class php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Një klasë abstract s'mund të krijohet direkt — shërben si bazë që ndan kod të përbashkët, dhe metodat abstract duhet t'i shkruajnë patjetër fëmijët.",
+        "en": "An abstract class can't be created directly — it's a base sharing common code, and its abstract methods must be written by the children."
+      },
+      "analogy": {
+        "sq": "Si rregullorja „çdo ekip duhet të ketë portier“.",
+        "en": "Like the rule “every team must have a goalkeeper”."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\nabstract class Forme {\n  abstract public function siperfaqja(): float;\n  public function pershkrimi(): string { return \"Sipërfaqja: \" . $this->siperfaqja(); }\n}"
+      },
+      "related": [
+        "abstract-class",
+        "php-interfaces",
+        "php-inheritance"
+      ]
+    },
+    {
+      "id": "php-traits",
+      "en": "Traits",
+      "sq": null,
+      "aliases": [
+        "trait",
+        "use trait",
+        "traits php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Një trait është një copë kodi (metoda dhe fusha) që mund ta „ngjitësh“ në disa klasa me use, edhe kur s'kanë prind të përbashkët. Është zgjidhja e PHP-së për të ripërdorur kod pa trashëgimi të shumëfishtë.",
+        "en": "A trait is a chunk of code (methods and properties) you can “stick” into several classes with use, even when they don't share a parent. It's PHP's way of reusing code without multiple inheritance."
+      },
+      "analogy": {
+        "sq": "Si një aftësi që e mëson nga një kurs — mund ta kenë njerëz nga familje krejt të ndryshme.",
+        "en": "Like a skill learned on a course — people from completely different families can have it."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\ntrait KaData { public function krijuarMe(): string { return date(\"d.m.Y\"); } }\nclass Postim { use KaData; }\nclass Koment { use KaData; }"
+      },
+      "related": [
+        "mixins-ts",
+        "php-inheritance",
+        "dry-principle"
+      ]
+    },
+    {
+      "id": "php-static",
+      "en": "static, self & parent (PHP)",
+      "sq": null,
+      "aliases": [
+        "static php",
+        "self::",
+        "static::"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Fushat dhe metodat static i përkasin klasës, jo objekteve — i thërret me Klasa::metoda(). Brenda klasës, self:: i referohet klasës aktuale, parent:: prindit, dhe static:: klasës që u thirr vërtet (e rëndësishme me trashëgiminë).",
+        "en": "Static properties and methods belong to the class, not objects — you call them with Class::method(). Inside the class, self:: refers to the current class, parent:: to the parent, and static:: to the class actually called (important with inheritance)."
+      },
+      "analogy": {
+        "sq": "Si tabela e rezultatit në stadium: një e vetme për të gjithë.",
+        "en": "Like the stadium scoreboard: one for everyone."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "class Numerues {\n  private static int $n = 0;\n  public static function rrit(): int { return ++self::$n; }\n}\necho Numerues::rrit();"
+      },
+      "related": [
+        "static-keyword",
+        "php-classes",
+        "static-members"
+      ]
+    },
+    {
+      "id": "php-namespaces",
+      "en": "Namespaces in PHP",
+      "sq": "Hapësirat e emrave në PHP",
+      "aliases": [
+        "namespace php",
+        "use php",
+        "\\app"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Namespace-at i grupojnë klasat që dy klasa me të njëjtin emër të mos përplasen: namespace App\\Models;. Në skedarë të tjerë i merr me use App\\Models\\Nxenes;.",
+        "en": "Namespaces group classes so two classes with the same name don't clash: namespace App\\Models;. In other files you bring them in with use App\\Models\\Student;."
+      },
+      "analogy": {
+        "sq": "Si mbiemri: „Arta Krasniqi“ dhe „Arta Gashi“ s'ngatërrohen.",
+        "en": "Like a surname: “Arta Krasniqi” and “Arta Gashi” don't get mixed up."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\nnamespace App\\Http\\Controllers;\nuse App\\Models\\Nxenes;"
+      },
+      "related": [
+        "namespace-std",
+        "php-autoloading",
+        "csharp-using"
+      ]
+    },
+    {
+      "id": "php-autoloading",
+      "en": "Autoloading (PSR-4)",
+      "sq": "Ngarkimi automatik i klasave",
+      "aliases": [
+        "autoload",
+        "psr-4",
+        "spl_autoload_register",
+        "vendor/autoload.php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Me autoloading, s'ke pse shkruan require për çdo klasë: Composer-i e ngarkon vetë skedarin kur e përdor klasën. Rregulli PSR-4 thotë që namespace-i dhe dosjet përputhen — App\\Models\\Nxenes gjendet te app/Models/Nxenes.php.",
+        "en": "With autoloading, you don't write require for every class: Composer loads the file automatically when you use the class. The PSR-4 rule says namespaces and folders match — App\\Models\\Student lives in app/Models/Student.php."
+      },
+      "analogy": {
+        "sq": "Si bibliotekari që ta sjell librin sapo e kërkon, pa pasur nevojë ta marrësh vetë nga rafti.",
+        "en": "Like a librarian who brings you the book the moment you ask, without you fetching it."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\nrequire __DIR__ . \"/vendor/autoload.php\";\nuse App\\Models\\Nxenes;\n$n = new Nxenes(\"Arta\");   // skedari ngarkohet vetë"
+      },
+      "related": [
+        "composer",
+        "php-namespaces",
+        "psr-standards"
+      ]
+    },
+    {
+      "id": "php-magic-methods",
+      "en": "Magic methods (__toString, __get)",
+      "sq": "Metodat magjike",
+      "aliases": [
+        "__tostring",
+        "__get",
+        "__set",
+        "__call",
+        "magic methods php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Metodat magjike fillojnë me dy nënvizime dhe PHP-ja i thërret vetë në raste të caktuara: __construct kur krijohet objekti, __toString kur e përdor si tekst, __get kur lexon një fushë që s'ekziston.",
+        "en": "Magic methods start with two underscores and PHP calls them itself in certain situations: __construct when the object is created, __toString when it's used as text, __get when you read a property that doesn't exist."
+      },
+      "analogy": {
+        "sq": "Si prizat standarde: me spinën e duhur, çdo pajisje punon.",
+        "en": "Like standard sockets: with the right plug, any appliance works."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "class Termi {\n  public function __construct(private string $emri) {}\n  public function __toString(): string { return \"Termi: $this->emri\"; }\n}\necho new Termi(\"API\");"
+      },
+      "related": [
+        "dunder-methods",
+        "tostring",
+        "php-classes"
+      ]
+    },
+    {
+      "id": "php-enums",
+      "en": "Enums (PHP 8.1)",
+      "sq": "enum në PHP",
+      "aliases": [
+        "enum php",
+        "backed enum",
+        "cases"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Që nga PHP 8.1, enum-et japin një listë të mbyllur vlerash: enum Statusi: string { case Aktiv = \"aktiv\"; case Joaktiv = \"joaktiv\"; }. Mund të kenë edhe metoda.",
+        "en": "Since PHP 8.1, enums give a closed list of values: enum Status: string { case Active = \"active\"; case Inactive = \"inactive\"; }. They can have methods too."
+      },
+      "analogy": {
+        "sq": "Si madhësitë e pijeve: e vogël, e mesme, e madhe.",
+        "en": "Like drink sizes: small, medium, large."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "enum Statusi: string {\n  case Aktiv = \"aktiv\";\n  case Joaktiv = \"joaktiv\";\n}\necho Statusi::Aktiv->value;"
+      },
+      "related": [
+        "enum",
+        "php-match",
+        "php-versions"
+      ]
+    },
+    {
+      "id": "php-readonly",
+      "en": "readonly properties (PHP)",
+      "sq": null,
+      "aliases": [
+        "readonly php",
+        "readonly class"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Një fushë readonly mund të caktohet vetëm një herë — zakonisht në konstruktor — dhe pastaj s'ndryshon më. Ideale për objekte që thjesht mbajnë të dhëna.",
+        "en": "A readonly property can be set only once — usually in the constructor — and then never changes. Ideal for objects that just hold data."
+      },
+      "analogy": {
+        "sq": "Si numri i letërnjoftimit: caktohet një herë.",
+        "en": "Like an ID number: set once."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\nfinal class Pika {\n  public function __construct(public readonly int $x, public readonly int $y) {}\n}\n$p = new Pika(1, 2); // $p->x = 5;  // Gabim"
+      },
+      "related": [
+        "const-readonly",
+        "mutable-immutable",
+        "php-constructor"
+      ]
+    },
+    {
+      "id": "php-exceptions",
+      "en": "Exceptions in PHP (try, catch, finally)",
+      "sq": "Përjashtimet në PHP",
+      "aliases": [
+        "try catch php",
+        "throw php",
+        "exception php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Në PHP i kap gabimet me try/catch, dhe finally ekzekutohet gjithmonë. Hedh gabime me throw new Exception(\"...\"), dhe mund të krijosh llojet e tua duke trashëguar nga Exception.",
+        "en": "In PHP you catch errors with try/catch, and finally always runs. You throw errors with throw new Exception(\"...\"), and you can create your own types by extending Exception."
+      },
+      "analogy": {
+        "sq": "Si portieri pas mbrojtjes.",
+        "en": "Like the goalkeeper behind the defence."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "try {\n  $pdo = new PDO($dsn, $user, $pass);\n} catch (PDOException $e) {\n  echo \"S'u lidh databaza: \" . $e->getMessage();\n}"
+      },
+      "related": [
+        "try-catch",
+        "error",
+        "exceptions-csharp"
+      ]
+    },
+    {
+      "id": "php-attributes",
+      "en": "Attributes (#[...])",
+      "sq": "Atributet në PHP",
+      "aliases": [
+        "#[route]",
+        "attribute php",
+        "annotations php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Që nga PHP 8, atributet #[...] u shtojnë informacion klasave dhe metodave — p.sh. #[Route(\"/terma\")] në Symfony. Si anotacionet e Java-s dhe atributet e C#-it.",
+        "en": "Since PHP 8, #[...] attributes add information to classes and methods — e.g. #[Route(\"/terms\")] in Symfony. Like Java annotations and C# attributes."
+      },
+      "analogy": {
+        "sq": "Si ngjitëset në pakot e postës.",
+        "en": "Like stickers on parcels."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\n#[Route(\"/terma/{id}\", methods: [\"GET\"])]\npublic function shfaq(string $id): Response { /* ... */ }"
+      },
+      "related": [
+        "annotations",
+        "attributes-csharp",
+        "symfony"
+      ]
+    },
+    {
+      "id": "php-generators",
+      "en": "Generators (yield) in PHP",
+      "sq": "Gjeneratorët në PHP",
+      "aliases": [
+        "yield php",
+        "generator php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Një funksion me yield jep vlerat një nga një në vend që t'i kthejë të gjitha njëherësh. Shumë i dobishëm për të lexuar skedarë të mëdhenj rresht pas rreshti pa e mbushur memorien.",
+        "en": "A function with yield hands out values one at a time instead of returning them all at once. Very useful for reading big files line by line without filling the memory."
+      },
+      "analogy": {
+        "sq": "Si sportelisti që thërret numrat një nga një.",
+        "en": "Like a clerk calling numbers one at a time."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\nfunction rreshtat(string $skedari) {\n  $f = fopen($skedari, \"r\");\n  while (($r = fgets($f)) !== false) yield $r;\n}"
+      },
+      "related": [
+        "generator",
+        "js-generators",
+        "ienumerable-yield"
+      ]
+    },
+    {
+      "id": "php-forms",
+      "en": "Handling forms in PHP",
+      "sq": "Formularët në PHP",
+      "aliases": [
+        "form php",
+        "$_post form",
+        "form handling"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Kur dërgohet një formular, PHP-ja i merr të dhënat në $_POST (ose $_GET). Hapat: kontrollo nëse u dërgua, valido çdo fushë, shfaq gabimet ose ruaji të dhënat — dhe mos e shfaq kurrë hyrjen pa htmlspecialchars().",
+        "en": "When a form is submitted, PHP receives the data in $_POST (or $_GET). The steps: check it was submitted, validate every field, show errors or save the data — and never output the input without htmlspecialchars()."
+      },
+      "analogy": {
+        "sq": "Si sekretaria që e kontrollon formularin para se ta pranojë.",
+        "en": "Like a secretary who checks the form before accepting it."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\nif ($_SERVER[\"REQUEST_METHOD\"] === \"POST\") {\n  $emri = trim($_POST[\"emri\"] ?? \"\");\n  if ($emri === \"\") $gabim = \"Shkruaj emrin!\";\n}"
+      },
+      "related": [
+        "php-superglobals",
+        "form-validation",
+        "php-htmlspecialchars"
+      ]
+    },
+    {
+      "id": "php-htmlspecialchars",
+      "en": "htmlspecialchars (escaping output)",
+      "sq": "Mbrojtja e daljes",
+      "aliases": [
+        "htmlspecialchars",
+        "escape php",
+        "e()"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "htmlspecialchars() i kthen karakteret si < dhe > në formë të sigurt, që teksti i përdoruesit të shfaqet si tekst dhe jo si kod HTML. Është mbrojtja kryesore kundër XSS në PHP. Blade-i i Laravel-it e bën vetë me {{ }}.",
+        "en": "htmlspecialchars() turns characters like < and > into a safe form, so user text shows as text rather than HTML code. It's the main defence against XSS in PHP. Laravel's Blade does it automatically with {{ }}."
+      },
+      "analogy": {
+        "sq": "Si ta futësh një letër të dyshimtë në një zarf plastik: e lexon, por s'të prek.",
+        "en": "Like putting a suspicious letter in a plastic sleeve: you can read it, but it can't touch you."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\n$komenti = $_POST[\"komenti\"];\necho htmlspecialchars($komenti, ENT_QUOTES, \"UTF-8\");"
+      },
+      "related": [
+        "xss",
+        "php-forms",
+        "blade"
+      ]
+    },
+    {
+      "id": "php-filter-var",
+      "en": "filter_var (validation)",
+      "sq": "Validimi me filter_var",
+      "aliases": [
+        "filter_var",
+        "filter_validate_email",
+        "filter_input"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "filter_var() kontrollon dhe pastron vlerat: FILTER_VALIDATE_EMAIL për email, FILTER_VALIDATE_INT për numra, FILTER_VALIDATE_URL për adresa. Kthen false kur vlera s'është e vlefshme.",
+        "en": "filter_var() checks and cleans values: FILTER_VALIDATE_EMAIL for emails, FILTER_VALIDATE_INT for numbers, FILTER_VALIDATE_URL for addresses. It returns false when the value isn't valid."
+      },
+      "analogy": {
+        "sq": "Si roja që ta kontrollon biletën para se të të lërë të hysh.",
+        "en": "Like a steward checking your ticket before letting you in."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\n$email = filter_var($_POST[\"email\"], FILTER_VALIDATE_EMAIL);\nif ($email === false) echo \"Email i pavlefshëm\";"
+      },
+      "related": [
+        "input-validation",
+        "php-forms",
+        "regex"
+      ]
+    },
+    {
+      "id": "php-sessions",
+      "en": "Sessions in PHP ($_SESSION)",
+      "sq": "Sesionet në PHP",
+      "aliases": [
+        "session_start",
+        "$_session",
+        "session php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Me session_start() dhe $_SESSION, PHP-ja mban mend të dhëna për një vizitor nga një faqe te tjetra — p.sh. kush është i kyçur ose çfarë ka në shportë. Vetë të dhënat ruhen në server; shfletuesi mban vetëm një cookie me ID-në.",
+        "en": "With session_start() and $_SESSION, PHP remembers data about a visitor from page to page — e.g. who's logged in or what's in their cart. The data itself is stored on the server; the browser only keeps a cookie with the ID."
+      },
+      "analogy": {
+        "sq": "Si numri i gardërobës në teatër: ti mban biletën, xhaketa rri te sportelisti.",
+        "en": "Like a cloakroom ticket at the theatre: you keep the ticket, the coat stays with the attendant."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\nsession_start();\n$_SESSION[\"perdoruesi\"] = \"arta\";\necho $_SESSION[\"perdoruesi\"] ?? \"Mysafir\";"
+      },
+      "related": [
+        "session",
+        "cookie",
+        "php-cookies"
+      ]
+    },
+    {
+      "id": "php-cookies",
+      "en": "Cookies in PHP (setcookie)",
+      "sq": "Cookie-t në PHP",
+      "aliases": [
+        "setcookie",
+        "$_cookie"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "setcookie() i dërgon shfletuesit një cookie që e kthen me çdo kërkesë, dhe e lexon me $_COOKIE. Për cookie sesioni vendos gjithmonë httponly, secure dhe samesite.",
+        "en": "setcookie() sends the browser a cookie it returns with every request, and you read it with $_COOKIE. For session cookies always set httponly, secure and samesite."
+      },
+      "analogy": {
+        "sq": "Si një biletë që shfletuesi e tregon sa herë kthehet.",
+        "en": "Like a ticket the browser shows every time it comes back."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\nsetcookie(\"gjuha\", \"sq\", [\n  \"expires\" => time() + 86400 * 30,\n  \"secure\" => true, \"httponly\" => true, \"samesite\" => \"Lax\",\n]);"
+      },
+      "related": [
+        "cookie",
+        "cookie-security-flags",
+        "php-sessions"
+      ]
+    },
+    {
+      "id": "php-header-redirect",
+      "en": "header() & redirects",
+      "sq": "Ridrejtimet në PHP",
+      "aliases": [
+        "header location",
+        "header()",
+        "redirect php",
+        "headers already sent"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "header(\"Location: /faleminderit\") e dërgon përdoruesin në një faqe tjetër — zakonisht pas dërgimit të një formulari. Kujdes: header() duhet thirrur para se të nxirret çdo HTML, përndryshe del gabimi „headers already sent“.",
+        "en": "header(\"Location: /thank-you\") sends the user to another page — usually after a form is submitted. Careful: header() must be called before any HTML is output, or you get the “headers already sent” error."
+      },
+      "analogy": {
+        "sq": "Si të ndryshosh adresën në zarf para se ta dërgosh — pasi e ke postuar, është vonë.",
+        "en": "Like changing the address on an envelope before posting it — once it's sent, it's too late."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\n// ruaj formularin...\nheader(\"Location: /faleminderit\");\nexit;"
+      },
+      "related": [
+        "redirect",
+        "http-headers",
+        "php-forms"
+      ]
+    },
+    {
+      "id": "php-file-upload",
+      "en": "File uploads ($_FILES)",
+      "sq": "Ngarkimi i skedarëve në PHP",
+      "aliases": [
+        "move_uploaded_file",
+        "upload php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Kur një formular ngarkon një skedar, PHP-ja e ruan përkohësisht dhe të jep informacion në $_FILES. Me move_uploaded_file() e zhvendos në dosjen tënde — por kontrollo gjithmonë llojin dhe madhësinë, dhe jepi një emër të ri.",
+        "en": "When a form uploads a file, PHP stores it temporarily and gives you information in $_FILES. With move_uploaded_file() you move it to your folder — but always check its type and size, and give it a new name."
+      },
+      "analogy": {
+        "sq": "Si pakoja që e kontrollon roja para se ta fusë në magazinë.",
+        "en": "Like a parcel the security guard checks before it goes into the warehouse."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\n$f = $_FILES[\"foto\"];\nif ($f[\"size\"] < 2_000_000 && in_array(mime_content_type($f[\"tmp_name\"]), [\"image/jpeg\", \"image/png\"])) {\n  move_uploaded_file($f[\"tmp_name\"], \"ngarkime/\" . bin2hex(random_bytes(8)));\n}"
+      },
+      "related": [
+        "php-superglobals",
+        "path-traversal",
+        "input-validation"
+      ]
+    },
+    {
+      "id": "pdo",
+      "en": "PDO",
+      "sq": null,
+      "aliases": [
+        "php data objects",
+        "pdo php",
+        "new pdo"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "PDO është mënyra moderne dhe e sigurt e PHP-së për t'u lidhur me databaza — MySQL, PostgreSQL, SQLite — me të njëjtin kod. Përdore gjithmonë me prepared statements.",
+        "en": "PDO is PHP's modern, safe way to connect to databases — MySQL, PostgreSQL, SQLite — with the same code. Always use it with prepared statements."
+      },
+      "analogy": {
+        "sq": "Si një përkthyes që di të flasë me çdo arkiv, pavarësisht gjuhës së tij.",
+        "en": "Like a translator who can talk to any archive, whatever its language."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\n$pdo = new PDO(\"mysql:host=localhost;dbname=shkolla;charset=utf8mb4\", $user, $pass, [\n  PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,\n]);"
+      },
+      "related": [
+        "php-prepared-statements",
+        "mysql",
+        "jdbc"
+      ]
+    },
+    {
+      "id": "php-prepared-statements",
+      "en": "Prepared statements in PHP (PDO)",
+      "sq": "Query me parametra në PHP",
+      "aliases": [
+        "pdo prepare",
+        "bindparam",
+        "execute php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Me $pdo->prepare() e shkruan query-n me vende bosh (? ose :emri) dhe vlerat ia jep veç te execute(). Kështu SQL injection bëhet i pamundur — mos i fut kurrë variablat direkt në tekstin e query-t.",
+        "en": "With $pdo->prepare() you write the query with placeholders (? or :name) and pass the values separately to execute(). That makes SQL injection impossible — never put variables straight into the query text."
+      },
+      "analogy": {
+        "sq": "Si një formular me kuti: çfarëdo që të shkruajë dikush, mbetet brenda kutisë.",
+        "en": "Like a form with boxes: whatever someone writes stays inside the box."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\n$st = $pdo->prepare(\"SELECT * FROM nxenesit WHERE emri = :emri\");\n$st->execute([\"emri\" => $_GET[\"emri\"]]);\n$nxenesit = $st->fetchAll(PDO::FETCH_ASSOC);"
+      },
+      "related": [
+        "prepared-statement",
+        "sql-injection",
+        "pdo"
+      ]
+    },
+    {
+      "id": "mysqli",
+      "en": "mysqli",
+      "sq": null,
+      "aliases": [
+        "mysqli php",
+        "mysql_query",
+        "mysqli_connect"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "mysqli është mënyra më e vjetër e PHP-së për të punuar vetëm me MySQL. Do ta takosh në shumë tutoriale dhe projekte të vjetra; për kod të ri, PDO është zgjedhja më e mirë. Funksionet mysql_ (pa „i“) janë hequr krejt.",
+        "en": "mysqli is PHP's older way of working with MySQL only. You'll meet it in lots of tutorials and older projects; for new code, PDO is the better choice. The mysql_ functions (without the “i”) have been removed completely."
+      },
+      "analogy": {
+        "sq": "Si një telefon i vjetër që punon ende, por që të lidh vetëm me një operator.",
+        "en": "Like an old phone that still works but only connects to one network."
+      },
+      "code": null,
+      "related": [
+        "pdo",
+        "mysql",
+        "deprecated"
+      ]
+    },
+    {
+      "id": "php-password-hash",
+      "en": "password_hash & password_verify",
+      "sq": null,
+      "aliases": [
+        "password_hash",
+        "password_verify",
+        "bcrypt php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "password_hash() e kthen fjalëkalimin në një hash të sigurt (me bcrypt ose argon2, me kripë të përfshirë), dhe password_verify() kontrollon nëse fjalëkalimi i shkruar përputhet. Mos përdor kurrë md5() për fjalëkalime.",
+        "en": "password_hash() turns a password into a safe hash (with bcrypt or argon2, salt included), and password_verify() checks whether a typed password matches. Never use md5() for passwords."
+      },
+      "analogy": {
+        "sq": "Si një kasafortë që e njeh kombinimin pa e mbajtur shkruar askund.",
+        "en": "Like a safe that recognises the combination without having it written down anywhere."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\n$hash = password_hash($_POST[\"fjalekalimi\"], PASSWORD_DEFAULT);\nif (password_verify($fjalekalimi, $hash)) echo \"Mirë se erdhe!\";"
+      },
+      "related": [
+        "password-hashing",
+        "password-salt",
+        "authentication"
+      ]
+    },
+    {
+      "id": "php-routing",
+      "en": "Routing in plain PHP (front controller)",
+      "sq": "Rrugëzimi në PHP",
+      "aliases": [
+        "front controller",
+        "index.php router",
+        "router php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Në PHP-në e thjeshtë, çdo skedar .php është një faqe. Në projekte më të mëdha, të gjitha kërkesat shkojnë te një index.php i vetëm (front controller), që e lexon adresën dhe vendos cilin kod të ekzekutojë — kështu punojnë Laravel-i dhe Symfony.",
+        "en": "In plain PHP, every .php file is a page. In bigger projects, all requests go to a single index.php (the front controller), which reads the address and decides what code to run — that's how Laravel and Symfony work."
+      },
+      "analogy": {
+        "sq": "Si recepsioni i hotelit: të gjithë hyjnë nga e njëjta derë dhe dërgohen te dhoma e duhur.",
+        "en": "Like a hotel reception: everyone comes through the same door and gets sent to the right room."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "$rruga = parse_url($_SERVER[\"REQUEST_URI\"], PHP_URL_PATH);\nmatch ($rruga) {\n  \"/\" => require \"faqet/kreu.php\",\n  \"/kontakt\" => require \"faqet/kontakt.php\", default => http_response_code(404),\n};"
+      },
+      "related": [
+        "routing",
+        "laravel-routes",
+        "htaccess"
+      ]
+    },
+    {
+      "id": "php-templates",
+      "en": "Mixing PHP and HTML (templates)",
+      "sq": "PHP brenda HTML-së",
+      "aliases": [
+        "php template",
+        "php in html",
+        "alternative syntax"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "PHP-ja u krijua për t'u përzier me HTML: shkruan faqen normalisht dhe fut <?= $vlera ?> aty ku duhet diçka dinamike. Për projekte më të mëdha përdoren motorë template si Blade ose Twig, që e mbajnë kodin më të pastër.",
+        "en": "PHP was created to mix with HTML: you write the page normally and drop in <?= $value ?> wherever something dynamic is needed. Bigger projects use template engines like Blade or Twig, which keep the code cleaner."
+      },
+      "analogy": {
+        "sq": "Si një letër e shtypur me vende bosh që plotësohen automatikisht.",
+        "en": "Like a printed letter with blanks that fill in automatically."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<ul>\n<?php foreach ($termat as $t): ?>\n  <li><?= htmlspecialchars($t[\"emri\"]) ?></li>\n<?php endforeach; ?>\n</ul>"
+      },
+      "related": [
+        "php-tags",
+        "blade",
+        "ssr"
+      ]
+    },
+    {
+      "id": "php-built-in-server",
+      "en": "PHP built-in server (php -S)",
+      "sq": "Serveri i integruar i PHP-së",
+      "aliases": [
+        "php -s",
+        "php -s localhost:8000",
+        "built-in web server"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Me komandën php -S localhost:8000 nis një server të vogël për zhvillim, pa instaluar Apache ose Nginx. Hap shfletuesin dhe e sheh faqen tënde menjëherë. Vetëm për zhvillim, jo për production.",
+        "en": "With the command php -S localhost:8000 you start a small development server, without installing Apache or Nginx. Open the browser and you see your page straight away. For development only, not production."
+      },
+      "analogy": {
+        "sq": "Si një kuzhinë portative për të provuar recetat në shtëpi.",
+        "en": "Like a camping stove for trying recipes at home."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "php -S localhost:8000"
+      },
+      "related": [
+        "localhost",
+        "xampp",
+        "port"
+      ]
+    },
+    {
+      "id": "xampp",
+      "en": "XAMPP, WAMP & MAMP",
+      "sq": null,
+      "aliases": [
+        "xampp",
+        "wamp",
+        "mamp",
+        "laragon",
+        "local server"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "XAMPP (dhe WAMP, MAMP, Laragon) instalojnë me një klik Apache, PHP dhe MySQL në kompjuterin tënd — gjithçka që të duhet për të nisur me PHP. Shumë të përdorura në shkolla dhe kurse në rajon.",
+        "en": "XAMPP (and WAMP, MAMP, Laragon) install Apache, PHP and MySQL on your computer in one click — everything you need to start with PHP. Very common in schools and courses in the region."
+      },
+      "analogy": {
+        "sq": "Si një kompleti i plotë kuzhine që vjen në një kuti.",
+        "en": "Like a complete kitchen kit that comes in one box."
+      },
+      "code": null,
+      "related": [
+        "lamp-stack",
+        "php-built-in-server",
+        "phpmyadmin"
+      ]
+    },
+    {
+      "id": "lamp-stack",
+      "en": "LAMP stack",
+      "sq": null,
+      "aliases": [
+        "lamp",
+        "lemp",
+        "linux apache mysql php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "LAMP është kombinimi klasik për faqe web: Linux (sistemi), Apache (serveri web), MySQL (databaza) dhe PHP (gjuha). LEMP është i njëjti, por me Nginx në vend të Apache-s. Mbi të punojnë miliona faqe, përfshirë WordPress-in.",
+        "en": "LAMP is the classic web combination: Linux (the system), Apache (the web server), MySQL (the database) and PHP (the language). LEMP is the same with Nginx instead of Apache. Millions of sites run on it, WordPress included."
+      },
+      "analogy": {
+        "sq": "Si receta klasike e byrekut: katër përbërës që shkojnë gjithmonë bashkë.",
+        "en": "Like the classic byrek recipe: four ingredients that always go together."
+      },
+      "code": null,
+      "related": [
+        "tech-stack",
+        "nginx-apache",
+        "mysql"
+      ]
+    },
+    {
+      "id": "phpmyadmin",
+      "en": "phpMyAdmin",
+      "sq": null,
+      "aliases": [
+        "phpmyadmin",
+        "php my admin"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "phpMyAdmin është një faqe web e shkruar në PHP për të menaxhuar databazat MySQL me klikime: krijon tabela, shikon të dhënat, shkruan query. Vjen me XAMPP dhe e ofrojnë shumica e hostingjeve.",
+        "en": "phpMyAdmin is a web page written in PHP for managing MySQL databases by clicking: create tables, browse data, write queries. It comes with XAMPP and most hosting providers offer it."
+      },
+      "analogy": {
+        "sq": "Si dritarja e akuariumit: i sheh peshqit drejtpërdrejt.",
+        "en": "Like the glass of an aquarium: you see the fish directly."
+      },
+      "code": null,
+      "related": [
+        "database-gui",
+        "mysql",
+        "xampp"
+      ]
+    },
+    {
+      "id": "htaccess",
+      "en": ".htaccess",
+      "sq": null,
+      "aliases": [
+        ".htaccess",
+        "mod_rewrite",
+        "rewriterule"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Skedari .htaccess u jep udhëzime Apache-s për një dosje: ridrejtime, adresa të pastra (pa .php), mbrojtje me fjalëkalim. Shumë hostingje të lira PHP e përdorin për çdo konfigurim.",
+        "en": "The .htaccess file gives Apache instructions for a folder: redirects, clean addresses (without .php), password protection. Many cheap PHP hosts rely on it for all configuration."
+      },
+      "analogy": {
+        "sq": "Si shënimi në derën e një dhome: „hyni nga dera tjetër“.",
+        "en": "Like a note on a room's door: “please use the other door”."
+      },
+      "code": {
+        "language": "text",
+        "snippet": "RewriteEngine On\nRewriteCond %{REQUEST_FILENAME} !-f\nRewriteRule ^ index.php [L]"
+      },
+      "related": [
+        "nginx-apache",
+        "redirect",
+        "php-routing"
+      ]
+    },
+    {
+      "id": "php-ini",
+      "en": "php.ini",
+      "sq": null,
+      "aliases": [
+        "php.ini",
+        "php configuration",
+        "upload_max_filesize",
+        "display_errors"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "php.ini është skedari i cilësimeve të PHP-së: sa i madh mund të jetë një skedar i ngarkuar, sa memorie lejohet, nëse shfaqen gabimet. Në production, display_errors duhet të jetë Off.",
+        "en": "php.ini is PHP's settings file: how big an uploaded file may be, how much memory is allowed, whether errors are shown. In production, display_errors must be Off."
+      },
+      "analogy": {
+        "sq": "Si paneli i rregullimeve të kaldajës.",
+        "en": "Like the control panel of the boiler."
+      },
+      "code": {
+        "language": "text",
+        "snippet": "upload_max_filesize = 10M\nmemory_limit = 256M\ndisplay_errors = Off"
+      },
+      "related": [
+        "config-file",
+        "php-file-upload",
+        "production"
+      ]
+    },
+    {
+      "id": "php-fpm",
+      "en": "PHP-FPM",
+      "sq": null,
+      "aliases": [
+        "php-fpm",
+        "fastcgi",
+        "fpm"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "PHP-FPM është mënyra si serverët modernë (zakonisht Nginx) ekzekutojnë PHP: mban gati një grup procesesh PHP që u përgjigjen kërkesave shpejt. Te hostingjet e mëdha, Nginx + PHP-FPM është kombinimi standard.",
+        "en": "PHP-FPM is how modern servers (usually Nginx) run PHP: it keeps a pool of PHP processes ready to answer requests quickly. On bigger hosts, Nginx + PHP-FPM is the standard combination."
+      },
+      "analogy": {
+        "sq": "Si një ekip kuzhinierësh gati në kuzhinë, që secili merr porosinë e radhës.",
+        "en": "Like a team of cooks ready in the kitchen, each taking the next order."
+      },
+      "code": null,
+      "related": [
+        "nginx-apache",
+        "connection-pool",
+        "process"
+      ]
+    },
+    {
+      "id": "composer",
+      "en": "Composer",
+      "sq": null,
+      "aliases": [
+        "composer php",
+        "composer require",
+        "composer install"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Composer-i është menaxheri i paketave të PHP-së — si npm-ja për JavaScript. Me composer require shton një librari, dhe composer install i instalon të gjitha te dosja vendor/. Bën edhe autoloading-un e klasave.",
+        "en": "Composer is PHP's package manager — like npm for JavaScript. composer require adds a library, and composer install installs them all into the vendor/ folder. It also handles class autoloading."
+      },
+      "analogy": {
+        "sq": "Si një supermarket përbërësish për projektin tënd.",
+        "en": "Like an ingredients supermarket for your project."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "composer require guzzlehttp/guzzle\ncomposer install"
+      },
+      "related": [
+        "npm",
+        "composer-json",
+        "php-autoloading"
+      ]
+    },
+    {
+      "id": "composer-json",
+      "en": "composer.json & composer.lock",
+      "sq": null,
+      "aliases": [
+        "composer.json",
+        "composer.lock",
+        "vendor folder"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "composer.json rendit paketat që i duhen projektit, dhe composer.lock fikson versionet e sakta që të gjithë të kenë të njëjtat. Dosja vendor/ s'ngarkohet në Git — e krijon kushdo me composer install.",
+        "en": "composer.json lists the packages your project needs, and composer.lock pins the exact versions so everyone has the same ones. The vendor/ folder isn't committed to Git — anyone recreates it with composer install."
+      },
+      "analogy": {
+        "sq": "Si lista e përbërësve në krye të recetës.",
+        "en": "Like the ingredients list at the top of a recipe."
+      },
+      "code": {
+        "language": "json",
+        "snippet": "{\n  \"require\": { \"php\": \"^8.2\", \"laravel/framework\": \"^11.0\" },\n  \"autoload\": { \"psr-4\": { \"App\\\\\": \"app/\" } }\n}"
+      },
+      "related": [
+        "composer",
+        "package-json",
+        "gitignore"
+      ]
+    },
+    {
+      "id": "packagist",
+      "en": "Packagist",
+      "sq": null,
+      "aliases": [
+        "packagist.org"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Packagist.org është depoja ku Composer-i kërkon paketat — qindra mijëra librari PHP falas, nga Laravel-i te libraritë e vogla për PDF ose email.",
+        "en": "Packagist.org is the repository where Composer looks for packages — hundreds of thousands of free PHP libraries, from Laravel to small libraries for PDFs or email."
+      },
+      "analogy": {
+        "sq": "Si një bibliotekë e madhe publike për kod PHP.",
+        "en": "Like a huge public library of PHP code."
+      },
+      "code": null,
+      "related": [
+        "composer",
+        "npm",
+        "open-source"
+      ]
+    },
+    {
+      "id": "psr-standards",
+      "en": "PSR standards (PSR-4, PSR-12)",
+      "sq": "Standardet PSR",
+      "aliases": [
+        "psr",
+        "psr-12",
+        "php-fig",
+        "php cs fixer"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "PSR-të janë rregulla të përbashkëta të komunitetit PHP: PSR-4 për autoloading, PSR-12 për stilin e shkrimit të kodit, PSR-7 për kërkesat HTTP. Mjete si PHP CS Fixer e rregullojnë kodin vetë sipas tyre.",
+        "en": "PSRs are shared rules of the PHP community: PSR-4 for autoloading, PSR-12 for code style, PSR-7 for HTTP requests. Tools like PHP CS Fixer reformat your code to follow them."
+      },
+      "analogy": {
+        "sq": "Si rregullat e drejtshkrimit: kushdo që i ndjek shkruan në mënyrë që e kuptojnë të gjithë.",
+        "en": "Like spelling rules: everyone who follows them writes in a way everyone understands."
+      },
+      "code": null,
+      "related": [
+        "pep8",
+        "php-autoloading",
+        "code-formatter"
+      ]
+    },
+    {
+      "id": "phpunit",
+      "en": "PHPUnit",
+      "sq": null,
+      "aliases": [
+        "phpunit",
+        "unit test php",
+        "testcase"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "PHPUnit është libraria klasike për teste në PHP: shkruan metoda që fillojnë me test dhe kontrollon me $this->assertEquals(). Laravel-i e ka të gatshëm.",
+        "en": "PHPUnit is PHP's classic testing library: you write methods starting with test and check with $this->assertEquals(). Laravel comes with it ready."
+      },
+      "analogy": {
+        "sq": "Si fleta e korrigjimit me ✓ dhe ✗.",
+        "en": "Like a marking sheet with ✓ and ✗."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "class KalkulatorTest extends TestCase {\n  public function testMbledh(): void {\n    $this->assertEquals(5, Kalkulator::mblidh(2, 3));\n  }\n}"
+      },
+      "related": [
+        "junit",
+        "pest",
+        "testing"
+      ]
+    },
+    {
+      "id": "pest",
+      "en": "Pest",
+      "sq": null,
+      "aliases": [
+        "pest php",
+        "pestphp"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Pest-i është një mënyrë më e shkurtër dhe më e lexueshme për të shkruar teste në PHP, ndërtuar mbi PHPUnit. Shumë popullor në komunitetin e Laravel-it.",
+        "en": "Pest is a shorter, more readable way to write tests in PHP, built on PHPUnit. Very popular in the Laravel community."
+      },
+      "analogy": {
+        "sq": "Si një version më i thjeshtë i të njëjtit test.",
+        "en": "Like a simpler version of the same test."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\ntest(\"mbledh dy numra\", function () {\n  expect(Kalkulator::mblidh(2, 3))->toBe(5);\n});"
+      },
+      "related": [
+        "phpunit",
+        "jest-vitest",
+        "testing"
+      ]
+    },
+    {
+      "id": "phpstan",
+      "en": "PHPStan & Psalm",
+      "sq": null,
+      "aliases": [
+        "phpstan",
+        "psalm",
+        "larastan",
+        "static analysis php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "PHPStan dhe Psalm e analizojnë kodin PHP pa e ekzekutuar dhe gjejnë gabime: metoda që s'ekzistojnë, tipe të gabuara, null të harruar. Kanë „nivele“ — fillon me 0 dhe e rrit gradualisht.",
+        "en": "PHPStan and Psalm analyse PHP code without running it and find bugs: methods that don't exist, wrong types, forgotten nulls. They have “levels” — start at 0 and raise it gradually."
+      },
+      "analogy": {
+        "sq": "Si redaktori që e lexon librin para shtypjes.",
+        "en": "Like an editor who reads the book before printing."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "vendor/bin/phpstan analyse src --level=5"
+      },
+      "related": [
+        "static-analysis",
+        "php-type-declarations",
+        "linter"
+      ]
+    },
+    {
+      "id": "xdebug",
+      "en": "Xdebug",
+      "sq": null,
+      "aliases": [
+        "xdebug",
+        "php debugger",
+        "step debugging php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Xdebug-u është debugger-i i PHP-së: me të e ndal programin në një rresht (breakpoint) në VS Code ose PhpStorm, e ekzekuton hap pas hapi dhe sheh vlerat e variablave — shumë më mirë se var_dump kudo.",
+        "en": "Xdebug is PHP's debugger: with it you pause the program at a line (breakpoint) in VS Code or PhpStorm, step through it and see the variables' values — much better than var_dump everywhere."
+      },
+      "analogy": {
+        "sq": "Si regjistrimi me VAR: e ndal në momentin e saktë dhe e shikon kuadër pas kuadri.",
+        "en": "Like VAR replay: stop at the exact moment and go frame by frame."
+      },
+      "code": null,
+      "related": [
+        "debug",
+        "breakpoint",
+        "php-var-dump"
+      ]
+    },
+    {
+      "id": "phpstorm",
+      "en": "PhpStorm",
+      "sq": null,
+      "aliases": [
+        "phpstorm",
+        "php ide"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "PhpStorm-i është IDE-ja e JetBrains për PHP: plotëson kodin, gjen gabimet, punon me Xdebug, Composer dhe Laravel. Shumë zhvillues përdorin edhe VS Code me shtesën Intelephense.",
+        "en": "PhpStorm is JetBrains' IDE for PHP: it completes code, finds mistakes, and works with Xdebug, Composer and Laravel. Many developers use VS Code with the Intelephense extension instead."
+      },
+      "analogy": {
+        "sq": "Si një punishte e organizuar ku çdo vegël e ka vendin e vet.",
+        "en": "Like an organised workshop where every tool has its place."
+      },
+      "code": null,
+      "related": [
+        "ide",
+        "intellij",
+        "xdebug"
+      ]
+    },
+    {
+      "id": "php-versions",
+      "en": "PHP versions (7, 8, 8.x)",
+      "sq": "Versionet e PHP-së",
+      "aliases": [
+        "php 7",
+        "php 8",
+        "php 8.3",
+        "php 8.4",
+        "php 5"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "PHP 7 (2015) e bëri gjuhën dy herë më të shpejtë; PHP 8 solli JIT, match, named arguments dhe atributet; çdo vit del një 8.x i ri. Nëse tutoriali përdor mysql_query() ose PHP 5, është shumë i vjetër.",
+        "en": "PHP 7 (2015) made the language twice as fast; PHP 8 brought JIT, match, named arguments and attributes; a new 8.x comes out every year. If a tutorial uses mysql_query() or PHP 5, it's very old."
+      },
+      "analogy": {
+        "sq": "Si modelet e veturave: ato të reja janë më të shpejta dhe më të sigurta.",
+        "en": "Like car models: the newer ones are faster and safer."
+      },
+      "code": null,
+      "related": [
+        "php",
+        "semver",
+        "deprecated"
+      ]
+    },
+    {
+      "id": "laravel",
+      "en": "Laravel",
+      "sq": null,
+      "aliases": [
+        "laravel",
+        "laravel framework",
+        "laravel php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Laravel-i është framework-u më i popullarizuar i PHP-së: ka gati rrugëzimin, databazën (Eloquent), template-t (Blade), hyrjen e përdoruesve, radhët dhe shumë të tjera. Shumë kompani në Shqipëri dhe Kosovë punojnë me të.",
+        "en": "Laravel is PHP's most popular framework: it has routing, the database layer (Eloquent), templates (Blade), user login, queues and much more ready to go. Many companies in Albania and Kosovo work with it."
+      },
+      "analogy": {
+        "sq": "Si një kuzhinë restoranti e pajisur plotësisht: s'ke pse e ndërton furrën vetë.",
+        "en": "Like a fully equipped restaurant kitchen: you don't build the oven yourself."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "composer create-project laravel/laravel fjalori\ncd fjalori && php artisan serve"
+      },
+      "related": [
+        "framework",
+        "artisan",
+        "eloquent"
+      ]
+    },
+    {
+      "id": "artisan",
+      "en": "Artisan (Laravel CLI)",
+      "sq": null,
+      "aliases": [
+        "php artisan",
+        "artisan command",
+        "make:model"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Artisan-i është komanda e Laravel-it në terminal: php artisan serve nis serverin, make:model dhe make:controller krijojnë skedarë të gatshëm, migrate përditëson databazën, tinker të lejon të provosh kod.",
+        "en": "Artisan is Laravel's terminal command: php artisan serve starts the server, make:model and make:controller create ready-made files, migrate updates the database, tinker lets you try code."
+      },
+      "analogy": {
+        "sq": "Si telekomanda universale e projektit.",
+        "en": "Like the project's universal remote."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "php artisan make:model Termi -mc\nphp artisan migrate"
+      },
+      "related": [
+        "laravel",
+        "dotnet-cli",
+        "laravel-migrations"
+      ]
+    },
+    {
+      "id": "laravel-routes",
+      "en": "Routes in Laravel",
+      "sq": "Rrugët në Laravel",
+      "aliases": [
+        "route::get",
+        "routes/web.php",
+        "laravel route"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Te routes/web.php vendos cila adresë çon te cili kod: Route::get(\"/terma/{id}\", ...). Mund t'u japësh emra rrugëve, t'i gruponi dhe t'u shtosh middleware.",
+        "en": "In routes/web.php you decide which address leads to which code: Route::get(\"/terms/{id}\", ...). You can name routes, group them and add middleware."
+      },
+      "analogy": {
+        "sq": "Si tabelat në korridorin e shkollës që tregojnë cila klasë është ku.",
+        "en": "Like the signs in a school corridor showing which classroom is where."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\nRoute::get(\"/terma/{termi}\", [TermaController::class, \"show\"])->name(\"terma.show\");\nRoute::post(\"/kontakt\", [KontaktController::class, \"store\"]);"
+      },
+      "related": [
+        "routing",
+        "laravel-controllers",
+        "php-routing"
+      ]
+    },
+    {
+      "id": "laravel-controllers",
+      "en": "Controllers in Laravel",
+      "sq": "Kontrollerët në Laravel",
+      "aliases": [
+        "laravel controller",
+        "make:controller",
+        "resource controller"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Një controller në Laravel mbledh kodin për një pjesë të faqes — p.sh. TermaController me metoda index, show, store. Merr kërkesën, flet me modelin dhe kthen një view ose JSON.",
+        "en": "A Laravel controller groups the code for one part of the site — e.g. TermsController with index, show and store methods. It takes the request, talks to the model and returns a view or JSON."
+      },
+      "analogy": {
+        "sq": "Si kamerieri: merr porosinë, ia çon kuzhinës, sjell pjatën.",
+        "en": "Like a waiter: takes the order, passes it to the kitchen, brings the plate."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "class TermaController extends Controller {\n  public function show(Termi $termi) {\n    return view(\"terma.show\", [\"termi\" => $termi]);\n  }\n}"
+      },
+      "related": [
+        "mvc",
+        "laravel-routes",
+        "aspnet-controllers"
+      ]
+    },
+    {
+      "id": "eloquent",
+      "en": "Eloquent ORM",
+      "sq": null,
+      "aliases": [
+        "eloquent",
+        "eloquent model",
+        "laravel orm"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Eloquent-i është ORM-ja e Laravel-it: çdo tabelë ka një model (Termi), dhe me të lexon dhe shkruan në databazë pa SQL — Termi::where(\"kategoria\", \"php\")->get(). Marrëdhëniet mes tabelave shkruhen si metoda.",
+        "en": "Eloquent is Laravel's ORM: each table has a model (Term), and you read and write the database without SQL — Term::where(\"category\", \"php\")->get(). Relationships between tables are written as methods."
+      },
+      "analogy": {
+        "sq": "Si sekretari që i kthen letrat e tua në formularët zyrtarë.",
+        "en": "Like a secretary who turns your letters into official forms."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\n$termat = Termi::where(\"kategoria\", \"php\")->orderBy(\"emri\")->get();\n$termi = Termi::findOrFail($id);\n$termi->update([\"emri\" => \"PDO\"]);"
+      },
+      "related": [
+        "orm",
+        "entity-framework",
+        "laravel-relationships"
+      ]
+    },
+    {
+      "id": "laravel-relationships",
+      "en": "Eloquent relationships",
+      "sq": "Marrëdhëniet në Eloquent",
+      "aliases": [
+        "hasmany",
+        "belongsto",
+        "belongstomany",
+        "eager loading",
+        "with()"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Në Eloquent, lidhjet mes tabelave shkruhen si metoda: hasMany (një kategori ka shumë terma), belongsTo (një term i përket një kategorie), belongsToMany. Me with() i ngarkon bashkë dhe shmang problemin „N+1 query“.",
+        "en": "In Eloquent, links between tables are written as methods: hasMany (a category has many terms), belongsTo (a term belongs to a category), belongsToMany. With with() you load them together and avoid the “N+1 query” problem."
+      },
+      "analogy": {
+        "sq": "Si pema familjare: prindër, fëmijë, kushërinj — të lidhur me vija.",
+        "en": "Like a family tree: parents, children, cousins — joined by lines."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\nclass Kategoria extends Model {\n  public function termat() { return $this->hasMany(Termi::class); }\n}\n$kategorite = Kategoria::with(\"termat\")->get();"
+      },
+      "related": [
+        "table-relationships",
+        "eloquent",
+        "foreign-key"
+      ]
+    },
+    {
+      "id": "blade",
+      "en": "Blade templates",
+      "sq": "Template-t Blade",
+      "aliases": [
+        "blade",
+        ".blade.php",
+        "@foreach",
+        "{{ }}"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Blade-i është motori i template-ve i Laravel-it: shkruan HTML me {{ $emri }} (që e mbron vetë nga XSS), @if, @foreach dhe @extends për faqe me të njëjtin skelet.",
+        "en": "Blade is Laravel's template engine: you write HTML with {{ $name }} (which escapes it automatically against XSS), @if, @foreach and @extends for pages sharing the same layout."
+      },
+      "analogy": {
+        "sq": "Si një letër e shtypur me vende bosh që plotësohen vetë.",
+        "en": "Like a printed letter with blanks that fill themselves in."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "@extends(\"layouts.app\")\n@section(\"main\")\n  @foreach ($termat as $t) <li>{{ $t->emri }}</li> @endforeach\n@endsection"
+      },
+      "related": [
+        "php-templates",
+        "php-htmlspecialchars",
+        "laravel"
+      ]
+    },
+    {
+      "id": "laravel-migrations",
+      "en": "Migrations in Laravel",
+      "sq": "Migrimet në Laravel",
+      "aliases": [
+        "laravel migration",
+        "schema::create",
+        "php artisan migrate"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Migrimet në Laravel e përshkruajnë strukturën e databazës me kod PHP — çdo ndryshim (tabelë e re, kolonë e re) është një skedar. php artisan migrate i zbaton të gjitha, njësoj në çdo kompjuter.",
+        "en": "Laravel migrations describe the database structure in PHP code — every change (new table, new column) is a file. php artisan migrate applies them all, the same on every computer."
+      },
+      "analogy": {
+        "sq": "Si plani i rinovimit të shtëpisë, hap pas hapi.",
+        "en": "Like a house renovation plan, step by step."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "Schema::create(\"terma\", function (Blueprint $t) {\n  $t->id();\n  $t->string(\"emri\");\n  $t->timestamps();\n});"
+      },
+      "related": [
+        "migration",
+        "artisan",
+        "ef-migrations"
+      ]
+    },
+    {
+      "id": "laravel-seeders-factories",
+      "en": "Seeders & factories (Laravel)",
+      "sq": null,
+      "aliases": [
+        "seeder",
+        "factory laravel",
+        "db:seed",
+        "faker"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Factories krijojnë të dhëna false realiste (emra, email-e) për teste dhe zhvillim, dhe seeders i mbushin tabelat me to. php artisan db:seed të jep një databazë plot për të provuar.",
+        "en": "Factories create realistic fake data (names, emails) for tests and development, and seeders fill the tables with it. php artisan db:seed gives you a full database to try things on."
+      },
+      "analogy": {
+        "sq": "Si dyqani i lodrave me ushqim plastik: duket i vërtetë, për të luajtur.",
+        "en": "Like a toy shop's plastic food: looks real, made for playing."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\nNxenes::factory()->count(30)->create();"
+      },
+      "related": [
+        "seed-data",
+        "laravel-migrations",
+        "testing"
+      ]
+    },
+    {
+      "id": "laravel-middleware",
+      "en": "Middleware in Laravel",
+      "sq": "Middleware në Laravel",
+      "aliases": [
+        "laravel middleware",
+        "auth middleware",
+        "->middleware("
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Middleware në Laravel është kod që ekzekutohet para ose pas çdo kërkese — p.sh. auth kontrollon nëse përdoruesi është i kyçur dhe e çon te faqja e hyrjes nëse s'është.",
+        "en": "Middleware in Laravel is code that runs before or after each request — e.g. auth checks the user is logged in and sends them to the login page if not."
+      },
+      "analogy": {
+        "sq": "Si kontrollet në aeroport para se të hipësh në avion.",
+        "en": "Like airport checks before you board the plane."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\nRoute::get(\"/paneli\", [PaneliController::class, \"index\"])->middleware(\"auth\");"
+      },
+      "related": [
+        "middleware",
+        "authentication",
+        "laravel-routes"
+      ]
+    },
+    {
+      "id": "laravel-validation",
+      "en": "Validation in Laravel",
+      "sq": "Validimi në Laravel",
+      "aliases": [
+        "validate",
+        "form request",
+        "validation rules"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Laravel-i e bën validimin shumë të lehtë: $request->validate([\"email\" => \"required|email\"]). Po dështoi, e kthen vetë përdoruesin te formulari me mesazhet e gabimit.",
+        "en": "Laravel makes validation very easy: $request->validate([\"email\" => \"required|email\"]). If it fails, it sends the user back to the form with the error messages automatically."
+      },
+      "analogy": {
+        "sq": "Si sekretaria që ta kthen formularin me shënime ku ke gabuar.",
+        "en": "Like a secretary handing your form back with notes on what's wrong."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\n$te_dhenat = $request->validate([\n  \"emri\" => \"required|max:50\",\n  \"email\" => \"required|email|unique:perdoruesit\",\n]);"
+      },
+      "related": [
+        "form-validation",
+        "input-validation",
+        "laravel-controllers"
+      ]
+    },
+    {
+      "id": "laravel-env-config",
+      "en": ".env & config in Laravel",
+      "sq": "Konfigurimi në Laravel",
+      "aliases": [
+        "laravel .env",
+        "config()",
+        "env()",
+        "app_key"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Laravel-i i mban sekretet dhe cilësimet në skedarin .env (fjalëkalimi i databazës, APP_KEY), dhe kodi i lexon përmes config(). .env s'ngarkohet kurrë në Git — çdo server ka të vetin.",
+        "en": "Laravel keeps secrets and settings in the .env file (the database password, APP_KEY), and code reads them through config(). .env is never committed to Git — every server has its own."
+      },
+      "analogy": {
+        "sq": "Si çelësat e shtëpisë që s'i varë te dera.",
+        "en": "Like house keys you don't hang on the door."
+      },
+      "code": {
+        "language": "text",
+        "snippet": "APP_ENV=local\nDB_DATABASE=fjalori\nDB_PASSWORD=sekret"
+      },
+      "related": [
+        "environment-variable",
+        "secrets-management",
+        "dotenv"
+      ]
+    },
+    {
+      "id": "laravel-tinker",
+      "en": "Tinker",
+      "sq": null,
+      "aliases": [
+        "php artisan tinker",
+        "tinker laravel"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "php artisan tinker hap një terminal interaktiv brenda aplikacionit tënd Laravel: provon query, krijon modele, teston funksione — pa shkruar faqe.",
+        "en": "php artisan tinker opens an interactive terminal inside your Laravel app: try queries, create models, test functions — without writing a page."
+      },
+      "analogy": {
+        "sq": "Si fleta e provës në provim.",
+        "en": "Like scrap paper in an exam."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "php artisan tinker\n>>> App\\Models\\Termi::count()\n=> 1520"
+      },
+      "related": [
+        "repl",
+        "artisan",
+        "jshell"
+      ]
+    },
+    {
+      "id": "laravel-auth",
+      "en": "Authentication in Laravel (Breeze, Sanctum)",
+      "sq": "Hyrja e përdoruesve në Laravel",
+      "aliases": [
+        "laravel breeze",
+        "sanctum",
+        "jetstream",
+        "fortify",
+        "laravel login"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Laravel-i ka paketa të gatshme për llogari përdoruesish: Breeze të jep regjistrim, hyrje dhe rivendosje fjalëkalimi në pak minuta; Sanctum jep token-a për API dhe aplikacione mobile.",
+        "en": "Laravel has ready-made packages for user accounts: Breeze gives you registration, login and password reset in minutes; Sanctum provides tokens for APIs and mobile apps."
+      },
+      "analogy": {
+        "sq": "Si sistemi i kartave të hyrjes në një ndërtesë: ekziston gati, s'e shpik vetë.",
+        "en": "Like a building's keycard system: it's ready, you don't invent it."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "composer require laravel/breeze --dev\nphp artisan breeze:install"
+      },
+      "related": [
+        "authentication",
+        "token",
+        "aspnet-identity"
+      ]
+    },
+    {
+      "id": "laravel-queues",
+      "en": "Queues & jobs in Laravel",
+      "sq": "Radhët në Laravel",
+      "aliases": [
+        "laravel queue",
+        "job laravel",
+        "dispatch",
+        "horizon"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Punët e ngadalta — dërgimi i email-eve, përpunimi i fotove — Laravel-i i fut në një radhë që i kryen në sfond, që përdoruesi të mos presë. E nis me dispatch(), dhe php artisan queue:work i ekzekuton.",
+        "en": "Slow jobs — sending emails, processing photos — Laravel puts on a queue that handles them in the background, so the user doesn't wait. You start one with dispatch(), and php artisan queue:work runs them."
+      },
+      "analogy": {
+        "sq": "Si porositë në kuzhinën e restorantit: kamerieri s'pret te soba, vazhdon me klientët e tjerë.",
+        "en": "Like orders in a restaurant kitchen: the waiter doesn't stand by the stove, they serve other tables."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\nDergoEmailMireseardhje::dispatch($perdoruesi);"
+      },
+      "related": [
+        "message-queue",
+        "asynchronous",
+        "cron-job"
+      ]
+    },
+    {
+      "id": "laravel-collections",
+      "en": "Collections in Laravel",
+      "sq": "Koleksionet në Laravel",
+      "aliases": [
+        "collect()",
+        "laravel collection",
+        "pluck"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Koleksionet e Laravel-it e mbështjellin një array dhe të japin metoda zinxhir si map, filter, sortBy, pluck dhe groupBy — shumë më të lexueshme se funksionet array_ të PHP-së. Eloquent-i kthen gjithmonë koleksione.",
+        "en": "Laravel collections wrap an array and give you chainable methods like map, filter, sortBy, pluck and groupBy — much more readable than PHP's array_ functions. Eloquent always returns collections."
+      },
+      "analogy": {
+        "sq": "Si një linjë prodhimi ku produktet kalojnë nga një stacion te tjetri.",
+        "en": "Like a production line where products pass from one station to the next."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\n$emrat = collect($nxenesit)\n  ->filter(fn($n) => $n[\"nota\"] >= 4)\n  ->sortBy(\"emri\")\n  ->pluck(\"emri\");"
+      },
+      "related": [
+        "array-methods",
+        "linq",
+        "php-array-functions"
+      ]
+    },
+    {
+      "id": "livewire",
+      "en": "Livewire",
+      "sq": null,
+      "aliases": [
+        "laravel livewire",
+        "livewire component"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Livewire-i të lejon të ndërtosh faqe interaktive në Laravel duke shkruar vetëm PHP — butonat, kërkimi live dhe formularët përditësohen pa ringarkim, pa shkruar JavaScript.",
+        "en": "Livewire lets you build interactive pages in Laravel writing only PHP — buttons, live search and forms update without reloading, without writing JavaScript."
+      },
+      "analogy": {
+        "sq": "Si të flasësh shqip në një vend të huaj dhe të të kuptojnë të gjithë falë një përkthyesi në xhep.",
+        "en": "Like speaking your own language abroad and being understood thanks to a pocket translator."
+      },
+      "code": null,
+      "related": [
+        "laravel",
+        "blazor",
+        "spa"
+      ]
+    },
+    {
+      "id": "inertia",
+      "en": "Inertia.js",
+      "sq": null,
+      "aliases": [
+        "inertia",
+        "inertiajs",
+        "laravel vue",
+        "laravel react"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Inertia.js e lidh Laravel-in në backend me React ose Vue në frontend, pa pasur nevojë për API të veçantë. Kontrolleri kthen të dhënat, dhe komponenti JavaScript i shfaq si SPA.",
+        "en": "Inertia.js connects Laravel on the backend with React or Vue on the frontend, without needing a separate API. The controller returns data, and the JavaScript component displays it as an SPA."
+      },
+      "analogy": {
+        "sq": "Si një urë e drejtpërdrejtë mes kuzhinës dhe sallës, pa pasur nevojë për kamerier.",
+        "en": "Like a direct bridge between the kitchen and the dining room, no waiter needed."
+      },
+      "code": null,
+      "related": [
+        "laravel",
+        "react",
+        "vue"
+      ]
+    },
+    {
+      "id": "wordpress-development",
+      "en": "WordPress development (themes & plugins)",
+      "sq": "Zhvillimi në WordPress",
+      "aliases": [
+        "wordpress theme",
+        "wordpress plugin",
+        "wp",
+        "functions.php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "WordPress-i është shkruar në PHP. Zhvilluesit krijojnë „tema“ (pamja e faqes) dhe „plugin-e“ (veçori shtesë) në PHP. Shumë punë freelance dhe agjenci në rajon merren me WordPress.",
+        "en": "WordPress is written in PHP. Developers build “themes” (how the site looks) and “plugins” (extra features) in PHP. Lots of freelance and agency work in the region involves WordPress."
+      },
+      "analogy": {
+        "sq": "Si një shtëpi e parafabrikuar: tema është ngjyra dhe mobiljet, plugin-et janë pajisjet shtesë.",
+        "en": "Like a prefab house: the theme is the paint and furniture, plugins are the extra appliances."
+      },
+      "code": null,
+      "related": [
+        "cms-wordpress",
+        "wordpress-hooks",
+        "woocommerce"
+      ]
+    },
+    {
+      "id": "wordpress-hooks",
+      "en": "WordPress hooks (actions & filters)",
+      "sq": "Hook-et e WordPress-it",
+      "aliases": [
+        "add_action",
+        "add_filter",
+        "wordpress hook",
+        "do_action"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Hook-et janë mënyra si plugin-et ndryshojnë WordPress-in pa e prekur kodin e tij: add_action() ekzekuton kodin tënd në një moment të caktuar, add_filter() e ndryshon një vlerë para se të shfaqet.",
+        "en": "Hooks are how plugins change WordPress without touching its code: add_action() runs your code at a certain moment, add_filter() changes a value before it's shown."
+      },
+      "analogy": {
+        "sq": "Si njoftimet e shkollës: „kur bie zilja e pushimit, hap kantinën“.",
+        "en": "Like school announcements: “when the break bell rings, open the canteen”."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\nadd_filter(\"the_title\", fn($titulli) => \"★ \" . $titulli);\nadd_action(\"wp_footer\", fn() => print(\"<p>Krijuar nga ScalarCode</p>\"));"
+      },
+      "related": [
+        "wordpress-development",
+        "event",
+        "pub-sub"
+      ]
+    },
+    {
+      "id": "woocommerce",
+      "en": "WooCommerce",
+      "sq": null,
+      "aliases": [
+        "woo",
+        "woocommerce shop",
+        "online shop wordpress"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "WooCommerce-i është plugin-i që e kthen WordPress-in në dyqan online: produkte, shportë, pagesa dhe porosi. Shumë dyqane të vogla online në Shqipëri dhe Kosovë e përdorin.",
+        "en": "WooCommerce is the plugin that turns WordPress into an online shop: products, cart, payments and orders. Many small online shops in Albania and Kosovo use it."
+      },
+      "analogy": {
+        "sq": "Si t'i shtosh një arkë dhe rafte një shtëpie që e ke kthyer në dyqan.",
+        "en": "Like adding a till and shelves to a house you've turned into a shop."
+      },
+      "code": null,
+      "related": [
+        "wordpress-development",
+        "cms-wordpress",
+        "plugin-php"
+      ]
+    },
+    {
+      "id": "plugin-php",
+      "en": "Plugins & packages in PHP projects",
+      "sq": "Plugin-et në PHP",
+      "aliases": [
+        "plugin",
+        "extension php",
+        "php extension",
+        "pecl"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Në botën e PHP-së, „plugin“ zakonisht do të thotë shtesë për një CMS si WordPress-i, ndërsa „extension“ është një modul i vetë PHP-së (si pdo_mysql ose gd për fotot) që aktivizohet te php.ini.",
+        "en": "In the PHP world, a “plugin” usually means an add-on for a CMS like WordPress, while an “extension” is a module of PHP itself (like pdo_mysql or gd for images) enabled in php.ini."
+      },
+      "analogy": {
+        "sq": "Si aksesorët e telefonit dhe aplikacionet brenda tij.",
+        "en": "Like phone accessories and the apps inside it."
+      },
+      "code": null,
+      "related": [
+        "wordpress-development",
+        "php-ini",
+        "composer"
+      ]
+    },
+    {
+      "id": "symfony",
+      "en": "Symfony",
+      "sq": null,
+      "aliases": [
+        "symfony framework",
+        "symfony php",
+        "doctrine"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Symfony-ja është framework-u i dytë më i madh i PHP-së, shumë i strukturuar dhe i përdorur në projekte të mëdha korporative. Shumë pjesë të Laravel-it janë ndërtuar mbi komponentët e Symfony-së. ORM-ja e saj quhet Doctrine.",
+        "en": "Symfony is PHP's second-biggest framework, very structured and used in big enterprise projects. Many parts of Laravel are built on Symfony components. Its ORM is called Doctrine."
+      },
+      "analogy": {
+        "sq": "Si një fabrikë e madhe me procese të rrepta, krahasuar me një punishte më fleksibile.",
+        "en": "Like a big factory with strict processes, compared with a more flexible workshop."
+      },
+      "code": null,
+      "related": [
+        "laravel",
+        "spring-boot",
+        "framework"
+      ]
+    },
+    {
+      "id": "codeigniter",
+      "en": "CodeIgniter & other PHP frameworks",
+      "sq": null,
+      "aliases": [
+        "codeigniter",
+        "yii",
+        "cakephp",
+        "slim php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Përveç Laravel-it dhe Symfony-së, ka framework-e më të vogla PHP si CodeIgniter, Yii, CakePHP dhe Slim. CodeIgniter-i është i lehtë dhe ende përdoret në shumë projekte të vjetra dhe kurse.",
+        "en": "Besides Laravel and Symfony, there are smaller PHP frameworks like CodeIgniter, Yii, CakePHP and Slim. CodeIgniter is lightweight and still used in many older projects and courses."
+      },
+      "analogy": {
+        "sq": "Si markat më të vogla të veturave që të çojnë njësoj në destinacion.",
+        "en": "Like smaller car brands that get you there just the same."
+      },
+      "code": null,
+      "related": [
+        "laravel",
+        "symfony",
+        "framework"
+      ]
+    },
+    {
+      "id": "drupal",
+      "en": "Drupal & Joomla",
+      "sq": null,
+      "aliases": [
+        "drupal",
+        "joomla"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Drupal-i dhe Joomla janë CMS të tjera të shkruara në PHP, alternativa të WordPress-it. Drupal-i përdoret shpesh nga institucione dhe qeveri për faqe të mëdha me shumë përmbajtje.",
+        "en": "Drupal and Joomla are other CMSs written in PHP, alternatives to WordPress. Drupal is often used by institutions and governments for big content-heavy sites."
+      },
+      "analogy": {
+        "sq": "Si dy shtëpi botuese të tjera përveç më të madhes.",
+        "en": "Like two other publishing houses besides the biggest one."
+      },
+      "code": null,
+      "related": [
+        "cms-wordpress",
+        "wordpress-development",
+        "symfony"
+      ]
+    },
+    {
+      "id": "guzzle",
+      "en": "Guzzle (HTTP client)",
+      "sq": null,
+      "aliases": [
+        "guzzle",
+        "http client php",
+        "curl php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Guzzle-i është libraria më e përdorur e PHP-së për të bërë kërkesa HTTP te API të tjera — si fetch-i në JavaScript. Laravel-i ka një shkurtesë të thjeshtë mbi të: Http::get().",
+        "en": "Guzzle is PHP's most-used library for making HTTP requests to other APIs — like fetch in JavaScript. Laravel has a simple shortcut on top of it: Http::get()."
+      },
+      "analogy": {
+        "sq": "Si korrieri që shkon te një adresë dhe të sjell pakon.",
+        "en": "Like a courier who goes to an address and brings you the parcel."
+      },
+      "code": {
+        "language": "php",
+        "snippet": "<?php\n$pergjigja = Http::get(\"https://fjalori.dev/data/terms.json\");\n$termat = $pergjigja->json(\"terms\");"
+      },
+      "related": [
+        "fetch",
+        "httpclient",
+        "axios"
+      ]
+    },
+    {
+      "id": "php-mail",
+      "en": "Sending email in PHP (PHPMailer)",
+      "sq": "Dërgimi i email-eve në PHP",
+      "aliases": [
+        "phpmailer",
+        "mail()",
+        "symfony mailer",
+        "smtp php"
+      ],
+      "category": "php",
+      "explanation": {
+        "sq": "Funksioni mail() i PHP-së është i thjeshtë, por email-et shpesh përfundojnë te spam-i. Për email të besueshëm përdoret PHPMailer ose Symfony Mailer me një server SMTP — ose Mail-i i Laravel-it.",
+        "en": "PHP's mail() function is simple, but the emails often end up in spam. For reliable email, use PHPMailer or Symfony Mailer with an SMTP server — or Laravel's Mail."
+      },
+      "analogy": {
+        "sq": "Si ta dërgosh letrën me postë rekomande në vend që ta hedhësh në një kuti çfarëdo.",
+        "en": "Like sending a letter by registered post instead of dropping it in any old box."
+      },
+      "code": null,
+      "related": [
+        "email-protocols",
+        "php-forms",
+        "laravel-queues"
       ]
     }
   ]
