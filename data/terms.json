@@ -118,6 +118,19 @@
       }
     },
     {
+      "id": "typescript",
+      "icon": "TS",
+      "hue": 198,
+      "name": {
+        "sq": "TypeScript",
+        "en": "TypeScript"
+      },
+      "description": {
+        "sq": "JavaScript me tipe: gabimet i kap editori ndërsa shkruan, jo përdoruesi në shfletues. Gjuha më e përdorur në GitHub sot.",
+        "en": "JavaScript with types: your editor catches mistakes while you type, not your users in the browser. The most-used language on GitHub today."
+      }
+    },
+    {
       "id": "databases",
       "icon": "db",
       "hue": 30,
@@ -3088,7 +3101,7 @@
       "aliases": [
         "ts"
       ],
-      "category": "web",
+      "category": "typescript",
       "explanation": {
         "sq": "TypeScript-i është JavaScript me tipe: i thua paraprakisht nëse një variabël është numër, tekst etj. Kështu shumë gabime kapen që kur e shkruan kodin, para se ta ekzekutosh.",
         "en": "TypeScript is JavaScript with types: you say in advance whether a variable is a number, text and so on. That way many mistakes are caught while you type, before you even run the code."
@@ -30937,10 +30950,9 @@
       "aliases": [
         "interface ts",
         "type alias ts",
-        "ts types",
-        "union type"
+        "ts types"
       ],
-      "category": "javascript",
+      "category": "typescript",
       "explanation": {
         "sq": "Në TypeScript përshkruan formën e të dhënave me interface ose type: interface Termi { id: string; sq: string | null }. Pastaj editori të paralajmëron që në shkrim po harrove një fushë ose ngatërrove një tip.",
         "en": "In TypeScript you describe the shape of data with interface or type: interface Term { id: string; sq: string | null }. Then the editor warns you while typing if you forget a field or mix up a type."
@@ -37436,6 +37448,1374 @@
         "disaster-recovery",
         "availability-zone",
         "load-testing"
+      ]
+    },
+    {
+      "id": "type-annotations",
+      "en": "Type annotations",
+      "sq": "Shënimet e tipeve",
+      "aliases": [
+        "type annotation",
+        ": string",
+        ": number"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Në TypeScript e shënon tipin e një variable ose parametri me dy pika: let emri: string. Po provove t'i japësh një numër, editori të paralajmëron menjëherë — para se ta ekzekutosh kodin.",
+        "en": "In TypeScript you mark the type of a variable or parameter with a colon: let name: string. If you try to give it a number, the editor warns you straight away — before you even run the code."
+      },
+      "analogy": {
+        "sq": "Si etiketat në kavanozët e kuzhinës: po shkruan „sheqer“, s'fut kripë brenda pa e vënë re.",
+        "en": "Like labels on kitchen jars: if it says “sugar”, you won't pour salt in without noticing."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "let emri: string = \"Arta\";\nlet mosha: number = 16;\nfunction pershendet(e: string): string { return \"Tung, \" + e; }\n// mosha = \"gjashtëmbëdhjetë\";  // Gabim!"
+      },
+      "related": [
+        "typescript",
+        "type-inference-ts",
+        "static-dynamic-typing"
+      ]
+    },
+    {
+      "id": "type-inference-ts",
+      "en": "Type inference (TypeScript)",
+      "sq": "Nxjerrja e tipeve",
+      "aliases": [
+        "inferred type",
+        "infer type"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "S'ke pse e shkruan tipin kudo: TypeScript-i e kupton vetë nga vlera. const n = 5 është number, dhe [1, 2].map(x => x * 2) është number[]. Shënimet i shkruan kryesisht te parametrat e funksioneve.",
+        "en": "You don't have to write the type everywhere: TypeScript works it out from the value. const n = 5 is a number, and [1, 2].map(x => x * 2) is number[]. You mostly write annotations on function parameters."
+      },
+      "analogy": {
+        "sq": "Si kamerieri që e kupton nga gota se po pi kafe, pa ta pyetur.",
+        "en": "Like a waiter who can tell from the cup that you're drinking coffee, without asking."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "const emri = \"Arta\";          // string\nconst notat = [5, 4, 3];      // number[]\nconst mesatarja = notat.reduce((a, b) => a + b) / notat.length;  // number"
+      },
+      "related": [
+        "type-annotations",
+        "var-csharp",
+        "auto-keyword"
+      ]
+    },
+    {
+      "id": "any-type",
+      "en": "any",
+      "sq": null,
+      "aliases": [
+        "any type",
+        ": any"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "any i thotë TypeScript-it „mos e kontrollo këtë“ — çdo gjë lejohet. Është dera e emergjencës kur kalon kod të vjetër JavaScript, por po e përdor kudo, humbet arsyen pse përdor TypeScript.",
+        "en": "any tells TypeScript “don't check this” — anything goes. It's the emergency exit when moving old JavaScript code over, but use it everywhere and you lose the whole point of TypeScript."
+      },
+      "analogy": {
+        "sq": "Si roja që i lë të gjithë të hyjnë pa biletë: e lehtë, por pse ke roje atëherë?",
+        "en": "Like a steward letting everyone in without a ticket: easy, but then why have a steward?"
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "let x: any = 5;\nx.fluturo();   // s'jep gabim… deri sa të rrëzohet në shfletues"
+      },
+      "related": [
+        "unknown-type",
+        "strict-mode-ts",
+        "gradual-typing"
+      ]
+    },
+    {
+      "id": "unknown-type",
+      "en": "unknown",
+      "sq": null,
+      "aliases": [
+        "unknown type",
+        ": unknown"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "unknown është versioni i sigurt i any: mund të mbajë çdo vlerë, por s'të lejon ta përdorësh derisa ta kontrollosh se çfarë është. Ideal për të dhëna që vijnë nga jashtë, si JSON nga një API.",
+        "en": "unknown is the safe version of any: it can hold any value, but won't let you use it until you check what it is. Ideal for data from outside, like JSON from an API."
+      },
+      "analogy": {
+        "sq": "Si një pako pa etiketë: e pranon, por s'e hap pa e kontrolluar më parë.",
+        "en": "Like an unlabelled parcel: you accept it, but you don't open it without checking it first."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "const v: unknown = JSON.parse(teksti);\nif (typeof v === \"string\") console.log(v.toUpperCase());   // tani lejohet"
+      },
+      "related": [
+        "any-type",
+        "type-narrowing",
+        "zod"
+      ]
+    },
+    {
+      "id": "never-type",
+      "en": "never",
+      "sq": null,
+      "aliases": [
+        "never type",
+        ": never"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "never është tipi i vlerave që s'ndodhin kurrë — p.sh. një funksion që gjithmonë hedh gabim. Përdoret shumë për të kontrolluar që i ke trajtuar të gjitha rastet e një union-i: po harrove një, TypeScript-i ankohet.",
+        "en": "never is the type of values that never happen — e.g. a function that always throws. It's used a lot to check you've handled every case of a union: forget one and TypeScript complains."
+      },
+      "analogy": {
+        "sq": "Si kutia „asgjë“ në formular: nëse dikush e plotëson, diçka ka shkuar keq.",
+        "en": "Like a “none of these” box that should never be ticked: if someone ticks it, something's wrong."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "function gabim(msg: string): never {\n  throw new Error(msg);\n}"
+      },
+      "related": [
+        "discriminated-unions",
+        "union-types",
+        "exceptions-csharp"
+      ]
+    },
+    {
+      "id": "union-types",
+      "en": "Union types (A | B)",
+      "sq": "Tipet union",
+      "aliases": [
+        "string | number",
+        "union type"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Një union type thotë „kjo vlerë mund të jetë njëra nga këto“: string | number, ose \"sq\" | \"en\". Përpara se ta përdorësh, TypeScript-i të detyron të kontrollosh cila është.",
+        "en": "A union type says “this value can be one of these”: string | number, or \"sq\" | \"en\". Before you use it, TypeScript makes you check which one it is."
+      },
+      "analogy": {
+        "sq": "Si menyja „pije: kafe ose çaj“ — kamerieri duhet ta dijë cilën po sjell.",
+        "en": "Like a menu saying “drink: coffee or tea” — the waiter has to know which one they're bringing."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "let id: string | number;\nid = \"a1\"; id = 42;       // të dyja lejohen\n// id = true;             // Gabim"
+      },
+      "related": [
+        "literal-types",
+        "type-narrowing",
+        "intersection-types"
+      ]
+    },
+    {
+      "id": "intersection-types",
+      "en": "Intersection types (A & B)",
+      "sq": "Tipet intersection",
+      "aliases": [
+        "intersection",
+        "a & b"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Një intersection type (A & B) i bashkon dy tipe: objekti duhet të ketë të gjitha fushat e të dyve. P.sh. Personi & Studenti ka edhe emrin, edhe numrin e studentit.",
+        "en": "An intersection type (A & B) combines two types: the object must have all the fields of both. E.g. Person & Student has both a name and a student number."
+      },
+      "analogy": {
+        "sq": "Si dikush që është edhe lojtar, edhe kapiten: ka detyrat e të dyjave.",
+        "en": "Like someone who's both a player and the captain: they have the duties of both."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "type Personi = { emri: string };\ntype Studenti = { nrStudenti: number };\nconst arta: Personi & Studenti = { emri: \"Arta\", nrStudenti: 1042 };"
+      },
+      "related": [
+        "union-types",
+        "ts-interface-type",
+        "inheritance"
+      ]
+    },
+    {
+      "id": "literal-types",
+      "en": "Literal types",
+      "sq": "Tipet literal",
+      "aliases": [
+        "literal type",
+        "string literal type"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Një tip literal lejon vetëm një vlerë të saktë — p.sh. \"sq\" ose 404. Bashkë me union, krijon lista të mbyllura vlerash: type Gjuha = \"sq\" | \"en\". Shkruan gabim „sk“ dhe editori të ndal.",
+        "en": "A literal type allows only one exact value — e.g. \"sq\" or 404. Combined with unions, it makes closed lists of values: type Language = \"sq\" | \"en\". Type “sk” by mistake and the editor stops you."
+      },
+      "analogy": {
+        "sq": "Si kutitë e votimit me vetëm dy opsione: s'mund të shkruash emrin tënd në vend.",
+        "en": "Like a ballot with just two options: you can't write in your own name."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "type Gjuha = \"sq\" | \"en\";\nlet g: Gjuha = \"sq\";\n// g = \"sk\";   // Gabim: s'është \"sq\" ose \"en\""
+      },
+      "related": [
+        "union-types",
+        "enums-ts",
+        "as-const"
+      ]
+    },
+    {
+      "id": "type-narrowing",
+      "en": "Type narrowing",
+      "sq": "Ngushtimi i tipit",
+      "aliases": [
+        "narrowing",
+        "typeof guard",
+        "control flow analysis"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Kur kontrollon një vlerë me typeof, instanceof, in ose ===, TypeScript-i e „ngushton“ tipin brenda atij blloku. Pas if (typeof x === \"string\"), di që x është string dhe të lejon metodat e tekstit.",
+        "en": "When you check a value with typeof, instanceof, in or ===, TypeScript “narrows” its type inside that block. After if (typeof x === \"string\"), it knows x is a string and lets you use string methods."
+      },
+      "analogy": {
+        "sq": "Si roja që, pasi të sheh kartën e mjekut, të lë të hysh në repart.",
+        "en": "Like a steward who, after seeing your doctor's badge, lets you into the ward."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "function shfaq(v: string | number) {\n  if (typeof v === \"string\") return v.toUpperCase();\n  return v.toFixed(2);   // këtu v është number\n}"
+      },
+      "related": [
+        "typeof",
+        "type-guards",
+        "union-types"
+      ]
+    },
+    {
+      "id": "type-guards",
+      "en": "Type guards (x is T)",
+      "sq": "Mbrojtësit e tipit",
+      "aliases": [
+        "type guard",
+        "type predicate",
+        "is keyword ts"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Një type guard është funksioni yt që kthen true/false dhe i thotë TypeScript-it çfarë tipi është vlera — me sintaksën v is Lojtar. Pas kontrollit, TypeScript-i e trajton vlerën si atë tip.",
+        "en": "A type guard is your own function returning true/false that tells TypeScript what type a value is — with the syntax v is Player. After the check, TypeScript treats the value as that type."
+      },
+      "analogy": {
+        "sq": "Si një test identiteti që, pasi e kalon, të jep kartën e duhur të hyrjes.",
+        "en": "Like an ID check that, once passed, gives you the right access badge."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "function eshteLojtar(x: unknown): x is Lojtar {\n  return typeof x === \"object\" && x !== null && \"emri\" in x;\n}"
+      },
+      "related": [
+        "type-narrowing",
+        "unknown-type",
+        "instanceof"
+      ]
+    },
+    {
+      "id": "discriminated-unions",
+      "en": "Discriminated unions",
+      "sq": "Union-et me etiketë",
+      "aliases": [
+        "tagged union",
+        "discriminated union",
+        "kind field"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Një union me etiketë është një union objektesh që kanë të gjithë një fushë të përbashkët (si lloji: \"rreth\" | \"katror\"). Po e kontrollove atë fushë, TypeScript-i e di saktë cilat fusha të tjera ekzistojnë.",
+        "en": "A discriminated union is a union of objects that all share a common field (like kind: \"circle\" | \"square\"). Check that field and TypeScript knows exactly which other fields exist."
+      },
+      "analogy": {
+        "sq": "Si pakot me ngjyra në postë: nga ngjyra e di menjëherë çfarë ka brenda dhe ku shkon.",
+        "en": "Like colour-coded parcels at the post office: from the colour you instantly know what's inside and where it goes."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "type Forme = { lloji: \"rreth\"; r: number } | { lloji: \"katror\"; a: number };\nfunction siperfaqja(f: Forme) {\n  return f.lloji === \"rreth\" ? Math.PI * f.r ** 2 : f.a ** 2;\n}"
+      },
+      "related": [
+        "union-types",
+        "never-type",
+        "sealed-classes-java"
+      ]
+    },
+    {
+      "id": "optional-properties",
+      "en": "Optional properties (?:)",
+      "sq": "Fushat opsionale",
+      "aliases": [
+        "optional property",
+        "?:",
+        "optional parameter ts"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Me pikëpyetje (telefoni?: string) e shënon një fushë ose parametër si opsional — mund të mungojë. TypeScript-i pastaj të detyron të kontrollosh nëse ekziston para se ta përdorësh.",
+        "en": "With a question mark (phone?: string) you mark a field or parameter as optional — it may be missing. TypeScript then makes you check whether it exists before using it."
+      },
+      "analogy": {
+        "sq": "Si fusha „Telefoni (opsional)“ në formular.",
+        "en": "Like the “Phone (optional)” field on a form."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "interface Nxenes {\n  emri: string;\n  telefoni?: string;\n}\nconst a: Nxenes = { emri: \"Arta\" };   // pa telefon, në rregull"
+      },
+      "related": [
+        "ts-interface-type",
+        "optional-chaining",
+        "strict-null-checks"
+      ]
+    },
+    {
+      "id": "readonly-ts",
+      "en": "readonly (TypeScript)",
+      "sq": null,
+      "aliases": [
+        "readonly ts",
+        "readonly array",
+        "readonlyarray"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "readonly e ndalon ndryshimin e një fushe pasi është caktuar, dhe readonly string[] e ndalon shtimin ose heqjen nga një varg. Kontrollohet vetëm nga TypeScript-i, para ekzekutimit.",
+        "en": "readonly stops a field being changed after it's set, and readonly string[] stops adding to or removing from an array. It's only checked by TypeScript, before running."
+      },
+      "analogy": {
+        "sq": "Si një dokument i laminuar: e lexon, s'shkruan dot mbi të.",
+        "en": "Like a laminated document: you can read it, not write on it."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "interface Termi { readonly id: string; emri: string }\nconst t: Termi = { id: \"api\", emri: \"API\" };\n// t.id = \"x\";   // Gabim: readonly"
+      },
+      "related": [
+        "object-freeze",
+        "const-readonly",
+        "mutable-immutable"
+      ]
+    },
+    {
+      "id": "tuples-ts",
+      "en": "Tuples (TypeScript)",
+      "sq": "Tuple-t në TypeScript",
+      "aliases": [
+        "tuple ts",
+        "[string, number]"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Një tuple është varg me gjatësi dhe tipe të fiksuara për çdo pozicion: [string, number] — p.sh. emri dhe nota. useState i React-it kthen pikërisht një tuple.",
+        "en": "A tuple is an array with a fixed length and fixed types per position: [string, number] — e.g. a name and a grade. React's useState returns exactly such a tuple."
+      },
+      "analogy": {
+        "sq": "Si një çift i fiksuar: gjithmonë emri i pari, nota e dyta.",
+        "en": "Like a fixed pair: always the name first, the grade second."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "const nxenesi: [string, number] = [\"Arta\", 5];\nconst [emri, nota] = nxenesi;"
+      },
+      "related": [
+        "tuple",
+        "destructuring",
+        "react-hooks"
+      ]
+    },
+    {
+      "id": "enums-ts",
+      "en": "Enums (TypeScript)",
+      "sq": "enum në TypeScript",
+      "aliases": [
+        "enum ts",
+        "const enum"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "enum-et e TypeScript-it japin emra për një listë vlerash: enum Ngjyra { Kuqe, Gjelber }. Shumë ekipe sot preferojnë union-et me literal (\"kuqe\" | \"gjelber\") sepse s'shtojnë kod në JavaScript-in final.",
+        "en": "TypeScript enums give names to a list of values: enum Colour { Red, Green }. Many teams today prefer literal unions (\"red\" | \"green\") because they add no code to the final JavaScript."
+      },
+      "analogy": {
+        "sq": "Si madhësitë e pijeve: e vogël, e mesme, e madhe.",
+        "en": "Like drink sizes: small, medium, large."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "enum Statusi { Aktiv = \"aktiv\", Joaktiv = \"joaktiv\" }\nlet s: Statusi = Statusi.Aktiv;"
+      },
+      "related": [
+        "enum",
+        "literal-types",
+        "as-const"
+      ]
+    },
+    {
+      "id": "generics-ts",
+      "en": "Generics (TypeScript)",
+      "sq": "Gjenerikët në TypeScript",
+      "aliases": [
+        "generic ts",
+        "<t> ts",
+        "generic function"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Gjenerikët të lejojnë të shkruash një funksion ose tip që punon me çdo tip, pa humbur kontrollin: function iPari<T>(v: T[]): T. Thirr me numra — kthen number; me tekst — kthen string.",
+        "en": "Generics let you write a function or type that works with any type without losing checking: function first<T>(v: T[]): T. Call it with numbers — it returns a number; with text — a string."
+      },
+      "analogy": {
+        "sq": "Si kallëpi i ëmbëlsirave: i njëjti kallëp, brumë i ndryshëm.",
+        "en": "Like a cake tin: same tin, different batter."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "function iPari<T>(v: T[]): T | undefined {\n  return v[0];\n}\nconst n = iPari([5, 4]);        // number | undefined"
+      },
+      "related": [
+        "java-generics",
+        "generics-csharp",
+        "generic-constraints"
+      ]
+    },
+    {
+      "id": "generic-constraints",
+      "en": "Generic constraints (extends)",
+      "sq": "Kufizimet e gjenerikëve",
+      "aliases": [
+        "t extends",
+        "constraint ts"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Me T extends Diçka e kufizon një gjenerik: „çfarëdo tipi, mjafton të ketë këtë“. P.sh. T extends { length: number } pranon tekste, vargje — çdo gjë me gjatësi.",
+        "en": "With T extends Something you constrain a generic: “any type, as long as it has this”. E.g. T extends { length: number } accepts strings, arrays — anything with a length."
+      },
+      "analogy": {
+        "sq": "Si rregulli „çdo lojtar, mjafton të ketë këpucë futbolli“.",
+        "en": "Like the rule “any player, as long as they have football boots”."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "function meIGjati<T extends { length: number }>(a: T, b: T): T {\n  return a.length >= b.length ? a : b;\n}"
+      },
+      "related": [
+        "generics-ts",
+        "concepts-cpp",
+        "keyof-typeof"
+      ]
+    },
+    {
+      "id": "utility-types",
+      "en": "Utility types (Partial, Pick, Omit, Record)",
+      "sq": "Tipet ndihmëse",
+      "aliases": [
+        "pick",
+        "omit",
+        "returntype"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "TypeScript-i ka tipe të gatshme që krijojnë tipe të reja nga ato ekzistuese: Partial<T> (të gjitha fushat opsionale), Pick<T, \"a\"> (vetëm disa fusha), Omit<T, \"a\"> (pa disa fusha), Record<K, V> (fjalor).",
+        "en": "TypeScript has ready-made types that build new types from existing ones: Partial<T> (all fields optional), Pick<T, \"a\"> (only some fields), Omit<T, \"a\"> (without some fields), Record<K, V> (a dictionary)."
+      },
+      "analogy": {
+        "sq": "Si gërshërët dhe ngjitësi për formularë: merr një formular dhe bën version të shkurtër prej tij.",
+        "en": "Like scissors and glue for forms: take one form and make a shorter version from it."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "interface Nxenes { id: number; emri: string; nota: number }\ntype Perditesim = Partial<Omit<Nxenes, \"id\">>;\nconst notat: Record<string, number> = { Arta: 5 };"
+      },
+      "related": [
+        "mapped-types",
+        "ts-interface-type",
+        "keyof-typeof"
+      ]
+    },
+    {
+      "id": "keyof-typeof",
+      "en": "keyof & typeof (types)",
+      "sq": null,
+      "aliases": [
+        "keyof",
+        "typeof type",
+        "typeof operator ts"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "keyof T jep union-in e emrave të fushave të një tipi („emri“ | „mosha“). typeof në pozicion tipi e merr tipin e një variable ekzistuese. Bashkë, të lejojnë të nxjerrësh tipe nga kodi që ke tashmë.",
+        "en": "keyof T gives the union of a type's field names (\"name\" | \"age\"). typeof in a type position takes the type of an existing variable. Together they let you derive types from code you already have."
+      },
+      "analogy": {
+        "sq": "Si ta marrësh listën e kolonave nga një tabelë ekzistuese në vend që t'i rishkruash.",
+        "en": "Like taking the column list from an existing table instead of rewriting it."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "const konfig = { gjuha: \"sq\", tema: \"dark\" };\ntype Konfig = typeof konfig;        // { gjuha: string; tema: string }\ntype Celesat = keyof Konfig;        // \"gjuha\" | \"tema\""
+      },
+      "related": [
+        "indexed-access-types",
+        "typeof",
+        "utility-types"
+      ]
+    },
+    {
+      "id": "indexed-access-types",
+      "en": "Indexed access types (T[\"key\"])",
+      "sq": "Qasja me indeks në tipe",
+      "aliases": [
+        "indexed access",
+        "lookup type"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Me T[\"emri\"] merr tipin e një fushe të caktuar të një tipi tjetër — si kur lexon një vlerë nga një objekt, por për tipe. Kështu tipet mbeten të sinkronizuara automatikisht.",
+        "en": "With T[\"name\"] you get the type of a specific field of another type — like reading a value from an object, but for types. That way types stay in sync automatically."
+      },
+      "analogy": {
+        "sq": "Si t'i referohesh „kolonës së notave“ në tabelë në vend që të shkruash sërish çfarë lloji janë notat.",
+        "en": "Like referring to “the grades column” in a table instead of restating what grades are."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "interface Termi { id: string; kodi: { gjuha: string } }\ntype Gjuha = Termi[\"kodi\"][\"gjuha\"];   // string"
+      },
+      "related": [
+        "keyof-typeof",
+        "mapped-types",
+        "ts-interface-type"
+      ]
+    },
+    {
+      "id": "mapped-types",
+      "en": "Mapped types",
+      "sq": "Tipet e hartuara",
+      "aliases": [
+        "mapped type",
+        "in keyof"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Një mapped type krijon një tip të ri duke kaluar nëpër çdo fushë të një tipi tjetër dhe duke e ndryshuar — p.sh. duke i bërë të gjitha readonly ose opsionale. Partial dhe Readonly janë ndërtuar kështu.",
+        "en": "A mapped type builds a new type by going through every field of another type and transforming it — e.g. making them all readonly or optional. Partial and Readonly are built this way."
+      },
+      "analogy": {
+        "sq": "Si fotokopjuesi që e kopjon çdo faqe të një dosjeje dhe i vë vulën „KOPJE“ secilës.",
+        "en": "Like a photocopier that copies every page of a folder and stamps “COPY” on each."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "type VetemLexim<T> = { readonly [K in keyof T]: T[K] };\ntype Flamuj<T> = { [K in keyof T]: boolean };"
+      },
+      "related": [
+        "utility-types",
+        "keyof-typeof",
+        "conditional-types"
+      ]
+    },
+    {
+      "id": "conditional-types",
+      "en": "Conditional types",
+      "sq": "Tipet me kusht",
+      "aliases": [
+        "conditional type",
+        "infer",
+        "t extends u ? x : y"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Tipet me kusht zgjedhin një tip sipas një kushti, si ternary-ja: T extends string ? \"tekst\" : \"tjetër\". Me infer mund të „nxjerrësh“ një pjesë të një tipi — p.sh. çfarë kthen një Promise.",
+        "en": "Conditional types pick a type based on a condition, like a ternary: T extends string ? \"text\" : \"other\". With infer you can “pull out” part of a type — e.g. what a Promise resolves to."
+      },
+      "analogy": {
+        "sq": "Si udhëzimi „nëse është paketë e madhe, në sportelin 2; përndryshe në sportelin 1“, por për tipe.",
+        "en": "Like the instruction “if it's a big parcel, counter 2; otherwise counter 1”, but for types."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "type Pershkrim<T> = T extends string ? \"tekst\" : \"tjetër\";\ntype A = Pershkrim<\"Arta\">;          // \"tekst\"\ntype Vlera<T> = T extends Promise<infer V> ? V : T;"
+      },
+      "related": [
+        "mapped-types",
+        "ternary-operator",
+        "generics-ts"
+      ]
+    },
+    {
+      "id": "template-literal-types",
+      "en": "Template literal types",
+      "sq": "Tipet me shabllon teksti",
+      "aliases": [
+        "template literal type",
+        "string template type"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Me tipet me shabllon teksti, ndërton tipe tekstesh nga copa: `btn-${Madhesia}` jep „btn-e-vogel“ | „btn-e-madhe“. Shumë të dobishme për emra eventesh, klasa CSS dhe rrugë API.",
+        "en": "With template literal types you build string types from pieces: `btn-${Size}` gives \"btn-small\" | \"btn-large\". Very handy for event names, CSS classes and API routes."
+      },
+      "analogy": {
+        "sq": "Si fjalët e përbëra me parashtesa: „para-“ + „shiko“ = „parashiko“, por vetëm kombinimet e lejuara.",
+        "en": "Like words built from prefixes: “pre-” + “view” = “preview”, but only the allowed combinations."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "type Madhesia = \"e-vogel\" | \"e-madhe\";\ntype Klasa = `btn-${Madhesia}`;   // \"btn-e-vogel\" | \"btn-e-madhe\""
+      },
+      "related": [
+        "template-literal",
+        "literal-types",
+        "union-types"
+      ]
+    },
+    {
+      "id": "as-const",
+      "en": "as const",
+      "sq": null,
+      "aliases": [
+        "as const",
+        "const assertion"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "as const i thotë TypeScript-it ta trajtojë një vlerë si krejtësisht të pandryshueshme dhe me tipet më të ngushta të mundshme: [\"sq\", \"en\"] as const bëhet readonly [\"sq\", \"en\"], jo string[].",
+        "en": "as const tells TypeScript to treat a value as completely unchangeable and with the narrowest possible types: [\"sq\", \"en\"] as const becomes readonly [\"sq\", \"en\"], not string[]."
+      },
+      "analogy": {
+        "sq": "Si ta gdhendësh listën në gur në vend që ta shkruash me laps.",
+        "en": "Like carving the list in stone instead of writing it in pencil."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "const GJUHET = [\"sq\", \"en\"] as const;\ntype Gjuha = (typeof GJUHET)[number];   // \"sq\" | \"en\""
+      },
+      "related": [
+        "literal-types",
+        "readonly-ts",
+        "keyof-typeof"
+      ]
+    },
+    {
+      "id": "index-signatures",
+      "en": "Index signatures",
+      "sq": "Nënshkrimet me indeks",
+      "aliases": [
+        "index signature",
+        "[key: string]"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Një index signature përshkruan objekte me çelësa që s'i di paraprakisht: { [emri: string]: number } — çdo çelës tekst, çdo vlerë numër. Shpesh Record<string, number> është mënyra më e shkurtër për të njëjtën gjë.",
+        "en": "An index signature describes objects whose keys you don't know in advance: { [name: string]: number } — any string key, any number value. Record<string, number> is often a shorter way to say the same thing."
+      },
+      "analogy": {
+        "sq": "Si një regjistër notash ku mund të shtohen emra të rinj, por çdo notë duhet të jetë numër.",
+        "en": "Like a grade book where new names can be added, but every grade must be a number."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "const notat: { [emri: string]: number } = {};\nnotat[\"Arta\"] = 5;\n// notat[\"Dren\"] = \"pesë\";   // Gabim"
+      },
+      "related": [
+        "utility-types",
+        "dictionary",
+        "js-object-literal"
+      ]
+    },
+    {
+      "id": "type-assertions",
+      "en": "Type assertions (as)",
+      "sq": "Pohimet e tipit",
+      "aliases": [
+        "as keyword",
+        "type assertion",
+        "as htmlinputelement"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Me as i thua TypeScript-it „më beso, e di unë çfarë tipi është“ — p.sh. document.getElementById(\"x\") as HTMLInputElement. S'e kontrollon gjatë ekzekutimit, prandaj po gabove, gabimi del më vonë.",
+        "en": "With as you tell TypeScript “trust me, I know what type this is” — e.g. document.getElementById(\"x\") as HTMLInputElement. It isn't checked at runtime, so if you're wrong the error shows up later."
+      },
+      "analogy": {
+        "sq": "Si t'i thuash rojes „unë jam me grupin“ pa treguar biletën — mund të hysh, por po gënjeve, do ta kuptojnë më vonë.",
+        "en": "Like telling the steward “I'm with the group” without showing a ticket — you get in, but if you lied, they'll find out later."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "const input = document.getElementById(\"kerko\") as HTMLInputElement;\nconsole.log(input.value);"
+      },
+      "related": [
+        "type-guards",
+        "non-null-assertion",
+        "java-casting"
+      ]
+    },
+    {
+      "id": "non-null-assertion",
+      "en": "Non-null assertion (!)",
+      "sq": "Pohimi „s'është null“",
+      "aliases": [
+        "!",
+        "non-null",
+        "definite assignment"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Pikëçuditja pas një vlere (perdoruesi!.emri) i thotë TypeScript-it „jam i sigurt që s'është null ose undefined“. Është i shpejtë, por po gabove, programi rrëzohet — më mirë kontrolloje me if ose ?.",
+        "en": "An exclamation mark after a value (user!.name) tells TypeScript “I'm sure this isn't null or undefined”. It's quick, but if you're wrong the program crashes — better to check with if or ?."
+      },
+      "analogy": {
+        "sq": "Si të kërcesh nga trampolina pa parë nëse ka ujë në pishinë.",
+        "en": "Like jumping off the diving board without checking there's water in the pool."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "const butoni = document.querySelector(\"button\")!;\nbutoni.addEventListener(\"click\", ruaj);"
+      },
+      "related": [
+        "type-assertions",
+        "strict-null-checks",
+        "optional-chaining"
+      ]
+    },
+    {
+      "id": "satisfies-operator",
+      "en": "satisfies",
+      "sq": null,
+      "aliases": [
+        "satisfies operator",
+        "satisfies keyword"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "satisfies kontrollon që një vlerë i përshtatet një tipi, por pa e humbur tipin e saj më të saktë. P.sh. një objekt ngjyrash kontrollohet si Record<string, string>, por TypeScript-i mban mend saktë cilat çelësa ka.",
+        "en": "satisfies checks that a value fits a type without losing its more precise type. E.g. a colours object is checked as Record<string, string>, but TypeScript still remembers exactly which keys it has."
+      },
+      "analogy": {
+        "sq": "Si inspektimi teknik i veturës: kontrollon që i plotëson rregullat, pa e ndryshuar modelin e veturës.",
+        "en": "Like a car's roadworthiness test: it checks it meets the rules without changing the car's model."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "const ngjyrat = {\n  kuqe: \"#e11d48\", blu: \"#2563eb\",\n} satisfies Record<string, string>;\nngjyrat.kuqe;   // TypeScript e di që ekziston"
+      },
+      "related": [
+        "type-assertions",
+        "type-inference-ts",
+        "utility-types"
+      ]
+    },
+    {
+      "id": "zod",
+      "en": "Zod (runtime validation)",
+      "sq": null,
+      "aliases": [
+        "zod",
+        "valibot",
+        "runtime validation",
+        "schema validation"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Tipet e TypeScript-it zhduken kur kodi ekzekutohet, prandaj s'mund të kontrollojnë të dhënat që vijnë nga jashtë. Zod-i e përshkruan formën e të dhënave një herë: i kontrollon gjatë ekzekutimit dhe të jep edhe tipin TypeScript.",
+        "en": "TypeScript's types disappear when code runs, so they can't check data coming from outside. Zod describes the shape of data once: it checks it at runtime and gives you the TypeScript type too."
+      },
+      "analogy": {
+        "sq": "Si roja te dera që e kontrollon vërtet çdo biletë, jo vetëm lista e mysafirëve në letër.",
+        "en": "Like a doorman who actually checks every ticket, not just a guest list on paper."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "import { z } from \"zod\";\nconst Termi = z.object({ id: z.string(), emri: z.string() });\ntype Termi = z.infer<typeof Termi>;\nconst t = Termi.parse(await r.json());   // gabim nëse forma s'përputhet"
+      },
+      "related": [
+        "type-erasure",
+        "input-validation",
+        "unknown-type"
+      ]
+    },
+    {
+      "id": "type-erasure",
+      "en": "Types disappear at runtime",
+      "sq": "Tipet zhduken gjatë ekzekutimit",
+      "aliases": [
+        "type erasure",
+        "runtime types",
+        "types are erased"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Kur TypeScript-i kthehet në JavaScript, të gjitha tipet hiqen — shfletuesi s'i sheh kurrë. Kjo do të thotë që TypeScript-i të mbron nga gabimet në kodin tënd, por jo nga të dhënat e gabuara që vijnë nga një API ose përdoruesi.",
+        "en": "When TypeScript is turned into JavaScript, all the types are removed — the browser never sees them. That means TypeScript protects you from mistakes in your code, but not from bad data coming from an API or the user."
+      },
+      "analogy": {
+        "sq": "Si skela e ndërtesës: të ndihmon ta ndërtosh drejt, por hiqet para se të hyjnë banorët.",
+        "en": "Like scaffolding: it helps you build straight, but it's taken down before people move in."
+      },
+      "code": null,
+      "related": [
+        "tsc",
+        "zod",
+        "transpiler"
+      ]
+    },
+    {
+      "id": "structural-typing",
+      "en": "Structural typing",
+      "sq": "Tipizimi strukturor",
+      "aliases": [
+        "duck typing",
+        "structural type system"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "TypeScript-i i krahason tipet sipas formës, jo sipas emrit: nëse një objekt ka të gjitha fushat që kërkohen, pranohet — edhe nëse është krijuar ndryshe. Ndryshe nga Java ose C#, ku emri i klasës ka rëndësi.",
+        "en": "TypeScript compares types by their shape, not their name: if an object has all the required fields, it's accepted — even if it was created differently. Unlike Java or C#, where the class name matters."
+      },
+      "analogy": {
+        "sq": "„Nëse ecën si rosë dhe bën kuak si rosë, është rosë.“",
+        "en": "“If it walks like a duck and quacks like a duck, it's a duck.”"
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "interface Pika { x: number; y: number }\nconst p = { x: 1, y: 2, ngjyra: \"kuqe\" };\nfunction shfaq(p: Pika) {}\nshfaq(p);   // në rregull — ka x dhe y"
+      },
+      "related": [
+        "ts-interface-type",
+        "interface",
+        "static-dynamic-typing"
+      ]
+    },
+    {
+      "id": "strict-null-checks",
+      "en": "strictNullChecks",
+      "sq": null,
+      "aliases": [
+        "strictnullchecks",
+        "null checks",
+        "possibly undefined"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Me strictNullChecks të ndezur, null dhe undefined s'janë më pjesë e çdo tipi. Po mund të mungojë një vlerë (string | undefined), TypeScript-i të detyron ta kontrollosh para se ta përdorësh — dhe zhduken shumë gabime „cannot read properties of undefined“.",
+        "en": "With strictNullChecks on, null and undefined are no longer part of every type. If a value might be missing (string | undefined), TypeScript makes you check it before using it — and lots of “cannot read properties of undefined” errors disappear."
+      },
+      "analogy": {
+        "sq": "Si të kontrollosh xhepin para se të nxjerrësh çelësat: ndoshta s'i ke marrë.",
+        "en": "Like checking your pocket before reaching for the keys: maybe you didn't bring them."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "function gjatesia(s?: string) {\n  // return s.length;        // Gabim: s mund të jetë undefined\n  return s?.length ?? 0;\n}"
+      },
+      "related": [
+        "strict-mode-ts",
+        "undefined-null",
+        "optional-chaining"
+      ]
+    },
+    {
+      "id": "function-types",
+      "en": "Function types",
+      "sq": "Tipet e funksioneve",
+      "aliases": [
+        "function type",
+        "(a: number) => number",
+        "callback type"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Në TypeScript mund ta përshkruash edhe vetë funksionin si tip: (a: number, b: number) => number. Shumë e dobishme për callback-e — editori e di saktë çfarë merr dhe çfarë kthen funksioni që i jep.",
+        "en": "In TypeScript you can describe a function itself as a type: (a: number, b: number) => number. Very useful for callbacks — the editor knows exactly what the function you pass in takes and returns."
+      },
+      "analogy": {
+        "sq": "Si përshkrimi i punës: „merr dy numra, kthen një numër“ — kushdo që e plotëson, e merr punën.",
+        "en": "Like a job description: “takes two numbers, returns a number” — anyone who fits gets the job."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "type Veprim = (a: number, b: number) => number;\nconst mblidh: Veprim = (a, b) => a + b;\nfunction zbato(f: Veprim) { return f(2, 3); }"
+      },
+      "related": [
+        "callback",
+        "higher-order-functions",
+        "delegates"
+      ]
+    },
+    {
+      "id": "function-overloads-ts",
+      "en": "Function overloads (TypeScript)",
+      "sq": "Mbingarkimi i funksioneve në TypeScript",
+      "aliases": [
+        "overload ts",
+        "overload signatures"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Me overload-e mund të përshkruash disa mënyra si thirret i njëjti funksion — p.sh. me tekst kthen tekst, me numër kthen numër — dhe TypeScript-i zgjedh tipin e duhur sipas argumentit.",
+        "en": "With overloads you can describe several ways to call the same function — e.g. with text it returns text, with a number it returns a number — and TypeScript picks the right type based on the argument."
+      },
+      "analogy": {
+        "sq": "Si një sportel që pranon edhe letra, edhe pako, dhe të jep faturën e duhur për secilën.",
+        "en": "Like a counter that accepts both letters and parcels and gives you the right receipt for each."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "function dyfisho(x: string): string;\nfunction dyfisho(x: number): number;\nfunction dyfisho(x: any) { return typeof x === \"string\" ? x + x : x * 2; }"
+      },
+      "related": [
+        "method-overloading",
+        "function-types",
+        "union-types"
+      ]
+    },
+    {
+      "id": "classes-ts",
+      "en": "Classes in TypeScript",
+      "sq": "Klasat në TypeScript",
+      "aliases": [
+        "class ts",
+        "public private ts",
+        "implements ts",
+        "abstract class ts"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "TypeScript-i u shton klasave të JavaScript-it modifikuesit public, private dhe protected, klasa abstract dhe implements për interfejsa. Me „parameter properties“ e deklaron dhe e cakton një fushë direkt te konstruktori.",
+        "en": "TypeScript adds public, private and protected modifiers to JavaScript classes, plus abstract classes and implements for interfaces. With “parameter properties” you declare and set a field right in the constructor."
+      },
+      "analogy": {
+        "sq": "Si klasat e Java-s ose C#-it, por që kthehen në JavaScript të zakonshëm.",
+        "en": "Like Java or C# classes, but turned into ordinary JavaScript."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "class Lojtar implements Zeri {\n  constructor(private emri: string, public gola = 0) {}\n  ze() { return this.emri + \" shënoi!\"; }\n}"
+      },
+      "related": [
+        "js-class",
+        "access-modifiers",
+        "ts-interface-type"
+      ]
+    },
+    {
+      "id": "decorators-ts",
+      "en": "Decorators (TypeScript)",
+      "sq": "Dekoratorët në TypeScript",
+      "aliases": [
+        "decorator ts",
+        "@component",
+        "@injectable"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Dekoratorët janë funksione me @ që vendosen mbi klasa, metoda ose fusha dhe u shtojnë sjellje — si @Component në Angular ose @Controller në NestJS. Ngjajnë me anotacionet e Java-s.",
+        "en": "Decorators are @ functions placed on classes, methods or fields that add behaviour — like @Component in Angular or @Controller in NestJS. They're similar to Java annotations."
+      },
+      "analogy": {
+        "sq": "Si ngjitëset në pakot e postës që ndryshojnë si trajtohen.",
+        "en": "Like stickers on parcels that change how they're handled."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "@Controller(\"terma\")\nclass TermaController {\n  @Get(\":id\") merr(@Param(\"id\") id: string) { /* ... */ }\n}"
+      },
+      "related": [
+        "decorator",
+        "annotations",
+        "nestjs"
+      ]
+    },
+    {
+      "id": "async-types-ts",
+      "en": "Promise<T> & async types",
+      "sq": "Tipet asinkrone",
+      "aliases": [
+        "promise<t>",
+        "async function type",
+        "awaited"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Një funksion async në TypeScript kthen gjithmonë Promise<T>: async function merrTermat(): Promise<Termi[]>. Pas await, TypeScript-i e di që ke një Termi[] të vërtetë, me të gjitha fushat.",
+        "en": "An async function in TypeScript always returns Promise<T>: async function getTerms(): Promise<Term[]>. After await, TypeScript knows you have a real Term[], with all its fields."
+      },
+      "analogy": {
+        "sq": "Si bileta e rrobaqepësit që thotë saktë çfarë do të marrësh kur të kthehesh.",
+        "en": "Like a tailor's ticket saying exactly what you'll collect when you come back."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "async function merrTermat(): Promise<Termi[]> {\n  const r = await fetch(\"/data/terms.json\");\n  return (await r.json()).terms;\n}"
+      },
+      "related": [
+        "async-await",
+        "promise",
+        "generics-ts"
+      ]
+    },
+    {
+      "id": "tsc",
+      "en": "tsc (TypeScript compiler)",
+      "sq": "Kompajleri i TypeScript-it",
+      "aliases": [
+        "tsc",
+        "typescript compiler",
+        "tsc --noemit"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "tsc është kompajleri i TypeScript-it: i kontrollon tipet dhe e kthen kodin në JavaScript. Me tsc --noEmit vetëm i kontrollon tipet pa krijuar skedarë — shpesh përdoret në CI, ndërsa Vite ose esbuild bëjnë përkthimin.",
+        "en": "tsc is the TypeScript compiler: it checks the types and turns the code into JavaScript. With tsc --noEmit it only checks types without writing files — often used in CI while Vite or esbuild do the translating."
+      },
+      "analogy": {
+        "sq": "Si mësuesi që ta kontrollon hartimin për gabime, dhe pastaj ta rishkruan me shkrim të pastër.",
+        "en": "Like a teacher who checks your essay for mistakes, then copies it out neatly."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "npx tsc --init      # krijon tsconfig.json\nnpx tsc --noEmit    # vetëm kontrollo tipet"
+      },
+      "related": [
+        "transpiler",
+        "tsconfig",
+        "type-erasure"
+      ]
+    },
+    {
+      "id": "tsconfig",
+      "en": "tsconfig.json",
+      "sq": null,
+      "aliases": [
+        "tsconfig",
+        "compiler options",
+        "tsconfig.json"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "tsconfig.json është skedari i cilësimeve të një projekti TypeScript: sa i rreptë të jetë kontrolli (strict), në cilin version JavaScript-i të përkthehet (target), ku janë skedarët dhe ku të shkojë rezultati.",
+        "en": "tsconfig.json is a TypeScript project's settings file: how strict the checking is (strict), which JavaScript version to compile to (target), where the files are and where the output goes."
+      },
+      "analogy": {
+        "sq": "Si rregullorja e klasës që vendos sa i rreptë është mësuesi.",
+        "en": "Like the classroom rules deciding how strict the teacher is."
+      },
+      "code": {
+        "language": "json",
+        "snippet": "{\n  \"compilerOptions\": { \"strict\": true, \"target\": \"ES2022\", \"module\": \"ESNext\" },\n  \"include\": [\"src\"]\n}"
+      },
+      "related": [
+        "tsc",
+        "strict-mode-ts",
+        "config-file"
+      ]
+    },
+    {
+      "id": "strict-mode-ts",
+      "en": "strict mode (TypeScript)",
+      "sq": "Modaliteti strikt në TypeScript",
+      "aliases": [
+        "strict: true",
+        "noimplicitany",
+        "strict ts"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "\"strict\": true në tsconfig ndez të gjitha kontrollet më të rrepta: s'lejohen any të fshehur (noImplicitAny), null-et kontrollohen (strictNullChecks) e të tjera. Për projekte të reja, ndize gjithmonë.",
+        "en": "\"strict\": true in tsconfig turns on all the strictest checks: no hidden any (noImplicitAny), null checks (strictNullChecks) and more. For new projects, always turn it on."
+      },
+      "analogy": {
+        "sq": "Si gjyqtari që e zbaton rregulloren e plotë, jo vetëm rregullat kryesore.",
+        "en": "Like a referee who applies the full rulebook, not just the main rules."
+      },
+      "code": null,
+      "related": [
+        "tsconfig",
+        "strict-null-checks",
+        "any-type"
+      ]
+    },
+    {
+      "id": "declaration-files",
+      "en": "Declaration files (.d.ts)",
+      "sq": "Skedarët e deklarimeve",
+      "aliases": [
+        ".d.ts",
+        "d.ts",
+        "type declarations",
+        "declare module"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Një skedar .d.ts përmban vetëm tipe, pa kod — përshkruan si duket një librari JavaScript, që TypeScript-i ta kontrollojë kur e përdor. Shumë paketa i kanë brenda; për të tjerat ekzistojnë paketat @types.",
+        "en": "A .d.ts file contains only types, no code — it describes what a JavaScript library looks like so TypeScript can check how you use it. Many packages include them; for the rest there are @types packages."
+      },
+      "analogy": {
+        "sq": "Si udhëzimet e përdorimit të një pajisjeje, pa vetë pajisjen.",
+        "en": "Like the user manual for an appliance, without the appliance itself."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "// fjalori.d.ts\ndeclare function kerko(q: string): Termi[];\ndeclare const VERSIONI: string;"
+      },
+      "related": [
+        "definitely-typed",
+        "header-files",
+        "type-annotations"
+      ]
+    },
+    {
+      "id": "definitely-typed",
+      "en": "@types packages (DefinitelyTyped)",
+      "sq": "Paketat @types",
+      "aliases": [
+        "@types",
+        "definitelytyped",
+        "@types/node",
+        "@types/react"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Për libraritë JavaScript që s'kanë tipe brenda, komuniteti i shkruan në projektin DefinitelyTyped dhe i publikon si paketa @types — p.sh. npm install -D @types/node. Pastaj editori të jep plotësim dhe kontroll edhe për to.",
+        "en": "For JavaScript libraries without built-in types, the community writes them in the DefinitelyTyped project and publishes them as @types packages — e.g. npm install -D @types/node. Then your editor gives completion and checks for them too."
+      },
+      "analogy": {
+        "sq": "Si përkthimet e librave të huaj nga vullnetarët, që t'i lexojë kushdo.",
+        "en": "Like volunteer translations of foreign books, so anyone can read them."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "npm install -D typescript @types/node"
+      },
+      "related": [
+        "declaration-files",
+        "npm",
+        "open-source"
+      ]
+    },
+    {
+      "id": "import-type",
+      "en": "import type",
+      "sq": null,
+      "aliases": [
+        "import type",
+        "type-only import",
+        "export type"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "import type { Termi } from \"./tipet\" importon vetëm tipin, jo kod — dhe hiqet plotësisht kur përkthehet në JavaScript. E bën të qartë që po merr vetëm një përshkrim dhe i ndihmon bundler-at.",
+        "en": "import type { Term } from \"./types\" imports only the type, not code — and is removed completely when compiled to JavaScript. It makes clear you're only taking a description, and helps bundlers."
+      },
+      "analogy": {
+        "sq": "Si ta marrësh vetëm planin e shtëpisë, jo vetë tullat.",
+        "en": "Like taking just the house plan, not the bricks."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "import type { Termi } from \"./tipet\";\nimport { kerko } from \"./kerko\";"
+      },
+      "related": [
+        "es-modules",
+        "type-erasure",
+        "ts-interface-type"
+      ]
+    },
+    {
+      "id": "tsx-runner",
+      "en": "Running TypeScript (tsx, Node, Bun, Deno)",
+      "sq": "Ekzekutimi i TypeScript-it",
+      "aliases": [
+        "tsx",
+        "ts-node",
+        "node --experimental-strip-types",
+        "run typescript"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Për ta ekzekutuar një skedar .ts direkt, pa e kompajluar veç: npx tsx skedari.ts, ose me Bun dhe Deno që e kuptojnë TypeScript-in vetë. Versionet e reja të Node.js mund t'i heqin tipet dhe ta ekzekutojnë direkt.",
+        "en": "To run a .ts file directly without compiling it separately: npx tsx file.ts, or with Bun and Deno, which understand TypeScript themselves. Newer versions of Node.js can strip the types and run it directly."
+      },
+      "analogy": {
+        "sq": "Si një përkthyes simultan në vend të përkthimit me shkrim.",
+        "en": "Like a live interpreter instead of a written translation."
+      },
+      "code": {
+        "language": "bash",
+        "snippet": "npx tsx skripti.ts\nbun skripti.ts"
+      },
+      "related": [
+        "deno-bun",
+        "node-js",
+        "tsc"
+      ]
+    },
+    {
+      "id": "typescript-eslint",
+      "en": "typescript-eslint",
+      "sq": null,
+      "aliases": [
+        "typescript eslint",
+        "eslint ts",
+        "@typescript-eslint"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "typescript-eslint i lejon ESLint-it të kuptojë TypeScript-in dhe shton rregulla që përdorin informacionin e tipeve — p.sh. të paralajmërojë kur harron await te një Promise ose përdor any pa nevojë.",
+        "en": "typescript-eslint lets ESLint understand TypeScript and adds rules that use type information — e.g. warning when you forget await on a Promise or use any unnecessarily."
+      },
+      "analogy": {
+        "sq": "Si një korrektor drejtshkrimor që di edhe gramatikën, jo vetëm shkronjat.",
+        "en": "Like a spell checker that also knows grammar, not just letters."
+      },
+      "code": null,
+      "related": [
+        "linter",
+        "any-type",
+        "tsc"
+      ]
+    },
+    {
+      "id": "typescript-playground",
+      "en": "TypeScript Playground",
+      "sq": null,
+      "aliases": [
+        "playground",
+        "ts playground",
+        "typescriptlang.org/play"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "TypeScript Playground (typescriptlang.org/play) të lejon të shkruash TypeScript në shfletues, të shohësh gabimet e tipeve menjëherë dhe JavaScript-in që del. Vendi më i mirë për të provuar ide pa instaluar asgjë.",
+        "en": "The TypeScript Playground (typescriptlang.org/play) lets you write TypeScript in the browser, see type errors straight away and the JavaScript it produces. The best place to try ideas without installing anything."
+      },
+      "analogy": {
+        "sq": "Si fleta e provës në provim: provon pa frikë.",
+        "en": "Like scrap paper in an exam: try things without worrying."
+      },
+      "code": null,
+      "related": [
+        "online-compiler",
+        "tsc",
+        "repl"
+      ]
+    },
+    {
+      "id": "gradual-typing",
+      "en": "Migrating JavaScript to TypeScript",
+      "sq": "Kalimi nga JavaScript në TypeScript",
+      "aliases": [
+        "migration ts",
+        "allowjs",
+        "checkjs",
+        "gradual typing",
+        "js to ts"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "S'ke pse e rishkruan gjithë projektin njëherësh: me \"allowJs\" TypeScript-i dhe JavaScript-i jetojnë bashkë. E kthen skedarin nga .js në .ts një nga një, fillimisht pa strict, dhe e shtrëngon gradualisht.",
+        "en": "You don't have to rewrite the whole project at once: with \"allowJs\", TypeScript and JavaScript live side by side. You rename files from .js to .ts one at a time, first without strict, tightening it gradually."
+      },
+      "analogy": {
+        "sq": "Si ta rinovosh shtëpinë dhomë pas dhome ndërsa vazhdon të jetosh brenda.",
+        "en": "Like renovating a house room by room while still living in it."
+      },
+      "code": null,
+      "related": [
+        "typescript",
+        "any-type",
+        "jsdoc"
+      ]
+    },
+    {
+      "id": "react-typescript",
+      "en": "React with TypeScript",
+      "sq": "React me TypeScript",
+      "aliases": [
+        "react ts",
+        "tsx files",
+        "react.fc",
+        "props type"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "Me TypeScript, props-et e një komponenti React përshkruhen me një tip, dhe editori të paralajmëron kur harron një prop ose i jep vlerë të gabuar. Skedarët me JSX dhe TypeScript mbarojnë me .tsx.",
+        "en": "With TypeScript, a React component's props are described with a type, and the editor warns you when you forget a prop or pass a wrong value. Files with JSX and TypeScript end in .tsx."
+      },
+      "analogy": {
+        "sq": "Si një prizë me formë të saktë: vetëm spina e duhur hyn.",
+        "en": "Like a socket with an exact shape: only the right plug fits."
+      },
+      "code": {
+        "language": "typescript",
+        "snippet": "type KartaProps = { titulli: string; numri?: number };\nfunction Karta({ titulli, numri = 0 }: KartaProps) {\n  return <h3>{titulli} ({numri})</h3>;\n}"
+      },
+      "related": [
+        "react",
+        "props-state",
+        "ts-interface-type"
+      ]
+    },
+    {
+      "id": "trpc",
+      "en": "tRPC",
+      "sq": null,
+      "aliases": [
+        "trpc",
+        "end-to-end type safety"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "tRPC-ja të lejon ta thërrasësh një funksion të serverit nga frontend-i sikur të ishte funksion lokal, me tipe të sakta nga të dyja anët — pa shkruar API REST me dorë. Po ndryshove serverin, frontend-i të tregon menjëherë ku prishet.",
+        "en": "tRPC lets you call a server function from the frontend as if it were local, with exact types on both sides — without writing a REST API by hand. Change the server and the frontend instantly shows where it breaks."
+      },
+      "analogy": {
+        "sq": "Si një linjë telefonike direkte mes kuzhinës dhe kamerierit, ku të dy flasin të njëjtën gjuhë.",
+        "en": "Like a direct line between kitchen and waiter where both speak exactly the same language."
+      },
+      "code": null,
+      "related": [
+        "rest-api",
+        "graphql",
+        "nextjs"
+      ]
+    },
+    {
+      "id": "nestjs",
+      "en": "NestJS",
+      "sq": null,
+      "aliases": [
+        "nest",
+        "nest js",
+        "nestjs framework"
+      ],
+      "category": "typescript",
+      "explanation": {
+        "sq": "NestJS është një framework për backend me TypeScript, i frymëzuar nga Angular dhe Spring: kontrollerë, shërbime dhe dependency injection me dekoratorë. I përshtatshëm për API të mëdha dhe të organizuara mirë.",
+        "en": "NestJS is a TypeScript backend framework inspired by Angular and Spring: controllers, services and dependency injection with decorators. Well suited to big, well-organised APIs."
+      },
+      "analogy": {
+        "sq": "Si një kuzhinë restoranti me role të qarta: shefi, ndihmësit, kamerierët — secili di punën e vet.",
+        "en": "Like a restaurant kitchen with clear roles: chef, assistants, waiters — everyone knows their job."
+      },
+      "code": null,
+      "related": [
+        "express-js",
+        "decorators-ts",
+        "dependency-injection"
       ]
     }
   ]
