@@ -46,23 +46,30 @@ const searchIcon = icon("magnifying-glass");
 // ---------- Home ----------
 
 let lastQuery = ""; // remembered so the results are still there when you come back
+let lastSearchCategory = ""; // "" = search every category
 
 // "All terms" on the home page: show 20, then 20 more per click; after 8 clicks also offer "show all"
 const TERMS_STEP = 20;
 const SHOW_ALL_AFTER = 8;
 let shownTerms = TERMS_STEP; // remembered so the list stays open when you come back
 
-function renderResults(query) {
-  const results = searchTerms(allTerms(), query);
-  if (results.length === 0) return `<li><p class="empty">${esc(t("noResults", query.trim()))}</p></li>`;
+function renderResults(query, categoryId = "") {
+  const pool = categoryId ? termsInCategory(categoryId) : allTerms();
+  const results = searchTerms(pool, query);
+  if (results.length === 0) {
+    const category = getCategory(categoryId);
+    return `<li role="presentation"><p class="empty">${esc(category
+      ? t("noResultsIn", query.trim(), category.name[getLang()])
+      : t("noResults", query.trim()))}</p></li>`;
+  }
 
   // Nothing matched the spelling exactly, so these are the closest spellings
-  const hint = results.fuzzy ? `<li><p class="empty">${esc(t("didYouMean", query.trim()))}</p></li>` : "";
+  const hint = results.fuzzy ? `<li role="presentation"><p class="empty">${esc(t("didYouMean", query.trim()))}</p></li>` : "";
   return hint + results
     .map((term, i) => {
       const category = getCategory(term.category);
-      return `<li>
-        <a class="result${i === 0 ? " is-first" : ""}" href="${termUrl(term.id)}">
+      return `<li role="presentation">
+        <a class="result" id="result-${i}" role="option" aria-selected="false" href="${termUrl(term.id)}">
           <span class="result-names">
             <span class="result-en">${esc(term.en)}</span>
             ${term.sq ? `<span class="result-sq">${esc(term.sq)}</span>` : ""}
@@ -106,11 +113,19 @@ export function home() {
           <label class="search-box">
             ${searchIcon}
             <input id="search" type="search" autocomplete="off" spellcheck="false"
+              role="combobox" aria-expanded="false" aria-autocomplete="list"
               aria-label="${esc(t("searchLabel"))}" aria-controls="results"
               placeholder="${esc(t("searchPlaceholder"))}">
             <kbd aria-hidden="true">/</kbd>
           </label>
-          <ul id="results" class="results" aria-live="polite" hidden></ul>
+          <div class="search-filter">
+            <label for="search-category">${esc(t("searchIn"))}</label>
+            <select id="search-category">
+              <option value="">${esc(t("everyCategory"))}</option>
+              ${allCategories().map((c) => `<option value="${esc(c.id)}"${c.id === lastSearchCategory ? " selected" : ""}>${esc(c.name[lang])}</option>`).join("")}
+            </select>
+          </div>
+          <ul id="results" class="results" role="listbox" aria-label="${esc(t("searchLabel"))}" hidden></ul>
           <p class="search-hint">${esc(t("searchHint"))}</p>
         </div>
       </section>
@@ -182,21 +197,46 @@ export function home() {
 
       const input = root.querySelector("#search");
       const results = root.querySelector("#results");
+      const categorySelect = root.querySelector("#search-category");
+      let active = 0; // which result ↑/↓ have moved to; Enter opens it
+
+      const options = () => [...results.querySelectorAll("a.result")];
+      const highlight = (index) => {
+        const items = options();
+        if (items.length === 0) return input.removeAttribute("aria-activedescendant");
+        active = (index + items.length) % items.length; // wraps around at both ends
+        items.forEach((a, i) => {
+          a.classList.toggle("is-active", i === active);
+          a.setAttribute("aria-selected", String(i === active));
+        });
+        input.setAttribute("aria-activedescendant", items[active].id);
+        items[active].scrollIntoView({ block: "nearest" });
+      };
 
       const update = () => {
         lastQuery = input.value;
+        lastSearchCategory = categorySelect.value;
         const hasQuery = input.value.trim() !== "";
         results.hidden = !hasQuery;
-        results.innerHTML = hasQuery ? renderResults(input.value) : "";
+        input.setAttribute("aria-expanded", String(hasQuery));
+        results.innerHTML = hasQuery ? renderResults(input.value, categorySelect.value) : "";
+        highlight(0);
       };
 
       input.value = lastQuery;
       update();
       input.addEventListener("input", update);
+      categorySelect.addEventListener("change", () => {
+        update();
+        input.focus();
+      });
       input.addEventListener("keydown", (event) => {
-        if (event.key === "Enter") {
-          const first = results.querySelector("a.result");
-          first?.click(); // the router in main.js turns the click into a page change
+        if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+          if (results.hidden) return;
+          event.preventDefault(); // stop the cursor jumping to the start/end of the text
+          highlight(active + (event.key === "ArrowDown" ? 1 : -1));
+        } else if (event.key === "Enter") {
+          options()[active]?.click(); // the router in main.js turns the click into a page change
         } else if (event.key === "Escape") {
           input.value = "";
           update();

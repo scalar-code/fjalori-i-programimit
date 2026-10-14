@@ -10,7 +10,7 @@ import { readFileSync, readdirSync, writeFileSync, mkdirSync, rmSync, cpSync, ex
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { setData, allTerms, allCategories } from "../js/data.js";
+import { setData, allTerms, allCategories, termsInCategory } from "../js/data.js";
 import * as views from "../js/views.js";
 import { flashcards } from "../js/flashcards.js";
 import { contact } from "../js/contact.js";
@@ -87,37 +87,88 @@ function writePage(path, view, { type = "website", jsonLd = null, noindex = fals
   if (!noindex) sitemap.push(url);
 }
 
+// ---------- structured data (schema.org) ----------
+// Google reads these to understand each page: a glossary (DefinedTermSet) made of terms (DefinedTerm),
+// grouped by category, plus a breadcrumb trail it can show in search results instead of the raw URL.
+
+const categoryUrlOf = (id) => `${SITE_URL}/category/${id}`;
+const termUrlOf = (id) => `${SITE_URL}/term/${id}`;
+const glossary = { "@type": "DefinedTermSet", "@id": `${SITE_URL}/#glossary`, name: SITE_NAME, url: `${SITE_URL}/` };
+
+function breadcrumbs(...items) {
+  return {
+    "@type": "BreadcrumbList",
+    itemListElement: [{ name: SITE_NAME, url: `${SITE_URL}/` }, ...items].map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+}
+
 writePage("/", views.home(), {
   // Tells Google the site's name and who made it
   jsonLd: {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
     name: SITE_NAME,
     url: `${SITE_URL}/`,
     inLanguage: ["sq", "en"],
+    description: views.home().description,
     publisher: { "@type": "Organization", name: "ScalarCode", url: "https://scalarcode.vercel.app/" },
+    hasPart: allCategories().map((c) => ({ "@type": "DefinedTermSet", name: c.name.sq, url: categoryUrlOf(c.id) })),
   },
 });
 writePage("/contact", contact());
 writePage("/flashcards", flashcards());
 
 for (const category of allCategories()) {
-  writePage(`/category/${category.id}`, views.category(category.id));
+  const url = categoryUrlOf(category.id);
+  writePage(`/category/${category.id}`, views.category(category.id), {
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["DefinedTermSet", "CollectionPage"],
+          "@id": `${url}#set`,
+          name: `${category.name.sq} — ${SITE_NAME}`,
+          alternateName: category.name.en,
+          description: category.description.sq,
+          url,
+          inLanguage: ["sq", "en"],
+          isPartOf: glossary,
+          hasDefinedTerm: termsInCategory(category.id).map((t) => ({ "@type": "DefinedTerm", name: t.en, url: termUrlOf(t.id) })),
+        },
+        breadcrumbs({ name: category.name.sq, url }),
+      ],
+    },
+  });
 }
 
 for (const term of allTerms()) {
+  const category = allCategories().find((c) => c.id === term.category);
+  const url = termUrlOf(term.id);
+  // Every other name people might search for: the Albanian name and the aliases
+  const otherNames = [...new Set([term.sq, ...(term.aliases ?? [])].filter((n) => n && n !== term.en))];
   writePage(`/term/${term.id}`, views.term(term.id), {
     type: "article",
-    // Tells Google "this page defines a term" (structured data)
     jsonLd: {
       "@context": "https://schema.org",
-      "@type": "DefinedTerm",
-      name: term.en,
-      ...(term.sq && { alternateName: term.sq }),
-      description: term.explanation.sq,
-      inLanguage: "sq",
-      url: `${SITE_URL}/term/${term.id}`,
-      inDefinedTermSet: { "@type": "DefinedTermSet", name: SITE_NAME, url: `${SITE_URL}/` },
+      "@graph": [
+        {
+          "@type": "DefinedTerm",
+          "@id": `${url}#term`,
+          name: term.en,
+          ...(otherNames.length && { alternateName: otherNames }),
+          description: term.explanation.sq,
+          inLanguage: "sq",
+          url,
+          inDefinedTermSet: [{ "@id": `${categoryUrlOf(category.id)}#set` }, glossary],
+        },
+        breadcrumbs({ name: category.name.sq, url: categoryUrlOf(category.id) }, { name: term.en, url }),
+      ],
     },
   });
 }
