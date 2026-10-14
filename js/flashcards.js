@@ -1,10 +1,12 @@
 // Flashcards page (/flashcards).
 // See the English term → think → "I know it" (next card) or "I don't know" (the card flips and shows the answer).
 // Every card is shown once per round; the answer is only revealed through "I don't know".
+// Terms you know are remembered in this browser (progress.js) and skipped next time.
 
 import { t, getLang } from "./i18n.js";
 import { allTerms, allCategories, getCategory, getTerm, termsInCategory } from "./data.js";
 import { esc, termUrl, hueStyle, icon } from "./views.js";
+import { isKnown, countKnown, markKnown, markUnknown, forget } from "./progress.js";
 
 // Kept outside the page so switching language (which re-draws the page) doesn't lose your place
 const state = {
@@ -27,7 +29,9 @@ function shuffled(items) {
 
 const idsFor = (category) => (category === "all" ? allTerms() : termsInCategory(category)).map((term) => term.id);
 
+// Starts a round with the given terms, leaving out the ones you already know
 function startDeck(ids) {
+  ids = ids.filter((id) => !isKnown(id));
   state.queue = shuffled(ids);
   state.total = ids.length;
   state.known = 0;
@@ -36,6 +40,16 @@ function startDeck(ids) {
 }
 
 // ---------- drawing ----------
+
+// "You know 45 of 223 terms here · Reset" — the saved progress for the chosen category
+function memoryHtml() {
+  const ids = idsFor(state.category);
+  const known = countKnown(ids);
+  const reset = known
+    ? ` · <button class="link-btn" type="button" data-action="forget">${esc(t("resetProgress"))}</button>`
+    : "";
+  return `<p class="fc-memory">${icon("bookmark")} ${esc(t("savedProgress", known, ids.length))}${reset}</p>`;
+}
 
 // The back of the card is only put in the page once you press "I don't know",
 // so the answer can't be read before that (not even by a screen reader or the page source).
@@ -90,6 +104,18 @@ function cardHtml() {
 }
 
 function doneHtml() {
+  // Nothing to practise: every term of this category is already known
+  if (!state.total) {
+    return `
+    <div class="fc-done">
+      <div class="fc-done-icon">${icon("trophy")}</div>
+      <h2>${esc(t("allKnownTitle"))}</h2>
+      <p>${esc(t("allKnownText"))}</p>
+      <div class="fc-actions is-single">
+        <button class="btn btn-know" type="button" data-action="forget">${icon("rotate-left")} ${esc(t("resetProgress"))}</button>
+      </div>
+    </div>`;
+  }
   const review = state.missed.size
     ? `<button class="btn btn-know" type="button" data-action="review">${icon("rotate-left")} ${esc(t("reviewMissed", state.missed.size))}</button>`
     : "";
@@ -107,8 +133,13 @@ function doneHtml() {
 
 // ---------- the page ----------
 
+let started = false;
+
 export function flashcards() {
-  if (!state.total) startDeck(idsFor(state.category));
+  if (!started && typeof window !== "undefined") {
+    startDeck(idsFor(state.category));
+    started = true;
+  }
 
   const lang = getLang();
   const options = [
@@ -140,18 +171,19 @@ export function flashcards() {
     `,
     mount(root) {
       const stage = root.querySelector(".fc-stage");
-      const paint = () => (stage.innerHTML = state.queue.length ? cardHtml() : doneHtml());
+      const paint = () => (stage.innerHTML = memoryHtml() + (state.queue.length ? cardHtml() : doneHtml()));
 
       const actions = {
         know() {
           if (state.revealed) return;
-          state.queue.shift();
+          markKnown(state.queue.shift());
           state.known++;
           paint();
         },
         dontKnow() {
           if (state.revealed) return;
           state.missed.add(state.queue[0]);
+          markUnknown(state.queue[0]);
           state.revealed = true;
           // Draw the card un-flipped with its answer, then flip it on the next frame so the animation plays
           paint();
@@ -170,6 +202,10 @@ export function flashcards() {
         review() {
           startDeck([...state.missed]);
           paint();
+        },
+        forget() {
+          forget(idsFor(state.category));
+          actions.restart();
         },
         restart() {
           startDeck(idsFor(state.category));

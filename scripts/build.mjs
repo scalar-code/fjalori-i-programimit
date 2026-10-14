@@ -13,6 +13,7 @@ import { fileURLToPath } from "node:url";
 import { setData, allTerms, allCategories, termsInCategory } from "../js/data.js";
 import * as views from "../js/views.js";
 import { flashcards } from "../js/flashcards.js";
+import { quiz } from "../js/quiz.js";
 import { contact } from "../js/contact.js";
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
@@ -123,6 +124,7 @@ writePage("/", views.home(), {
 });
 writePage("/contact", contact());
 writePage("/flashcards", flashcards());
+writePage("/quiz", quiz());
 
 for (const category of allCategories()) {
   const url = categoryUrlOf(category.id);

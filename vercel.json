@@ -39,12 +39,21 @@
       "source": "/contact.html",
       "destination": "/contact",
       "permanent": true
+    },
+    {
+      "source": "/quiz.html",
+      "destination": "/quiz",
+      "permanent": true
     }
   ],
   "rewrites": [
     {
       "source": "/flashcards",
       "destination": "/flashcards.html"
+    },
+    {
+      "source": "/quiz",
+      "destination": "/quiz.html"
     },
     {
       "source": "/contact",

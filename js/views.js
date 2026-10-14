@@ -150,6 +150,15 @@ export function home() {
           </span>
           <span class="cta-arrow">${icon("arrow-right")}</span>
         </a>
+
+        <a class="cta" href="/quiz">
+          <span class="cta-icon">${icon("circle-question")}</span>
+          <span class="cta-text">
+            <strong>${esc(t("quizCta"))}</strong>
+            <span>${esc(t("quizCtaText"))}</span>
+          </span>
+          <span class="cta-arrow">${icon("arrow-right")}</span>
+        </a>
       </section>
 
       <section class="section">

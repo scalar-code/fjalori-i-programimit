@@ -8,6 +8,7 @@ import { loadData } from "./data.js";
 import { t, getLang, otherLang, setLang } from "./i18n.js";
 import * as views from "./views.js";
 import { flashcards } from "./flashcards.js";
+import { quiz } from "./quiz.js";
 import { contact } from "./contact.js";
 
 // The address decides the page:
@@ -15,6 +16,7 @@ import { contact } from "./contact.js";
 //   /term/api        → term page
 //   /category/web    → category page
 //   /flashcards      → flashcards
+//   /quiz            → quiz
 //   /contact         → contact form
 // To add a page: write a function that returns { title, description, html, mount },
 // add one line here, and one writePage(...) line in scripts/build.mjs.
@@ -23,6 +25,7 @@ const routes = {
   term: (id) => views.term(id),
   category: (id) => views.category(id),
   flashcards: () => flashcards(),
+  quiz: () => quiz(),
   contact: () => contact(),
 };
 
@@ -94,6 +97,7 @@ function currentTab() {
   const path = location.pathname;
   if (path === "/") return "home";
   if (path.startsWith("/flashcards")) return "flashcards";
+  if (path.startsWith("/quiz")) return "quiz";
   if (path.startsWith("/contact")) return "contact";
   return null;
 }
