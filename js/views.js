@@ -47,6 +47,11 @@ const searchIcon = icon("magnifying-glass");
 
 let lastQuery = ""; // remembered so the results are still there when you come back
 
+// "All terms" on the home page: show 20, then 20 more per click; after 8 clicks also offer "show all"
+const TERMS_STEP = 20;
+const SHOW_ALL_AFTER = 8;
+let shownTerms = TERMS_STEP; // remembered so the list stays open when you come back
+
 function renderResults(query) {
   const results = searchTerms(allTerms(), query);
   if (results.length === 0) return `<li><p class="empty">${esc(t("noResults", query.trim()))}</p></li>`;
@@ -142,10 +147,39 @@ export function home() {
           <h2>${esc(t("allTerms"))}</h2>
           <span class="count">${t("termCount", terms.length)}</span>
         </div>
-        <div class="chips">${terms.map(chip).join("")}</div>
+        <div class="chips" id="all-terms">${terms.slice(0, shownTerms).map(chip).join("")}</div>
+        <div class="more-row" id="more-row"></div>
       </section>
     `,
     mount(root) {
+      const list = root.querySelector("#all-terms");
+      const moreRow = root.querySelector("#more-row");
+
+      const showTerms = (count) => {
+        const next = Math.min(count, terms.length);
+        list.insertAdjacentHTML("beforeend", terms.slice(list.children.length, next).map(chip).join(""));
+        shownTerms = next;
+        renderMoreButtons();
+      };
+
+      const renderMoreButtons = () => {
+        const left = terms.length - shownTerms;
+        if (left <= 0) {
+          moreRow.innerHTML = "";
+          return;
+        }
+        const clicks = Math.round((shownTerms - TERMS_STEP) / TERMS_STEP);
+        moreRow.innerHTML = `
+          <button class="btn btn-ghost" type="button" data-more>${esc(t("showMore", Math.min(TERMS_STEP, left)))}</button>
+          ${clicks >= SHOW_ALL_AFTER ? `<button class="btn btn-ghost" type="button" data-all>${esc(t("showAll", terms.length))}</button>` : ""}`;
+      };
+
+      moreRow.addEventListener("click", (event) => {
+        if (event.target.closest("[data-more]")) showTerms(shownTerms + TERMS_STEP);
+        else if (event.target.closest("[data-all]")) showTerms(terms.length);
+      });
+      renderMoreButtons();
+
       const input = root.querySelector("#search");
       const results = root.querySelector("#results");
 

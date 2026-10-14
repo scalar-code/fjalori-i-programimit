@@ -387,6 +387,8 @@ kbd {
   transition: border-color 0.15s, background 0.15s;
 }
 .chip:hover { border-color: var(--cat-fg, var(--text)); background: var(--surface-2); }
+.more-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 18px; }
+.more-row:empty { display: none; }
 .chip small { color: var(--muted); font-weight: 400; font-size: 0.82rem; }
 
 /* ---------- term cards (category page) ---------- */
