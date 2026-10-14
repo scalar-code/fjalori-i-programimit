@@ -1,6 +1,6 @@
 // Flashcards page (/flashcards).
-// See the English term → think → flip → "I know it" or "Again".
-// Cards you don't know come back a few cards later, until the deck is empty.
+// See the English term → think → "I know it" (next card) or "I don't know" (the card flips and shows the answer).
+// Every card is shown once per round; the answer is only revealed through "I don't know".
 
 import { t, getLang } from "./i18n.js";
 import { allTerms, allCategories, getCategory, getTerm, termsInCategory } from "./data.js";
@@ -9,13 +9,12 @@ import { esc, termUrl, hueStyle, icon } from "./views.js";
 // Kept outside the page so switching language (which re-draws the page) doesn't lose your place
 const state = {
   category: "all",
-  queue: [],          // ids still to learn; queue[0] is the card on screen
+  queue: [],          // ids still to show; queue[0] is the card on screen
   total: 0,
-  missed: new Set(),  // ids you pressed "Again" on at least once
-  flipped: false,
+  known: 0,           // cards answered "I know it"
+  missed: new Set(),  // cards answered "I don't know"
+  revealed: false,    // the answer of the current card is showing
 };
-
-const AGAIN_GAP = 3; // a missed card comes back after this many other cards
 
 function shuffled(items) {
   const copy = [...items];
@@ -31,18 +30,40 @@ const idsFor = (category) => (category === "all" ? allTerms() : termsInCategory(
 function startDeck(ids) {
   state.queue = shuffled(ids);
   state.total = ids.length;
+  state.known = 0;
   state.missed = new Set();
-  state.flipped = false;
+  state.revealed = false;
 }
 
 // ---------- drawing ----------
+
+// The back of the card is only put in the page once you press "I don't know",
+// so the answer can't be read before that (not even by a screen reader or the page source).
+function backHtml(term) {
+  const lang = getLang();
+  return `
+    <span class="fc-back-term">${esc(term.en)}</span>
+    <span class="fc-alt" lang="sq">${esc(term.sq ?? t("sameInAlbanian"))}</span>
+    <span class="fc-text" lang="${lang}">${esc(term.explanation[lang])}</span>
+    <span class="fc-analogy" lang="${lang}">${icon("lightbulb", "regular")} ${esc(term.analogy[lang])}</span>`;
+}
 
 function cardHtml() {
   const lang = getLang();
   const term = getTerm(state.queue[0]);
   const category = getCategory(term.category);
-  const done = state.total - state.queue.length;
+  // The card on screen counts as done once it's answered
+  const done = state.total - state.queue.length + (state.revealed ? 1 : 0);
   const percent = Math.round((done / state.total) * 100);
+
+  const actions = state.revealed
+    ? `<button class="btn btn-know fc-next" type="button" data-action="next">${esc(t("nextCard"))} ${icon("arrow-right")}</button>`
+    : `<button class="btn btn-again" type="button" data-action="dontKnow">${icon("xmark")} ${esc(t("dontKnow"))}</button>
+       <button class="btn btn-know" type="button" data-action="know">${icon("check")} ${esc(t("knowIt"))}</button>`;
+
+  const hint = state.revealed
+    ? `<span class="fc-keys">${esc(t("keyHintNext"))} · </span><a href="${termUrl(term.id)}">${esc(t("openTerm"))}</a>`
+    : `<span class="fc-keys">${esc(t("keyHint"))}</span>`;
 
   return `
     <div class="fc-progress">
@@ -51,37 +72,24 @@ function cardHtml() {
       </div>
       <span class="fc-count">${t("knownCount", done, state.total)}</span>
     </div>
+    <p class="fc-score">${esc(t("scoreCount", state.known, state.missed.size))}</p>
 
-    <button class="fc-card${state.flipped ? " is-flipped" : ""}" type="button" data-action="flip"
-      aria-label="${esc(t("flip"))}" ${hueStyle(category)}>
-      <span class="fc-inner">
-        <span class="fc-face fc-front" aria-hidden="${state.flipped}">
+    <div class="fc-card${state.revealed ? " is-flipped" : ""}" ${hueStyle(category)}>
+      <div class="fc-inner">
+        <div class="fc-face fc-front" aria-hidden="${state.revealed}">
           <span class="badge">${esc(category?.name[lang])}</span>
           <span class="fc-term" lang="en">${esc(term.en)}</span>
-          <span class="fc-tap">${esc(t("tapToFlip"))}</span>
-        </span>
-        <span class="fc-face fc-back" aria-hidden="${!state.flipped}">
-          <span class="fc-back-term">${esc(term.en)}</span>
-          <span class="fc-alt" lang="sq">${esc(term.sq ?? t("sameInAlbanian"))}</span>
-          <span class="fc-text" lang="${lang}">${esc(term.explanation[lang])}</span>
-          <span class="fc-analogy" lang="${lang}">${icon("lightbulb", "regular")} ${esc(term.analogy[lang])}</span>
-        </span>
-      </span>
-    </button>
-
-    <div class="fc-actions">
-      <button class="btn btn-again" type="button" data-action="again">${icon("rotate-left")} ${esc(t("again"))}</button>
-      <button class="btn btn-know" type="button" data-action="know">${icon("check")} ${esc(t("knowIt"))}</button>
+          <span class="fc-tap">${esc(t("thinkFirst"))}</span>
+        </div>
+        <div class="fc-face fc-back" aria-hidden="${!state.revealed}">${state.revealed ? backHtml(term) : ""}</div>
+      </div>
     </div>
 
-    <p class="fc-hint">
-      <span class="fc-keys">${esc(t("keyHint"))} · </span>
-      <a href="${termUrl(term.id)}">${esc(t("openTerm"))}</a>
-    </p>`;
+    <div class="fc-actions${state.revealed ? " is-single" : ""}">${actions}</div>
+    <p class="fc-hint">${hint}</p>`;
 }
 
 function doneHtml() {
-  const firstTry = state.total - state.missed.size;
   const review = state.missed.size
     ? `<button class="btn btn-know" type="button" data-action="review">${icon("rotate-left")} ${esc(t("reviewMissed", state.missed.size))}</button>`
     : "";
@@ -89,7 +97,7 @@ function doneHtml() {
     <div class="fc-done">
       <div class="fc-done-icon">${icon(state.missed.size ? "dumbbell" : "trophy")}</div>
       <h2>${esc(t("doneTitle"))}</h2>
-      <p>${esc(t("doneText", firstTry, state.total))}</p>
+      <p>${esc(t("doneText", state.known, state.total))}</p>
       <div class="fc-actions">
         ${review}
         <button class="btn btn-again" type="button" data-action="restart">${esc(t("restart"))}</button>
@@ -135,25 +143,28 @@ export function flashcards() {
       const paint = () => (stage.innerHTML = state.queue.length ? cardHtml() : doneHtml());
 
       const actions = {
-        flip() {
-          // Only toggle a class (no re-draw) so the flip animation plays
-          state.flipped = !state.flipped;
-          const card = stage.querySelector(".fc-card");
-          if (!card) return;
-          card.classList.toggle("is-flipped", state.flipped);
-          card.querySelector(".fc-front").setAttribute("aria-hidden", state.flipped);
-          card.querySelector(".fc-back").setAttribute("aria-hidden", !state.flipped);
-        },
         know() {
+          if (state.revealed) return;
           state.queue.shift();
-          state.flipped = false;
+          state.known++;
           paint();
         },
-        again() {
-          const id = state.queue.shift();
-          state.missed.add(id);
-          state.queue.splice(Math.min(AGAIN_GAP, state.queue.length), 0, id);
-          state.flipped = false;
+        dontKnow() {
+          if (state.revealed) return;
+          state.missed.add(state.queue[0]);
+          state.revealed = true;
+          // Draw the card un-flipped with its answer, then flip it on the next frame so the animation plays
+          paint();
+          const card = stage.querySelector(".fc-card");
+          card.classList.remove("is-flipped");
+          card.getBoundingClientRect();
+          requestAnimationFrame(() => card.classList.add("is-flipped"));
+          stage.querySelector(".fc-next")?.focus({ preventScroll: true });
+        },
+        next() {
+          if (!state.revealed) return;
+          state.queue.shift();
+          state.revealed = false;
           paint();
         },
         review() {
@@ -178,15 +189,16 @@ export function flashcards() {
         if (button) actions[button.dataset.action]?.();
       });
 
-      // Keyboard: Space/Enter flips, ← again, → know it
+      // Keyboard: ← I don't know, → I know it; once the answer shows, Enter or → goes to the next card
       const onKey = (event) => {
         if (event.target.closest("input, select, textarea") || !state.queue.length) return;
-        if (event.key === " " || event.key === "Enter") {
-          if (event.target.closest("button, a")) return; // the browser already "clicks" a focused button
-          event.preventDefault();
-          actions.flip();
+        if (state.revealed) {
+          if (event.key === "ArrowRight" || ((event.key === "Enter" || event.key === " ") && !event.target.closest("button, a"))) {
+            event.preventDefault();
+            actions.next();
+          }
         } else if (event.key === "ArrowLeft") {
-          actions.again();
+          actions.dontKnow();
         } else if (event.key === "ArrowRight") {
           actions.know();
         }
