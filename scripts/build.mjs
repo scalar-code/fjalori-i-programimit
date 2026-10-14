@@ -95,7 +95,7 @@ writePage("/", views.home(), {
     name: SITE_NAME,
     url: `${SITE_URL}/`,
     inLanguage: ["sq", "en"],
-    publisher: { "@type": "Organization", name: "ScalarCode", url: "https://github.com/scalar-code" },
+    publisher: { "@type": "Organization", name: "ScalarCode", url: "https://scalarcode.vercel.app/" },
   },
 });
 writePage("/contact", contact());

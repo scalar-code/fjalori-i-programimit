@@ -57,7 +57,7 @@ export function contact() {
         <aside class="about-card block">
           <h2>${esc(t("aboutTitle"))}</h2>
           <p>${esc(t("aboutText"))}</p>
-          <p class="about-by">${icon("code")} <span>${esc(t("madeBy"))}</span> <strong>ScalarCode</strong></p>
+          <p class="about-by">${icon("code")} <span>${esc(t("madeBy"))}</span> <a class="brand-link" href="https://scalarcode.vercel.app/" target="_blank" rel="noopener"><strong>ScalarCode</strong></a></p>
           <a class="link-arrow" href="https://github.com/scalar-code/fjalori-i-programimit" target="_blank" rel="noopener">
             ${icon("github", "brands")} ${esc(t("aboutGithub"))}
           </a>

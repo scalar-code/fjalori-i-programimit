@@ -793,6 +793,8 @@ kbd {
 .site-footer .made-by strong { color: var(--text); font-weight: 650; letter-spacing: 0.01em; }
 .site-footer .made-by a { color: var(--accent); text-decoration: none; font-weight: 500; }
 .site-footer .made-by a:hover { text-decoration: underline; }
+.brand-link { color: inherit !important; text-decoration: none; display: inline-block; padding: 6px 2px; margin: -6px -2px; border-radius: 6px; }
+.brand-link:hover strong, .brand-link:focus-visible strong { text-decoration: underline; text-underline-offset: 3px; }
 
 /* ---------- bottom navigation (phones) ---------- */
 
